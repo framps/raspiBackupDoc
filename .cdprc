@@ -143,7 +143,7 @@ edit_grepped_files() {
     # Originally from
     # https://github.com/junegunn/fzf/blob/master/ADVANCED.md#switching-between-ripgrep-mode-and-fzf-mode-using-a-single-key-binding
 
-    # Switch between Ripgrep mode and fzf filtering mode (ALT-G)
+    # Switch between Ripgrep mode and fzf filtering mode (Alt-g)
     rm -f /tmp/rg-fzf-{r,f}
     RG_PREFIX="${RG_IGN} --column --line-number --no-heading --color=always "
     INITIAL_QUERY="${*:-}"
@@ -159,7 +159,7 @@ edit_grepped_files() {
         --color "hl:-1:underline,hl+:-1:underline:reverse" \
         --prompt '1. ripgrep> ' \
         --delimiter : \
-        --header 'ALT-G: Switch between ripgrep/fzf' \
+        --header 'Alt-g: Switch between ripgrep/fzf' \
         --preview "${BAT} --color=always --theme=ansi {1} --highlight-line {2}" \
         --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
         --bind 'enter:execute(${VIM_PROJECT} {1} +{2})'
@@ -269,6 +269,7 @@ edit_by_status() {
                        --bind="alt-r:execute(edit_translate_all_rft)+reload(__list_stati)" \
                        --bind="alt-t:execute(edit_translate_already_translated)+reload(__list_stati)" \
                        --bind="alt-g:execute(edit_grepped_files)" \
+                       --bind="alt-G:execute(edit_grepped_files '^\[\.status\]:\s{3}')" \
                        --bind="alt-m:execute(edit_meta_files)" \
                        --bind="alt-s:execute(vimdiff -c 'syntax off| windo set nospell' {de,en}/src/SUMMARY.md)" \
                        --preview='V={}; __list_files_with_status "$V"')
@@ -369,18 +370,20 @@ It starts a TUI for selecting Markdown files by their status for editing.
 
 Within the main screen of the TUI there are additional hotkeys active:
 
-  * Alt-R / Alt-T for more selection screens, meant for supporting translation.
+  * Alt-r / Alt-t for more selection screens, meant for supporting translation.
     They list files "(R)eady for translation" / "(T)ranslated" and open
     the selected file in both language versions in a split editor window.
 
-  * Alt-S for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
+  * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
 
-  * Alt-G for calling an interactive (G)rep-Tool using ripgrep, fzf and vim
+  * Alt-g for calling an interactive (G)rep-Tool using ripgrep, fzf and vim.
+    This one has its own alias 'vigf' ("vi grepped files").
 
 The above functions handle Markdown source files for the documentation itself.
 Administration files like README, Makefile and book.toml can be selected too:
 
-  * Alt-M for editing the (M)eta files
+  * Alt-m for editing the (M)eta files.
+    This one has its own alias 'vimf' ("vi meta files").
 
 *******************************************************************************
 
