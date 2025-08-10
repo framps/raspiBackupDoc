@@ -58,10 +58,7 @@ nur ein Bruchteil der Partition (z.B. 33%) genutzt wird. Dass heisst bei einer
 64GB Partition werden immer 42GB umsonst gesichert, der Sicherungsprozess
 dauert unnötigerweise 66% länger und die Sicherung belegt 66% mehr
 Speicherplatz. Es gibt die Option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY** mit der
-man nur die existierende Rootpartition sichert und nicht das gesamte Gerät. Z.b.
-hat man eine 512GB Platte und die Rootpartition ist nur 32GB gross.
-
-[.status]: review-comment "Unklar, und evtl. nach oben verschieben"
+man nur die existierende Rootpartition sichert und nicht das gesamte Gerät.
 
 ## Welchen Backuptyp ist der Beste?
 
@@ -71,12 +68,6 @@ dem ersten Backupvorgang relativ schnell beendet. Ausserdem liegen die
 Backupdateien entpackt vor und auf sie kann direkt zugegriffen werden, wenn nur
 ein paar Dateien aus dem Backup benötigt werden. Bei *tar* und *dd* muss man
 die Backups erst umständlich entpacken.
-
-Wer eine Synology als Backupsystem
-benutzen will, sei hier auf Benutzung von [Synology als Backupspace](nfs-as-backupspace.md) verwiesen.
-
-[.status]: review-comment "Warum wird hier die Synology erwähnt? Passt nicht"
-
 
 ## Weiterführende Informationen
 

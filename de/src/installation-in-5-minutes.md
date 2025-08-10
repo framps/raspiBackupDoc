@@ -73,9 +73,8 @@ sowie am Ende eine Demo der Installation von *raspiBackup* gegeben wird.
 Zum Download, der Installation und Start des *raspiBackup* Installers bitte
 folgendes in der Befehlszeile auf der Raspberry eingeben:
 
-[.status]: review-comment "cd ~  oder cd ~/Downloads oder so einfügen!"
-
 ```
+cd ~
 curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install
 sudo bash ./install
 ```
@@ -109,10 +108,10 @@ Sollte es Probleme geben: Es wird vom Installer immer ein Debuglog in der Datei
 
 ## Installationsdemo
 
-**Hinweis**: Finnische, französische, englische und chinesische Sprachuntertützung steht ebenfalls zur Verfügung
-
-[.status]: review-comment "Wo steht sie das?"
-
+**Hinweis**: Das folgende Video zeigt die Installation in Deutsch, da das OS
+auf Deutsch konfiguriert war. Ist es auf Finnisch, Französisch, Englisch
+oder Chinesisch konfiguriert schreibt der Installer alles in der jeweiligen
+Sprache. Die Sprache kann auch im Installer geändert werden.
 
 ![Installationsdemovideo](images/raspiBackupInstall_de.gif)
 
@@ -192,17 +191,9 @@ sudo blkid -o list | grep <label>
 
 Danach ist alles fertig konfiguriert, um ein Backup zu erstellen.
 
-
-[.status]: review-comment "Umformulieren"
-
-Dabei ist aber zu berücksichtigen, dass, wenn man später *raspiBackup* regelmäßig einsetzt,
-bestimmte Dienste gestoppt werden sollten, da sonst ein inkonsistentes Backup
-entstehen könnte. Siehe dazu [FAQ18](faq.md#faq18).
-
-Braucht man keine Dienste zu stoppen oder
-will man den Backup einmal schnell testen, kann man wie folgt den Backup mit
-*raspiBackup* erstellen. Das kann je nach Größe der Installation und der externen
-Rootpartition beim normalen Backup etwas länger dauern.
+Will man den Backup einmal schnell testen, kann wie folgt das Backup mit
+*raspiBackup* erstellt werden. Das kann je nach Größe der Installation
+länger dauern.
 
 ```
 sudo raspiBackup -m detailed
@@ -260,13 +251,6 @@ Nachdem das erste Backup erfolgreich erstellt und wiederhergestellt wurde,
 sollte man sich in einer ruhigen Stunde über alle weiteren Optionen von
 *raspiBackup* hier informieren und je nach Bedarf einsetzen.
 
-[.status]: review-comment "Gehören die folgenden Details wirklich hier hin?"
-
-Eine hilfreiche Option ist z.B. `-e <eMailAdresse>`.
-Damit schickt *raspiBackup* nach jedem Backuplauf seine Meldungen per eMail
-an die angegebene Adresse. Weiterhin lassen sich Verzeichnisse vom Backup ausschließen
-sowie `dd` Backups verkleinern und damit beschleunigen und Diverses mehr.
-
 Jede Option kann in der Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` definiert werden,
 so dass beim Aufruf keine weitere Optionen angegeben werden müssen.
 
@@ -276,12 +260,8 @@ Details dazu finden sich auf der [Optionsbeschreibungsseite](backup-options.md).
 Ebenfalls nützlich: [raspiBackupDialog - ein komfortables Hilfsscript für raspiBackup](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md),
 welches die Nutzung und den Aufruf von *raspiBackup* vereinfacht.
 
-
 ## Deinstallation
 
-[.status]: review-comment "Doppelt gemoppelt!"
-
-*raspiBackup* kann auch wieder deinstalliert werden.
 Entweder benutzt man den Installer zum Deinstallieren oder folgenden Befehl:
 
 ```

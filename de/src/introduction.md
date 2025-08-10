@@ -84,11 +84,6 @@ Speziellere Einstellungen lassen sich in einer Konfigurationsdatei vornehmen.
 Für Entwickler bietet *raspiBackup* verschiedene [Erweiterungspunkte](hooks-for-own-scripts.md),
 um eigenen Code ausführen zu lassen.
 
-<<<<<<< HEAD
-=======
-[.status]: review-comment "Das Word 'Plugpoints' sollte vielleicht durch etwas Geläufigeres ersetzt werden."
-
->>>>>>> review-rst
 Weiterhin existieren verschiedene [Scripts](https://github.com/framps/raspiBackup/tree/master/helper),
 die die Funktionalität von *raspiBackup* erweitern und entweder unverändert genutzt
 oder an eigene Anforderungen angepasst werden können.
@@ -98,17 +93,6 @@ Am Ende eines Backuplaufes kann *raspiBackup*, wenn gewünscht, eine Benachricht
 
 Alle Funktionen und Einsatzgebiete von *raspiBackup* sind tabellarisch in der
 [Funktionsübersicht](function-overview.md) zusammengetragen.
-
-<<<<<<< HEAD
-=======
-[.status]: review-comment "Folgender Absatz steht eigentlich schon bei 'Kontaktmöglichkeiten' unten!? Könnte dann hier weg"
-
->>>>>>> review-rst
-Sollten Fragen zu *raspiBackup* aufkommen, können diese auf [*GitHub* Discussion](https://github.com/framps/raspiBackup/discussions) gestellt werden.
-Fehler oder Probleme mit *raspiBackup* sollten auf
-[*GitHub* Issues](https://github.com/framps/raspiBackup/issues) berichtet werden.
-Wenn möglich sollte ein Beitrag in Englisch geschrieben werden.
-Deutsch wird aber auch akzeptiert.
 
 ## Einführungsvideo und Youtube-Channel
 
@@ -190,14 +174,7 @@ der Seiten mit Rat und Tat sowie mit sehr hilfreichen Tools.
 
 ## Lizenz und *GitHub*-Link
 
-<<<<<<< HEAD
 Der Code von *raspiBackup* steht unter der GPL auf [*GitHub*](https://github.com/framps/raspiBackup) zur Verfügung.
-=======
-Der Code von *raspiBackup* ist reiner *Bash* Code und steht unter der GPL auf [*GitHub*](https://github.com/framps/raspiBackup) zur Verfügung.
-
-[.status]: review-comment "Schreibweise von Bash im Fließtext!"
-
->>>>>>> review-rst
 
 ## Haftungsausschluss
 

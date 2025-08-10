@@ -13,9 +13,6 @@ Die Schwierigkeit ist, den eMailClient richtig zu konfigurieren.
 Anbei die Installations- und Konfigurationsschritte von *gNeandr* -
 noch einmal sehr herzlichen Dank für die Bereitstellung.
 
-[.status]: review-comment "Das Folgende würde ich deutlich kürzen und auf den Mailteil beschränken."
-
-
 ```
 Raspberry Installation 2023-08-20
 ====================================================
