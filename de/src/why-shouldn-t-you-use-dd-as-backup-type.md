@@ -1,11 +1,12 @@
 # Warum sollte man dd als Backuptyp besser nicht benutzen?
 
 Viele Benutzer von *raspiBackup* nutzen `dd` als Backuptyp.
-Insbesondere Nutzer, die mehr mit Windows als mit Linux arbeiten, da
-sie einen dd Backup unter Windows mit *win32imager* oder ähnlichen Tools restoren
-können. dd kann schon als Backuptool benutzt werden, aber es gibt ein gewisses
+Insbesondere Nutzer, die mehr mit *Windows* als mit *Linux* arbeiten, da sie einen
+dd Backup unter Windows mit *win32imager* oder ähnlichen Tools restoren können.
+
+dd kann natürlich als Backuptool benutzt werden, aber es gibt ein gewisses
 Risiko dabei, welches es bei den Backupmethoden tar und rsync nicht gibt.
-Deshalb wird jedem Nutzer von *raspiBackup* empfohlen, doch lieber tar oder rsync
+Deshalb wird jedem Nutzer von *raspiBackup* empfohlen, besser tar oder rsync
 zu nutzen.
 
 ## Warum?
@@ -14,7 +15,7 @@ zu nutzen.
    gemeldet, wenn die Bits nicht gelesen werden können. Es kommt aber auch immer
    mal wieder vor, dass es Filesystemfehler gibt. Diese entstehen i.d.R. durch
    plötzlichen Stromausfall. Diese Fehler bemerkt dd nicht. D.h. dd sichert
-   eine Parition mit Filesystemfehlern, die dann beim Restore auch
+   eine Parition inklusive der Filesystemfehler, die dann beim Restore auch
    wiederhergestellt werden. Somit hat man eine exakte Kopie des Systems mit
    Filesystemfehlern. Man legt immer weiter Backups an, im Glauben das alles OK
    ist und löscht dann irgendwann auch alte Backups. Somit werden nach und nach
@@ -36,35 +37,45 @@ zu nutzen.
 ## Was nun?
 
 Eine Umstellung auf tar ist schnell gemacht. Es kann dasselbe Filesystem auf
-der Backuppartition genutzt werden wie für dd. Nur kann kein Restore mehr mit
-Windowsprogrammen wie Win32DiskImager oder Etcher vorgenommen werden. Dazu kann
-man aber *raspiBackup* auf einer Raspberry starten. Hat man nur eine Raspberry
-muss man sich einmal eine Not-SD Karte mit Raspbian und *raspiBackup* erstellen
-und in den Schrank legen, bis man sie braucht.
+der Backuppartition genutzt werden wie für dd.
 
-Für rsync benötigt man ein etx2/3/4 Filesystem auf der Backuppartition. Dieses
-kann unter Linux erstellt werden. Den Restore muss man auch wieder mit
-*raspiBackup* auf einer Raspberry vornehmen.
+Der Restore kann allerdings nicht mehr mit Windowsprogrammen wie *Win32DiskImager*
+oder *Etcher* vorgenommen werden.
 
-## Weitere Nachteile von einem dd Backup
+Stattdessen kann man aber *raspiBackup* auf einer Raspberry starten.
+Hat man nur **eine** Raspberry zur Verfügung, sollte man sich einmalig eine
+"Not-SD Karte" mit Raspbian und *raspiBackup* erstellen und beiseite legen,
+bis man sie braucht...
+
+Für rsync benötigt man ein ext2/3/4 Filesystem auf der Backuppartition. Dieses
+kann unter Linux erstellt werden. Den Restore wird auch wieder mit
+*raspiBackup* auf einer Raspberry vorgenommen.
+
+## Weitere Nachteile von dd Backups
 
 Bei einem dd Backup wird immer die gesamte Partition gesichert - selbst wenn
 nur ein Bruchteil der Partition (z.B. 33%) genutzt wird. Dass heisst bei einer
 64GB Partition werden immer 42GB umsonst gesichert, der Sicherungsprozess
-dauert unnötigerweise 66% länger und die Sicherung belegt unnütz 66% mehr
+dauert unnötigerweise 66% länger und die Sicherung belegt 66% mehr
 Speicherplatz. Es gibt die Option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY** mit der
 man nur die existierende Rootpartition sichert und nicht das gesamte Gerät. Z.b.
-hat man eine 512GB Platte und dir Rootpartition ist nur 32GB gross.
+hat man eine 512GB Platte und die Rootpartition ist nur 32GB gross.
+
+[.status]: review-comment "Unklar, und evtl. nach oben verschieben"
 
 ## Welchen Backuptyp ist der Beste?
 
-Die effizienteste Backuptyp ist rsync. Durch die Benutzung von Hardlinks
+Die effizienteste Backuptyp ist *rsync*. Durch die Benutzung von Hardlinks
 werden nur Dateien kopiert, die sich geändert haben und somit ist jeder ausser
 dem ersten Backupvorgang relativ schnell beendet. Ausserdem liegen die
-Backupdateien entpackt vor und auf sie kann sofort zugegriffen werden, wenn nur
-mal ein paar Dateien aus dem Backup benötigt werden. Bei tar und dd muss man
-die Backups erst umständlich entpacken. Wer eine Synology als Backupsystem
+Backupdateien entpackt vor und auf sie kann direkt zugegriffen werden, wenn nur
+ein paar Dateien aus dem Backup benötigt werden. Bei *tar* und *dd* muss man
+die Backups erst umständlich entpacken.
+
+Wer eine Synology als Backupsystem
 benutzen will, sei hier auf Benutzung von [Synology als Backupspace](nfs-as-backupspace.md) verwiesen.
+
+[.status]: review-comment "Warum wird hier die Synology erwähnt? Passt nicht"
 
 
 ## Weiterführende Informationen

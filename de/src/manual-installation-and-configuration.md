@@ -2,14 +2,17 @@
 
 Die Installation mit dem [Installer](installation-in-5-minutes.md) ist die schnellste Methode.
 Man kann auch per Befehlszeile *raspiBackup* sehr schnell in einer Standardinstallation installieren.
-Wer *raspiBackup* aber aus verschiedenen Gründen manuell installieren will findet im Folgenden die notwendigen Schritte:
+Wer *raspiBackup* aber aus verschiedenen Gründen manuell installieren möchte, findet im Folgenden die notwendigen Schritte:
 
-Voraussetzungen: Login als Benutzer pi ins Homeverzeichnis und es existiert eine Netzwerkverbindung
+Voraussetzungen: Login als Benutzer `pi` ins Home-Verzeichnis und eine aktive Netzwerkverbindung.
 
 1. Der *raspiBackup* Installer wird in `/usr/local/bin` auf der Raspberry
    downloaded und aufgerufen. Dabei wird *raspiBackup* mit seinen
-   Standardoptionen installiert. Anschliessen kann man *raspiBackup* mit
+   Standardoptionen installiert. Anschließend kann man *raspiBackup* mit
    `sudo raspiBackupInstallUI` aufrufen und die Standardkonfiguration ändern.
+
+   [.status]: todo "Stimmt das so bzgl. /usr/local/bin???"
+   [.status]: todo "Und wieso steht das überhaupt hier im Abschnitt zur manuellen Installation???"
 
    ```
     curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
@@ -24,7 +27,7 @@ Voraussetzungen: Login als Benutzer pi ins Homeverzeichnis und es existiert eine
       curl -sSL https://www.linux-tips-and-tricks.de/raspiBackup_de.conf > raspiBackup.conf
       ```
 
-   2. Jetzt müssen die Dateien in die entsprechenden Verzeichnisse kopiert werden und die Ownership und Zugriffsrechte angepasst werden:
+   2. Jetzt müssen die Dateien in die entsprechenden Verzeichnisse kopiert und Ownership und Zugriffsrechte angepasst werden:
       ```
       # Verschieben der Dateien in die richtigen Verzeichnisse
       sudo mv raspiBackup.sh /usr/local/bin

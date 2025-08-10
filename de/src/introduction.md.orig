@@ -19,7 +19,11 @@ der Dokumentation:
 Eintippen eines `?` blendet eine kleine Tastatur-Navigationshilfe ein.
 ```
 
+<<<<<<< HEAD
 [.status]: todo "Generell im gesamten Dokument: 'SD Karte' oder 'SD-Karte' usw.? -> SD-Karte"
+=======
+[.status]: review-comment "Generell im gesamten Dokument: 'SD Karte' oder 'SD-Karte' usw.?"
+>>>>>>> review-rst
 
 
 

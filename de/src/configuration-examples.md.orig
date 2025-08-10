@@ -7,9 +7,19 @@ das Beispiel dann nach den eigenen Ansprüchen entsprechend anzupassen. Eine
 Übersicht aller Optionen findet sich in [Aufruf und Optionen](backup-options.md).
 Verschiedene Methoden, ein Backup zu restoren, sind im Kapitel [Wiederherstellen/Restore](restore.md) beschrieben.
 
+<<<<<<< HEAD
+=======
+[.status]: review-comment "Gehört der folgende Absatz hier wirklich hin? Eher nicht..."
+
+Alle Konfigurationen, die kein dd Backup benutzen, sichern auch ein externes
+Rootfilesystem zusammen mit einer SD Bootpartition. Wenn der USB Bootmode benutzt
+wird und keine SD Karte mehr benutzt wird, wird auch die ganze Rootpartition
+gesichert.
+
+>>>>>>> review-rst
 Weiterhin gibt es auf folgenden Seiten Konfigurationsbeispiele für verschiedene eMail Clients:
    - msmtp
-   - exim4
+   - Exim4
    - nullmailer
 
 ## Anwendungsbeispiele

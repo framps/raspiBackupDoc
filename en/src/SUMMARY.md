@@ -54,7 +54,7 @@ That allows for some tricks:
         - [Configuration update when upgrading to a new version](configuration-update-when-upgrading-to-a-new-version.md)
         - [Configuration examples](configuration-examples.md)
             - [msmtp configuration for a web.de account](msmtp-configuration-for-web-de-account.md)
-            - [exim4 configuration](exim4-configuration.md)
+            - [Exim4 configuration](exim4-configuration.md)
             - [nullmailer configuration](nullmailer-configuration.md)
 
     - [Restore](restore-intro.md)
@@ -101,7 +101,7 @@ That allows for some tricks:
     - [NFS as backupspace](nfs-as-backupspace.md)
     - [SMB as backupspace](smb-as-backupspace.md)
     - [AVM FRITZ!Box as backupspace](avm-fritzbox-as-backupspace.md)
-    - [WEBDAV as backupspace](webdav-as-backupspace.md)
+    - [WebDAV as backupspace](webdav-as-backupspace.md)
 
 - [Tips for home automation](tips-homeautomation.md)
 

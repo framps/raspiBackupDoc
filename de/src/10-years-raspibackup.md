@@ -61,12 +61,12 @@ und zu nutzen. Irgendwann fragte ich dann an, ob es nicht Sinn macht, ein Backup
 Subforum zu erstellen, was dann auch getan wurde. Seitdem helfe ich in dem Unterforum
 bei Fragen zu *raspiBackup*.
 
-Ich halte eigentlich nicht viel von Videos sondern präferiere textuelle
-Beschreibungen, denn da kann man suchen, aber im langweiligen Coronazeitraum
+Ich halte eigentlich nicht viel von Videos, sondern präferiere textuelle
+Beschreibungen, denn darin kann man suchen. Aber im langweiligen Coronazeitraum
 erstellte ich dann doch verschiedene Videos zu *raspiBackup* und publizierte
 sie auf [Youtube](https://www.youtube.com/channel/UCnFHtfMXVpWy6mzMazqyINg).
-Viel Aufwand habe ich dazu nicht getrieben im Gegensatz zu
-anderen Leuten die sehr fancy Videos auf Youtube publizieren: Ein paar Slides
+Viel Aufwand habe ich dazu nicht getrieben - im Gegensatz zu
+anderen Leuten, die sehr fancy Videos auf Youtube publizieren: Ein paar Slides
 erstellt und die wurden dann im Präsentationsmodus erklärt. Später habe ich
 dann noch ein paar Videos mit praktischer Nutzung von *raspiBackup* auf der
 Befehlszeile erstellt. Aber die Zahl der Leute, die sich die Videos ansieht
@@ -84,19 +84,26 @@ Hotlinesupport für *raspiBackup* wurde.
 Schließlich habe ich mal ein Paypalkonto eingerichtet, auf welches jeder dem
 *raspiBackup* gefällt, [spenden kann](introduction.md#donation). Außerdem kann
 jeder als [Sponsor](https://github.com/sponsors/framps) über *GitHub* spenden.
-Reich werde ich dadurch natürlich nicht, aber es wird damit die Arbeit erkennbar gewürdigt, die ich
-in *raspiBackup* Entwicklung und Support reinstecke.
+
+Reich werde ich dadurch natürlich nicht, aber es wird damit die Arbeit erkennbar gewürdigt,
+die ich in *raspiBackup* Entwicklung und Support reinstecke.
+
 Auch kann ich damit Test-Hardware kaufen, denn
 ich kann und will nicht meine Produktivsysteme stilllegen, um *raspiBackup* zu
 testen und zu maintainen. Außerdem bin ich nicht mehr bereit, einen Cent
 in benötigte HW für *raspiBackup* zu stecken. *raspiBackup* ist kostenlos
 verfügbar und Nutzer sollen sich erkenntlich zeigen und die benötigte HW durch Spenden finanzieren.
-Ein Nutzer spendete ein CM4 damit ich NVMe Support in *raspiBackup* einbauen und testen konnte.
+
+Zum Beispiel spendete ein Nutzer ein CM4, damit ich NVMe Support in *raspiBackup* einbauen und testen konnte.
+
 Aus den allgemeinen kleinen Spenden konnte ich einen RPi4 mit 8GB Memory erwerben und den Ubuntu Support in *raspiBackup*
-einbauen. Schließlich hat jemand gespendet, damit ich mir einen RPi5 kaufen konnte. Die Spende gab es, da es ein
+einbauen.
+
+Schließlich hat jemand gespendet, damit ich mir einen RPi5 kaufen konnte. Die Spende gab es, da es ein
 auf einem RPi4 nicht reproduzierbares Problem mit [rpi-clone](https://github.com/geerlingguy/rpi-clone) gab.
-*rpi-clone* ist ein nützliches Clonetool - kein Backuptool wie *raspiBackup*, aber oft nachgefragt,
-auf welches ich auch ein Auge habe, und konnte dann final das intermittierende Problem auf der RPi5 nachvollziehen und fixen.
+So konnte ich dann final das intermittierende Problem auf der RPi5 nachvollziehen und fixen.
+(*rpi-clone* ist ein nützliches Clonetool - kein Backuptool wie *raspiBackup*, aber oft nachgefragt,
+auf welches ich auch ein Auge habe.)
 
 Im Mai 2025 hat [simonz](https://github.com/rpi-simonz/) viel Einsatz und Energie in ein neues git Repository [raspiBackupDoc](https://github.com/framps/raspiBackupDoc) gesteckt,
 um die bisherige Dokumentation von *raspiBackup* auf meiner Webseite in dieses Repository zu bringen

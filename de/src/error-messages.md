@@ -2,7 +2,7 @@
 
 Es kann vorkommen, dass *raspiBackup* nicht erfolgreich läuft und
 Fehlernachrichten schreibt. Das liegt zu 90% Prozent an fehlerhaften
-Konfigurationen oder Parametrisierung.
+Konfigurationen oder Parametrierung.
 
 Es gibt drei Typen von *raspiBackup*-Meldungen:
 
@@ -11,13 +11,13 @@ Es gibt drei Typen von *raspiBackup*-Meldungen:
 1. Fehler. Die Meldungsnummer endet mit dem Buchstaben "E"
 
 Die Fehlermeldungen sind selbsterklärend und sollten auf die konkrete Ursache hinweisen.
-Falls nicht, helfen folgende Massnahmen, den Fehler genauer zu lokalisieren:
+Falls nicht, helfen folgende Maßnahmen, den Fehler genauer zu lokalisieren:
 
 1. Start von *raspiBackup* in der Befehlszeile und nicht automatisch per systemd, um
-   systemd Fehlkonfigurationen auszuschliessen
+   systemd Fehlkonfigurationen auszuschließen
 
 1. Es wird bei jedem erfolgreichen Lauf eine Logdatei `raspiBackup.log` im Backupverzeichnis
-   erzeugt, die eine Menge detaillierte Informationen enthält und hilft Fehlerursachen zu finden.
+   erzeugt, die eine Menge detaillierte Informationen enthält und hilft, Fehlerursachen zu finden.
    Ein Suchen nach Fehlermeldungen und -ursachen in dieser Logdatei kann helfen,
    den Fehler zu lokalisieren.
 
@@ -36,12 +36,12 @@ Falls nicht, helfen folgende Massnahmen, den Fehler genauer zu lokalisieren:
 In machen Fällen sind zu den Fehlermeldungen weitergehende Erklärungen notwendig.
 Diese sind im Folgenden zu finden.
 
-*raspiBackup* hat ca 200 Fehlermeldungen und diese hier komplett aufzuführen
+*raspiBackup* hat ca. 200 Fehlermeldungen und diese hier komplett aufzuführen
 und im Detail zu erklären, ist sehr viel Aufwand.
 
 Wer also eine Erklärung für eine Fehlermeldung sucht und hier nicht findet,
 sollte erst einmal eine Suchmaschine benutzen und nach der
-Fehlermeldungsnummer suchen. Falls das nicht zum Erfolg führt, sollte ein Issue im [*GitHub*](https://github.com/framps/raspiBackup/issues).
+Fehlermeldungsnummer suchen. Falls das nicht zum Erfolg führt, sollte ein Issue im [*GitHub*](https://github.com/framps/raspiBackup/issues)
 erstellt werden und dann wird sie hier aufgenommen. So werden dann nach und nach alle häufigen und wichtigen
 Fehlermeldungen von *raspiBackup* hier gesammelt und erläutert.
 
@@ -49,7 +49,7 @@ Meldungen im Nummernbereich von 0-999 werden von *raspiBackup* geschrieben.
 Meldungen von 1000-1999 werden von den Beispielplugins geschrieben. Alle
 anderen Nummernbereiche werden von eigene Plugin Meldungen genutzt.
 
-Ausserdem beendet sich *raspiBackup* mit einem Fehlercode, der auf die Ursache
+Außerdem beendet sich *raspiBackup* mit einem Fehlercode, der auf die Ursache
 hinweist. Eine Liste der Fehlercodes findet sich am [Ende dieser Seite](#exitcodes).
 
 ## *raspiBackup* - Fehlermeldungen, Ursachen und Aktionen
@@ -91,7 +91,7 @@ einem Fehler und der Lock wurde nicht entfernt.
 Weitere Aktionen:
 
 Mit `ps -ef | grep raspiBackup` kann man überprüfen, ob *raspiBackup* gerade läuft.
-Wenn ja, muss man warten bis sich *raspiBackup* beendet hat.
+Wenn ja, muss man warten, bis sich *raspiBackup* beendet hat.
 Wenn nein, muss die Lockdatei gelöscht werden mit `sudo rm /var/lock/raspiBackup`.
 
 ### RBK0019E: Option -a und -o nicht angegeben.
@@ -146,45 +146,44 @@ RC 2 bei tar bedeutet, irgendein schlimmer Fehler trat auf. Es kann auch sein,
 dass Berechtigungen auf dem Backupgerät fehlen oder kein freier Speicherplatz
 auf der Backuppartition vorhanden ist.
 
-RC23 bei rsync kann auch ein Zugriffsproblem oder ein ACL Problem mit nfs sein.
-Siehe [FAQ24](faq.md#faq24) zum ACL Problem und nfs.
+RC23 bei rsync kann auch ein Zugriffsproblem oder ein ACL Problem mit NFS sein.
+Siehe [FAQ24](faq.md#faq24) zum ACL Problem und NFS.
 
 Die entsprechenden Fehlermeldungen vom Backuptool findet man, wenn im die auf
 executeCmd Command folgenden Zeilen im Debuglog untersucht und sie werden auch
-auf der Konsole bzw in der eMail angezeigt.
+auf der Konsole bzw. in der eMail angezeigt.
 
 Vorhergehende Meldungen zeigen die genaue Fehlermeldung des Backupprogramms.
-Falls diese nicht helfen die Ursache zu finden, kann die Option `-v` bei tar und
+Falls diese nicht helfen, die Ursache zu finden, kann die Option `-v` bei tar und
 rsync benutzt werden, um detaillierte Meldungen von den Backupprogrammen im
 Debuglog zu erhalten, die hoffentlich weiterhelfen.
 
-oder man fügt
+Oder man fügt
 
 ```
 DEFAULT_RSYNC_BACKUP_ADDITIONAL_OPTIONS="--info=NAME0"
 ```
 
 in der *raspiBackup* Configdatei hinzu bei rsync, um nur Fehlermeldungen zu
-loggen und ein detailiertes Log, welches man mit Option -v erhält, zu vermeiden.
+loggen und ein detailliertes Log, welches man mit Option -v erhält, zu vermeiden.
 
 Danach hilft es sehr häufig, die Fehlermeldung in eine Suchmaschine einzugeben,
 um die Ursache zu finden. Auf der [FAQ Seite](faq.md) sind viele Fehlermeldungen, und
-deren Ursache und Fehlerbehebungsmassnahmen beschrieben. Bei rsync findet man im
+deren Ursache und Fehlerbehebungsmaßnahmen beschrieben. Bei rsync findet man im
 Debuglog nach dem Aufruf des rsync alle Fehlermeldungen von rsync und kann
 daraus die Ursache des Abbruchs ersehen.
 
 Alternativ kann man Fehler von tar und rsync ignorieren lassen. Siehe dazu [FAQ32](faq.md#faq32).
 
 Häufig ist aber auch die Backuppartition - speziell, wenn es eine über das Netz
-angebundene Partition (nfs, smb) ist - das Problem. Meist sind es
+angebundene Partition (NFS, SMB) ist - das Problem. Meist sind es
 Netzwerkprobleme oder -fehlkonfigurationen. Auch kam es schon vor, dass die
 Partition auf einem Gerät lag, welches Schreibfehler hatte.
 
-Sollte ein Lesefehler vorliegen, ist das ein Hinweis darauf, dass das Systemgerät bzw SD Karte
-ersetzt werden sollte. Dazu dann das letzte Backup auf ein neues Systemgerät 
-restoren.
+Sollte ein Lesefehler vorliegen, ist das ein Hinweis darauf, dass das Systemgerät bzw. SD Karte
+ersetzt werden sollte. Dazu dann das letzte Backup auf ein neues Systemgerät restoren.
 
-Falls die Backuppartition per nfs gemounted ist, [diesen Artikel](https://www.linux-tips-and-tricks.de/de/raspibackupmeldungen/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern) lesen.
+Falls die Backuppartition per NFS gemounted ist, [diesen Artikel](https://www.linux-tips-and-tricks.de/de/raspibackupmeldungen/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern) lesen.
 
 Falls Berechtigungsprobleme existieren, muss sichergestellt sein, dass der
 Benutzer root sämtliche Rechte auf dem Backupgerät hat.
@@ -199,16 +198,16 @@ macht und wenn die SD Karte klein ist, wird sie überlaufen.
 
 Weitere Aktionen:
 
-Sei nun %1 `/backup`, welches der Standardpfad ist. And diesem Verzeichnis 
-muss ein externes Backupgerät gemounted werden. 
-Ein entsprechender Eintrag in der `/etc/fstab` kann genutzt werden um den Mountpunkt `/backup` mit
+Sei nun %1 `/backup`, welches der Standardpfad ist. In dieses Verzeichnis
+muss ein externes Backupgerät gemounted werden.
+Ein entsprechender Eintrag in der `/etc/fstab` kann genutzt werden, um den Mountpunkt `/backup` mit
 einer externen Partition zu verbinden. Man kann das prüfen mit
 
 ```
 findmnt /backup
 ```
 
-Wenn man weiss, was man tut, kann man die Fehlermeldung mit der Option -c
+Wenn man weiß, was man tut, kann man die Fehlermeldung mit der Option -c
 ausschalten.
 
 
@@ -216,13 +215,13 @@ ausschalten.
 
 Ursache:
 
-raspiBackup erstellt auf der Backupartition ein Verzeichnis mit
+*raspiBackup* erstellt auf der Backupartition ein Verzeichnis mit
 dem Hostnamen des gesicherten Systems und darunter werden die jeweiligen Backups in Unterverzeichnissen abgelegt.
 So ein Backup Unterverzeichnis muss angegeben werden.
 
 Das Format des Backupverzeichnisses hat folgendes Aussehen:
 
-  - troubadix@raspbian12-rsync-backup-20250615-050123
+  - `troubadix@raspbian12-rsync-backup-20250615-050123`
 
 Weitere Aktionen:
 
@@ -249,8 +248,8 @@ weitere Hinweis auf die Fehlerursache.
 Ursache:
 
 Es wurde das konfigurierte Mailprogramm zum Senden von eMails nicht
-gefunden. Üblicherweise tritt der Fehler auf, wenn man *Postfix* oder den
-*Nullmailer* als MTA aufgesetzt hat.
+gefunden. Üblicherweise tritt der Fehler auf, wenn man *Postfix* oder
+*nullmailer* als MTA aufgesetzt hat.
 
 Weitere Aktionen:
 
@@ -263,8 +262,8 @@ installieren.
 
 Ursache:
 
-Die Befehle der Option -a/-o bzw des Konfigurationsparameters
-DEFAULT_STARTSERVICES/DEFAULT_STOPSERVICES die Services starten/stoppen sollen
+Die Befehle der Option -a/-o bzw. des Konfigurationsparameters
+DEFAULT_STARTSERVICES/DEFAULT_STOPSERVICES, die Services starten/stoppen sollen,
 erzeugen einen Fehler.
 
 Weitere Aktionen:
@@ -282,8 +281,8 @@ Wenn das Backup nur ein MBR hat, kann die Zielpartition nur bis 2TB erweitert we
 
 Weitere Aktionen:
 
-Das System welches restored werden soll nutzt noch *mbr* und muss in *gpt* konverttiert werden.
-Danach muss noch einmal ein Backup - dieses mal mit *gpt* erstellt werden. Dieses kann kann dann
+Das System welches restored werden soll, nutzt noch *MBR* und muss in *GPT* konvertiert werden.
+Danach muss noch einmal ein Backup - dieses mal mit *GPT* erstellt werden. Dieses kann kann dann
 auf Platten größer als 2TB restored werden.
 
 ### RBK0061E: Keine Bootpartitionsdateien in %s gefunden die mit %s beginnen.
@@ -313,7 +312,7 @@ oder beim eigentlichen Restoren der Backupdaten.
 
 Weitere Aktionen:
 
-Zuerst eventuelle vorhergehende Fehlermledungen prüfen. Danach das Debuglog
+Zuerst eventuelle vorhergehende Fehlermeldungen prüfen. Danach das Debuglog
 prüfen, ob es beim Anlegen der Partitionen Probleme gab.  Dazu nach `Checking
 that no-one is using this disk right now` suchen und Fehlermeldungen. Es
 existiert ein bekanntes Problem mit einer neuen sfdisk Version in Bullseye, wenn
@@ -330,14 +329,14 @@ sfdisk --version
 sfdisk from util-linux 2.36.1
 ```
 
-oder manuell die 5te Zeile in der Datei mit der Extension .sfdisk im Backupverzeichnis zu löschen.
+oder manuell die 5. Zeile in der Datei mit der Extension .sfdisk im Backupverzeichnis zu löschen.
 
 
 ### RBK0086E: Wiederherstellungsgerät darf keine Partition sein.
 
 Ursache:
 
-*raspiBackup* will beim Wiederherstellen des Backups 
+*raspiBackup* will beim Wiederherstellen des Backups
 Partitionen anlegen. Dazu muss das ganze Gerät als Zielgerät angegeben
 werde. Eine einzelne Partition ist nicht erlaubt.
 
@@ -393,7 +392,7 @@ Ursache:
 
 *raspiBackup* kann das Bootgerät nicht erkennen. Das passiert normalerweise, wenn eine
 andere Hardware als eine Raspberry benutzt wird oder ein anderes
-Operatingsystem als *Raspberry Pi OS* oder *Ubuntu* benutzt wird.
+Betriebssystem als *Raspberry Pi OS* oder *Ubuntu* benutzt wird.
 
 Weitere Aktionen:
 
@@ -405,7 +404,7 @@ Das Problem auf *GitHub* berichten.
 Ursache:
 
 *raspiBackup* hat einen Fehler vom benutzten Backupprogramm bekommen beim
-Sichern einer Parition im partitioneorientierten Modus.
+Sichern einer Partition im partitionsorientierten Modus.
 
 Weitere Aktionen:
 
@@ -416,13 +415,13 @@ Siehe RBK0021E
 
 Ursache:
 
-Das Filesystem der Backuppartition erlaubt nur Dateigrößen von 4GB und ist so
+Das Filesystem der Backuppartition erlaubt nur Dateigrößen bis 4GB und ist so
 gut wie nicht nutzbar für Backups.
 
 Weitere Aktionen:
 
 Es muss ein anderes Filesystem auf dem Backupspace angelegt werden. Welches das
-sein muss hängt von der Backupmethode ab. Auf [dieser Seite](which-filesystem-can-be-used-on-the-backup-partition.md) findet man eine
+sein muss, hängt von der Backupmethode ab. Auf [dieser Seite](which-filesystem-can-be-used-on-the-backup-partition.md) findet man eine
 Tabelle, aus der das richtige Filesystem entnommen werden kann.
 
 
@@ -430,12 +429,12 @@ Tabelle, aus der das richtige Filesystem entnommen werden kann.
 
 Ursache:
 
-Wenn eine Partition neu beschrieben wird darf sie nicht gemounted sein.
+Wenn eine Partition neu beschrieben wird, darf sie nicht gemounted sein.
 
 Weitere Aktionen:
 
 Mit dem Befehl `sudo mount | grep <device>` (<device> ist in der Meldung genannt)
-rausfinden, welche Partition gemounted ist und mit `sudo umount <partition>` wobei
+herausfinden, welche Partition gemounted ist und mit `sudo umount <partition>`, wobei
 <partition> die gemountete Partition sein muss, die Partition (z.B. /dev/sda1)
 freigeben.
 
@@ -477,8 +476,8 @@ Es fehlt die Berechtigung für den Nutzer root, das neue Backupverzeichnis zu er
 
 Weitere Aktionen:
 
-Ist das Backupverzeichnis per nfs gemounted, fehlt meist die Option
-NO_ROOT_SQUASH in der Datei `/etc/exports` des nfs Servers. Ansonsten ist das
+Ist das Backupverzeichnis per NFS gemounted, fehlt meist die Option
+NO_ROOT_SQUASH in der Datei `/etc/exports` des NFS Servers. Ansonsten ist das
 Backupverzeichnis mit nicht ausreichenden Rechten gemounted.
 
 
@@ -499,9 +498,9 @@ Wenn es RC1 ist, prüfe die Bootpartition und/oder die Backuppartition.
 
 Ursache:
 
-rsync benutzt Hardlinks, um Backup Zeit und Space zu reduzieren. Hardlinks
-werden vom ext3/ext4 Filesystems, welche lokal oder via nfs gemounted sind
-unterstützt. Samba und sshfs unterstützen keine Hardlinks.
+*rsync* benutzt Hardlinks, um Backup Zeit und Space zu reduzieren. Hardlinks
+werden vom ext3/ext4 Filesystems, welche lokal oder via NFS gemounted sind,
+unterstützt. SMB und SSHFS unterstützen keine Hardlinks.
 
 Weitere Aktionen:
 
@@ -518,11 +517,11 @@ Eine eMail kann nicht gesendet werden.
 
 Weitere Aktionen:
 
-Fast immer liegt die Ursache beim Aufsetzen der Benachrichtigung meist in einer
+Meist liegt die Ursache beim Aufsetzen der Benachrichtigung in einer
 Fehlkonfiguration des genutzten MTAs. Häufig bekommt *raspiBackup* auch keinen
-Fehler beim Senden der eMail aber sie kommt trotzdem nicht an.
+Fehler beim Senden der eMail, aber sie kommt trotzdem nicht an.
 
-Die Konfiguration eines MTAs ist sehr oft kompliziert und ist kein Problem von
+Die Konfiguration eines MTAs ist oft kompliziert und ist kein Problem von
 *raspiBackup*. Im Log des verwendeten MTAs findet man Fehlermeldungen, die
 helfen, die Ursache zu finden. Es wird hier in dem Kontext auf [FAQ47](faq.md#faq47) verwiesen.
 In jedem Falle sollte man nachsehen, was der RC des Mailclients bedeutet und
@@ -561,10 +560,10 @@ ausgeschlossen werden.
 
 Ursache:
 
-Die rsync Backupmethode erfordert, dass die Backupparition in der Lage ist, Linux
+Die rsync Backupmethode erfordert, dass die Backuppartition in der Lage ist, Linux
 Dateiattribute zu speichern. Das aktuelle Dateisystem unterstützt dieses nicht.
-I.d.R. ist es ein NTFS Filesystem. Falls die Backuppartition per nfs
-eingebunden ist, ist diese Fehlermeldung ein Zeichen dafür, dass die nfs
+I.d.R. ist es ein NTFS Filesystem. Falls die Backuppartition per NFS
+eingebunden ist, ist diese Fehlermeldung ein Zeichen dafür, dass die NFS
 Partition nicht mit no_root_squash exportiert wird.
 
 Weitere Aktionen:
@@ -577,11 +576,11 @@ Details dazu finden sich auf [dieser Seite](which-filesystem-can-be-used-on-the-
 
 Ursache:
 
-Einer per nfs eingebundene Backuppartition fehlt die notwendige Berechtigung
+Einer per NFS eingebundene Backuppartition fehlt die notwendige Berechtigung
 für root, alle Dateiattributes zu setzen. I.d.R. exportiert der NFS Server die
 Backuppartition nicht mit no_root_squash. Diese Option muss in der Datei
-/etc/exports auf dem NFS Server für die exportierte Partition genutzt werden.
-Auch muss ein Dateisystem exportiert werden, welches Linuxdateiattribute
+/etc/exports auf dem NFS Server für die exportierte Partition gesetzt werden.
+Auch muss ein Dateisystem exportiert werden, welches Linux-Dateiattribute
 unterstützt - also ext3 oder ext4. ntfs oder fat32 kann nicht genutzt werden.
 
 Weitere Aktionen:
@@ -592,7 +591,7 @@ Mit no_root_squash die Backuppartition auf dem NFS Server exportieren.
 
 Ursache:
 
-*raspiBackup* wird nur für Raspberries und RaspbianOS unterstützt. Man kann mit
+*raspiBackup* wird nur für Raspberry Pis und RaspbianOS unterstützt. Man kann mit
 der Option --unsupportedEnvironment trotzdem versuchen, *raspiBackup* zu nutzen,
 denn es läuft auch unter vielen anderen Linux Distributionen und
 raspberrykompatibler Hardware. Bei Fehlern wird aber wegen fehlender Testhard-
@@ -610,7 +609,7 @@ Ursache:
 Es dürfen im Backupverzeichnis eines Systems nur von *raspiBackup* erstellte
 Backupverzeichnisse existieren. Jegliche anderen Verzeichnisse oder Dateien
 erzeugen diese Fehlermeldung. Das passiert normalerweise, wenn man manuell
-Backupverzeichnisse manuell umbenennt.
+Backupverzeichnisse umbenennt.
 
 Weitere Aktionen:
 
@@ -618,7 +617,7 @@ Löschen oder Verschieben der nicht von *raspiBackup* erstellten Verzeichnisse
 oder Dateien an andere Plätze.
 
 
-### RBK0274E: Das Restoregerät %s hat gemountete Partitionen. Hinweis: Ein Restore auf das aktive System ist nicht mögich.
+### RBK0274E: Das Restoregerät %s hat gemountete Partitionen. Hinweis: Ein Restore auf das aktive System ist nicht möglich.
 
 Ursache:
 
@@ -640,8 +639,8 @@ usbmount stört beim Restore eines Backups und darf nicht installiert sein.
 
 Weitere Aktionen:
 
-Deinstallation von usbmount mit dem Befehl `sudo apt-get remobe usbmount`.
-Noch besser ist es, eine dedizierte SD Karte mit einem kleinen *Raspberry Pi OS* (*Raspberyy Pi OS
+Deinstallation von usbmount mit dem Befehl `sudo apt-get remove usbmount`.
+Noch besser ist es, eine dedizierte SD Karte mit einem kleinen *Raspberry Pi OS* (*Raspberry Pi OS
 lite*) vorzubereiten und diese SD Karte zum Restore nutzen. Dort ist kein
 usbmount installiert.
 
@@ -650,11 +649,11 @@ usbmount installiert.
 
 Ursache:
 
-Die Diskbeispielsextension benötigt `bc` zum Berechnen.
+Die Disk-Beispielsextension benötigt `bc` zum Berechnen.
 
 Weitere Aktionen:
 
-Installiere bc mit `sudo apt-get install bc`, damit die Diskbeispielextension gültige Werte ausgibt.
+Installiere bc mit `sudo apt-get install bc`, damit die Disk-Beispielextension gültige Werte ausgibt.
 
 
 ## Exitcodes

@@ -22,7 +22,7 @@ Das Laufzeitlog wird bei der eMail Benachrichtigung mitgeschickt.
 
 Die Meldungen in der eMail sowie auf der Konsole können
 koloriert werden. Mögliche Werte sind `C` für Konsole und/oder `M` für eMail.
-Falls postfix als eMmailClient genutzt wird, siehe auch Option --eMailColoring.
+Falls Postfix als eMail Client genutzt wird, siehe auch Option --eMailColoring.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
@@ -47,7 +47,7 @@ Mit der Konfigurationsoption DEFAULT_SENDER_EMAIL kann die
 Standardsenderadresse  "root@$(hostname)" bei Bedarf geändert werden.
 
 **Hinweis:** Die eMail Benachrichtigung funktioniert nur, wenn ein MTA wie z.B.
-nullmailer, msmtp, postfix oder exim4 entsprechend korrekt konfiguriert wurde.
+nullmailer, msmtp, Postfix oder Exim4 entsprechend korrekt konfiguriert wurde.
 Für einige eMailClients gibt es [Konfigurationsanleitungen](configuration-examples.md).
 Ansonsten ist [FAQ38](faq.md#faq38) zu berücksichtigen.
 Die eMailfunktion kann relativ einfach mit der "Fake"-Option -F
@@ -65,7 +65,7 @@ Optionale weitere Parameter, die im eMail-Programmaufruf mitgegeben werden. Für
 sendEmail muss er z.B. wie folgt aussehen: "-f absender.mail@absenderdomain -s
 smtp-server:587 -xu Username -xp Password".
 
-**Achtung**: Die Parameter für `-E` müssen in Anführungszeichen " eingeschlossen
+**Achtung**: Die Parameter für `-E` müssen in Anführungszeichen `"` eingeschlossen
 sein. Speziell zum Testen der eMail Benachrichtigungsfunktion ist der Parameter
 `-F` hilfreich.
 

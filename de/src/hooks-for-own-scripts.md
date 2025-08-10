@@ -2,9 +2,9 @@
 
 Es besteht die Möglichkeit, eigene Codeerweiterungen vor und nach dem
 Backupprozess des Scripts einzubinden. Dieses ist sinnvoll, wenn
-eigentlich Änderungen im Backupscript notwendig sind, aber dann natürlich
+eigentlich Änderungen im Backupscript notwendig sind, die aber dann
 nach jedem Update von *raspiBackup* auf eine neue Version wieder neu
-eingepflegt werden müssen. Die Extensions (Plugins) sind unabhängig vom
+eingepflegt werden müssten. Die Extensions (Plugins) sind unabhängig vom
 jeweiligen Codestand von *raspiBackup* und deshalb in diesem Falle zu
 empfehlen.
 
@@ -21,10 +21,10 @@ deutschen [Raspberry Pi Forum](https://forum-raspberrypi.de/forum/board/164-rasp
 Sollten Fähigkeiten der Plugins fehlen, bitte einen [Issue bei *GitHub*](https://github.com/framps/raspiBackup/issues) anlegen.
 
 Außerdem existieren interessante, von
-[*raspiBackup* Nutzern geschriebene, Plugins](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided),
-die es lohnt, sich mal anzusehen.
+[*raspiBackup* Nutzern geschriebene, Plugins](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
 
-### Pluginaufrufstellen beim Backup
+
+### Plugin-Aufrufstellen beim Backup
 
 Die verschiedenen Plugins werden an folgenden Stellen im Backupverlauf
 aufgerufen:
@@ -44,20 +44,20 @@ aufgerufen:
   - START_SERVICES (Definierte Befehle werden ausgeführt
   - AFTER_STARTSERVICES (Definierte Befehle werden ausgeführt)
 
-... Aufräumarbeiten wie das Löschen von obsoleten Backups (kann länger dauern)
+... Aufräumarbeiten, wie das Löschen von obsoleten Backups (kann länger dauern) ...
 
   - FINAL_COMMANDS (ab Release 0.6.8) (Definierte Befehle werden ausgeführt)
   - eMail (mail) Plugin
   - Notification (notify) Plugin
   - *Slack*, *Pushover* und *Telegram* Notifications falls konfiguriert
 
-... Final housekeeping
+... Final housekeeping ...
 
   - Exit
 
 
 
-### Pluginaufrufstellen beim Restore
+### Plugin-Aufrufstellen beim Restore
 
 Die verschiedenen Plugins werden an folgenden Stellen im Restoreverlauf
 aufgerufen:
@@ -127,22 +127,22 @@ DEFAULT_EXTENSIONS="temp mem disk execute"
 ### Notification Plugins
 
 Für Notifications per *Slack*, *Pushover* und *Telegram* müssen keine
-Extensions geschrieben werden. Es reicht, die Notifications in *raspiBackup*
+Extensions geschrieben werden. Es genügt, die Notifications in *raspiBackup*
 zu konfigurieren.
-Wer andere Notificationziele benachrichtgen will, kann das in einem Script
+Wer andere Notificationziele versorgen möchte, kann das in einem Script
 mit dem Namen `raspiBackup_notify.sh` tun.
 
 ### Beispielerweiterungen
 
-Die folgenden Extensions können ein `pre` und/oder `post` Script haben und
-müssen raspiBackup\_\<extension\>\_pre.sh und/oder
-raspiBackup\_\<extension\>\_post.sh heißen. 
+Die folgenden Extensions können ein *pre* und/oder *post* Script haben und
+müssen `raspiBackup_<extension>_pre.sh` und/oder
+`raspiBackup_<extension>_post.sh` heißen.
 
   1.  temp
   2.  mem
   3.  disk
 
-Alle anderen Extensions müssen kein \_pre and \_post am Ende haben.
+Alle anderen Extensions müssen kein `_pre` und `_post` am Ende haben.
 
 Die Plugins erzeugen folgende Meldungen:
 
@@ -157,7 +157,7 @@ Die Plugins erzeugen folgende Meldungen:
 ### Meldungen
 
 Die Beispielplugins benutzen Meldungen, die ab dem Nummernbereich 1000
-beginnen wie z.B. RBK1000I. Wer eigene Plugins erstellt, sollte, sofern
+beginnen, wie z.B. RBK1000I. Wer eigene Plugins erstellt, sollte, sofern
 sie Meldungen schreiben, diese bei 2000 beginnen lassen und nicht den
 Bereich unter 1999 benutzen.
 
@@ -170,13 +170,13 @@ abgebrochen wurde.
 
 ### eMailPlugin
 
-Möchte man die eMailversendung selbst programmieren, kann man das emailPlugin nutzen.
+Möchte man den Versand von eMails selbst programmieren, kann man das emailPlugin nutzen.
 Das ist dann besonders hilfreich, wenn die vom Script unterstützen eMailProgramme
 den eigenen eMailClient nicht unterstützen.
 Außerdem kann das Aussehen der eMail beliebig geändert werden.
 Ein Plugin, das `mailx` benutzt, befindet sich in den Beispielplugins.
 
-Die folgenden Parameter werden dem Mailplugin Script übergeben:
+Die folgenden Parameter werden dem eMailplugin Script übergeben:
 
 ```
 email="$1"        # target email address
@@ -188,30 +188,26 @@ append="$5"       # file to append
 
 ### Hinweise
 
-1. **Achtung:** Die Extensions laufen mit **root** Rechten und können
-deshalb bei Fehlern das laufende System schädigen oder sogar zerstören!
+- **Achtung:** Die Extensions laufen mit **root** Rechten und können
+  deshalb bei Fehlern das laufende System schädigen oder sogar zerstören!
 
-2. Es sind nicht beide Scripts (`pre` und `post`) notwendig. Es reicht,
-wenn eines existiert.
+- Es sind nicht beide Scripts (`pre` und `post`) notwendig.
+  Eines genügt.
 
-3. Zum Testen von Plugins ist der Parameter `-F` sehr hilfreich. Dadurch
-wird der eigentliche Backupprozess übersprungen und somit der
-Scriptdurchlauf sehr schnell.
+- Zum Testen von Plugins ist der Parameter `-F` sehr hilfreich.
+  Damit wird der eigentliche Backupprozess übersprungen und somit der
+  Scriptdurchlauf sehr schnell.
 
-4. Der Rückgabewert des Backupprozesses wird an das Plugin als
-Parameter weitergereicht. 0 \<=\> OK, \<\>0 Fehler
+- Die Plugins werden im Scope von *raspiBackup* aufgerufen. Daher besteht Zugriff
+  auf dessen interne Scriptvariablen. Davon ist allerdings dringend abzuraten,
+  da sich die Interna jederzeit ändern können. Aus diesem Grunde ist es auch
+  ratsam, eigene Variablen mit einem pluginspezifischen Prefix zu versehen,
+  um mögliche Konflikte mit Variablennamen, die von *raspiBackup* benutzt werden,
+  zu vermeiden.
 
-5. Da die Plugins im Scope von *raspiBackup* aufgerufen werden, besteht
-Zugriff auf interne Scriptvariablen. Davon ist dringend abzuraten, da sich die
-Interna jederzeit ändern können. Aus diesem Grunde ist es auch ratsam,
-eigene Variablen mit einem pluginspiezifischen Prefix zu versehen um
-mögliche Konflikte mit Variablennamen, die von *raspiBackup* benutzt werden,
-zu vermeiden.
-
-6. Wenn jemand seinen Plugincode sharen möchte, geht das einfach über
-einen Pullrequest auf [*GitHub*](https://github.com/framps/raspiBackup).
-Dort sind alle Plugins im Quellcode verfügbar, um sie zu erweitern und
-neue zuzufügen.
+- Wer seinen Plugincode teilen möchte, kann gerne einen Pullrequest auf [*GitHub*](https://github.com/framps/raspiBackup) anlegen.
+  Dort sind alle Plugins im Quellcode verfügbar, um sie zu erweitern und
+  neue hinzuzufügen.
 
 [.status]: rst
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/442-raspibackup-erweiterungen

@@ -1,7 +1,7 @@
 # Backup Konfigurationsoptionen
 
 Die meisten Aufrufoptionen können auch in der Konfigurationsdatei
-definiert werden. Siehe dazu [Backupoptionen](backup-options.md).
+definiert werden. Siehe dazu [Backup-Optionen](backup-options.md).
 
 <div class="table-wrapper-for-options">
 
@@ -13,8 +13,8 @@ definiert werden. Siehe dazu [Backupoptionen](backup-options.md).
 
 ### DEFAULT_BEFORE_STOPSERVICES / DEFAULT_AFTER_STARTSERVICES
 
-Die hier definierten Befehle werden vor bzw nach dem Backup
-vor bzw nach dem Stoppen von Systemservices (Option -a und -o) ausgeführt.
+Die hier definierten Befehle werden vor bzw. nach dem Backup
+vor bzw. nach dem Stoppen von Systemservices (Option -a und -o) ausgeführt.
 
 | Config-Option               | Standard |
 |-----------------------------|----------|
@@ -24,9 +24,9 @@ vor bzw nach dem Stoppen von Systemservices (Option -a und -o) ausgeführt.
 
 ### DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY
 
-dd Backups sichern idurch diese Option nur den von definierten Partitionen belegten Platz.
+dd Backups sichern durch diese Option nur den von definierten Partitionen belegten Platz.
 Dadurch benötigt z.B. eine 32GB SD Karte, die nur eine 8GB Partition definiert hat, für den
-Backup nur 8GB und nicht 32GB. Dazu muss aber vermittels gparted oder resize2fs
+Backup nur 8GB und nicht 32GB. Dazu muss aber mittels gparted oder resize2fs
 die root Partition entsprechend verkleinert werden, denn üblicherweise füllt
 die root Partition den gesamten Rest der SD Karte aus.
 
@@ -63,7 +63,7 @@ Mit dieser Option kann ein Reboot des gesicherten Systems am Ende des Backups
 konfiguriert werden.
 
 **Hinweis**: Die Services, die vor dem Backup gestoppt wurden, werden nicht wieder
-gestartet. Das ist unnötig da sie sowieso beim Neustart gestartet werden.
+gestartet. Das ist unnötig, da sie sowieso beim Neustart gestartet werden.
 
 | Config-Option              | Standard |
 |----------------------------|----------|
@@ -82,8 +82,7 @@ zu den Standardoptionen von *raspiBackup* genutzt werden.
 
 ### DEFAULT_RSYNC_BACKUP_OPTIONS
 
-Damit können die rsync Standardbackupoptionen
-überschrieben werden.
+Damit können die rsync Standard-Backupoptionen überschrieben werden.
 
 **Benutzung auf eigene Gefahr!**
 
@@ -93,8 +92,7 @@ Damit können die rsync Standardbackupoptionen
 
 ### DEFAULT_TAR_BACKUP_OPTIONS
 
-Damit können die tar Standardbackupoptionen
-überschrieben werden.
+Damit können die tar Standard-Backupoptionen überschrieben werden.
 
 **Benutzung auf eigene Gefahr!**
 

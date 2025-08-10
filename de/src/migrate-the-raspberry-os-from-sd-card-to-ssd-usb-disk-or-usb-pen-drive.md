@@ -3,17 +3,17 @@
 *raspiBackup* ist dafür gedacht, ein Backup wieder auf die originale
 Gerätekonfiguration zurückzuspielen. Es gibt 3 mögliche Szenarien:
 
-1. /boot und / auf SD Karte
-2. /boot auf SD Karte und / extern auf einer SSD, USB Platte oder USB Stick
-   (Ältere Rasperry welche keinen USB Boot Mode kann)
-3. /boot und / auf einer SSD, USB Platte oder USB Stick (USB Boot Mode auf
-   neueren Raspberries)
+1. `/boot` und `/` auf SD Karte
+2. `/boot` auf SD Karte und `/` extern auf einer SSD, USB Platte oder USB Stick
+   (Ältere Rasperry, welche keinen USB Boot Mode kann)
+3. `/boot` und `/` auf einer SSD, USB Platte oder USB Stick
+   (USB Boot Mode auf neueren Raspberries)
 
 *raspiBackup* kann aber auch dafür benutzt werden, sehr einfach von (1) nach (2) oder (3) zu migrieren.
 
-Dazu muss man ein Backup mit *raspiBackup* erstellen und es anschliessend auf die neue Gerätekonfiguration zurückspielen.
+Dazu wird ein Backup mit *raspiBackup* erstellt und anschließend auf die neue Gerätekonfiguration zurückgespielt.
 
-Für (2) ist folgender Befehl zum Restore notwendig:
+Für (2) als Migrationsziel ist folgender Befehl zum Restore notwendig:
 
 ```
 sudo raspiBackup.sh -d <SD-Karte> -R <USB Gerät> <Backup>

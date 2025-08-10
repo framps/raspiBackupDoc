@@ -19,8 +19,8 @@ sowie ihre Restriktionen.
 
 | Filesystem | dd         | tar      | rsync      |
 |------------|------------|----------|------------|
-| smb        | ja | ja | eingeschränkt <br> Geht über den Umweg mit der Nutzung eines Loopdevices. Siehe dazu auch [FAQ24](faq.md#faq24). |
-| nfs        | ja | ja | **empfohlen** <br> Die Sicherung von ACLs geht auch, aber nur über den Umweg der Nutzung eines Loopdevices. Oder man schaltet die Sicherung von ACLs aus. Siehe dazu auch [FAQ24](faq.md#faq24). |
+| SMB        | ja | ja | eingeschränkt <br> Geht über den Umweg mit der Nutzung eines Loopdevices. Siehe dazu auch [FAQ24](faq.md#faq24). |
+| NFS        | ja | ja | **empfohlen** <br> Die Sicherung von ACLs geht auch, aber nur über den Umweg der Nutzung eines Loopdevices. Oder man schaltet die Sicherung von ACLs aus. Siehe dazu auch [FAQ24](faq.md#faq24). |
 
 [.status]: rst
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/578-welches-dateisystem-kann-auf-dem-backupgeraet-benutzt-werden

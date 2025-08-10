@@ -27,7 +27,7 @@ You can either start the backup manually or have the backups be started automati
 Optionally you can let you notified about the backup result with eMail, Pushover, Slack or Telegram.
 
 Backups can be saved ony an partition which can be mounted on a Linux system
-(USB flash drive, USB disk, SSD, NVMe, NFS, SMB, sshfs, WEBDAV etc).
+(USB flash drive, USB disk, SSD, NVMe, NFS, SMB, SSHFS, WebDAV etc).
 
 There exist two backup modes: The **normal backup mode** just saves the boot and root parition. If additional partitions should be saved, for example a 3rd data only partition, the **partition oriented mode** has to be used.
 

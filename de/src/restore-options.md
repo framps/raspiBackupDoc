@@ -94,9 +94,9 @@ Rootpartition mitgesichert werden.
 
 Während der Wiederherstellung kann die Rootpartition auf die maximal verfügbare
 Größe des Zielgerätes der externen Partition ausgedehnt werden. Wird die
-Option ausgeschaltet mit --resizeRootFS- wird die Rootpartition so groß
-angelegt wie sie auf dem Originalsystem war. Nutze man die Option -P so wird die letzte
-Partition auf dem Gerät erweitert. Liegen mehr als 2 Partitionen vor ist es dann nicht die Rootpartition.
+Option ausgeschaltet mit `--resizeRootFS-`, wird die Rootpartition so groß
+angelegt, wie sie auf dem Originalsystem war. Nutzt man die Option -P, so wird die letzte
+Partition auf dem Gerät erweitert. Liegen mehr als 2 Partitionen vor, ist es dann nicht die Rootpartition.
 
 | Option | Standard | Im Installer | Konfigurationsname |
 |--------|----------|--------------|--------------------|
@@ -173,7 +173,7 @@ geänderte oder gelöschte Dateien gesynced werden.
 <a name="parm_1"></a>
 ### -1: Partitionierungsfehler ignorieren
 
-Das Partitionslayout wird auf der SD Karte erstellt so wie es auf dem Quellgerät
+Das Partitionslayout wird auf der SD Karte erstellt, so wie es auf dem Quellgerät
 existiert und dabei werden sämtliche Fehler, die entdeckt werden - inklusive des
 Fehlers, dass das Zielgerät zu klein ist - ignoriert.  Siehe [FAQ #6](faq.md#faq6) für
 weitere Details.
@@ -183,7 +183,7 @@ weitere Details.
 | -1     |  aus    |              |                    |
 
 Hinweis: Diese Option kann unerwartete Ergebnisse haben.
-Benutze die Option nur, wenn Du weisst, was Du tust.
+Benutze die Option nur, wenn Du weißt, was Du tust.
 
 </div>
 

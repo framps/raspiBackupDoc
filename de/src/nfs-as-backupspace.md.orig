@@ -140,6 +140,15 @@ Raspberry Pi fstab Einträge für NFS3 und NFS4
 #192.168.X.XXX:/volume1/backup /media/nas-backup nfs rw 0 0
 ```
 
+<<<<<<< HEAD
+=======
+Anmerkung zum Mounten mit NFS4:
+Der Benutzer Jean hat auf der englischen Seite von *raspiBackup* beschrieben, wie
+man das Backup auf ein Share, welches mit NFS4 eingebunden ist, durchführen kann.
+Konnte es bisher noch nicht testen. Hier der [Permalink](https://linux-tips-and-tricks.de/en/raspberry/303-pi-creates-automatic-backups-of-itself#comment-530).
+[.status]: review-comment "Den Permalink belassen?"
+
+>>>>>>> review-rst
 Auszug aus der `raspiBackup.conf` abgelegt unter `/usr/local/etc/`
 
 ```

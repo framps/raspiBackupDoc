@@ -76,11 +76,11 @@ was unter Linux mountbar ist. Dazu gehören u.A.
 
   - SMB Netzwerklaufwerke
   - NFS Netzwerklaufwerke
-  - sshfs Netzwerklaufwerke
-  - webdav Netzwerklaufwerke
-  - ftpfs Netzwerklaufwerke
+  - SSHFS Netzwerklaufwerke
+  - WebDAV Netzwerklaufwerke
+  - FtpFS Netzwerklaufwerke
 
-Auf [Backupziele](backup-targets.md) finden sich Beispiele für SMB, NFS und WEBDAV Konfiguration.
+Auf [Backupziele](backup-targets.md) finden sich Beispiele für SMB, NFS und WebDAV Konfiguration.
 
 [.source]: https://linux-tips-and-tricks.de/de/raspibackupcategoried/608-unterstuetzte-hard-und-software/
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/609-supported-hard-and-software/

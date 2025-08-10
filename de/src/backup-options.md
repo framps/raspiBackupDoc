@@ -14,7 +14,7 @@ die entsprechenden Konfigurationsoptionen.
 <a name="parm_a"></a>
 ### -a: Befehle, die Services nach dem Backup starten
 
-Befehle, um Services nach dem Backup wieder zu starten. Z.B. bei Samba "service
+Befehle, um Services nach dem Backup wieder zu starten. Z.B. bei SMB "service
 smbd start" (**Achtung:** Anführungszeichen an Anfang und Ende). Diese Option ist
 zusammen mit der Option -o obligatorisch.
 
@@ -39,7 +39,7 @@ Die Befehle werden als root ausgeführt. Es ist kein sudo notwendig.
 | -a | keine | konfigurierbar | DEFAULT_STARTSERVICES |
 
 <a name="parm_b"></a>
-### -b: Definition der Blocksize die beim dd Backup genutzt wird
+### -b: Definition der Blocksize, die beim dd Backup genutzt wird
 
 Blocksize, die beim dd Backup benutzt wird
 
@@ -53,7 +53,7 @@ Blocksize, die beim dd Backup benutzt wird
 Die Bootpartition wird nicht per dd sondern per tar gesichert.
 
 **Hinweis:**
-Diese Option hat keine Funktion wenn der partitionsorientierte Modus
+Diese Option hat keine Funktion, wenn der partitionsorientierte Modus
 benutzt wird.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
@@ -65,14 +65,13 @@ benutzt wird.
 
 Es kann kein Backup auf der Rootpartition erstellt werden, um vor
 unbeabsichtigtem Vollschreiben der Rootpartition durch das Backup zu schützen.
-Auch macht es keinen Sinn ein Backup auf der Systempartition abzulegen.
+Auch macht es keinen Sinn, ein Backup auf der Systempartition abzulegen.
 
 Mit dieser Option wird der Test ausgeschaltet und es kann ein Backup auf der
 Rootpartition erstellt werden.
 
 **ACHTUNG**:
-Es wird nicht geprüft, ob das Backup
-noch auf die Rootparition passt.
+Es wird nicht geprüft, ob das Backup noch auf die Rootpartition passt.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
@@ -91,7 +90,7 @@ Weitere Aufrufoptionen für das dd Backup (z.B. "conv=notrunc,noerror,sync")
 ### --dynamicMount: Dynamisches Mounten der Backuppartition
 
 Damit wird vor dem Backup die angegebene Partition bzw. der
-Mointpoint gemounted und am Ende wieder umounted. Falls sie schon gemounted ist
+Mointpoint gemounted und am Ende wieder umounted. Falls sie schon gemounted war,
 wird sie am Ende die Partition nicht umounted. Der Mountpoint muss in /etc/fstab
 definiert sein und kann dann entweder der Mountpoint selbst sein (z.B. /backup)
 oder die Backuppartition (z.B. /dev/sdb1).
@@ -101,35 +100,33 @@ oder die Backuppartition (z.B. /dev/sdb1).
 | --dynamicMount | aus |  | DEFAULT_DYNAMIC_MOUNT |
 
 <a name="parm_F"></a>
-### -F: Simuliert den Backuplauf und hilft die eMailBenachrichtgung schnell zu testen
+### -F: Simuliert den Backuplauf und hilft, die eMail Benachrichtgung schnell zu testen
 
-Fake backup. Diese Option ist hilfreich beim initialen Testen von *raspiBackup*.
-Der eigentliche lange Backup wird dadurch nicht angestossen - aber sämtliche
-Optionsprüfungen wie auch das Senden der BenachrichtigungseMail und Pushnachrichten.
+"Fake backup". Diese Option ist hilfreich beim initialen Testen von *raspiBackup*.
+Der eigentliche lange Backup wird dadurch nicht angestoßen - aber sämtliche
+Optionsprüfungen wie auch das Senden der Benachrichtigungs-eMail und Pushnachrichten.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
 | -F | None |  | None |
 
 <a name="parm_ignoreAdditionalPartitions"></a>
-### --ignoreAdditionalPartitions: Es werden mehr als zwei Partitionen toleriert wobei aber nur die ersten beiden Partitionen gesichert werden.
+### --ignoreAdditionalPartitions: Es werden mehr als zwei Partitionen toleriert, wobei aber nur die ersten beiden Partitionen gesichert werden.
 
-Mit dieser Option sind Systeme mit mehr als
-zwei Partitionen unterstützt im normalen Backupmodus wenn tar oder rsync Backup genutzt
-wird. Allerdings werden nur die ersten beiden Paritionen, /boot und / gesichert
-und wiederhergestellt.
+Mit dieser Option sind Systeme mit mehr als zwei Partitionen unterstützt;
+im normalen Backupmodus, wenn tar oder rsync Backup genutzt wird. Allerdings
+werden nur die ersten beiden Partitionen, /boot und / gesichert und wiederhergestellt.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
 | --ignoreAdditionalPartitions | nein |  | DEFAULT_IGNORE_ADDITIONAL_PARTITIONS |
 
 <a name="parm_ignoreMissingPartitions"></a>
-### --ignoreMissingPartitions: Test ob alle Partitionen gesichert werden
+### --ignoreMissingPartitions: Test, ob alle Partitionen gesichert werden
 
 Es wird im partitionsorientierten Backupmodus geprüft, ob alle Partitionen,
-die im letzten Backup
-gesichert wurden, auch wieder gesichert werden. Mit dieser Option wird der Test
-ausgeschaltet.
+die im letzten Backup gesichert wurden, auch wieder gesichert werden.
+Mit dieser Option wird der Test ausgeschaltet.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
@@ -139,9 +136,8 @@ ausgeschaltet.
 ### -k: Anzahl der Backups die vorgehalten werden sollen
 
 Anzahl der Backups, die pro Backuptyp vorzuhalten sind, sofern es nicht durch
-keep Option der jeweiligen Backuptypen überschrieben wird.
-D.h., es werden standarmäßig 3 dd, 3 tar und 3 rsync
-Backups vorgehalten.
+die keep Option der jeweiligen Backuptypen überschrieben wird.
+D.h., es werden standardmäßig 3 dd, 3 tar und 3 rsync Backups vorgehalten.
 
 **Hinweis:**
  Diese Option ist wirkungslos, wenn die intelligente Rotationsstrategie benutzt wird.
@@ -151,11 +147,11 @@ Backups vorgehalten.
 | -k | 3 | konfigurierbar | DEFAULT_KEEPBACKUPS |
 
 <a name="parm_keepType"></a>
-### --keep_{type}: Anazhl der Backups pro Typ die vorgehalten werden sollen
+### --keep_{type}: Anzahl der Backups pro Typ, die vorgehalten werden sollen
 
 Anzahl der Backups, die für den jeweiligen Backuptypen vorgehalten werden.
 
-{type} kann jeder Backuptyp sein, also dd, ddz, tar, tgz oder rsync
+{type} kann jeder Backuptyp sein, also dd, ddz, tar, tgz oder rsync.
 
 **Hinweis:**
 Diese Optionen sind wirkungslos, wenn die intelligente Rotationsstrategie benutzt wird.
@@ -172,8 +168,8 @@ Diese Optionen sind wirkungslos, wenn die intelligente Rotationsstrategie benutz
 ### -M: Erstellen eines *raspiBackup* Snapshots
 
 Mit der Option wird ein *raspiBackup* Snapshot erstellt, welcher nicht im
-Backuprecycleprozess berücksichtigt wird und somit nicht automatisch gelöscht wird. Der
-Snapshot erhält am Ende des Verzeichnisnamens den angegebenen Text. Siehe auch
+Backup-Recycleprozess berücksichtigt und somit nicht automatisch gelöscht wird.
+Der Snapshot erhält am Ende des Verzeichnisnamens den angegebenen Text. Siehe auch
 [diese Seite zu Snapshots](snapshots.md).
 
 Beispiel: Der Hostname ist "idefix" und der Parameter für -M ist "Initial boot
@@ -185,11 +181,11 @@ idefix/idefix-rsync-backup-20170103-170717_idefix-Initial_boot_from_SD
 
 **Hinweis**:
 *raspiBackup* Snapshots sind normale Backups und keine "richtigen"
-Snapshots wie die bei LVM oder btrfs. Es werden aber beim rsync Backup Hardlinks
-genutzt um die Snapshotzeit zu reduzieren.
+Snapshots wie die bei LVM oder BTRFS. Es werden aber beim rsync Backup Hardlinks
+genutzt, um die Snapshotzeit zu reduzieren.
 
 **Hinweis**:
-Da die Snapshotverzeichnisse nicht im Backuprecycleprozess berücksichtigt werden,
+Da die Snapshotverzeichnisse nicht im Backup-Recycleprozess berücksichtigt werden,
 müssen sie manuell gelöscht werden.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
@@ -211,7 +207,7 @@ Speicherbelegung vor und nach dem Backuplauf ausgeben.
 ### --notifyStart: Benachrichtigung beim Backupstart
 
 Mit dieser Option wird eingeschalten, dass eine
-eMail oder eine Pushbenachrichtigung gesendet wird, wenn der Backup startet.
+eMail oder eine Push-Benachrichtigung gesendet wird, wenn der Backup startet.
 Normalerweise wird nur am Ende des Backups eine Benachrichtigung geschickt.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
@@ -222,7 +218,7 @@ Normalerweise wird nur am Ende des Backups eine Benachrichtigung geschickt.
 ### -o: Befehle, die Services vor dem Backup stoppen
 
 Befehle, um Services vor dem Backup zu stoppen, damit kein inkonsistentes Backup
-erzeugt wird. Z.B. bei Samba "service smbd stop" (Achtung: Anführungszeichen an
+erzeugt wird. Z.B. bei SMB "service smbd stop" (Achtung: Anführungszeichen an
 Anfang und Ende). Diese Option ist zusammen mit der Option -a obligatorisch.
 
 Mehrere Befehle müssen durch `&&` getrennt werden. Diese Befehle sollten die
@@ -248,7 +244,7 @@ Die Befehle werden als root ausgeführt. Es ist kein sudo notwendig.
 <a name="parm_p"></a>
 ### -p: Backupverzeichnis
 
-Angabe des Backupverzeichnisses in welchem das erstellte
+Angabe des Backupverzeichnisses, in welchem das erstellte
 Backup gespeichert werden soll.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
@@ -258,7 +254,7 @@ Backup gespeichert werden soll.
 <a name="parm_rebootSystem"></a>
 ### --rebootSystem: Reboot des Systems nach dem Backup
 
-Duch diese Option eine Reboot des Systems am Ende des
+Durch diese Option wird ein Reboot des Systems am Ende des
 Backuplaufes vorgenommen und somit werden alle Services wieder gestartet.
 Deshalb werden Argumente der Option -a auch ignoriert.
 
@@ -269,10 +265,10 @@ Deshalb werden Argumente der Option -a auch ignoriert.
 | --rebootSystem | aus |  | DEFAULT_REBOOT_SYSTEM |
 
 <a name="parm_smartRecycle"></a>
-### --smartRecycle: Nutzung von SmartReccyle 
+### --smartRecycle: Nutzung von SmartRecycle
 
 Diese Option schaltet die [intelligente Rotationsstrategie - Smart Recycle](smart-recycle.md) ein.
-Damit werden auch die --keep Optionen ignoriert und müssen nicht auf 0 gesetzt werden.
+Damit werden die --keep Optionen ignoriert und müssen nicht auf 0 gesetzt werden.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
@@ -291,7 +287,7 @@ Rotationsstrategie - Smart Recycle](smart-recycle.md) ein.
 
 
 <a name="parm_smartRecycleOptions"></a>
-### --smartRecycleOptions: Smarterecycleoptionen 
+### --smartRecycleOptions: Smartrecycle-Optionen
 
 Diese Option definiert Parameter der [intelligenten Rotationsstrategie - Smart Recycle](smart-recycle.md).
 
@@ -300,20 +296,20 @@ Diese Option definiert Parameter der [intelligenten Rotationsstrategie - Smart R
 | --smartRecycleOptions | "7 4 12 1" | konfigurierbar | DEFAULT_SMART_RECYCLE_OPTIONS |
 
 <a name="parm_systemstatus"></a>
-### --systemstatus: Aktive Services beim Backupstart anzeigenAktive Services beim Backupstart anzeigen
+### --systemstatus: Aktive Services beim Backupstart anzeigen
 
 Es wird eine Liste der aktiven Services und offenen Dateien
-in der Debugdatei erstellt. 
+in der Debugdatei erstellt.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
 | --systemstatus | aus |  |  |
 
 <a name="parm_unsupportedEnvironment"></a>
-### --unsupportedEnvironment: Nutzung auf nicht unterstützter HW und OS 
+### --unsupportedEnvironment: Nutzung auf nicht unterstützter HW und OS
 
 Wird *raspiBackup* auf nicht [unterstützten Umgebungen](supported-hardware-and-software.md)
-gestartet muss diese Option angegeben werden.
+gestartet, muss diese Option angegeben werden.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
@@ -333,7 +329,7 @@ sichern sind.
 
 
 <a name="parm_T"></a>
-### -T: Angabe der Partitionen die beim partitionsorientierten Backup gesichert werden sollen
+### -T: Angabe der Partitionen, die beim partitionsorientierten Backup gesichert werden sollen
 
 Falls der partitionsorientierte Backupmodus mit der Option -P gewählt wurde,
 kann mit dieser Option definiert werden, welche Partitionen gesichert werden
@@ -368,9 +364,9 @@ Siehe dazu auch [FAQ16](faq.md#faq16).
 
 
 <a name="parm_u"></a>
-### -u: Weitere Verzeichnisse aus dem Backuprozess auszuschliessen
+### -u: Weitere Verzeichnisse aus dem Backuprozess auszuschließen
 
-Erweiterung der Excludeliste beim Backup um bestimmte Verzeichnisse beim Backup
+Erweiterung der Excludeliste beim Backup, um bestimmte Verzeichnisse beim Backup
 zu ignorieren.
 
 **Achtung**:
@@ -403,18 +399,18 @@ Folgende Verzeichnisse werden niemals gesichert:
 - /boot/*
 - /run/*
 
-Ausserdem werden alle gemounteten Verzeichnisse von externen Geräten, die nicht
+Außerdem werden alle gemounteten Verzeichnisse von externen Geräten, die nicht
 auf / gemounted sind, nicht gesichert. Es wird nur die Boot Partition
 /dev/mmcblk0p1 und die Root Partition /dev/mmcblk0p2 bzw. das ausgelagerte
 Rootverzeichnis auf z.B. /dev/sda1 gesichert.
 
-**Hinweis für den partitionsorientierten Mode**:
+**Hinweis für den partitionsorientierten Modus**:
 Wenn die Option -P benutzt wird, werden in allen Partitionsbackups die o.g. Verzeichnisse ausgenommen.
 
 **rsync**:
 
-- */verzeichnis/* - Excluded verzeichnis auf allen Partitionen
-- mmcblk0p2/verzeichnis/* - Excluded verzeichnis auf Partition mmcblk0p2
+- */verzeichnis/* - Excluded Verzeichnis auf allen Partitionen
+- mmcblk0p2/verzeichnis/* - Excluded Verzeichnis auf Partition mmcblk0p2
 
 **tar**:
 
@@ -427,7 +423,7 @@ Wenn die Option -P benutzt wird, werden in allen Partitionsbackups die o.g. Verz
 <a name="parm_v"></a>
 ### -v: Alle Meldungen des verwendeten Backuptools werden protokolliert
 
-Die verwendeten Backuptools tar und rsync zeigen detailierte Informationen an
+Die verwendeten Backuptools tar und rsync zeigen detaillierte Informationen an
 (Verbose mode). Die Option ist besonders nützliche bei initialen manuellen
 Backuptests, um den Backupfortschritt verfolgen zu können.
 

@@ -13,7 +13,7 @@ Im normalen Backupmodus werden normalerwesie die beiden RaspbianOS-Partitionen
 auf eine externe
 Partition (USB Stick, USB Platte, ...) ausgelagert wurde, wird diese externe
 Partition gesichert sowie die Bootpartition von der SD Karte. Wird
-dieser Backup zurückgespielt muss die [Option `-R`](restore-options.md#parm_R) genutzt werden
+dieser Backup zurückgespielt, muss die [Option `-R`](restore-options.md#parm_R) genutzt werden,
 um das Zielgerät für die externe Rootpartition anzugeben.
 
 [.status]: rst

@@ -1,13 +1,13 @@
 # Language support for languages other than DE and EN (L10N)
 
-raspiBackupInstallUI and *raspiBackup* initially wrote messages in German and English only.
-But both are able to write messages in any language from a coding point of view (I18N).
-Anybody who is willing to help to add support for a new language not already supported is welcome
+*raspiBackupInstallUI* and *raspiBackup* initially printed messages in German and English only.
+But both are able to print messages in any language from a coding point of view (I18N).
+Anybody who is willing to help to add support for a yet unsupported language is welcome
 to translate *raspiBackup* messages.
 
 ``` admonish info title="Note"
-Don't hesiate if you're willing to add a new language to *raspiBackup* even you don't have any programming experience.
-You don't have to fiddle with the programmins stuff. You have only
+Don't hesitate if you're willing to add a new language to *raspiBackup* even you don't have any programming experience.
+You don't have to fiddle with the programming stuff. You have only
 to translate all messages into your native language. You even don't have
 to create a PR to get the new language into *raspiBackup*. All this programming stuff will be handled by *raspiBackup* developers for you.
 ```
@@ -26,11 +26,11 @@ Right now following languages are supported:
 
 ## Basic activities to add a new language to *raspiBackup*
 
-There exist two files which write messages: `raspiBackup` and `raspiBackupInstallUI`.
+There exist two files printing messages: `raspiBackup` and `raspiBackupInstallUI`.
 
-Following steps have to be done to support a new language to raspiBackupInstallUI and *raspiBackup*:
+Following steps have to be done to support a new language to them:
 
-1. For every message a new line in the code for the new language has to be added. Example for FI:
+1. For every message a new line for the new language has to be added to the code. Example for FI:
 
    ```
    MSG_RUNASROOT=2
@@ -49,9 +49,11 @@ Following steps have to be done to support a new language to raspiBackupInstallU
    ```
    and that's why `MSG_DE` is used.
 
-1. The help text in *raspiBackup* may optionally also be translated. For every language a bash function usageLL() may be created which has to follow bash syntax. Just use the existing function usageEN as a template.
+1. The help text in *raspiBackup* may optionally also be translated.
+   For every language a bash function `usageLL()` may be created which has to follow bash syntax.
+   Just use the existing function `usageEN` as a template.
 
-1. Finally to enable the new language the following line in the code has to be updated:
+1. To enable the new language the following line in the code has to be updated:
    ```
    SUPPORTED_LANGUAGES=("EN" "DE")
    ```

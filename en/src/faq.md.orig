@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Häufige Fragen (FAQ)
 
 <!-- toc -->
@@ -28,13 +29,13 @@ Die sicherste Methode ist natürlich das System vollständig zu stoppen.
 Bei einem Backup wird nur gesichert was sich auf dem Speichermedium
 und nicht was sich noch im Hauptspeicher befindet.
 
-Ein Systemstopp ist leider nicht regelmäßig und automatisch
-vornehmbar. Wenn man alle aktiven Services wie MySQL, SMB, NFS,
-ownCloud, Webserver und alle anderen aktiven Services immer vor dem Backup
+Ein Systemstop ist leider nicht regelmäßig und automatisch
+vornehmbar. Wenn man alle aktiven Services wie mysql, samba, nfs,
+Owncloud, Webserver und alle anderen aktiven Services immer vor dem Backup
 stoppt, um keine Dateninkonsistenzen zu erzeugen, kann das Backup zum
 Wiederherstellen der Raspi genutzt werden. Stoppt man die Services nicht,
 besteht eine hohe Wahrscheinlichkeit, dass das Backup inkonsistent wird.
-Dazu gibt es die Parameter `-a` und `-o`, um die entsprechenden Stopp- und
+Dazu gibt es die Parameter `-a` und `-o`, um die entsprechenden Stop- und
 Startbefehle vor bzw. nach dem Backup auszuführen. Siehe auch [FAQ18](#faq18) dazu.
 
 Mit dem Installer können Systemd Services ausgewählt werden, die gestoppt
@@ -84,11 +85,11 @@ die Vor- und Nachteile der jeweiligen Backupmethoden nachgelesen werden.
 ### 5)  Kann man die Sicherung auch ohne *raspiBackup* wiederherstellen?
 
 Das ist eine Grundvoraussetzung für *raspiBackup* gewesen: Es muss möglich
-sein, das Backup mit entsprechenden Linux-Kenntnissen zu Fuß restoren zu
+sein, das Backup mit entprechenden Linuxkenntnissen zu Fuß restoren zu
 können.
 
 Die Sicherung legt Dateien an, die die lesbaren Ausgaben von den Linux
-Befehlen sfdisk, blkid und fdisk von dem System enthält. Damit lässt sich
+Befehlen sfdisk, blkid und fdisk von dem System enhält. Damit lässt sich
 zuerst die Partitionsstruktur des Backups mit den entsprechenden Linuxtools
 wiederherstellen. Danach kann man die Partitionsbackups mit den
 entsprechenden Linuxtools wieder auf die Partitionen zurückspielen.
@@ -98,11 +99,11 @@ entsprechenden Linuxtools wieder auf die Partitionen zurückspielen.
 ### 6)   Kann man die Sicherungen mit *raspiBackup* auch auf kleiner und größere SD Karten wiederherstellen?
 
 Beim dd Backuptyp muss man nach den Restore auf ein größeres Gerät mit
-Linux Repartitionierungstools nach der Wiederherstellung die Partitionsgröße
-anpassen, wenn man für die zweite Parition sämtlichen Platz nutzen will. Ein
-dd Restore auf ein kleineres Gerät geht nicht.
+Linux Repartitionierungstools nach der Wiederherstellung die Paritionsgröße
+anpassen wenn man für die zweite Parition sämtlichen Platz nutzen will. Ein
+dd Restore auf einkleineries Gerät geht nicht.
 
-Ohne Probleme funktioniert es bei einem kleineren oder größeren Gerät,
+Ohne Probleme funktioniert es bei einem kleineren oder größeren Gerät
 sofern tar oder rsync Backup. Beim normalen Backupmodus wird
 automatisch die Größe der root Partition entsprechend angepasst, d.h.
 entsprechend verkleinert oder vergrößert. Bei einer Vergrößerung wird
@@ -117,7 +118,7 @@ vorgenommen sondern die existierende Partitionierung des gesicherten
 Systems genutzt.
 Man hat damit vollständige Kontrolle über die Größe der Wiederhergestellten
 Partitionen. D.h. man kann dadurch vor dem Restore genau festlegen, wie
-groß die Partitionen auf der neuen SD Karte sein sollen und somit auch auf
+gross die Partitionen auf der neuen SD Karte sein sollen und somit auch auf
 kleiner SD Karten restoren. Das geht auch für partitionsorientierte Backups.
 
 Ein dd Backup kann nicht auf eine kleiner Karte restored werden. Vorher muss
@@ -135,7 +136,7 @@ Es gibt zwei Optionen die das Partitionierungsverhalten von *raspiBackup*
 beeinflussen: Option `-1` (eins) zwingt *raspiBackup* die Partitionierung der
 Backup SD Karte auf die Ziel SD Karte zu erstellen auch wenn die Partitionen
 kleiner oder größer als die Ziel SD Karte sind. Mit der Option `-0` (Null)
-nimmt *raspiBackup* keine Partitionierung vor und verwendet die existierende
+nimmt *raspiBackup* keine Paritionierung vor und verwendet die existiernde
 Partition der Ziel SD Karte. Somit kann man vor dem Restore die Partitionen
 anlegen und formatieren wie man sie haben möchte und diese wird dann von
 *raspiBackup* benutzt.
@@ -148,11 +149,11 @@ Generell auf jedem Device, welches unter Linux gemounted werden kann
 
   - Externer USB Stick
   - Externe USB Platte
-  - SMB Netzwerklaufwerk
-  - NFS Netzwerklaufwerk
-  - SSHFS Netzwerklaufwerk
-  - WebDAV Netzwerklaufwerk
-  - FtpFS Netzwerklaufwerk
+  - smb Netzwerklaufwerk
+  - nfs Netzwerklaufwerk
+  - sshfs Netzwerklaufwerk
+  - webdav Netzwerklaufwerk
+  - ftpfs Netzwerklaufwerk
 
 <a name="faq9"></a>
 ### 9) Wie kann ich die Funktion von *raspiBackup* noch erweitern und zusätzlich etwas vor oder nach dem Backup und/oder Restore ausführen lassen?
@@ -173,7 +174,7 @@ Da gibt es verschiedene Möglichkeiten:
 <a name="faq10"></a>
 ### 10) Welche eMailClients werden von *raspiBackup* unterstützt?
 
-*raspiBackup* unterstützt Exim4, Postfix und nullmailer, ssmtp, msmtp und
+*raspiBackup* unterstützt exim4, postfix und nullmailer, ssmtp, msmtp und
 sendEmail. Andere eMailClients können über ein eMail Erweiterung (Extension)
 angesprochen werden (Details siehe [hier](hooks-for-own-scripts.md)).
 
@@ -183,7 +184,7 @@ angesprochen werden (Details siehe [hier](hooks-for-own-scripts.md)).
 
 *raspiBackup* kann eine eMailErweiterung (extension plugpoint) zum Senden der
 eMail benutzen. Dazu muss ein kleines Script geschrieben werden, welches die
-eMailParameter entsprechende dem verwendeten eMailClient aufbereitet und
+eMailParameter entsprechende dem verwendeteten eMailClient aufbereitet und
 den eMailClient mit der korrekten Syntax aufruft. Eine Beispielerweiterung
 für mailx ist bei den [Erweiterungsbeispielen](hooks-for-own-scripts.md) enthalten.
 
@@ -230,7 +231,7 @@ einen Versionsupdate vornehmen lassen.
 <a name="faq15"></a>
 ### 15) Wie kann ich auf eine vorhergehende *raspiBackup* Version zurückgehen, wenn ich nach einem Upgrade bemerke, dass die neue Version nicht so funktioniert wie ich es erwarte?
 
-*raspiBackup* erstellt jedes mal wenn mit der Option -U eine neue Version
+*raspiBackup* erstelt jedes mal wenn mit der Option -U eine neue Version
 aktiviert wird eine Sicherungskopie. Mit der Option -V kann man jederzeit
 auf eine vorhergehende Version zurückgehen. Es wird eine Liste von alle
 gesicherten *raspiBackup* Versionen angezeigt und man kann die Version, die
@@ -257,8 +258,8 @@ Minimum verkleinern.
 
 Hardlinks werden erfolgreich von *raspiBackup* benutzt wenn ein lokaler USB
 Stick, eine lokale USB Platte oder auch eine per NFS gemountete Partition,
-die mit ext3/ext4 formatiert ist, benutzt wird. SMB und SSHFS
-unterstützen keine Hardlinks.
+die mit ext3/ext4 formatiert ist, benutzt wird. SMB sowie sshfs
+unterstützt keine Hardlinks.
 
 **Hinweis:** Der Windows Explorer ignoriert Hardlinks und zeigt deshalb eine
 falsche effektive Belegung an. Es muss deshalb ein Linuxsystem genutzt
@@ -307,10 +308,10 @@ Optionen genutzt werden.
 
 Folgende Services sollten auf alle Fälle gestoppt werden:
 
-| Service   | Stopp Befehl |
+| Service   | Stop Befehl |
 |-----------|-------------|
-| NFS       | systemctl stop nfs-kernel-server |
-| SMB/samba | systemctl stop samba |
+| nfs       | systemctl stop nfs-kernel-server |
+| Samba     | systemctl stop samba |
 | Pilight   | systemctl stop pilight |
 | Cups      | systemctl stop cups |
 | Minidlna  | systemctl stop minidlna |
@@ -319,17 +320,17 @@ Folgende Services sollten auf alle Fälle gestoppt werden:
 | nginx     | systemctl stop nginx |
 | mysql     | systemctl stop mysql |
 | seafile   | systemctl stop seafile |
-| ownCloud  | Siehe Apache |
+| Owncloud  | Siehe Apache |
 | FHEM      | systemctl stop fhem |
 | iobroker  | systemctl stop iobroker |
 | cron      | systemctl stop cron |
 
 Die Services sollten dann per Option DEFAULT_STARTSERVICES wieder gestartet
 werden. Die Reihenfolge sollte dann genau umgekehrt sein zu der
-Stoppreihenfolge.
+Stopreihenfolge.
 
 Der Installer sorgt automatisch dafür dass die ausgewählten Systemd
-kontrollierten Services in der entsprechenden Reihenfolge gestoppt bzw.
+kontrollierten Services in der entsprechenden Reihenfolge gestoppt bzw
 gestartet werden. Leider garantiert Systemd nicht dass die Abhängigkeiten
 der Services berücksichtigt werden. Zu ein paar Anwendungen gibt es auch
 weitere Tipps auf dieser Seite die man berücksichtigen sollte.
@@ -337,7 +338,7 @@ weitere Tipps auf dieser Seite die man berücksichtigen sollte.
 Beispiel für -a
 
 ```
--a "systemctl start pilight && systemctl start samba && systemctl start nfs-kernel-server"
+-a "systemctl startpilight && systemctlstartsamba && systemctl startnfs-kernel-server"
 ```
 
 Beispiel für -o
@@ -355,7 +356,7 @@ DEFAULT_STOPSERVICES="systemctl stop nfs-kernel-server && systemctl stop pilight
 bzw.
 
 ```
-DEFAULT_STARTSERVICES="systemctl start samba&& systemctl start pilight && systemctl  start nfs-kernel-server"
+DEFAULT_STARTSERVICES="systemctl startsamba&& systemctl startpilight && systemctl  startnfs-kernel-server"
 ```
 
 Achtung: Die Befehle werden als root ausgeführt. Es ist kein sudo notwendig.
@@ -376,7 +377,7 @@ werden kann. Allerdings gibt es ein paar Dinge zu beachten:
 
 - Ein rsync Backup benutzt Hardlinks welche von ext3/4 unterstützt werden.
   Dann werden nur geänderte Dateien gesichert und gleiche Dateien per
-  Hardlinks verknüpft. Ein ext4 Filesystem was über SMB freigegeben wird
+  Hardlinks verknüpft. Ein ext4 Filesystem was über smb freigegeben wird
   unterstützt keine Hardlinks. Eine Alternative ist NFS. Werden keine
   Hardlinks unterstützt kann rsync nicht genutzt werden.
 
@@ -387,15 +388,15 @@ werden kann. Allerdings gibt es ein paar Dinge zu beachten:
   schnell größer als 4GB wird. Eine Alternative dazu ist NTFS.
 
 Allgemeine Empfehlung: Benutze wenn möglich ext3/4. Auf Linux benutze NFS
-für Netzwerklaufwerke. Auf Windows benutze NTFS auf exportierten SMB
-Netzwerklaufwerken. Benutze FAT32 nur, wenn sichergestellt ist, dass die
+für Netzwerklaufwerke. Auf Windows benutze NTFS auf exportierten smb
+Netzwerklaufwerken. Benutze FAT32 nur wenn sichergestellt ist, dass die
 Backups nicht größer werden als 4GB.
 
 
 <a name="faq20"></a>
 ### 20) Ich habe Probleme beim Sichern meiner Backups auf einer Synology. Wie kann ich die beseitigen?
 
-Es gibt diverse Benutzer von *raspiBackup* die ihre Backups per NFS auf einer
+Es gibt diverse Benutzer von *raspiBackup* die ihre Backups per nfs auf einer
 Synology erfolgreich sichern. Es gibt eine spezielle Seite wo ich und
 Benutzer von *raspiBackup* beschrieben haben, was sie an der Synology
 konfiguriert haben, damit alles funktioniert.
@@ -445,7 +446,7 @@ Die Fehlermeldung sieht in etwas wie folgt aus:
 rsync: set_acl: sys_acl_set_file(media/pi, ACL_TYPE_ACCESS): Operation not supported (95)
 ```
 
-Die Ursache liegt darin, dass NFS4 mit rsync keine Posix ACLs
+Die Ursache liegt darin, dass nfs Version 4 mit rsync keine Posix ACLs
 unterstützt. Diese sind aber auch in 99% der Fälle nicht notwendig. Die
 folgende Zeile in der `/etc/mke2fs.conf`
 
@@ -453,15 +454,15 @@ folgende Zeile in der `/etc/mke2fs.conf`
 default_mntopts = acl,user_xattr
 ```
 
-bewirkt, dass jeder mount immer die ACL für eine Partition einschaltet. Das
+bewirkt, dass jeder mount immer die acl für eine Partition einschaltet. Das
 trifft dann auch für die Backuppartition von *raspiBackup* zu, die
-standardmäßig auf /backup gemounted wird. Somit wird immer versucht, ACL
+standardmäßig auf /backup gemounted wird. Somit wird immer versucht, acl
 Daten zu schreiben, was von rsync nicht unterstützt wird.
 
-Hinweis: Synology unterstützt keine ACLs mit NFS3 as of 13.5.2022.
+Hinweis: Synology unterstützt keine ACLs mit NFSv3 as of 13.5.2022.
 
 Hinweis: Mit folgendem Befehl findet mal alle Dateien mit ACLs: sudo
-getfacl -Rs /Der Befehl braucht Zeit, bis er fertig ist.
+getfacl -Rs /Der Befehl braucht Zeit bis er fertig ist.
 
 Mögliche Lösungen:
 
@@ -477,7 +478,7 @@ Mögliche Lösungen:
 
 1. Benutze ein lokal angeschlossenes Gerät welches mit *ext4* formatiert ist
 
-1. Benutze *NFS* version2 oder version3. Lies dazu [diesen Artikel](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). Diese
+1. Benutze *nfs* version2 oder *nfs* version3. Lies dazu [diesen Artikel](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). Diese
    Option funktioniert aber nicht mit einer Synology.
 
 1. Benutze `raspiBackupWrapper.sh`, in dem sich Code befindet, der ein Loop
@@ -600,7 +601,7 @@ Folgende Optionen existieren, um das Problem zu beseitigen:
     man entweder mit dem Installer vornehmen (M3->C6) sofern es ein System
     Service ist oder man muss manuell in der Konfigurationsdatei die beiden
     Optionen DEFAULT_STOPSERVICES und DEFAULT_STARTSERVICES um die Befehle
-    erweitern, um den Service zu stoppen und zu starten.
+    erweiteren um den Service zu stoppen und zu starten.
     Tipp: Mit der Option --systemstatus erhält man im Debuglog eine Liste
     der aktiven Services und ihrer offenen Dateien. Damit kann man
     herausfinden welcher Service eine Datei während des Backups
@@ -701,7 +702,7 @@ Option -R nutzen.
 | smiley | Bedeutung |
 | ------ | --------- |
 | ;-)    | Es gibt eine neuere Release von *raspiBackup*. Ein Upgrade sollte mit der Option -U vorgenommen werden. Zurückgehen kann man wieder mit der Option -V. |
-| :-D    | Es existiert eine Betaversion der nächsten *raspiBackup* Release. Beta Tester sind willkommen und können mit der Option -U die Beta installieren. Nach dem Test kann man auf die aktuelle Version wieder mit der Option -V zurückgehen. |
+| :-D    | Es existiert eine Betaversion der nächsten *raspiBackup* Release. Beta Tester sind willkommen und können mit der Option -U die Beta installieren. Nach dem test kann man auf die aktuelle Version wieder mit der Option -V zurückgehen. |
 | O.o    | Eine Warnmeldung wurde geschrieben. |
 | :-(    |Die *raspiBackup* Release ist veraltet und enthält einen schwerwiegenden Fehler. Sie sollte dringend durch die aktuelle Release mit der Option -U ersetzt werden. |
 
@@ -711,10 +712,10 @@ Option -R nutzen.
 
 *raspiBackup* wurde entwickelt, um auch Linux Einsteigern das Sichern ihrer
 Raspberry schnell möglichst einfach zu ermöglichen. Allerdings sind dazu trotzdem gewisse
-Linux-Kenntnisse notwendig. Häufige Probleme mit *raspiBackup* sind bei Linux
-Einsteigern einfache Linux-Probleme. Solche Fragen werden nicht in den
+Linuxkenntnisse notwendig. Häufige Probleme mit *raspiBackup* sind bei Linux
+Einsteigern einfache Linuxprobleme. Solche Fragen werden nicht in den
 Kontaktkanälen beantwortet. Dazu gibt es Foren mit
-kompetenten Mitgliedern, die gerne helfen. Ein empfehlenswertes Forum ist das
+kompetenten Mitgliedern, die gerne helfen. Eine empfehlenswertes ist das
 [deutsche Raspberry Pi Forum](https://forum-raspberrypi.de/forum/).
 Ein anderes ist das [englische Raspberryforum](https://forums.raspberrypi.com/).
 
@@ -756,7 +757,7 @@ und `/root` gesichert werden. Weitere Partitionen werden ignoriert.
   auf der SD Karte haben möchte.
 
 <a name="faq43"></a>
-### 43) Wie finde ich alle Dokumentationsseiten zu *raspiBackup* bzw. Seiten zu einem speziellen Thema?
+### 43) Wie finde ich alle Dokumentationsseiten zu *raspiBackup* bzw Seiten zu einem speziellen Thema?
 
 Initial befand sich alle Doku zu *raspiBackup* auf
 [dieser Seite](https://www.linux-tips-and-tricks.de).
@@ -785,7 +786,7 @@ Siehe dazu [diesen Artikel](why-shouldn-t-you-use-dd-as-backup-type.md).
 
 
 <a name="faq47"></a>
-### 47) Wo bekomme ich Hilfe bei reinen Linux-Fragen oder -Problemen, die nichts mit *raspiBackup* im eigentlichen Sinne zu tun haben?
+### 47) Wo bekomme ich Hilfe bei reinen Linuxfragen oder -problemen, die nichts mit *raspiBackup* im eigentlichen Sinne zu tun haben?
 
 Siehe [FAQ38](#faq38)
 
@@ -898,7 +899,7 @@ sudo mount /dev/loop0 /mnt
 
 
 <a name="faq55"></a>
-### 55) Warum habe ich plötzlich PARTUUIDs doppelt auf meinem System?
+### 55) Warum habe ich pötzlich PARTUUIDs doppelt auf meinem System?
 
 Während des Restores eine Backups wird die PARTUUID der Originalsystems für
 die Partitionen wieder genutzt. Wenn dieses restorte System an dem
@@ -926,13 +927,13 @@ ExecStart=/usr/local/bin/raspiBackup.sh --unsupportedEnvironment.
 
 *raspiBackup* meldet wenn eine neue Release oder eine Beta verfügbar ist. Ein
 Update wird mit der Option `-U` gestartet. Mit der Option `-V` kann man wieder
-auf eine vorhergehende Release zurückgehen. Beta-Versionen werden oft mehrere Male
+auf eine vorhergehende Release zurückgehen. Betas werden oft mehrere Male
 erneuert. Um dann den neuesten Stand zu installieren müssen die Optionen
 `-U` und `-S` genutzt werden.
 
 
 <a name="faq58"></a>
-### 58) Was muß ich beachten, wenn ich mit rsync auf eine NFS gemountete Backuppartition sichern will?
+### 58) Was muß ich beachten wenn ich mit rsync auf eine nfs gemountete Backuppartition sichern will?
 
 Die Partition muss vom NFS Server mit `no_root_squash` exportiert werden.
 
@@ -954,3 +955,6 @@ D.h. man sollte möglichst versuchen, den Fehler mit Möglichkeit 1 oder 2 zu be
 [.status]: rst
 [.source]: https://linux-tips-and-tricks.de/de/faq
 
+=======
+# Frequently asked questions / FAQ
+>>>>>>> review-rst

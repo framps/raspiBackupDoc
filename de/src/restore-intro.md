@@ -2,7 +2,7 @@
 
 *raspiBackup* stellt **komplette** Wiederherstellungen zur Verfügung, d.h. alle Partitionen
 werden i.d.R. wiederhergestellt.
-Im Gegensatz dazu kann beim paritionsorientierten Modus die zu restorenden Partitionen ausgewählt
+Im Gegensatz dazu können beim partitionsorientierten Modus die zu restorenden Partitionen ausgewählt
 und somit nur Teile restored werden.
 
 Bei einem Restore werden auf dem Ziel-Datenträger (SD-Karte, USB-Platte, ...)
@@ -10,10 +10,10 @@ neue Partitionen angelegt und dann mit dem entsprechenden Tool (`dd`, `tar` oder
 die Daten dorthin restored.
 
 Der Ziel-Datenträger darf also aktuell nicht vom Betriebssystem selbst benutzt werden.
-Es muss eine weitere, mit einem Kartenleser angeschlossene Karte, USB-Platte, SSD oder NVMe Gerät sein..
+Es muss eine weitere, mit einem Kartenleser angeschlossene Karte, USB-Platte, SSD oder NVMe Gerät sein.
 
 Ein Restore benötigt ein **Linuxsystem**. Dazu sollte man i.d.R. eine Raspberry nehmen. Andere Linuxsysteme
-funktionieren i.d.R. auch. Es ist aber nicht 100% garantiert dass es damit immer funktioniert.
+funktionieren auch, es ist aber nicht 100% garantiert, dass es damit immer funktioniert.
 
 Sollte ein externes Rootfilesystem gesichert worden sein, wird es auch wieder
 auf ein externes Gerät zurückgespielt
@@ -23,8 +23,10 @@ Ein [manueller Restore](manual-restore.md)  der Daten mit den zuvor benutzten Ba
 ist natürlich auch möglich. Ebenso ist (manuell) auch die Wiederherstellung einzelner Dateien
 möglich, insbesondere beim `rsync` Backup sehr einfach.
 
-Das Backupscript kann auch genutzt werden, um Systeme zu kopieren: Es wird ein Backup erstellt und dann auf einem anderen Gerät restored.
-Typische Anwendung ist eine SD Karte auf eine SSD oder NVMe zu kopieren und danach das System nicht mehr mit einer SD Karte zu betreiben.
+Das Backupscript kann auch genutzt werden, um Systeme zu kopieren:
+Es wird ein Backup erstellt und dann auf einem anderen Gerät restored.
+Typische Anwendung ist, eine SD Karte auf eine SSD oder NVMe zu kopieren
+und danach das System mit der SSD/NVMe und nicht mehr mit einer SD Karte zu betreiben.
 
 ------------------
 
@@ -33,6 +35,9 @@ Weitere Themen auf dieser Seite:
 <!-- toc -->
 
 ------------------
+
+[.status]: review-comment "Für Einsteiger teilweise noch unklar beschrieben."
+
 
 ## Wiederherstellungsszenario mit einer Raspberry mit RaspbianOS
 
@@ -54,23 +59,23 @@ Jedes Backup kann mit der/einer Raspberry Pi wiederhergestellt werden.
 
 1. *raspiBackup* zum Restore starten, Aufruf siehe [unten](#devicenames).
 
-Dabei wird üblicherweise
+Dabei wird üblicherweise genutzt:
 
   - das Systemgerät `/dev/sda`
   - die Backuppartition `/dev/sdbx`
   - und eine eventuelle Rootpartition `/dev/sdcx`
 
-genutzt.
 
-Wird ein Netzlaufwerk benutzt, ist die Rootpartition dann üblicherweise `/dev/sdbx`
+Wird ein Netzlaufwerk benutzt, ist die Rootpartition üblicherweise `/dev/sdbx`.
 
-Die aktuelle Gerätebelegung kann anders sein und sollte **immer** mit z.B.
+Die aktuelle Gerätebelegung kann abweichen und sollte **immer** überprüft werden,
+um zu vermeiden, dass andere Partitionen irrtümlicherweise überschrieben werden.
+
+Z.B. mit
 
 ```
 sudo parted -l
 ```
-
-überprüft werden, um zu vermeiden, dass andere Partitionen irrtümlicherweise überschrieben werden.
 
 
 ## Wiederherstellungsszenario für Windowsbenutzer auf einem Windowssystem
@@ -93,15 +98,17 @@ Deshalb:
 das Backup erstellt wurde**.
 ```
 
-Es wird das Gerät welches auf welches das Backup restored werden soll
-an das Linuxsystem angeschlossen,
-die Backuppartition gemounted und eine Partition für ein eventuelles externes
-Rootfilesystem bereitgestellt.
+Es wird das Gerät, auf welches das Backup restored werden soll,
+an das Linuxsystem angeschlossen, die Backuppartition gemounted
+und eine Partition für ein eventuelles externes Rootfilesystem bereitgestellt.
 
 Dann *raspiBackup* zum Restore starten, Aufruf siehe [unten](#devicenames).
-Dabei muss noch die Option [--unsupportedEnvironment](general-options.md#--unsupportedenvironment)
-angegeben werden da kein RaspbianOS und keine Raspberry genutzt werden.
-Siehe auch [Unterstützte Hard- und Software](supported-hardware-and-software.md) dazu
+
+Wenn kein RaspbianOS und/oder keine Raspberry Pi genutzt werden,
+muss noch die Option [--unsupportedEnvironment](general-options.md#--unsupportedenvironment) angegeben werden.
+
+Siehe auch [Unterstützte Hard- und Software](supported-hardware-and-software.md).
+
 
 ## Beispielaufrufe
 
@@ -116,11 +123,11 @@ Notwendige Hardware für den Restore:
 
 1. Falls eine externe Rootpartition wiederherzustellen ist oder der USB Boot
    Mode benutzt wird, wo keine SD Karte mehr benutzt wird, muss noch per USB eine
-   weitere Platte angeschlossen sein.
+   weitere Platte angeschlossen sein
 
 Gemeinsamkeiten der Beispielaufrufe:
 
-1. Das gesicherte System heisst im Beispielaufruf "raspberrypi".
+1. Das gesicherte System heißt im Beispielaufruf "raspberrypi".
 1. Der **Ziel**-Datenträger, der den Restore der Boot-/bzw.
    Boot- und Root-Partition erhalten soll, ist im Beispiel als `/dev/sdf` verfügbar.  
    [Weiter unten](#devicenames) ist beschrieben, wie man den aktuellen Wert für `-d` herausfinden kann
@@ -174,10 +181,10 @@ Disk /dev/sdb: 300.1 GB, 300069052416 bytes
 
 Hier sieht man, dass
 
-  - die interne SD Karte `/dev/mmcblk0` 8GB gross ist
-  - die neue externe SD Karte `/dev/sda` 16GB gross ist
+  - die interne SD Karte `/dev/mmcblk0` 8GB groß ist
+  - die neue externe SD Karte `/dev/sda` 16GB groß ist
   - die externe Platte `/dev/sdb`, auf die die Rootpartition gebracht werden soll,
-    300GB gross ist und eine Partition `/dev/sdb1` hat.
+    300GB groß ist und eine Partition `/dev/sdb1` hat.
 
 Somit ist der Parameter für  `-d` `/dev/sda` (Externe SD Karte).
 
@@ -193,16 +200,18 @@ Ein Backup sollte regelmäßig getestet werden: Ob der Restore immer noch
 funktioniert und auch immer noch alle Daten beinhaltet.
 
 Nichts ist so frustrierend, wenn man in dem Moment, wo man das Backup benötigt,
-feststellt, dass das Backup korrupt ist oder nicht alle Daten enthält.
-Ein Test ist bei der Raspberry recht einfach: Eine neue SD-Karte einlegen,
-das Backup restoren und
-von der neuen SD-Karte booten. Wird keine SD Karte genutzt, also z.B.
-eine SSD, kann der Restoretest auch mit einer Platte vorgenommen werden
-sofern sie groß genug ist alle Daten der SSD aufzunehmen.
+feststellt, dass das Backup korrupt ist oder nicht alle Daten enthält...
+
+Ein Test ist bei der Raspberry recht einfach:
+
+Eine neue SD-Karte einlegen, das Backup restoren und von der neuen SD-Karte booten.
+Wird keine SD Karte genutzt, also z.B. eine SSD, kann der Restoretest
+auch mit einer Platte vorgenommen werden,
+sofern sie groß genug ist, alle Daten der SSD aufzunehmen.
 
 Falls aus irgendwelchen Gründen der Restore mit dem Script fehlschlägt, kann man
 natürlich jederzeit die vom Script gesicherten Daten mit den Standard
-Linuxtools, die zum Backup genutzt wurden - `dd`, `tar` oder `rsync` - wieder
+Linuxtools, die zum Backup genutzt wurden - `dd`, `tar` oder `rsync` - manuell
 restoren. Allerdings geht das dann nicht ganz so bequem wie mit dem Script
 und es sind entsprechende Linux Kenntnisse erforderlich ;-)
 Siehe dazu auch [Manueller Restore eines Backups](manual-restore.md).
