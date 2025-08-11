@@ -89,7 +89,7 @@ Abschließend ist es sinnvoll, wie immer nach einem Upgrade, einen Backup/Restor
 Zyklus durchführen, um zu testen, ob noch alles wie vorher funktioniert.
 
 *raspiBackup* unterstützt auch die Benutzung von [unterschiedlichen
-Konfigurationsdateien](details.md#configFiles). Der automatische Konfigurationsupgrade wird aber nur
+Konfigurationsdateien](invocation-options.md#configFiles). Der automatische Konfigurationsupgrade wird aber nur
 für die Standardkonfiguration `/usr/local/etc/raspiBackup.conf`
 vorgenommen. Alle anderen Konfigurationsdateien müssen manuell erweitert
 werden, indem die als neu gekennzeichneten Konfigurationszeilen

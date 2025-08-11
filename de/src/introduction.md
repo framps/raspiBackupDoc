@@ -134,11 +134,6 @@ Viele weitere Videos zu allen möglichen Themen zu *raspiBackup* finden sich im 
 Jegliche anderen Kommunikationswege wie z.B. eMails, die leider gerne genutzt werden, werden ignoriert!
 ```
 
-<<<<<<< HEAD
-=======
-[.status]: review-comment "Der Youtube-Link oben ist keine **Kontakt**-Möglichkeit und außerdem schon weiter oben beschrieben"
-
->>>>>>> review-rst
 <a name="donation"></a>
 ## Trinkgeld
 

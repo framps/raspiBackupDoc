@@ -1,7 +1,5 @@
 # Aufruf und Optionen
 
-[.status]: review-comment "Der Dateiname 'details.md' ist zu nichtssagend"
-
 *raspiBackup* muss als Benutzer *root* oder per `sudo` aufgerufen werden.
 
 ```

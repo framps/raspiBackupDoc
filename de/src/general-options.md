@@ -93,7 +93,7 @@ Coloring mit einer separaten Option steuert.
 ### -f: Angabe einer Konfigurationsdatei
 
 Angabe einer Konfigurationsdatei, die eingelesen wird. Siehe
-[alle möglichen Konfigurationsdateien und ihre Einlesereihenfolge](details.md#configFiles).
+[alle möglichen Konfigurationsdateien und ihre Einlesereihenfolge](invocation-options.md#configFiles).
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|

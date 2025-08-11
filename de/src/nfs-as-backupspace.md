@@ -77,18 +77,9 @@ Den regelmäßigen Backup noch nicht konfigurieren.
 
 ### Test des Backups und Restores von der Commandline
 
-[Test des Backups]() und [Restores](restore.md)
-[.status]: review-comment "Link(s) prüfen/ergänzen!"
-
-### Einrichten des regelmässigen Backups in der Crontab
+### Einrichten des regelmässigen Backups im Installer
 
 Aufruf des Installers und Konfiguration des regelmäßigen Backupzeitpunktes.
-
-### Siehe auch folgende DSM Hilfsseiten
-
-  - [Gemeinsamen Ordner erstellen](https://www.synology.com/de-de/knowledgebase/DSM/help/DSM/AdminCenter/file_share_create)
-  - [NFS Ordner konfigurieren](https://www.synology.com/de-de/knowledgebase/DSM/tutorial/File_Sharing/How_to_access_files_on_Synology_NAS_within_the_local_network_NFS)
-
 
 ## Hinweis zu ACLs
 

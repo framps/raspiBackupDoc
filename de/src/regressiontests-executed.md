@@ -22,12 +22,10 @@ Kartensystem als auch für ein reines USB Bootsystem. Außerdem wird ein `tar` u
 Danach werden alle jeweiligen Backups mit *raspiBackup* wieder restored, diese
 Images per Qemu gestartet und die folgenden Tests durchgeführt:
 
-  - `/boot/cmdline.txt` wird aus der VM per `scp` auf den Host downloaded und geprüft
+  - `/boot/firmware/cmdline.txt` wird aus der VM per `scp` auf den Host downloaded und geprüft
   - `/etc/fstab` wird aus der VM per `scp` auf den Host downloaded und geprüft
   - IP-Adresse 8.8.8.8 wird in der VM gepinged und getestet, ob der ping erfolgreich war
   - Die Anzahl der aktiven Services des Original Images wird mit verifiziert `service --status-all`
-
-[.status]: review-comment "Sollte das nicht besser an das aktuelle systemd/systemctl angepasst werden??"
 
 Jedem Benutzer von *raspiBackup*, der darüber hinausgehende Optionen benutzt, wird
 dringend nahegelegt, nach einem Versionsupgrade von *raspiBackup* Backup und

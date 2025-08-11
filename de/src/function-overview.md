@@ -19,7 +19,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
     Chinesisch und Französisch konfiguriert werden, so dass die erste [Sicherung
     in 5 Minuten](installation-in-5-minutes.md) erstellt werden kann.
 
-  - Alle weiteren z.T. sehr mächtigen Optionen sind [ausführlich dokumentiert](details.md)
+  - Alle weiteren z.T. sehr mächtigen Optionen sind [ausführlich dokumentiert](invocation-options.md)
     und können in einer Konfigurationsdatei definiert werden.
 
   - Vollständige und inkrementelle Sicherungen

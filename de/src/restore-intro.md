@@ -36,8 +36,6 @@ Weitere Themen auf dieser Seite:
 
 ------------------
 
-[.status]: review-comment "Für Einsteiger teilweise noch unklar beschrieben."
-
 
 ## Wiederherstellungsszenario mit einer Raspberry mit RaspbianOS
 
@@ -47,7 +45,7 @@ Jedes Backup kann mit der/einer Raspberry Pi wiederhergestellt werden.
 
 1. *raspiBackup* installieren
 
-1. Das System, das wiederhergestellt werden soll, anschließen.
+1. Das Systemgerät auf welchem das Backup wiederhergestellt werden soll (z.B. eine SD-Karte imit einem SD-Kartelleser oder SSD), anschließen.
 
 1. Das Medium, welches das Backup enthält (z.B. eine Platte), anschließen
    und mounten bzw. ein Netzwerklaufwerk mit den Backupdaten mounten.
