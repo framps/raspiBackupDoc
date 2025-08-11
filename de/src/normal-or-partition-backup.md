@@ -5,13 +5,13 @@ Es existieren zwei Backupmodi:
 1. Normaler Backup
 
    In diesem Modus werden die ersten zwei Partitionen (die Bootpartition und die
-   Rootpartition) der SD Karte gesichert. Außerdem wird beim `tar` und `rsync` Backup
+   Rootpartition) der SD-Karte gesichert. Außerdem wird beim `tar` und `rsync` Backup
    auch eine externe Rootpartition, d.h. eine auf einen USB Stick oder USB Platte
    ausgelagerte Rootpartition, gesichert.
    Falls das Zielgerät beim Restore größer ist als das Quellgerät,
    wird automatisch die zweite Partition entsprechend erweitert.
 
-   Mit dem `dd` Backup kann auch die gesamte SD Karte gesichert werden.
+   Mit dem `dd` Backup kann auch die gesamte SD-Karte gesichert werden.
    Es wird aber dringend davon abgeraten, ein `dd` Backup zu nutzen.
    Siehe: [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)
 

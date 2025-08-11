@@ -26,11 +26,11 @@ zu nutzen.
    unbrauchbar.
 
 2. Beim Restore eines dd Backups wird das Backup 1 zu 1 auf Bitebene
-   zurückgespielt. Wenn die SD Karte nicht OK ist, wird oftmals kein Fehler von
+   zurückgespielt. Wenn die SD-Karte nicht OK ist, wird oftmals kein Fehler von
    dd gemeldet. Bootet man dann das System, startet es nicht oder es gibt
    Fehlermeldungen von Systemservices. Dann melden sich die Benutzer und
    erstellen einen Problembericht, weil *raspiBackup* nicht korrekt funktioniert.
-   Nachdem sie dann gebeten werden, doch mal einen Restore auf eine neue SD Karte
+   Nachdem sie dann gebeten werden, doch mal einen Restore auf eine neue SD-Karte
    vorzunehmen, ist das Problem verschwunden. Diese Problemberichte sind
    unnötiger Aufwand, der vermieden werden sollte.
 
@@ -44,7 +44,7 @@ oder *Etcher* vorgenommen werden.
 
 Stattdessen kann man aber *raspiBackup* auf einer Raspberry starten.
 Hat man nur **eine** Raspberry zur Verfügung, sollte man sich einmalig eine
-"Not-SD Karte" mit Raspbian und *raspiBackup* erstellen und beiseite legen,
+"Not-SD-Karte" mit Raspbian und *raspiBackup* erstellen und beiseite legen,
 bis man sie braucht...
 
 Für rsync benötigt man ein ext2/3/4 Filesystem auf der Backuppartition. Dieses

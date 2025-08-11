@@ -43,8 +43,6 @@ monatliche Backups immer vom Ersten des Monats und
 jährliche Backups immer vom 1.1. des Jahres.
 ```
 
-[.status]: todo "Generell: Heißt es 'der Backup' oder 'das Backup'??? -> das Backup"
-
 ## Grafische Darstellung
 
 ![smartStrategy](images/smartStrategy.jpg)

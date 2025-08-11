@@ -25,9 +25,9 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
   - Vollständige und inkrementelle Sicherungen
 
       - Der Backuptyp `rsync` erstellt vollständige und dann inkrementelle Sicherungen
-      - Die Backuptypen `dd` und `tar` erstellen immer vollständige Sicherungen  
+      - Die Backuptypen `dd` und `tar` erstellen immer vollständige Sicherungen
         Hinweis: Beim `dd` Backup ist per Option einschaltbar, dass nur der von den Partitionen
-        belegte Platz und nicht die gesamte SD Karte gesichert wird.
+        belegte Platz und nicht die gesamte SD-Karte gesichert wird.
 
   - Zwei Sicherungsstrategien
 
@@ -63,9 +63,9 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
 
   - Alle Bootmodi werden unterstützt
 
-      1. Boot von der SD Karte: Beide Partitionen liegen auf der SD Karte
+      1. Boot von der SD-Karte: Beide Partitionen liegen auf der SD-Karte
          (jedes Modell)
-      2. Gemischter Modus: Boot von der SD Karte und Nutzung der Rootpartition
+      2. Gemischter Modus: Boot von der SD-Karte und Nutzung der Rootpartition
          von einem USB Gerät. Das ist notwendig bei älteren Raspberries, die
          noch keinen USB Boot unterstützen.
       3. Boot von einem USB Gerät oder SSD (USB boot Modus): Beide Partitionen
@@ -111,7 +111,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
     Eine Sicherung des Backuptyps `dd` kann auch auf einem Windows System wiederhergestellt werden.
     *Win32Diskimager* oder ähnliche Tools können genutzt werden.
     `tar` und `rsync` benötigen zur Wiederherstellung ein Linuxsystem.
-    Es wird empfohlen, dazu eine vorkonfigurierte SD Karte mit *Raspberry Pi OS*
+    Es wird empfohlen, dazu eine vorkonfigurierte SD-Karte mit *Raspberry Pi OS*
     zu nutzen und auf einer Raspberry zu starten.
 
   - Anpassung von `/etc/fstab` und `/boot/cmdline.txt` an neue UUIDs, PARTUUIDs
@@ -164,7 +164,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
 
   - Einfacher Systemumzug auf andere Speichermedien
 
-    Jede Sicherung kann auf eine SD Karte, USB Platte oder SSD sowie NVMe SSD
+    Jede Sicherung kann auf eine SD-Karte, USB Platte oder SSD sowie NVMe SSD
     zurückgespielt werden. Schon ist das System auf ein anderes Gerät umgezogen.
 
   - Unterstützung von *Volumio*

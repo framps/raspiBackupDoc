@@ -27,7 +27,7 @@ DEFAULT_BACKUPTYPE=dd
 DEFAULT_KEEPBACKUPS=n
 ```
 
-## Ein Windowsbenutzer hat eine 32GB SD Karte und benutzt nur 12GB davon, die er aber auch nur sichern möchte
+## Ein Windowsbenutzer hat eine 32GB SD-Karte und benutzt nur 12GB davon, die er aber auch nur sichern möchte
 
 Zusätzlich zu den genannten Optionen ist die folgende Option notwendig:
 
@@ -36,7 +36,7 @@ DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY=1
 ```
 
 Allerdings ist dazu auch notwendig, die Rootpartition der Raspberry zu
-verkleinern, da standardmäßig der gesamte freien Platz der SD Karte gesichert
+verkleinern, da standardmäßig der gesamte freien Platz der SD-Karte gesichert
 wird. Dieses geht aber nicht unter Windows sondern es muss ein Linux benutzt
 werden und mit den Tools `gparted` oder `resize2fs` die Rootpartition
 verkleinert werden.
@@ -134,7 +134,7 @@ DEFAULT_KEEPBACKUPS=n
 DEFAULT_BACKUPPATH="/USBStick"
 ```
 
-Damit `rsync` Hardlinks benutzt und der Backup schnell ist, muss die
+Damit `rsync` Hardlinks benutzt und das Backup schnell ist, muss die
 Backuppartition mit ext3/4 formatiert sein. Will man Daten mit Windows
 austauschen und die Partition wurde mit Windows formatiert, ist `tar` als
 Backuptype zu benutzen. Dann dauert allerdings das Backup länger und

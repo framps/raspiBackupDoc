@@ -66,7 +66,7 @@ Danach im LX Dateimanager SDCard auswerfen.
 
 ## Raspberry starten und konfigurieren
 
-Danach SD Karte in Raspberry installieren und diesen starten/Netzadapter anschliessen.
+Danach SD-Karte in Raspberry installieren und diesen starten/Netzadapter anschliessen.
 
 Mit Fritzbox kontrollieren, ggf. Namen des 'raspberry' ändern.
 

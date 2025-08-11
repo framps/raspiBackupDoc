@@ -19,11 +19,6 @@ der Dokumentation:
 Eintippen eines `?` blendet eine kleine Tastatur-Navigationshilfe ein.
 ```
 
-[.status]: todo "Generell im gesamten Dokument: 'SD Karte' oder 'SD-Karte' usw.? -> SD-Karte"
-
-
-
-
 <center>     <!-- The blank line before the image definition is required! -->
 
 ![Icon](images/icons/Icon_rot_blau_final_128.png)
@@ -40,7 +35,7 @@ Themen auf dieser Seite:
 # Einführung
 
 Eine regelmäßige Sicherung von Raspberry Pis ist wichtig, um im Falle eines
-Ausfalls des Systemspeichergerätes (SD Karte, USB Disk, SSD, NVMe ...) oder auch von
+Ausfalls des Systemspeichergerätes (SD-Karte, USB Disk, SSD, NVMe ...) oder auch von
 unbeabsichtigten Änderungen, durch die das System nicht mehr oder fehlerhaft bootet,
 das System wieder auf einen vorherigen Zustand zurücksetzen zu können.
 
@@ -50,12 +45,12 @@ Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
 
 Backups können auf alle Geräte, die an Linux gemounted werden können, gesichert
-werden. Dazu gehören SD Karten, USB Sticks, USB Platten, SSDs und NVMe SSDs.
+werden. Dazu gehören SD-Karten, USB Sticks, USB Platten, SSDs und NVMe SSDs.
 Auch Netzlaufwerke, die per NFS, SMB, SSHFS, FtpFS und WebDAV gemounted werden,
 können als Ziel für Backups genutzt werden.
 
 Ein Backup kann auf anderen Geräten zurückgespielt werden, als auf das Gerät, von
-dem ein Backup erstellt wurde. Zum Beispiel kann ein Backup einer SD Karte auf
+dem ein Backup erstellt wurde. Zum Beispiel kann ein Backup einer SD-Karte auf
 einer SSD zurückgespielt werden.
 
 Die Anzahl der vorzuhaltenden Backups ist konfigurierbar oder es wird das
@@ -147,7 +142,7 @@ Eine Anerkennung des Entwicklungs- und Wartungsaufwands sowie Supports für
    gewiss eine Alternative. Z.B. wurde Trinkgeld schon mehrmals auf die
    gute alte Art per Brief zugeschickt :-)
 
-Das Trinkgeld wird primär dazu genutzt, Verbrauchsmaterialien wie SD Karten, Adapter, Kabel etc.,
+Das Trinkgeld wird primär dazu genutzt, Verbrauchsmaterialien wie SD-Karten, Adapter, Kabel etc.,
 die für das Entwickeln und Testen benötigt werden, zu kaufen. Sofern das Trinkgeld ausreicht,
 wird damit auch neue Hardware gekauft, um in *raspiBackup* den notwendigen
 Hardwaresupport einzubauen und die korrekte Funktionalität

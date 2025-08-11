@@ -803,7 +803,7 @@ welches an die Raspberry angeschlossen ist, vorgenommen werden.
 In 99.9% der Fälle ist die SD Karte auf die restored wird defekt. Wenn man
 auf eine andere, möglichst neue, SD Karte restored tritt das Problem
 üblicherweise nicht mehr auf. Es gibt auch die Option -C die man beim
-Restore nutzen kann um die SD Karte auf Bad Blocks beim Formatieren zu
+Restore nutzen kann um die SD-Karte auf Bad Blocks beim Formatieren zu
 prüfen. Dadurch dauert aber der Restoreprozess wesentlich länger. Siehe
 auch [diese Seite](why-shouldn-t-you-use-dd-as-backup-type.md) zu Problemen eines dd Backups.
 

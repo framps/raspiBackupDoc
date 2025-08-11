@@ -164,8 +164,8 @@ Bereich unter 1999 benutzen.
 ### Interface
 
 Das Plugin bekommt im Aufruf den aktuellen Statuscode von *raspiBackup*
-mitgegeben. Ein Statuscode von 0 bedeutet in den Postplugins: der Backup
-war erfolgreich. Jeder andere Statuscode bedeutet, dass der Backup
+mitgegeben. Ein Statuscode von 0 bedeutet in den Postplugins: das Backup
+war erfolgreich. Jeder andere Statuscode bedeutet, dass das Backup
 abgebrochen wurde.
 
 ### eMailPlugin

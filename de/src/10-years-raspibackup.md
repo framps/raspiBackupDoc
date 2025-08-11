@@ -20,7 +20,7 @@ Es waren nicht 50 sondern 314 lines of code.
 
 Weihnachten 2013 schenkte mir mein Sohn eine Raspberry. Mit Begeisterung begann
 ich, mit ihr zu arbeiten und schnell kam eine zweite Raspberry dazu, die dann
-auch in Produktion eingesetzt wurde. Da SD Karten leider nur eine beschränkte
+auch in Produktion eingesetzt wurde. Da SD-Karten leider nur eine beschränkte
 Haltbarkeit haben, entstand *raspiBackup*. Erst nur privat genutzt - aber
 nachdem es doch sehr gut seinen Dienst verrichtete, wurde es der Community zur
 Verfügung gestellt.

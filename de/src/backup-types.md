@@ -15,9 +15,9 @@ Dabei wird immer das ganze Gerät mit dem System gelesen und gesichert. Das bede
 auch Daten gesichert werden, die sich nicht geändert haben. Auch bedeutet es,
 dass zum Restore das Restoregerät wieder wenigstens so groß sein muss wie das Originalsystem.
 Es wird keine Partition in der Größe angepasst. Das bereitet besonders
-bei SD Karten immer wieder Probleme, da die SD Karten - obwohl z.B. 32GB groß - doch immer
-leichte Unterschiede haben und somit ein Restore eines 32GB Systems auf eine andere 32GB SD Karte
-nicht erfolgreich sein kann, da die SD Karte geringfügig kleiner ist.
+bei SD-Karten immer wieder Probleme, da die SD-Karten - obwohl z.B. 32GB groß - doch immer
+leichte Unterschiede haben und somit ein Restore eines 32GB Systems auf eine andere 32GB SD-Karte
+nicht erfolgreich sein kann, da die SD-Karte geringfügig kleiner ist.
 
 Ein `dd` Backup kann unter Windows mit entsprechenden Tools wiederhergestellt werden.
 

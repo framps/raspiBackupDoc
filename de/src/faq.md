@@ -10,10 +10,10 @@
 Bei *framp* liefen zu Hause drei Raspis. Zwei davon 7/24 - also rund um die Uhr.
 Ein jeder Server sollte regelmäßig gesichert werden denn es können immer mal
 unvorhergesehene Umstände eintreten, die eine Wiederherstellung eines
-vorherigen Standes erfordern. Speziell die SD Karte der Raspberry neigt dazu,
+vorherigen Standes erfordern. Speziell die SD-Karte der Raspberry neigt dazu,
 immer mal wieder auszufallen. Um dafür gewappnet zu sein, wurde ein
 kleines Script geschrieben, welches zuerst ein dd Backup, dann später, da
-ein dd Backup ja immer die gesamte SD Karte sichert obwohl nur Bruchteile
+ein dd Backup ja immer die gesamte SD-Karte sichert obwohl nur Bruchteile
 davon benutzt werden, ein tar Backup automatisch erstellte. Zum Schluss
 wurde dann ein rsync Backup implementiert um durch die Hardlinks Backupzeit
 und -space zu sparen. Nachdem imer mal wieder eine Wiederherstellung
@@ -65,7 +65,7 @@ Raspberry wieder.
 Im normalen Modus sichert *raspiBackup* mit tar oder rsync zwei Partitionen:
 Die Boot und die Rootpartition die auf dem System. Wenn
 die Rootpartition auf ein externes Medium verlagert wurde wird auch die
-externe Rootpartition gesichert. Mit dem dd Backup wird die gesamte SD Karte
+externe Rootpartition gesichert. Mit dem dd Backup wird die gesamte SD-Karte
 gesichert. Dann kann aber keine externe root Partition mitgesichert werden.
 
 Im partitionsorientierten Modus werden beliebig viele Partitionen des
@@ -95,7 +95,7 @@ entsprechenden Linuxtools wieder auf die Partitionen zurückspielen.
 
 
 <a name="faq6"></a>
-### 6)   Kann man die Sicherungen mit *raspiBackup* auch auf kleiner und größere SD Karten wiederherstellen?
+### 6)   Kann man die Sicherungen mit *raspiBackup* auch auf kleiner und größere SD-Karten wiederherstellen?
 
 Beim dd Backuptyp muss man nach den Restore auf ein größeres Gerät mit
 Linux Repartitionierungstools nach der Wiederherstellung die Partitionsgröße
@@ -117,8 +117,8 @@ vorgenommen sondern die existierende Partitionierung des gesicherten
 Systems genutzt.
 Man hat damit vollständige Kontrolle über die Größe der Wiederhergestellten
 Partitionen. D.h. man kann dadurch vor dem Restore genau festlegen, wie
-groß die Partitionen auf der neuen SD Karte sein sollen und somit auch auf
-kleiner SD Karten restoren. Das geht auch für partitionsorientierte Backups.
+groß die Partitionen auf der neuen SD-Karte sein sollen und somit auch auf
+kleiner SD-Karten restoren. Das geht auch für partitionsorientierte Backups.
 
 Ein dd Backup kann nicht auf eine kleiner Karte restored werden. Vorher muss
 es verkleinert werden. Das geht z.B. so. Oder man benutzt [pishrink](https://github.com/Drewsif/PiShrink).
@@ -129,14 +129,14 @@ Option -0 das Backup wiederherstellt.
 
 
 <a name="faq7"></a>
-### 7)   Wie kann ich die Partitionierung der Ziel SD Karte beeinflussen?
+### 7)   Wie kann ich die Partitionierung der Ziel SD-Karte beeinflussen?
 
 Es gibt zwei Optionen die das Partitionierungsverhalten von *raspiBackup*
 beeinflussen: Option `-1` (eins) zwingt *raspiBackup* die Partitionierung der
-Backup SD Karte auf die Ziel SD Karte zu erstellen auch wenn die Partitionen
-kleiner oder größer als die Ziel SD Karte sind. Mit der Option `-0` (Null)
+Backup SD-Karte auf die Ziel SD-Karte zu erstellen auch wenn die Partitionen
+kleiner oder größer als die Ziel SD-Karte sind. Mit der Option `-0` (Null)
 nimmt *raspiBackup* keine Partitionierung vor und verwendet die existierende
-Partition der Ziel SD Karte. Somit kann man vor dem Restore die Partitionen
+Partition der Ziel SD-Karte. Somit kann man vor dem Restore die Partitionen
 anlegen und formatieren wie man sie haben möchte und diese wird dann von
 *raspiBackup* benutzt.
 
@@ -238,9 +238,9 @@ zurückgespielt werden soll daraus auswählen.
 
 
 <a name="faq16"></a>
-### 16) Ich habe eine 32GB SD Karte wovon ich nur 8GB benötige. Ein dd Backup sichert aber immer 32GB, d.h 24GB zu viel.
+### 16) Ich habe eine 32GB SD-Karte wovon ich nur 8GB benötige. Ein dd Backup sichert aber immer 32GB, d.h 24GB zu viel.
 
-Der dd Backup sichert immer die ganze SD Karte. Es gibt den
+Der dd Backup sichert immer die ganze SD-Karte. Es gibt den
 Konfigurationsparameter DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY, der
 dafür sorgt, dass nur die definierten Partitionen gesichert werden. D.h.
 man muss mit gparted oder einem anderen Partitionierungstool nur eine
@@ -381,7 +381,7 @@ werden kann. Allerdings gibt es ein paar Dinge zu beachten:
   Hardlinks unterstützt kann rsync nicht genutzt werden.
 
 - FAT32 kann nur Dateien bis zu 4GB speichern. Ein dd Backup wird so groß
-  wie die SD Karte (Außer es wird die Konfigurationsoption
+  wie die SD-Karte (Außer es wird die Konfigurationsoption
   DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY benutzt) und somit i.d.R.
   größer als 4GB. Selbiges trifft auf das tar Backup zu was auch sehr
   schnell größer als 4GB wird. Eine Alternative dazu ist NTFS.
@@ -501,9 +501,9 @@ das metadata_csum entfernen. Dann den Restore mit *raspiBackup* durchführen.
 
 
 <a name="faq26"></a>
-### 26) Wieso bekommen ich die die Meldung `??? RBK0160E: Ziel /dev/sda mit xx GiB ist kleiner als die Backupquelle mit yy GiB` obwohl beide SD Karten gleich gross sind?
+### 26) Wieso bekommen ich die die Meldung `??? RBK0160E: Ziel /dev/sda mit xx GiB ist kleiner als die Backupquelle mit yy GiB` obwohl beide SD-Karten gleich gross sind?
 
-SD Karten die mit einer bestimmten Größe angegeben sind (z.B. 16GB) sind
+SD-Karten die mit einer bestimmten Größe angegeben sind (z.B. 16GB) sind
 trotzdem unterschiedlich groß. Mit dem Befehl `sudo fdisk -l /dev/mmcblk0`
 erhält man z.B. folgende Ausgabe die einem genau die Größe mitteilt:
 
@@ -511,22 +511,22 @@ erhält man z.B. folgende Ausgabe die einem genau die Größe mitteilt:
 sudo fdisk -l /dev/mmcblk0
 
 Disk /dev/mmcblk0: 15.5 GB, 15548284928 bytes
-Bei einer anderen ebenfalls 16GB grossen SD Karte erhält man z.B.
+Bei einer anderen ebenfalls 16GB grossen SD-Karte erhält man z.B.
 Disk /dev/mmcblk0: 15.9 GB, 15931539456 bytes
 ```
 
-Man kann also das erste Image auf die zweite SD Karte bringen aber nicht umgekehrt.
+Man kann also das erste Image auf die zweite SD-Karte bringen aber nicht umgekehrt.
 
 Lösung:
 
-- Eine größere SD Karte nehmen
+- Eine größere SD-Karte nehmen
 - Das Quellimage verkleinern. Das Tool pishrink eignet sich dazu.
 - Das Backup mit dem Parameter
   DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY erstellen (Siehe dazu
   auch FAQ16)
 - Vor dem Erstellen des Backups die Rootpartition mit *gparted* etwas
   verkleinern (Mehrere hundert MB oder gleich 1 GB). Dann passt der
-  Backup auch auf SD Karten die etwas kleiner sind.
+  Backup auch auf SD-Karten die etwas kleiner sind.
 
 
 <a name="faq27"></a>
@@ -540,12 +540,12 @@ oder rsync Backup erzeugen.
 <a name="faq28"></a>
 ### 28) Wieso verschwinden Dateiänderungen nach einem Reboot wieder von einem zurückgespieltem Backup?
 
-Die SD Karte ist unglücklicherweise an der Stelle defekt, wo das Filesystem
+Die SD-Karte ist unglücklicherweise an der Stelle defekt, wo das Filesystem
 Änderungen ablegt (Superblock). Da dieser im Hauptspeicher gehalten wird,
 bemerkt man den Fehler nur nach einem Reboot.
 
 Lösung:
-Das Backup muss noch einmal auf eine neue fehlerfreie SD Karte
+Das Backup muss noch einmal auf eine neue fehlerfreie SD-Karte
 zurückgespielt werden.
 
 
@@ -636,11 +636,11 @@ Beim Aufruf muss dann noch die Option `--unsupportedEnvironment` mitgegeben werd
 <a name="faq34"></a>
 ### 34) Ich möchte mein 16GB dd Backup zurückspielen und bekommen die Meldung dass die Ziel SDKarte zu klein ist. Wieso?
 
-SD Karten haben zwar eine bestimmte Größe wie z.B. 16GB aber sie SD Karten
+SD-Karten haben zwar eine bestimmte Größe wie z.B. 16GB aber sie SD-Karten
 haben nie genau diese Größe sondern es gibt kleine Abweichungen nach unten
-und oben. Da das dd Backup genauso groß ist wie die SD Karte kann das dd
+und oben. Da das dd Backup genauso groß ist wie die SD-Karte kann das dd
 Backup nicht zurückgeschrieben werden wenn man eine geringfügig kleinere
-SD Karte erwischt. Deshalb sollte man bei einem DD Backup die letzte
+SD-Karte erwischt. Deshalb sollte man bei einem DD Backup die letzte
 Partition immer etwas kleiner als maximal möglich erstellen. Siehe dazu
 auch [FAQ16](#faq16). Man kann aber mit [pishrink](https://github.com/Drewsif/PiShrink) das dd Image verkleinern und danach
 mit *raspiBackup* zurücksichern.
@@ -749,11 +749,11 @@ Restore.
 Backupmodus, wobei immer nur die `/boot`
 und `/root` gesichert werden. Weitere Partitionen werden ignoriert.
 
-- `/boot` und `/root` auf SD Karte oder einem anderen Gerät (Platte, SSD, ...)
-- `/boot` auf SD Karte und `/root` auf eine anderen Gerät (Platte, SSD, ...)
+- `/boot` und `/root` auf SD-Karte oder einem anderen Gerät (Platte, SSD, ...)
+- `/boot` auf SD-Karte und `/root` auf eine anderen Gerät (Platte, SSD, ...)
   Dieses ist notwendig, wenn eine ältere Raspberry vorliegt, die noch
   keine USB Boot unterstützt, man aber trotzdem die Rootpartition nicht mehr
-  auf der SD Karte haben möchte.
+  auf der SD-Karte haben möchte.
 
 <a name="faq43"></a>
 ### 43) Wie finde ich alle Dokumentationsseiten zu *raspiBackup* bzw. Seiten zu einem speziellen Thema?
@@ -794,16 +794,16 @@ Siehe [FAQ38](#faq38)
 
 Technisch geht das aber das Ergebnis ist alles andere als ein laufendes
 System. Deshalb bricht *raspiBackup* sofort ab wenn man das versucht.
-Ein Restore muss immer auf eine weitere SD Karte oder ein weiteres Gerät,
+Ein Restore muss immer auf eine weitere SD-Karte oder ein weiteres Gerät,
 welches an die Raspberry angeschlossen ist, vorgenommen werden.
 
 <a name="faq49"></a>
-### 49) Mein Backup welches ich auf eine SD Karte restored habe startet nicht. Warum nicht?
+### 49) Mein Backup welches ich auf eine SD-Karte restored habe startet nicht. Warum nicht?
 
-In 99.9% der Fälle ist die SD Karte auf die restored wird defekt. Wenn man
-auf eine andere, möglichst neue, SD Karte restored tritt das Problem
+In 99.9% der Fälle ist die SD-Karte auf die restored wird defekt. Wenn man
+auf eine andere, möglichst neue, SD-Karte restored tritt das Problem
 üblicherweise nicht mehr auf. Es gibt auch die Option -C die man beim
-Restore nutzen kann um die SD Karte auf Bad Blocks beim Formatieren zu
+Restore nutzen kann um die SD-Karte auf Bad Blocks beim Formatieren zu
 prüfen. Dadurch dauert aber der Restoreprozess wesentlich länger. Siehe
 auch [diese Seite](why-shouldn-t-you-use-dd-as-backup-type.md) zu Problemen eines dd Backups.
 

@@ -180,7 +180,7 @@ angebundene Partition (NFS, SMB) ist - das Problem. Meist sind es
 Netzwerkprobleme oder -fehlkonfigurationen. Auch kam es schon vor, dass die
 Partition auf einem Gerät lag, welches Schreibfehler hatte.
 
-Sollte ein Lesefehler vorliegen, ist das ein Hinweis darauf, dass das Systemgerät bzw. SD Karte
+Sollte ein Lesefehler vorliegen, ist das ein Hinweis darauf, dass das Systemgerät bzw. SD-Karte
 ersetzt werden sollte. Dazu dann das letzte Backup auf ein neues Systemgerät restoren.
 
 Falls die Backuppartition per NFS gemounted ist, [diesen Artikel](https://www.linux-tips-and-tricks.de/de/raspibackupmeldungen/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern) lesen.
@@ -188,13 +188,13 @@ Falls die Backuppartition per NFS gemounted ist, [diesen Artikel](https://www.li
 Falls Berechtigungsprobleme existieren, muss sichergestellt sein, dass der
 Benutzer root sämtliche Rechte auf dem Backupgerät hat.
 
-### RBK0027E: Kein externes Gerät an %1 verbunden. Die SD Karte würde für das Backup benutzt werden.
+### RBK0027E: Kein externes Gerät an %1 verbunden. Die SD-Karte würde für das Backup benutzt werden.
 
 Ursache:
 
 *raspiBackup* prüft, ob eine externe Partition am Backuppfad gemounted ist, denn
-wenn nicht, würde das Backup auf der SD Karte gespeichert werden, was keinen Sinn
-macht und wenn die SD Karte klein ist, wird sie überlaufen.
+wenn nicht, würde das Backup auf der SD-Karte gespeichert werden, was keinen Sinn
+macht und wenn die SD-Karte klein ist, wird sie überlaufen.
 
 Weitere Aktionen:
 
@@ -237,7 +237,7 @@ oder Schreibfehler.
 
 Weitere Aktionen:
 
-Beim Restore ist ziemlich sicher die SD Karte korrupt und eine andere SD Karte
+Beim Restore ist ziemlich sicher die SD-Karte korrupt und eine andere SD-Karte
 sollte benutzt werden. Beim Backup gibt es Schreibprobleme auf das Backupmedium,
 welche gelöst werden müssen. Vorhergehende Meldungen vom Backuptool geben
 weitere Hinweis auf die Fehlerursache.
@@ -343,7 +343,7 @@ werde. Eine einzelne Partition ist nicht erlaubt.
 Weitere Aktionen:
 
 Anstelle von z.B. `/dev/sdb1`, was eine einzelne Partition ist, muss z.B.
-`/dev/sdb` angegeben werden. Aber ACHTUNG: Sämtliche Daten auf der SD Karte
+`/dev/sdb` angegeben werden. Aber ACHTUNG: Sämtliche Daten auf der SD-Karte
 werden dann überschrieben. Also vorher sicherstellen, dass keine anderen Daten
 auf anderen Partitionen noch benötigt werden. Siehe auch [diese Seite](restore.md) zur
 Wiederherstellung.
@@ -450,7 +450,7 @@ Gerätes notwendig.
 
 Weitere Aktionen:
 
-Es muss eine größere SD Karte benutzt werden. Alternativ kann man mit dem Tool
+Es muss eine größere SD-Karte benutzt werden. Alternativ kann man mit dem Tool
 pishrink das dd Image verkleinern und dann mit *raspiBackup* zurückspielen.
 Siehe auch [FAQ26](faq.md#faq26).
 
@@ -505,7 +505,7 @@ unterstützt. SMB und SSHFS unterstützen keine Hardlinks.
 Weitere Aktionen:
 
 Benutze entweder eine Backuppartition, welche Hardlinks unterstützt, oder nutze
-den tar oder dd backup. Berücksichtige aber, dass dann jeder Backup ein Vollbackup
+den tar oder dd backup. Berücksichtige aber, dass dann jedes Backup ein Vollbackup
 ist und entsprechend mehr Zeit und Platz benötigt.
 
 
@@ -640,8 +640,8 @@ usbmount stört beim Restore eines Backups und darf nicht installiert sein.
 Weitere Aktionen:
 
 Deinstallation von usbmount mit dem Befehl `sudo apt-get remove usbmount`.
-Noch besser ist es, eine dedizierte SD Karte mit einem kleinen *Raspberry Pi OS* (*Raspberry Pi OS
-lite*) vorzubereiten und diese SD Karte zum Restore nutzen. Dort ist kein
+Noch besser ist es, eine dedizierte SD-Karte mit einem kleinen *Raspberry Pi OS* (*Raspberry Pi OS
+lite*) vorzubereiten und diese SD-Karte zum Restore nutzen. Dort ist kein
 usbmount installiert.
 
 

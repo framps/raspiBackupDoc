@@ -67,7 +67,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Wie funktionieren Hardlinks zusammen mit rsync?](how-do-hardlinks-work-with-rsync.md)
         - [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)
         - [Wie kann man mit *raspiBackup* einen Clone erstellen?](how-to-create-a-cold-standby-clone-with-raspibackup.md)
-        - [Umziehen des Raspberry Betriebssystems von SD Karte auf SSD, USB Platte oder USB Stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
+        - [Umziehen des Raspberry Betriebssystems von SD-Karte auf SSD, USB Platte oder USB Stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [Wie kann ich die Betaversion installieren und ausprobieren?](how-can-i-install-and-test-the-beta-version.md)
         - [Wird eine externe Rootpartition unterstützt?](external-root-partition.md)
 

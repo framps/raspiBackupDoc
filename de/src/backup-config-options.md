@@ -25,10 +25,10 @@ vor bzw. nach dem Stoppen von Systemservices (Option -a und -o) ausgeführt.
 ### DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY
 
 dd Backups sichern durch diese Option nur den von definierten Partitionen belegten Platz.
-Dadurch benötigt z.B. eine 32GB SD Karte, die nur eine 8GB Partition definiert hat, für den
+Dadurch benötigt z.B. eine 32GB SD-Karte, die nur eine 8GB Partition definiert hat, für den
 Backup nur 8GB und nicht 32GB. Dazu muss aber mittels gparted oder resize2fs
 die root Partition entsprechend verkleinert werden, denn üblicherweise füllt
-die root Partition den gesamten Rest der SD Karte aus.
+die root Partition den gesamten Rest der SD-Karte aus.
 
 Siehe dazu auch [FAQ16](faq.md#faq16).
 

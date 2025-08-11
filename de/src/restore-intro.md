@@ -25,8 +25,8 @@ möglich, insbesondere beim `rsync` Backup sehr einfach.
 
 Das Backupscript kann auch genutzt werden, um Systeme zu kopieren:
 Es wird ein Backup erstellt und dann auf einem anderen Gerät restored.
-Typische Anwendung ist, eine SD Karte auf eine SSD oder NVMe zu kopieren
-und danach das System mit der SSD/NVMe und nicht mehr mit einer SD Karte zu betreiben.
+Typische Anwendung ist, eine SD-Karte auf eine SSD oder NVMe zu kopieren
+und danach das System mit der SSD/NVMe und nicht mehr mit einer SD-Karte zu betreiben.
 
 ------------------
 
@@ -120,7 +120,7 @@ Notwendige Hardware für den Restore:
 1. Ein angeschlossenes Backupdevice (per USB oder Netz)
 
 1. Falls eine externe Rootpartition wiederherzustellen ist oder der USB Boot
-   Mode benutzt wird, wo keine SD Karte mehr benutzt wird, muss noch per USB eine
+   Mode benutzt wird, wo keine SD-Karte mehr benutzt wird, muss noch per USB eine
    weitere Platte angeschlossen sein
 
 Gemeinsamkeiten der Beispielaufrufe:
@@ -135,19 +135,19 @@ Gemeinsamkeiten der Beispielaufrufe:
    `/remote/raspifix/disks/backup/rsync/raspberrypi/raspberrypi-rsync-backup-20141230-213032/`
 
 
-### Restore auf eine SD Karte
+### Restore auf eine SD-Karte
 
 ```
 sudo raspiBackup.sh -d /dev/sdf /remote/raspifix/disks/backup/rsync/raspberrypi/raspberrypi-rsync-backup-20141230-213032/
 ```
 
-### Restore auf ein USB Gerät ohne SD Karte (USB boot mode)
+### Restore auf ein USB Gerät ohne SD-Karte (USB boot mode)
 
 ```
 sudo raspiBackup.sh -d /dev/sdf /remote/raspifix/disks/backup/rsync/raspberrypi/raspberrypi-rsync-backup-20141230-213032/
 ```
 
-### Restore auf eine SD Karte und eine externe Partition
+### Restore auf eine SD-Karte und eine externe Partition
 
 1. Um den Restore der externe Rootpartition aufzunehmen, wurde auf `/dev/sda`
    eine entsprechend große Partition `/dev/sda1` angelegt. Eine Formatierung ist nicht notwendig.
@@ -157,7 +157,7 @@ sudo raspiBackup.sh -d /dev/sdf -R /dev/sda1 /remote/raspifix/disks/backup/rsync
 ```
 
 <a name="devicenames"></a>
-## Wie kann man die Gerätenamen der externen SD Karte und externen Platte herausfinden?
+## Wie kann man die Gerätenamen der externen SD-Karte und externen Platte herausfinden?
 
 Auf der Raspberry ist folgender Befehl einzugeben:
 
@@ -179,12 +179,12 @@ Disk /dev/sdb: 300.1 GB, 300069052416 bytes
 
 Hier sieht man, dass
 
-  - die interne SD Karte `/dev/mmcblk0` 8GB groß ist
-  - die neue externe SD Karte `/dev/sda` 16GB groß ist
+  - die interne SD-Karte `/dev/mmcblk0` 8GB groß ist
+  - die neue externe SD-Karte `/dev/sda` 16GB groß ist
   - die externe Platte `/dev/sdb`, auf die die Rootpartition gebracht werden soll,
     300GB groß ist und eine Partition `/dev/sdb1` hat.
 
-Somit ist der Parameter für  `-d` `/dev/sda` (Externe SD Karte).
+Somit ist der Parameter für  `-d` `/dev/sda` (Externe SD-Karte).
 
 Falls eine externe Rootpartition mitgesichert wurde, ist noch `-R /dev/sdb1` (Externe
 Rootpartition) notwendig.
@@ -203,7 +203,7 @@ feststellt, dass das Backup korrupt ist oder nicht alle Daten enthält...
 Ein Test ist bei der Raspberry recht einfach:
 
 Eine neue SD-Karte einlegen, das Backup restoren und von der neuen SD-Karte booten.
-Wird keine SD Karte genutzt, also z.B. eine SSD, kann der Restoretest
+Wird keine SD-Karte genutzt, also z.B. eine SSD, kann der Restoretest
 auch mit einer Platte vorgenommen werden,
 sofern sie groß genug ist, alle Daten der SSD aufzunehmen.
 

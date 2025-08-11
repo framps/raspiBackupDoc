@@ -54,7 +54,7 @@ sind die Anforderungen an ein Ubuntu Server System geringer.
 ## Raspberry Pi Compute Module (CM)
 
 *raspiBackup* unterstützt Raspberry Pi Computemodule
-mit einer SD Karte, eMMC Speicher und NVMe.
+mit einer SD-Karte, eMMC Speicher und NVMe.
 
 Wie man CM4 NVMe Devices auf Linux verfügbar macht, um ein NVMe Backup von *raspiBackup* zu restoren,
 ist der [englischsprachigen Seite](https://www.linux-tips-and-tricks.de/en/raspberrye/614-raspberry-compute-module-4-setup-guide) beschrieben.
@@ -63,7 +63,7 @@ ist der [englischsprachigen Seite](https://www.linux-tips-and-tricks.de/en/raspb
 
 *raspiBackup* unterstützt folgende Geräte und Speicher
 
-  - SD Karten
+  - SD-Karten
   - Platten/HDDs
   - SSDs
   - USB Sticks

@@ -1,10 +1,10 @@
-# Umziehen des Raspberry Betriebssystems von SD Karte auf SSD, USB Platte oder USB Stick
+# Umziehen des Raspberry Betriebssystems von SD-Karte auf SSD, USB Platte oder USB Stick
 
 *raspiBackup* ist dafür gedacht, ein Backup wieder auf die originale
 Gerätekonfiguration zurückzuspielen. Es gibt 3 mögliche Szenarien:
 
-1. `/boot` und `/` auf SD Karte
-2. `/boot` auf SD Karte und `/` extern auf einer SSD, USB Platte oder USB Stick
+1. `/boot` und `/` auf SD-Karte
+2. `/boot` auf SD-Karte und `/` extern auf einer SSD, USB Platte oder USB Stick
    (Ältere Rasperry, welche keinen USB Boot Mode kann)
 3. `/boot` und `/` auf einer SSD, USB Platte oder USB Stick
    (USB Boot Mode auf neueren Raspberries)
