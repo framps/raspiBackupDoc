@@ -66,7 +66,10 @@ Auf Youtube existiert ein Video, auf dem *raspiBackup* vorgestellt wird
 sowie am Ende eine Demo der Installation von *raspiBackup* gegeben wird.
 
 [.status]: review-comment "Youtube Link hier einfügen"
-[.status]: review-comment "Doppelt gemoppelt?! Siehe installation.md"
+
+[.status]: review-comment "Doppelt gemoppelt?!
+Die manuelle Installation wird auch unten und nocheinmal in installation.md erwähnt.
+Das könnte reduziert werden. Hier in der Schnellstart-Anleitung vielleicht ganz raus."
 
 
 ![Screenshot Konfiguration (2019)](images/Screenshot_at_2019-04-10_07-52-15.png)
@@ -140,7 +143,9 @@ Betriebssystem wieder mit *raspiBackup* gesichert wird. Es gibt immer wieder
 Änderungen bei neuen Betriebssystemversionen, die dazu beitragen können, dass der
 Restore nicht mehr funktioniert.
 
-[.status]: review-comment "Doppelt gemoppelt?"
+[.status]: review-comment "Doppelt gemoppelt?!
+Die Hinweise auch Restoretests tauchen mehrfach auf, hier in dieser Datei 2x.
+Ja, das ist wichtig, könnte aber gestrafft werden. (Ist ja schon insgesamt viel Text...)"
 
 
 ## Downloadlinks auf *raspiBackup* und den raspiBackupInstaller
@@ -213,7 +218,8 @@ sudo raspiBackup -m detailed
 Restoredokumentation](restore.md)), um zu verifizieren, dass ein konsistentes
 Backup erstellt wird, und um sich mit der Restoreprozedur vertraut zu machen.
 
-[.status]: review-comment "Doppelt gemoppelt! s.o."
+[.status]: review-comment "Doppelt gemoppelt?!
+s.o. Zeile 70"
 
 
 
@@ -280,7 +286,8 @@ welches die Nutzung und den Aufruf von *raspiBackup* vereinfacht.
 
 ## Deinstallation
 
-[.status]: review-comment "Doppelt gemoppelt!"
+[.status]: review-comment "Doppelt gemoppelt?!
+Die Deinstallation wird hier im Dokument 3x angesprochen."
 
 *raspiBackup* kann auch wieder deinstalliert werden.
 Entweder benutzt man den Installer zum Deinstallieren oder folgenden Befehl:
@@ -292,7 +299,9 @@ sudo raspiBackupInstallUI.sh -u
 
 ## Aufruf des Installers ohne Menüs direkt von der Befehlszeile
 
-[.status]: review-comment "Doppelt gemoppelt!"
+[.status]: review-comment "Doppelt gemoppelt?!
+Siehe auch manual-installation... und installation.
+Und: Gehört das (mit diesem Detaillierungsgrad) hier in die Schnellstartanleitung?"
 
 Wer nicht die menügesteuerte Installation nutzen möchte, kann die Installation von *raspiBackup*,
 den Beispielextensions oder die Deinstallation direkt von der Befehlszeile aufrufen.
@@ -344,7 +353,8 @@ Kurzinfos zu allen Aufrufoptionen von *raspiBackup* erhält man mit `bash ./rasp
 
 Siehe im gleichnamigen Kapitel: [Manuelle Installation und Konfiguration](manual-installation-and-configuration.md)
 
-[.status]: review-comment "Doppelt gemoppelt?! Siehe oben und auch in installation.md"
+[.status]: review-comment "Doppelt gemoppelt?!
+Die manuelle Installation wird auch schon oben und nocheinmal in installation.md erwähnt."
 
 
 [.status]: rst

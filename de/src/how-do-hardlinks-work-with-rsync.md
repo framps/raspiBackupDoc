@@ -36,16 +36,15 @@ Das bedeutet, solange es noch mindestens ein Backup gibt, welche auf die Datei
 per Hardlink verweist, wird die Datei nicht gelöscht und steht für ein
 Restore zur Verfügung.
 
-Das folgende Bild zeigt einmal graphisch, wann Hardlinks und Dateien erstellt bzw. gelöscht werden.
-Es gibt auch ein zugehöriges [Youtube Video](https://www.youtube.com/watch?v=pIhSca_q2lo), inklusive einer Demo am System.
+Das folgende Bild zeigt graphisch, wann Hardlinks und Dateien erstellt bzw. gelöscht werden.
 
-[.status]: review-comment "Doppelt gemoppelte Absätze bzgl. der Grafik!"
-
-In der nachfolgenden Graphik wird gezeigt, wann F2 in BD6 im Filesystem gelöscht wird.
-Das stimmt aber nur, wenn vorher alle Backups, die
-F2 beinhalteten, gelöscht wurden - also BD1 - BD5.
+Es wird gezeigt, wann Datei *F2* des Backup-Verzeichnisses *BD6* im Filesystem gelöscht wird.
+Nämlich erst dann, wenn vorher alle Backups, die die Datei *F2* beinhalteten/referenzieren,
+also *BD1* bis *BD5*, gelöscht wurden.
 
 ![raspiBackup rsync](images/raspiBackup_rsync.png)
+
+Es gibt auch ein zugehöriges [Youtube Video](https://www.youtube.com/watch?v=pIhSca_q2lo), inklusive einer Demo am System.
 
 Viele Dateimanager zeigen den genutzten Speicherplatz ohne Berücksichtigung
 der Platzeinsparung durch Hardlinks an und somit als viel zu hoch.
@@ -57,7 +56,7 @@ Speicherplatz bei der Nutzung von Hardlinks ermittelt werden kann.
 
 ## Weblinks
 
-- [du counting harldinks towards filesize](https://stackoverflow.com/questions/19951883/du-counting-hardlinks-towards-filesize) - Ein Artikel, der erklärt,
+- [du counting hardlinks towards filesize](https://stackoverflow.com/questions/19951883/du-counting-hardlinks-towards-filesize) - Ein Artikel, der erklärt,
   warum der Befehl du über mehrere Verzeichnisses ausgeführt werden muss,
   um die Einsparungen durch Hardlinks zu sehen
 
