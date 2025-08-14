@@ -19,11 +19,6 @@ der Dokumentation:
 Eintippen eines `?` blendet eine kleine Tastatur-Navigationshilfe ein.
 ```
 
-[.status]: todo "Generell im gesamten Dokument: 'SD Karte' oder 'SD-Karte' usw.? -> SD-Karte"
-
-
-
-
 <center>     <!-- The blank line before the image definition is required! -->
 
 ![Icon](images/icons/Icon_rot_blau_final_128.png)
