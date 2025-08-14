@@ -24,7 +24,7 @@ abgelegt werden.
 
 Diese Option kann beim Aufruf von *raspiBackup* überschrieben werden
 mit der Option [-p](backup-options.md#parm_p) oder indem am Ende
-ein Verzeichnis angegeben wird. (Siehe [Aufruf und Optionen](details.md)).
+ein Verzeichnis angegeben wird. (Siehe [Aufruf und Optionen](invocation-options.md)).
 
 ### DEFAULT_COLOR_CODES
 
