@@ -27,7 +27,7 @@ You can either start the backup manually or have the backups be started automati
 Optionally you can let you notified about the backup result with eMail, Pushover, Slack or Telegram.
 
 Backups can be saved ony an partition which can be mounted on a Linux system
-(USB flash drive, USB disk, SSD, NVMe, NFS, SMB, sshfs, WEBDAV etc).
+(USB flash drive, USB disk, SSD, NVMe, NFS, SMB, SSHFS, WebDAV etc).
 
 There exist two backup modes: The **normal backup mode** just saves the boot and root parition. If additional partitions should be saved, for example a 3rd data only partition, the **partition oriented mode** has to be used.
 
@@ -35,7 +35,7 @@ If you own an Synology or another NAS device see [here](backup-targets.md) for c
 
 Linux backuptools `dd` backup, `tar` backup, (both backups can also be zipped) and a `rsync` backup
 with hardlink usage to create a delta backup can be used.
-For details about the different backup methods see [here](backuptypes.md).
+For details about the different backup methods see [here](backup-types.md).
 There you will find a decision tree to decide which backup methods is the right one to use.
 
 To **install and configure** raspiBackup there exists an installer similar to raspi-config, which allows menuedriven, simple and fast to configure raspiBackup with it's most important options to use raspiBackup.
@@ -66,7 +66,7 @@ The required commands can be specified in the configuration file. The raspiBacku
 
 ## Extensionpoints
 
-There exist [extensionpoints](hooks-for-own-scripts.md) for plugins in *raspiBackup*, to hock in any additonal custom logic at different points of the backup and restore processing.
+There exist [extensionpoints](hooks-for-own-scripts.md) f in *raspiBackup*, to hock in any additonal custom logic at different points of the backup and restore processing.
 
 ## Optionally external root partition
 
@@ -84,7 +84,7 @@ Topics are
 
   * Present *raspiBackup* with its features
   * Present the most important webpages about *raspiBackup*
-  * Introduction of github as a question and problemreporting tools
+  * Introduction of *GitHub* as a question and problemreporting tools
   * Liveinstallation of *raspiBackup* with the menuedriven installer
 
 All slides used in the videos can be downloaded from [hier](https://www.linux-tips-and-tricks.de/de/downloads/raspibackup-de-pdf/download).
@@ -122,7 +122,7 @@ Any other communication channels like eMail which is quite prominent will be dis
 
 Any recognition of raspiBackup development- and maintenance effort and any support is greatly appreciated. There exist following donation alternatives:
 
-1) Become a [github sponsor](https://github.com/sponsors/framps)
+1) Become a [*GitHub* sponsor](https://github.com/sponsors/framps)
 2) Paypal: The eMail `framp att linux-tips-and-tricks dott de` is known by PayPal and everybody who owns a Paypal account can donate to this eMail.
 3) Neither one: Just contact me via eMail mentioned above and we will find a solution. For example I already received multiple times donations in a good old postal letter :-)
 
@@ -133,9 +133,9 @@ and created PRs to add new featutures. Ths list will be very long and I was very
 
 Thank you very much to everybody who helped to improve raspiBackup !
 
-## License and github link
+## License and *GitHub* link
 
-The code of *raspiBackup* is pure bash code and is available under the GPL license on [github](https://github.com/framps/raspiBackup).
+The code of *raspiBackup* is pure bash code and is available under the GPL license on [*GitHub*](https://github.com/framps/raspiBackup).
 
 ## Disclaimer
 

@@ -1,16 +1,14 @@
-# exim4 Konfiguration
+# Exim4 Konfiguration
 
-Um z.B. Statusmails von *raspiBackup* als root zu versenden, kann *nullmailer* eingesetzt werden.
-
-Folgende Variablen werden in der folgenden Beschreibung genutzt:
+Folgende Variablen werden in der Beschreibung genutzt:
 
   - eMail Domain: MYDOMAIN (z.B. dummy.de)
   - Hostname des Servers: HOSTNAME (z.B. myserver)
-  - smtp Hostname um eMails abzuliefern: SMTP_PROVIDER_HOST (z.B. mail.your-server.de)
-  - Userid um emails zu senden: SMTP_INPUT_USERNAME
-  - Password um emails zu senden: SMTP_INPUT_PASSWORD
+  - smtp Hostname, um eMails abzuliefern: SMTP_PROVIDER_HOST (z.B. mail.your-server.de)
+  - Userid, um emails zu senden: SMTP_INPUT_USERNAME
+  - Password, um emails zu senden: SMTP_INPUT_PASSWORD
 
-## Änderungen bzw Einfügungen:
+## Änderungen bzw. Einfügungen:
 
   - `/etc/aliases`: root: HOSTNAME@MYDOMAIN, dann `sudo newaliases`
   - `/etc/mailname`: MYDOMAIN
@@ -41,6 +39,9 @@ Folgende Variablen werden in der folgenden Beschreibung genutzt:
     ```
     SMTP_PROVIDER_HOST:SMTP_INPUT_USERNAME:SMTP_INPUT_PASSWORD
     ```
+
+Um z.B. Statusmails von *raspiBackup* als root zu versenden, kann *nullmailer* eingesetzt werden.
+
 
 [.status]: rst
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/573-exim4-konfigurieren

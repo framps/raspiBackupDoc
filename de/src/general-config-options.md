@@ -8,7 +8,7 @@
 
 **Hinweis:** Optionen in der Konfigdatei, die ja/an oder nein/aus als Parameter
 benötigen, müssen 0 für nein und 1 für ja sein. Kein Eintrag in
-der Standardspalte bedeutet der Standard ist `""`
+der Standardspalte bedeutet, der Standard ist `""`
 
 <div class="table-wrapper-for-options">
 
@@ -31,7 +31,7 @@ ein Verzeichnis angegeben wird. (Siehe [Aufruf und Optionen](details.md)).
 Hiermit können die html und VT100 Colorcodes definiert werden. Default
 ist gelb für Warnungen und Rot für Fehler. Das erste Pärchen der Definition legt
 die Codes für Warnung das zweite Pärchen die Definition für Fehler fest. Dabei
-ist die erste Definition der HTML Colorocde und die zweite Definition der VT100
+ist die erste Definition der HTML Colorcode und die zweite Definition der VT100
 Colorcode.
 
 | Config-Option              | Standard |
@@ -42,19 +42,19 @@ Siehe [ANSI Colorcodes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 ### DEFAULT_PUSHOVER_*
 
-*raspiBackup* kann Benachrichtigungen per Pushover schicken. Dazu
+*raspiBackup* kann Benachrichtigungen per *Pushover* schicken. Dazu
 ist es notwendig, sich auf <https://pushover.net/> registriert zu haben und eine
 Application eingerichtet zu haben.
 
-Mit den Notifications definiert man ob man in Erfolgs- und/oder Fehlerfalle
+Mit den Notifications definiert man, ob man in Erfolgs- und/oder Fehlerfalle
 benachrichtigt werden will. Mögliche Optionen sind "S" für Erfolg (Success)
-und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die raspiBackup
+und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die *raspiBackup*
 Meldungen als Datei geschickt.. Es können die Optionen beliebig kombiniert
 werden. Beispiel: "SF" oder "SM".
 
-Die Prioritäten entsprechen den verfügbaren Pushover Prioritäten.
+Die Prioritäten entsprechen den verfügbaren *Pushover* Prioritäten.
 
-Die Klänge entsprechen den verfügbaren Pushoverklängen.
+Die Klänge entsprechen den verfügbaren *Pushover* Klängen.
 
 | Config-Option              | Standard |
 |----------------------------|----------|
@@ -89,11 +89,11 @@ Die eMailAdresse des Versenders kann bei ssmtp und msmtp angegeben werden.
 
 ### DEFAULT_SLACK_*
 
-*raspiBackup* kann Benachrichtigungen per Slack schicken.
+*raspiBackup* kann Benachrichtigungen per *Slack* schicken.
 
-Mit den Notifications definiert man ob man in Erfolgs- und/oder Fehlerfalle
+Mit den Notifications definiert man, ob man in Erfolgs- und/oder Fehlerfalle
 benachrichtigt werden will. Mögliche Optionen sind "S" für Erfolg (Success)
-und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die raspiBackup
+und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die *raspiBackup*
 Meldungen als Datei geschickt. Es können die Optionen beliebig kombiniert
 werden. Beispiel: "SF" oder "SM".
 
@@ -104,11 +104,11 @@ werden. Beispiel: "SF" oder "SM".
 
 ### DEFAULT_TELEGRAM_*
 
-*raspiBackup* kann Benachrichtigungen per TelegraTelegramm schicken.
+*raspiBackup* kann Benachrichtigungen per *Telegram* schicken.
 
-Mit den Notifications definiert man ob man in Erfolgs- und/oder Fehlerfalle
+Mit den Notifications definiert man, ob man in Erfolgs- und/oder Fehlerfalle
 benachrichtigt werden will. Mögliche Optionen sind "S" für Erfolg (Success)
-und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die raspiBackup
+und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die *raspiBackup*
 Meldungen als Datei geschickt. Es können die Optionen beliebig kombiniert
 werden. Beispiel: "SF" oder "SM".
 

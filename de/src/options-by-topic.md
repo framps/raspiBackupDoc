@@ -1,7 +1,7 @@
-# Thematische Sortierung aller Optionen
+# Thematisch sortierte Aufruf-Optionen
 
 <a name="backup"></a>
-## Backupoptionen
+## Backup-Optionen
 
   - [-a: Befehle die Services nach dem Backup starten](backup-options.md#-a)
   - [-A: Das Laufzeitlog wird in der eMail mitgeschickt](general-options.md#-A)
@@ -25,13 +25,13 @@
   - [--systemStatus: Aktive Services beim Backupstart anzeigen](backup-options.md#parm_systemstatus)
   - [-t : Typ des Backups (dd, tar, rsync)](backup-options.md#parm_t)
   - [-T: Zu sichernde Partitionen](backup-options.md#parm_T)
-  - [-u: Ermöglicht weitere Verzeichnisse aus dem Backuprozess auszuschliessen](backup-options.md#parm_u)
+  - [-u: Ermöglicht weitere Verzeichnisse aus dem Backuprozess auszuschließen](backup-options.md#parm_u)
   - [-z: Kompression des Backups bei dd oder tar](backup-options.md#parm_z)
 
 <a name="restore"></a>
-## Restoreoptionen
+## Restore-Optionen
 
-  - [-C: Auf Badblock prüfen](restore-options.md#parm_C)
+  - [-C: Auf Badblocks prüfen](restore-options.md#parm_C)
   - [-d: Restoredevice](restore-options.md#parm_d)
   - [-R: Externe Rootpartition](restore-options.md#parm_R)
   - [--resizeRootFS: Rootfilesystem Anpassung](restore-options.md#parm_resizeRootFS)
@@ -47,8 +47,8 @@
 
   - [-A: Das Laufzeitlog wird bei der eMail Benachrichtigung mitgeschickt](general-options.md#parm_A)
   - [--coloring: Kolorierungseinstellungen bei eMails und Konsolmeldungen](general-options.md#parm_coloring)
-  - [-G: Sprache der Meldungen (Deutsch oder English)](general-options.md#parm_G)
-  - [-l: Einschalten des detailierten Loglevels](general-options.md#parm_l)
+  - [-G: Sprache der Meldungen (Deutsch oder Englisch)](general-options.md#parm_G)
+  - [-l: Einschalten des detaillierten Loglevels](general-options.md#parm_l)
   - [-L: Verzeichnis wo das Debuglog sowie die Laufzeitmeldungen gespeichert werden](general-options.md#parm_L)
   - [-m: Meldungsdetails](general-options.md#parm_m)
   - [--timestamps: Alle Meldungen werden mit einem führenden Zeitstempel ausgegeben](general-options.md#parm_timestamps)
@@ -59,9 +59,9 @@
 
   - [-e: eMailAdresse an die die Benachrichtigung geschickt wird](general-options.md#parm_e)
   - [-E: Optionale Parameter für die eMailClientProgramme](general-options.md#parm_E)
-  - [--eMailColoring: Steuerung wo der genutzte eMailClient Colorierungnsinformationen akzeptiert](general-options.md#parm_eMailColoring)
+  - [--eMailColoring: Steuerung, wo der genutzte eMailClient Colorierungnsinformationen akzeptiert](general-options.md#parm_eMailColoring)
   - [-F: Simuliert den Backuplauf und hilft die eMailBenachrichtgung schnell zu testen](backup-options.md#parm_F)
-  - [-s: eMailClientProgramm welches benutzt wird um die eMail zu verschicken](general-options.md#parm_s)
+  - [-s: eMailClientProgramm zum Verschicken der eMail](general-options.md#parm_s)
 
 <a name="maintenance"></a>
 ## Optionen, die Update, Restore und lokale Verteilung von *raspiBackup* steuern

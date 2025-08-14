@@ -46,7 +46,7 @@ That allows for some tricks:
 
 - [Function detail](function-intro.md)
     - [Backup](backup-intro.md)
-        - [Decision tree for backup types](backuptypes.md)
+        - [Decision tree for backup types](backup-types.md)
         - [Comparison of partition orientated and normal backup](normal-or-partition-backup.md)
         - [Backup directory structure](backup-directory-structure.md)
         - [Rotation strategy](smart-recycle.md)
@@ -54,7 +54,7 @@ That allows for some tricks:
         - [Configuration update when upgrading to a new version](configuration-update-when-upgrading-to-a-new-version.md)
         - [Configuration examples](configuration-examples.md)
             - [msmtp configuration for a web.de account](msmtp-configuration-for-web-de-account.md)
-            - [exim4 configuration](exim4-configuration.md)
+            - [Exim4 configuration](exim4-configuration.md)
             - [nullmailer configuration](nullmailer-configuration.md)
 
     - [Restore](restore-intro.md)
@@ -78,7 +78,7 @@ That allows for some tricks:
     - [Statistics](statistics.md)
     - [Updates](updates.md)
 
-- [Usage and options](details.md)
+- [Usage and options](invocation-options.md)
     - [Backup](backup.md)
         - [Options](backup-options.md)
         - [Configuration](backup-config-options.md)
@@ -102,7 +102,7 @@ That allows for some tricks:
     - [NFS as backupspace](nfs-as-backupspace.md)
     - [SMB as backupspace](smb-as-backupspace.md)
     - [AVM FRITZ!Box as backupspace](avm-fritzbox-as-backupspace.md)
-    - [WEBDAV as backupspace](webdav-as-backupspace.md)
+    - [WebDAV as backupspace](webdav-as-backupspace.md)
 
 - [Tips for home automation](tips-homeautomation.md)
 

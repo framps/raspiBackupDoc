@@ -1,4 +1,4 @@
-# WEBDAV as backupspace
+# WebDAV as backupspace
 
 ``` admonish note title="Quelle"
 - <https://www.linux-tips-and-tricks.de/de/12-networking/190-wie-kann-man-medienspeicher-oder-smartdrive-unter-linux-einbinden>

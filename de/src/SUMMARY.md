@@ -54,7 +54,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Konfigurationsupdate bei einem Upgrade auf eine neue Version](configuration-update-when-upgrading-to-a-new-version.md)
         - [Konfigurationsbeispiele](configuration-examples.md)
             - [msmtp Konfiguration für einen web.de Account](msmtp-configuration-for-web-de-account.md)
-            - [exim4 Konfiguration](exim4-configuration.md)
+            - [Exim4 Konfiguration](exim4-configuration.md)
             - [nullmailer Konfiguration](nullmailer-configuration.md)
 
     - [Restore](restore-intro.md)
@@ -67,7 +67,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Wie funktionieren Hardlinks zusammen mit rsync?](how-do-hardlinks-work-with-rsync.md)
         - [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)
         - [Wie kann man mit *raspiBackup* einen Clone erstellen?](how-to-create-a-cold-standby-clone-with-raspibackup.md)
-        - [Umziehen des Raspberry Betriebssystems von SD Karte auf SSD, USB Platte oder USB Stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
+        - [Umziehen des Raspberry Betriebssystems von SD-Karte auf SSD, USB Platte oder USB Stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [Wie kann ich die Betaversion installieren und ausprobieren?](how-can-i-install-and-test-the-beta-version.md)
         - [Wird eine externe Rootpartition unterstützt?](external-root-partition.md)
 
@@ -78,7 +78,7 @@ Dies ermöglicht einige kleine Kniffe:
     - [Statistiken](statistics.md)
     - [Updates](updates.md)
 
-- [Aufruf und Optionen](details.md)
+- [Aufruf und Optionen](invocation-options.md)
     - [Backup](backup.md)
         - [Optionen](backup-options.md)
         - [Konfiguration](backup-config-options.md)
@@ -88,7 +88,7 @@ Dies ermöglicht einige kleine Kniffe:
     - [Allgemein](general.md)
         - [Optionen](general-options.md)
         - [Konfiguration](general-config-options.md)
-    - [Thematisch sortierte Optionen](options-by-topic.md)
+    - [Thematisch sortierte Aufruf-Optionen](options-by-topic.md)
 
 - [Häufige Fragen / FAQ](faq.md)
 
@@ -102,7 +102,7 @@ Dies ermöglicht einige kleine Kniffe:
     - [NFS als Backupziel](nfs-as-backupspace.md)
     - [SMB als Backupziel](smb-as-backupspace.md)
     - [AVM FRITZ!Box als Backupziel](avm-fritzbox-as-backupspace.md)
-    - [WEBDAV als Backupziel](webdav-as-backupspace.md)
+    - [WebDAV als Backupziel](webdav-as-backupspace.md)
 
 - [Tipps zur Homeautomation](tips-homeautomation.md)
 
@@ -115,7 +115,7 @@ Dies ermöglicht einige kleine Kniffe:
     - [10 Jahre *raspiBackup*](10-years-raspibackup.md)
     - [Regressionstests](regressiontests-executed.md)
     - [Entwicklungsumgebung](development-environment.md)
-    - [Nutzer auf der Welt](list-of-countries-raspibackup-is-used-in-the-world.md)
+    - [Nutzer weltweit](list-of-countries-raspibackup-is-used-in-the-world.md)
     - [Version dieser Dokumentation](doc-version-info-automatically-generated.md)
     - [Markdown Spielwiese](markdown-playground.md)
 

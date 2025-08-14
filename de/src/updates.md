@@ -22,7 +22,7 @@ neuen Version enthalten sind. Diese Information dazu findet sich in der
 Sollte einmal ein gravierender Fehler entdeckt werden, wird
 eine neue Version sofort bereitgestellt.
 
-Jede neue Version wird [vor der Veröffentlichung regression getestet](regressiontests-executed.md).
+Jede neue Version wird [vor der Veröffentlichung auf Regressions getestet](regressiontests-executed.md).
 
 ## Konfigurationsupdate
 
@@ -34,4 +34,3 @@ beschrieben.
 [.status]: rst
 [.source]: https://linux-tips-and-tricks.de/de/raspibackup#updatestrategie
 [.source]: https://linux-tips-and-tricks.de/de/raspibackupcategoried/432-raspibackup-versionshistorie
-

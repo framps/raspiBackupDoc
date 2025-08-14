@@ -27,7 +27,7 @@ DEFAULT_BACKUPTYPE=dd
 DEFAULT_KEEPBACKUPS=n
 ```
 
-## Ein Windowsbenutzer hat eine 32GB SD Karte und benutzt nur 12GB davon, die er aber auch nur sichern möchte
+## Ein Windowsbenutzer hat eine 32GB SD-Karte und benutzt nur 12GB davon, die er aber auch nur sichern möchte
 
 Zusätzlich zu den genannten Optionen ist die folgende Option notwendig:
 
@@ -36,7 +36,7 @@ DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY=1
 ```
 
 Allerdings ist dazu auch notwendig, die Rootpartition der Raspberry zu
-verkleinern, da standardmäßig der gesamte freien Platz der SD Karte gesichert
+verkleinern, da standardmäßig der gesamte freien Platz der SD-Karte gesichert
 wird. Dieses geht aber nicht unter Windows sondern es muss ein Linux benutzt
 werden und mit den Tools `gparted` oder `resize2fs` die Rootpartition
 verkleinert werden.
@@ -54,10 +54,10 @@ DEFAULT_ZIP_BACKUP=1
 verkleinert zwar auch noch einmal das Image, aber das kann nicht direkt
 unter Windows restored werden. Es muss vorher unzipped werden.
 
-## Eine Raspberry soll möglichst schnell gesichert werden. Die Backuppartition ist ein per nfs gemountetes EXT4 Dateisystem, welches von einer NAS zur Verfügung gestellt wird
+## Eine Raspberry soll möglichst schnell gesichert werden. Die Backuppartition ist ein per NFS gemountetes EXT4 Dateisystem, welches von einer NAS zur Verfügung gestellt wird
 
 Zuerst muss die Backuppartition der NAS gemounted werden. Dazu sollte in
-`/etc/fstab` die nfs Partition definiert und automatisch unter `/backup` gemounted sein.
+`/etc/fstab` die NFS Partition definiert und automatisch unter `/backup` gemounted sein.
 
 ```
 DEFAULT_BACKUPTYPE=rsync
@@ -74,7 +74,7 @@ Ein Beispieleintrag in der `/etc/fstab` könnte wie folgt aussehen:
 asterix:/backup    /backup    nfs    users,rw,sync,hard,intr,noauto,user    0    0
 ```
 
-Dabei ist "asterix" der Hostname der NAS und "/backup" der exportierte nfs
+Dabei ist "asterix" der Hostname der NAS und "/backup" der exportierte NFS
 Mount. Weitere Hinweise zu Synology-spezifischen Einstellungen und
 Problemlösungen finden sich [hier](nfs-as-backupspace.md)
 
@@ -134,7 +134,7 @@ DEFAULT_KEEPBACKUPS=n
 DEFAULT_BACKUPPATH="/USBStick"
 ```
 
-Damit `rsync` Hardlinks benutzt und der Backup schnell ist, muss die
+Damit `rsync` Hardlinks benutzt und das Backup schnell ist, muss die
 Backuppartition mit ext3/4 formatiert sein. Will man Daten mit Windows
 austauschen und die Partition wurde mit Windows formatiert, ist `tar` als
 Backuptype zu benutzen. Dann dauert allerdings das Backup länger und

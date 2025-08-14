@@ -1,6 +1,6 @@
 # Statistiken
 
- *raspiBackup* prüft bei jedem Start einmal pro Tag, ob es eine neue *raspiBackup*
+ *raspiBackup* prüft bei jedem Start, maximal aber einmal pro Tag, ob es ein neues
  Release oder eine Beta gibt und weist dann mit einer Meldung darauf hin, so
  dass ein Upgrade geplant und durchgeführt werden kann. Bei dieser Prüfung
  werden auch ein paar Informationen übermittelt, die es ermöglichen, allgemeine
@@ -14,7 +14,7 @@ Die Informationen, die übertragen werden, sind
   - Backupmodus
   - Backup- oder Restoreaufruf
   - Keep
-  - Parameter der intelligenten Rotationsstrategie sofern sie genutzt wird
+  - Parameter der intelligenten Rotationsstrategie, sofern sie genutzt wird
   - OS: *Raspberry Pi OS* oder *Ubuntu*
 
 Das Senden dieser o.g. Informationen kann mit der Option

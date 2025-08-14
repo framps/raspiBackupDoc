@@ -2,11 +2,11 @@
 
 Manchmal ist nicht ein kompletter Restore des ganzen Systems, sondern nur
 einzelner Datei(en) oder Verzeichnisse gewünscht.
-Dies wird aber nicht direkt von *raspiBackup* unterstützt.
+Dies wird nicht direkt von *raspiBackup* unterstützt.
 Da *raspiBackup* zum Restore des Gesamtsystem nur Standard-Linux-Tools
-verwendet, ist das für alle Backuptypen manuell möglich.
+verwendet, ist das aber für alle Backuptypen manuell möglich.
 
-Allerdings müssen deshalb diese Aktivitäten auf einem Linux-System durchgeführt
+Allerdings müssen diese Aktivitäten auf einem Linux-System durchgeführt
 werden.
 
 Am einfachsten geht das bei rsync-Backups. dd und tar Backups erfordern einige
@@ -43,16 +43,16 @@ raspberrypi-dd-backup-20160415-222900.img1      8192   122879   114688   56M   c
 raspberrypi-dd-backup-20160415-222900.img2      122880 15646719 15523840 7.4G 83 Linux
 ```
 
-Es ist also 8192 für die erste und 122880 für die zweite Partition:
+Es sind also 8192 für die erste und 122880 für die zweite Partition.
 
-Nun wird die Partition nach /media gemounted, in dem Beispiel die zweite, die root-Partition.
-Hinweis: Der Offset iist mit der Sektorgröße, hier 512, zu multiplizieren.
+Nun wird die Partition nach `/media` gemounted, in dem Beispiel die zweite, die root-Partition.
+Hinweis: Der Offset ist mit der Sektorgröße, hier 512, zu multiplizieren.
 
 ```
 sudo mount -o ro,norecovery,loop,offset=$((122880*512)) raspberrypi-dd-backup-20160415-222900.img /media
 ```
 
-Nun ist im Verzeichnis /media der Zugriff auf alle Daten des Backups möglich.
+Nun ist im Verzeichnis `/media` der Zugriff auf alle Daten des Backups möglich.
 
 ```
 ls /media/
@@ -79,13 +79,15 @@ Im folgenden Beispiel ist die USB-Platten-Partition `/dev/sda1` und wird nach `/
 sudo mount -o ro /dev/sda1 /mnt
 ```
 
-Angenommen, auf das gesamte Verzeichnis /etc in der tar-Datei soll zugegriffen werden. Das geht mit folgendem Kommando. Aber dabei muss man etwas geduldig sein, denn je nach Größe der tar-Datei kann das etwas dauern.
+Angenommen, auf das gesamte Verzeichnis `/etc` in der tar-Datei soll zugegriffen werden.
+Das geht mit folgendem Kommando.
 
 ```
 tar -xf raspberrypi-tar-backup-20171028-205746.tar -C /tmp etc
 ```
+Aber dabei muss man etwas geduldig sein, denn je nach Größe der tar-Datei kann das etwas dauern.
 
-Schliesslich wurde das /etc-Verzeichnis aus der tar-Datei nach /tmp extrahiert. Dort ist der Zugriff nun möglich.
+Schließlich wurde das `/etc`-Verzeichnis aus der tar-Datei nach `/tmp` extrahiert. Dort ist nun der Zugriff möglich.
 
 
 ## rsync backup
@@ -98,7 +100,7 @@ Im folgenden Beispiel ist die USB-Platten-Partition `/dev/sda1` und wird nach `/
 sudo mount -o ro /dev/sda1 /mnt
 ```
 
-Nun ist schon direkt Zugriff auf die Inhalte möglich:
+Nun ist direkt Zugriff auf die Inhalte möglich:
 
 ```
 cd /mnt/backups/raspberrypi/raspberrypi-rsync-backup-20160705-212724-8G

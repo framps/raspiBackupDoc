@@ -5,8 +5,8 @@ Hilfsscript mit dem Namen [raspiBackupDialog](https://github.com/framps/raspiBac
 die wichtigsten Aufrufoptionen für den Backup und den Restore abfragt und mit
 denen dann *raspiBackup* anstößt. *raspiBackup* Snapshots werden unterstützt. Sehr
 einfach ist besonders der Restore durchzuführen: Vor dem Restore wird die Liste
-der vorhandenen Backups angezeigt und man kann auswählen, welches Backup man
-restoren will.
+der vorhandenen Backups angezeigt und man kann auswählen, welches Backup
+wieder hergestellt werden soll.
 
 ``` admonish info title="Hinweis"
 Es ist empfehlenwert, *raspiBackupDialog* nach erfolgreicher Installation und Konfiguration
@@ -23,13 +23,11 @@ Es kann wie folgt in das aktuelle Verzeichnis heruntergeladen werden:
 curl -s https://raw.githubusercontent.com/framps/raspiBackup/master/scripts/raspiBackupDownloadFromGit.sh | bash -s -- master helper/raspiBackupDialog.sh
 ```
 
-Danach kann man es mit
+Nun lässt es sich aufrufen mit:
 
 ```
 sudo ./raspiBackupDialog.sh
 ```
-
-aufrufen.
 
 Möchte man es nicht jedes Mal herunterladen, kann man es auf seiner Raspberry wie folgt dauerhaft verfügbar machen:
 

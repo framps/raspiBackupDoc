@@ -1,4 +1,4 @@
-# Nutzer von *raspiBackup* auf der Welt
+# Nutzer von *raspiBackup* weltweit
 
 Im Januar 2024 hat *raspiBackup* Nutzer in 70 Ländern der Erde:
 
@@ -12,11 +12,11 @@ Im Januar 2024 hat *raspiBackup* Nutzer in 70 Ländern der Erde:
 - BE Belgium
 - BG Bulgaria
 - BN Brunei
-- BR Brasila
+- BR Brasilia
 - CA Canada
-- CH Suisse
+- CH Switzerland
 - CL Chile
-- CM Camerun
+- CM Cameroon
 - CN China
 - CO Colombia
 - CY Cyprus
@@ -32,11 +32,11 @@ Im Januar 2024 hat *raspiBackup* Nutzer in 70 Ländern der Erde:
 - GE Georgia
 - GH Ghana
 - GR Greece
-- HK Honkong
+- HK Hong Kong
 - HR Croatia
-- HU Hungury
+- HU Hungary
 - ID Indonesia
-- IE Irland
+- IE Ireland
 - IL Israel
 - IN India
 - IP
@@ -45,14 +45,14 @@ Im Januar 2024 hat *raspiBackup* Nutzer in 70 Ländern der Erde:
 - JE Jersey
 - JP Japan
 - KE Kenya
-- KR South Corea
+- KR South Korea
 - KZ Kazakhstan
 - LI Liechtenstein
 - LT Lithuania
-- LU Luxemburg
+- LU Luxembourg
 - LV Latvia
 - MD Moldova
-- MK North Maczedonia
+- MK North Macedonia
 - MT Malta
 - MX Mexico
 - MY Malaysia
@@ -65,7 +65,7 @@ Im Januar 2024 hat *raspiBackup* Nutzer in 70 Ländern der Erde:
 - PL Poland
 - PT Portugal
 - RO Romania
-- SC Sychelles
+- SC Seychelles
 - SE Sweden
 - SG Singapore
 - SI Slovenia
@@ -74,7 +74,7 @@ Im Januar 2024 hat *raspiBackup* Nutzer in 70 Ländern der Erde:
 - TR Turkey
 - TW Taiwan
 - UA Ukraine
-- US United States of Amerika
+- US United States of America
 - VN Vietnam
 - ZA Zaire
 

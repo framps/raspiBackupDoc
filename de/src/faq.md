@@ -10,10 +10,10 @@
 Bei *framp* liefen zu Hause drei Raspis. Zwei davon 7/24 - also rund um die Uhr.
 Ein jeder Server sollte regelmäßig gesichert werden denn es können immer mal
 unvorhergesehene Umstände eintreten, die eine Wiederherstellung eines
-vorherigen Standes erfordern. Speziell die SD Karte der Raspberry neigt dazu,
+vorherigen Standes erfordern. Speziell die SD-Karte der Raspberry neigt dazu,
 immer mal wieder auszufallen. Um dafür gewappnet zu sein, wurde ein
 kleines Script geschrieben, welches zuerst ein dd Backup, dann später, da
-ein dd Backup ja immer die gesamte SD Karte sichert obwohl nur Bruchteile
+ein dd Backup ja immer die gesamte SD-Karte sichert obwohl nur Bruchteile
 davon benutzt werden, ein tar Backup automatisch erstellte. Zum Schluss
 wurde dann ein rsync Backup implementiert um durch die Hardlinks Backupzeit
 und -space zu sparen. Nachdem imer mal wieder eine Wiederherstellung
@@ -28,13 +28,13 @@ Die sicherste Methode ist natürlich das System vollständig zu stoppen.
 Bei einem Backup wird nur gesichert was sich auf dem Speichermedium
 und nicht was sich noch im Hauptspeicher befindet.
 
-Ein Systemstop ist leider nicht regelmäßig und automatisch
-vornehmbar. Wenn man alle aktiven Services wie mysql, samba, nfs,
-Owncloud, Webserver und alle anderen aktiven Services immer vor dem Backup
+Ein Systemstopp ist leider nicht regelmäßig und automatisch
+vornehmbar. Wenn man alle aktiven Services wie MySQL, SMB, NFS,
+ownCloud, Webserver und alle anderen aktiven Services immer vor dem Backup
 stoppt, um keine Dateninkonsistenzen zu erzeugen, kann das Backup zum
 Wiederherstellen der Raspi genutzt werden. Stoppt man die Services nicht,
 besteht eine hohe Wahrscheinlichkeit, dass das Backup inkonsistent wird.
-Dazu gibt es die Parameter `-a` und `-o`, um die entsprechenden Stop- und
+Dazu gibt es die Parameter `-a` und `-o`, um die entsprechenden Stopp- und
 Startbefehle vor bzw. nach dem Backup auszuführen. Siehe auch [FAQ18](#faq18) dazu.
 
 Mit dem Installer können Systemd Services ausgewählt werden, die gestoppt
@@ -65,7 +65,7 @@ Raspberry wieder.
 Im normalen Modus sichert *raspiBackup* mit tar oder rsync zwei Partitionen:
 Die Boot und die Rootpartition die auf dem System. Wenn
 die Rootpartition auf ein externes Medium verlagert wurde wird auch die
-externe Rootpartition gesichert. Mit dem dd Backup wird die gesamte SD Karte
+externe Rootpartition gesichert. Mit dem dd Backup wird die gesamte SD-Karte
 gesichert. Dann kann aber keine externe root Partition mitgesichert werden.
 
 Im partitionsorientierten Modus werden beliebig viele Partitionen des
@@ -84,25 +84,25 @@ die Vor- und Nachteile der jeweiligen Backupmethoden nachgelesen werden.
 ### 5)  Kann man die Sicherung auch ohne *raspiBackup* wiederherstellen?
 
 Das ist eine Grundvoraussetzung für *raspiBackup* gewesen: Es muss möglich
-sein, das Backup mit entprechenden Linuxkenntnissen zu Fuß restoren zu
+sein, das Backup mit entsprechenden Linux-Kenntnissen zu Fuß restoren zu
 können.
 
 Die Sicherung legt Dateien an, die die lesbaren Ausgaben von den Linux
-Befehlen sfdisk, blkid und fdisk von dem System enhält. Damit lässt sich
+Befehlen sfdisk, blkid und fdisk von dem System enthält. Damit lässt sich
 zuerst die Partitionsstruktur des Backups mit den entsprechenden Linuxtools
 wiederherstellen. Danach kann man die Partitionsbackups mit den
 entsprechenden Linuxtools wieder auf die Partitionen zurückspielen.
 
 
 <a name="faq6"></a>
-### 6)   Kann man die Sicherungen mit *raspiBackup* auch auf kleiner und größere SD Karten wiederherstellen?
+### 6)   Kann man die Sicherungen mit *raspiBackup* auch auf kleiner und größere SD-Karten wiederherstellen?
 
 Beim dd Backuptyp muss man nach den Restore auf ein größeres Gerät mit
-Linux Repartitionierungstools nach der Wiederherstellung die Paritionsgröße
-anpassen wenn man für die zweite Parition sämtlichen Platz nutzen will. Ein
-dd Restore auf einkleineries Gerät geht nicht.
+Linux Repartitionierungstools nach der Wiederherstellung die Partitionsgröße
+anpassen, wenn man für die zweite Parition sämtlichen Platz nutzen will. Ein
+dd Restore auf ein kleineres Gerät geht nicht.
 
-Ohne Probleme funktioniert es bei einem kleineren oder größeren Gerät
+Ohne Probleme funktioniert es bei einem kleineren oder größeren Gerät,
 sofern tar oder rsync Backup. Beim normalen Backupmodus wird
 automatisch die Größe der root Partition entsprechend angepasst, d.h.
 entsprechend verkleinert oder vergrößert. Bei einer Vergrößerung wird
@@ -117,8 +117,8 @@ vorgenommen sondern die existierende Partitionierung des gesicherten
 Systems genutzt.
 Man hat damit vollständige Kontrolle über die Größe der Wiederhergestellten
 Partitionen. D.h. man kann dadurch vor dem Restore genau festlegen, wie
-gross die Partitionen auf der neuen SD Karte sein sollen und somit auch auf
-kleiner SD Karten restoren. Das geht auch für partitionsorientierte Backups.
+groß die Partitionen auf der neuen SD-Karte sein sollen und somit auch auf
+kleiner SD-Karten restoren. Das geht auch für partitionsorientierte Backups.
 
 Ein dd Backup kann nicht auf eine kleiner Karte restored werden. Vorher muss
 es verkleinert werden. Das geht z.B. so. Oder man benutzt [pishrink](https://github.com/Drewsif/PiShrink).
@@ -129,14 +129,14 @@ Option -0 das Backup wiederherstellt.
 
 
 <a name="faq7"></a>
-### 7)   Wie kann ich die Partitionierung der Ziel SD Karte beeinflussen?
+### 7)   Wie kann ich die Partitionierung der Ziel SD-Karte beeinflussen?
 
 Es gibt zwei Optionen die das Partitionierungsverhalten von *raspiBackup*
 beeinflussen: Option `-1` (eins) zwingt *raspiBackup* die Partitionierung der
-Backup SD Karte auf die Ziel SD Karte zu erstellen auch wenn die Partitionen
-kleiner oder größer als die Ziel SD Karte sind. Mit der Option `-0` (Null)
-nimmt *raspiBackup* keine Paritionierung vor und verwendet die existiernde
-Partition der Ziel SD Karte. Somit kann man vor dem Restore die Partitionen
+Backup SD-Karte auf die Ziel SD-Karte zu erstellen auch wenn die Partitionen
+kleiner oder größer als die Ziel SD-Karte sind. Mit der Option `-0` (Null)
+nimmt *raspiBackup* keine Partitionierung vor und verwendet die existierende
+Partition der Ziel SD-Karte. Somit kann man vor dem Restore die Partitionen
 anlegen und formatieren wie man sie haben möchte und diese wird dann von
 *raspiBackup* benutzt.
 
@@ -148,11 +148,11 @@ Generell auf jedem Device, welches unter Linux gemounted werden kann
 
   - Externer USB Stick
   - Externe USB Platte
-  - smb Netzwerklaufwerk
-  - nfs Netzwerklaufwerk
-  - sshfs Netzwerklaufwerk
-  - webdav Netzwerklaufwerk
-  - ftpfs Netzwerklaufwerk
+  - SMB Netzwerklaufwerk
+  - NFS Netzwerklaufwerk
+  - SSHFS Netzwerklaufwerk
+  - WebDAV Netzwerklaufwerk
+  - FtpFS Netzwerklaufwerk
 
 <a name="faq9"></a>
 ### 9) Wie kann ich die Funktion von *raspiBackup* noch erweitern und zusätzlich etwas vor oder nach dem Backup und/oder Restore ausführen lassen?
@@ -173,7 +173,7 @@ Da gibt es verschiedene Möglichkeiten:
 <a name="faq10"></a>
 ### 10) Welche eMailClients werden von *raspiBackup* unterstützt?
 
-*raspiBackup* unterstützt exim4, postfix und nullmailer, ssmtp, msmtp und
+*raspiBackup* unterstützt Exim4, Postfix und nullmailer, ssmtp, msmtp und
 sendEmail. Andere eMailClients können über ein eMail Erweiterung (Extension)
 angesprochen werden (Details siehe [hier](hooks-for-own-scripts.md)).
 
@@ -183,7 +183,7 @@ angesprochen werden (Details siehe [hier](hooks-for-own-scripts.md)).
 
 *raspiBackup* kann eine eMailErweiterung (extension plugpoint) zum Senden der
 eMail benutzen. Dazu muss ein kleines Script geschrieben werden, welches die
-eMailParameter entsprechende dem verwendeteten eMailClient aufbereitet und
+eMailParameter entsprechende dem verwendeten eMailClient aufbereitet und
 den eMailClient mit der korrekten Syntax aufruft. Eine Beispielerweiterung
 für mailx ist bei den [Erweiterungsbeispielen](hooks-for-own-scripts.md) enthalten.
 
@@ -230,7 +230,7 @@ einen Versionsupdate vornehmen lassen.
 <a name="faq15"></a>
 ### 15) Wie kann ich auf eine vorhergehende *raspiBackup* Version zurückgehen, wenn ich nach einem Upgrade bemerke, dass die neue Version nicht so funktioniert wie ich es erwarte?
 
-*raspiBackup* erstelt jedes mal wenn mit der Option -U eine neue Version
+*raspiBackup* erstellt jedes mal wenn mit der Option -U eine neue Version
 aktiviert wird eine Sicherungskopie. Mit der Option -V kann man jederzeit
 auf eine vorhergehende Version zurückgehen. Es wird eine Liste von alle
 gesicherten *raspiBackup* Versionen angezeigt und man kann die Version, die
@@ -238,9 +238,9 @@ zurückgespielt werden soll daraus auswählen.
 
 
 <a name="faq16"></a>
-### 16) Ich habe eine 32GB SD Karte wovon ich nur 8GB benötige. Ein dd Backup sichert aber immer 32GB, d.h 24GB zu viel.
+### 16) Ich habe eine 32GB SD-Karte wovon ich nur 8GB benötige. Ein dd Backup sichert aber immer 32GB, d.h 24GB zu viel.
 
-Der dd Backup sichert immer die ganze SD Karte. Es gibt den
+Der dd Backup sichert immer die ganze SD-Karte. Es gibt den
 Konfigurationsparameter DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY, der
 dafür sorgt, dass nur die definierten Partitionen gesichert werden. D.h.
 man muss mit gparted oder einem anderen Partitionierungstool nur eine
@@ -257,8 +257,8 @@ Minimum verkleinern.
 
 Hardlinks werden erfolgreich von *raspiBackup* benutzt wenn ein lokaler USB
 Stick, eine lokale USB Platte oder auch eine per NFS gemountete Partition,
-die mit ext3/ext4 formatiert ist, benutzt wird. SMB sowie sshfs
-unterstützt keine Hardlinks.
+die mit ext3/ext4 formatiert ist, benutzt wird. SMB und SSHFS
+unterstützen keine Hardlinks.
 
 **Hinweis:** Der Windows Explorer ignoriert Hardlinks und zeigt deshalb eine
 falsche effektive Belegung an. Es muss deshalb ein Linuxsystem genutzt
@@ -307,10 +307,10 @@ Optionen genutzt werden.
 
 Folgende Services sollten auf alle Fälle gestoppt werden:
 
-| Service   | Stop Befehl |
+| Service   | Stopp Befehl |
 |-----------|-------------|
-| nfs       | systemctl stop nfs-kernel-server |
-| Samba     | systemctl stop samba |
+| NFS       | systemctl stop nfs-kernel-server |
+| SMB/samba | systemctl stop samba |
 | Pilight   | systemctl stop pilight |
 | Cups      | systemctl stop cups |
 | Minidlna  | systemctl stop minidlna |
@@ -319,17 +319,17 @@ Folgende Services sollten auf alle Fälle gestoppt werden:
 | nginx     | systemctl stop nginx |
 | mysql     | systemctl stop mysql |
 | seafile   | systemctl stop seafile |
-| Owncloud  | Siehe Apache |
+| ownCloud  | Siehe Apache |
 | FHEM      | systemctl stop fhem |
 | iobroker  | systemctl stop iobroker |
 | cron      | systemctl stop cron |
 
 Die Services sollten dann per Option DEFAULT_STARTSERVICES wieder gestartet
 werden. Die Reihenfolge sollte dann genau umgekehrt sein zu der
-Stopreihenfolge.
+Stoppreihenfolge.
 
 Der Installer sorgt automatisch dafür dass die ausgewählten Systemd
-kontrollierten Services in der entsprechenden Reihenfolge gestoppt bzw
+kontrollierten Services in der entsprechenden Reihenfolge gestoppt bzw.
 gestartet werden. Leider garantiert Systemd nicht dass die Abhängigkeiten
 der Services berücksichtigt werden. Zu ein paar Anwendungen gibt es auch
 weitere Tipps auf dieser Seite die man berücksichtigen sollte.
@@ -337,7 +337,7 @@ weitere Tipps auf dieser Seite die man berücksichtigen sollte.
 Beispiel für -a
 
 ```
--a "systemctl startpilight && systemctlstartsamba && systemctl startnfs-kernel-server"
+-a "systemctl start pilight && systemctl start samba && systemctl start nfs-kernel-server"
 ```
 
 Beispiel für -o
@@ -355,7 +355,7 @@ DEFAULT_STOPSERVICES="systemctl stop nfs-kernel-server && systemctl stop pilight
 bzw.
 
 ```
-DEFAULT_STARTSERVICES="systemctl startsamba&& systemctl startpilight && systemctl  startnfs-kernel-server"
+DEFAULT_STARTSERVICES="systemctl start samba&& systemctl start pilight && systemctl  start nfs-kernel-server"
 ```
 
 Achtung: Die Befehle werden als root ausgeführt. Es ist kein sudo notwendig.
@@ -376,26 +376,26 @@ werden kann. Allerdings gibt es ein paar Dinge zu beachten:
 
 - Ein rsync Backup benutzt Hardlinks welche von ext3/4 unterstützt werden.
   Dann werden nur geänderte Dateien gesichert und gleiche Dateien per
-  Hardlinks verknüpft. Ein ext4 Filesystem was über smb freigegeben wird
+  Hardlinks verknüpft. Ein ext4 Filesystem was über SMB freigegeben wird
   unterstützt keine Hardlinks. Eine Alternative ist NFS. Werden keine
   Hardlinks unterstützt kann rsync nicht genutzt werden.
 
 - FAT32 kann nur Dateien bis zu 4GB speichern. Ein dd Backup wird so groß
-  wie die SD Karte (Außer es wird die Konfigurationsoption
+  wie die SD-Karte (Außer es wird die Konfigurationsoption
   DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY benutzt) und somit i.d.R.
   größer als 4GB. Selbiges trifft auf das tar Backup zu was auch sehr
   schnell größer als 4GB wird. Eine Alternative dazu ist NTFS.
 
 Allgemeine Empfehlung: Benutze wenn möglich ext3/4. Auf Linux benutze NFS
-für Netzwerklaufwerke. Auf Windows benutze NTFS auf exportierten smb
-Netzwerklaufwerken. Benutze FAT32 nur wenn sichergestellt ist, dass die
+für Netzwerklaufwerke. Auf Windows benutze NTFS auf exportierten SMB
+Netzwerklaufwerken. Benutze FAT32 nur, wenn sichergestellt ist, dass die
 Backups nicht größer werden als 4GB.
 
 
 <a name="faq20"></a>
 ### 20) Ich habe Probleme beim Sichern meiner Backups auf einer Synology. Wie kann ich die beseitigen?
 
-Es gibt diverse Benutzer von *raspiBackup* die ihre Backups per nfs auf einer
+Es gibt diverse Benutzer von *raspiBackup* die ihre Backups per NFS auf einer
 Synology erfolgreich sichern. Es gibt eine spezielle Seite wo ich und
 Benutzer von *raspiBackup* beschrieben haben, was sie an der Synology
 konfiguriert haben, damit alles funktioniert.
@@ -445,7 +445,7 @@ Die Fehlermeldung sieht in etwas wie folgt aus:
 rsync: set_acl: sys_acl_set_file(media/pi, ACL_TYPE_ACCESS): Operation not supported (95)
 ```
 
-Die Ursache liegt darin, dass nfs Version 4 mit rsync keine Posix ACLs
+Die Ursache liegt darin, dass NFS4 mit rsync keine Posix ACLs
 unterstützt. Diese sind aber auch in 99% der Fälle nicht notwendig. Die
 folgende Zeile in der `/etc/mke2fs.conf`
 
@@ -453,15 +453,15 @@ folgende Zeile in der `/etc/mke2fs.conf`
 default_mntopts = acl,user_xattr
 ```
 
-bewirkt, dass jeder mount immer die acl für eine Partition einschaltet. Das
+bewirkt, dass jeder mount immer die ACL für eine Partition einschaltet. Das
 trifft dann auch für die Backuppartition von *raspiBackup* zu, die
-standardmäßig auf /backup gemounted wird. Somit wird immer versucht, acl
+standardmäßig auf /backup gemounted wird. Somit wird immer versucht, ACL
 Daten zu schreiben, was von rsync nicht unterstützt wird.
 
-Hinweis: Synology unterstützt keine ACLs mit NFSv3 as of 13.5.2022.
+Hinweis: Synology unterstützt keine ACLs mit NFS3 as of 13.5.2022.
 
 Hinweis: Mit folgendem Befehl findet mal alle Dateien mit ACLs: sudo
-getfacl -Rs /Der Befehl braucht Zeit bis er fertig ist.
+getfacl -Rs /Der Befehl braucht Zeit, bis er fertig ist.
 
 Mögliche Lösungen:
 
@@ -477,7 +477,7 @@ Mögliche Lösungen:
 
 1. Benutze ein lokal angeschlossenes Gerät welches mit *ext4* formatiert ist
 
-1. Benutze *nfs* version2 oder *nfs* version3. Lies dazu [diesen Artikel](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). Diese
+1. Benutze *NFS* version2 oder version3. Lies dazu [diesen Artikel](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). Diese
    Option funktioniert aber nicht mit einer Synology.
 
 1. Benutze `raspiBackupWrapper.sh`, in dem sich Code befindet, der ein Loop
@@ -501,9 +501,9 @@ das metadata_csum entfernen. Dann den Restore mit *raspiBackup* durchführen.
 
 
 <a name="faq26"></a>
-### 26) Wieso bekommen ich die die Meldung `??? RBK0160E: Ziel /dev/sda mit xx GiB ist kleiner als die Backupquelle mit yy GiB` obwohl beide SD Karten gleich gross sind?
+### 26) Wieso bekommen ich die die Meldung `??? RBK0160E: Ziel /dev/sda mit xx GiB ist kleiner als die Backupquelle mit yy GiB` obwohl beide SD-Karten gleich gross sind?
 
-SD Karten die mit einer bestimmten Größe angegeben sind (z.B. 16GB) sind
+SD-Karten die mit einer bestimmten Größe angegeben sind (z.B. 16GB) sind
 trotzdem unterschiedlich groß. Mit dem Befehl `sudo fdisk -l /dev/mmcblk0`
 erhält man z.B. folgende Ausgabe die einem genau die Größe mitteilt:
 
@@ -511,22 +511,22 @@ erhält man z.B. folgende Ausgabe die einem genau die Größe mitteilt:
 sudo fdisk -l /dev/mmcblk0
 
 Disk /dev/mmcblk0: 15.5 GB, 15548284928 bytes
-Bei einer anderen ebenfalls 16GB grossen SD Karte erhält man z.B.
+Bei einer anderen ebenfalls 16GB grossen SD-Karte erhält man z.B.
 Disk /dev/mmcblk0: 15.9 GB, 15931539456 bytes
 ```
 
-Man kann also das erste Image auf die zweite SD Karte bringen aber nicht umgekehrt.
+Man kann also das erste Image auf die zweite SD-Karte bringen aber nicht umgekehrt.
 
 Lösung:
 
-- Eine größere SD Karte nehmen
+- Eine größere SD-Karte nehmen
 - Das Quellimage verkleinern. Das Tool pishrink eignet sich dazu.
 - Das Backup mit dem Parameter
   DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY erstellen (Siehe dazu
   auch FAQ16)
 - Vor dem Erstellen des Backups die Rootpartition mit *gparted* etwas
   verkleinern (Mehrere hundert MB oder gleich 1 GB). Dann passt der
-  Backup auch auf SD Karten die etwas kleiner sind.
+  Backup auch auf SD-Karten die etwas kleiner sind.
 
 
 <a name="faq27"></a>
@@ -540,12 +540,12 @@ oder rsync Backup erzeugen.
 <a name="faq28"></a>
 ### 28) Wieso verschwinden Dateiänderungen nach einem Reboot wieder von einem zurückgespieltem Backup?
 
-Die SD Karte ist unglücklicherweise an der Stelle defekt, wo das Filesystem
+Die SD-Karte ist unglücklicherweise an der Stelle defekt, wo das Filesystem
 Änderungen ablegt (Superblock). Da dieser im Hauptspeicher gehalten wird,
 bemerkt man den Fehler nur nach einem Reboot.
 
 Lösung:
-Das Backup muss noch einmal auf eine neue fehlerfreie SD Karte
+Das Backup muss noch einmal auf eine neue fehlerfreie SD-Karte
 zurückgespielt werden.
 
 
@@ -600,7 +600,7 @@ Folgende Optionen existieren, um das Problem zu beseitigen:
     man entweder mit dem Installer vornehmen (M3->C6) sofern es ein System
     Service ist oder man muss manuell in der Konfigurationsdatei die beiden
     Optionen DEFAULT_STOPSERVICES und DEFAULT_STARTSERVICES um die Befehle
-    erweiteren um den Service zu stoppen und zu starten.
+    erweitern, um den Service zu stoppen und zu starten.
     Tipp: Mit der Option --systemstatus erhält man im Debuglog eine Liste
     der aktiven Services und ihrer offenen Dateien. Damit kann man
     herausfinden welcher Service eine Datei während des Backups
@@ -636,11 +636,11 @@ Beim Aufruf muss dann noch die Option `--unsupportedEnvironment` mitgegeben werd
 <a name="faq34"></a>
 ### 34) Ich möchte mein 16GB dd Backup zurückspielen und bekommen die Meldung dass die Ziel SDKarte zu klein ist. Wieso?
 
-SD Karten haben zwar eine bestimmte Größe wie z.B. 16GB aber sie SD Karten
+SD-Karten haben zwar eine bestimmte Größe wie z.B. 16GB aber sie SD-Karten
 haben nie genau diese Größe sondern es gibt kleine Abweichungen nach unten
-und oben. Da das dd Backup genauso groß ist wie die SD Karte kann das dd
+und oben. Da das dd Backup genauso groß ist wie die SD-Karte kann das dd
 Backup nicht zurückgeschrieben werden wenn man eine geringfügig kleinere
-SD Karte erwischt. Deshalb sollte man bei einem DD Backup die letzte
+SD-Karte erwischt. Deshalb sollte man bei einem DD Backup die letzte
 Partition immer etwas kleiner als maximal möglich erstellen. Siehe dazu
 auch [FAQ16](#faq16). Man kann aber mit [pishrink](https://github.com/Drewsif/PiShrink) das dd Image verkleinern und danach
 mit *raspiBackup* zurücksichern.
@@ -701,7 +701,7 @@ Option -R nutzen.
 | smiley | Bedeutung |
 | ------ | --------- |
 | ;-)    | Es gibt eine neuere Release von *raspiBackup*. Ein Upgrade sollte mit der Option -U vorgenommen werden. Zurückgehen kann man wieder mit der Option -V. |
-| :-D    | Es existiert eine Betaversion der nächsten *raspiBackup* Release. Beta Tester sind willkommen und können mit der Option -U die Beta installieren. Nach dem test kann man auf die aktuelle Version wieder mit der Option -V zurückgehen. |
+| :-D    | Es existiert eine Betaversion der nächsten *raspiBackup* Release. Beta Tester sind willkommen und können mit der Option -U die Beta installieren. Nach dem Test kann man auf die aktuelle Version wieder mit der Option -V zurückgehen. |
 | O.o    | Eine Warnmeldung wurde geschrieben. |
 | :-(    |Die *raspiBackup* Release ist veraltet und enthält einen schwerwiegenden Fehler. Sie sollte dringend durch die aktuelle Release mit der Option -U ersetzt werden. |
 
@@ -711,10 +711,10 @@ Option -R nutzen.
 
 *raspiBackup* wurde entwickelt, um auch Linux Einsteigern das Sichern ihrer
 Raspberry schnell möglichst einfach zu ermöglichen. Allerdings sind dazu trotzdem gewisse
-Linuxkenntnisse notwendig. Häufige Probleme mit *raspiBackup* sind bei Linux
-Einsteigern einfache Linuxprobleme. Solche Fragen werden nicht in den
+Linux-Kenntnisse notwendig. Häufige Probleme mit *raspiBackup* sind bei Linux
+Einsteigern einfache Linux-Probleme. Solche Fragen werden nicht in den
 Kontaktkanälen beantwortet. Dazu gibt es Foren mit
-kompetenten Mitgliedern, die gerne helfen. Eine empfehlenswertes ist das
+kompetenten Mitgliedern, die gerne helfen. Ein empfehlenswertes Forum ist das
 [deutsche Raspberry Pi Forum](https://forum-raspberrypi.de/forum/).
 Ein anderes ist das [englische Raspberryforum](https://forums.raspberrypi.com/).
 
@@ -749,14 +749,14 @@ Restore.
 Backupmodus, wobei immer nur die `/boot`
 und `/root` gesichert werden. Weitere Partitionen werden ignoriert.
 
-- `/boot` und `/root` auf SD Karte oder einem anderen Gerät (Platte, SSD, ...)
-- `/boot` auf SD Karte und `/root` auf eine anderen Gerät (Platte, SSD, ...)
+- `/boot` und `/root` auf SD-Karte oder einem anderen Gerät (Platte, SSD, ...)
+- `/boot` auf SD-Karte und `/root` auf eine anderen Gerät (Platte, SSD, ...)
   Dieses ist notwendig, wenn eine ältere Raspberry vorliegt, die noch
   keine USB Boot unterstützt, man aber trotzdem die Rootpartition nicht mehr
-  auf der SD Karte haben möchte.
+  auf der SD-Karte haben möchte.
 
 <a name="faq43"></a>
-### 43) Wie finde ich alle Dokumentationsseiten zu *raspiBackup* bzw Seiten zu einem speziellen Thema?
+### 43) Wie finde ich alle Dokumentationsseiten zu *raspiBackup* bzw. Seiten zu einem speziellen Thema?
 
 Initial befand sich alle Doku zu *raspiBackup* auf
 [dieser Seite](https://www.linux-tips-and-tricks.de).
@@ -785,7 +785,7 @@ Siehe dazu [diesen Artikel](why-shouldn-t-you-use-dd-as-backup-type.md).
 
 
 <a name="faq47"></a>
-### 47) Wo bekomme ich Hilfe bei reinen Linuxfragen oder -problemen, die nichts mit *raspiBackup* im eigentlichen Sinne zu tun haben?
+### 47) Wo bekomme ich Hilfe bei reinen Linux-Fragen oder -Problemen, die nichts mit *raspiBackup* im eigentlichen Sinne zu tun haben?
 
 Siehe [FAQ38](#faq38)
 
@@ -794,16 +794,16 @@ Siehe [FAQ38](#faq38)
 
 Technisch geht das aber das Ergebnis ist alles andere als ein laufendes
 System. Deshalb bricht *raspiBackup* sofort ab wenn man das versucht.
-Ein Restore muss immer auf eine weitere SD Karte oder ein weiteres Gerät,
+Ein Restore muss immer auf eine weitere SD-Karte oder ein weiteres Gerät,
 welches an die Raspberry angeschlossen ist, vorgenommen werden.
 
 <a name="faq49"></a>
-### 49) Mein Backup welches ich auf eine SD Karte restored habe startet nicht. Warum nicht?
+### 49) Mein Backup welches ich auf eine SD-Karte restored habe startet nicht. Warum nicht?
 
-In 99.9% der Fälle ist die SD Karte auf die restored wird defekt. Wenn man
-auf eine andere, möglichst neue, SD Karte restored tritt das Problem
+In 99.9% der Fälle ist die SD-Karte auf die restored wird defekt. Wenn man
+auf eine andere, möglichst neue, SD-Karte restored tritt das Problem
 üblicherweise nicht mehr auf. Es gibt auch die Option -C die man beim
-Restore nutzen kann um die SD Karte auf Bad Blocks beim Formatieren zu
+Restore nutzen kann um die SD-Karte auf Bad Blocks beim Formatieren zu
 prüfen. Dadurch dauert aber der Restoreprozess wesentlich länger. Siehe
 auch [diese Seite](why-shouldn-t-you-use-dd-as-backup-type.md) zu Problemen eines dd Backups.
 
@@ -898,7 +898,7 @@ sudo mount /dev/loop0 /mnt
 
 
 <a name="faq55"></a>
-### 55) Warum habe ich pötzlich PARTUUIDs doppelt auf meinem System?
+### 55) Warum habe ich plötzlich PARTUUIDs doppelt auf meinem System?
 
 Während des Restores eine Backups wird die PARTUUID der Originalsystems für
 die Partitionen wieder genutzt. Wenn dieses restorte System an dem
@@ -926,13 +926,13 @@ ExecStart=/usr/local/bin/raspiBackup.sh --unsupportedEnvironment.
 
 *raspiBackup* meldet wenn eine neue Release oder eine Beta verfügbar ist. Ein
 Update wird mit der Option `-U` gestartet. Mit der Option `-V` kann man wieder
-auf eine vorhergehende Release zurückgehen. Betas werden oft mehrere Male
+auf eine vorhergehende Release zurückgehen. Beta-Versionen werden oft mehrere Male
 erneuert. Um dann den neuesten Stand zu installieren müssen die Optionen
 `-U` und `-S` genutzt werden.
 
 
 <a name="faq58"></a>
-### 58) Was muß ich beachten wenn ich mit rsync auf eine nfs gemountete Backuppartition sichern will?
+### 58) Was muß ich beachten, wenn ich mit rsync auf eine NFS gemountete Backuppartition sichern will?
 
 Die Partition muss vom NFS Server mit `no_root_squash` exportiert werden.
 

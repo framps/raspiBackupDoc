@@ -76,7 +76,7 @@ Systems gesichert. Weitere externe Partitionen werden aber nicht gesichert.
 
 Es steht der dd Backup sowie der tar und rsync Backup zur Verfügung. dd und
 tar Backups können noch mit zip komprimiert werden. Auf
-[dieser Seite](backuptypes.md) können
+[dieser Seite](backup-types.md) können
 die Vor- und Nachteile der jeweiligen Backupmethoden nachgelesen werden.
 
 
@@ -803,7 +803,11 @@ welches an die Raspberry angeschlossen ist, vorgenommen werden.
 In 99.9% der Fälle ist die SD Karte auf die restored wird defekt. Wenn man
 auf eine andere, möglichst neue, SD Karte restored tritt das Problem
 üblicherweise nicht mehr auf. Es gibt auch die Option -C die man beim
+<<<<<<< HEAD
 Restore nutzen kann um die SD Karte auf Bad Blocks beim Formatieren zu
+=======
+Restore nutzen kann um die SD-Karte auf Bad Blocks beim Formatieren zu
+>>>>>>> main
 prüfen. Dadurch dauert aber der Restoreprozess wesentlich länger. Siehe
 auch [diese Seite](why-shouldn-t-you-use-dd-as-backup-type.md) zu Problemen eines dd Backups.
 
