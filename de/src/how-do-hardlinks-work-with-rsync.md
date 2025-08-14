@@ -39,8 +39,6 @@ Restore zur Verfügung.
 Das folgende Bild zeigt einmal graphisch, wann Hardlinks und Dateien erstellt bzw. gelöscht werden.
 Es gibt auch ein zugehöriges [Youtube Video](https://www.youtube.com/watch?v=pIhSca_q2lo), inklusive einer Demo am System.
 
-[.status]: review-comment "Doppelt gemoppelte Absätze bzgl. der Grafik!"
-
 In der nachfolgenden Graphik wird gezeigt, wann F2 in BD6 im Filesystem gelöscht wird.
 Das stimmt aber nur, wenn vorher alle Backups, die
 F2 beinhalteten, gelöscht wurden - also BD1 - BD5.

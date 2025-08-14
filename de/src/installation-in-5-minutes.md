@@ -61,7 +61,6 @@ Konfiguration schnell installieren möchte, kann das mit den Aufrufoptionen `-i`
 
 Danach kann der Installer genutzt werden, um
 die Basiskonfiguration von *raspiBackup* vorzunehmen bzw. zu ändern.
-Eine [Manuelle Installation und Konfiguration](manual-installation-and-configuration.md) ist ebenfalls möglich.
 Auf Youtube existiert ein Video, auf dem *raspiBackup* vorgestellt wird
 sowie am Ende eine Demo der Installation von *raspiBackup* gegeben wird.
 
