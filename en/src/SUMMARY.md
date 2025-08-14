@@ -77,7 +77,7 @@ That allows for some tricks:
     - [Statistics](statistics.md)
     - [Updates](updates.md)
 
-- [Usage and options](invocation-optioninvocation-optionss.md)
+- [Usage and options](invocation-options.md)
     - [Backup](backup.md)
         - [Options](backup-options.md)
         - [Configuration](backup-config-options.md)
