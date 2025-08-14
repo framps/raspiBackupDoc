@@ -71,9 +71,9 @@ That allows for some tricks:
         - [How can I install and test the beta version?](how-can-i-install-and-test-the-beta-version.md)
         - [Is an external root partition supported?](external-root-partition.md)
 
-- [Installation and first backup](installation.md)
-    - [Quickstart-Installation in 5 minutes](installation-in-5-minutes.md)
-    - [Installer invocation and options](installer.md)
+- [Quickstart-Installation in 5 minutes](installation-in-5-minutes.md)
+
+- [Installer invocation and options](installer.md)
     - [Manual installation and configuration](manual-installation-and-configuration.md)
     - [Statistics](statistics.md)
     - [Updates](updates.md)

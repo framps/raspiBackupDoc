@@ -71,9 +71,9 @@ Dies ermöglicht einige kleine Kniffe:
         - [Wie kann ich die Betaversion installieren und ausprobieren?](how-can-i-install-and-test-the-beta-version.md)
         - [Wird eine externe Rootpartition unterstützt?](external-root-partition.md)
 
-- [Installation und erstes Backup](installation.md)
-    - [Schnellstart - Installation in 5 Minuten](installation-in-5-minutes.md)
-    - [Installer Aufruf und Optionen](installer.md)
+- [Schnellstart - Installation in 5 Minuten](installation-in-5-minutes.md)
+
+- [Installer Aufruf und Optionen](installer.md)
     - [Manuelle Installation und Konfiguration](manual-installation-and-configuration.md)
     - [Statistiken](statistics.md)
     - [Updates](updates.md)
