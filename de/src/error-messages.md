@@ -46,8 +46,8 @@ erstellt werden und dann wird sie hier aufgenommen. So werden dann nach und nach
 Fehlermeldungen von *raspiBackup* hier gesammelt und erläutert.
 
 Meldungen im Nummernbereich von 0-999 werden von *raspiBackup* geschrieben.
-Meldungen von 1000-1999 werden von den Beispielplugins geschrieben. Alle
-anderen Nummernbereiche werden von eigene Plugin Meldungen genutzt.
+Meldungen von 1000-1999 werden von den Beispielerweiterungen geschrieben. Alle
+anderen Nummernbereiche können von eigene Erweiterungsmeldungen genutzt werden.
 
 Außerdem beendet sich *raspiBackup* mit einem Fehlercode, der auf die Ursache
 hinweist. Eine Liste der Fehlercodes findet sich am [Ende dieser Seite](#exitcodes).

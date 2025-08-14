@@ -8,7 +8,7 @@ eingepflegt werden müssten. Die Extensions (Plugins) sind unabhängig vom
 jeweiligen Codestand von *raspiBackup* und deshalb in diesem Falle zu
 empfehlen.
 
-[Beispielplugins](https://github.com/framps/raspiBackup/tree/master/extensions)
+[Beispielerweiterungen](https://github.com/framps/raspiBackup/tree/master/extensions)
 stehen zur Verfügung und können als Vorlage für eigene Erweiterungen dienen.
 Durch die ersten wird die CPU Temperatur sowie die Hauptspeicher- und
 Backuppartitionsbelegung sowie die Partitionsbelegung vor
@@ -16,7 +16,7 @@ und nach dem Backup ausgegeben.
 Die letzte Erweiterung wird nur am Ende des Backups aufgerufen und kann bei Erfolg
 bzw. Misserfolg des Backups unterschiedliche Aktionen auslösen.
 
-Wer nützliche Plugins für die Community erstellt hat, kann sie gerne im
+Wer nützliche Erweiterungenfür die Community erstellt hat, kann sie gerne im
 deutschen [Raspberry Pi Forum](https://forum-raspberrypi.de/forum/board/164-raspibackup/) vorstellen und die Downloadlocation nennen.
 Sollten Fähigkeiten der Plugins fehlen, bitte einen [Issue bei *GitHub*](https://github.com/framps/raspiBackup/issues) anlegen.
 
@@ -69,9 +69,9 @@ aufgerufen:
   - POST_RESTORE_EXTENSION
  
 
-### Beispielplugins
+### Beispielerweiterungen
 
-1.  Der einfachste Weg ist, die Beispielplugins mit dem [Installer](https://www.linux-tips-and-tricks.de/de/installation) zu
+1.  Der einfachste Weg ist, die Beispielerweiterungen mit dem [Installer](https://www.linux-tips-and-tricks.de/de/installation) zu
     installieren und zu aktivieren. Entweder über die Menüfolge
     **Installiere Komponenten-\>Installiere Beispielerweiterungen** oder
     direkt über die Befehlszeile mit der Option `-e`.
@@ -85,7 +85,7 @@ aufgerufen:
     raspiBackupInstallUI.sh -e
     ```
 
-2.  Wer die Beispielplugins manuell installieren möchte, kann die `tgz`-Datei mit
+2.  Wer die Beispielerweiterungen manuell installieren möchte, kann die `tgz`-Datei mit
     [diesem Link](https://www.linux-tips-and-tricks.de/raspiBackupSampleExtensions.tgz) mit einem Browser downloaden
     oder auch direkt wie folgt auf die Raspberry downloaden und nach
     `/usr/local/bin` auspacken:
@@ -156,27 +156,28 @@ Die Plugins erzeugen folgende Meldungen:
 
 ### Meldungen
 
-Die Beispielplugins benutzen Meldungen, die ab dem Nummernbereich 1000
-beginnen, wie z.B. RBK1000I. Wer eigene Plugins erstellt, sollte, sofern
+Die Beispielerweiterungen benutzen Meldungen, die ab dem Nummernbereich 1000
+beginnen, wie z.B. RBK1000I. Wer eigene Erweiterungen erstellt, sollte, sofern
 sie Meldungen schreiben, diese bei 2000 beginnen lassen und nicht den
 Bereich unter 1999 benutzen.
 
 ### Interface
 
-Das Plugin bekommt im Aufruf den aktuellen Statuscode von *raspiBackup*
-mitgegeben. Ein Statuscode von 0 bedeutet in den Postplugins: das Backup
+Eine Erweiterungn bekommt im Aufruf den aktuellen Statuscode von *raspiBackup*
+mitgegeben. Ein Statuscode von 0 bedeutet in den Posterweiterungen: das Backup
 war erfolgreich. Jeder andere Statuscode bedeutet, dass das Backup
 abgebrochen wurde.
 
-### eMailPlugin
+### eMailErweiterung
 
-Möchte man den Versand von eMails selbst programmieren, kann man das emailPlugin nutzen.
+Möchte man den Versand von eMails selbst programmieren, kann die emailErweiterung
+genutzt werden.
 Das ist dann besonders hilfreich, wenn die vom Script unterstützen eMailProgramme
 den eigenen eMailClient nicht unterstützen.
 Außerdem kann das Aussehen der eMail beliebig geändert werden.
-Ein Plugin, das `mailx` benutzt, befindet sich in den Beispielplugins.
+Eine Erweiterung, das `mailx` benutzt, befindet sich in den Beispielerweiterungen.
 
-Die folgenden Parameter werden dem eMailplugin Script übergeben:
+Die folgenden Parameter werden der eMailerweiterung übergeben:
 
 ```
 email="$1"        # target email address
@@ -188,25 +189,25 @@ append="$5"       # file to append
 
 ### Hinweise
 
-- **Achtung:** Die Extensions laufen mit **root** Rechten und können
+- **Achtung:** Die Erweiterungen laufen mit **root** Rechten und können
   deshalb bei Fehlern das laufende System schädigen oder sogar zerstören!
 
 - Es sind nicht beide Scripts (`pre` und `post`) notwendig.
   Eines genügt.
 
-- Zum Testen von Plugins ist der Parameter `-F` sehr hilfreich.
+- Zum Testen von Erweiterungen ist der Parameter `-F` sehr hilfreich.
   Damit wird der eigentliche Backupprozess übersprungen und somit der
   Scriptdurchlauf sehr schnell.
 
-- Die Plugins werden im Scope von *raspiBackup* aufgerufen. Daher besteht Zugriff
+- Die Erweiterungen werden im Scope von *raspiBackup* aufgerufen. Daher besteht Zugriff
   auf dessen interne Scriptvariablen. Davon ist allerdings dringend abzuraten,
   da sich die Interna jederzeit ändern können. Aus diesem Grunde ist es auch
-  ratsam, eigene Variablen mit einem pluginspezifischen Prefix zu versehen,
+  ratsam, eigene Variablen mit einem erweiterungsspezifischen Prefix zu versehen,
   um mögliche Konflikte mit Variablennamen, die von *raspiBackup* benutzt werden,
   zu vermeiden.
 
-- Wer seinen Plugincode teilen möchte, kann gerne einen Pullrequest auf [*GitHub*](https://github.com/framps/raspiBackup) anlegen.
-  Dort sind alle Plugins im Quellcode verfügbar, um sie zu erweitern und
+- Wer seinen Erweiterungscode teilen möchte, kann gerne einen Pullrequest auf [*GitHub*](https://github.com/framps/raspiBackup) anlegen.
+  Dort sind alle Erweiterungen im Quellcode verfügbar, um sie zu erweitern und
   neue hinzuzufügen.
 
 [.status]: rst

@@ -66,7 +66,7 @@ The required commands can be specified in the configuration file. The raspiBacku
 
 ## Extensionpoints
 
-There exist [extensionpoints](hooks-for-own-scripts.md) for plugins in *raspiBackup*, to hock in any additonal custom logic at different points of the backup and restore processing.
+There exist [extensionpoints](hooks-for-own-scripts.md) f in *raspiBackup*, to hock in any additonal custom logic at different points of the backup and restore processing.
 
 ## Optionally external root partition
 
