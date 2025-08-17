@@ -85,13 +85,13 @@ im Speicher halten, vor dem Backup gestoppt werden.
 *raspiBackup* bietet die Möglichkeit vor dem Backup Services automatisch zu stoppen und anschließend
 wieder zu starten. Alle im Installer vorselektierten Services sollten immer gestoppt werden.
 Da nicht auszuschliessen ist, dass auch weitere Services auf dem System wichtige Daten
-im Speicher halten und vor dem Backup gestoppt werden sollten, solltemuss die Liste der nicht
+im Speicher halten und vor dem Backup gestoppt werden sollten, muss die Liste der nicht
 vorselektierten aber aktiven Services aufmerksam kontrolliert werden und im Bedarfsfall diese
 Services auch noch selektiert werden damit sie vor dem Backup gestoppt werden.
 
 Nach der Selektion der Services, die gestoppt werden sollen, muss noch die Reihenfolge
 definiert werde in der sie gestoppt werden sollen. I.A. spielt die Reihenfolge
-keine Rolle, aber wenn ein Service Abhängigkeiten zu einem anderen Servide hat sollte
+keine Rolle, aber wenn ein Service Abhängigkeiten zu einem anderen Service hat sollte
 der Service erst nach dem abhängigen Service gestoppt werden. Beispielsweise
 sollten alle Services, die mit einer Datenbank arbeiten, vor dem Stoppen der Datenbank
 gestoppt werden, damit sie noch offene Transaktionen beenden können.
