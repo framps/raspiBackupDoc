@@ -24,9 +24,9 @@ Im Wesentlichen sind folgende Schritte durchzuführen:
 
 1) Gemeinsamen NFS Ordner auf der Synology erstellen
 2) mount des gemeinsamen NFS Ordners auf der Raspi in der `/etc/fstab`
-3) Installation und Konfiguration von *raspiBackup* per [Installer](installation.md) (keinen automatischen Backup konfigurieren)
+3) Installation und Konfiguration von *raspiBackup* per [Installer](installer.md) (keinen automatischen Backup konfigurieren)
 4) Test des Backups und Restores von der Commandline
-5) Einrichten des regelmäßigen Backups in der Crontab per [Installer](installation.md)
+5) Einrichten des regelmäßigen Backups in der Crontab per [Installer](installer.md)
 
 Es empfiehlt sich, vor dem Beginn die [FAQ](faq.md) zu lesen, wo die wichtigsten
 Fragen und Antworten zu *raspiBackup* zusammengestellt sind.
@@ -71,7 +71,7 @@ und *raspiBackup* lesen.
 
 ### Installation und Konfiguration von *raspiBackup*
 
-Installation von *raspiBackup* gemäß [dieser Anleitung](installation.md).
+Installation von *raspiBackup* gemäß [dieser Anleitung](installation-in-5-minutes.md).
 Dabei dann `rsync` als Backupmethode und `/backup` als Backuppfad angeben.
 Den regelmäßigen Backup noch nicht konfigurieren.
 

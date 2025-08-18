@@ -13,7 +13,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
     *raspiBackup* ist unter der GNU Lizenz als OpenSource und kostenlos verfügbar.
     Ein [Trinkgeld](introduction.md#donation) ist aber trotzdem gern gesehen 😉
 
-  - Einfache [Installation](installation.md) mit menügeführtem Installer (vergleichbar mit `raspi-config`)
+  - Einfache [Installation](installation-in-5-minutes.md) mit menügeführtem Installer (vergleichbar mit `raspi-config`)
 
     Die wichtigsten Optionen von *raspiBackup* können in Deutsch, Englisch, Finnisch,
     Chinesisch und Französisch konfiguriert werden, so dass die erste [Sicherung
