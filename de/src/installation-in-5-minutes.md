@@ -229,12 +229,9 @@ Der Installer erstellt folgende Dateien:
 
 ## Deinstallation
 
-*raspiBackup* kann auch wieder deinstalliert werden.
-Entweder benutzt man den Installer zum Deinstallieren oder folgenden Befehl:
+Sollte sich tatsächlich herausstellen, dass *raspiBackup* nicht den Anforderungen genügt,
+steht eine [Deinstallation](installer.md#deinstallation) per *raspiBackup* Installer zur Verfügung.
 
-```
-sudo raspiBackupInstallUI.sh -u
-```
 
 <a name="next-steps"></a>
 ## Weitere Schritte
