@@ -41,16 +41,16 @@ Außerdem lassen sich jederzeit die primären Optionen durch erneuten Aufruf
 von `raspiBackupInstallUI` nachträglich ändern. Dazu gehört auch eine
 Updatefunktion für den Installer und für *raspiBackup*. Die
 Installationsführung erfolgt über Menüs sowie über Auswahllisten. Die Menüsprache
-kann Deutsch, Englisch. Finnisch, Chinesisch oder Französisch sein.
+kann Deutsch, Englisch, Finnisch, Chinesisch oder Französisch sein.
 
 Wer *raspiBackup* einfach nur mit einer Standardkonfiguration ohne individuelle
-Konfiguration schnell installieren möchte, kann das mit den Aufrufoptionen `-i` und
+Konfiguration installieren möchte, kann das mit den Aufrufoptionen `-i` und
 `-e` starten (`-h` für Hilfe benutzen).
 
-Danach kann der Installer genutzt werden, um
-die Basiskonfiguration von *raspiBackup* vorzunehmen bzw. zu ändern.
-Auf Youtube existiert ein [Video](https://youtu.be/PuK_FNK674s), auf dem *raspiBackup* vorgestellt wird
-sowie am Ende eine Demo der Installation von *raspiBackup* gegeben wird.
+Danach kann der Installer zur Anpassung der Basiskonfiguration genutzt werden.
+
+Auf Youtube gibt es ein [Video](https://youtu.be/PuK_FNK674s), auf dem *raspiBackup* vorgestellt
+und am Ende eine Demo der Installation gegeben wird.
 
 ![Screenshot Konfiguration (2019)](images/Screenshot_at_2019-04-10_07-52-15.png)
 
@@ -63,8 +63,8 @@ curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install
 sudo bash ./install
 ```
 
-**Hinweis**: Eine manuelle Installation ohne `sudo` Nutzung ist in einer extra [Anleitung](manual-installation-and-configuration.md)
-dokumentiert.
+**Hinweis**: Eine manuelle Installation ohne `sudo` Nutzung ist in einer extra
+[Anleitung](manual-installation-and-configuration.md) dokumentiert.
 
 Danach kann man die Installation wählen, bei der eine Standardkonfiguration
 benutzt wird. Anschließend ist es möglich, die wesentlichen
@@ -77,8 +77,8 @@ Diesen sollte man mit `sudo mkdir /backup` erstellen und dann dort das externe
 Backupverzeichnis mounten.
 
 Der Installer kann jederzeit wieder in der Befehlszeile mit
-`sudo raspiBackupInstallUI` aufgerufen werden, um *raspiBackup* Konfigurationen
-zu ändern oder auch *raspiBackup* zu deinstallieren.
+`sudo raspiBackupInstallUI` aufgerufen werden, um die Konfiguration
+zu ändern.
 
 **Hinweis**: Die *raspiBackup* Systemd Konfigurationsdatei ist
 `/etc/systemd/system/raspiBackup.timer`. Die Systemdkonfiguration sollte immer
@@ -92,10 +92,10 @@ Sollte es Probleme geben: Es wird vom Installer immer ein Debuglog in der Datei
 
 ## Installationsdemo
 
-**Hinweis**: Das folgende Video zeigt die Installation in Deutsch, da das OS
+Das folgende Video zeigt die Installation in Deutsch, da das OS
 auf Deutsch konfiguriert war. Ist es auf Finnisch, Französisch, Englisch
 oder Chinesisch konfiguriert schreibt der Installer alles in der jeweiligen
-Sprache. Die Sprache kann auch im Installer geändert werden.
+Sprache. Die Sprache kann auch im Installer geändert werden.
 
 ![Installationsdemovideo](images/raspiBackupInstall_de.gif)
 
@@ -103,24 +103,10 @@ Sprache. Die Sprache kann auch im Installer geändert werden.
 Benachrichtigungen per eMail benötigen einen korrekt konfigurierten lokalen MTA
 wie *Postfix*, *nullmailer*, *msmtp* oder *Exim4*. Wird *Pushover*, *Slack* oder *Telegram*
 genutzt, muss die Konfigurationsdatei von *raspiBackup* vorher manuell
-entsprechend mit den benötigten Konfigurationsdaten versehen werden. Ein
-Benachrichtigungstest kann am schnellsten mit der Option `-F` durchgeführt
-werden.
+entsprechend mit den benötigten Konfigurationsdaten versehen werden.
+Siehe Kapitel [Allgemeine Konfiguration](general-config-options.md).
+Ein Benachrichtigungstest kann mit der Option `-F` durchgeführt werden.
 
-**Achtung:**
-Ein Backup nützt nichts, wenn man in dem Moment, wo man es einspielen möchte,
-feststellt, dass das Backup nicht zu gebrauchen ist. Deshalb macht es Sinn, nach
-dem ersten erfolgreichen Backup auch gleich den Restore testen.
-Der ganze Restoreprozess sollte von Zeit zu Zeit durchexerziert und damit getestet werden,
-ob die erstellten Backups in Ordnung sind und sich damit ein System funktionsfähig
-restaurieren lässt. *raspiBackup* erinnert in regelmäßigen Abständen daran,
-einen Restoretest vorzunehmen. Das Erinnerungsintervall ist konfigurierbar.
-Der Standardwert ist 6 Monate.
-
-Besonders wichtig ist das Testen auch, wenn ein neues System mit einem neuen
-Betriebssystem wieder mit *raspiBackup* gesichert wird. Es gibt immer wieder
-Änderungen bei neuen Betriebssystemversionen, die dazu beitragen können, dass der
-Restore nicht mehr funktioniert.
 
 ## Downloadlinks auf *raspiBackup* und den raspiBackupInstaller
 
@@ -137,28 +123,27 @@ Downloadlinks tun:
 Nachdem *raspiBackup* installiert wurde, sind folgende Schritte notwendig,
 um ein Backup zu erstellen.
 
-Der Standardmountpunkt von *raspiBackup*, wo die Backups abgelegt werden
-(Annahme, dass der Standardmountpunkt benutzt wird), wird angelegt mit
+Der Mountpunkt zur Ablage der Backups (am Beispiel des Standardmountpunkts),
+wird angelegt mit
 
 ```
 sudo mkdir /backup
 ```
 
-Anschließend muss ein externes Gerät (USB Platte, USB Stick, NFS Laufwerk, ...)
+Anschließend muss ein externes Gerät (USB-Platte, USB-Stick, NFS-Laufwerk, ...)
 auf diesen Mountpoint gemounted werden. Im folgenden Beispiel wird eine externe
-USB Platte bzw. ein externer USB Stick gemountet.
+USB-Platte bzw. ein externer USB-Stick gemountet.
 
 ```
 sudo mount /dev/sda1 /backup
 ```
 
-Dabei ist zu beachten, dass die Partition je nach gewünschtem Backuptyp ein
-gewisses Filesystem voraussetzt. Die Abhängigkeiten sind in "[Welches Dateisystem kann auf der Backuppartition benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)" erklärt.
-Außerdem sollte man, wenn es denn nicht unbedingt erforderlich ist, den Backuptyp *dd* vermeiden.
-Details dazu finden sich in "[Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)".
+Diese Partition setzt je nach gewünschtem Backuptyp ein gewisses Filesystem voraus,
+was in Kapitel "[Welches Dateisystem kann auf der Backuppartition benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)" erklärt wird.
+Bitte beachten: [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md).
 
-Beim ersten Backup sollte man noch prüfen/sicherstellen, dass man auf das richtige Backupgerät
-bzw. die richtige Backuppartition sichert. Hilfreich sind dabei folgende Befehle:
+**Vor** dem ersten Backup sollte man noch prüfen/sicherstellen, dass wirklich das richtige Backupgerät
+bzw. die richtige Backuppartition genutzt wird. Hilfreich sind dabei folgende Befehle:
 
 ```
 sudo blkid -o list
@@ -170,11 +155,10 @@ oder wenn die Backuppartition lokal angeschlossen wurde und sie ein Label hat
 sudo blkid -o list | grep <label>
 ```
 
-Danach ist alles fertig konfiguriert, um ein Backup zu erstellen.
+Danach ist alles fertig konfiguriert.
 
-Will man den Backup einmal schnell testen, kann wie folgt das Backup mit
-*raspiBackup* erstellt werden. Das kann je nach Größe der Installation
-länger dauern.
+Will man das Backup einmal schnell testen, kann es wie folgt erstellt werden.
+Das kann je nach Größe der Installation länger dauern.
 
 ```
 sudo raspiBackup -m detailed
@@ -184,10 +168,24 @@ sudo raspiBackup -m detailed
 Restoredokumentation](restore.md)), um zu verifizieren, dass ein konsistentes
 Backup erstellt wird, und um sich mit der Restoreprozedur vertraut zu machen.
 
+**Denn:**
+Ein Backup nützt nichts, wenn man in dem Moment, wo man es einspielen möchte,
+feststellt, dass es nicht zu gebrauchen ist.
+
+Der ganze Restoreprozess sollte von Zeit zu Zeit durchexerziert und damit getestet werden,
+ob die erstellten Backups in Ordnung sind und sich damit ein System funktionsfähig
+restaurieren lässt. *raspiBackup* erinnert in regelmäßigen Abständen daran,
+einen Restoretest vorzunehmen. Das Erinnerungsintervall ist konfigurierbar.
+Der Standardwert ist 6 Monate.
+
+Besonders wichtig ist das Testen auch, wenn ein neues System mit einem neuen
+Betriebssystem wieder mit *raspiBackup* gesichert wird. Es gibt immer wieder
+Änderungen bei neuen Betriebssystemversionen, die dazu führen können, dass der
+Restore nicht mehr funktioniert.
+
 Nachdem sowohl Backup als auch Restore erfolgreich getestet und die vor dem Backup
 zu stoppenden Services konfiguriert wurden, kann *raspiBackup* per *systemd timer*
 für eine automatische Ausführung im gewünschten Intervall eingeplant werden.
-
 
 
 ## Standardkonfiguration und Ort der Konfigurationsdatei
@@ -238,24 +236,23 @@ steht eine [Deinstallation](installer.md#deinstallation) per *raspiBackup* Insta
 
 Nachdem das erste Backup erfolgreich erstellt und wiederhergestellt wurde,
 sollte man sich in einer ruhigen Stunde über alle weiteren Optionen von
-*raspiBackup* hier informieren und je nach Bedarf einsetzen.
+*raspiBackup* informieren und je nach Bedarf einsetzen.
 
-  Danach kann man in einer stillen Stunde sämtliche Möglichkeiten von
-  *raspiBackup* hier nachlesen und die Konfiguration den speziellen Bedürfnissen
-  anpassen. In jedem Falle ist es sinnvoll, sich die [FAQs](faq.md) durchzulesen.
+In jedem Falle ist es sinnvoll, sich die [FAQs](faq.md) durchzulesen.
 
 Jede Option kann in der Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` definiert werden,
 so dass beim Aufruf keine weitere Optionen angegeben werden müssen.
 
-Es existieren auch Optionen, die sich **nur** über die Konfigurationsdatei einstellen lassen.
-Details dazu finden sich auf der [Optionsbeschreibungsseite](backup-options.md).
+Details dazu finden sich im Kapitel [Aufruf und Optionen - Backup - Optionen](backup-options.md)
+und zu den Optionen, die sich **nur** über die Konfigurationsdatei einstellen lassen
+im Kapitel [Aufruf und Optionen - Backup - Konfiguration](backup-config-options.md).
 
 Ebenfalls nützlich: [raspiBackupDialog - ein komfortables Hilfsscript für raspiBackup](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md),
 welches die Nutzung und den Aufruf von *raspiBackup* vereinfacht.
 
 
 <a name="adhoc"></a>
-## *raspiBackup* ohne Installation aufrufen, um sofort ein Backup zu erstellen
+## *raspiBackup* ohne Installation nutzen
 
 1. Download von *raspiBackup*: `curl -sSLO  https://www.linux-tips-and-tricks.de/raspiBackup.sh`
 
