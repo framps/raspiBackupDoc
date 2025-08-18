@@ -1,44 +1,32 @@
 # Schnellstart - Installation in 5 Minuten
 
-**Hinweis:** Es gibt vom *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) eine schöne Anleitung,
-wie man *raspiBackup* installiert, konfiguriert und ein Backup restored.
-Bevor hier alles dupliziert wird: [Seine Anleitung](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) im deutschen Raspberryforum.
+Die Dokumentation von *raspiBackup* ist unter anderem durch Erweiterungswünsche von Benutzern
+mittlerweile sehr umfangreich geworden.
 
-Die Dokumentation von *raspiBackup* ist durch Erweiterungswünsche von Benutzern
-mittlerweile sehr umfangreich geworden. Auf dieser Seite wird deshalb kurz und
-knapp Schritt für Schritt erklärt, wie man *raspiBackup* direkt benutzt, um sofort
-ein Backup zu erstellen oder in 5 Minuten *raspiBackup* installiert und
-konfiguriert und dann ein Backup der Raspberry erstellen kann.
+Um den Einstieg zu erleichtern, wird auf dieser Seite deshalb kurz und
+knapp erklärt, wie *raspiBackup* in 5 Minuten installiert und konfiguriert
+und dann Backups der Raspberry erstellt werden können.
 
-Das Wiederherstellen eines Backups ist detailliert für die unterschiedlichen Benutzer mit
-ihren jeweiligen primären Plattformen (Linux, Mac oder Windows) [auf einer eigenen Seite](restore.md) beschrieben.
+Auch eine ["adhoc"-Nutzung](#adhoc) von *raspiBackup* ohne Installation ist möglich.
 
-Nachdem sowohl Backup als auch Restore erfolgreich getestet und die vor dem Backup
-zu stoppenden Services konfiguriert wurden, kann *raspiBackup* per *systemd timer*
-für eine automatische Ausführung im gewünschten Intervall eingeplant werden.
+Im Kapitel [Konfigurationsbeispiele](configuration-examples.md) sind einige Inspirationen zum Einsatz von *raspiBackup*
+aufgeführt. Diese können zum Kennenlernen der Parameter und damit bei der späteren
+Konfiguration während der Installation helfen.
 
-Danach kann man in einer stillen Stunde sämtliche Möglichkeiten von
-*raspiBackup* hier nachlesen und die Konfiguration den speziellen Bedürfnissen
-anpassen. In jedem Falle ist es sinnvoll, sich die [FAQs](faq.md) durchzulesen.
-
-Der *raspiBackup* Installer ermöglicht es auch, *raspiBackup* wieder komplett zu
-deinstallieren, falls sich nach der Installation und beim Test herausstellen
-sollte, dass *raspiBackup* nicht den Anforderungen genügt.
-
-**Hinweis:**  "5 Minuten" braucht jemand, der Basiskenntnisse von Linux hat. Wer diese
-nicht hat, braucht vermutlich etwas länger, obwohl der Installer schon hilft,
-schnell eine *raspiBackup* Anfangskonfiguration zu erstellen.
+Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](restore.md) beschrieben.
+Dort wird auf die primären Plattformen (Linux, Mac oder Windows) der Benutzer eingegangen.
 
 Vor der Nutzung von *raspiBackup* bitte erst lesen: [Unterstützte Hard- und Software](supported-hardware-and-software.md)
 
-Die Supportkanäle [sind hier beschrieben](introduction.md#kontakt)
+Die Supportkanäle sind [hier beschrieben](introduction.md#kontakt).
 
+**Hinweis:**  "5 Minuten" braucht jemand, der Basiskenntnisse von Linux hat.
+Wer diese nicht hat, braucht vermutlich trotz der Hilfe des Installers bei der
+Erstellung der Anfangskonfiguration etwas länger. ;-)
 
-## Anwendungs- und Konfigurationsbeispiele
+**Hinweis:** Von *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es ebenfalls eine [schöne Anleitung im deutschen Raspberryforum](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/)
+zur Installation, Konfiguration und Nutzung von *raspiBackup*.
 
-Auf [dieser Seite](configuration-examples.md) werden verschiedene Beispiele gegeben, wie man *raspiBackup* einsetzen kann.
-Diese Beispiele sollten sich vor der eigentlichen Installation angesehen werden,
-um bei der Konfiguration während der Installation die richtigen Parameter zu benutzen.
 
 
 ## *raspiBackup* installieren und automatisch regelmäßig ein Backup erstellen
@@ -196,6 +184,10 @@ sudo raspiBackup -m detailed
 Restoredokumentation](restore.md)), um zu verifizieren, dass ein konsistentes
 Backup erstellt wird, und um sich mit der Restoreprozedur vertraut zu machen.
 
+Nachdem sowohl Backup als auch Restore erfolgreich getestet und die vor dem Backup
+zu stoppenden Services konfiguriert wurden, kann *raspiBackup* per *systemd timer*
+für eine automatische Ausführung im gewünschten Intervall eingeplant werden.
+
 
 
 ## Standardkonfiguration und Ort der Konfigurationsdatei
@@ -244,11 +236,16 @@ Entweder benutzt man den Installer zum Deinstallieren oder folgenden Befehl:
 sudo raspiBackupInstallUI.sh -u
 ```
 
+<a name="next-steps"></a>
 ## Weitere Schritte
 
 Nachdem das erste Backup erfolgreich erstellt und wiederhergestellt wurde,
 sollte man sich in einer ruhigen Stunde über alle weiteren Optionen von
 *raspiBackup* hier informieren und je nach Bedarf einsetzen.
+
+  Danach kann man in einer stillen Stunde sämtliche Möglichkeiten von
+  *raspiBackup* hier nachlesen und die Konfiguration den speziellen Bedürfnissen
+  anpassen. In jedem Falle ist es sinnvoll, sich die [FAQs](faq.md) durchzulesen.
 
 Jede Option kann in der Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` definiert werden,
 so dass beim Aufruf keine weitere Optionen angegeben werden müssen.
@@ -259,7 +256,9 @@ Details dazu finden sich auf der [Optionsbeschreibungsseite](backup-options.md).
 Ebenfalls nützlich: [raspiBackupDialog - ein komfortables Hilfsscript für raspiBackup](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md),
 welches die Nutzung und den Aufruf von *raspiBackup* vereinfacht.
 
-## *raspiBackup* soll ohne Installation direkt aufgerufen werden, um sofort ein Backup zu erstellen
+
+<a name="adhoc"></a>
+## *raspiBackup* ohne Installation aufrufen, um sofort ein Backup zu erstellen
 
 1. Download von *raspiBackup*: `curl -sSLO  https://www.linux-tips-and-tricks.de/raspiBackup.sh`
 
@@ -272,11 +271,6 @@ Falls kein `rsync` Backup gewünscht wird, muss der Backuptyp `tar` oder `dd` mi
  mitgegeben werden, also `sudo bash ./raspiBackup.sh -t tar` oder `sudo bash ./raspiBackup.sh -t dd`
 
 Kurzinfos zu allen Aufrufoptionen von *raspiBackup* erhält man mit `bash ./raspiBackup.sh -`
-
-
-## Manuelle Installation und Konfiguration von *raspiBackup*
-
-Siehe im gleichnamigen Kapitel: [Manuelle Installation und Konfiguration](manual-installation-and-configuration.md)
 
 
 [.status]: rst

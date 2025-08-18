@@ -1,4 +1,4 @@
-# Installer Aufruf und Optionen
+# Installer - Aufruf und Optionen
 
 ## Aufruf
 
@@ -20,9 +20,12 @@ Mit folgenden Optionen kann der Installer bestimmte Funktionen direkt ohne Menuf
 * -u: Deinstallation von *raspiBackup* inklusive Installer
 * -t: Nutzung von entweder crond oder systemd als Backuptimer bei Option -i, Default ist systemd
 
+<a name="deinstallation"></a>
 ## Deinstallation
 
-Der Installer kann auch wieder deinstalliert werden.
+[.status]: review-comment "Noch etwas klarer Formulieren und Installer bzw. UI deutlicher machen"
+
+*raspiBackup* und der Installer können auch wieder deinstalliert werden.
 Entweder benutzt man den Installer zum Deinstallieren oder folgenden Befehl:
 
 ```
@@ -34,7 +37,7 @@ Dabei wird der Installer wie auch *raspiBackup* mit all seinen Dateien gelöscht
 
 ## Aufruf des Installers ohne Menus direkt von der Befehlszeile
 
-Wer keine menugesteuerte Installation haben möchte kann die Installation von *raspiBackup*,
+Wer keine menügesteuerte Installation haben möchte kann die Installation von *raspiBackup*,
 den Beispielextensions oder die Deinstallation von *raspiBackup*
 von der Befehlszeile direkt aufrufen. Dabei wird die Standardkonfiguration installiert.
 Der Aufruf dazu ist
@@ -46,7 +49,7 @@ curl https://raspibackup.linux-tips-and-tricks.de/install | sudo bash -s -- -i
 Jedwede Änderungen an der Konfiguration können nun manuell mit einem Editor
 vorgenommen werden.
 Ebenso das Einschalten des wöchentlichen Backup per systemd Timer.
-Man kann aber auch den Installer mit seinen Menus benutzen, um die
+Man kann aber auch den Installer mit seinen Menüs benutzen, um die
 Konfiguration der primären Optionen anzupassen sowie den regulären Backup ein-
 oder auszuschalten.
 
