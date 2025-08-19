@@ -24,7 +24,7 @@ Mit folgenden Optionen kann der Installer bestimmte Funktionen direkt ohne Menü
 <a name="deinstallation"></a>
 ## Deinstallation
 
-*raspiBackup* und der Installer können auch wieder deinstalliert werden.
+*raspiBackup* und der Installer können auch wieder deinstalliert werden:
 
 ```
 sudo raspiBackupInstallUI -u
@@ -33,23 +33,6 @@ sudo raspiBackupInstallUI -u
 **Hinweis:**
 Dabei wird der Installer wie auch *raspiBackup* mit all seinen Dateien gelöscht!
 
-
-## Aufruf der Installation ohne Installer direkt von der Befehlszeile - online
-
-Wer keine menügesteuerte Installation nutzen möchte, kann die Installation von *raspiBackup*,
-den Beispielextensions oder die Deinstallation direkt von der Befehlszeile aufrufen.
-
-(Bei dieser Installation wird die Standardkonfiguration installiert.)
-
-```
-curl https://raspibackup.linux-tips-and-tricks.de/install | sudo bash -s -- -i
-```
-
-Änderungen an der Konfiguration können nun manuell mit einem Editor vorgenommen werden.
-Ebenso das Einschalten des wöchentlichen Backup per systemd Timer.
-
-Man kann aber auch den Installer mit seinen Menüs benutzen, um die Konfiguration
-der primären Optionen anzupassen sowie den regulären Backup ein- oder auszuschalten.
 
 
 ## Menüdetails
@@ -78,6 +61,7 @@ vorzuhalten:
 
    Die intelligente Backupstrategie ist im Detail [hier](smart-recycle.md) beschrieben.
 
+
 <a name="services"></a>
 ### Zu stoppende und startenden Services - Menu C6
 
@@ -98,6 +82,7 @@ der Service erst nach dem abhängigen Service gestoppt werden. Beispielsweise
 sollten alle Services, die mit einer Datenbank arbeiten, vor dem Stoppen der Datenbank
 gestoppt werden, damit sie noch offene Transaktionen beenden können.
 
+
 <a name="regularbackup"></a>
 ### Regelmäßiger Backup - Menu C9
 
@@ -109,5 +94,62 @@ Im Installer kann der Wochentag definiert werden, an dem ein Backup erstellt
 werden soll. Oder auch eine tägliche Sicherung.
 Außerdem wird die Zeit des Backups in Stunde und Minute definiert.
 Der Standard ist Sonntag um 05:00 Uhr.
+
+
+## Standardkonfiguration und Ort der Konfigurationsdatei
+
+Der Installer erstellt folgende Dateien:
+
+  - Konfigurationsdatei `/usr/local/etc/raspiBackup.conf`
+
+    In dieser werden folgende Standardwerte eingestellt und können mit dem
+    Installer geändert werden. Alle anderen Optionen müssen mit einem Editor
+    geändert werden oder mit einer Aufrufoption überschrieben werden.
+
+    | Option               | Einstellung          |
+    |----------------------|----------------------|
+    | Backuppfad           | /backup              |
+    | Backupmode           | normal               |
+    | Backuptyp            | rsync                |
+    | Sprache              | Sprache des Systems  |
+    | Zip                  | nein                 |
+    | Meldungsdetail       | normal               |
+    | Backupanzahl         | 3                    |
+    | Services start       | keine                |
+    | Services stop        | keine                |
+    | Wöchentlicher Backup | nein                 |
+    | Backuptag            | Sonntag              |
+    | Backupzeit           | 05:00 Uhr            |
+
+    [Aufruf und Optionen](backup-options.md) sind ausführlich beschrieben.
+
+  - *Systemd timer* Konfiguration `/etc/systemd/system/raspiBackup.timer`
+
+    Diese Datei steuert den Aufruf von *raspiBackup* und im Standardfall ist der
+    wöchentliche Backup ausgeschaltet. Er kann aber mit dem Installer eingeschaltet
+    werden.
+
+  - *raspiBackup*.sh `/usr/local/bin`
+
+  - *raspiBackupInstallUI.sh* `/usr/local/bin`
+
+
+
+## Aufruf der Installation ohne Installer direkt von der Befehlszeile - online
+
+Wer keine menügesteuerte Installation nutzen möchte, kann die Installation von *raspiBackup*
+und den Beispielextensions oder die Deinstallation direkt von der Befehlszeile aufrufen.
+
+(Bei dieser Installation wird die Standardkonfiguration installiert.)
+
+```
+curl https://raspibackup.linux-tips-and-tricks.de/install | sudo bash -s -- -i
+```
+
+Änderungen an der Konfiguration können nun manuell mit einem Editor vorgenommen werden.
+Ebenso das Einschalten des wöchentlichen Backup per systemd Timer.
+
+Man kann aber auch den Installer mit seinen Menüs benutzen, um die Konfiguration
+der primären Optionen anzupassen sowie den regulären Backup ein- oder auszuschalten.
 
 [.status]: rst

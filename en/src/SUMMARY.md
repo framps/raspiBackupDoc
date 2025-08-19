@@ -45,6 +45,7 @@ That allows for some tricks:
 - [Language support](language-support.md)
 
 - [Quickstart-Installation in 5 minutes](installation-in-5-minutes.md)
+    - [Use without installation](using-raspibackup-without-installation.md)
 
 - [Installer invocation and options](installer.md)
     - [Manual installation and configuration](manual-installation-and-configuration.md)
