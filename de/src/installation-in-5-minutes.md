@@ -1,13 +1,11 @@
 # Schnellstart - Installation in 5 Minuten
 
-Die Dokumentation von *raspiBackup* ist unter anderem durch Erweiterungswünsche von Benutzern
+Die Dokumentation von *raspiBackup* ist Aufgrund der Fülle an Funktionen
 mittlerweile sehr umfangreich geworden.
 
-Um den Einstieg zu erleichtern, wird auf dieser Seite deshalb kurz und
-knapp erklärt, wie *raspiBackup* in 5 Minuten installiert und konfiguriert
+Um den Einstieg zu erleichtern, wird auf dieser Seite deshalb kurzgefasst
+erklärt, wie *raspiBackup* in wenigen Minuten installiert und konfiguriert
 und dann Backups der Raspberry erstellt werden können.
-
-Sogar eine ["adhoc"-Nutzung](using-raspibackup-without-installation.md) von *raspiBackup* ohne Installation ist möglich.
 
 Im Kapitel [Konfigurationsbeispiele](configuration-examples.md) sind einige Inspirationen zum Einsatz von *raspiBackup*
 aufgeführt. Diese können zum Kennenlernen der Parameter dienen und damit bei der späteren
@@ -20,10 +18,23 @@ Vor der Nutzung von *raspiBackup* bitte erst lesen: [Unterstützte Hard- und Sof
 
 Die Supportkanäle sind [hier beschrieben](introduction.md#kontakt).
 
-
 **Hinweis:** Von *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine weitere
 [Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/).im deutschen Raspberryforum.
 
+
+## Mit Installer oder ohne?
+
+Es gibt verschiedene Möglichkeiten, *raspiBackup* zu starten.
+
+Sogar eine ["adhoc"-Nutzung](using-raspibackup-without-installation.md) von *raspiBackup* ganz ohne Installation ist möglich.
+
+Hier wird aber nun auf die standardmäßige Installation mit dem Installer eingegangen.
+
+**Hinweis**: Wer sich vor der Installation den Sourcecode von *raspiBackup* und/oder den Installer
+*raspiBackupInstallUI* ansehen möchte, kann dies über die folgende Links tun:
+
+  - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
+  - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
 
 
 ## Der *raspiBackup* Installer
@@ -34,18 +45,11 @@ installieren und in Grundzügen konfigurieren lässt.
 
 Ebenso vorhanden sind Update-Funktionen für den Installer selbst und für *raspiBackup*.
 
-Die Installationsführung erfolgt über Menüs sowie über Auswahllisten. Die
-Menüsprache kann Deutsch, Englisch, Finnisch, Chinesisch oder Französisch sein.
+Die Installationsführung erfolgt über Menüs sowie über Auswahllisten. Als
+Menüsprachen stehen Deutsch, Englisch, Finnisch, Chinesisch und Französisch zur Verfügung.
 
 In dem *raspiBackup*-[Vorstellungsvideo](https://youtu.be/PuK_FNK674s) auf Youtube
-wird am Ende eine Demo der Installation gezeigt.
-
-
-**Hinweis**: Wer sich vor der Installation den Sourcecode von *raspiBackup* und/oder den Installer
-*raspiBackupInstallUI* ansehen möchte, kann dies über die folgende Links tun:
-
-  - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
-  - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
+wird eine Demo der Installation gezeigt.
 
 
 <a name="backup-directory"></a>
@@ -54,18 +58,19 @@ wird am Ende eine Demo der Installation gezeigt.
 In der Standardkonfiguration geht *raspiBackup* davon aus, dass es einen
 Mountpoint `/backup` gibt, unter dem das Backupverzeichnis gemounted ist.
 
-Diesen Mountpoint sollte vor der Installation mit `sudo mkdir /backup` erstellt
-und dann dort das externe Backupverzeichnis/Gerät (USB-Platte, USB-Stick, NFS-Laufwerk, ...)
+Dieser Mountpoint sollte schon vor der Installation mit erstellt und dann dort
+das externe Backupverzeichnis/Gerät (USB-Platte, USB-Stick, NFS-Laufwerk, ...)
 gemounted werden.
 
-Im folgenden Beispiel wird eine externe USB-Platte bzw. ein externer USB-Stick gemountet.
+Im folgenden Beispiel wird eine externe USB-Platte bzw. ein externer USB-Stick gemountet:
 
 ```
+sudo mkdir -p /backup
 sudo mount /dev/sda1 /backup
 ```
 
-Diese Partition setzt je nach gewünschtem Backuptyp ein gewisses Filesystem voraus,
-was in Kapitel "[Welches Dateisystem kann auf der Backuppartition benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)" erklärt wird.
+*raspiBackup* setzt je nach gewünschtem Backuptyp für diese Partition ein gewisses Filesystem voraus.
+Dies wird in Kapitel "[Welches Dateisystem kann auf der Backuppartition benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)" erklärt.
 Bitte beachten: [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md).
 
 **Vor** dem ersten Backup ist es sinnvoll, zu prüfen/sicherstellen, dass wirklich das
@@ -83,6 +88,8 @@ mount | grep backup
 
 Zum Download, der Installation und Start des *raspiBackup* Installers bitte
 folgendes in der Befehlszeile auf der Raspberry eingeben:
+
+[.status]: review-comment "Was passiert, wenn es schon eine Datei 'install' gibt?"
 
 ```
 cd ~
@@ -112,6 +119,10 @@ zu ändern.
 
 ## Systemd zum automatischen regelmäßigen Starten des Backups
 
+Nachdem sowohl Backup als auch Restore erfolgreich getestet und die vor dem Backup
+zu stoppenden Services konfiguriert wurden, kann *raspiBackup* per *Systemd timer*
+für eine automatische Ausführung im gewünschten Intervall eingeplant werden.
+
 Die Systemd-Konfiguration sollte immer mit dem Installer geändert werden.
 
 Eventuelle manuelle Änderungen in der *Systemd*-Konfigurationsdatei `/etc/systemd/system/raspiBackup.timer`
@@ -133,17 +144,18 @@ Ein Benachrichtigungstest kann mit der Option `-F` durchgeführt werden.
 
 
 
-
 ## Ein Backup erstellen ...
 
-TODO /backup mounten
+Nachdem die Backup-Partition ja schon unter `/backup` gemountet ist [(s.o.)](#backup-partition),
+kann das Backup gestartet werden. Beim ersten Mal vielleicht mit ausführlichen Meldungen:
 
-Will man das Backup einmal schnell testen, kann es wie folgt erstellt werden.
-Das kann je nach Größe der Installation länger dauern.
 
 ```
 sudo raspiBackup -m detailed
 ```
+
+Je nach Größe der Installation kann das natürlich etwas länger dauern...
+
 
 ## ... und einen Restore testen!
 
@@ -151,9 +163,9 @@ sudo raspiBackup -m detailed
 Restoredokumentation](restore.md)), um zu verifizieren, dass ein konsistentes
 Backup erstellt wird, und um sich mit der Restoreprozedur vertraut zu machen.
 
-**Denn:**
+**Denn:
 Ein Backup nützt nichts, wenn man in dem Moment, wo man es einspielen möchte,
-feststellt, dass es nicht zu gebrauchen ist.
+feststellt, dass es nicht zu gebrauchen ist.**
 
 Der ganze Restoreprozess sollte von Zeit zu Zeit durchexerziert und damit getestet werden,
 ob die erstellten Backups in Ordnung sind und sich damit ein System funktionsfähig
@@ -165,10 +177,6 @@ Besonders wichtig ist das Testen auch, wenn ein neues System mit einem neuen
 Betriebssystem wieder mit *raspiBackup* gesichert wird. Es gibt immer wieder
 Änderungen bei neuen Betriebssystemversionen, die dazu führen können, dass der
 Restore nicht mehr funktioniert.
-
-Nachdem sowohl Backup als auch Restore erfolgreich getestet und die vor dem Backup
-zu stoppenden Services konfiguriert wurden, kann *raspiBackup* per *systemd timer*
-für eine automatische Ausführung im gewünschten Intervall eingeplant werden.
 
 
 <a name="next-steps"></a>
