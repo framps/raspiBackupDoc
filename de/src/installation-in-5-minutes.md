@@ -14,9 +14,12 @@ Konfiguration während der Installation helfen.
 Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](restore.md) beschrieben.
 Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benutzer eingegangen.
 
-Vor der Nutzung von *raspiBackup* bitte erst lesen: [Unterstützte Hard- und Software](supported-hardware-and-software.md)
+[.status]: review-comment "Echt? Das finde ich dort gerade nicht..."
 
+[.status]: review-comment "Die folgenden zwei Sätze können hier weg. Das ist schon weiter oben beschrieben!
+Vor der Nutzung von *raspiBackup* bitte erst lesen: [Unterstützte Hard- und Software](supported-hardware-and-software.md)
 Die Supportkanäle sind [hier beschrieben](introduction.md#kontakt).
+"
 
 **Hinweis:** Von *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine weitere
 [Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/).im deutschen Raspberryforum.
@@ -48,7 +51,7 @@ Ebenso vorhanden sind Update-Funktionen für den Installer selbst und für *rasp
 Die Installationsführung erfolgt über Menüs sowie über Auswahllisten. Als
 Menüsprachen stehen Deutsch, Englisch, Finnisch, Chinesisch und Französisch zur Verfügung.
 
-In dem *raspiBackup*-[Vorstellungsvideo](https://youtu.be/PuK_FNK674s) auf Youtube
+In dem [*raspiBackup*-Vorstellungsvideo auf Youtube](https://youtu.be/PuK_FNK674s)
 wird eine Demo der Installation gezeigt.
 
 
@@ -58,11 +61,11 @@ wird eine Demo der Installation gezeigt.
 In der Standardkonfiguration geht *raspiBackup* davon aus, dass es einen
 Mountpoint `/backup` gibt, unter dem das Backupverzeichnis gemounted ist.
 
-Dieser Mountpoint sollte schon vor der Installation mit erstellt und dann dort
+Dieser Mountpoint sollte schon vor der Installation erstellt und dann dort
 das externe Backupverzeichnis/Gerät (USB-Platte, USB-Stick, NFS-Laufwerk, ...)
 gemounted werden.
 
-Im folgenden Beispiel wird eine externe USB-Platte bzw. ein externer USB-Stick gemountet:
+Im folgenden Beispiel wird eine externe USB-Platte bzw. USB-Stick gemountet:
 
 ```
 sudo mkdir -p /backup
@@ -110,11 +113,11 @@ Alle weiterführenden Einstellungen werden in der Konfigurationsdatei
 
 Zum Schluss kann die wöchentliche Sicherung mit *raspiBackup* eingeschaltet werden.
 
-![Installationsdemovideo](images/raspiBackupInstall_de.gif)
-
 Der Installer kann jederzeit wieder in der Befehlszeile mit
 `sudo raspiBackupInstallUI` aufgerufen werden, um die Konfiguration
 zu ändern.
+
+![Installationsdemovideo](images/raspiBackupInstall_de.gif)
 
 
 ## Systemd zum automatischen regelmäßigen Starten des Backups
@@ -146,7 +149,7 @@ Ein Benachrichtigungstest kann mit der Option `-F` durchgeführt werden.
 
 ## Ein Backup erstellen ...
 
-Nachdem die Backup-Partition ja schon unter `/backup` gemountet ist [(s.o.)](#backup-partition),
+Nachdem die Backup-Partition ja schon unter `/backup` gemountet ist [(s.o.)](#backup-directory),
 kann das Backup gestartet werden. Beim ersten Mal vielleicht mit ausführlichen Meldungen:
 
 
