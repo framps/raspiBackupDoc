@@ -11,7 +11,7 @@ Im Kapitel [Konfigurationsbeispiele](configuration-examples.md) sind einige Insp
 aufgeführt. Diese können zum Kennenlernen der Parameter dienen und damit bei der späteren
 Konfiguration während der Installation helfen.
 
-Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](restore.md) beschrieben.
+Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](restore-intro.md) beschrieben.
 Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benutzer eingegangen.
 
 [.status]: review-comment "Echt? Das finde ich dort gerade nicht..."
