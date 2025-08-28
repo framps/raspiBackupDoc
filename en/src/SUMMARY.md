@@ -52,18 +52,6 @@ That allows for some tricks:
     - [Statistics](statistics.md)
     - [Updates](updates.md)
 
-- [Usage and options](invocation-options.md)
-    - [Backup](backup.md)
-        - [Options](backup-options.md)
-        - [Configuration](backup-config-options.md)
-    - [Restore](restore.md)
-        - [Options](restore-options.md)
-        - [Configuration](restore-config-options.md)
-    - [General](general.md)
-        - [Options](general-options.md)
-        - [Configuration](general-config-options.md)
-    - [Options grouped by topic](options-by-topic.md)
-
 - [Function detail](function-intro.md)
     - [Backup](backup-intro.md)
         - [Decision tree for backup types](backup-types.md)
@@ -90,6 +78,18 @@ That allows for some tricks:
         - [Migrate the Raspberry OS from SD-card to SSD, USB-disk or USB-pen-drive](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [How can I install and test the beta version?](how-can-i-install-and-test-the-beta-version.md)
         - [Is an external root partition supported?](external-root-partition.md)
+
+- [Usage and options](invocation-options.md)
+    - [Backup](backup.md)
+        - [Options](backup-options.md)
+        - [Configuration](backup-config-options.md)
+    - [Restore](restore.md)
+        - [Options](restore-options.md)
+        - [Configuration](restore-config-options.md)
+    - [General](general.md)
+        - [Options](general-options.md)
+        - [Configuration](general-config-options.md)
+    - [Options grouped by topic](options-by-topic.md)
 
 - [Frequently asked questions / FAQ](faq.md)
 

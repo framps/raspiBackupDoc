@@ -35,7 +35,7 @@ Dabei wird der Installer wie auch *raspiBackup* mit all seinen Dateien gelöscht
 
 
 
-## Menüdetails
+## Details zu einigen Menüpunkten
 
 <a name="backupversionen"></a>
 ### Backupversionen - Menu C3
