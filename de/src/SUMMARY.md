@@ -44,6 +44,14 @@ Dies ermöglicht einige kleine Kniffe:
 
 - [Sprachunterstützung](language-support.md)
 
+- [Schnellstart - Installation in 5 Minuten](installation-in-5-minutes.md)
+    - [Nutzung ohne Installation](using-raspibackup-without-installation.md)
+
+- [Installer Aufruf und Optionen](installer.md)
+    - [Manuelle Installation und Konfiguration](manual-installation-and-configuration.md)
+    - [Statistiken](statistics.md)
+    - [Updates](updates.md)
+
 - [Funktionsdetails](function-intro.md)
     - [Backup](backup-intro.md)
         - [Entscheidungsbaum für Backuptypen](backup-types.md)
@@ -70,13 +78,6 @@ Dies ermöglicht einige kleine Kniffe:
         - [Umziehen des Raspberry Betriebssystems von SD-Karte auf SSD, USB Platte oder USB Stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [Wie kann ich die Betaversion installieren und ausprobieren?](how-can-i-install-and-test-the-beta-version.md)
         - [Wird eine externe Rootpartition unterstützt?](external-root-partition.md)
-
-- [Schnellstart - Installation in 5 Minuten](installation-in-5-minutes.md)
-
-- [Installer Aufruf und Optionen](installer.md)
-    - [Manuelle Installation und Konfiguration](manual-installation-and-configuration.md)
-    - [Statistiken](statistics.md)
-    - [Updates](updates.md)
 
 - [Aufruf und Optionen](invocation-options.md)
     - [Backup](backup.md)
