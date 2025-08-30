@@ -128,5 +128,4 @@ Dies ermöglicht einige kleine Kniffe:
 
 
 [.status]: z_SUMMARY
-[.status]: todo "Refer to en md file from de"
 [.status]: rst

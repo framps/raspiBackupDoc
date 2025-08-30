@@ -88,4 +88,3 @@ Now remove the target SD card, insert it in another Raspberry and boot the Raspb
 
 [.status]: rst
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/646-raspibackup-manual-restore-of-a-tgz-backup
-[.status]: todo "Link de entry to en"

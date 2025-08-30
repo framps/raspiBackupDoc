@@ -14,13 +14,6 @@ Konfiguration während der Installation helfen.
 Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](restore-intro.md) beschrieben.
 Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benutzer eingegangen.
 
-[.status]: review-comment "Echt? Das finde ich dort gerade nicht..."
-
-[.status]: review-comment "Die folgenden zwei Sätze können hier weg. Das ist schon weiter oben beschrieben!
-Vor der Nutzung von *raspiBackup* bitte erst lesen: [Unterstützte Hard- und Software](supported-hardware-and-software.md)
-Die Supportkanäle sind [hier beschrieben](introduction.md#kontakt).
-"
-
 **Hinweis:** Von *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine weitere
 [Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/).im deutschen Raspberryforum.
 
@@ -92,12 +85,11 @@ mount | grep backup
 Zum Download, der Installation und Start des *raspiBackup* Installers bitte
 folgendes in der Befehlszeile auf der Raspberry eingeben:
 
-[.status]: review-comment "Was passiert, wenn es schon eine Datei 'install' gibt?"
-
 ```
-cd ~
+pushd /tmp
 curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install
 sudo bash ./install
+popd
 ```
 
 **Hinweis**: Eine manuelle Installation ohne `sudo` Nutzung ist in einer extra
