@@ -70,7 +70,7 @@ Dies wird in Kapitel "[Welches Dateisystem kann auf der Backuppartition benutzt 
 Bitte beachten: [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md).
 
 **Vor** dem ersten Backup ist es sinnvoll, zu prüfen/sicherstellen, dass wirklich das
-richtige Backup-Gerät bzw. die richtige Backup-Partition genutzt wird.
+richtige Backupziel bzw die richtige Backuppartition genutzt wird.
 
 Hilfreich sind dabei folgende Befehle:
 
@@ -141,7 +141,7 @@ Ein Benachrichtigungstest kann mit der Option `-F` durchgeführt werden.
 
 ## Ein Backup erstellen ...
 
-Nachdem die Backup-Partition ja schon unter `/backup` gemountet ist [(s.o.)](#backup-directory),
+Nachdem die Backuppartition ja schon unter `/backup` gemountet ist [(s.o.)](#backup-directory),
 kann das Backup gestartet werden. Beim ersten Mal vielleicht mit ausführlichen Meldungen:
 
 

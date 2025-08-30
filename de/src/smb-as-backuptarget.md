@@ -12,7 +12,7 @@ konfigurieren ist. Dabei wird auch autoFS konfiguriert.
 Wird nicht bereits autoFS genutzt, erreicht man bei *raspiBackup* mit der
 Option `DynamicMount` dasselbe Verhalten.
 
-Um automatisch die SMB Backup-Partition zu mounten, wenn *raspiBackup* sie
+Um automatisch die SMB Backuppartition zu mounten, wenn *raspiBackup* sie
 nutzt, ist auf der NAS ein shared Folder zu definieren und zu konfigurieren.
 
 In der folgenden Anleitung wird der shared Folder Name "raspiBackup"
