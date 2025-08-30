@@ -100,10 +100,10 @@ That allows for some tricks:
     - [More helpful scripts](useful-helper-scripts.md)
 
 - [Backup targets](backup-targets.md)
-    - [NFS as backupspace](nfs-as-backupspace.md)
-    - [SMB as backupspace](smb-as-backupspace.md)
-    - [AVM FRITZ!Box as backupspace](avm-fritzbox-as-backupspace.md)
-    - [WebDAV as backupspace](webdav-as-backupspace.md)
+    - [NFS as backuptarget](nfs-as-backuptarget.md)
+    - [SMB as backuptarget](smb-as-backuptarget.md)
+    - [AVM FRITZ!Box as backuptarget](avm-fritzbox-as-backuptarget.md)
+    - [WebDAV as backuptarget](webdav-as-backuptarget.md)
 
 - [Tips for home automation](tips-homeautomation.md)
 

@@ -76,7 +76,7 @@ asterix:/backup    /backup    nfs    users,rw,sync,hard,intr,noauto,user    0   
 
 Dabei ist "asterix" der Hostname der NAS und "/backup" der exportierte NFS
 Mount. Weitere Hinweise zu Synology-spezifischen Einstellungen und
-Problemlösungen finden sich [hier](nfs-as-backupspace.md)
+Problemlösungen finden sich [hier](nfs-as-backuptarget.md)
 
 
 ## Eine Raspberry soll auf ein per SMB gemountetes Dateisystem gesichert werden, welches von einem Windowssystem zur Verfügung gestellt wird

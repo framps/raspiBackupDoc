@@ -7,11 +7,11 @@ als Backup-Partition genutzt werden.
 Dazu gehören lokal angeschlossene SD-Karten,
 per USB angeschlossene Platten, SSDs,
 USB-Sticks und SD-USB-Adapter sowie NVMe-SSDs.
-Des weiteren kann [SMB](smb-as-backupspace.md) und [NFS](nfs-as-backupspace.md) genutzt werden,
+Des weiteren kann [SMB](smb-as-backuptarget.md) und [NFS](nfs-as-backuptarget.md) genutzt werden,
 um nicht lokal angeschlossene Backuppartitionen anzubinden.
-SSHFS, CurlFtpFS und [WebDAV](webdav-as-backupspace.md) funktionieren ebenso zur
+SSHFS, CurlFtpFS und [WebDAV](webdav-as-backuptarget.md) funktionieren ebenso zur
 Ablage der Backups auf entfernten Servern.
-Die [*AVM Frit!zbox*](avm-fritzbox-as-backupspace.md) unterstützt ebenfalls SMB und kann somit
+Die [*AVM Frit!zbox*](avm-fritzbox-as-backuptarget.md) unterstützt ebenfalls SMB und kann somit
 auch als Backupziel genutzt werden.
 
 ```admonish info title="Filesysteme"
