@@ -2,12 +2,19 @@
 
 ## Aufruf
 
-Wird der Installer `raspiBackupInstallUI` ohne Optionen aufgerufen,
-wird eine menügeführte Installation und Konfiguration gestartet.
+```
+sudo raspiBackupInstallUI {Optionen}
+```
 
-```
-sudo raspiBackupInstallUI
-```
+Es existieren zwei verschiedene Möglichkeiten den *raspiBackup* Installer `raspiBackupInstallUI`
+aufzurufen:
+
+1.  Aufruf ohne Optionen oder mit Option `-t`
+    Der Installer startet mit einem Menu über welches *raspiBackup* konfiguriert werden kann.
+    Option `-t` steuert ob crond oder systemd genutzt wird.
+1.  Aufruf mit Optionen
+    Sofern eine andere Option als `-t`genutzt wird führt der Installer die gewählte Funktion
+    sofort ohne Menu aus.
 
 ## Optionen
 
@@ -20,8 +27,6 @@ Mit folgenden Optionen kann der Installer bestimmte Funktionen direkt ohne Menü
 * -u: Deinstallation von *raspiBackup* inklusive Installer
 * -t: Nutzung von entweder crond oder systemd als Backuptimer bei Option -i, Default ist systemd
 
-
-<a name="deinstallation"></a>
 ## Deinstallation
 
 *raspiBackup* und der Installer können auch wieder deinstalliert werden:
@@ -53,7 +58,7 @@ vorzuhalten:
    werden jeweils gelöscht. Im Installer wird die Zahl der
    jeweils vorzuhaltenden Backups mit 4 Zahlen definiert. Der Standard ist
    `7 4 12 3`.
-
+ 
    1. tägliche Backups (7)
    1. wöchentliche Backups (4)
    1. monatliche Backups (12)
@@ -146,8 +151,10 @@ und den Beispielextensions oder die Deinstallation direkt von der Befehlszeile a
 curl https://raspibackup.linux-tips-and-tricks.de/install | sudo bash -s -- -i
 ```
 
+Statt `-i` kann jede andere Installeroption mitgegeben werden.
+
 Änderungen an der Konfiguration können nun manuell mit einem Editor vorgenommen werden.
-Ebenso das Einschalten des wöchentlichen Backup per systemd Timer.
+Siehe dazu [Aufruf und Optionen](invocation-options.md). 
 
 Man kann aber auch den Installer mit seinen Menüs benutzen, um die Konfiguration
 der primären Optionen anzupassen sowie den regulären Backup ein- oder auszuschalten.
