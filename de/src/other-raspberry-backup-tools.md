@@ -2,7 +2,7 @@
 
 Anbei findet sich eine unvollständige Liste von anderen Backuptools, die genutzt werden können, um eine Raspberry zu sichern.
 
-- [rpi-clone](https://github.com/billw2/rpi-clone): Sicherung einer Raspberry per rsync. Cmdlinetool
+- [rpi-clone](https://github.com/geerlingguy/rpi-clone): Sicherung einer Raspberry per rsync. Cmdlinetool
 - [piclone](https://github.com/raspberrypi-ui/piclone): Klonen einer SD-Karte per `cp`. Das UI ist im RaspbianOS Desktop enthalten. Keine Cmdlineversion.
 - [image-backup](https://forums.raspberrypi.com/viewtopic.php?t=331396): Von *RonR* im englischen Raspberryforum. Cmdlinetool.
 - [borg](https://github.com/borgbackup/borg): Sehr mächtiges Datenbackuptool, welches Deduplication unterstützt (Englisch) Nur für erfahrene Linux-User geeignet.
