@@ -182,4 +182,5 @@ irgendwelche Fehlfunktionen des Scripts.
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup
 [.source]: https://www.linux-tips-and-tricks.de/en/backup
 [.source]: https://linux-tips-and-tricks.de/de/trinkgeld
-[.status]: rst
+[.status]: translated
+
