@@ -130,7 +130,7 @@ All other communication channels such as e-mails, which are unfortunately often 
 ```
 
 <a name="donation"></a>
-## Tip
+## Donations
 
 Acknowledgment of the development and maintenance effort as well as support for
 *raspiBackup* is welcome and possible as follows:
