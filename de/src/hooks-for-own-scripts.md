@@ -210,6 +210,6 @@ append="$5"       # file to append
   Dort sind alle Erweiterungen im Quellcode verfügbar, um sie zu erweitern und
   neue hinzuzufügen.
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/442-raspibackup-erweiterungen
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/443-raspibackup-extensions

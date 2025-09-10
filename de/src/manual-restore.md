@@ -62,7 +62,7 @@ rmdir /mnt/sdb*
 # Boing! geht :-)
 ```
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/497-raspibackup-manueller-restore-eines-backups
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/498-raspibackup-manual-restore
 

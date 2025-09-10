@@ -114,4 +114,4 @@ zu den Standardoptionen genutzt werden.
 
 </div>
 
-[.status]: rst
+[.status]: translated

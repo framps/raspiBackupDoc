@@ -33,6 +33,6 @@ Restore erneut sorgfältig zu testen. Es wird in diesem Kontext auf den
 [Haftungsausschluss](introduction.md#haftungsausschluss) hingewiesen.
 
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/509-raspibackup-ausgefuehrte-regressiontests
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/510-raspibackup-regressiontests-executed

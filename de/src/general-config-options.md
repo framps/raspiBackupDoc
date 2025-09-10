@@ -122,4 +122,4 @@ werden. Beispiel: "SF" oder "SM".
 
 </div>
 
-[.status]: rst
+[.status]: rft

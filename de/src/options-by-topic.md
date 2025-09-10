@@ -86,6 +86,6 @@
   - [--unsupportedEnvironment: Nicht unterstützte HW und SW wird akzeptiert](general-options.md#parm_unsupportedEnvironment)
   - [--updateConfig: Update der *raspiBackup* Konfigurationsdatei](general-options.md#parm_updateConfig)
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/aufruf-und-optionen
 [.source]: https://www.linux-tips-and-tricks.de/en/invocation-and-options

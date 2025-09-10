@@ -25,6 +25,6 @@ DEFAULT_SEND_STATS=0
 
 in der Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` ausgeschaltet werden.
 
-[.status]: rst
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#stats
 

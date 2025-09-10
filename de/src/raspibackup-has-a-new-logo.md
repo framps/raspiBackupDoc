@@ -21,6 +21,6 @@ Anbei eine Auswahl von schönen Logos die in der Diskussion und beim Brainstormi
 ![Auswahl an Icons](images/icons/icon-collection.png)
 </center>
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/653-raqspibackup-has-a-new-logo
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/654-raspibackup-has-a-new-logo

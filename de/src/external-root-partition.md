@@ -16,4 +16,4 @@ Partition gesichert sowie die Bootpartition von der SD-Karte. Wird
 dieser Backup zurückgespielt, muss die [Option `-R`](restore-options.md#parm_R) genutzt werden,
 um das Zielgerät für die externe Rootpartition anzugeben.
 
-[.status]: rst
+[.status]: rft

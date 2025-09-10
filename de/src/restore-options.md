@@ -182,4 +182,4 @@ Benutze die Option nur, wenn Du weißt, was Du tust.
 
 </div>
 
-[.status]: rst
+[.status]: rft

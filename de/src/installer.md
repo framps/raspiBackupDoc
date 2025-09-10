@@ -159,4 +159,4 @@ Siehe dazu [Aufruf und Optionen](invocation-options.md).
 Man kann aber auch den Installer mit seinen Menüs benutzen, um die Konfiguration
 der primären Optionen anzupassen sowie den regulären Backup ein- oder auszuschalten.
 
-[.status]: rst
+[.status]: rft

@@ -51,7 +51,7 @@ bearbeitet und gefixed. Wenn eine neue Version bereitsteht, wird der Ersteller
 über *GitHub* informiert werden und sie kann mit `sudo *raspiBackup*.sh -U -S`
 erneut runtergeladen und der Fix verifiziert werden.
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/594-wie-kann-ich-die-betaversion-installieren-und-ausprobieren
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/595-how-can-i-install-and-test-the-beta-version
 

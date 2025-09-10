@@ -74,6 +74,6 @@ die Backups erst umständlich entpacken.
   - [Wie funktionieren Hardlinks?](how-do-hardlinks-work-with-rsync.md)
   - [Welches Dateisystem kann auf dem Backupgerät benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/579-warum-sollte-man-dd-als-backupmethode-besser-nicht-benutzen
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/581-why-shouldn-t-you-use-dd-as-backup-method

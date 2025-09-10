@@ -84,4 +84,4 @@ Auf [Backupziele](backup-targets.md) finden sich Beispiele für SMB, NFS und Web
 
 [.source]: https://linux-tips-and-tricks.de/de/raspibackupcategoried/608-unterstuetzte-hard-und-software/
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/609-supported-hard-and-software/
-[.status]: rst
+[.status]: rft

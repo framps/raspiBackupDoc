@@ -55,5 +55,5 @@ ohne Abfrage überschrieben werden dürfen.
 
 </div>
 
-[.status]: rst
+[.status]: rft
 

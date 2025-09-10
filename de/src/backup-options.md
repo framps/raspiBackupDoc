@@ -443,4 +443,4 @@ Backup verkleinern mit gzip bei dd oder tar Backup
 
 </div>
 
-[.status]: rst
+[.status]: rft

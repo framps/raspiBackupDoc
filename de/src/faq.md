@@ -951,6 +951,6 @@ Achtung:  Es gibt seltene Umstände, in denen ein rsync RC 24 ein nicht zu
 ignorierender Fehler ist. Siehe dazu [hier bei bugzilla.samba.org](https://bugzilla.samba.org/show_bug.cgi?id=3653#c12).
 D.h. man sollte möglichst versuchen, den Fehler mit Möglichkeit 1 oder 2 zu beseitigen.
 
-[.status]: rst
+[.status]: rft
 [.source]: https://linux-tips-and-tricks.de/de/faq
 

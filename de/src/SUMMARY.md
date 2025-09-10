@@ -128,4 +128,4 @@ Dies ermöglicht einige kleine Kniffe:
 
 
 [.status]: z_SUMMARY
-[.status]: rst
+[.status]: rft

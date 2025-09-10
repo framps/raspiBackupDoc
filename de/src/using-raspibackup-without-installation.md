@@ -17,4 +17,4 @@ mitgegeben werden, also `sudo bash ./raspiBackup.sh -t tar` oder `sudo bash ./ra
 
 Kurzinfos zu allen Aufrufoptionen von *raspiBackup* erhält man mit `bash ./raspiBackup.sh -h`
 
-[.status]: rst
+[.status]: rft

@@ -59,6 +59,6 @@ Speicherplatz bei der Nutzung von Hardlinks ermittelt werden kann.
   warum der Befehl du über mehrere Verzeichnisses ausgeführt werden muss,
   um die Einsparungen durch Hardlinks zu sehen
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/571-wie-funktioniert-der-rsync-backup-typ-mit-hardlinks
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/572-how-do-hardlinks-work-with-rsync

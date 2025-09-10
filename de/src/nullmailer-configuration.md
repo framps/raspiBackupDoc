@@ -27,5 +27,5 @@ Falls der Hostname kein gültiger Hostname beim eMailProvider ist, sind noch fol
 
 
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/675-nullmailer-konfigurieren

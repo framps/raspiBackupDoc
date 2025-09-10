@@ -60,7 +60,7 @@ und dort *2.2* und *2.3* auszuführen. Allerdings muss man berücksichtigen, das
 keine Benachrichtigungen geschickt werden können wie auch keine
 Benachrichtigungen von *raspiBackup* bei neuen Versionen erhalten werden.
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/538-raspibackup-manuelle-installation
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/539-raspibackup-manual-installation
 

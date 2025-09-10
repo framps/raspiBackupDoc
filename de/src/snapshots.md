@@ -22,6 +22,6 @@ Es sind normale `dd`, `tar` oder `rsync` Backups.
 Es gibt ein [Youtube Video](https://www.youtube.com/watch?v=8BlF9B8EX6k),
 in dem die *raspiBackup* Snapshots erklärt werden sowie eine Demo gegeben wird.
 
-[.status]: rst
+[.status]: rft
 [.source]: https://linux-tips-and-tricks.de/de/snapshots
 

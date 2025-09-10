@@ -169,6 +169,6 @@ root@boockworm:/mnt/backup/raspberrypi# tree -L 2
 └── raspiBackup.msg
 ```
 
-[.status]: rst
+[.status]: rft
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#Vergleichtodo
 [.source]: https://www.linux-tips-and-tricks.de/en/backup
