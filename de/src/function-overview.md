@@ -175,7 +175,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
 ![Übersichtsbild](images/raspiBackupOverview.jpg)
 
 
-[.status]: rst
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/funktionsuebersicht
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup
 [.source]: https://www.linux-tips-and-tricks.de/en/features
