@@ -13,4 +13,4 @@ es werden nur die Benachrichtigungen geschickt. So sind Fehlkonfigurationen schn
 können behoben werden, ohne immer auf die Beendigung eines längeren Backuplaufes
 warten zu müssen.
 
-[.status]: rft
+[.status]: translated
