@@ -199,6 +199,6 @@ Anonymer GID: guest
 Anonymer UID: guest
 ```
 
-[.status]: rft
+[.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/synology
 [.source]: https://www.linux-tips-and-tricks.de/en/synology

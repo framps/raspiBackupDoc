@@ -14,3 +14,5 @@ Anyone wanting to add another language to *raspiBackup* is invited to do so,
 Details can be found [here](local-language-support-for-languages-other-than-de-and-en-l10n.md).
 
 [.source]: https://linux-tips-and-tricks.de/en/raspibackupcategoried/603-raspibackup-local-language-support-for-languages-other-than-de-and-en-l10n
+
+[.status]: translated

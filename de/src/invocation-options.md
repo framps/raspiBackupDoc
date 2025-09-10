@@ -70,4 +70,4 @@ Optionen `-h` oder `--help` ausgegeben werden.
 
 Eine Liste der Aufruf-Optionen ist auch [thematisch sortiert vorhanden](options-by-topic.md).
 
-[.status]: rft
+[.status]: translated
