@@ -191,7 +191,7 @@ let g:deepl#endpoint = "https://api-free.deepl.com/v2/translate"
 let g:deepl#auth_key = readfile(expand('~/.config/deepl.auth_key'))[0]
 
 " replace a visual selection
-vmap <C-t><C-e> <Cmd>call deepl#v("EN")<CR>
+vmap <C-t><C-e> <Cmd>call deepl#v("EN")<CR><ESC>
 " vmap t<C-e> <Cmd>call deepl#v("EN")<CR>
 " vmap t<C-j> <Cmd>call deepl#v("JA")<CR>
 
@@ -210,4 +210,18 @@ vmap <C-t><C-e> <Cmd>call deepl#v("EN")<CR>
 " set spell
 " New German spelling
 set spelllang=de_20
+" English
 "set spelllang=en
+" Or both:
+"set spelllang=de_20,en
+" It seems to be impossible to map Alt- key combinations.
+" Trying s.th. else:
+" ſ is AltGr-s in my Konsole program
+nmap ſ <Cmd>set spell!<CR>
+
+" ============= More fiddling
+"
+" Use Ctrl-S for saving the current buffer. Like in "some" other software...
+nnoremap <C-s> <Cmd>update<CR>
+vnoremap <C-s> <Cmd>update<CR>
+inoremap <C-s> <Cmd>update<CR>
