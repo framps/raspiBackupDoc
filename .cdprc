@@ -118,7 +118,7 @@ edit_translate_by_status() {
             rm -f "${TMPFILE_TRANS}"
         fi
         # ${VIM_PROJECT} -O {en,de}/src/"$FILE"
-        ${VIM_PROJECT} -c "tabnew de/src/${FILE}|vsplit en/src/${FILE}|tabnew de/src/SUMMARY.md|vsplit en/src/SUMMARY.md|tabfirst|2tabnext" en/src/"${FILE}"
+        ${VIM_PROJECT} -c "set splitbelow splitright|tabnew en/src/${FILE}|vsplit de/src/${FILE}|tabnew en/src/SUMMARY.md|vsplit de/src/SUMMARY.md|tabfirst|2tabnext" en/src/"${FILE}"
     done
     [[ -f "${TMPFILE_TRANS}" ]] && rm -f "${TMPFILE_TRANS}"
     unset FZFPOS_STATUS
