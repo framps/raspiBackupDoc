@@ -11,7 +11,7 @@ Furthermore, [SMB](smb-as-backuptarget.md) and [NFS](nfs-as-backuptarget.md) can
 to connect non-locally connected backup partitions.
 SSHFS, CurlFtpFS and [WebDAV](webdav-as-backuptarget.md) also work for storing backups on remote backups.
 storage of backups on remote servers.
-The [*AVM Frit!zbox*](avm-fritzbox-as-backuptarget.md) also supports SMB and can therefore also be used as a backup target.
+The [*AVM FRITZ!Box*](avm-fritzbox-as-backuptarget.md) also supports SMB and can therefore also be used as a backup target.
 also be used as a backup target.
 
 ```admonish info title="Filesystems"
