@@ -50,7 +50,8 @@ Plug 'https://github.com/tpope/vim-characterize'
 Plug 'dense-analysis/ale'
 
 " DeepL integration
-Plug 'ryicoh/deepl.vim'
+"Plug 'ryicoh/deepl.vim'
+Plug 'rpi-simonz/deepl.vim' , { 'branch': 'improve_linewise' }
 
 " After changing here: Reload .vimrc and :PlugInstall to install plugins.
 "
