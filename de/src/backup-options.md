@@ -18,7 +18,7 @@ Befehle, um Services nach dem Backup wieder zu starten. Z.B. bei SMB "service
 smbd start" (**Achtung:** Anführungszeichen an Anfang und Ende). Diese Option ist
 zusammen mit der Option -o obligatorisch.
 
-Mehrere Befehle müssen durch && getrennt werden. Diese Befehle sollten die
+Mehrere Befehle müssen durch `&&` getrennt werden. Diese Befehle sollten die
 exakte umgekehrte Reihenfolge haben wie die Befehle beim Parameter -o.
 
 **Beispiel**:
@@ -443,4 +443,4 @@ Backup verkleinern mit gzip bei dd oder tar Backup
 
 </div>
 
-[.status]: rft
+[.status]: translated

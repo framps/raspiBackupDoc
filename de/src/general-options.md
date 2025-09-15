@@ -319,4 +319,4 @@ Menge von Hosts nach einem Versionsupdate verteilen.
 
 </div>
 
-[.status]: rft
+[.status]: translated
