@@ -109,7 +109,7 @@ The installer can be restarted at any time in the command line with
 `sudo raspiBackupInstallUI` to change the configuration.
 change the configuration.
 
-![Installation demo video](images/raspiBackupInstall_en.gif)
+![Installation demo video](images/raspiBackupInstall_de.gif)
 
 
 ## Systemd to start the backup automatically at regular intervals

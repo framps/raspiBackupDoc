@@ -5,7 +5,7 @@ Friendly [forum members](https://forum-raspberrypi.de/forum/thread/59343-wer-hat
 
 <center>
 
-![Icon red blue final 256](images/icons/Icon_red_blue_final_256.png)
+![Icon red blue final 256](images/icons/Icon_rot_blau_final_256.png)
 </center>
 
 It represents the SD card that is being backed up (now it is usually an SSD -
