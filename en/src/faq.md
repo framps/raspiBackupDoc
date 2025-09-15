@@ -1,3 +1,9 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
+
 # Frequently asked questions (FAQ)
 
 <!-- toc -->

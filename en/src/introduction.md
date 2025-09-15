@@ -1,4 +1,9 @@
 
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
 ``` admonish info title="Usage hints"
 At the top of the pages there are two groups of icons for operating
 the documentation:

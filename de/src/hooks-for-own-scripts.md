@@ -1,3 +1,9 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
+
 # Erweiterungen/Plugins
 
 Es besteht die Möglichkeit, eigene Codeerweiterungen vor und nach dem
