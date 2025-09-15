@@ -801,11 +801,7 @@ which is connected to the Raspberry.
 In 99.9% of cases, the SD card to which the restore is performed is defective. If you
 restored to another SD card, preferably a new one, the problem usually
 usually no longer occurs. There is also the option -C that you can use at
-<<<<<<< HEAD
 Restore to check the SD card for bad blocks during formatting.
-=======
-Restore to check the SD card for bad blocks during formatting.
->>>>>>> main
 during formatting. However, this makes the restore process take much longer. See
 also [this page](why-shouldn-t-you-use-dd-as-backup-type.md) for problems with a dd backup.
 

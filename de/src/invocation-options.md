@@ -29,7 +29,6 @@ die bei dem Aufruf mitgegeben werden.
 
 Die Priorität der Optionsquellen ist aus folgender Tabelle ersichtlich:
 
-```
 | Priorität | Quelle |
 |-----------|--------|
 | 1         | Aufrufoptionen |
@@ -37,7 +36,6 @@ Die Priorität der Optionsquellen ist aus folgender Tabelle ersichtlich:
 | 3         | $(pwd)/.raspiBackup.conf |
 | 4         | ~/.raspiBackup.conf |
 | 5         | /usr/local/etc/raspiBackup.conf |
-```
 
 **Hinweis:**
 Optionen in der Konfigurationsdatei, die ja/an oder nein/aus als Parameter
