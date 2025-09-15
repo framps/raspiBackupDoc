@@ -63,5 +63,5 @@ chmod 600 /home/pi/raspiBackup.conf
 Aufruf des raspiBackupInstallers mit `sudo raspiBackupInstallUI`
 und Definition von `/mnt/synoRaspiBackup` (`M3 -> C2`)
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/687-raspibackup-nutzung-einer-synology-als-backupspace-mit-cifs-samba-und-autofs

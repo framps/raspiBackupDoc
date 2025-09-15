@@ -11,5 +11,5 @@ Beispielerweiterungen können mit dem Installer installiert werden und als Beisp
 
 Details zu den Erweiterungen sind [hier](useful-helper-scripts.md) beschrieben.
 
-[.status]: rft
+[.status]: translated
 

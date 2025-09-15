@@ -31,6 +31,6 @@ Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` automatisch mit den neuen 
 versehen. Die Details dazu sind [hier](configuration-update-when-upgrading-to-a-new-version.md)
 beschrieben.
 
-[.status]: rft
+[.status]: translated 
 [.source]: https://linux-tips-and-tricks.de/de/raspibackup#updatestrategie
 [.source]: https://linux-tips-and-tricks.de/de/raspibackupcategoried/432-raspibackup-versionshistorie

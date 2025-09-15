@@ -1,4 +1,4 @@
-# Regressionstests vor einem neuen Release
+# Regressionstests die vor einem neuen Release ausgeführt werden
 
 Jede neue Version von *raspiBackup* wird vor der Veröffentlichung einem
 Regressionstest unterzogen. Bedingt durch die vielen Optionen und möglichen
@@ -33,6 +33,6 @@ Restore erneut sorgfältig zu testen. Es wird in diesem Kontext auf den
 [Haftungsausschluss](introduction.md#haftungsausschluss) hingewiesen.
 
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/509-raspibackup-ausgefuehrte-regressiontests
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/510-raspibackup-regressiontests-executed
