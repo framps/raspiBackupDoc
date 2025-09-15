@@ -9,5 +9,5 @@ sind und welche [Erweiterungsmöglichkeiten](hooks-for-own-scripts.md) es gibt.
 
 Außerdem finden sich Anleitungen, wie man bei den verschiedenen Backuptypen gezielt [einzelne Dateien](how-to-retrieve-single-files-or-directories-from-the-backup.md) restoren kann.
 
-[.status]: rft
+[.status]: translated
 

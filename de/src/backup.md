@@ -8,5 +8,4 @@ werden können, sind in [Konfiguration](backup-config-options.md) beschrieben.
 
 Siehe auch [Allgemeine Aufrufoptionen](general-options.md) und [Allgemeine Konfigurationsoptionen](general-config-options.md).
 
-[.status]: rft
-
+[.status]: translated

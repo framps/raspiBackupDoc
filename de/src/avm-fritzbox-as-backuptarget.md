@@ -34,4 +34,4 @@ erstellt werden.
 Nachdem der Restoretest erfolgreich war, ist dann noch im Installer der Backuptyp
 auf tar zu konfigurieren sowie der Zeitpunkt des regelmäßigen Backups festzulegen.
 
-[.status]: rft
+[.status]: translated
