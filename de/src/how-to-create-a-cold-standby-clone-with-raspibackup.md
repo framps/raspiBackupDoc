@@ -64,6 +64,6 @@ Zeile `USE_RSYNC=1` in `USE_RSYNC=0` geändert werden. Dann dauert der Restore
 allerdings wesentlich länger, da keine Synchronisation sondern ein Vollrestore
 vorgenommen wird.
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/684-wie-kann-man-mit-raspibackup-einen-clone-erstellen
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/685-how-to-create-a-cold-standby-clone-with-raspibackup
