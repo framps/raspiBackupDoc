@@ -9,7 +9,7 @@ which have been written by *raspiBackup* users and can be used at extension poin
 
 Sample extensions can be installed with the installer and used as examples for your own extensions.
 
-Details about the extensions are described [here](useful-helper-scripts.md).
+Details about the extensions are described [here](hooks-for-own-scripts.md).
 
 [.status]: translated
 

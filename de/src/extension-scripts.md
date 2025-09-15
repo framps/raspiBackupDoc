@@ -9,7 +9,7 @@ die von *raspiBackup* Nutzern geschrieben wurden und an Erweiterungspunkten genu
 
 Beispielerweiterungen können mit dem Installer installiert werden und als Beispiele für eigene Erweiterungen genutzt werden.
 
-Details zu den Erweiterungen sind [hier](useful-helper-scripts.md) beschrieben.
+Details zu den Erweiterungen sind [hier](hooks-for-own-scripts.md) beschrieben.
 
 [.status]: translated
 

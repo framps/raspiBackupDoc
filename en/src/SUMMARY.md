@@ -122,7 +122,7 @@ That allows for some tricks:
 
 # Developer guide
 
-- [Extension possibilities](hooks-for-own-scripts.md)
+- [Extensions/Plugins](hooks-for-own-scripts.md)
 - [Extension scripts](extension-scripts.md)
 - [Support new languages](local-language-support-for-languages-other-than-de-and-en-l10n.md)
 

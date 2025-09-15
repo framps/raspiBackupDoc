@@ -24,6 +24,13 @@ Typing a `?` displays a small keyboard navigation aid.
 ![Icon](images/icons/Icon_rot_blau_final_128.png)
 </center>
 
+
+``` admonish info title="Note"
+To reduce the translation effort given the amount of documentation pages all German pages were
+translated with [DeepL](https://www.deepl.com) into English.
+Thank you very much to DeepL who offer to use the translator for free.
+```
+
 ---
 
 Topics on this page:

@@ -122,7 +122,7 @@ Dies ermöglicht einige kleine Kniffe:
 
 # Entwicklerinformationen
 
-- [Erweiterungsmöglichkeiten](hooks-for-own-scripts.md)
+- [Erweiterungen/Plugins](hooks-for-own-scripts.md)
 - [Erweiterungsscripte](extension-scripts.md)
 - [Support new languages](local-language-support-for-languages-other-than-de-and-en-l10n.md)
 
