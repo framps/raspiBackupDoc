@@ -1,6 +1,6 @@
 # Installer - Invocation and options
 
-## Invocation 
+## Invocation
 
 ```
 sudo raspiBackupInstallUI {Options}

@@ -19,11 +19,6 @@ der Dokumentation:
 Eintippen eines `?` blendet eine kleine Tastatur-Navigationshilfe ein.
 ```
 
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_128.png)
-</center>
-
 ---
 
 Themen auf dieser Seite:
