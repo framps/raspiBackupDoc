@@ -3,6 +3,7 @@
 For displaying it's dialogs and messages *raspiBackup* takes the system language into account.
 English is used as default if that language isn't supported by *raspiBackup* yet.
 
+<a name="supported-languages"></a>
 Supported languages are
    1. Chinese
    1. English

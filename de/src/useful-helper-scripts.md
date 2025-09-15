@@ -58,7 +58,7 @@ die von *raspiBackup* Nutzern geschrieben wurden und zur allgemeinen
 Verfügung in das *raspiBackup* Repository per PR eingestellt wurden.
 Weitere eigene Extensions werden gerne per PR aufgenommen.
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/507-raspibackup-nuetzliche-hilfsprogramme
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/508-raspibackup-nuetzliche-hilfsprogramme-2
 

@@ -1,3 +1,13 @@
-# Restore
+# Restore options and configurations
 
-[.de]: ../../de/src/restore.md
+The call options and the corresponding configuration options
+for *raspiBackup* are explained in [Options](restore-options.md).
+
+Options that can only be specified in the configuration file for the restore are
+are described in [Configuration](restore-config-options.md).
+
+See also [General call options](general-options.md) and [General configuration options](general-config-options.md).
+
+[.status]: translated
+
+
