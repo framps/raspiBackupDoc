@@ -164,7 +164,7 @@ Definiert das Ziel der Logdatei `raspiBackup.log`.
 - varlog: Die Logdatei wird in `/var/log/` geschrieben
 - backup: Die Logdatei wird in das erzeugte Backup geschrieben
 - current: Die Logdatei wird in das aktuelle Verzeichnis geschrieben.
-- <Dateiprefix>:  Das Debuglog wird dort mit der Extension `.log` und die
+- \<Dateiprefix\>:  Das Debuglog wird dort mit der Extension `.log` und die
   Messagedatei mit der Extension `.msg` abgelegt.
 
 Beispiel: `/home/pi/raspiBackup`
