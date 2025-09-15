@@ -1,5 +1,5 @@
 
-``` admonish info title="Nutzungshinweise"
+``` admonish info title="Usage hints"
 At the top of the pages there are two groups of icons for operating
 the documentation:
 
@@ -125,7 +125,7 @@ Many more videos on all kinds of topics related to *raspiBackup* can be found in
 * Click [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/),
   to follow *raspiBackup* on Reddit.
 
-``` admonish info title="Hinweis"
+``` admonish info title="Note"
 All other communication channels such as e-mails, which are unfortunately often used, are ignored!
 ```
 
