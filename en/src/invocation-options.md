@@ -29,7 +29,6 @@ that are specified when the file is called.
 
 The priority of the option sources can be seen in the following table:
 
-```
 | Priority | Source |
 |-----------|--------|
 | 1 | Invocation options |
@@ -37,7 +36,6 @@ The priority of the option sources can be seen in the following table:
 | 3 | $(pwd)/.raspiBackup.conf |
 | 4 | ~/.raspiBackup.conf |
 | 5 | /usr/local/etc/raspiBackup.conf |
-```
 
 **Note:**
 Options in the configuration file that require yes/on or no/off as parameters
@@ -66,8 +64,8 @@ As long as you are on the console, a list of the available
 available invocation options and their current status with the
 options `-h` or `--help`.
 
-## Thematic list of iinvocation options
+## Thematic list of invocation options
 
-A list of iinvocation options is also available [sorted by topic](options-by-topic.md).
+A list of invocation options is also available [sorted by topic](options-by-topic.md).
 
 [.status]: translated

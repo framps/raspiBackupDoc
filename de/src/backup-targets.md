@@ -14,7 +14,7 @@ Ablage der Backups auf entfernten Servern.
 Die [*AVM FRITZ!Box*](avm-fritzbox-as-backuptarget.md) unterstützt ebenfalls SMB und kann somit
 auch als Backupziel genutzt werden.
 
-```admonish info title="Filesysteme"
+```admonish info title="Hinweis"
 Die jeweiligen Backupziele müssen eine formatierte Partition haben, in der die Backups abgelegt werden. Siehe [Vor-und Nachteile der jeweiligen
 Filesysteme](which-filesystem-can-be-used-on-the-backup-partition.md).
 ```

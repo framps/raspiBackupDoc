@@ -164,7 +164,7 @@ Defines the destination of the log file `raspiBackup.log`.
 - varlog: The log file is written to `/var/log/`
 - backup: The log file is written to the backup created
 - current: The log file is written to the current directory.
-- <file prefix>: The debug log is written there with the extension `.log` and the
+- \<file prefixi\>: The debug log is written there with the extension `.log` and the
   message file with the extension `.msg`.
 
 Example: `/home/pi/raspiBackup`

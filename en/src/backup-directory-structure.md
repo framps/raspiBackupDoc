@@ -34,16 +34,16 @@ Enclosed is the directory structure of my backup server, which in this case is a
 is a Raspberry Pi. Different backup types can be combined per Pi.
 can be combined per Pi. Each backup is stored in a new subdirectory.
 
-Pro Raspberry System werden immer drei bzw. fünf weitere Dateien zusätzlich zum
-eigentlichen Backup erstellt und sind notwendig für den Restore, wenn es kein `dd`
-Backup ist. Damit ist es Linuxkundigen möglich, ein Backup auch manuell zu restoren.
-Dies ist im Kapitel [Manueller Restore](manual-restore.md) beschrieben.
+Three or five additional files are always created per Raspberry system in addition to the
+backup and are necessary for the restore if it is not an `dd` backup.
+backup. This makes it possible for Linux experts to restore a backup manually.
+This is described in the chapter [Manual restore](manual-restore.md).
 
-  - `.img` - Bootpartition
-  - `.mbr` - *Master Boot Record* des Systems
-  - `.sfdisk` - Partitionslayout des Systems - Ausgabe des `sfdisk` Befehls
-  - `.blkid` - (Partitionsorientierter Modus) - Ausgabe des `blkid` Befehls
-  - `.parted` - (Partitionsorientierter Modus) - Ausgabe des `parted` Befehls
+  - `.img` - boot partition
+  - `.mbr` - *Master Boot Record* of the system
+  - `.sfdisk` - Partition layout of the system - output of the `sfdisk` command
+  - `.blkid` - (partition oriented mode) - output of the `blkid` command
+  - `.parted` - (partition-oriented mode) - output of the `parted` command
 
 
 ```
@@ -90,7 +90,7 @@ root@raspiBackup:/mnt/backup/raspberrypi# tree -L 2
      └── raspiBackup.msg
 ```
 
-## Partitionsorientierter Backup
+## Partition-oriented backup
 
 ```
 root@boockworm:/mnt/backup/raspberrypi# tree -L 2

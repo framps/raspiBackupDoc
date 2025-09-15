@@ -109,7 +109,7 @@ The installer creates the following files:
 
     The following default values are set in this file and can be changed with the
     can be changed with the installer. All other options must be changed with an editor
-    or overwritten with a call option.
+    or overwritten with a invocation option.
 
     | Option | Setting |
     |----------------------|----------------------|
@@ -126,7 +126,7 @@ The installer creates the following files:
     | backup day | Sunday |
     | backup time | 05:00 a.m. |
 
-    [Call and options](backup-options.md) are described in detail.
+    [Invocation and options](backup-options.md) are described in detail.
 
   - *Systemd timer* Configuration `/etc/systemd/system/raspiBackup.timer`.
 

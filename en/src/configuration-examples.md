@@ -41,7 +41,7 @@ is backed up by default. However, this is not possible under Windows, but a Linu
 and use the tools `gparted` or `resize2fs` to shrink the root partition.
 must be reduced in size.
 
-## A Windows user wants to create an absolutely minimal image with *pishrink
+## A Windows user wants to create an absolutely minimal image with pishrink
 
 To create a minimal backup, you can use the *pishrink* tool. For this purpose
 there is the script `raspiBackupWrapper.sh`, with which at the end of the backup

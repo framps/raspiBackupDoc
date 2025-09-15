@@ -55,7 +55,7 @@ disk space when using hardlinks can be determined.
 
 ## Weblinks
 
-- du counting harldinks towards filesize](https://stackoverflow.com/questions/19951883/du-counting-hardlinks-towards-filesize) - An article that explains
+- [du counting harldinks towards filesize](https://stackoverflow.com/questions/19951883/du-counting-hardlinks-towards-filesize) - An article that explains
   why the du command must be executed over multiple directories,
   to see the savings from hardlinks
 
