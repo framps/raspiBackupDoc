@@ -84,7 +84,7 @@ Aufruf des Installers und Konfiguration des regelmäßigen Backupzeitpunktes.
 ## Hinweis zu ACLs
 
 Eigentlich kann man ACLs mit *NFS3* sichern. Das klappt z.B., wenn man eine
-Raspberry als NFS Server aufsetzt (Siehe [https://linux-tips-and-tricks.de](https://linux-tips-and-tricks.de/de/synology/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern)).
+Raspberry als NFS Server aufsetzt (Siehe [https://linux-tips-and-tricks.de](https://linux-tips-and-tricks.de/en/servere/604-how-to-backup-acls-with-rsync-on-a-nfs-partition)).
 Allerdings funktioniert das nicht mit einer *Synology* - auch wenn sie *NFS3* nutzt.
 
 Eine Anfrage bei Synology am 13.5.2022 lieferte folgende Antwort:

@@ -21,7 +21,7 @@ They are available for download on [*GitHub*](https://github.com/framps/raspiBac
    is available and only then starts *raspiBackup*. Apart from a few
    definitions of the NFS server, nothing needs to be adjusted.
 
-3 **raspiBackupRestore2Image.sh**: This script can be used to restore a tar or rsync
+3. **raspiBackupRestore2Image.sh**: This script can be used to restore a tar or rsync
    backup, which was created in normal backup mode, into a dd backup
    can be converted. In addition, pishrink is used to minimize the size of the dd image
    as much as possible. kmbach suggested the creation of the script.

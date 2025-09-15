@@ -1,4 +1,4 @@
-# Expansion options
+# Extension 
 
 It is possible to integrate your own code extensions before and after the
 back-up process of the script. This is useful if
@@ -190,7 +190,7 @@ append="$5" # file to append
 ### Hints
 
 - **Attention:** The extensions run with **root** rights and can therefore
-  and can therefore damage or even destroy the running system in case of errors!
+  damage or even destroy the running system in case of errors!
 
 - Both scripts (`pre` and `post`) are not necessary.
   One is sufficient.
@@ -203,8 +203,7 @@ append="$5" # file to append
   to its internal script variables. However, this is strongly discouraged,
   as the internals can change at any time. For this reason, it is also
   it is also advisable to provide your own variables with an extension-specific prefix,
-  to avoid possible conflicts with variable names used by *raspiBackup*,
-  to avoid possible conflicts.
+  to avoid possible conflicts with variable names used by *raspiBackup*.
 
 - If you would like to share your extension code, you are welcome to create a pull request on [*GitHub*](https://github.com/framps/raspiBackup).
   There, all extensions are available in source code to extend them and
