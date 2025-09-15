@@ -120,6 +120,10 @@ set tabstop=8  softtabstop=4  shiftwidth=4  noexpandtab  smarttab
 set listchars=tab:▸·,nbsp:⎵
 set list
 
+" where new split windows should be opened relative to the original one
+"set splitbelow
+"set splitright
+
 " for easier help navigation
 map \\ <C-]>
 
