@@ -128,3 +128,4 @@ That allows for some tricks:
 
 
 [.status]: z_SUMMARY
+[.status]: translated

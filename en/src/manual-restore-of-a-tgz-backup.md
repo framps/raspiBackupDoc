@@ -86,5 +86,5 @@ During the restore you should see the list of all files restored.
 
 Now remove the target SD card, insert it in another Raspberry and boot the Raspberry with the restored backup.
 
-[.status]: rst
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/646-raspibackup-manual-restore-of-a-tgz-backup

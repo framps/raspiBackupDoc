@@ -55,7 +55,7 @@ may be overwritten without a query.
 
 </div>
 
-[.status]: translated 
+[.status]: translated
 
 
 
