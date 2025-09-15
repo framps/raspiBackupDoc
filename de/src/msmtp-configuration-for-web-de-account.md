@@ -300,6 +300,6 @@ An: yyyyyy@web.de
 --- RBK0167I: Eine eMail wird versendet.
 ```
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/650-konfiguration-von-raspibackup-mit-msmtp-fuer-einen-web-de-account
 

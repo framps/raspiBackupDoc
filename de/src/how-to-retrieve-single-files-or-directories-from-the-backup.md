@@ -141,6 +141,6 @@ drwxr-xr-x 10  root root     4096 Dec 15 2012 usr
 drwxr-xr-x 12  root root     4096 Jul 8 2014 var
 ```
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/596-how-to-retrieve-single-files-or-directories-from-the-backup
 

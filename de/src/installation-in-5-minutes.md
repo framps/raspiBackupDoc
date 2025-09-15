@@ -198,6 +198,5 @@ welches die Nutzung und den Aufruf von *raspiBackup* vereinfacht.
 Sollte sich tatsächlich herausstellen, dass *raspiBackup* nicht den Anforderungen genügt,
 steht eine [Deinstallation](installer.md#deinstallation) per *raspiBackup* Installer zur Verfügung.
 
-
-[.status]: rft
+[.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/installation

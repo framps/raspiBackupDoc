@@ -11,9 +11,6 @@ Voraussetzungen: Login als Benutzer `pi` ins Home-Verzeichnis und eine aktive Ne
    Standardoptionen installiert. Anschließend kann man *raspiBackup* mit
    `sudo raspiBackupInstallUI` aufrufen und die Standardkonfiguration ändern.
 
-   [.status]: todo "Stimmt das so bzgl. /usr/local/bin???"
-   [.status]: todo "Und wieso steht das überhaupt hier im Abschnitt zur manuellen Installation???"
-
    ```
     curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
     ```
@@ -60,7 +57,7 @@ und dort *2.2* und *2.3* auszuführen. Allerdings muss man berücksichtigen, das
 keine Benachrichtigungen geschickt werden können wie auch keine
 Benachrichtigungen von *raspiBackup* bei neuen Versionen erhalten werden.
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/538-raspibackup-manuelle-installation
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/539-raspibackup-manual-installation
 
