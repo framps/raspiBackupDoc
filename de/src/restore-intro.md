@@ -214,6 +214,6 @@ restoren. Allerdings geht das dann nicht ganz so bequem wie mit dem Script
 und es sind entsprechende Linux Kenntnisse erforderlich ;-)
 Siehe dazu auch [Manueller Restore eines Backups](manual-restore.md).
 
-[.status]: rft
+[.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/raspibackup#restore
 [.source]: https://linux-tips-and-tricks.de/de/wiederherstellen

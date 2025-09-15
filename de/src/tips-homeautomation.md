@@ -74,5 +74,5 @@ systemctl start smarthome
 bei DEFAULT_STARTSERVICES
 
 
-[.status]: rft
+[.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/anwendungstipps
