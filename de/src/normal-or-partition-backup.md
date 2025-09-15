@@ -22,6 +22,6 @@ Es existieren zwei Backupmodi:
    Partitionen beliebig. Falls das Zielgerät beim Restore größer ist als das
    Quellgerät, wird die letzte Partition soweit erweitert, dass das gesamte Zielgerät genutzt wird.
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#Vergleich
 [.source]: https://www.linux-tips-and-tricks.de/en/backup

@@ -1,7 +1,84 @@
-# Users all over the world
+# Users of *raspiBackup* worldwide
 
-A complete list of countries is available on [framp's website](https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/547-raspibackup-list-of-countries-raspibackup-is-used-in-the-world).
+As of January 2024, *raspiBackup* has users in 70 countries around the world:
 
-[.de]: ../../de/src/list-of-countries-raspibackup-is-used-in-the-world.md
-[.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/547-raspibackup-list-of-countries-raspibackup-is-used-in-the-world
+- AD Andorra
+- AE United Arab Emirates
+- AL Albania
+- AM Armenia
+- AR Argentina
+- AT Austria
+- AU Australia
+- BE Belgium
+- BG Bulgaria
+- BN Brunei
+- BR Brasilia
+- CA Canada
+- CH Switzerland
+- CL Chile
+- CM Cameroon
+- CN China
+- CO Colombia
+- CY Cyprus
+- CZ Czech Republic
+- DE Germany
+- DK Denmark
+- EE Estonia
+- ES Spain
+- EU Europe
+- FI Finland
+- FR France
+- GB United Kingdom
+- GE Georgia
+- GH Ghana
+- GR Greece
+- HK Hong Kong
+- HR Croatia
+- HU Hungary
+- ID Indonesia
+- IE Ireland
+- IL Israel
+- IN India
+- IP
+- IR Iran
+- IT Italy
+- JE Jersey
+- JP Japan
+- KE Kenya
+- KR South Korea
+- KZ Kazakhstan
+- LI Liechtenstein
+- LT Lithuania
+- LU Luxembourg
+- LV Latvia
+- MD Moldova
+- MK North Macedonia
+- MT Malta
+- MX Mexico
+- MY Malaysia
+- NG Nigeria
+- NL Netherlands
+- NO Norway
+- NZ New Zealand
+- PA Panama
+- PH Philippines
+- PL Poland
+- PT Portugal
+- RO Romania
+- SC Seychelles
+- SE Sweden
+- SG Singapore
+- SI Slovenia
+- SK Slovakia
+- TH Thailand
+- TR Turkey
+- TW Taiwan
+- UA Ukraine
+- US United States of America
+- VN Vietnam
+- ZA Zaire
+
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/546-raspibackup-benutzer-aus-aller-welt
+[.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/547-raspibackup-list-of-countries-raspibackup-is-used-in-the-world
+

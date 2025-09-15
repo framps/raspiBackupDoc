@@ -6,5 +6,5 @@
 - [Automatic RPi Image Downsizer](https://sirlagz.net/2013/03/10/script-automatic-rpi-image-downsizer/)
 - [How To Take Hot Backup Of Raspberry Pi Without Removing The SD Card](https://www.megaleecher.net/Best_Raspberry_Pi_Hot_Backup_Shell_Script#axzz4Fi2DzcnY)
 
-[.status]: rft
+[.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/raspibackup#links

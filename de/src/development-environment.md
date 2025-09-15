@@ -43,6 +43,6 @@ Die meisten Probleme werden in [*GitHub*](https://github.com/framps/raspiBackup/
 es [hier auf *GitHub*](https://github.com/framps/raspiBackup/releases) eine Zusammenfassung der Bugfixes und neuer Funktionalität.
 
 
-[.status]: rft
+[.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/516-raspibackup-entwicklungsumgebung
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/517-raspibackup-developmentenvironment
