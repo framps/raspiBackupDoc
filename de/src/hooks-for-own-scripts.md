@@ -1,4 +1,4 @@
-# Erweiterungsmöglichkeiten
+# Erweiterungen/Plugins
 
 Es besteht die Möglichkeit, eigene Codeerweiterungen vor und nach dem
 Backupprozess des Scripts einzubinden. Dieses ist sinnvoll, wenn

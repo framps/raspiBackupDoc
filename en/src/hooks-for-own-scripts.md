@@ -1,4 +1,4 @@
-# Extension 
+# Extensions/Plugins
 
 It is possible to integrate your own code extensions before and after the
 back-up process of the script. This is useful if

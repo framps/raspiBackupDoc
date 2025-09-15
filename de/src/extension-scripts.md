@@ -1,4 +1,4 @@
-# Erweiterungen
+# Erweiterungsscripte
 
 Im *raspiBackup* [Git Repository](https://github.com/framps/raspiBackup/tree/master/helper) befinden sich verschiedene Scripte,
 die genutzt werden können, um darauf aufbauend die Funktionalität
