@@ -655,7 +655,7 @@ Further actions:
 
 Install bc with `sudo apt-get install bc` so that the disk example extension outputs valid values.
 
-<a name=exitcodes></a>
+<a name="exitcodes"></a>
 ## Exit codes
 
 Normally *raspiBackup* terminates with an error code 0.
