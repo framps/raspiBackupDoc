@@ -52,20 +52,36 @@ def check_anchor_in_target_file(target: Path,
     """
     content = target.read_text()
 
-    m1 = re.search(f'<a name="{anchor}">', content)
-    m2 = re.search(f'^##* {anchor}', content, re.IGNORECASE | re.MULTILINE)
-
-    if m1 or m2:
-        return
+    m_anchor_quoted = re.search(f'<a name="{anchor}">', content)
+    m_anchor_unquoted = re.search(f'<a name={anchor}[^"]', content)
+    m_title = re.search(f'^##* {anchor}', content,
+                        re.IGNORECASE | re.MULTILINE)
 
     if is_local_anchor:
-        print(f"{file.as_posix()}:{line_number}:"
-              f" Anchor not found: '{anchor}'")
+        if m_anchor_unquoted:
+            # print(m_anchor_unquoted.start())
+            target_line = content[:m_anchor_unquoted.start()].count("\n")+1
+            print(f"{file.as_posix()}:{line_number}:"
+                  f" Anchor name '{anchor}' is not quoted"
+                  f" in line {target_line}!")
+        else:
+            if m_anchor_quoted or m_title:
+                return
+            print(f"{file.as_posix()}:{line_number}:"
+                  f" Anchor not found: '{anchor}'")
     else:
-        print(f"{file.as_posix()}:{line_number}:"
-              f" Anchor not found"
-              f" in target file '{target.as_posix()}':"
-              f" '{anchor}'")
+        if m_anchor_unquoted:
+            target_line = content[:m_anchor_unquoted.start()].count("\n")+1
+            print(f"{file.as_posix()}:{line_number}:"
+                  f" Anchor name '{anchor}' is not quoted"
+                  f" in target file '{target.as_posix()}:{target_line}'!")
+        else:
+            if m_anchor_quoted or m_title:
+                return
+            print(f"{file.as_posix()}:{line_number}:"
+                  f" Anchor not found"
+                  f" in target file '{target.as_posix()}':"
+                  f" '{anchor}'")
 
 
 def check_markdown_file(root: Path, file: Path,
@@ -125,14 +141,18 @@ def check_markdown_file(root: Path, file: Path,
 
 
 def walk_dir(directory: Path, raspibackupdoc=False,
-             external_links=None) -> None:
+             external_links=None, verbose=False) -> None:
     """Traverse given directory and check Markdown files """
 
     for root, _, files in Path(directory).walk(on_error=print):
+        if verbose:
+            print(">>> Checking directory", root)
         for f in files:
             file = root / f
             if file.suffix not in (".md", ".mkd", ".markdown"):
                 continue
+            if verbose:
+                print(">>> Checking file", file)
             check_markdown_file(root, file,
                                 raspibackupdoc=raspibackupdoc,
                                 external_links=external_links)
@@ -156,7 +176,7 @@ def main(args):
 
     for srcdir in args.pathes:
         walk_dir(srcdir, raspibackupdoc=args.raspiBackupDoc,
-                 external_links=external_links)
+                 external_links=external_links, verbose=args.verbose)
 
     if external_links and args.show_external_links:
         print_external_links(external_links)
@@ -176,6 +196,8 @@ if __name__ == "__main__":
                         help='special handling regarding directory structure',
                         action='store_true')
     parser.add_argument('--show-external-links',
+                        action='store_true')
+    parser.add_argument('--verbose',
                         action='store_true')
 
     main(parser.parse_args())
