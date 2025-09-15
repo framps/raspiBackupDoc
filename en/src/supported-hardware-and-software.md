@@ -19,10 +19,10 @@ these are not made and therefore *raspiBackup* cannot be used in the environment
 But even if a fix eliminates the problem, the environment remains unsupported.
 
 In particular, any Linux OS can usually be used on any hardware,
-to restore a backup. Here, too, the option `--unsupportedenvironment` is necessary.
-is necessary. If there are problems, a Raspberry must be used for the restore.
+to restore a backup. Here, too, the option `--unsupportedEnvironment` is necessary.
+If there are problems, a Raspberry must be used for the restore.
 
-Given the fact that **raspiBackup is ~~free~~ for free**, it is too expensive/too complex for *framp*,
+Given the fact that *raspiBackup* **is for free**, it is too expensive/too complex for *framp*,
 
  1) Purchase all possible hardware for the tests
  1) Set up all possible hardware and software test combinations
@@ -36,7 +36,7 @@ environments will be supported by *raspiBackup* in the future.
 
 When called, *raspiBackup* checks whether supported hardware and software is available
 and terminates itself if not. With the option `--unsupportedEnvironment` this check is
-This check is not carried out and may lead to errors and program aborts.
+not carried out and may lead to errors and program aborts.
 
 ## Raspberry Pi OS (RaspbianOS) Lite and Desktop
 

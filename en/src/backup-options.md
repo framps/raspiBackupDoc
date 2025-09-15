@@ -25,6 +25,7 @@ have the exact reverse order to the commands in the -o parameter.
 
 ```
 -a "service nfs-kernel-server start && service smbd start"
+```
 
 If **no** service is really to be started, a colon ":" must be given as an argument.
 

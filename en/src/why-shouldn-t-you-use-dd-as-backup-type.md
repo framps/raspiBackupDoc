@@ -71,8 +71,8 @@ the backups have to be unpacked first.
 
 ## Further information
 
-  - How do hardlinks work](how-do-hardlinks-work-with-rsync.md)
-  - Which file system can be used on the backup device?](which-filesystem-can-be-used-on-the-backup-partition.md)
+  - [How do hardlinks work](how-do-hardlinks-work-with-rsync.md)
+  - [Which file system can be used on the backup device?](which-filesystem-can-be-used-on-the-backup-partition.md)
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/579-warum-sollte-man-dd-als-backupmethode-besser-nicht-benutzen

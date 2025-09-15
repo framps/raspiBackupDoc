@@ -64,8 +64,8 @@ As long as you are on the console, a list of the available
 available invocation options and their current status with the
 options `-h` or `--help`.
 
-## Thematic list of iinvocation options
+## Thematic list of invocation options
 
-A list of iinvocation options is also available [sorted by topic](options-by-topic.md).
+A list of invocation options is also available [sorted by topic](options-by-topic.md).
 
 [.status]: translated

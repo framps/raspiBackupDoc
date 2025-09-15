@@ -19,10 +19,10 @@ werden diese nicht vorgenommen und somit kann *raspiBackup* in dem Environment n
 Aber auch wenn ein Fix das Problem beseitigt, bleibt das Environment nicht unterstützt.
 
 Insbesondere kann meist ein beliebiges Linux OS auf einer beliebigen Hardware genutzt werden,
-um ein Backup zu restoren. Auch hier ist dann die Option `--unsupportedenvironment`
+um ein Backup zu restoren. Auch hier ist dann die Option `--unsupportedEnvironment`
 notwendig. Sollte es doch Probleme geben, muss eine Raspberry zum Restore genutzt werden.
 
-Unter der Tatsache, dass **raspiBackup ~~umsonst~~ gratis** ist, ist es zu teuer/zu aufwändig für *framp*,
+Unter der Tatsache, dass *raspiBackup* **umsonst** ist, ist es zu teuer/zu aufwändig für *framp*,
 
  1) sich alle mögliche Hardware für die Tests anzuschaffen
  1) alle mögliche Hardware- und Softwaretestkombinationen aufzubauen

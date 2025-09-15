@@ -30,7 +30,7 @@ However, the standard installation with the installer is described here.
 *raspiBackupInstallUI* before installation, you can do this via the following links:
 
   - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
-  - Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
+  - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
 
 
 ## The *raspiBackup* installer
@@ -196,7 +196,7 @@ which simplifies the use and calling of *raspiBackup*.
 ## Uninstallation
 
 If it turns out that *raspiBackup* does not meet the requirements,
-uninstallation](installer.md#deinstallation) is available via *raspiBackup* Installer.
+[uninstallation](installer.md#deinstallation) is available via *raspiBackup* Installer.
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/installation
