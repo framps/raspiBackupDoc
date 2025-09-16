@@ -1,9 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
-
 # Backup targets
 
 *raspiBackup* mounts a backup partition in order to store the backups on it.

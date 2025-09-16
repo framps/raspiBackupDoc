@@ -1,9 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_128.png)
-</center>
-
-
 # Erweiterungsscripte
 
 Im *raspiBackup* [Git Repository](https://github.com/framps/raspiBackup/tree/master/helper) befinden sich verschiedene Scripte,

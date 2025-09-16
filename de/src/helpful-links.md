@@ -1,8 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
 # Hilfreiche Links zum Thema Backup
 
 - [Shrinking images on Linux](https://softwarebakery.com/shrinking-images-on-linux)

@@ -1,8 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
 # Language support
 
 For displaying it's dialogs and messages *raspiBackup* takes the system language into account.

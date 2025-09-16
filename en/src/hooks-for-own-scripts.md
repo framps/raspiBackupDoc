@@ -1,9 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
-
 # Extensions/Plugins
 
 It is possible to integrate your own code extensions before and after the

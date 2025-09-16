@@ -1,9 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
-
 Oben auf den Seiten befinden sich zwei Icon-Gruppen zur Bedienung
 der Dokumentation:
 

@@ -1,9 +1,3 @@
-
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
 At the top of the pages there are two groups of icons for operating
 the documentation:
 

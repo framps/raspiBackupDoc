@@ -1,9 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
-
 # Function overview
 
 This page contains a high-level overview of *raspiBackup*.

@@ -1,8 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
 # Tipps zur Homeautomation
 
 Auf den folgenden Seiten werden Hinweise zu verschiedenen Anwendungen gegeben:

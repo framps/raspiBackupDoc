@@ -1,8 +1,3 @@
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
 # Hilfsprogramme
 
 Auf den folgenden Seiten werden verschiedene Hilfsprogramme vorgestellt:

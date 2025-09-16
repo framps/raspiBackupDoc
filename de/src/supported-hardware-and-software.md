@@ -1,8 +1,3 @@
-<center>
-
-![raspiBackup icon](images/icons/Icon_rot_blau_final_64.png)
-</center>
-
 # Unterstützte Hardware und Software
 
 *raspiBackup* wird nur auf Raspberry Pi Hardware mit dem *Raspberry Pi OS* und *Ubuntu*
