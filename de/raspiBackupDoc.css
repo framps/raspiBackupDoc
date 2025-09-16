@@ -1,5 +1,12 @@
 /* Adaptions for raspiBackupDoc */
 
+.logo {
+    text-align: center;
+    img {
+	width: 32px;
+    }
+}
+
 /* settings for small tables in options list */
 .table-wrapper-for-options {
     table {
