@@ -201,7 +201,7 @@ which simplifies the use and calling of *raspiBackup*.
 ## Uninstallation
 
 If it turns out that *raspiBackup* does not meet the requirements,
-[uninstallation](installer.md#deinstallation) is available via *raspiBackup* Installer.
+[uninstallation](installer.md#uninstallation) is available via *raspiBackup* Installer.
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/installation
