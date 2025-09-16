@@ -65,6 +65,7 @@ if [[ "$FZF_VERSION" < "0.53.0" ]] ; then
 fi
 
 export BAT
+
 if [[ -f ./vimrc_project ]] ; then
     export VIM_PROJECT="vim -u ./vimrc_project"
 else

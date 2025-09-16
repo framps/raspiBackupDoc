@@ -181,6 +181,7 @@ let g:vim_markdown_conceal_code_blocks = 0
 " Use :ALEInfo to see the config for the current buffer!
 let g:ale_enabled = 1
 let g:ale_linters = {'sh': ['shellcheck'], 'python': ['ruff', 'flake8', 'pylint']}
+let g:ale_linters_ignore = {'python': ['mypy', 'pyright']}
 let g:ale_virtualtext_cursor = 'current'
 let g:ale_set_loclist = 1
 let g:ale_set_quickfix = 0
