@@ -1,3 +1,9 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
+
 # Invocation and options
 
 *raspiBackup* must be invoked as user *root* or via `sudo`.

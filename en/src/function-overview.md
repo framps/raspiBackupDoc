@@ -1,3 +1,9 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
+
 # Function overview
 
 This page contains a high-level overview of *raspiBackup*.
@@ -7,7 +13,7 @@ and on the [*GitHub* page](https://github.com/framps/raspiBackup).
 
 **With *raspiBackup* you can quickly and securely obtain a complete system backup of your Raspberries and a configurable backup history on a regular basis.
 and can thus completely restore your Raspberry so that it boots again with an old backup status**.
- 
+
   - Open source
 
     *raspiBackup* is available under the GNU license as open source and free of charge.

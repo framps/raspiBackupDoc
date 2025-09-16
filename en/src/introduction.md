@@ -1,4 +1,9 @@
 
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
 ``` admonish info title="Usage hints"
 At the top of the pages there are two groups of icons for operating
 the documentation:
@@ -19,10 +24,11 @@ the documentation:
 Typing a `?` displays a small keyboard navigation aid.
 ```
 
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_128.png)
-</center>
+``` admonish info title="Note"
+To reduce the translation effort given the amount of documentation pages all German pages were
+translated with [DeepL](https://www.deepl.com) into English.
+Thank you very much to DeepL who offer to use the translator for free.
+```
 
 ---
 

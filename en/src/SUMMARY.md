@@ -79,7 +79,7 @@ That allows for some tricks:
         - [How can I install and test the beta version?](how-can-i-install-and-test-the-beta-version.md)
         - [Is an external root partition supported?](external-root-partition.md)
 
-- [Usage and options](invocation-options.md)
+- [Invocation and options](invocation-options.md)
     - [Backup](backup.md)
         - [Options](backup-options.md)
         - [Configuration](backup-config-options.md)
@@ -122,7 +122,7 @@ That allows for some tricks:
 
 # Developer guide
 
-- [Extension possibilities](hooks-for-own-scripts.md)
+- [Extensions/Plugins](hooks-for-own-scripts.md)
 - [Extension scripts](extension-scripts.md)
 - [Support new languages](local-language-support-for-languages-other-than-de-and-en-l10n.md)
 

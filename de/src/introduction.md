@@ -1,3 +1,8 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
 
 ``` admonish info title="Nutzungshinweise"
 Oben auf den Seiten befinden sich zwei Icon-Gruppen zur Bedienung
@@ -18,11 +23,6 @@ der Dokumentation:
 
 Eintippen eines `?` blendet eine kleine Tastatur-Navigationshilfe ein.
 ```
-
-<center>     <!-- The blank line before the image definition is required! -->
-
-![Icon](images/icons/Icon_rot_blau_final_128.png)
-</center>
 
 ---
 

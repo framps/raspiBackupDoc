@@ -1,3 +1,8 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_128.png)
+</center>
+
 # Schnellstart - Installation in 5 Minuten
 
 Die Dokumentation von *raspiBackup* ist Aufgrund der Fülle an Funktionen
