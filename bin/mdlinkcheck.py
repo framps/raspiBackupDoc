@@ -52,36 +52,36 @@ def check_anchor_in_target_file(target: Path,
     """
     content = target.read_text()
 
-    m_anchor_quoted = re.search(f'<a name="{anchor}">', content)
-    m_anchor_unquoted = re.search(f'<a name={anchor}[^"]', content)
+    m_anchor_dblquoted = re.search(rf'<a name="{anchor}">', content)
+    m_anchor_unquoted = re.search(rf"<a name=({anchor}|'{anchor}')>", content)
     m_title = re.search(f'^##* {anchor}', content,
                         re.IGNORECASE | re.MULTILINE)
 
     if is_local_anchor:
         if m_anchor_unquoted:
-            # print(m_anchor_unquoted.start())
-            target_line = content[:m_anchor_unquoted.start()].count("\n")+1
+            target_line_nr = content[:m_anchor_unquoted.start()].count("\n")+1
             print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor name '{anchor}' is not quoted"
-                  f" in line {target_line}!")
+                  f" Anchor name is not double-quoted"
+                  f" in line {target_line_nr}:"
+                  f" {m_anchor_unquoted.group(0)}")
         else:
-            if m_anchor_quoted or m_title:
+            if m_anchor_dblquoted or m_title:
                 return
             print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor not found: '{anchor}'")
+                  f" Anchor/target '{anchor}' not found!")
     else:
         if m_anchor_unquoted:
-            target_line = content[:m_anchor_unquoted.start()].count("\n")+1
+            target_line_nr = content[:m_anchor_unquoted.start()].count("\n")+1
             print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor name '{anchor}' is not quoted"
-                  f" in target file '{target.as_posix()}:{target_line}'!")
+                  f" Anchor name is not double-quoted"
+                  f" in target file '{target.as_posix()}:{target_line_nr}':"
+                  f" {m_anchor_unquoted.group(0)}")
         else:
-            if m_anchor_quoted or m_title:
+            if m_anchor_dblquoted or m_title:
                 return
             print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor not found"
-                  f" in target file '{target.as_posix()}':"
-                  f" '{anchor}'")
+                  f" Anchor/target '{anchor}' not found"
+                  f" in target file '{target.as_posix()}'!")
 
 
 def check_markdown_file(root: Path, file: Path,
