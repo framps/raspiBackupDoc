@@ -1,3 +1,8 @@
+center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_64.png)
+</center>
+
 # Weitere Backuptools
 
 Anbei findet sich eine unvollständige Liste von anderen Backuptools, die genutzt werden können, um eine Raspberry zu sichern.

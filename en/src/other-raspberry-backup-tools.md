@@ -1,3 +1,8 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_64.png)
+</center>
+
 # Other backup tools
 
 Below is an incomplete list of other backup tools that can be used to back up a Raspberry.

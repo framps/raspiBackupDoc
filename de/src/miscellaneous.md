@@ -1,3 +1,8 @@
+center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_64.png)
+</center>
+
 # Verschiedenes
 
 In den folgenden Kapiteln gibt es für interessierte *raspiBackup* Nutzer

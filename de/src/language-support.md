@@ -1,3 +1,8 @@
+center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_64.png)
+</center>
+
 # Sprachunterstützung
 
 *raspiBackup* nutzt standardmäßig die Systemsprache, um die entsprechende Sprache auszuwählen und zur Anzeige zu nutzen.

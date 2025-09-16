@@ -1,6 +1,6 @@
 <center>
 
-![raspiBackup icon](images/icons/Icon_rot_blau_final_128.png)
+![raspiBackup icon](images/icons/Icon_rot_blau_final_64.png)
 </center>
 
 # Unterstützte Hardware und Software

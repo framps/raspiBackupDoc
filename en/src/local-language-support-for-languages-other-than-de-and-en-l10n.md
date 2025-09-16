@@ -1,3 +1,8 @@
+<center>     <!-- The blank line before the image definition is required! -->
+
+![Icon](images/icons/Icon_rot_blau_final_64.png)
+</center>
+
 # Language support for languages other than DE and EN (L10N)
 
 *raspiBackupInstallUI* and *raspiBackup* initially printed messages in German and English only.
