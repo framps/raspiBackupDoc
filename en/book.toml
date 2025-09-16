@@ -2,7 +2,7 @@
 authors = ["framp", "simonz"]
 language = "en"
 src = "src"
-title = "raspiBackup"
+title = "raspiBackup Documentation"
 
 [build]
 build-dir = "book"
