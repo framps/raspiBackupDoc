@@ -62,7 +62,7 @@ checklinks:
 	@if ! command -v mdlinkcheck.py >/dev/null; then \
 		echo -e "\n##############################################\n#  For additional checks of Markdown links\n#  install 'mdlinkcheck.py' from here:\n#  https://github.com/rpi-simonz/mdlinkcheck\n##############################################\n"; \
 		read -p "Install 'mdlinkcheck.py' automatically now [Y/n]? " inp; \
-		if [[ -z "$${inp}" ]] || [[ "$${inp}" == "Y" ]] ; then \
+		if [[ -z "$${inp}" ]] || [[ "$${inp}" =~ y|Y ]] ; then \
 			echo ""; \
 			P=$$((echo -e "Please select user-writable directory to install 'mdlinkcheck.py' in\nand press ENTER. (ESC to abort.)" ; echo "$$PATH" | tr ":" "\n") \
 			| fzf --disabled --reverse --header-lines=2); \
