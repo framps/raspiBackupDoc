@@ -1,4 +1,4 @@
-*raspiBackupDialog* - a comfortable help script for *raspiBackup*
+# *raspiBackupDialog* - a comfortable help script for *raspiBackup*
 
 An agile user of *raspiBackup* - [Franjo-G](https://github.com/franjo-G) - has written a very useful little helper script called [raspiBackupDialog](https://github.com/franjo-G).
 help script with the name [raspiBackupDialog](https://github.com/framps/raspiBackup/blob/master/helper/raspiBackupDialog.sh), which shows in a dialog

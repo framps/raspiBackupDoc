@@ -1,4 +1,3 @@
-
 # General options and configurations
 
 The nvocation options and the corresponding configuration options
@@ -12,5 +11,3 @@ See also [Backup options](backup-options.md) and [Backup configuration options](
 as well as [Restore options](restore-options.md) and [Restore configuration options](restore-config-options.md)
 
 [.status]: translated
-
-
