@@ -3,26 +3,6 @@
 ![Icon](images/icons/Icon_rot_blau_final_64.png)
 </center>
 
-
-``` admonish info title="Nutzungshinweise"
-Oben auf den Seiten befinden sich zwei Icon-Gruppen zur Bedienung
-der Dokumentation:
-
-![Menü-links](images/mdbook-icons-left.png)
-
-  - Ein-/Ausblenden eines Inhaltsverzeichnisses
-  - Auswahl eines Themes
-  - Suchfunktion
-
-![Menü-rechts](images/mdbook-icons-right.png)
-
-  - Sprachauswahl (Deutsch/Englisch)
-  - Drucken
-  - *GitHub*-Seite des Dokumentationsprojektes
-  - Änderungen an der aktuellen Seite im *GitHub* vorschlagen
-
-Eintippen eines `?` blendet eine kleine Tastatur-Navigationshilfe ein.
-```
 ---
 
 Themen auf dieser Seite:

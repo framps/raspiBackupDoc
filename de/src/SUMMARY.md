@@ -36,6 +36,8 @@ Dies ermöglicht einige kleine Kniffe:
 
 [Einführung](introduction.md)
 
+[Nutzungshinweise](help.md) 
+
 # Nutzerinformationen
 
 - [Funktionsübersicht](function-overview.md)
@@ -124,7 +126,7 @@ Dies ermöglicht einige kleine Kniffe:
 
 - [Erweiterungen/Plugins](hooks-for-own-scripts.md)
 - [Erweiterungsscripte](extension-scripts.md)
-- [Support new languages](local-language-support-for-languages-other-than-de-and-en-l10n.md)
+- [Unterstütze weiter Sprachen](local-language-support-for-languages-other-than-de-and-en-l10n.md)
 
 
 [.status]: z_SUMMARY

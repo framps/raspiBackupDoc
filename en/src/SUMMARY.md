@@ -36,6 +36,8 @@ That allows for some tricks:
 
 [Introduction](introduction.md)
 
+[Usage hints](help.md)
+
 # User guide
 
 - [Function overview](function-overview.md)
