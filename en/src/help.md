@@ -16,6 +16,8 @@ the documentation:
   - *GitHub* page of the documentation project
   - Suggest changes to the current page in *GitHub
 
+<br>
+
 Type `?` to display a small keyboard navigation aid.
 
 <br>

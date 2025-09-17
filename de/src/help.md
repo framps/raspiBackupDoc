@@ -16,6 +16,8 @@ der Dokumentation:
   - *GitHub*-Seite des Dokumentationsprojektes
   - Änderungen an der aktuellen Seite im *GitHub* vorschlagen
 
-Tippe `?` um eine kleine Tastatur-Navigationshilfe einzublenden.
+<br>
+
+Tippe `?`, um eine kleine Tastatur-Navigationshilfe einzublenden.
 
 [.status]: translated
