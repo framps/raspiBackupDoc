@@ -1,4 +1,4 @@
-# Usage hints
+# Documentation navigation
 
 At the top of the pages there are two groups of icons for operating
 the documentation:
