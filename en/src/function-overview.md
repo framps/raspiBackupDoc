@@ -11,7 +11,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Open source
 
     *raspiBackup* is available under the GNU license as open source and free of charge.
-    However, a [tip](introduction.md#donation) is still welcome 😉
+    However, a [donation](introduction.md#donation) is still welcome 😉
 
   - Simple [installation](installation-in-5-minutes.md) with menu-driven installer (comparable to `raspi-config`)
 
