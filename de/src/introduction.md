@@ -1,11 +1,3 @@
----
-
-Themen auf dieser Seite:
-
-<!-- toc -->
-
----
-
 # Einführung
 
 Eine regelmäßige Sicherung von Raspberry Pis ist wichtig, um im Falle eines
@@ -18,50 +10,19 @@ Das kann manuell oder automatisch in regelmäßigen Abständen geschehen.
 Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten.
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
 
-Backups können auf alle Geräte, die an Linux gemounted werden können, gesichert
-werden. Dazu gehören SD-Karten, USB Sticks, USB Platten, SSDs und NVMe SSDs.
-Auch Netzlaufwerke, die per NFS, SMB, SSHFS, FtpFS und WebDAV gemounted werden,
-können als Ziel für Backups genutzt werden.
-
-Ein Backup kann auf anderen Geräten zurückgespielt werden, als auf das Gerät, von
-dem ein Backup erstellt wurde. Zum Beispiel kann ein Backup einer SD-Karte auf
-einer SSD zurückgespielt werden.
-
-Die Anzahl der vorzuhaltenden Backups ist konfigurierbar oder es wird das
-[Großvater-Vater-Sohn Generationenprinzip](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md) genutzt.
-Außerdem können manuell sogenannte *raspiBackup* [Snapshots](snapshots.md) erstellt werden. Dieses sind Backups, die
-nicht automatisch gelöscht werden und dazu dienen, bei Systemupgrades Zwischenschritte zu sichern
-um jederzeit bei Fehlern beim Upgrade wieder auf vorherige Stände zurückgehen zu können.
-
-Es gibt zwei [Backupmodi](normal-or-partition-backup.md):
-Der **normale Backupmodus** sichert nur die Boot- und Rootpartition.
-Der **partitionsorientierte Modus** sichert beliebig viele Partitionen.
-
-Folgende Linux Backuptools können genutzt werden:
-`dd`und `tar`, beides auch gezipped, die immer ein Vollbackup erstellen
-und `rsync`mit [Hardlinknutzung](how-do-hardlinks-work-with-rsync.md),
-um relativ schnell ein Deltabackup zu erstellen.
-Die einzelnen Backuptypen sind im Detail [hier](backup-types.md) beschrieben.
-Dort befindet sich auch ein [Entscheidungsbaum](backup-types.md#decisiontree),
-um schnell den richtigen Backuptyp zu finden.
-
 Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
 Optionen von *raspiBackup* konfiguriert werden können, vergleichbar mit `raspi-config`.
 Speziellere Einstellungen lassen sich in einer Konfigurationsdatei vornehmen.
 
-Für Entwickler bietet *raspiBackup* verschiedene [Erweiterungspunkte](hooks-for-own-scripts.md),
-um eigenen Code ausführen zu lassen.
-
-Weiterhin existieren verschiedene [Scripts](https://github.com/framps/raspiBackup/tree/master/helper),
-die die Funktionalität von *raspiBackup* erweitern und entweder unverändert genutzt
-oder an eigene Anforderungen angepasst werden können.
-
-Am Ende eines Backuplaufes kann *raspiBackup*, wenn gewünscht, eine Benachrichtigung per eMail,
-*Telegram*, *Slack* oder *Pushover* senden.
-
-Alle Funktionen und Einsatzgebiete von *raspiBackup* sind tabellarisch in der
+Alle Funktionen und Einsatzgebiete von *raspiBackup* sind gleich im ersten Kapitel
 [Funktionsübersicht](function-overview.md) zusammengetragen.
+
+
+Weitere Themen auf dieser Seite:
+
+<!-- toc -->
+
 
 ## Einführungsvideo und Youtube-Channel
 

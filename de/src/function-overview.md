@@ -16,8 +16,8 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
   - Einfache [Installation](installation-in-5-minutes.md) mit menügeführtem Installer (vergleichbar mit `raspi-config`)
 
     Die wichtigsten Optionen von *raspiBackup* können in Deutsch, Englisch, Finnisch,
-    Chinesisch und Französisch konfiguriert werden, so dass die erste [Sicherung
-    in 5 Minuten](installation-in-5-minutes.md) erstellt werden kann.
+    Chinesisch und Französisch konfiguriert werden,
+    so dass die erste [Sicherung in 5 Minuten](installation-in-5-minutes.md) erstellt werden kann.
 
   - Alle weiteren z.T. sehr mächtigen Optionen sind [ausführlich dokumentiert](invocation-options.md)
     und können in einer Konfigurationsdatei definiert werden.
@@ -25,14 +25,24 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
   - Vollständige und inkrementelle Sicherungen
 
       - Der Backuptyp `rsync` erstellt vollständige und dann inkrementelle Sicherungen
-      - Die Backuptypen `dd` und `tar` erstellen immer vollständige Sicherungen
+        mittels Nutzung von [Hardlinks](how-do-hardlinks-work-with-rsync.md).
+      - Die Backuptypen `dd` und `tar` erstellen immer vollständige Sicherungen (auch gezipped).
         Hinweis: Beim `dd` Backup ist per Option einschaltbar, dass nur der von den Partitionen
         belegte Platz und nicht die gesamte SD-Karte gesichert wird.
+
+    Die einzelnen Backuptypen sind im Detail [hier](backup-types.md) beschrieben.
+    Dort befindet sich auch ein [Entscheidungsbaum](backup-types.md#decisiontree),
+    um schnell den richtigen Backuptyp zu finden.
 
   - Zwei Sicherungsstrategien
 
       - Eine definierte Anzahl von Sicherungen wird vorgehalten
       - Sicherungen werden nach der Großvater-Vater-Sohn Sicherungsstrategie (GVS) vorgehalten.
+
+  - Zwei [Backupmodi](normal-or-partition-backup.md):
+
+      - der **normale Backupmodus** sichert nur die Boot- und Rootpartition
+      - der **partitionsorientierte Modus** sichert beliebig viele Partitionen
 
   - Beliebige Verzeichnisse und Dateien können aus dem Backup ausgeschlossen werden (`-u` Option)
 
@@ -90,18 +100,19 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
 
   - Snapshots
 
-    Zum Beispiel zu wichtigen Update- oder Installationszeitpunkten können
-    Snapshots mit einer Beschreibung erstellt werden. Im Falle eines größeren
-    Fehlers oder eines nicht mehr startenden Systems erlauben sie, dort wieder
-    aufzusetzen, ohne mit der Update- oder der Neuinstallation wieder ganz von
-    vorne anfangen zu müssen.
+    Es können manuell sogenannte *raspiBackup* [Snapshots](snapshots.md) erstellt werden.
+
+    Das sind benannte Backups, die nicht automatisch gelöscht werden.
+    Sie dienen zum Beispiel dazu, bei Systemupgrades wichtige Zwischenschritte
+    zu sichern, um jederzeit bei Problemen wieder auf vorherige Stände
+    zurückgehen zu können.
 
   - Eine beliebige Anzahl von Backups aus der Vergangenheit können vorgehalten werden
 
     Es wird nicht nur ein einzelnes Backup erstellt, sondern eine Backuphistorie.
     Entweder definiert man eine Anzahl von Backups, die vorgehalten werden sollen,
     oder man nutzt das *GVS*-Prinzip (in *raspiBackup* "Intelligente Rotationsstrategie"
-    genannt)
+    genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
 
   - Eine intelligente Backupstrategie steht zur Verfügung
     (Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und der letzten n Jahre werden aufgehoben)
@@ -139,19 +150,25 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
 
   - Hilfs- und Beispielscripts
 
-    Verschiedene Hilfs- und Beispielscripts stehen zur Verfügung.
+    Verschiedene [Hilfs- und Beispielscripts](useful-helper-scripts.md) stehen zur Verfügung.
+
+    Sie können die Funktionalität von *raspiBackup* erweitern und entweder unverändert genutzt
+    oder an eigene Anforderungen angepasst werden.
 
     Zum Beispiel, wie *pishrink* genutzt werden kann, um eine `dd` Sicherung noch zu verkleinern
     oder wie parallel ein Clone erstellt werden kann, um ein aktuelles, jederzeit
-    einsetzbares Bootmedium zu haben. Und vieles, vieles mehr.
+    einsetzbares Bootmedium zu haben.
 
     Ein Beispielscript hilft, um vor und nach dem Backup weitere Aktionen vorzunehmen,
     wie z.B. das Mounten und Unmounten des Backupspaces.
 
+    Und vieles, vieles mehr.
+
   - Erweiterungspunkte
 
-    Vor und nach der Sicherung kann eigener Code ausgeführt werden, um Vor- und
-    Nachbereitungen bei der Sicherung wie auch dem Zurücksichern auszuführen.
+    Für Entwickler bietet *raspiBackup* verschiedene [Erweiterungspunkte](hooks-for-own-scripts.md),
+    um Vor- und Nachbereitungen bei der Sicherung wie auch dem Zurücksichern
+    durch eigenen Code ausführen zu können.
 
   - Sicherung von *NVMe* Speicher
 
