@@ -36,7 +36,7 @@ That allows for some tricks:
 
 [Introduction](introduction.md)
 
-[Usage hints](help.md)
+[How to use this documentation](help.md)
 
 # User guide
 

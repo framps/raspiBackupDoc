@@ -36,9 +36,9 @@ Dies ermöglicht einige kleine Kniffe:
 
 [Einführung](introduction.md)
 
-[Nutzungshinweise](help.md) 
+[Nutzungshinweise](help.md)
 
-# Nutzerinformationen
+# Dokumentation für Anwender
 
 - [Funktionsübersicht](function-overview.md)
 
@@ -122,7 +122,7 @@ Dies ermöglicht einige kleine Kniffe:
     - [Version dieser Dokumentation](doc-version-info-automatically-generated.md)
     - [Markdown Spielwiese](markdown-playground.md)
 
-# Entwicklerinformationen
+# Ergänzende Informationen für Entwickler
 
 - [Erweiterungen/Plugins](hooks-for-own-scripts.md)
 - [Erweiterungsscripte](extension-scripts.md)
