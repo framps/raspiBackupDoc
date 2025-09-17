@@ -15,8 +15,6 @@
 Die Dokumentation wird zweisprachig ausgeführt, Englisch als Default und Deutsch für Besucher aus den deutschsprachigen Ländern.
 Zum Wechseln der Sprache ist oben rechts ein kleines Globus-Icon vorhanden.
 
-Aktuell erfolgt ein Review der deutschen Seiten und danach die Übersetzung nach Englisch.
-
 Die generierte Dokumentation ist zu erreichen unter: https://framps.github.io/raspiBackupDoc/
 
 [![Screenshot von raspiBackupDoc](readme-images/Screenshot_raspiBackupDoc.png)](https://framps.github.io/raspiBackupDoc/)
