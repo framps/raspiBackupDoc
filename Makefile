@@ -33,7 +33,6 @@ build:
 	@echo -e "# Version dieser Dokumentation\n\n"  > de/src/doc-version-info-automatically-generated.md
 	@( echo -e "## Last commit\n\n\`\`\`" ; git log -n 1 ; echo '```' ; UNCOMMITED=$$(git status --porcelain) ; [ -n "$$UNCOMMITED" ] && { echo -e "\n\n## Plus yet uncommited changes\n\n\`\`\`\n$$UNCOMMITED\n\`\`\`"; } ; echo -e "\nBuild: $$(date --iso-8601=minutes)" ) | tee -a  en/src/doc-version-info-automatically-generated.md  de/src/doc-version-info-automatically-generated.md
 
-
 	mdbook build en
 	mdbook build de
 
@@ -50,7 +49,7 @@ push:
 
 upload:
 	@[ -d en/book -a -d de/book ] || { echo "Missing directory(ies) 'book/'! Build them first!" ; exit 1; }
-	@[ -n "$(WEBSERVER)" -a -n "$(WEBSERVER_ROOTDIR)" ] || { echo "Environment variables WEBSERVER and WEBSERVER_ROOTDIR need to be set!"; exit 2; }
+	@[ -n "$(WEBSERVER)" -a -n "$(WEBSERVER_ROOTDIR)" ] || { echo "Environment variables WEBSERVER and WEBSERVER_ROOTDIR need to be set! Possibly by sourcing '.cdprc' first."; exit 1; }
 	lftp sftp://$(WEBSERVER) -e "cd $(WEBSERVER_ROOTDIR) ; rm -r raspiBackupDoc; mirror -R en/book raspiBackupDoc; cd raspiBackupDoc ; mirror -R de/book de ; put data/htaccess -o .htaccess ; dir ; quit"
 
 check: checkfiles checklinks
@@ -60,6 +59,7 @@ checkfiles:
 
 checklinks:
 	@if ! command -v mdlinkcheck.py >/dev/null; then \
+		if [[ -z "$${VIM_PROJECT}" ]] ; then echo "Error: Project environment isn't set! Please source '.cdprc' first!"; exit 1; fi; \
 		echo -e "\n##############################################\n#  For additional checks of Markdown links\n#  install 'mdlinkcheck.py' from here:\n#  https://github.com/rpi-simonz/mdlinkcheck\n##############################################\n"; \
 		read -p "Install 'mdlinkcheck.py' automatically now [Y/n]? " inp; \
 		if [[ -z "$${inp}" ]] || [[ "$${inp}" =~ y|Y ]] ; then \
