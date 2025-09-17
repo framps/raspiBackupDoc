@@ -1,14 +1,6 @@
----
-
-Topics on this page:
-
-<!-- toc -->
-
----
-
 # Introduction
 
-A regular backup of Raspberry Pis is important in the event of a system
+A regular backup of Raspberry Pis is important in case of a
 failure of the system storage device (SD card, USB disk, SSD, NVMe ...) or also of
 unintentional changes that cause the system to no longer boot or to boot incorrectly,
 to be able to reset the system to a previous state.
@@ -18,52 +10,21 @@ This can be done manually or automatically at regular intervals.
 A backup always contains the entire system, i.e. system data and user data.
 The system therefore reboots immediately once it has been restored.
 
-Backups can be saved to all devices that can be mounted on Linux.
-be backed up. This includes SD cards, USB sticks, USB disks, SSDs and NVMe SSDs.
-Even network drives that are mounted via NFS, SMB, SSHFS, FtpFS and WebDAV,
-can also be used as a target for backups.
-
-A backup can be restored to devices other than the device from which the backup was created.
-from which a backup was created. For example, a backup of an SD card can be restored to
-be restored to an SSD.
-
-The number of backups to be kept can be configured or the
-[grandfather-father-son generation principle](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md) be used.
-In addition, so-called *raspiBackup* [snapshots](snapshots.md) can be created manually. These are backups that
-are not deleted automatically and are used to save intermediate steps during system upgrades
-to be able to go back to previous versions at any time in the event of errors during the upgrade.
-
-There exist [Backupmodes](normal-or-partition-backup.md):
-The **normal backup mode** only backs up the boot and root partition.
-The **partition-oriented mode** backs up any number of partitions.
-
-The following Linux backup tools can be used:
-`dd`and `tar`, both also zipped, which always create a full backup
-and `rsync` with [hardlink usage](how-do-hardlinks-work-with-rsync.md),
-to create a delta backup relatively quickly.
-The individual backup types are described in detail [here](backup-types.md).
-There is also a [decision tree](backup-types.md#decisiontree),
-to quickly find the right backup type.
-
 For **installation and configuration** of *raspiBackup* there is an
-[installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be
+[installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured.
 options of *raspiBackup*, comparable to `raspi-config`.
 More specific settings can be made in a configuration file.
 
-For developers, *raspiBackup* offers various [extension points](hooks-for-own-scripts.md),
-to execute your own code.
+All functions and applications of *raspiBackup* are described in the first chapter
+[Function overview](function-overview.md).
 
-There are also various [Scripts](https://github.com/framps/raspiBackup/tree/master/helper),
-that extend the functionality of *raspiBackup* and can either be used unchanged
-or can be adapted to your own requirements.
 
-At the end of a backup run, *raspiBackup* can, if desired, send a notification by email,
-*Telegram*, *Slack* or *Pushover*.
+Further topics on this page:
 
-All functions and application areas of *raspiBackup* are listed in table form in the
-[function overview](function-overview.md).
+<!-- toc -->
 
-## Introductory video and YouTube channel
+
+## Introductory video and Youtube channel
 
 There is an [introductory video for raspiBackup](https://youtu.be/PuK_FNK674s) on Youtube.
 
@@ -74,17 +35,17 @@ Topics covered are
   * Introduction of *GitHub* as a question and problem interaction tool
   * Live installation of *raspiBackup* with the menu-driven installer
 
-The slides used there can be read [here](https://raspibackup.linux-tips-and-tricks.de/wp-content/uploads/simple-file-list/raspiBackup_de.pdf).
+The slides used there can be downloaded for reading [here](https://raspibackup.linux-tips-and-tricks.de/wp-content/uploads/simple-file-list/raspiBackup_de.pdf).
 
-Many more videos on all kinds of topics related to *raspiBackup* can be found in the [raspiBackup-Channel](https://www.youtube.com/@raspiBackup).
+Many more videos on all kinds of *raspiBackup* topics can be found in the [raspiBackup-Channel](https://www.youtube.com/@raspiBackup).
 
-<a name="kontakt"></a>
+<a name="contact"></a>
 ## Contact options
 
 * Click [![GitHub](images/icons/GitHub-Mark-32px.png)](https://github.com/framps/raspiBackup/issues),
   to create questions or problems about *raspiBackup* as "Issues" on *GitHub*.
   The issues can also be created in German.
-  This allows you to track questions and problem reports and receive notifications of answers.
+  This way you can track questions and problem reports and receive a notification about answers.
 
 * Click [![Facebook](images/icons/FB-f-Logo__blue_29.png)](https://www.facebook.com/raspiBackup/),
   to find out about current activities and peripheral information about *raspiBackup* on Facebook.
@@ -100,7 +61,7 @@ Many more videos on all kinds of topics related to *raspiBackup* can be found in
   to follow *raspiBackup* on Reddit.
 
 ``` admonish info title="Note"
-All other communication channels such as e-mails, which are unfortunately often used, are ignored!
+Any other communication channels such as e-mails, which are unfortunately often used, will be ignored!
 ```
 
 <a name="donation"></a>
@@ -111,29 +72,29 @@ Acknowledgment of the development and maintenance effort as well as support for
 
 1. Become a [*GitHub* sponsor](https://github.com/sponsors/framps) for *raspiBackup*
 2. Paypal: The email `framp att linux-tips-and-tricks dott de` is known to PayPal
-   and anyone with a PayPal account can tip to this email.
+   and anyone with a PayPal account can tip this email.
 3. Neither: Just ask at the above eMail. There is
-   certainly an alternative. For example, tips have been sent several times in the
+   certainly an alternative. For example, donations have been sent several times in the
    the good old way by letter :-)
 
-The tip is primarily used to buy consumables such as SD cards, adapters, cables etc.,
-needed for development and testing. If the tip is sufficient,
-new hardware is also purchased in order to build the necessary hardware support into *raspiBackup
-hardware support in *raspiBackup* and to verify the correct functionality
+The donation is primarily used to buy consumables such as SD cards, adapters, cables etc.,
+needed for development and testing. If the donations are sufficient,
+new hardware is also purchased in order to build the necessary hardware support into *raspiBackup*
+and to verify the correct functionality
 on the new hardware.
 
 ## Acknowledgements
 
 Over the years, many people from the community have contributed to *raspiBackup* through comments,
 suggestions and beta and fixed tests to *raspiBackup*.
-In view of the large number, it is unfortunately not possible to list every single one.
+Due to the large number of contributors, it is unfortunately not possible to list every single one.
 
 Therefore simply: Many thanks to all supporters!
 
 **Special thanks** go to [simonz](https://github.com/rpi-simonz) for setting up
 this *raspiBackup* documentation repository in *GitHub*, the transfer of all
 *raspiBackup* pages from [framps Homepage](https://www.linux-tips-and-tricks.de)
-to this repository and the intensive support with the revision of the pages
+to this repository and the intensive support during the revision of the pages
 of the pages with help and advice as well as very helpful tools.
 
 ## License and *GitHub* link

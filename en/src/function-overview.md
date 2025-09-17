@@ -5,18 +5,19 @@ This page contains a high-level overview of *raspiBackup*.
 More detailed information can be found here in the further documentation
 and on the [*GitHub* page](https://github.com/framps/raspiBackup).
 
-**With *raspiBackup* you can quickly and securely obtain a complete system backup of your Raspberries and a configurable backup history on a regular basis.
+**With *raspiBackup* you can quickly and securely obtain a complete system backup of your Raspberries and a configurable backup history on a regular basis
 and can thus completely restore your Raspberry so that it boots again with an old backup status**.
 
   - Open source
 
     *raspiBackup* is available under the GNU license as open source and free of charge.
-    However, a [donation](introduction.md#donation) is still welcome 😉
+    However, a [tip](introduction.md#donation) is still welcome 😉
 
   - Simple [installation](installation-in-5-minutes.md) with menu-driven installer (comparable to `raspi-config`)
 
     The most important options of *raspiBackup* can be configured in German, English, Finnish,
-    Chinese and French, so that the first [backup in 5 minutes](installation-in-5-minutes.md) can be created.
+    Chinese and French,
+    so that the first [backup in 5 minutes](installation-in-5-minutes.md) can be created.
 
   - All other options, some of which are very powerful, are [documented in detail](invocation-options.md)
     and can be defined in a configuration file.
@@ -24,26 +25,37 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Complete and incremental backups
 
       - The backup type `rsync` creates complete and then incremental backups
-      - The backup types `dd` and `tar` always create complete backups
-        Note: With the `dd` backup there is an option to switch on that only the space occupied by the partitions
+        using [Hardlinks](how-do-hardlinks-work-with-rsync.md).
+      - The backup types `dd` and `tar` always create complete backups (also zipped).
+        **Note**: With the `dd` backup, you can activate the option that only the space occupied by the partitions
         and not the entire SD card is backed up.
+
+    The individual backup types are described in detail [here](backup-types.md).
+    There is also a [decision tree](backup-types.md#decisiontree),
+    to quickly find the right backup type.
 
   - Two backup strategies
 
-      - A defined number of backups are stored
+      - A defined number of backups are kept
       - Backups are kept according to the grandfather-father-son backup strategy (GVS).
 
-  - Any directories and files can be excluded from the backup (`-u` option)
+  - Two [backup modes](normal-or-partition-backup.md):
+
+      - the **normal backup mode** only backs up the boot and root partition
+      - the **partition-oriented mode** backs up any number of partitions
+
+  - Any directories and files can be excluded from the backup
 
   - Automatic regular backup of a running Raspberry Pi (it backs itself up)
+    See also [FAQ1](faq.md#1-is-a-backup-of-a-running-system-reliable-should-not-stop-the-whole-system-before-the-backup)
 
   - Different backup types can be mixed per system (e.g. one `rsync` backup per day, one `dd` backup per week)
 
-  - Automatic stopping and starting of active services before and after the backup (`-a` and `-o` option)
+  - Automatic stopping and starting of active services before and after the backup
 
   - Backup of any number of Raspberries in a backup directory
 
-  - Messages in German and English
+  - Messages are supported in German and English, French or Finnish.  
 
   - Notifications
 
@@ -58,56 +70,58 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     Unsupported e-mail clients can be integrated using an e-mail plug-in.
 
   - Simple update of *raspiBackup* to the current version
+  
   - Simple distribution of new script versions to a larger number of hosts
 
   - All boot modes are supported
 
-      1. boot from the SD card: Both partitions are on the SD card
+      1. boot from a USB device or SSD (USB boot mode): Both partitions
+         are located on a USB device. Supported by the newer Raspberries from model 3B
+         supported
+      2. boot from the SD card: Both partitions are on the SD card
          (every model)
-      2. mixed mode: Boot from the SD card and use of the root partition
+      3. mixed mode: Boot from the SD card and use of the root partition
          from a USB device. This is necessary for older Raspberries that
-         do not yet support USB boot.
-      3. boot from a USB device or SSD (USB boot mode): Both partitions
-         are located on a USB device. Supported by the newer Raspberries
-         supported.
+         do not yet support USB boot
 
   - Any backup destinations are possible, e.g.
 
       - External USB stick
-      - External USB disk
-      - Synology NAS
+      - External USB disk or SSD
       - *SMB* network drive
       - *NFS* network drive
       - *SSHFS* network drive
-      - *WebDAV* network drive
+      - WebDAV* network drive
       - *FtpFS* network drive
       - Generally any device that can be mounted under Linux
 
   - An external root file system on a hard disk or USB stick is automatically
-    automatically during normal backup mode and restored during `tar` or `rsync` backup.
-    or `rsync` backup.
+    automatically backed up in mixed mode during normal backup mode
+    and restored with `tar` or `rsync`.
 
   - Snapshots
 
-    For example, at important update or installation times, snapshots can be
-    snapshots can be created with a description. In the event of a major
-    error or a system that no longer boots, they allow you to restart the system
-    without having to start the update or reinstallation from scratch.
-    having to start all over again.
+    So-called *raspiBackup* [snapshots](snapshots.md) can be created manually.
+
+    These are named backups that are not deleted automatically.
+    They are used, for example, to back up important intermediate steps during system upgrades
+    to be able to revert to previous versions at any time in the event of problems.
+    be able to go back to previous versions at any time.
 
   - Any number of backups from the past can be stored
 
     Not only a single backup is created, but also a backup history.
     You can either define a number of backups to be kept,
-    or you can use the *GVS* principle (called "intelligent rotation strategy" in *raspiBackup*)
-    called)
+    or you use the *GVS* principle (in *raspiBackup* called "Intelligent Rotation Strategy"
+    see [Grandfather-father-son generation principle](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
 
   - An intelligent backup strategy is available
-    (backups of the last 7 days, the last 4 weeks, the last 12 months and the last n years are kept)
+    For example, backups of the last 7 days, the last 4 weeks, the last 12 months and
+    the last n years can be saved.
 
   - Simple restoration of a backup
 
-    A backup of the backup type 'dd' can also be restored to a Windows system.
+    A backup of the `dd` backup type can also be restored to a Windows system.
     *Win32Diskimager* or similar tools can be used.
     `tar` and `rsync` require a Linux system for restoration.
     It is recommended to use a preconfigured SD card with *Raspberry Pi OS*
@@ -116,7 +130,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Adaptation of `/etc/fstab` and `/boot/cmdline.txt` to new UUIDs, PARTUUIDs
     or LABELs so that the system starts again immediately.
 
-  - [Active social media channels](introduction.md#contact)
+  - Active social media channels](introduction.md#contact)
 
   - Notifications for new releases
 
@@ -132,25 +146,31 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
   - Documentation
 
-    User manual, FAQs, configuration examples, NFS configuration on a Synology
-    Synology, list of error messages and how to fix them and much more.
-    and much more.
+    User manual with e.g. FAQs, configuration examples, NFS configuration,
+    list of error messages and how to eliminate the error messages
+    and much more is documented
 
   - Help and sample scripts
 
-    Various help and example scripts are available.
+    Various [help and example scripts](useful-helper-scripts.md) are available.
 
-    For example, how *pishrink* can be used to make an `dd` backup even smaller
+    They can extend the functionality of *raspiBackup* and can either be used unchanged
+    or adapted to your own requirements.
+
+    For example, how *pishrink* can be used to make a `dd` backup even smaller
     or how a clone can be created in parallel in order to have an up-to-date boot medium
-    boot medium that can be used at any time. And much, much more.
+    boot medium that can be used at any time.
 
-    A sample script helps to carry out further actions before and after the backup,
+    An example script helps to perform further actions before and after the backup,
     such as mounting and unmounting the backup space.
+
+    And much, much more.
 
   - Extension points
 
-    Custom code can be executed before and after the backup in order to prepare and
-    and post-processing during the backup and restore.
+    For developers, *raspiBackup* offers various [extension points](hooks-for-own-scripts.md),
+    to perform pre- and post-processing during backup as well as backing up
+    by your own code.
 
   - Backup of *NVMe* storage
 
@@ -179,3 +199,5 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup
 [.source]: https://www.linux-tips-and-tricks.de/en/features
 [.source]: https://www.linux-tips-and-tricks.de/en/backup
+
+

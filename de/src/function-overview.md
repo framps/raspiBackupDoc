@@ -27,7 +27,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
       - Der Backuptyp `rsync` erstellt vollständige und dann inkrementelle Sicherungen
         mittels Nutzung von [Hardlinks](how-do-hardlinks-work-with-rsync.md).
       - Die Backuptypen `dd` und `tar` erstellen immer vollständige Sicherungen (auch gezipped).
-        Hinweis: Beim `dd` Backup ist per Option einschaltbar, dass nur der von den Partitionen
+        **Hinweis**: Beim `dd` Backup ist per Option einschaltbar, dass nur der von den Partitionen
         belegte Platz und nicht die gesamte SD-Karte gesichert wird.
 
     Die einzelnen Backuptypen sind im Detail [hier](backup-types.md) beschrieben.
@@ -44,17 +44,18 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
       - der **normale Backupmodus** sichert nur die Boot- und Rootpartition
       - der **partitionsorientierte Modus** sichert beliebig viele Partitionen
 
-  - Beliebige Verzeichnisse und Dateien können aus dem Backup ausgeschlossen werden (`-u` Option)
+  - Beliebige Verzeichnisse und Dateien können aus dem Backup ausgeschlossen werden
 
   - Automatische regelmäßige Sicherung einer laufenden Raspberry Pi (sie sichert sich selbst)
+    Siehe dazu auch [FAQ1](faq.md#1-ist-ein-backup-eines-laufenden-systems-zuverlässig-sollte-nicht-das-gesamte-system-vor-dem-backup-gestoppt-werden)
 
   - Verschiedene Backuptypen können pro System gemischt werden (z.B. pro Tag ein `rsync` Backup, jeder Woche ein `dd` Backup)
 
-  - Automatisches Stoppen und Starten von aktiven Services vor und nach dem Backup (`-a` und `-o` Option)
+  - Automatisches Stoppen und Starten von aktiven Services vor und nach dem Backup
 
   - Sicherung einer beliebigen Anzahl von Raspberries in einem Backupverzeichnis
 
-  - Meldungen in Deutsch und Englisch
+  - Meldungen werden in Deutsch und Englisch, Französisch oder Finnisch unterstützt.  
 
   - Benachrichtigungen
 
@@ -69,24 +70,24 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
     Nicht unterstützte eMail-Clients können durch ein eMail-Plugin eingebunden werden.
 
   - Einfaches Update von *raspiBackup* auf die aktuelle Version
+  
   - Einfache Verteilung von neuen Scriptversionen auf eine größere Menge von Hosts
 
   - Alle Bootmodi werden unterstützt
 
-      1. Boot von der SD-Karte: Beide Partitionen liegen auf der SD-Karte
+      1. Boot von einem USB Gerät oder SSD (USB boot Modus): Beide Partitionen
+         liegen auf einem USB Gerät. Wird von den neueren Raspberries ab Modell 3B
+         unterstützt
+      2. Boot von der SD-Karte: Beide Partitionen liegen auf der SD-Karte
          (jedes Modell)
-      2. Gemischter Modus: Boot von der SD-Karte und Nutzung der Rootpartition
+      3. Gemischter Modus: Boot von der SD-Karte und Nutzung der Rootpartition
          von einem USB Gerät. Das ist notwendig bei älteren Raspberries, die
-         noch keinen USB Boot unterstützen.
-      3. Boot von einem USB Gerät oder SSD (USB boot Modus): Beide Partitionen
-         liegen auf einem USB Gerät. Wird von den neueren Raspberries
-         unterstützt.
+         noch keinen USB Boot unterstützen
 
   - Beliebige Backupziele sind möglich, z.B.
 
       - Externer USB Stick
-      - Externe USB Platte
-      - Synology NAS
+      - Externe USB Platte oder SSD
       - *SMB* Netzwerklaufwerk
       - *NFS* Netzwerklaufwerk
       - *SSHFS* Netzwerklaufwerk
@@ -95,8 +96,8 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
       - Generell jedes Device, welches unter Linux gemounted werden kann
 
   - Ein externes Rootfilesystem auf einer Platte oder einem USB Stick wird
-    automatisch beim normalen Backupmodus mitgesichert und restored bei `tar`
-    oder `rsync` Backup.
+    automatisch im gemischten Modus beim normalen Backupmodus mitgesichert 
+    und restored bei `tar` oder `rsync`.
 
   - Snapshots
 
@@ -115,7 +116,8 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
     genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
 
   - Eine intelligente Backupstrategie steht zur Verfügung
-    (Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und der letzten n Jahre werden aufgehoben)
+    Z. B. können Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und 
+    der letzten n Jahre aufgehoben werden.
 
   - Einfache Wiederherstellung einer Sicherung
 
@@ -144,9 +146,9 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
 
   - Dokumentation
 
-    Benutzerhandbuch, FAQs, Konfigurationsbeispiele, NFS Konfiguration auf einer
-    Synology, Liste von Fehlermeldungen und wie man die Fehlermeldungen beseitigen
-    kann und vieles mehr.
+    Benutzerhandbuch mit z.B. FAQs, Konfigurationsbeispiele, NFS Konfiguration,
+    Liste von Fehlermeldungen und wie man die Fehlermeldungen beseitigen
+    kann und vieles mehr ist dokumentiert
 
   - Hilfs- und Beispielscripts
 
