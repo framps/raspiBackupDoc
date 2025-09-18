@@ -212,7 +212,7 @@ edit_files_as_book() {
                                       --no-sort \
                                       --header="${FZF_HEADER}" \
                                       --bind="load:pos($FZFPOS_FILE)" \
-                                      --preview='cat {}')
+                                      --preview "${BAT} --color=always --theme=ansi {1}")
             [[ "${FILES[*]}" ]] || break
             unset FZFPOS_FILE
             # remember position of (first) selected entry to be able to re-position fzf to it
