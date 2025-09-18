@@ -5,8 +5,10 @@ Auf dieser Seite findet sich eine High Level Übersicht zu *raspiBackup*.
 Detailliertere Informationen finden sich hier in der weiteren Dokumentation
 und auf der [*GitHub*-Seite](https://github.com/framps/raspiBackup).
 
-**Mit *raspiBackup* erhältst Du schnell und sicher regelmäßig ein vollständiges Systembackup Deiner Raspberries und eine konfigurierbare Backuphistorie
-und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wieder mit einem alten Backupstand bootet**.
+**Mit *raspiBackup* erhältst Du schnell und sicher regelmäßig ein vollständiges Systembackup
+Deiner Raspberries und eine konfigurierbare Backuphistorie
+und kannst somit Deine Raspberry vollständig wiederherstellen,
+so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Open source
 
@@ -55,7 +57,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
 
   - Sicherung einer beliebigen Anzahl von Raspberries in einem Backupverzeichnis
 
-  - Meldungen werden in Deutsch und Englisch, Französisch oder Finnisch unterstützt.  
+  - Meldungen werden in Deutsch und Englisch, Französisch oder Finnisch unterstützt.
 
   - Benachrichtigungen
 
@@ -70,7 +72,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
     Nicht unterstützte eMail-Clients können durch ein eMail-Plugin eingebunden werden.
 
   - Einfaches Update von *raspiBackup* auf die aktuelle Version
-  
+
   - Einfache Verteilung von neuen Scriptversionen auf eine größere Menge von Hosts
 
   - Alle Bootmodi werden unterstützt
@@ -96,7 +98,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
       - Generell jedes Device, welches unter Linux gemounted werden kann
 
   - Ein externes Rootfilesystem auf einer Platte oder einem USB Stick wird
-    automatisch im gemischten Modus beim normalen Backupmodus mitgesichert 
+    automatisch im gemischten Modus beim normalen Backupmodus mitgesichert
     und restored bei `tar` oder `rsync`.
 
   - Snapshots
@@ -116,7 +118,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
     genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
 
   - Eine intelligente Backupstrategie steht zur Verfügung
-    Z. B. können Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und 
+    Z. B. können Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und
     der letzten n Jahre aufgehoben werden.
 
   - Einfache Wiederherstellung einer Sicherung
@@ -130,7 +132,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
   - Anpassung von `/etc/fstab` und `/boot/cmdline.txt` an neue UUIDs, PARTUUIDs
     oder LABELs, damit das System sofort wieder startet.
 
-  - [Aktive Social Media Kanäle](introduction.md#kontakt)
+  - Aktive [Social Media Kanäle](introduction.md#kontakt)
 
   - Benachrichtigungen bei neuen Releases
 
@@ -141,7 +143,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen, so dass sie wied
   - Regressionstestsuite
 
     Die Basisfunktionalität von *raspiBackup* (Sicherung und Wiederherstellung) wird
-    für alle Backuptypen und Modi automatisch getestet, um sicherzustellen, dass die
+    für alle Backuptypen und Modi automatisch getestet, um sicherzustellen, dass das
     neue *raspiBackup* Release genauso zuverlässig funktioniert wie vorher.
 
   - Dokumentation
