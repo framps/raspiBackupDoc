@@ -209,7 +209,6 @@ edit_files_as_book() {
             mapfile -t FILES < <(sed -n -e "/\[.*\](.*)/s/^.*(\(.*\))/$lang\/src\/\1/p;" "$lang/src/SUMMARY.md" \
                                  | tee "${TMPFILE_META}" \
                                  | ${FZF_MULTI} \
-                                      --no-sort \
                                       --header="${FZF_HEADER}" \
                                       --bind="load:pos($FZFPOS_FILE)" \
                                       --preview "${BAT} --color=always --theme=ansi {1}")
@@ -302,6 +301,8 @@ edit_by_status() {
                        --bind="ctrl-r:reload(__list_stati)" \
                        --bind="alt-r:execute(edit_translate_all_rft)+reload(__list_stati)" \
                        --bind="alt-t:execute(edit_translate_already_translated)+reload(__list_stati)" \
+                       --bind="alt-b:execute(edit_files_as_book de)" \
+                       --bind="alt-B:execute(edit_files_as_book en)" \
                        --bind="alt-g:execute(edit_grepped_files)" \
                        --bind="alt-G:execute(edit_grepped_files '^\[\.status\]:\s{3}')" \
                        --bind="alt-m:execute(edit_meta_files)" \
@@ -406,13 +407,18 @@ It starts a TUI for selecting Markdown files by their status for editing.
 Within the main screen of the TUI there are additional hotkeys active:
 
   * Alt-r / Alt-t for more selection screens, meant for supporting translation.
-    They list files "(R)eady for translation" / "(T)ranslated" and open
+    They list files "(r)eady for translation" / "(t)ranslated" and open
     the selected file in both language versions in a split editor window.
+
+  * Alt-b for a selection of all German Markdown files ordered as in the
+    corresponding (S)UMMARY.md file like a (b)ook.
+    Alt-shift-B the same for the English version.
 
   * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
 
-  * Alt-g for calling an interactive (G)rep-Tool using ripgrep, fzf and vim.
+  * Alt-g for calling an interactive (g)rep-Tool using ripgrep, fzf and vim.
     This one has its own alias 'vigf' ("vi grepped files").
+    Alt-Shift-G is the same with current status as preselected query.
 
 The above functions handle Markdown source files for the documentation itself.
 Administration files like README, Makefile and book.toml can be selected too:
