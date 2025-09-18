@@ -196,6 +196,39 @@ edit_meta_files() {
 export -f edit_meta_files
 
 
+edit_files_as_book() {
+    if [[ -z "$1" ]] ; then
+        lang="de"
+    else
+        lang="$1"
+    fi
+    TMPFILE_META=$( mktemp tmp.XXXXXXXX )
+        FZF_HEADER=">> Please select file(s) to edit and press ENTER. (ESC to cancel.) <<"
+        while true; do
+            # shellcheck disable=2012
+            mapfile -t FILES < <(sed -n -e "/\[.*\](.*)/s/^.*(\(.*\))/$lang\/src\/\1/p;" "$lang/src/SUMMARY.md" \
+                                 | tee "${TMPFILE_META}" \
+                                 | ${FZF_MULTI} \
+                                      --no-sort \
+                                      --header="${FZF_HEADER}" \
+                                      --bind="load:pos($FZFPOS_FILE)" \
+                                      --preview='cat {}')
+            [[ "${FILES[*]}" ]] || break
+            unset FZFPOS_FILE
+            # remember position of (first) selected entry to be able to re-position fzf to it
+            if [[ -f "${TMPFILE_META}" ]] ; then
+                FZFPOS_FILE=$( grep "${FILES[0]}" < <(nl "${TMPFILE_META}") | awk '{print $1}' )
+                rm -f "${TMPFILE_META}"
+            fi
+            ${VIM_PROJECT} -p "${FILES[@]}"
+        done
+        [[ -f "${TMPFILE_META}" ]] && rm -f "${TMPFILE_META}"
+        unset FZFPOS_FILE
+}
+
+export -f edit_files_as_book
+
+
 get_escaped_status () {
     # Remove the prefix to keep only the status text itself.
     # Escape many regex special characters with '\'
@@ -332,6 +365,7 @@ edit_by_status() {
 alias vibs='edit_by_status'
 alias vigf='edit_grepped_files'
 alias vimf='edit_meta_files'
+alias viab='edit_files_as_book'
 
 
 check_ssh_id() {
