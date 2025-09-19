@@ -186,6 +186,7 @@ aktuell:
 
   - Auswahl noch zu übersetzender/schon übersetzter Dateien (Alt-r/Alt-t)
     ![Beispiel für Alt-r/Alt-t](readme-images/vitar.png "Auswahl von Übersetzungen")
+    ![Beispiel für den Splitscreen bei Alt-r/Alt-t](readme-images/vitar-split.png "Splitscreen mit EN/DE")
   - Auflistung aller Dateien in Buch-Reihenfolge,
     wie in SUMMARY.md definiert (Alt-b für DE und Alt-Shift-B für EN)
     ![Beispiel für Alt-b](readme-images/viab.png "Dateien in Buch-Reihenfolge")
