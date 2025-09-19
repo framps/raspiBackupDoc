@@ -400,7 +400,8 @@ cat <<EOF
 
 This project directory is for maintaining the 'raspiBackup' documentation.
 
-A new command (alias) 'vibs' is defined now. ("vi by status")
+Some new shell commands (aliases) are defined now,
+the main one is 'vibs' ("vi by status").
 
 It starts a TUI for selecting Markdown files by their status for editing.
 
@@ -411,8 +412,9 @@ Within the main screen of the TUI there are additional hotkeys active:
     the selected file in both language versions in a split editor window.
 
   * Alt-b for a selection of all German Markdown files ordered as in the
-    corresponding (S)UMMARY.md file like a (b)ook.
+    corresponding SUMMARY.md file - like the produced (b)ook.
     Alt-shift-B the same for the English version.
+    This one has its own alias 'viab [DE|en]' ("vi as book").
 
   * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
 

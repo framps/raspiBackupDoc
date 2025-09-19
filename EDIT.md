@@ -184,14 +184,24 @@ zur Auswahl von Datei(en) mit einem gewünschten Status
 Darin sind weitere Tools eingebaut, die per Tastenkombination aufgerufen werden können,
 aktuell:
 
-  - Auswahl noch zu übersetzender/schon übersetzter Dateien (Alt-R/Alt-T)
-    ![Beispiel für Alt-R/Alt-T](readme-images/vitar.png "Auswahl von Übersetzungen")
-  - Abgleich der SUMMARY.md in den (beiden) Sprachen (Alt-S)
-    ![Beispiel für Alt-S](readme-images/vids.png "Abgleich der verschiedenen SUMMARY.md")
-  - Auswahl der Meta-Dateien (Doku und Verwaltung) (Alt-M)
-    ![Beispiel für Alt-M](readme-images/vimf.png "Auswahl der Meta Dateien")
-  - Interaktives Grep-Tool (Alt-G)
-    ![Beispiel für Alt-G](readme-images/vigf.png "Interaktives Grep-Tool")
+  - Auswahl noch zu übersetzender/schon übersetzter Dateien (Alt-r/Alt-t)
+    ![Beispiel für Alt-r/Alt-t](readme-images/vitar.png "Auswahl von Übersetzungen")
+  - Auflistung aller Dateien in Buch-Reihenfolge,
+    wie in SUMMARY.md definiert (Alt-b für DE und Alt-Shift-B für EN)
+    ![Beispiel für Alt-b](readme-images/viab.png "Dateien in Buch-Reihenfolge")
+  - Abgleich der SUMMARY.md in den (beiden) Sprachen (Alt-s)
+    ![Beispiel für Alt-s](readme-images/vids.png "Abgleich der verschiedenen SUMMARY.md")
+  - Interaktives Grep-Tool (Alt-g)
+    ![Beispiel für Alt-g](readme-images/vigf.png "Interaktives Grep-Tool")
+  - Auswahl der Meta-Dateien (Doku und Verwaltung) (Alt-m)
+    ![Beispiel für Alt-m](readme-images/vimf.png "Auswahl der Meta Dateien")
+
+Einige dieser Tools haben eigene Aliases:
+
+  - Alt-b/Alt-B: `viab [De/en]` "vi files as book"
+  - Alt-g: `vigf` "vi grepped files"
+  - Alt-m: `vimf` "vi meta files"
+
 
 Die aktuelle Liste der eingebauten Tools wird auch beim `source .cdprc` angezeigt:
 
@@ -200,24 +210,33 @@ Die aktuelle Liste der eingebauten Tools wird auch beim `source .cdprc` angezeig
 
 This project directory is for maintaining the 'raspiBackup' documentation.
 
-A new command (alias) 'vibs' is defined now. ("vi by status")
+Some new shell commands (aliases) are defined now,
+the main one is 'vibs' ("vi by status").
 
 It starts a TUI for selecting Markdown files by their status for editing.
 
 Within the main screen of the TUI there are additional hotkeys active:
 
-  * Alt-R / Alt-T for more selection screens, meant for supporting translation.
-    They list files "(R)eady for translation" / "(T)ranslated" and open
+  * Alt-r / Alt-t for more selection screens, meant for supporting translation.
+    They list files "(r)eady for translation" / "(t)ranslated" and open
     the selected file in both language versions in a split editor window.
 
-  * Alt-S for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
+  * Alt-b for a selection of all German Markdown files ordered as in the
+    corresponding SUMMARY.md file - like the produced (b)ook.
+    Alt-shift-B the same for the English version.
+    This one has its own alias 'viab [DE|en]' ("vi as book").
 
-  * Alt-G for calling an interactive (G)rep-Tool using ripgrep, fzf and vim
+  * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
+
+  * Alt-g for calling an interactive (g)rep-Tool using ripgrep, fzf and vim.
+    This one has its own alias 'vigf' ("vi grepped files").
+    Alt-Shift-G is the same with current status as preselected query.
 
 The above functions handle Markdown source files for the documentation itself.
 Administration files like README, Makefile and book.toml can be selected too:
 
-  * Alt-M for editing the (M)eta files
+  * Alt-m for editing the (M)eta files.
+    This one has its own alias 'vimf' ("vi meta files").
 
 *******************************************************************************
 ```
@@ -250,17 +269,27 @@ um Missbrauch zu unterbinden...
 
 Nach Registrierung erhält man einen API-Key, der bei den jeweiligen Aufrufen angegeben werden muss.
 
-Zum Beispiel lässt sich die API mit `curl` und diversen Programmierprachen, z.B. per [Python](https://github.com/DeepLcom/deepl-python) nutzen.
+Zum Beispiel lässt sich die API mit `curl` und diversen Programmiersprachen, z.B. per [Python](https://github.com/DeepLcom/deepl-python) nutzen.
 
 Für die Integration per Plugin in `vim` habe ich [deepl.vim von ryicoh](https://github.com/ryicoh/deepl.vim) gewählt.
 
-Dieses Plugin lässt sich z.B. mittels [junegunn's vim-plug](https://github.com/junegunn/vim-plug) per Eintrag in die `.vimrc`
+Dieses Plugin lässt sich installieren z.B. mittels [junegunn's vim-plug](https://github.com/junegunn/vim-plug) per Eintrag in die `.vimrc`
 
 ```
 Plug 'ryicoh/deepl.vim'
 ```
 
-und dann folgendem Neustart von `vim` und einmaligem Aufruf in `vim` installieren: `:PlugInstall`
+Leider hat das Plugin einen Bug, der unter bestimmten Umständen zu zusätzlichen Leerzeilen führt.
+Deshalb habe ich es geforked und korrigiert.
+
+Bitte also alternativ in `.vimrc` eintragen:
+
+```
+Plug 'rpi-simonz/deepl.vim' , { 'branch': 'improve_linewise' }
+```
+
+Mit einem folgendem Neustart von `vim` und einmaligem Aufruf in `vim` : `:PlugInstall`
+wird das Plugin dann installiert und aktiviert.
 
 Weiterhin wird in `.vimrc` die passende DeepL-URL, der DeepL-API-Key und die Tastenzuordnung eingetragen:
 
@@ -290,7 +319,7 @@ Der Arbeitsablauf könnte dann sein:
     Speichern und Schließen mit `:xa`   ;-)
     Weiter bei 3.
 
-Wenn `vim` innerhalb von `vibs` über die oben beschriebenen Übersetzungs-Funktionen `Alt-R` und `Alt-T` aufgerufen wird,
+Wenn `vim` innerhalb von `vibs` über die oben beschriebenen Übersetzungs-Funktionen `Alt-r` und `Alt-t` aufgerufen wird,
 wird aktuell folgendes Layout verwendet:
 
  1. In Tab 1 ist die zu englische Datei für sich alleine
