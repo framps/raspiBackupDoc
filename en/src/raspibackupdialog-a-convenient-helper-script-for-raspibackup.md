@@ -68,10 +68,9 @@ Dynamic mount also works with cron.
 sudo raspiBackupDialog.sh
 
 Please choose your preferred language
-Please choose your preferred language
 German = 1
 English = 2
-1
+2
 Should a backup be created or an existing backup restored?
 backup 1
 restore 2
