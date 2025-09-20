@@ -197,7 +197,7 @@ welches die Nutzung und den Aufruf von *raspiBackup* vereinfacht.
 
 Sollte sich tatsächlich herausstellen, dass *raspiBackup* nicht den Anforderungen genügt,
 steht eine [Deinstallation](installer.md#deinstallation) per *raspiBackup* Installer zur Verfügung.
-Über einen der [Kontaktwege](#contact-options) ist es vorher aber sinnvoll mal nachzufragen ob die vermisste Funktionalität
+Über einen der [Kontaktwege](/#contact-options) ist es vorher aber sinnvoll mal nachzufragen ob die vermisste Funktionalität
 nicht doch in raspiBackup verfügbar ist.
 
 [.status]: translated
