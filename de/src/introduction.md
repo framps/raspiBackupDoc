@@ -46,6 +46,7 @@ Viele weitere Videos zu allen möglichen Themen zu *raspiBackup* finden sich im 
   um auf *GitHub* Fragen oder Probleme zu *raspiBackup* als "Issues" zu erstellen.
   Die Issues können gerne auch in Deutsch erstellt werden.
   So lassen sich Fragen und Problemberichte tracken und man bekommt eine Benachrichtigung über Antworten.
+  Das ist die präferierte Kontaktmethode.
 
 * Klicke [![Facebook](images/icons/FB-f-Logo__blue_29.png)](https://www.facebook.com/raspiBackup/),
   um auf Facebook aktuelle Aktivitäten und Randinformationen zu *raspiBackup* zu erfahren.
