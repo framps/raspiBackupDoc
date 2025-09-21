@@ -28,6 +28,8 @@ A backup is created and then restored to another device.
 A typical application is to copy an SD card to an SSD or NVMe
 and then operate the system with the SSD/NVMe and no longer with an SD card.
 
+For a complete list of all restore options see [here](restore-options.md).
+
 ------------------
 
 Further topics on this page:
