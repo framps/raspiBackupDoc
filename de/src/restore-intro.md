@@ -28,6 +28,8 @@ Es wird ein Backup erstellt und dann auf einem anderen Gerät restored.
 Typische Anwendung ist, eine SD-Karte auf eine SSD oder NVMe zu kopieren
 und danach das System mit der SSD/NVMe und nicht mehr mit einer SD-Karte zu betreiben.
 
+Eine vollständige Liste aller Restore Aufrufoptionen findet sich [hier](restore-options.md).
+
 ------------------
 
 Weitere Themen auf dieser Seite:
