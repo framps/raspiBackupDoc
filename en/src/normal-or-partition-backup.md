@@ -17,11 +17,17 @@ There are two backup modes:
 
 2. Partition-oriented backup
 
-   In this mode, every partition on the system or a certain
-   number of partitions is backed up with `tar` or `rsync`. The number of partitions is
-   partitions is arbitrary. If the target device is larger than the source device during the restore
-   source device, the last partition is extended so that the entire target device is used.
+   In this mode, every partition on the system or a specific selected
+   number of partitions are backed up with `tar` or `rsync`. The number of
+   partitions is arbitrary. During restore, you can also select which partitions
+   are to be restored.
+   If you are restoring to the original system because changes
+   to the system have prevented it from booting, with an rsync backup you can restore only the changes
+   instead of the entire backup, and the restore will be much faster.
+   If the target device is larger than the
+   source device during the restore, the last partition is expanded to use the entire target device.
 
+Translated with DeepL.com (free version)
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#Vergleich
 [.source]: https://www.linux-tips-and-tricks.de/en/backup
