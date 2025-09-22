@@ -129,7 +129,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Adaptation of `/etc/fstab` and `/boot/cmdline.txt` to new UUIDs, PARTUUIDs
     or LABELs so that the system starts again immediately.
 
-  - Active [social media channels](introduction.md#contact)
+  - Active [social media channels](introduction.md#contact_options)
 
   - Notifications for new releases
 

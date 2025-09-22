@@ -204,7 +204,7 @@ Es gibt verschiedene Optionen:
   *raspiBackup* gestellt und Probleme berichtet werden können. *framp* wird über
   alle neuen Threads informiert und kann sich dem Thread widmen.
 
-Siehe auch diese [Hinweise](introduction.md#kontakt)
+Siehe auch diese [Hinweise](introduction.md#contact_options)
 
 **Hinweis:** Jegliche andere Kontaktwege werden ignoriert.
 

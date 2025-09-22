@@ -132,7 +132,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
   - Anpassung von `/etc/fstab` und `/boot/cmdline.txt` an neue UUIDs, PARTUUIDs
     oder LABELs, damit das System sofort wieder startet.
 
-  - Aktive [Social Media Kanäle](introduction.md#kontakt)
+  - Aktive [Social Media Kanäle](introduction.md#contact_options)
 
   - Benachrichtigungen bei neuen Releases
 

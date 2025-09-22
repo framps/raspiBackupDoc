@@ -197,7 +197,7 @@ which simplifies the use and calling of *raspiBackup*.
 
 If it turns out that *raspiBackup* does not meet the requirements,
 [uninstallation](installer.md#uninstallation) is available via *raspiBackup* Installer.
-However, it is advisable to first check via one of the [contact channels](https://framps.github.io/raspiBackupDoc/#contact-options)
+However, it is advisable to first check via one of the [contact channels](introduction.md#contact_options)
 whether the missing functionality is indeed not available in raspiBackup.
 
 [.status]: translated

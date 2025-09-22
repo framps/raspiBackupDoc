@@ -204,7 +204,7 @@ There are several options:
   *raspiBackup* can be asked and problems can be reported. *framp* is informed about
   is informed about all new threads and can dedicate himself to the thread.
 
-See also these [Notes](introduction.md#contact)
+See also these [Notes](introduction.md#contact_options)
 
 **Note:** Any other means of contact will be ignored.
 

@@ -39,7 +39,7 @@ The slides used there can be downloaded for reading [here](https://raspibackup.l
 
 Many more videos on all kinds of *raspiBackup* topics can be found in the [raspiBackup-Channel](https://www.youtube.com/@raspiBackup).
 
-<a name="contact"></a>
+<a name="contact_options"></a>
 ## Contact options
 
 * Click [![GitHub](images/icons/GitHub-Mark-32px.png)](https://github.com/framps/raspiBackup/issues),
