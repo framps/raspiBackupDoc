@@ -17,9 +17,14 @@ Es existieren zwei Backupmodi:
 
 2. Partitionsorientierter Backup
 
-   In diesem Modus wird jede auf dem System befindliche oder eine bestimmte
+   In diesem Modus wird jede auf dem System befindliche oder eine bestimmte ausgewählte
    Anzahl von Partitionen mit `tar` oder `rsync` gesichert. Dabei ist die Anzahl der
-   Partitionen beliebig. Falls das Zielgerät beim Restore größer ist als das
+   Partitionen beliebig. Beim Restore kann ebenso ausgewählt werden, welche Partitionen
+   zurückzuspielen sind.
+   Wird auf das Originalsystem zurückgespielt, weil durch Änderungen
+   am System es nicht mehr bootet, können bei einem rsync Backup nur die Änderungen zurückgespielt
+   werden statt das ganze Backup und der Restore endet wesentlich schneller.
+   Falls das Zielgerät beim Restore größer ist als das
    Quellgerät, wird die letzte Partition soweit erweitert, dass das gesamte Zielgerät genutzt wird.
 
 [.status]: translated
