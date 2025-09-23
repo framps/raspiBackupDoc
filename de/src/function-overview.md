@@ -10,19 +10,8 @@ Deiner Raspberries und eine konfigurierbare Backuphistorie
 und kannst somit Deine Raspberry vollständig wiederherstellen,
 so dass sie wieder mit einem alten Backupstand bootet**.
 
-  - Open source
-
-    *raspiBackup* ist unter der GNU Lizenz als OpenSource und kostenlos verfügbar.
-    Ein [Trinkgeld](introduction.md#donation) ist aber trotzdem gern gesehen 😉
-
-  - Einfache [Installation](installation-in-5-minutes.md) mit menügeführtem Installer (vergleichbar mit `raspi-config`)
-
-    Die wichtigsten Optionen von *raspiBackup* können in Deutsch, Englisch, Finnisch,
-    Chinesisch und Französisch konfiguriert werden,
-    so dass die erste [Sicherung in 5 Minuten](installation-in-5-minutes.md) erstellt werden kann.
-
-  - Alle weiteren z.T. sehr mächtigen Optionen sind [ausführlich dokumentiert](invocation-options.md)
-    und können in einer Konfigurationsdatei definiert werden.
+  - Automatische regelmäßige Sicherung einer laufenden Raspberry Pi (sie sichert sich selbst)
+    Siehe dazu auch [FAQ1](faq.md#1-ist-ein-backup-eines-laufenden-systems-zuverlässig-sollte-nicht-das-gesamte-system-vor-dem-backup-gestoppt-werden)
 
   - Vollständige und inkrementelle Sicherungen
 
@@ -46,10 +35,32 @@ so dass sie wieder mit einem alten Backupstand bootet**.
       - der **normale Backupmodus** sichert nur die Boot- und Rootpartition
       - der **partitionsorientierte Modus** sichert beliebig viele Partitionen
 
-  - Beliebige Verzeichnisse und Dateien können aus dem Backup ausgeschlossen werden
+  - Eine beliebige Anzahl von Backups aus der Vergangenheit können vorgehalten werden
 
-  - Automatische regelmäßige Sicherung einer laufenden Raspberry Pi (sie sichert sich selbst)
-    Siehe dazu auch [FAQ1](faq.md#1-ist-ein-backup-eines-laufenden-systems-zuverlässig-sollte-nicht-das-gesamte-system-vor-dem-backup-gestoppt-werden)
+    Es wird nicht nur ein einzelnes Backup erstellt, sondern eine Backuphistorie.
+    Entweder definiert man eine Anzahl von Backups, die vorgehalten werden sollen,
+    oder man nutzt das *GVS*-Prinzip (in *raspiBackup* "Intelligente Rotationsstrategie"
+    genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
+
+  - Eine intelligente Backupstrategie steht zur Verfügung
+    Z. B. können Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und
+    der letzten n Jahre aufgehoben werden.
+
+  - Einfache [Installation](installation-in-5-minutes.md) mit menügeführtem Installer (vergleichbar mit `raspi-config`)
+
+    Die wichtigsten Optionen von *raspiBackup* können in Deutsch, Englisch, Finnisch,
+    Chinesisch und Französisch konfiguriert werden,
+    so dass die erste [Sicherung in 5 Minuten](installation-in-5-minutes.md) erstellt werden kann.
+
+  - Open source
+
+    *raspiBackup* ist unter der GNU Lizenz als OpenSource und kostenlos verfügbar.
+    Ein [Trinkgeld](introduction.md#donation) ist aber trotzdem gern gesehen 😉
+
+  - Alle weiteren z.T. sehr mächtigen Optionen sind [ausführlich dokumentiert](invocation-options.md)
+    und können in einer Konfigurationsdatei definiert werden.
+
+  - Beliebige Verzeichnisse und Dateien können aus dem Backup ausgeschlossen werden
 
   - Verschiedene Backuptypen können pro System gemischt werden (z.B. pro Tag ein `rsync` Backup, jeder Woche ein `dd` Backup)
 
@@ -109,17 +120,6 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     Sie dienen zum Beispiel dazu, bei Systemupgrades wichtige Zwischenschritte
     zu sichern, um jederzeit bei Problemen wieder auf vorherige Stände
     zurückgehen zu können.
-
-  - Eine beliebige Anzahl von Backups aus der Vergangenheit können vorgehalten werden
-
-    Es wird nicht nur ein einzelnes Backup erstellt, sondern eine Backuphistorie.
-    Entweder definiert man eine Anzahl von Backups, die vorgehalten werden sollen,
-    oder man nutzt das *GVS*-Prinzip (in *raspiBackup* "Intelligente Rotationsstrategie"
-    genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
-
-  - Eine intelligente Backupstrategie steht zur Verfügung
-    Z. B. können Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und
-    der letzten n Jahre aufgehoben werden.
 
   - Einfache Wiederherstellung einer Sicherung
 

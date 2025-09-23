@@ -9,31 +9,16 @@ and on the [*GitHub* page](https://github.com/framps/raspiBackup).
 of your Raspberries and a configurable backup history on a regular basis
 and can thus completely restore your Raspberry so that it boots again with an old backup status**.
 
-  - Open source
+  - Automatic regular backup of a running Raspberry Pi (it backs itself up)
+    See also [FAQ1](faq.md#1-is-a-backup-of-a-running-system-reliable-should-not-stop-the-whole-system-before-the-backup)
 
-    *raspiBackup* is available under the GNU license as open source and free of charge.
-    However, a [donation](introduction.md#donation) is still welcome 😉
-
-  - Simple [installation](installation-in-5-minutes.md) with menu-driven installer (comparable to `raspi-config`)
-
-    The most important options of *raspiBackup* can be configured in German, English, Finnish,
-    Chinese and French,
-    so that the first [backup in 5 minutes](installation-in-5-minutes.md) can be created.
-
-  - All other options, some of which are very powerful, are [documented in detail](invocation-options.md)
-    and can be defined in a configuration file.
-
-  - Complete and incremental backups
+  - Full and incremental backups
 
       - The backup type `rsync` creates complete and then incremental backups
         using [Hardlinks](how-do-hardlinks-work-with-rsync.md).
       - The backup types `dd` and `tar` always create complete backups (also zipped).
         **Note**: With the `dd` backup, you can activate the option that only the space occupied by the partitions
         and not the entire SD card is backed up.
-
-    The individual backup types are described in detail [here](backup-types.md).
-    There is also a [decision tree](backup-types.md#decisiontree),
-    to quickly find the right backup type.
 
   - Two backup strategies
 
@@ -45,10 +30,36 @@ and can thus completely restore your Raspberry so that it boots again with an ol
       - the **normal backup mode** only backs up the boot and root partition
       - the **partition-oriented mode** backs up any number of partitions
 
-  - Any directories and files can be excluded from the backup
+  - Any number of backups from the past can be stored
 
-  - Automatic regular backup of a running Raspberry Pi (it backs itself up)
-    See also [FAQ1](faq.md#1-is-a-backup-of-a-running-system-reliable-should-not-stop-the-whole-system-before-the-backup)
+    Not only a single backup is created, but also a backup history.
+    You can either define a number of backups to be kept,
+    or you use the *GFS* principle (in *raspiBackup* called "Intelligent Rotation Strategy"
+    see [Grandfather-father-son generation principle](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
+
+  - An intelligent backup strategy is available
+    For example, backups of the last 7 days, the last 4 weeks, the last 12 months and
+    the last n years can be saved.
+
+  - Simple [installation](installation-in-5-minutes.md) with menu-driven installer (comparable to `raspi-config`)
+
+    The most important options of *raspiBackup* can be configured in German, English, Finnish,
+    Chinese and French,
+    so that the first [backup in 5 minutes](installation-in-5-minutes.md) can be created.
+
+  - Open source
+
+    *raspiBackup* is available under the GNU license as open source and free of charge.
+    However, a [donation](introduction.md#donation) is still welcome 😉
+
+  - All other options, some of which are very powerful, are [documented in detail](invocation-options.md)
+    and can be defined in a configuration file.
+
+    The individual backup types are described in detail [here](backup-types.md).
+    There is also a [decision tree](backup-types.md#decisiontree),
+    to quickly find the right backup type.
+
+  - Any directories and files can be excluded from the backup
 
   - Different backup types can be mixed per system (e.g. one `rsync` backup per day, one `dd` backup per week)
 
@@ -106,17 +117,6 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     These are named backups that are not deleted automatically.
     They are used, for example, to back up important intermediate steps during system upgrades
     to be able to revert to previous versions at any time in the event of problems.
-
-  - Any number of backups from the past can be stored
-
-    Not only a single backup is created, but also a backup history.
-    You can either define a number of backups to be kept,
-    or you use the *GFS* principle (in *raspiBackup* called "Intelligent Rotation Strategy"
-    see [Grandfather-father-son generation principle](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
-
-  - An intelligent backup strategy is available
-    For example, backups of the last 7 days, the last 4 weeks, the last 12 months and
-    the last n years can be saved.
 
   - Simple restoration of a backup
 
