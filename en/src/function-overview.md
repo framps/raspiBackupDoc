@@ -30,7 +30,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     Not only a single backup is created, but also a backup history.
     You can either define a number of backups to be kept,
     or you use the *GFS* principle (in *raspiBackup* called "Intelligent Rotation Strategy"
-    see [Grandfather-father-son generation principle](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
+    see [Grandfather-father-son generation principle](https://framps.github.io/raspiBackupDoc/smart-recycle.html)
 
   - An intelligent backup strategy is available
     For example, backups of the last 7 days, the last 4 weeks, the last 12 months and
