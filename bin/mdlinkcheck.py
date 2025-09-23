@@ -54,8 +54,8 @@ def check_anchor_in_target_file(target: Path,
 
     m_anchor_dblquoted = re.search(rf'<a name="{anchor}">', content)
     m_anchor_unquoted = re.search(rf"<a name=({anchor}|'{anchor}')>", content)
-    m_title = re.search(f'^##* {anchor}', content,
-                        re.IGNORECASE | re.MULTILINE)
+    m_heading = re.search(f'^##* {anchor}$', content,
+                          re.IGNORECASE | re.MULTILINE)
 
     if is_local_anchor:
         if m_anchor_unquoted:
@@ -65,7 +65,12 @@ def check_anchor_in_target_file(target: Path,
                   f" in line {target_line_nr}:"
                   f" {m_anchor_unquoted.group(0)}")
         else:
-            if m_anchor_dblquoted or m_title:
+            if m_anchor_dblquoted:
+                return
+            if m_heading:
+                print(f"{file.as_posix()}:{line_number}:"
+                      f" (Warning only) Anchor/target '{anchor}' not found"
+                      f" but matching heading '{m_heading.group()}'")
                 return
             print(f"{file.as_posix()}:{line_number}:"
                   f" Anchor/target '{anchor}' not found!")
@@ -77,7 +82,12 @@ def check_anchor_in_target_file(target: Path,
                   f" in target file '{target.as_posix()}:{target_line_nr}':"
                   f" {m_anchor_unquoted.group(0)}")
         else:
-            if m_anchor_dblquoted or m_title:
+            if m_anchor_dblquoted:
+                return
+            if m_heading:
+                print(f"{file.as_posix()}:{line_number}:"
+                      f" (Warning only) Anchor/target '{anchor}' not found"
+                      f" but matching heading '{m_heading.group()}'")
                 return
             print(f"{file.as_posix()}:{line_number}:"
                   f" Anchor/target '{anchor}' not found"
