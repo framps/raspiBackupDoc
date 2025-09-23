@@ -54,44 +54,42 @@ def check_anchor_in_target_file(target: Path,
 
     m_anchor_dblquoted = re.search(rf'<a name="{anchor}">', content)
     m_anchor_unquoted = re.search(rf"<a name=({anchor}|'{anchor}')>", content)
-    m_heading = re.search(f'^##* {anchor}$', content,
+    m_heading = re.search(fr'^##* {anchor.lower()}\s*$', content,
                           re.IGNORECASE | re.MULTILINE)
 
-    if is_local_anchor:
-        if m_anchor_unquoted:
-            target_line_nr = content[:m_anchor_unquoted.start()].count("\n")+1
-            print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor name is not double-quoted"
-                  f" in line {target_line_nr}:"
-                  f" {m_anchor_unquoted.group(0)}")
+    if m_anchor_unquoted:
+        target_line_nr = content[:m_anchor_unquoted.start()].count("\n")+1
+        if is_local_anchor:
+            target_string = f" in line {target_line_nr}:"
         else:
-            if m_anchor_dblquoted:
-                return
-            if m_heading:
-                print(f"{file.as_posix()}:{line_number}:"
-                      f" (Warning only) Anchor/target '{anchor}' not found"
-                      f" but matching heading '{m_heading.group()}'")
-                return
-            print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor/target '{anchor}' not found!")
+            target_string = (f" in target file '{target.as_posix()}:"
+                             f"{target_line_nr}':")
+        print(f"{file.as_posix()}:{line_number}:"
+              f" Anchor name is not double-quoted"
+              f"{target_string}"
+              f" {m_anchor_unquoted.group(0)}")
     else:
-        if m_anchor_unquoted:
-            target_line_nr = content[:m_anchor_unquoted.start()].count("\n")+1
-            print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor name is not double-quoted"
-                  f" in target file '{target.as_posix()}:{target_line_nr}':"
-                  f" {m_anchor_unquoted.group(0)}")
-        else:
-            if m_anchor_dblquoted:
-                return
-            if m_heading:
+        if m_anchor_dblquoted:
+            return
+        if m_heading:
+            if anchor == anchor.lower():
                 print(f"{file.as_posix()}:{line_number}:"
                       f" (Warning only) Anchor/target '{anchor}' not found"
-                      f" but matching heading '{m_heading.group()}'")
-                return
-            print(f"{file.as_posix()}:{line_number}:"
-                  f" Anchor/target '{anchor}' not found"
-                  f" in target file '{target.as_posix()}'!")
+                      f" but matching heading '{m_heading.group().strip()}'")
+            else:
+                print(f"{file.as_posix()}:{line_number}:"
+                      f" Anchor/target '{anchor}' not found"
+                      f" but possibly matching heading"
+                      f" '{m_heading.group().strip()}'."
+                      f" But the anchor needs to be all lowercase then!")
+            return
+
+        print(f"{file.as_posix()}:{line_number}:"
+              f" Anchor/target '{anchor}' not found", end="")
+        if is_local_anchor:
+            print("!")
+        else:
+            print(f" in target file '{target.as_posix()}'!")
 
 
 def check_markdown_file(root: Path, file: Path,
@@ -177,7 +175,7 @@ def print_external_links(links):
         print(f"{filename}:{line_number}: {target}")
 
 
-def main(args):
+def main(args) -> None:
     """The main checker ;-) """
 
     print("*** Check project-internal links ***\n")
