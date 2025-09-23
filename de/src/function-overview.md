@@ -35,7 +35,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     Es wird nicht nur ein einzelnes Backup erstellt, sondern eine Backuphistorie.
     Entweder definiert man eine Anzahl von Backups, die vorgehalten werden sollen,
     oder man nutzt das *GVS*-Prinzip (in *raspiBackup* "Intelligente Rotationsstrategie"
-    genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://www.framp.de/raspiBackupDoc/de/smart-recycle.md)).
+    genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://framps.github.io/raspiBackupDoc/smart-recycle.html)
 
   - Eine intelligente Backupstrategie steht zur Verfügung
     Z. B. können Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und
