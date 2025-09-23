@@ -23,7 +23,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
   - Zwei Sicherungsstrategien
 
       - Eine definierte Anzahl von Sicherungen wird vorgehalten
-      - Sicherungen werden nach der Großvater-Vater-Sohn Sicherungsstrategie (GVS) vorgehalten.
+      - Sicherungen werden nach der [Großvater-Vater-Sohn Sicherungsstrategie](https://framps.github.io/raspiBackupDoc/smart-recycle.html) (GVS) vorgehalten.
 
   - Zwei [Backupmodi](normal-or-partition-backup.md):
 
