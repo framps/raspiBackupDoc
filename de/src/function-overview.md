@@ -1,17 +1,12 @@
 # Funktionsübersicht
 
-Auf dieser Seite findet sich eine High Level Übersicht zu *raspiBackup*.
-
-Detailliertere Informationen finden sich hier in der weiteren Dokumentation
-und auf der [*GitHub*-Seite](https://github.com/framps/raspiBackup).
-
 **Mit *raspiBackup* erhältst Du schnell und sicher regelmäßig ein vollständiges Systembackup
 Deiner Raspberries und eine konfigurierbare Backuphistorie
 und kannst somit Deine Raspberry vollständig wiederherstellen,
 so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Automatische regelmäßige Sicherung einer laufenden Raspberry Pi (sie sichert sich selbst)
-    Siehe dazu auch [FAQ1](faq.md#faq1)
+    Siehe dazu auch [Ist ein Backup eines laufenden Systems zuverlässig? Sollte nicht das gesamte System vor dem Backup gestoppt werden?](faq.md#faq1)
 
   - Vollständige und inkrementelle Sicherungen
 
