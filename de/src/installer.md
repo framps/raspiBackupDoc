@@ -27,6 +27,7 @@ Mit folgenden Optionen kann der Installer bestimmte Funktionen direkt ohne Menü
 * -u: Deinstallation von *raspiBackup* inklusive Installer
 * -t: Nutzung von entweder crond oder systemd als Backuptimer bei Option -i, Default ist systemd
 
+<a name="deinstallation"></a>
 ## Deinstallation
 
 *raspiBackup* und der Installer können auch wieder deinstalliert werden:

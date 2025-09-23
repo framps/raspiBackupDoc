@@ -11,7 +11,7 @@ und kannst somit Deine Raspberry vollständig wiederherstellen,
 so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Automatische regelmäßige Sicherung einer laufenden Raspberry Pi (sie sichert sich selbst)
-    Siehe dazu auch [FAQ1](faq.md#1-ist-ein-backup-eines-laufenden-systems-zuverlässig-sollte-nicht-das-gesamte-system-vor-dem-backup-gestoppt-werden)
+    Siehe dazu auch [FAQ1](faq.md#faq1)
 
   - Vollständige und inkrementelle Sicherungen
 

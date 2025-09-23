@@ -10,7 +10,7 @@ of your Raspberries and a configurable backup history on a regular basis
 and can thus completely restore your Raspberry so that it boots again with an old backup status**.
 
   - Automatic regular backup of a running Raspberry Pi (it backs itself up)
-    See also [FAQ1](faq.md#1-is-a-backup-of-a-running-system-reliable-should-not-stop-the-whole-system-before-the-backup)
+    See also [FAQ1](faq.md#faq1)
 
   - Full and incremental backups
 

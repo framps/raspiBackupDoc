@@ -27,6 +27,7 @@ The following options allow the installer to perform certain functions directly 
 * -u: Uninstall *raspiBackup* including installer
 * -t: Use either crond or systemd as backup timer with option -i, default is systemd
 
+<a name="uninstallation"></a>
 ## Uninstallation
 
 *raspiBackup* and the installer can also be uninstalled:

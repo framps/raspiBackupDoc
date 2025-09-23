@@ -102,6 +102,7 @@ of the pages with help and advice as well as very helpful tools.
 
 The code of *raspiBackup* is available under the GPL on [*GitHub*](https://github.com/framps/raspiBackup).
 
+<a name="disclaimer"></a>
 ## Disclaimer
 
 *raspiBackup* was created for personal use and, as it proved to be very useful,
