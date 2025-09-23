@@ -105,7 +105,7 @@ and a partition is provided for any external root file system.
 Then start *raspiBackup* for the restore, call see [below](#devicenames).
 
 If no RaspbianOS and/or no Raspberry Pi is used,
-the option [--unsupportedEnvironment](general-options.md#--unsupportedenvironment) must be specified.
+the option [--unsupportedEnvironment](general-options.md#parm_unsupportedEnvironment) must be specified.
 
 See also [Supported hardware and software](supported-hardware-and-software.md).
 

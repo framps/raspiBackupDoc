@@ -3,15 +3,15 @@
 <a name="backup"></a>
 ## Backup-Optionen
 
-  - [-a: Befehle die Services nach dem Backup starten](backup-options.md#-a)
-  - [-A: Das Laufzeitlog wird in der eMail mitgeschickt](general-options.md#-A)
+  - [-a: Befehle die Services nach dem Backup starten](backup-options.md#parm_a)
+  - [-A: Das Laufzeitlog wird in der eMail mitgeschickt](general-options.md#parm_A)
   - [-b: Definition der Blocksize die beim dd Backup genutzt wird](backup-options.md#parm_b)
   - [-B: Bootpartition wird als tar gesichert statt per dd](backup-options.md#parm_B)
-  - [-c: Erlaube lokale Backupsicherung](backup-options.md#-c)
+  - [-c: Erlaube lokale Backupsicherung](backup-options.md#parm_c)
   - [-D: Weitere Optionen für den dd Backup](backup-options.md#parm_D)
   - [--dynamicMount: Dynamisches Mounten der Backuppartition](backup-options.md#parm_dynamicMount)
   - [--ignoreAdditionalPartitions: Es werden mehr als zwei Partitionen toleriert wobei aber nur die ersten beiden Partitionen gesichert werden.](backup-options.md#parm_ignoreAdditionalPartitions)
-  - [--ignoreMissingPartitions: Test ob alle Partitionen gesichert werden](backup-options.md#--ignoremissingPartitions)
+  - [--ignoreMissingPartitions: Test ob alle Partitionen gesichert werden](backup-options.md#parm_ignoreMissingPartitions)
   - [-k : Anzahl der Backups die vorgehalten werden sollen](backup-options.md#parm_k)
   - [--keep_{type}: Anzahl der jeweiligen Backuptypen, die vorgehalten werden sollen](backup-options.md#parm_keepType)
   - [-M: Erstellen eines *raspiBackup* Snapshots](backup-options.md#parm_M)
