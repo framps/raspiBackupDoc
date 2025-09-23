@@ -8,7 +8,7 @@
 > overdue.
 > All German pages were translated into English with the help of [DeepL](https://www.deepl.com) to speed up the deployment.
 >
-> All the documentation about the tool chain created by @rpi-simonz an others is written in German. If somebody is interested to add new pages or enhance the documentaion please create an issue and
+> All the documentation about the tool chain created by @rpi-simonz is written in German. If somebody is interested to add new pages or enhance the documentation and is not a German native speaker please create an issue and
 > you will get help to complete your task 😉
 
 <!-- Hinweis:
