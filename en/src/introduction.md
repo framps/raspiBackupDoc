@@ -11,9 +11,7 @@ A backup always contains the entire system, i.e. system data and user data.
 The system therefore reboots immediately once it has been restored.
 
 For **installation and configuration** of *raspiBackup* there is an
-[installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured.
-options of *raspiBackup*, comparable to `raspi-config`.
-More specific settings can be made in a configuration file.
+[installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured similar to `raspi-config`. More specific settings can be configured in a configuration file.
 
 All functions and applications of *raspiBackup* are described in the first chapter
 [Function overview](function-overview.md).
@@ -80,9 +78,8 @@ Acknowledgment of the development and maintenance effort as well as support for
 
 The donation is primarily used to buy consumables such as SD cards, adapters, cables etc.,
 needed for development and testing. If the donations are sufficient,
-new hardware is also purchased in order to build the necessary hardware support into *raspiBackup*
-and to verify the correct functionality
-on the new hardware.
+new hardware is also purchased in order to add the necessary hardware support into *raspiBackup*
+and to verify the correct functionality on the new hardware.
 
 ## Acknowledgements
 
