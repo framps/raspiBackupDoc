@@ -7,8 +7,7 @@ To make it easier to get started, this page therefore briefly explains
 how *raspiBackup* can be installed and configured in just a few minutes
 and then backups of the Raspberry can be created.
 
-The chapter [Configuration-examples](configuration-examples.md) contains some inspirations for using *raspiBackup*
-are listed. These can be used to familiarize yourself with the parameters and thus help with the later
+The chapter [configuration-examples](configuration-examples.md) contains some inspirations for using *raspiBackup*. These can be used to familiarize yourself with the parameters and thus help with the later
 configuration during the installation.
 
 Restoring a backup is described in detail [on a separate page](restore-intro.md).
