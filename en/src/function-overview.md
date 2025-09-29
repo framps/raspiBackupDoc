@@ -18,7 +18,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Two backup strategies
 
       - A defined number of backups are kept
-      - Backups are kept according to the [grandfather-father-son backup strategy]((https://framps.github.io/raspiBackupDoc/smart-recycle.html) (GVS).
+      - Backups are kept according to the [grandfather-father-son backup strategy](https://framps.github.io/raspiBackupDoc/smart-recycle.html) (GVS).
 
   - Two [backup modes](normal-or-partition-backup.md):
 
