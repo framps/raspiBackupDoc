@@ -6,11 +6,11 @@ Each backup run creates a subdirectory in the backup directory,
 which has the following format:
 \<hostname\>.
 
-If the `-M` option is used, the option value is appended:
-\<hostname\>-\<-M parameter\>.
-
 A further directory is created underneath:
 \<hostname\>@\<osversion\>-\<backuptype\>-\<backupdate\>.
+
+If the `-M` option is used (*raspiBackup* snapshot), the option value is appended:
+\<hostname\>@\<osversion\>-\<backuptype\>-\<backupdate\>.-\<-M parameter\>.
 
 **Examples:**
 
@@ -26,17 +26,17 @@ The following directories are then created:
 Enter `-M "Hello world"` as a parameter for the option,
 
 ```
- ├── raspberrypi-Hello world
- │ └── raspberrypi@debian12-rsync-backup-20160415-222900
+ ├── raspberrypi
+ │ └── raspberrypi@debian12-rsync-backup-20160415-222900_Hello_world
 ```
 
 Enclosed is the directory structure of my backup server, which in this case is also
 is a Raspberry Pi. Different backup types can be combined per Pi.
-can be combined per Pi. Each backup is stored in a new subdirectory.
+Each backup is stored in a new subdirectory.
 
 Three or five additional files are always created per Raspberry system in addition to the
 backup and are necessary for the restore if it is not an `dd` backup.
-backup. This makes it possible for Linux experts to restore a backup manually.
+This makes it possible for Linux experts to restore a backup manually.
 This is described in the chapter [Manual restore](manual-restore.md).
 
   - `.img` - boot partition
