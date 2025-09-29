@@ -1,7 +1,7 @@
 # Quick start - installation in 5 minutes
 
 The documentation of *raspiBackup* has become very extensive due to the wealth of
-has become very extensive.
+functionality.
 
 To make it easier to get started, this page therefore briefly explains
 how *raspiBackup* can be installed and configured in just a few minutes
