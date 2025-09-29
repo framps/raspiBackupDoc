@@ -2,23 +2,22 @@
 
 Whenever a *raspiBackup* version is upgraded,
 immediately checks whether the new version requires a new
-requires a new configuration version. If so, the local configuration is automatically
-configuration is automatically merged with the new configuration in a new
-a new configuration file of *raspiBackup*.
+configuration version. If so, the local configuration is automatically
+merged with the new configuration in a new
+configuration file of *raspiBackup*.
 The following section describes in detail how this merging
 is carried out.
 
 **Note**:
 If for some reason no configuration file update
-has taken place during an upgrade, the update can be triggered manually with the following command
-to trigger the update manually:
+has taken place during an upgrade, the update can be triggered manually with the following command:
 
 ```
 sudo raspiBackup.sh --updateConfig
 ```
 
 When merging the two configurations, *raspiBackup* writes
-writes various information messages. The following messages are written
+various information messages. The following messages are written
 for example, when upgrading from *raspiBackup* 0.6.4.3 to *raspiBackup*
 0.6.5 is upgraded.
 
@@ -59,14 +58,14 @@ This is the simplest method for updating the configuration file
 and is done quickly.
 
 However, you can also answer "no" and not activate the merged configuration file
-configuration file immediately. You will then receive the following
+immediately. You will then receive the following
 message:
 ```
 --- RBK0247I: Now check the merged configuration file /usr/local/etc/raspiBackup.conf.merged and copy it to /usr/local/etc/raspiBackup.conf to finish the configuration update.
 ```
 
 Within the merged configuration file, the new options are
-options are marked as follows and are therefore easy to recognize:
+marked as follows and are therefore easy to recognize:
 
 ```
 # Smart recycle
@@ -90,9 +89,9 @@ cycle to test whether everything still works as before.
 
 *raspiBackup* also supports the use of [different
 configuration files](invocation-options.md#configFiles). However, the automatic configuration upgrade is only
-for the standard configuration `/usr/local/etc/raspiBackup.conf`.
-is carried out. All other configuration files must be extended manually by
-manually by taking the configuration lines marked as new and
+done for the standard configuration `/usr/local/etc/raspiBackup.conf`.
+All other configuration files must be extended manually by
+manually taking the configuration lines marked as new and
 and copying them to the other configuration files.
 
 [.status]: translated
