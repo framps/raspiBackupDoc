@@ -6,8 +6,7 @@
 sudo raspiBackupInstallUI {Options}
 ```
 
-There are two different ways to invoke the *raspiBackup* installer `raspiBackupInstallUI`
-installer:
+There are two different ways to invoke the *raspiBackup* installer `raspiBackupInstallUI`:
 
 1. Invoke without options or with option `-t`
     The installer starts with a menu via which *raspiBackup* can be configured.
@@ -49,13 +48,12 @@ This will delete the installer as well as *raspiBackup* with all its files!
 *raspiBackup* offers two different ways to store backup versions
 to keep backup versions:
 
-1. a *maximum number of backups* that is kept for each backup type (option -k).
-   In the configuration file, the number of backups can be defined for each backup type (option
-   can be defined for each backup type (option --keep\<type\>).
+1. A *maximum number of backups* that is kept for each backup type (option -k).
+   In the configuration file, the number of backups can be defined for each backup type (option --keep\<type\>).
    If the number is exceeded, the oldest backup is deleted.
 
-1. use of the *intelligent backup strategy*. Backups are created according to a specific rule
-   of the last days, weeks, months and years. Older backups
+1. Use of the *intelligent backup strategy*. Backups are created according to a specific rule
+   which defines the number of days, weeks, months and years a backup should be kept. Older backups
    are deleted in each case. In the installer, the number of
    backups to be kept is defined with 4 numbers. The default is
    `7 4 12 3`.
@@ -74,32 +72,29 @@ to keep backup versions:
 Since *raspiBackup* does not back up any memory contents, all services that hold important information
 in memory should be stopped before the backup.
 
-*raspiBackup* offers the option of automatically stopping services before the backup and then starting them again.
+*raspiBackup* offers the option of automatically stop services before the backup and then 
 restart them afterwards. All services preselected in the installer should always be stopped.
 As it cannot be ruled out that other services on the system may also hold important data
 in the memory and should be stopped before the backup, the list of services that are not
 active services must be carefully checked and, if necessary, these services must also be
-services must also be selected so that they are stopped before the backup.
+selected so that they are stopped before the backup.
 
 After selecting the services that are to be stopped, the order in which they are to be stopped must be defined.
-in which they are to be stopped must be defined. In general, the sequence
-sequence does not matter, but if a service has dependencies on another service, the service should
-the service should only be stopped after the dependent service. For example
+In general, the sequence does not matter, but if a service has dependencies on another service, the service should
+only be stopped after the dependent service. For example
 all services that work with a database should be stopped before stopping the database
 so that they can complete any open transactions.
-
 
 <a name="regularbackup"></a>
 ### Regular backup - Menu C9
 
 *raspiBackup* offers the possibility to create regular backups automatically.
-This is done by default via *Systemd*, but can also be started with the option `-t`
-option when installing the installer to *Cron*.
+This is done by default via *Systemd*, but can also be started with **Cron* 
+if the option `-t` is used when the installer is started.
 
 The day of the week on which a backup is to be created can be defined in the installer.
-is to be created. Or also a daily backup.
-The time of the backup is also defined in hours and minutes.
-The default is Sunday at 05:00.
+It's also possible to have a daily backup.
+The time of the backup is also defined in hours and minutes. The default is Sunday at 05:00.
 
 
 ## Default configuration and location of the configuration file
@@ -132,8 +127,7 @@ The installer creates the following files:
   - *Systemd timer* Configuration `/etc/systemd/system/raspiBackup.timer`.
 
     This file controls the call of *raspiBackup* and in the standard case the
-    weekly backup is switched off. However, it can be switched on with the installer
-    be switched on.
+    weekly backup is switched off. However, it can be switched on with the installer.
 
   - *raspiBackup*.sh `/usr/local/bin`
 
@@ -158,7 +152,7 @@ Changes to the configuration can now be made manually using an editor.
 See [Invocation and options](invocation-options.md).
 
 You can also use the installer with its menus to adjust the configuration of the primary
-of the primary options and to switch the regular backup on or off.
+options and to switch the regular backup on or off.
 
 [.status]: translated
 
