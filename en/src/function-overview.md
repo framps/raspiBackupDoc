@@ -71,8 +71,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     failure of the backup run. Other smilies inform about other important
     important events such as the availability of a beta or a new release
     or a reminder to perform a restoretest to test the backup integrity.
-    test the backup integrity.
-
+    
   - Supported email clients: *mailx*/*mail*, *sendEmail*, *ssmtp* and *msmtp*.
     Unsupported e-mail clients can be integrated using an e-mail plug-in.
 
