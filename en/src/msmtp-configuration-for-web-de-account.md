@@ -3,9 +3,9 @@
 The user *gNeadr* from *raspiBackup* had problems setting up the e-mail notification
 for his web.de account. After he
 successfully managed to configure everything correctly, he fortunately
-fortunately offered to publish his installation and configuration steps here
+offered to publish his installation and configuration steps here
 to make it easier for other *raspiBackup* users,
-the email configuration for *raspiBackup*.
+to configure the email configuration for *raspiBackup*.
 
 There is not much to configure in *raspiBackup*.
 The difficulty is to configure the eMailClient correctly.
