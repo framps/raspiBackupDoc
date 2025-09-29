@@ -91,8 +91,8 @@ sudo bash ./install
 popd
 ```
 
-**Note**: A manual installation without `sudo` usage is documented in an extra
-[manual-installation-and-configuration.md).
+**Note**: A manual installation without `sudo` usage is documented on
+[this page](manual-installation-and-configuration.md).
 
 Now you can select the installation with standard configuration and
 change the essential settings in the configuration menu.
