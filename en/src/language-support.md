@@ -1,6 +1,6 @@
 # Language support
 
-For displaying it's dialogs and messages *raspiBackup* takes the system language into account.
+For displaying it's dialogs and messages *raspiBackup* the system language is used.
 English is used as default if that language isn't supported by *raspiBackup* yet.
 
 <a name="supported-languages"></a>
@@ -11,8 +11,8 @@ Supported languages are
    1. French
    1. German
 
-Anyone wanting to add another language to *raspiBackup* is invited to do so,
-Details can be found [here](local-language-support-for-languages-other-than-de-and-en-l10n.md).
+Anyone who want's to help to add additional language support to *raspiBackup* is greatly welcome.
+Details how to add language support is described [here](local-language-support-for-languages-other-than-de-and-en-l10n.md). Don't hesitate to create an issue to get in contact with *framp* and to get any help.
 
 [.source]: https://linux-tips-and-tricks.de/en/raspibackupcategoried/603-raspibackup-local-language-support-for-languages-other-than-de-and-en-l10n
 
