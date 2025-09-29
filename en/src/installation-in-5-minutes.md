@@ -14,7 +14,7 @@ Restoring a backup is described in detail [on a separate page](restore-intro.md)
 The primary platforms (Linux, Mac or Windows) of the users are also described there.
 
 **Note:** From *raspiBackup* user [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) there is another
-[Instructions for installing, configuring and using raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/).in the German Raspberry forum.
+[Instructions for installing, configuring and using raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) in the German Raspberry forum.
 
 
 ## With installer or without?
@@ -106,7 +106,6 @@ Finally, the weekly backup can be activated with *raspiBackup*.
 
 The installer can be restarted at any time in the command line with
 `sudo raspiBackupInstallUI` to change the configuration.
-change the configuration.
 
 ![Installation demo video](images/raspiBackupInstall_de.gif)
 
