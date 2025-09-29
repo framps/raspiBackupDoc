@@ -54,7 +54,7 @@ That allows for some tricks:
     - [Statistics](statistics.md)
     - [Updates](updates.md)
 
-- [Function detail](function-intro.md)
+- [Function details](function-intro.md)
     - [Backup](backup-intro.md)
         - [Decision tree for backup types](backup-types.md)
         - [Comparison of partition orientated and normal backup](normal-or-partition-backup.md)
