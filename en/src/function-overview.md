@@ -81,13 +81,13 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
   - All boot modes are supported
 
-      1. boot from a USB device or SSD (USB boot mode): Both partitions
+      1. Boot from a USB device or SSD (USB boot mode): Both partitions
          are located on a USB device. Supported by the newer Raspberries since model 3B
-      2. boot from the SD card: Both partitions are on the SD card
+      2. Boot from the SD card: Both partitions are on the SD card
          (every model)
-      3. mixed mode: Boot from the SD card and use of the root partition
+      3. Mixed mode: Boot from the SD card and use the root partition
          from a USB device. This is necessary for older Raspberries that
-         do not yet support USB boot
+         do not support USB boot
 
   - Any backup destinations are possible, e.g.
 
