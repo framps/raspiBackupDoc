@@ -1,7 +1,7 @@
 # Intelligent rotation strategy - Smart Recycle
 
 *raspiBackup* can either keep a configurable number of backups or use an intelligent backup rotation strategy.
-rotation strategy of the backup. It is also called the ["generation principle in
+It is also called the ["generation principle in
 of data backup"](https://de.wikipedia.org/wiki/Generationenprinzip). The implementation was inspired by Manuel Dewald's
 article ["Automating backups on a Raspberry Pi NAS"](https://opensource.com/article/18/8/automate-backups-raspberry-pi).
 The following backups are then kept by default,
@@ -16,16 +16,16 @@ This can be adapted to the respective requirements using the installer.
 
 If weekly backups are created, the daily backups are of course omitted.
 The respective retention periods for daily, weekly, monthly and yearly backups can be
-annually can be configured with options.
+mannually configured with options.
 
 So if you only want to have weekly, monthly and annual backups, this can be configured.
-this can be configured. It should be noted that the weekly backup day then
-backup day defines the backup day of the month: If, for example, Monday is configured as
-weekly backup day, the monthly backup is always on the first Monday of the month and the
-Monday of the month and the annual backup on the first Monday of the year.
+It should be noted that the weekly backup day then
+defines the backup day of the month: If, for example, Monday is configured as
+weekly backup day, the monthly backup is always on the first Monday of the month 
+and the annual backup on the first Monday of the year.
 
 ``` admonish info title="Note"
-If several daily backups are possible, the **newest** daily backup is always kept.
+If several daily backups are created, the **newest** daily backup is always kept.
 backup is always kept. For the weekly, monthly and annual backups
 the **oldest** backups are kept.
 
@@ -84,7 +84,7 @@ annual backups always from the 1st of the year.
 ## Options
 
 The intelligent rotation strategy is activated with the `--smartRecycle` option.
-The storage quantities can be redefined with the `--smartRecycleOptions` option.
+The storage quantities can be configured with the `--smartRecycleOptions` option.
 The `--smartRecycleOptions "7 4 12 3"` option is active by default.
 With `--smartRecycleOptions "0 4 12 0"`, for example, the last 4
 weekly and the last 12 monthly backups are retained.
@@ -100,10 +100,10 @@ This is particularly important if, after switching to the intelligent rotation s
 you want to continue using the previous backup directory and not use a new directory.
 
 If you have carefully checked that the intelligent rotation strategy deletes the
-deletes the correct backups and removes the desired backups, the
+correct backups and removes the desired backups, the
 option `--smartRecycleDryrun-` (note the `-` at the end!) in each backup run
 the intelligent rotation strategy is applied and
-**backups that are no longer required are deleted irrevocably**.
+**backups that are no longer required are deleted unrecoverable**.
 
 Alternatively, the configuration option
 
