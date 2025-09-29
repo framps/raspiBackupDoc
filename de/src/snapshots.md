@@ -5,14 +5,15 @@ Dieses sind normale Backups, die aber zwei Besonderheiten haben:
 
   - Snapshots werden **nicht automatisch gelöscht** durch die gewählte Backupstrategie
   - Snapshots muss man eine Beschreibung als Parameter zur Option `-M` mitgeben.
-    Diese wird am Ende des Verzeichnisnamens angehängt.
+    Diese wird am Ende des Verzeichnisnamens angehängt und erlaubt den Grund des Snapshots
+    zu speichern.
 
 Somit kann man sehr leicht einen Snapshot außer der Reihe erstellen
 und durch die Beschreibung im Namen des Backupverzeichnisses kann der Grund
 des Snapshots erkannt werden. Das ist zum Beispiel sehr hilfreich, bevor man ein
 Softwareupdate vornimmt oder eine andere größere Änderung plant. Wenn das
 Update schief geht, hat man schnell wieder den vorherigen Stand hergestellt.
-Wenn er erfolgreich war, löscht man den Snapshot im Backupverzeichnis.
+Wenn er erfolgreich war, muss man den Snapshot im Backupverzeichnis manuell löschen.
 
 **Hinweis:**
 *raspiBackup* Snapshots sind keine Snapshots im eigentlichen Sinne wie sie z.B. mit *btrfs* erstellt werden können.
