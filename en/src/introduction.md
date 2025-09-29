@@ -1,9 +1,9 @@
 # Introduction
 
 A regular backup of Raspberry Pis is important in case of a
-failure of the system storage device (SD card, USB disk, SSD, NVMe ...) or also of
-unintentional changes that cause the system to no longer boot or to boot incorrectly,
-to be able to reset the system to a previous state.
+failure of the system storage device (SD card, USB disk, SSD, NVMe ...) or an
+unintentional change that causes the system to no longer boot or to boot incorrectly,
+to be able to recover and reset the system to a previous state.
 
 *raspiBackup* creates a system backup of a Raspberry Pi **while the system is running**.
 This can be done manually or automatically at regular intervals.
