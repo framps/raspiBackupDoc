@@ -37,9 +37,8 @@ DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY=1
 
 However, it is also necessary to shrink the root partition of the Raspberry
 Raspberry, as the entire free space on the SD card is backed up by default.
-is backed up by default. However, this is not possible under Windows, but a Linux system must be used
+However, this is not possible under Windows, but a Linux system must be used
 and use the tools `gparted` or `resize2fs` to shrink the root partition.
-must be reduced in size.
 
 ## A Windows user wants to create an absolutely minimal image with pishrink
 
@@ -52,7 +51,7 @@ DEFAULT_ZIP_BACKUP=1
 ```
 
 also reduces the size of the image, but this cannot be restored directly
-be restored under Windows. It must first be unzipped.
+under Windows. It must first be unzipped.
 
 ## A Raspberry should be backed up as quickly as possible. The backup partition is an EXT4 file system mounted via NFS, which is provided by a NAS
 
