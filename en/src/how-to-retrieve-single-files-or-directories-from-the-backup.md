@@ -3,11 +3,10 @@
 Sometimes a complete restore of the entire system is not required, but only
 individual file(s) or directories.
 This is not directly supported by *raspiBackup*.
-Since *raspiBackup* only uses standard Linux tools to restore the entire system
-to restore the entire system, this can be done manually for all backup types.
+Since *raspiBackup* only uses standard Linux tools to restore the entire system,
+this can be done manually for all backup types.
 
 However, these activities must be carried out on a Linux system.
-system.
 
 The easiest way to do this is with rsync backups. dd and tar backups require a few
 additional steps on the command line.
