@@ -110,13 +110,15 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
     These are named backups that are not deleted automatically.
     They are used, for example, to back up important intermediate steps during system upgrades
-    to be able to revert to previous versions at any time in the event of problems.
+    to be able to revert to previous versions at any time in the event of problems. In contrast
+    to normal backups a free selectable descriptive text will be be added to the backup directory.
+    That way it's possible to identify the purpose of the snapshots.
 
   - Simple restoration of a backup
 
-    A backup of the `dd` backup type can also be restored to a Windows system.
+    A backup of the `dd` backup type can also be restored from a Windows system.
     *Win32Diskimager* or similar tools can be used.
-    `tar` and `rsync` require a Linux system for restoration.
+    `tar` and `rsync` require a Linux system for a restore.
     It is recommended to use a preconfigured SD card with *Raspberry Pi OS*
     and start it on a Raspberry.
 
