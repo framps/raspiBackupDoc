@@ -6,11 +6,11 @@ Jeder Backuplauf erstellt im Backupverzeichnis ein Unterverzeichnis,
 welches folgendes Format hat:
 \<hostname\>.
 
-Bei Verwendung der Option `-M` wird der Optionswert noch angehängt:
-\<hostname\>-\<-M parameter\>.
-
 Jeweils darunter wird ein weiteres Verzeichnis erstellt:
 \<hostname\>@\<osversion\>-\<backuptyp\>-\<backupdatum\>.
+
+Bei Verwendung der Option `-M` (*raspiBackup* Snapshot) wird der Optionswert noch angehängt:
+\<hostname\>@\<osversion\>-\<backuptyp\>-\<backupdatum\>\<-M parameter\>.
 
 **Beispiele:**
 
@@ -26,8 +26,8 @@ Dann entstehen folgende Verzeichnisse:
 Gibt man als Parameter für die Option `-M "Hello world"` mit,
 
 ```
- ├── raspberrypi-Hello world
- │   └── raspberrypi@debian12-rsync-backup-20160415-222900
+ ├── raspberrypi
+ │   └── raspberrypi@debian12-rsync-backup-20160415-222900_Hello_world
 ```
 
 Anbei die Verzeichnisstruktur meines Backupservers, der in diesem Falle auch
