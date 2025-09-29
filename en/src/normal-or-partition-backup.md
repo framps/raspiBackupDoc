@@ -7,7 +7,6 @@ There are two backup modes:
    In this mode, the first two partitions (the boot partition and the root partition) of the
    root partition) of the SD card are backed up. In addition, the `tar` and `rsync` backup
    also back up an external root partition, i.e. a root partition stored on a USB stick or USB disk.
-   a root partition stored on a USB stick or USB disk.
    If the target device is larger than the source device during the restore,
    the second partition is automatically extended accordingly.
 
@@ -27,7 +26,6 @@ There are two backup modes:
    If the target device is larger than the
    source device during the restore, the last partition is expanded to use the entire target device.
 
-Translated with DeepL.com (free version)
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#Vergleich
 [.source]: https://www.linux-tips-and-tricks.de/en/backup
