@@ -22,7 +22,7 @@ are stored.
 |----------------------------|----------|
 | DEFAULT_BACKUPATH | /backup |
 
-This option can be overwritten when calling *raspiBackup*
+This option can be overwritten when invoking *raspiBackup*
 with the option [-p](backup-options.md#parm_p) or by specifying a directory at the end
 a directory is specified at the end. (See [invocation and options](invocation-options.md)).
 

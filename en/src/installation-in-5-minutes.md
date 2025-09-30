@@ -183,7 +183,7 @@ and for the options that can **only** be set via the configuration file
 in the chapter [Call and options - Backup - Configuration](backup-config-options.md).
 
 Also useful: [raspiBackupDialog - a convenient helper script for raspiBackup](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md),
-which simplifies the use and calling of *raspiBackup*.
+which simplifies the use and invocation of *raspiBackup*.
 
 ## Uninstallation
 

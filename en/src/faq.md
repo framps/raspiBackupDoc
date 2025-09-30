@@ -628,7 +628,7 @@ Raspberry hardware. Just try it out. But *raspiBackup* will [only for
 RaspbianOS and Raspberry HW](supported-hardware-and-software.md). I.e. if it works, be
 happy. But if it doesn't work, don't ask for support. :-)
 
-The option `--unsupportedEnvironment` must then be specified when calling.
+The option `--unsupportedEnvironment` must then be specified as an invocation parameter.
 
 
 <a name="faq34"></a>

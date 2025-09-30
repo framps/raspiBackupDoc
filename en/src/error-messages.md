@@ -108,9 +108,9 @@ These options can be configured with the *raspiBackup* installer for Systemd ser
 
 Further actions:
 
-The two options with corresponding parameters must be specified when calling
+The two options with corresponding parameters must be specified
 or the services must be defined with the installer in the configuration file.
-must be defined with the installer. Details can be found in [FAQ18](faq.md#faq18).
+Details can be found in [FAQ18](faq.md#faq18).
 
 
 ### RBK0020E: File system of the rsync backup directory %s does not support softlinks.
@@ -170,8 +170,8 @@ and avoid a detailed log, which you get with option -v.
 After that, it often helps to enter the error message in a search engine,
 to find the cause. On the [FAQ page](faq.md) there are many error messages and their
 their causes and troubleshooting measures. With rsync you will find in the
-debug log after calling rsync all error messages from rsync and can use them to
-the cause of the termination.
+debug log after the invocation of rsync all error messages from rsync and can use them to
+find the root cause of the termination.
 
 Alternatively, you can have tar and rsync ignore errors. See [FAQ32](faq.md#faq32).
 

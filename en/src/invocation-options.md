@@ -6,8 +6,8 @@
 raspiBackup Option1 Option2 Option3 ... Backup directory
 ```
 
-All options that switch something on or off can be activated or deactivated by
-an appended ` ` or `-` when calling *raspiBackup*.
+All options that switch something on or off can be activated or deactivated
+by appendedng `+` or `-` when invoking *raspiBackup*.
 
 Example: The `-z` option and the `-z` option switch backup compression on.
 The `-z-` option, on the other hand, switches backup compression off, regardless of

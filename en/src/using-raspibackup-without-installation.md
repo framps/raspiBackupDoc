@@ -7,8 +7,7 @@
    parameter in the call, e.g. `sudo bash ./raspiBackup.sh /media/pi`
 
 1. Configuration of *raspiBackup*. See [Call and options](invocation-options.md) and
-   the configuration in the *raspiBackup* configuration file or use the corresponding invocation options
-   when calling.
+   the configuration in the *raspiBackup* configuration file or use the corresponding invocation options.
 
 1. Start the backup: `sudo bash ./raspiBackup.sh`
 
