@@ -31,6 +31,10 @@ Soll wirklich **kein** Service gestartet werden, muss ein Doppelpunkt ":" als Ar
 
 Siehe dazu auch [FAQ1](faq.md#faq1) und [FAQ18](faq.md#faq18)
 
+**Hinweis**:
+Die Parameter können mit dem Installer gesetzt werden. Werden sie manuell geändert kann
+der Installer nicht mehr zur Änderung genutzt werden.
+
 **Achtung**:
 Die Befehle werden als root ausgeführt. Es ist kein sudo notwendig.
 
@@ -65,7 +69,7 @@ benutzt wird.
 
 Es kann kein Backup auf der Rootpartition erstellt werden, um vor
 unbeabsichtigtem Vollschreiben der Rootpartition durch das Backup zu schützen.
-Auch macht es keinen Sinn, ein Backup auf der Systempartition abzulegen.
+Es macht normalerweise keinen Sinn, ein Backup auf der Systempartition abzulegen.
 
 Mit dieser Option wird der Test ausgeschaltet und es kann ein Backup auf der
 Rootpartition erstellt werden.
@@ -181,7 +185,7 @@ idefix/idefix-rsync-backup-20170103-170717_idefix-Initial_boot_from_SD
 
 **Hinweis**:
 *raspiBackup* Snapshots sind normale Backups und keine "richtigen"
-Snapshots wie die bei LVM oder BTRFS. Es werden aber beim rsync Backup Hardlinks
+Snapshots wie die bei LVM oder btrfs. Es werden aber beim rsync Backup Hardlinks
 genutzt, um die Snapshotzeit zu reduzieren.
 
 **Hinweis**:
@@ -233,6 +237,11 @@ Beispiel:
 Soll wirklich **kein** Service gestoppt werden, muss der Doppelpunkt ":" als Argument mitgegeben werden.
 
 Siehe dazu auch [FAQ1](faq.md#faq1) und [FAQ18](faq.md#faq18)
+
+**Hinweis**:
+Die Parameter können mit dem Installer gesetzt werden. Werden sie manuell geändert kann
+der Installer nicht mehr zur Änderung genutzt werden.
+
 
 **Achtung**:
 Die Befehle werden als root ausgeführt. Es ist kein sudo notwendig.

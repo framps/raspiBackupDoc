@@ -1,7 +1,7 @@
 # Backup configuration options
 
 Most of the invocation options can also be defined in the configuration file
-configuration file. See [Backup options](backup-options.md).
+See [Backup options](backup-options.md).
 
 <div class="table-wrapper-for-options">
 
@@ -14,7 +14,7 @@ configuration file. See [Backup options](backup-options.md).
 ### DEFAULT_BEFORE_STOPSERVICES / DEFAULT_AFTER_STARTSERVICES
 
 The commands defined here are executed before or after the backup
-before or after stopping system services (option -a and -o).
+stopping and starting system services (option -a and -o).
 
 | Config option | Default |
 |-----------------------------|----------|
@@ -26,9 +26,9 @@ before or after stopping system services (option -a and -o).
 
 With this option, dd backups only save the space occupied by defined partitions.
 This means that a 32GB SD card, for example, which only has an 8GB partition defined, only requires 8GB for the
-backup only 8GB and not 32GB. To do this, however, you must use gparted or resize2fs
-the root partition must be reduced accordingly, because the root partition usually fills
-the root partition fills the entire rest of the SD card.
+and not 32GB. To do this, however, you must use gparted or resize2fs
+ito reduce the root partition size accordingly, because the root partition usually fills
+the entire rest of the SD card.
 
 See also [FAQ16](faq.md#faq16).
 
@@ -39,7 +39,7 @@ See also [FAQ16](faq.md#faq16).
 ### DEFAULT_LINK_BOOTPARTITIONFILES
 
 Rarely changing boot partition backups are linked with hardlinks to save backup space.
-save backup space. Prerequisite: The backup space supports hard links
+Prerequisite: The backup space supports hard links
 (ext3/ext4 file system).
 
 | Config option | Standard |
@@ -51,7 +51,6 @@ save backup space. Prerequisite: The backup space supports hard links
 An email notification is only sent in the event of an error.
 **Note:**
 If *raspiBackup* crashes due to exceptional circumstances, it may happen that no e-mail is sent,
-that no e-mail is sent.
 
 | Config option | Default |
 |----------------------------|----------|
@@ -60,7 +59,6 @@ that no e-mail is sent.
 ### DEFAULT_REBOOT_SYSTEM
 
 This option can be used to configure a reboot of the backed up system at the end of the backup.
-can be configured.
 
 **Note**: The services that were stopped before the backup are not restarted.
 restarted. This is unnecessary as they are started anyway when the system is restarted.
@@ -72,7 +70,7 @@ restarted. This is unnecessary as they are started anyway when the system is res
 ### DEFAULT_RSYNC_BACKUP_ADDITIONAL_OPTIONS
 
 Backup options that can be used for rsync backup in addition
-in addition to the standard options of *raspiBackup*.
+to the standard options of *raspiBackup*.
 
 **Use at your own risk!
 
@@ -104,7 +102,7 @@ This can be used to overwrite the tar default backup options.
 ### DEFAULT_TAR_BACKUP_ADDITIONAL_OPTIONS
 
 Backup options that are used for tar backup in addition
-in addition to the standard options.
+to the standard options.
 
 **Use at your own risk!
 

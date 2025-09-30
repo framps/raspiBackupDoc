@@ -18,8 +18,8 @@ Commands to restart services after the backup. E.g. for SMB "service
 smbd start" (**Attention:** quotation marks at the beginning and end). This option is
 mandatory together with the -o option.
 
-Several commands must be separated by `&&i`. These commands should have the
-have the exact reverse order to the commands in the -o parameter.
+Several commands must be separated by `&&`. These commands should have the
+exact reverse order to the commands in the -o parameter.
 
 **Example**:
 
@@ -30,6 +30,10 @@ have the exact reverse order to the commands in the -o parameter.
 If **no** service is really to be started, a colon ":" must be given as an argument.
 
 See also [FAQ1](faq.md#faq1) and [FAQ18](faq.md#faq18)
+
+**Note**:
+The parameters can be set with the installer. If they are updated manually the installer
+will not be able to update any more.  
 
 **Attention**:
 The commands are executed as root. No sudo is necessary.
@@ -50,7 +54,7 @@ Block size used for the dd backup
 <a name="parm_B"></a>
 ### -B: Boot partition is backed up as tar instead of dd
 
-The boot partition is not backed up by dd but by tar.
+The boot partition is not backed up wth dd but wth tar.
 
 **Note:**
 This option has no function if the partition-oriented mode
@@ -65,10 +69,9 @@ is used.
 
 No backup can be created on the root partition to protect against
 unintentional full writing of the root partition by the backup.
-It also makes no sense to store a backup on the system partition.
+It usually doesn't make sense to store a backup on the system partition.
 
 This option disables the test and a backup can be created on the root partition.
-root partition can be created.
 
 **ATTENTION**:
 The system does not check whether the backup still fits on the root partition.
@@ -89,8 +92,8 @@ Further invocation options for the dd backup (e.g. "conv=notrunc,noerror,sync")
 <a name="parm_dynamicMount"></a>
 ### --dynamicMount: Dynamically mount the backup partition
 
-This mounts the specified partition or mointpoint before the backup
-Mointpoint is mounted and remounted at the end. If it was already mounted,
+This mounts the specified partition or mountpoint before the backup
+and umounted at the end. If it was already mounted,
 the partition will not be remounted at the end. The mountpoint must be defined in /etc/fstab
 and can then either be the mountpoint itself (e.g. /backup)
 or the backup partition (e.g. /dev/sdb1).
@@ -103,8 +106,8 @@ or the backup partition (e.g. /dev/sdb1).
 ### -F: Simulates the backup run and helps to quickly test the email notification
 
 "Fake backup". This option is helpful for initial testing of *raspiBackup*.
-The actual long backup is not triggered by this - but all option
-option checks as well as the sending of notification e-mails and push messages.
+The long irunning backup is not triggered by this - but all option
+checks as well as the sending of notification e-mails and push messages.
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|
@@ -133,9 +136,9 @@ This option switches the test off.
 | --ignoreMissingPartitions | no | no | DEFAULT_IGNORE_MISSING_PARTITIONS |
 
 <a name="parm_k"></a>
-### -k: Number of backups to be retained
+### -k: Number of backups to be retained 
 
-Number of backups to be kept per backup type, provided it is not exceeded by
+Number of backups to be kept per backup type, provided it is not 
 overwritten by the keep option of the respective backup types.
 This means that 3 dd, 3 tar and 3 rsync backups are kept by default.
 
@@ -169,7 +172,7 @@ These options have no effect if the intelligent rotation strategy is used.
 
 This option creates a *raspiBackup* snapshot, which is not included in the backup
 backup cycle process and is therefore not automatically deleted.
-The snapshot is given the specified text at the end of the directory name. See also
+The snapshot is appended the specified text at the end of the directory name. See also
 [this page on snapshots](snapshots.md).
 
 Example: The host name is "idefix" and the parameter for -M is "Initial boot
@@ -181,7 +184,7 @@ idefix/idefix-rsync-backup-20170103-170717_idefix-Initial_boot_from_SD
 
 **Note**:
 *raspiBackup* Snapshots are normal backups and not "real"
-snapshots like those with LVM or BTRFS. However, hardlinks are used with rsync Backup
+snapshots like those with LVM or btrfs. However, hardlinks are used with rsync Backup
 are used to reduce the snapshot time.
 
 **Note**:
@@ -234,6 +237,9 @@ If **no** service is really to be stopped, the colon ":" must be given as an arg
 
 See also [FAQ1](faq.md#faq1) and [FAQ18](faq.md#faq18)
 
+**Note**:
+The parameters can be set with the installer. If they are updated manually the installer
+will not be able to update any more.  
 
 **Attention**:
 The commands are executed as root. No sudo is necessary.
@@ -300,7 +306,7 @@ This option defines parameters for the [intelligent rotation strategy - Smart Re
 ### --systemstatus: Show active services at backup startup
 
 A list of active services and open files is created
-are created in the debug file.
+in the debug file.
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|
@@ -309,7 +315,7 @@ are created in the debug file.
 <a name="parm_unsupportedEnvironment"></a>
 ### --unsupportedEnvironment: Use on unsupported HW and OS
 
-If *raspiBackup* is started on unsupported [supported environments](supported-hardware-and-software.md)
+If *raspiBackup* is started on [unsupported environments](supported-hardware-and-software.md)
 this option must be specified.
 
 | option name | default | in installer | configuration name |
@@ -322,7 +328,7 @@ this option must be specified.
 Partition-oriented mode. In contrast to normal mode, where only the first two partitions are
 only the first two partitions are backed up, any number of partitions can be
 partitions are backed up. The -T option is used to define which partitions are to be
-are to be backed up.
+backed up.
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|
@@ -333,7 +339,7 @@ are to be backed up.
 ### -T: Specify the partitions to be backed up during partition-based backup
 
 If the partition-oriented backup mode was selected with the option -P,
-this option can be used to define which partitions are to be backed up.
+this option can be used to define which partitions
 should be backed up. Example: -T "1 2 5" backs up the first two and the fifth partition.
 partition. With * all partitions are backed up.
 
@@ -346,11 +352,10 @@ partition. With * all partitions are backed up.
 
 Type of backup, which can be either dd, tar or rsync. rsync is used for
 ext3/ext4 partition, rsync uses hardlinks to minimize the required storage space.
-minimize the required storage space.
 
 [Detailed information on the backup types](backup-types.md) An external root file system is
-automatically with a `tar` or `rsync` backup, unless the `-P` option is used.
-option is not used. With the `-z` option, the `dd` and `tar` backups are also zipped or reduced in size.
+automatically with a `tar` or `rsync` backup saved, unless the `-P` option is used.
+With the `-z` option, the `dd` and `tar` backups are also zipped or reduced in size.
 reduced in size.
 
 **Note**:
@@ -367,13 +372,12 @@ See also [FAQ16](faq.md#faq16).
 <a name="parm_u"></a>
 ### -u: Exclude additional directories from the backup process
 
-Extension of the exclude list during backup to ignore certain directories during backup
-to ignore certain directories during backup.
+Extension of the exclude list during backup to ignore certain directories during backup.
 
 **Attention**:
 The parameters must obey the respective syntax of the backup tool
 otherwise the backup will be aborted. For rsync or tar the list could
-the list could look like this:
+look like this:
 
 ```
 "--exclude=/backup/* --exclude=/rsnapshot/* --exclude=/www-data*/* --exclude=/home/pi/.local/share/Trash"
@@ -402,7 +406,7 @@ The following directories are never backed up:
 
 In addition, all mounted directories from external devices that are not
 mounted on / are not backed up. Only the boot partition
-/dev/mmcblk0p1 and the root partition /dev/mmcblk0p2 or the swapped out
+/dev/mmcblk0p1 and the root partition /dev/mmcblk0p2 or the external root
 root directory on e.g. /dev/sda1 is backed up.
 
 **Note for the partition-oriented mode**:
@@ -426,7 +430,7 @@ If the -P option is used, the above-mentioned directories are excluded from all 
 
 The tar and rsync backup tools used display detailed information
 (verbose mode). This option is particularly useful for initial manual backup tests
-backup tests in order to be able to track the backup progress.
+in order to be able to track the backup progress.
 
 | Option name | Default | In installer | Configuration name |
 |-------------|----------|--------------|--------------------|

@@ -23,7 +23,7 @@ The following directories are then created:
  │ └── raspberrypi@debian12-rsync-backup-20160415-222900
 ```
 
-Enter `-M "Hello world"` as a parameter for the option,
+If `-M "Hello world"` is used the directory name will be
 
 ```
  ├── raspberrypi
@@ -31,7 +31,7 @@ Enter `-M "Hello world"` as a parameter for the option,
 ```
 
 Enclosed is the directory structure of my backup server, which in this case is also
-is a Raspberry Pi. Different backup types can be combined per Pi.
+a Raspberry Pi. Different backup types can be combined per Pi.
 Each backup is stored in a new subdirectory.
 
 Three or five additional files are always created per Raspberry system in addition to the
