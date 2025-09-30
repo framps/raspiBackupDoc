@@ -150,7 +150,7 @@ RC23 bei rsync kann auch ein Zugriffsproblem oder ein ACL Problem mit NFS sein.
 Siehe [FAQ24](faq.md#faq24) zum ACL Problem und NFS.
 
 Die entsprechenden Fehlermeldungen vom Backuptool findet man, wenn im die auf
-executeCmd Command folgenden Zeilen im Debuglog untersucht und sie werden auch
+`executeCmd` Command folgenden Zeilen im Debuglog untersucht und sie werden auch
 auf der Konsole bzw. in der eMail angezeigt.
 
 Vorhergehende Meldungen zeigen die genaue Fehlermeldung des Backupprogramms.
@@ -198,7 +198,7 @@ macht und wenn die SD-Karte klein ist, wird sie überlaufen.
 
 Weitere Aktionen:
 
-Sei nun %1 `/backup`, welches der Standardpfad ist. In dieses Verzeichnis
+Sei nun `/backup`, welches der Standardpfad ist. In dieses Verzeichnis
 muss ein externes Backupgerät gemounted werden.
 Ein entsprechender Eintrag in der `/etc/fstab` kann genutzt werden, um den Mountpunkt `/backup` mit
 einer externen Partition zu verbinden. Man kann das prüfen mit
@@ -591,7 +591,7 @@ Mit no_root_squash die Backuppartition auf dem NFS Server exportieren.
 
 Ursache:
 
-*raspiBackup* wird nur für Raspberry Pis und RaspbianOS unterstützt. Man kann mit
+*raspiBackup* wird nur für Raspberry Pis und RaspbianOS und Ubuntu unterstützt. Man kann mit
 der Option --unsupportedEnvironment trotzdem versuchen, *raspiBackup* zu nutzen,
 denn es läuft auch unter vielen anderen Linux Distributionen und
 raspberrykompatibler Hardware. Bei Fehlern wird aber wegen fehlender Testhard-

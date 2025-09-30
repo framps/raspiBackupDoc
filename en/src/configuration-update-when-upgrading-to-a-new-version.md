@@ -1,7 +1,7 @@
 # Configuration update when upgrading to a new version
 
 Whenever a *raspiBackup* version is upgraded,
-immediately checks whether the new version requires a new
+immediately checks are executed whether the new version requires a new
 configuration version. If so, the local configuration is automatically
 merged with the new configuration in a new
 configuration file of *raspiBackup*.
@@ -46,7 +46,7 @@ messages `RBK0248I`. Finally, you will be asked whether the
 merged configuration file should be activated. Of course
 a backup of the existing configuration file in
 `/usr/local/etc/raspiBackup.conf.bak ` beforehand. If you answer with "yes",
-the configuration compilation is completed and the following
+the configuration merge is completed and the following
 messages:
 
 ```
@@ -91,7 +91,7 @@ cycle to test whether everything still works as before.
 configuration files](invocation-options.md#configFiles). However, the automatic configuration upgrade is only
 done for the standard configuration `/usr/local/etc/raspiBackup.conf`.
 All other configuration files must be extended manually by
-manually taking the configuration lines marked as new and
+taking the configuration lines marked as new and
 and copying them to the other configuration files.
 
 [.status]: translated

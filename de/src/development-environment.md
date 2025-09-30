@@ -3,7 +3,7 @@
 *raspiBackup* wird primär auf einem Linux Desktop entwickelt, aber
 natürlich auf einer richtigen Raspberry getestet. Dazu gibt es verschiedene
 vorab erstellte RaspbianOS Images, die zuerst mit *raspiBackup* restored
-und dann mit den neuen bzw. geänderten Funktionen von *raspiBackup*
+und dann mit den neuen bzw. geänderten Code von *raspiBackup*
 manuell getestet werden. Nach erfolgreichen Test steht eine neue Version von
 *raspiBackup* an, allgemein verfügbar gemacht zu werden.
 
@@ -13,7 +13,7 @@ verschlissen. Deshalb werden die [Regressionstests](regressiontests-executed.md)
 [simulierten Raspberry](https://www.linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) vorgenommen. Das geht wesentlich schneller und seitdem
 geht auch nicht mehr so häufig eine SD kaputt.
 
-Sämtlicher Sourcecode wird in einem lokalen *git*-Repository gewartet. Neue
+Sämtlicher Sourcecode wird in einem *git*-Repository gewartet. Neue
 Releases entstehen in einem Development-Branch. Wenn ein neues Release fertig
 ist, um es allgemein verfügbar zu machen und alle Regressionstests erfolgreich
 durchgelaufen sind, wird die neue Version als Beta verfügbar gemacht.

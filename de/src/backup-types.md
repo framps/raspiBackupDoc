@@ -8,7 +8,7 @@ gute *Systemd*-Kenntnisse. Der *raspiBackupInstaller* konfiguriert nur genau ein
 Backuptypen.
 
 Sämtliche Backuptypen können mit *raspiBackup* vollständig wiederhergestellt
-werden.
+werden. Ein `dd`Backup kann auch unter Windows restored werden.
 
 Ein `dd` Backup erstellt ein in sich konsistentes binäres Abbild des Systems.
 Dabei wird immer das ganze Gerät mit dem System gelesen und gesichert. Das bedeutet, dass
@@ -18,8 +18,6 @@ Es wird keine Partition in der Größe angepasst. Das bereitet besonders
 bei SD-Karten immer wieder Probleme, da die SD-Karten - obwohl z.B. 32GB groß - doch immer
 leichte Unterschiede haben und somit ein Restore eines 32GB Systems auf eine andere 32GB SD-Karte
 nicht erfolgreich sein kann, da die SD-Karte geringfügig kleiner ist.
-
-Ein `dd` Backup kann unter Windows mit entsprechenden Tools wiederhergestellt werden.
 
 Aber es wird **nicht** empfohlen, den Backuptyp `dd` zu nutzen.
 Erklärungen dazu sind in [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)

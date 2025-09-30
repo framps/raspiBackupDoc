@@ -1,7 +1,7 @@
 # Error messages and -search
 
 It can happen that *raspiBackup* does not run successfully and writes error messages.
-writes error messages. This is 90% of the time due to incorrect
+This is 90% of the time due to incorrect
 configurations or parameterization.
 
 There are three types of *raspiBackup* messages:
@@ -18,17 +18,15 @@ If not, the following measures will help to localize the error more precisely:
 
 1. A log file `raspiBackup.log` is created in the backup directory with every successful run
    which contains a lot of detailed information and helps to find the causes of errors.
-   Searching for error messages and causes in this log file can help to localize the error,
-   localize the error.
+   Searching for error messages and causes in this log file can help to localize the error.
 
    If the backup aborts with errors, the log file is saved to the home directory of the caller before it is cleaned up.
-   to the home directory of the caller.
 
    Furthermore, the parameter `-v` can also help if errors occur in the
-   Linux backup tools occur.
+   Linux backup tools.
 
-1. If the information in the log file does not help you to find the cause of the error yourself
-   itself, it is possible to report the error.
+1. If the information in the log file does not help you to find the cause of the error yourself,
+   it is possible to report the error.
    See the notes in [FAQ12](faq.md#faq12) on how to report problems.
 
 ---
@@ -40,8 +38,8 @@ These can be found below.
 and explain them in detail is a lot of work.
 
 So if you are looking for an explanation for an error message and cannot find it here,
-should first use a search engine and look for the error message number.
-error message number. If this does not lead to success, an issue should be created in [*GitHub*](https://github.com/framps/raspiBackup/issues)
+first use a search engine and look for the error message number.
+If this does not lead to success, an issue should be created in [*GitHub*](https://github.com/framps/raspiBackup/issues)
 and then it will be added here. In this way, all frequent and important
 error messages of *raspiBackup* will be collected and explained here.
 
@@ -50,7 +48,7 @@ Messages from 1000-1999 are written by the example extensions. All
 other number ranges can be used by your own extension messages.
 
 In addition, *raspiBackup* exits with an error code that indicates the cause of the error.
-indicates the cause. A list of error codes can be found at the [end of this page](#exitcodes).
+A list of error codes can be found at the [end of this page](#exitcodes).
 
 ## *raspiBackup* - Error messages, causes and actions
 
@@ -77,7 +75,7 @@ Further actions:
 
 Either delete the other partitions or use the option
 `--ignoreAdditionalPartitions`. This explicitly states that further partitions
-partitions exist but may NOT be backed up. Alternatively you can
+exist but will NOT be backed up. Alternatively you can
 back up everything with the backup type `dd` or use the partition-oriented mode.
 
 ### RBK0015E: An instance of *raspiBackup* is already active.
@@ -85,7 +83,7 @@ back up everything with the backup type `dd` or use the partition-oriented mode.
 Cause:
 
 *raspiBackup* prevents it from being started several times in parallel. Either
-*raspiBackup* is still running or the previous *raspiBackup* run terminated with an error and the lock
+*raspiBackup* is still running or the previous *raspiBackup* run terminated with 
 an error and the lock was not removed.
 
 Further actions:
@@ -117,14 +115,14 @@ Details can be found in [FAQ18](faq.md#faq18).
 
 Cause:
 
-A backup file system that is to record an `rsync` backup must support softlinks
-must support soft links. This is only supported by *EXT2*, *EXT3* and *EXT4*. *FAT32* or *NTFS*
+A backup file system that is to receive an `rsync` backup must support softlinks.
+This is only supported by *EXT2*, *EXT3* and *EXT4*. *FAT32* or *NTFS*
 do not support them. Details can be found in [FAQ19](faq.md#faq19)
 
 Further actions:
 
 Either the backup partition must be formatted with EXT2, 3 or 4 or another backup type such as
-another backup type such as `dd` or `tar` must be used.
+`dd` or `tar` must be used.
 
 
 ### RBK0021E: Backup program of type %1 terminated with RC %2.
@@ -134,23 +132,20 @@ Cause:
 A backup program (`dd`, `tar` or `rsync`) used by *raspiBackup*,
 has received an error. The RC indicates the error code. Usually
 the backup program writes a more detailed message that helps to find the cause.
-find the cause.
 
 Further actions:
 
 RC 1 at dd Backup reports a read or write error of a file. An RC 1
 for tar and RC 23 or RC 24 for rsync means that a file has changed during the backup.
-changed during the backup.
 
 RC 2 for tar means that some serious error has occurred. It is also possible
 permissions are missing on the backup device or there is no free space on the backup partition.
-is available on the backup partition.
 
 RC23 on rsync can also be an access problem or an ACL problem with NFS.
 See [FAQ24](faq.md#faq24) for the ACL problem and NFS.
 
 The corresponding error messages from the backup tool can be found if the lines following the
-executeCmd command in the debug log and they are also displayed
+`executeCmd` command in the debug log and they are also displayed
 displayed on the console or in the e-mail.
 
 Previous messages show the exact error message of the backup program.
@@ -169,7 +164,7 @@ and avoid a detailed log, which you get with option -v.
 
 After that, it often helps to enter the error message in a search engine,
 to find the cause. On the [FAQ page](faq.md) there are many error messages and their
-their causes and troubleshooting measures. With rsync you will find in the
+causes and troubleshooting described. With rsync you will find in the
 debug log after the invocation of rsync all error messages from rsync and can use them to
 find the root cause of the termination.
 
@@ -198,17 +193,16 @@ and if the SD card is small, it will overflow.
 
 Further actions:
 
-Now be %1 `/backup` which is the default path. In this directory
+Now be `/backup` which is the default path. In this directory
 an external backup device must be mounted.
 A corresponding entry in `/etc/fstab` can be used to connect the mount point `/backup` to an external partition.
-to an external partition. You can check this with
+You can check this with
 
 ```
 findmnt /backup
 ```
 
-If you know what you are doing, you can switch off the error message with the option -c
-option.
+If you know what you are doing, you can switch off the error message with the option -c.
 
 
 ### RBK0028E: %s is not a recovery directory of $MYNAME."
@@ -216,7 +210,7 @@ option.
 Cause:
 
 *raspiBackup* creates a directory on the backup partition with the host name of the
-the host name of the backed up system and the respective backups are stored in subdirectories under it.
+backed up system and the respective backups are stored in subdirectories under it.
 Such a backup subdirectory must be specified.
 
 The format of the backup directory has the following appearance:
@@ -233,12 +227,11 @@ Specify a correct backup directory.
 Cause:
 
 An error occurred when creating a file with dd. RC 1 means a read or write error.
-or write error.
 
 Further actions:
 
 When restoring, the SD card is almost certainly corrupt and another SD card should be used.
-should be used. There are write problems on the backup medium during the backup,
+There are write problems on the backup medium during the backup,
 which must be solved. Previous messages from the backup tool provide
 further indication of the cause of the error.
 
@@ -248,13 +241,12 @@ further indication of the cause of the error.
 Cause:
 
 The configured mail program for sending e-mails was not found.
-found. The error usually occurs if *Postfix* or
+The error usually occurs if *Postfix* or
 *nullmailer* has been set up as MTA.
 
 Further actions:
 
-Install the configured e-mail program or install bsd-mailx or mailutils
-install.
+Install the configured e-mail program or install bsd-mailx or mailutils.
 
 
 ### RBK0047E: An error occurred when starting services. RC %s.
@@ -270,7 +262,7 @@ Further actions:
 
 You have to find out which of the start commands/stop commands has an error.
 Therefore, enter each start command/stop command once using `sudo` and watch for error messages.
-for error messages. The cause of the error message must then be eliminated.
+The cause of the error message must then be eliminated.
 
 ### RBK0051W: Target %s with %s is larger than 2TB and requires gpt instead of mbr. Otherwise only 2TB are used.
 
@@ -281,7 +273,7 @@ If the backup only has one MBR, the target partition can only be extended up to 
 
 Further actions:
 
-The system to be restored still uses *MBR* and must be converted to *GPT*.
+The system to be restored uses *MBR* and must be converted to *GPT*.
 Then another backup must be created - this time with *GPT*. This can then be
 be restored to disks larger than 2TB.
 
@@ -295,7 +287,7 @@ does not find it.
 Further actions:
 
 A directory was specified as the backup directory which contains no or incomplete backup data.
-incomplete backup data. It is documented in the [Backup directory structure](backup-directory-structure.md) chapter,
+It is documented in the [Backup directory structure](backup-directory-structure.md) chapter,
 which files must be in the backup directory.
 A backup directory always begins with the host name of the Raspberry followed
 followed by the backup type and the creation date of the backup.
@@ -315,7 +307,7 @@ Further actions:
 First check any previous error messages. Then check the debug log
 to check whether there were any problems when creating the partitions.  To do this, search for `Checking
 that no-one is using this disk right now` and error messages. There
-there is a known problem with a new sfdisk version in Bullseye when
+is a known problem with a new sfdisk version in Bullseye when
 a backup of such a system is restored on a Linux with an older sfdisk
 version is restored. The error message is
 
@@ -336,13 +328,13 @@ or manually delete the 5th line in the file with the extension .sfdisk in the ba
 
 Cause:
 
-*raspiBackup* wants to create partitions when restoring the backup
-create partitions. To do this, the entire device must be specified as the
+*raspiBackup* wants to create partitions when restoring the backup.
+To do this, the entire device must be specified as the
 as the target device. A single partition is not allowed.
 
 Further actions:
 
-Instead of e.g. `/dev/sdb1`, which is a single partition, e.g.
+Instead of e.g. `/dev/sdb1`, which is a single partition, 
 `/dev/sdb` must be specified. But ATTENTION: All data on the SD card
 will then be overwritten. So make sure beforehand that no other data
 on other partitions are still required. See also [this page](restore.md) for
@@ -367,7 +359,6 @@ The backup directory must be renamed according to the above form.
 Cause:
 
 An error occurred and *raspiBackup* deletes the empty or inconsistent new backup directory.
-new backup directory.
 
 Further actions:
 
@@ -391,8 +382,8 @@ that the filesystem support is then built into *raspiBackup*.
 Cause:
 
 *raspiBackup* cannot recognize the boot device. This usually happens when a hardware
-hardware other than a Raspberry is used or an operating system other than
-operating system other than *Raspberry Pi OS* or *Ubuntu* is used.
+other than a Raspberry is used or an operating system other than
+*Raspberry Pi OS* or *Ubuntu* is used.
 
 Further actions:
 
@@ -416,7 +407,6 @@ See RBK0021E
 Cause:
 
 The file system of the backup partition only allows file sizes up to 4GB and is virtually unusable for backups.
-almost unusable for backups.
 
 Further actions:
 
@@ -429,7 +419,7 @@ table from which the correct file system can be taken.
 
 Cause:
 
-When a partition is rewritten, it must not be mounted.
+When a partition is written, it must not be mounted.
 
 Further actions:
 
@@ -445,8 +435,7 @@ Cause:
 
 The backup is larger than the device to which it is to be restored
 and therefore cannot be restored. The message only appears for dd
-backup. With tar or rsync backup, the full size of the device is not necessary, depending on the assignment.
-device is necessary.
+backup. With tar or rsync backup, the full size of the device is not necessar.
 
 Further actions:
 
@@ -465,7 +454,7 @@ file system. See also [this page](which-filesystem-can-be-used-on-the-backup-par
 Further actions:
 
 Either select a different backup type such as tar or dd or use a backup partition
-backup partition that is formatted ext3 or ext4.
+that is formatted wth ext3 or ext4.
 
 
 ### RBK0172E: Directory %s cannot be created.
@@ -500,12 +489,12 @@ Cause:
 
 *rsync* uses hardlinks to reduce backup time and space. Hardlinks
 are supported by ext3/ext4 filesystems, which are mounted locally or via NFS,
-are supported. SMB and SSHFS do not support hardlinks.
+SMB and SSHFS do not support hardlinks.
 
 Further actions:
 
 Either use a backup partition that supports hard links or use the tar or dd backup.
-the tar or dd backup. Please note, however, that each backup is then a full backup
+Please note, however, that each backup is then a full backup
 and therefore requires more time and space.
 
 
@@ -519,9 +508,9 @@ Further actions:
 
 In most cases, the cause when setting up the notification lies in a
 misconfiguration of the MTA used. Often *raspiBackup* does not receive an error when
-error when sending the e-mail, but it still does not arrive.
+sending the e-mail, but it still does not arrive.
 
-The configuration of an MTA is often complicated and is not a problem for
+The configuration of an MTA is often complicated and is not a problem of 
 *raspiBackup*. In the log of the MTA used you will find error messages that
 help to find the cause. In this context, reference is made to [FAQ47](faq.md#faq47).
 In any case, you should check what the RC of the mail client means and
@@ -534,7 +523,6 @@ the mail recipient has problems receiving the e-mail.
 Cause:
 
 *raspiBackup* tries to recognize the boot device and cannot do so for some reason.
-for some reason.
 
 Further actions:
 
@@ -569,7 +557,7 @@ partition is not exported with no_root_squash.
 Further actions:
 
 Either the backup method dd or tar must be selected or a backup partition
-backup partition that supports Linux file attributes must be used.
+that supports Linux file attributes must be used.
 Details can be found on [this page](which-filesystem-can-be-used-on-the-backup-partition.md).
 
 ### RBK0266E: The authorization to create Linux file attributes on %s is missing (file system: %s)
@@ -591,11 +579,11 @@ Export the backup partition on the NFS server with no_root_squash.
 
 Cause:
 
-*raspiBackup* is only supported for Raspberry Pis and RaspbianOS. You can use
-option --unsupportedEnvironment you can still try to use *raspiBackup*,
+*raspiBackup* is only supported for Raspberry Pis and RaspbianOS and Ubuntu. You can use
+option --unsupportedEnvironment and still try to use *raspiBackup*,
 because it also runs under many other Linux distributions and
 raspberry-compatible hardware. In case of errors, however, no support is provided due to a lack of test hardware
-and software and time, no support is provided. [Supported hardware and software](supported-hardware-and-software.md)
+and software and time. See [supported hardware and software](supported-hardware-and-software.md)
 
 Further actions:
 
@@ -606,24 +594,23 @@ can handle the existing software and hardware.
 
 Cause:
 
-Only backup directories created by *raspiBackup* may exist in the backup directory of a system.
-backup directories may exist in the backup directory of a system. Any other directories or files
+Only backup directories created by *raspiBackup* should exist in the backup directory of a system.
+Any other directories or files
 will generate this error message. This usually happens when you manually
-renaming backup directories.
+rename backup directories.
 
 Further actions:
 
 Delete or move directories or files not created by *raspiBackup* to other locations.
-or files to other locations.
 
 
 ### RBK0274E: The restore device %s has mounted partitions. Note: A restore to the active system is not possible.
 
 Cause:
 
-A restore may not be performed on a running system. Also
+A restore may not be performed onto the running system. Also
 the restore device must not be mounted. This check prevents the accidental overwriting
-an active and otherwise used device from being overwritten. If usbmount
+an active and otherwise used device. If usbmount
 is active, it must first be deactivated.
 
 Further actions:

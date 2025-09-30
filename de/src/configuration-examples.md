@@ -8,9 +8,9 @@ das Beispiel dann nach den eigenen Ansprüchen entsprechend anzupassen. Eine
 Verschiedene Methoden, ein Backup zu restoren, sind im Kapitel [Wiederherstellen/Restore](restore.md) beschrieben.
 
 Weiterhin gibt es auf folgenden Seiten Konfigurationsbeispiele für verschiedene eMail Clients:
-   - msmtp
-   - exim4
-   - nullmailer
+   - [msmtp](msmtp-configuration-for-web-de-account.md)
+   - [exim4](exim4-configuration.md)
+   - [nullmailer](nullmailer-configuration.md)
 
 ## Anwendungsbeispiele
 

@@ -6,9 +6,9 @@ months a full backup can be created with `tar` and in between a weekly `rsync` d
 However, this requires manual configuration of *Systemd* timers and requires
 good *Systemd* knowledge. The *raspiBackupInstaller* configures only one backup type.
 
-All backup types can be completely restored with *raspiBackup*. 
+All backup types can be completely restored with *raspiBackup*. A `dd` backup can also be restored wth a Windows system.
 
-An `dd` backup creates a consistent binary image of the system.
+A `dd` backup creates a consistent binary image of the system.
 The entire device with the system is always read and backed up. This means that
 data that has not changed is also backed up. It also means
 that the restore device must be at least as large as the original system for the restore.
@@ -16,8 +16,6 @@ No partition is resized. This causes problems especially
 with SD cards, as the SD cards - although 32GB in size, for example - always have slight
 differences and therefore a restore of a 32GB system to another 32GB SD card
 may fail because the SD card is slightly smaller.
-
-An `dd` backup can be restored on Windows with the appropriate tools.
 
 But it is **not** recommended to use the backup type `dd`.
 Explanations are given in [Why should you not use dd as a backup type?](why-shouldn-t-you-use-dd-as-backup-type.md)

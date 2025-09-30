@@ -4,13 +4,13 @@ Various application examples of
 *raspiBackup* and their configuration are presented and explained. They are intended to
 help you to find the right one from the multitude of possible applications or
 customize the example according to your own requirements. An
-overview of all options can be found in [Call and options](backup-options.md).
+overview of all options can be found in [invocation and options](backup-options.md).
 Various methods for restoring a backup are described in the [Restore](restore.md) chapter.
 
 There are also configuration examples for various e-mail clients on the following pages:
-   - msmtp
-   - exim4
-   - nullmailer
+   - [msmtp](msmtp-configuration-for-web-de-account.md)
+   - [exim4](exim4-configuration.md)
+   - [nullmailer](nullmailer-configuration.md)
 
 ## Application examples
 
@@ -35,16 +35,16 @@ In addition to the options mentioned, the following option is required:
 DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY=1
 ```
 
-However, it is also necessary to shrink the root partition of the Raspberry
-Raspberry, as the entire free space on the SD card is backed up by default.
-However, this is not possible under Windows, but a Linux system must be used
+However, it is also necessary to shrink the root partition of the Raspberry,
+as the entire free space on the SD card is backed up by default.
+However, this is not possible under Windows, but a Linux system can be used
 and use the tools `gparted` or `resize2fs` to shrink the root partition.
 
 ## A Windows user wants to create an absolutely minimal image with pishrink
 
 To create a minimal backup, you can use the *pishrink* tool. For this purpose
 there is the script `raspiBackupWrapper.sh`, with which at the end of the backup
-the dd image via *pishrink* at the end of the backup. The option
+the dd image will be shrinked via *pishrink*. The option
 
 ```
 DEFAULT_ZIP_BACKUP=1
@@ -56,7 +56,7 @@ under Windows. It must first be unzipped.
 ## A Raspberry should be backed up as quickly as possible. The backup partition is an EXT4 file system mounted via NFS, which is provided by a NAS
 
 First, the backup partition of the NAS must be mounted. This should be done in
-`/etc/fstab` the NFS partition should be defined and automatically mounted under `/backup`.
+`/etc/fstab` where the NFS partition should be defined and will automatically ibe mounted under `/backup`.
 
 ```
 DEFAULT_BACKUPTYPE=rsync
@@ -65,7 +65,6 @@ DEFAULT_KEEPBACKUPS=n
 
 Since the backup file system is formatted with EXT4, *raspiBackup* can use hardlinks
 and this speeds up the backup process a lot, as only the changed files are backed up.
-files are backed up.
 
 An example entry in `/etc/fstab` could look like this:
 
@@ -89,7 +88,7 @@ The remote Windows backup file system should be defined in `/etc/fstab` and
 be mounted automatically. The entire system is backed up each time.
 Please note that the file system on the SMB drive must support files larger
 than 4GB, because the tar files are usually over 4GB in size. FAT32 is not
-is not sufficient. See also [Which filesystem can be used on the backup partition](which-filesystem-can-be-used-on-the-backup-partition.md)
+sufficient. See also [Which filesystem can be used on the backup partition](which-filesystem-can-be-used-on-the-backup-partition.md)
 
 An example entry in `/etc/fstab` could look like this:
 
@@ -109,12 +108,12 @@ previous examples). Then *raspiBackup* only needs to be configured with the opti
 and a backup with exactly this descriptive name will be created in the backup directory `/backup`.
 
 **Note**: This backup is a so-called [snapshot](snapshots.md) and is ignored during the backup recycle.
-The backup can be deleted manually if required.
+The backup has to be deleted manually if required.
 
 ## A USB boot system is to be backed up with additional partitions
 
 In this case, the partition-oriented backup is selected and the partitions to be
-partitions to be backed up are configured. In the example, partition 5
+backed up are configured. In the example, partition 5
 should also be backed up.
 
 ```
