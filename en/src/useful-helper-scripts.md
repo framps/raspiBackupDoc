@@ -6,8 +6,8 @@ and can be adapted to your own requirements.
 
 They are available for download on [*GitHub*](https://github.com/framps/raspiBackup/tree/master/helper):
 
-1. **raspiBackupWrapper.sh**: This can be used to call before and after
-   *raspiBackup* to do various things. The code already mounts the
+1. **raspiBackupWrapper.sh**: This can be used to execute before and after
+   *raspiBackup* various things. The code already mounts the
    backup partition and unmounts it if it was not mounted before. It
    some bash script knowledge is necessary to customize the script to your needs.
    customize the script.

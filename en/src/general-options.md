@@ -128,7 +128,7 @@ to do so. Details can be found [in this description](../local-language-support-f
 <a name="parm_h"></a>
 ### -h: Help
 
-Output of the call syntax with its parameters
+Output of the invocation syntax with its parameters
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|

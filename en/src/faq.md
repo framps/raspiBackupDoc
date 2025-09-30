@@ -53,7 +53,7 @@ However, you can use the Raspberry for this: You record a new SD
 card with RaspbianOS and copy *raspiBackup* to it. Then you close
 the device to which the backup is to be restored,
 and the medium with the backup to the Raspberry.
-Then call up *raspiBackup* and have the desired backup written back to the
+Then invoke *raspiBackup* and have the desired backup written back to the
 device. Then shut down the system,
 insert the device with the restored backup and restart the
 Raspberry again.
@@ -423,8 +423,8 @@ overwrite previous options.
 1. `/usr/local/etc/raspiBackup.conf`
 1. `./.raspiBackup.conf` (current directory)
 1. `~/.raspiBackup.conf` (home directory)
-1. the optional configuration file specified with the `-f` option
-1. call parameter
+1. The optional configuration file specified with the `-f` option
+1. Invocation parameter
 
 
 <a name="faq23"></a>
@@ -848,14 +848,14 @@ pv tool.
 <a name="faq52"></a>
 ### 52) How can I download and run a test version or a temporary fix from *GitHub*?
 
-There is a [script at *GitHub*](https://github.com/framps/raspiBackup/blob/master/scripts/raspiBackupDownloadFromGit.sh). You have to call it as follows:
+There is a [script at *GitHub*](https://github.com/framps/raspiBackup/blob/master/scripts/raspiBackupDownloadFromGit.sh). You have to invoke it as follows:
 
 ```
 curl -s https://raw.githubusercontent.com/framps/raspiBackup/master/scripts/raspiBackupDownloadFromGit.sh | sudo bash -s -- <brand name>
 ```
 
 Where <branchname> must be the *GitHub* branch from which you want to download
-`raspiBackup.sh` you want to download. Then call this *raspiBackup* version
+`raspiBackup.sh` you want to download. Then invoke this *raspiBackup* version
 as follows (**Attention:** Pay attention to the leading dot !)
 
 ```

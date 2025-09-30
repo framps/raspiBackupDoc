@@ -24,7 +24,7 @@ In addition, there are interesting plugins provided by
 [*raspiBackup* users written plugins](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
 
 
-### Plugin call locations during backup
+### Plugin invocation locations during backup
 
 The various plugins are called at the following points in the backup process
 are called:
@@ -57,7 +57,7 @@ are called:
 
 
 
-### Plugin call positions during restore
+### Plugin invocation positions during restore
 
 The various plugins are called at the following points in the restore process
 are called:
@@ -112,7 +112,7 @@ This will copy the following scripts to `/usr/local/bin`:
 
 
 To activate the plugins, the following additional
-call parameter for *raspiBackup* is necessary:
+invocation parameter for *raspiBackup* is necessary:
 
 ```
 -N "temp mem disk execute"

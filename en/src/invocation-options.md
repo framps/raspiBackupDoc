@@ -15,7 +15,7 @@ what is in the configuration file in the parameter `DEFAULT_ZIP_BACKUP`. This al
 option can be switched off in the command line, although it is switched on in the
 configuration file is switched on.
 
-There are corresponding options in the configuration file for most call options
+There are corresponding options in the configuration file for most invocation options
 `/usr/local/etc/raspiBackup.conf`. In addition, other configuration files
 can be used to selectively set or overwrite certain options.
 
@@ -52,7 +52,7 @@ There are various options for the backup and restore call:
 
 1. Invocation options and their configuration option ([Backup](backup.md) / [Restore](restore.md)).
    The configuration options can be temporarily overwritten by the corresponding iinvocation options.
-   overwritten by the corresponding call options
+   overwritten by the corresponding invocation options
 1. pure configuration options that cannot be overwritten by an invocation option
    ([Backup](backup-config-options.md) / [Restore](restore-config-options.md))
 1. General invocation and configuration options for both the backup

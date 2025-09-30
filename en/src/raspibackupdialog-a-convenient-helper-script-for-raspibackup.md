@@ -2,7 +2,7 @@
 
 An agile user of *raspiBackup* - [Franjo-G](https://github.com/franjo-G) - has written a very useful little helper script called [raspiBackupDialog](https://github.com/franjo-G).
 help script with the name [raspiBackupDialog](https://github.com/framps/raspiBackup/blob/master/helper/raspiBackupDialog.sh), which shows in a dialog
-the most important call options for the backup and restore in a dialog and with
+the most important invocation options for the backup and restore in a dialog and with
 which then triggers *raspiBackup*. *raspiBackup* snapshots are supported. Very
 especially easy to perform the restore: Before the restore, the list of existing
 the list of existing backups is displayed and you can select which backup
@@ -43,7 +43,7 @@ sudo raspiBackupDialog.sh
 ```
 
 
-## Call options
+## Invocation options
 
 ```
 sudo raspiBackupDialog.sh --select # Starts a restore. The image can be selected from a list.
@@ -62,7 +62,7 @@ Dynamic mount also works with cron.
 * * * * /usr/local/bin/raspiBackupDialog.sh --mountfs "backup.unit" or "fstab" --cron
 ```
 
-## Example call dialog for a backup
+## Example dialog for a backup
 
 ```
 sudo raspiBackupDialog.sh

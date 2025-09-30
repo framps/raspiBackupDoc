@@ -1,6 +1,6 @@
 # Backup configuration options
 
-Most of the call options can also be defined in the configuration file
+Most of the invocation options can also be defined in the configuration file
 configuration file. See [Backup options](backup-options.md).
 
 <div class="table-wrapper-for-options">

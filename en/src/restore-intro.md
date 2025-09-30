@@ -53,8 +53,8 @@ Any backup can be restored using the Raspberry Pi.
 
 1. If the root partition is located on an external partition, connect another device with a preformatted partition
    which will get the external partition been restored
-   
-1. Start *raspiBackup* for restore, call see [below](#devicenames).
+
+1. Start *raspiBackup* for restore to the [device](#devicenames).
 
 This is usually used:
 
@@ -99,7 +99,7 @@ The device to which the backup is to be restored is connected to the Linux syste
 the backup partition is mounted
 and a partition is provided for any external root file system.
 
-Then start *raspiBackup* for the restore, call see [below](#devicenames).
+Then start *raspiBackup* to restore to a [device](#devicenames).
 
 If no RaspbianOS and/or no Raspberry Pi is used,
 the option [--unsupportedEnvironment](general-options.md#parm_unsupportedEnvironment) must be specified.
@@ -126,7 +126,7 @@ Similarities of the example calls:
 
 1. The backed up system is called "raspberrypi" in the example call.
 1. The **target** disk that is to receive the restore of the boot/boot and root partition
-   boot and root partition is available in the example as `/dev/sdf`.  
+   boot and root partition is available in the example as `/dev/sdf`.
    [Further below](#devicenames) is described how to find out the current value for `-d`
 1. **Attention**: All existing data on the **target** data carriers will be deleted after a confirmation prompt
    from *raspiBackup* before the restore.

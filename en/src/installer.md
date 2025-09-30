@@ -126,7 +126,7 @@ The installer creates the following files:
 
   - *Systemd timer* Configuration `/etc/systemd/system/raspiBackup.timer`.
 
-    This file controls the call of *raspiBackup* and in the standard case the
+    This file controls the invocation of *raspiBackup* and in the standard case the
     weekly backup is switched off. However, it can be switched on with the installer.
 
   - *raspiBackup*.sh `/usr/local/bin`

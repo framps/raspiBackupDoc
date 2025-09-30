@@ -1,6 +1,6 @@
 # Backup options
 
-This list contains all call options of *raspiBackup* as well as
+This list contains all invocation options of *raspiBackup* as well as
 the corresponding configuration options.
 
 <div class="table-wrapper-for-options">
@@ -80,7 +80,7 @@ The system does not check whether the backup still fits on the root partition.
 <a name="parm_D"></a>
 ### -D: Further options for the dd backup
 
-Further call options for the dd backup (e.g. "conv=notrunc,noerror,sync")
+Further invocation options for the dd backup (e.g. "conv=notrunc,noerror,sync")
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|

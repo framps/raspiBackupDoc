@@ -40,7 +40,7 @@ Number of reminders to perform a backup restore test.
 
 ### DEFAULT_YES_NO_DEVICES
 
-The call option `-Y` can be used to suppress the yes/no
+The invocation option `-Y` can be used to suppress the yes/no
 queries can be suppressed during the restore.
 
 However, as this can cause unintentional deletion of
