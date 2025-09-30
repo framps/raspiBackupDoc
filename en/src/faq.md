@@ -7,17 +7,17 @@
 <a name="faq0"></a>
 ### 0) How was *raspiBackup* created?
 
-*framp* had three Raspis running at home. Two of them 7/24 - so around the clock.
+*framp* had three Raspis running at home. Two of them run 7/24.
 Every server should be backed up regularly because unforeseen
-unforeseen circumstances can always occur that require a restoration of a previous
-previous status. Especially the SD card of the Raspberry tends to
+circumstances can always occur that require a restoration of a previous
+status. Especially the SD card of the Raspberry tends to
 fail from time to time. In order to be prepared for this, a
-script was written, which first creates a dd backup, then later, as a dd backup always
-a dd backup always backs up the entire SD card although only fractions of it are
-of it are used, a tar backup was created automatically. At the end
-a rsync backup was implemented to save backup time and space through the hardlinks.
+script was written, which initially created a dd backup, then later, as a dd backup always
+backs up the entire SD card although only fractions of it are
+of it are used, a tar backup was created automatically. Finally
+a rsync backup was implemented to save backup time and space through the usage of hardlinks.
 and backup space. After a restore was necessary again and again
-was necessary and everything worked well, *framp* thought that the script
+and everything worked well, *framp* thought that the script
 could also be helpful for other Raspberry friends and published
 *raspiBackup*. See also [10 years *raspiBackup*](10-years-raspibackup.md)
 
