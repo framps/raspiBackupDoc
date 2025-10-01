@@ -44,7 +44,7 @@ echo "eMail-Text" | sudo mail -s "Subject" "Recipient eMail"
 the e-mail is sent successfully.
 
 With the configuration option DEFAULT_SENDER_EMAIL the default sender address
-default sender address "root@$(hostname)" can be changed if required.
+"root@$(hostname)" can be changed if required.
 
 **Note:** The e-mail notification only works if an MTA such as
 nullmailer, msmtp, Postfix or Exim4 has been configured correctly.
@@ -66,7 +66,7 @@ sendEmail, for example, it must look like this: "-f sender.mail@absenderdomain -
 smtp-server:587 -xu Username -xp Password".
 
 **Attention**: The parameters for `-E` must be enclosed in quotation marks `"`.
-must be enclosed in quotation marks. Especially for testing the e-mail notification function, the parameter
+Especially for testing the e-mail notification function, the parameter
 `-F` is helpful.
 
 **Attention**: If the parameter `-l 1` is used, the password is in the log and should be
@@ -103,7 +103,7 @@ Specification of a configuration file that is read in. See
 ### -g: Progress bar
 
 This option displays a progress bar during backup and restore.
-is displayed. No progress bar is available for `tar` backups.
+No progress bar is available for `tar` backups.
 
 | Option name | Default | In installer | Configuration name |
 |-------------|----------|--------------|--------------------|
@@ -119,7 +119,7 @@ Otherwise, all messages are in English.
 A list of supported languages can be found [here](language-support.md#supported-languages).
 
 If you want to help to give *raspiBackup* another language, you are welcome to do so,
-to do so. Details can be found [in this description](../local-language-support-for-languages-other-than-de-and-en-l10n.md).
+Details can be found [in this description](../local-language-support-for-languages-other-than-de-and-en-l10n.md).
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|
@@ -144,12 +144,12 @@ Defines whether a debug log is created:
 - debug -> A debug log is created
 
 **Caution**: The log output may contain sensitive information.
-*raspiBackup* masks e.g. external static IP addresses, email addresses, passwords for
+*raspiBackup* masks external static IP addresses, email addresses, passwords for
 mount commands or email servers, etc. However, there may still be sensitive information
-may still be contained in the debug log, which should be masked manually.
+still be contained in the debug log, which should be masked manually.
 The debug log is always stored in the backup directory.
 If there are errors and the backup directory is deleted again,
-the log is first saved in the home directory of the caller.
+the log is saved in the home directory of the caller.
 
 | Option name | Default | In installer | Configuration name |
 |-------------|----------|--------------|--------------------|
@@ -211,7 +211,7 @@ parameter must then be "mailext". For details on the eMailPlugin see [this page]
 An update with the `-U` option is also carried out if the versions
 match. It has the effect that both a local beta version and a local
 local normal version is replaced with the current code version. It is primarily
-primarily intended to update the code version of an existing local beta version.
+intended to update the code version of an existing local beta version.
 update an existing local beta version.
 
 | option name | default | in installer | configuration name |
@@ -239,7 +239,7 @@ is. See parameter `-V` to restore a previous version.
 and inform yourself about the changes and new features.
 
 There is also the option `-S`, with which beta versions can be updated to the latest
-can be updated to the latest version.
+version.
 
 The 'V' option can be used to revert to an older version.
 
@@ -251,7 +251,7 @@ The 'V' option can be used to revert to an older version.
 ### --updateConfig: Update the *raspiBackup* configuration
 
 With this option you can force an update of the configuration
-configuration if it has not been updated during a normal update with the
+if it has not been updated during a normal update with the
 option `-U`.
 
 | Option name | Default | In installer | Configuration name |
@@ -286,7 +286,7 @@ Version: 0.6.3.2 CommitSHA: 8fbcd1a CommitDate: 2018-02-19 CommitTime: 19:18:31#
 
 The backup tools `tar` and `rsync` used display detailed information
 (verbose mode). This option is particularly useful for initial manual backup tests
-backup tests in order to be able to track the backup progress.
+in order to be able to track the backup progress.
 
 | Option name | Default | In installer | Configuration name |
 |-------------|----------|--------------|--------------------|
@@ -297,7 +297,7 @@ backup tests in order to be able to track the backup progress.
 ### -V: Reactivation of a previous *raspiBackup* version
 
 A list of all existing previous versions is displayed and you can select the
-can select the version to be restored. The current
+version to be restored. The current
 version is backed up and can then be restored later using this option
 restored later (see also `-U` parameter)
 
@@ -309,7 +309,7 @@ restored later (see also `-U` parameter)
 ### -y: Copy the current *raspiBackup* version to predefined local hosts via scp
 
 This option copies the current script to all hosts defined in the configuration file.
-configuration file. Access must be possible via `authorized_keys` without a
+Access must be possible via `authorized_keys` without a
 password. This means that *raspiBackup* can be quickly distributed to a large
 hosts after a version update.
 

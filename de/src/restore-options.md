@@ -140,7 +140,7 @@ und wichtige Daten löschen.
 | -Y     |  aus     |   nein       |                    |
 
 Zusätzlich muss noch die Option `DEFAULT_YES_NO_RESTORE`in der Konfigurationsdatei
-entsprechend gesetzt sein für diei Restoredevices.
+entsprechend gesetzt sein für die Restoredevices.
 
 <a name="parm_0"></a>
 ### -0: Keine Partitionierung

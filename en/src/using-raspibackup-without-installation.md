@@ -6,7 +6,7 @@
 1. Mount the backup partition under `/backup` or specify the backup partition as the last parameter
    parameter in the call, e.g. `sudo bash ./raspiBackup.sh /media/pi`
 
-1. Configuration of *raspiBackup*. See [Call and options](invocation-options.md) and
+1. Configure *raspiBackup*. See [Call and options](invocation-options.md) and
    the configuration in the *raspiBackup* configuration file or use the corresponding invocation options.
 
 1. Start the backup: `sudo bash ./raspiBackup.sh`

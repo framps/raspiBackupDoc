@@ -3,7 +3,6 @@
 For *raspiBackup*, **davfs** must be used because it mounts the *WebDAV* drive in the same way
 as it is done for all other drives in Linux.
 It can then be accessed both via the command line and with a file manager.
-to access it.
 Other tools for accessing WebDAV cannot be used.
 
 ## Installation of davfs2
@@ -55,7 +54,7 @@ sudo ln -s /usr/sbin/mount.davfs /sbin/mount.davfs
 ```
 
 Due to an error in the WebDAV implementation at *t-online* no files can be created.
-no files can be created. The message always appears that the file
+The message always appears that the file
 exists - although it does not. Therefore, the
 `/etc/davfs2/davfs2.conf` the following line must be inserted,
 to switch off the locks.

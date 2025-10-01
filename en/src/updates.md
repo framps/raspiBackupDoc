@@ -1,6 +1,6 @@
 # Updates
 
-From time to time a new version of *raspiBackup* is made available for download.
+From time to time a new version of *raspiBackup* is made available for download
 which contains new functions, extensions and small fixes.
 
 This is indicated by *raspiBackup* when it is invoked and in any notification.

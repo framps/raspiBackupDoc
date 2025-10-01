@@ -8,11 +8,11 @@ But there may still be reasons why you want to store a *raspiBackup* on an
 SMB drive.
 
 The following describes how to configure this on a Synology
-is to be configured. AutoFS is also configured.
+AutoFS is also configured.
 If autoFS is not already used, the same behavior can be achieved with *raspiBackup* using the
-option `DynamicMount` to achieve the same behavior.
+option `dynamicMount` to achieve the same behavior.
 
-To automatically mount the SMB backup partition when *raspiBackup* uses it
+To automatically mount the SMB backup partition when *raspiBackup*
 uses it, a shared folder must be defined and configured on the NAS.
 
 In the following instructions, the shared folder name "raspiBackup"

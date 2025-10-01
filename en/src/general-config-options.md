@@ -44,13 +44,13 @@ See [ANSI Colorcodes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 *raspiBackup* can send notifications via *pushover*. For this
 it is necessary to have registered at <https://pushover.net/> and to have set up an
-application set up.
+application.
 
 With the notifications you define whether you want to be notified in case of success and/or error.
-want to be notified. Possible options are "S" for success
+Possible options are "S" for success
 and/or "F" in the event of an error (Failure). With "M" the *raspiBackup*
 messages are sent as a file. The options can be combined as desired.
-can be combined as desired. Example: "SF" or "SM".
+Example: "SF" or "SM".
 
 The priorities correspond to the available *Pushover* priorities.
 
@@ -92,10 +92,10 @@ The e-mail address of the sender can be specified for ssmtp and msmtp.
 *raspiBackup* can send notifications via *Slack*.
 
 With the notifications you define whether you want to be notified in case of success and/or error.
-you want to be notified. Possible options are "S" for success
+Possible options are "S" for success
 and/or "F" for failure. With "M" the *raspiBackup*
 messages are sent as a file. The options can be combined as desired.
-be combined as desired. Example: "SF" or "SM".
+Example: "SF" or "SM".
 
 | Config option | Standard |
 |-----------------------------|----------|
@@ -107,10 +107,10 @@ be combined as desired. Example: "SF" or "SM".
 *raspiBackup* can send notifications via *Telegram*.
 
 With the notifications you define whether you want to be notified in case of success and/or error.
-you want to be notified. Possible options are "S" for success (Success)
+Possible options are "S" for success (Success)
 and/or "F" for failure. With "M" the *raspiBackup*
 messages are sent as a file. The options can be combined as desired.
-be combined as desired. Example: "SF" or "SM".
+Example: "SF" or "SM".
 
 | Config option | Standard |
 |-----------------------------|----------|

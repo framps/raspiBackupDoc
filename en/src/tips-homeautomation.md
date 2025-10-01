@@ -6,9 +6,9 @@ to be taken into account, whether and which actions should be taken before and a
 before and after the restore.
 
 This page is based on feedback from *raspiBackup* users who are familiar with the
-the respective applications and can describe exactly what to look out for with the
+respective applications and can describe exactly what to look out for with the
 the respective applications. Therefore, feedback on the [*GitHub* discussion page](https://github.com/framps/raspiBackupDoc/discussions)
-is very welcome. Gladly also in German.
+is very welcome.
 
 ## *raspiBackup* Tips for specific applications
 
@@ -19,16 +19,16 @@ Works without problems. See [here on the OpenHAB website](https://community.open
 
 ### ioBroker
 
-ioBroker uses ACLs. If you are backing up to a Synology or QNAP connected via NFS
-connected via NFS, you must switch off the saving of ACLs so that *rsync* does not abort. See
+ioBroker uses ACLs. If you are backing up to a Synology or QNAP connected via NFS,
+you must switch off the saving of ACLs so that *rsync* does not abort. See
 FAQ24](faq.md#faq24) on how to do this.
 
-If you restore a backup, you can use ioBroker fix to recreate the missing
-create the missing ACLs again. You should also stop the ioBroker before the
+If you restore a backup, you can use ioBroker to recreate the missing
+ACLs again. You should also stop the ioBroker before the
 backup with `systemctl stop iobroker` and restart it after the backup with `systemctl
 start iobroker` after the backup. This can be done either directly in the
 *raspiBackup* configuration file at DEFAULT_START_SERVICES and
-DEFAULT_STOP_SERVICES or you can use the *raspiBackup* installer and select the ioBroker there.
+DEFAULT_STOP_SERVICES or you can use the *raspiBackup* installer
 and select the ioBroker as the service to be stopped and started. The
 installer then generates the corresponding commands in the configuration file.
 

@@ -1,7 +1,7 @@
 # Which file system can be used on the backup partition?
 
 Depending on which backup method you use with *raspiBackup*, the correct
-correct file system must be present on the backup device. In the following
+file system must be present on the backup device. In the following
 table below shows the different file systems for each backup method
 and their restrictions.
 

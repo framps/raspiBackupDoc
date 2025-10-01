@@ -2,11 +2,11 @@
 
 By default, *raspiBackup* restores the [**entire system**](restore-intro.md) in normal backup mode.
 In partition-oriented mode, however, you can select which partitions are to be restored,
-which partitions are to be restored. If the partition-oriented mode
+If the partition-oriented mode
 the `rsync` backup type is used, a delta restore can also be selected for a restore (option -00).
 This means that only the changed files and deleted files from the backup are copied with `rsync
 and files not present in the backup - i.e. newly created files - are deleted.
-This enables a very fast restore.
+This allows a very fast restore.
 
 Independent of *raspiBackup*, a [manual restore](manual-restore.md)
 of the data with the previously used backup tools `dd`, `tar` or `rsync` is also possible.
@@ -48,9 +48,9 @@ partition number such as `/dev/sda1` must not be present.
 
 **Attention:** This device is usually completely deleted and recreated! With `tar` and
 and `rsync` backup, the size of the *root* partition is automatically
-automatically reduced or enlarged if the target device has a different size
+reduced or enlarged if the target device has a different size
 than the backed up system. Of course, there must still be enough space on the target device for the
-data of the source system on the target device. If there is not enough space, the restore will abort.
+data of the source system on the target device. If there is not enough space, the restore will fail.
 
 <a name="parm_N"></a>
 ### -N: Extensions to be called before and after the restore
@@ -79,15 +79,15 @@ is to be restored.  Example: `/dev/sdb1`.
 
 **Note:** Only use this option if both an SD card and an external
 external root file system is used on one device. Otherwise the `-d` option is sufficient.
-This option is only useful for older Raspberries that do not yet support USB boot.
+This option is only useful for older Raspberries that do not support USB boot.
 
 **Attention:** The partition will be **reformatted**. Therefore, make sure that it is the
 correct partition and that the partition is large enough to accommodate the partition
 of the backup!
 
 **Note:** This option is only available if the normal backup mode has been used.
-was used. In partition-oriented mode (option `-P`) no external root partition can be
-root partition can be backed up.
+In partition-oriented mode (option `-P`) no external root partition can be
+backed up.
 
 <a name="parm_resizeRootFS"></a>
 ### --resizeRootFS: Customize root file system
@@ -106,8 +106,8 @@ partition on the device is extended. If there are more than 2 partitions, it is 
 ### -T: Partitions to restore
 
 With the partition-oriented `rsync` backup, partitions can be
-select partitions that are to be restored. With `"*"` all partitions are
-all partitions are restored.
+selected that are to be restored. With `"*"` all partitions are
+restored.
 
 | Option | Default | In Installer | Configuration name |
 |--------|----------|--------------|--------------------|
@@ -117,8 +117,8 @@ all partitions are restored.
 ### --updateUUIDs: Customize the UUIDs
 
 When restoring, the PARTUUIDs, UUIDs and LABELs are always
-of the original are always restored. This usually causes problems if you mount the restored
-system is mounted on the original system. With this option, new PARTUUIDs, UUIDs and LABELs are generated during the
+restored. This usually causes problems if you mount the restored
+system on the original system. With this option, new PARTUUIDs, UUIDs and LABELs are generated during the
 generated during the restore.
 
 | Option | Default | In Installer | Configuration name |
@@ -129,6 +129,7 @@ generated during the restore.
 ### -Y: Automated restore
 
 By default, before the restore, the system displays what the restored device currently
+looks like 
 and asks whether you really want to overwrite the device. If the
 restore is to be automated, this option suppresses the query.
 
@@ -140,14 +141,14 @@ and delete important data.
 | -Y | off | no |
 
 In addition, the option `DEFAULT_YES_NO_RESTORE` must be set accordingly in the configuration file
-must be set accordingly for thei Restoredevices.
+for thei restoredevices.
 
 <a name="parm_0"></a>
 ### -0: No partitioning
 
 No new partition layout is created on the target device, but the existing one is used.
-existing one is used. This allows you to perform the desired partitioning before the restore
-and then restore a backup. For details see [FAQ #6](faq.md#faq6)
+This allows you to perform the desired partitioning before the restore.
+For details see [FAQ #6](faq.md#faq6)
 
 | Option | Default | In Installer | Configuration name |
 |--------|----------|--------------|--------------------|
@@ -158,8 +159,7 @@ and then restore a backup. For details see [FAQ #6](faq.md#faq6)
 
 This will not format the partitions selected with the `-T`
 option during an `rsync` partition-oriented backup.
-is performed. This speeds up the restore process considerably, as only new, changed or deleted files are synced,
-changed or deleted files are synchronized.
+This speeds up the restore process considerably, as only new, changed or deleted files are synced,
 
 | Option | Default | In Installer | Configuration name |
 |--------|----------|--------------|--------------------|

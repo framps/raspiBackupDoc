@@ -18,18 +18,18 @@ They are available for download on [*GitHub*](https://github.com/framps/raspiBac
    to extend the functionality of *raspiBackup* for your own needs.
 
 2. **raspiBackupNfsWrapper.sh**: The script checks whether an NFS server is available
-   is available and only then starts *raspiBackup*. Apart from a few
+   and only then starts *raspiBackup*. Apart from a few
    definitions of the NFS server, nothing needs to be adjusted.
 
 3. **raspiBackupRestore2Image.sh**: This script can be used to restore a tar or rsync
-   backup, which was created in normal backup mode, into a dd backup
-   can be converted. In addition, pishrink is used to minimize the size of the dd image
+   backup, which was created in normal backup mode, into a dd backup.
+   In addition, pishrink is used to minimize the size of the dd image
    as much as possible. kmbach suggested the creation of the script.
    The script does not require any changes.
 
 4. **raspiImageMail.sh**: This script was created by the *raspiBackup* user kmbach
    because he wanted to receive an eMail at the end of the call of raspiBackupRestore2Image.sh.
-   at the end of the call. The *raspiBackup* eMail configuration parameters are used for this purpose.
+   The *raspiBackup* eMail configuration parameters are used for this purpose.
    The script does not require any changes.
 
 5. **raspiBackupAndClone.sh**: This script creates a backup version with *raspiBackup*

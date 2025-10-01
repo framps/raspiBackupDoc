@@ -12,22 +12,22 @@ instead.
 ## Why?
 
 1. dd backs up an entire partition 1 to 1 at bit level. Errors are reported
-   are reported if the bits cannot be read. However, there are also
+   if the bits cannot be read. However, there are also
    file system errors occur from time to time. These are usually caused by
    sudden power failure. These errors are not noticed by dd. This means that dd backs up
    a partition including the file system errors, which are then also restored during the restore.
-   restored. Thus you have an exact copy of the system with
+   Thus you have an exact copy of the system with
    file system errors. You keep creating backups in the belief that everything is OK
    and then delete old backups at some point. Thus, little by little
    unnoticed, backups without file system errors are replaced by backups with file system errors.
-   replaced. If a restore is then required, you no longer have a backup without
+   If a restore is then required, you no longer have a backup without
    file system errors and can only hope that the file system errors have not
-   have damaged any important system data. Otherwise the backup is
+   damaged any important system data. Otherwise the backup is
    useless.
 
 2. When restoring a dd backup, the backup is restored 1 to 1 at bit level.
-   is restored. If the SD card is not OK, often no error is reported by
-   dd is reported. If you then boot the system, it does not start or there are
+   If the SD card is not OK, often no error is reported by
+   dd. If you then boot the system, it does not start or there are
    error messages from system services. Then the users get in touch and
    create a problem report because *raspiBackup* is not working correctly.
    After they are then asked to perform a restore to a new SD card
@@ -57,16 +57,16 @@ With a dd backup, the entire partition is always backed up - even if
 only a fraction of the partition (e.g. 33%) is used. This means that with a
 64GB partition, 42GB are always backed up for nothing, the backup process takes
 unnecessarily takes 66% longer and the backup occupies 66% more disk space.
-more disk space. There is the option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY** with which
+There is the option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY** with which
 only the existing root partition is backed up and not the entire device.
 
 ## Which backup type is the best?
 
 The most efficient backup type is *rsync*. By using hardlinks
 only files that have changed are copied and therefore all but the first
-the first backup process is completed relatively quickly. In addition, the
+backup process is completed relatively quickly. In addition, the
 files are unpacked and can be accessed directly if only a few files from the backup are needed.
-a few files from the backup are required. With *tar* and *dd* you have to
+With *tar* and *dd* 
 the backups have to be unpacked first.
 
 ## Further information
