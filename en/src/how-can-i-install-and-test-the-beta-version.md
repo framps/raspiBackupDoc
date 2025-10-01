@@ -15,10 +15,9 @@ version with the new functions, enhancements and error corrections
 and, in the event of an error, to create a problem record so that the problem can be
 problem can be fixed.
 
-Since it is not possible to test all possible system environment conditions
-conditions, testing the beta version also helps the community to
-community that no errors have crept into the new version.
-have crept into the new version.
+Since it is not possible to test all possible system environment conditions,
+testing the beta version also helps the community to
+make sure that no errors will be in the new version.
 
 The following section describes how to install a beta,
 uninstall it again and create problem reports.
@@ -30,7 +29,6 @@ sudo raspiBackup -U
 ```
 
 The current *raspiBackup* version is saved so that you can switch back to the previous version at any time.
-so that you can switch back to the previous version at any time.
 This is done with
 
 ```
@@ -40,14 +38,11 @@ whereby the version can be selected from a list of previous versions,
 which is then reactivated.
 
 If, contrary to expectations, a problem is discovered, a problem record or issue should be created on [*GitHub*](https://github.com/framps/raspiBackup/issues).
-problem record or issue should be created. It is very important to check the
+It is very important to check the
 output of `sudo *raspiBackup*.sh --version` so that it is clear exactly
 which code version is used.
 
-As the records are also read by international *raspiBackup* users
-users read the records, it would be good to create them in English. But it is
-no problem to write only in German. The records are then
-edited and fixed. When a new version is available, the creator will be
+When a new version is available, the creator will be
 will be informed via *GitHub* and it can be downloaded again with `sudo *raspiBackup*.sh -U -S`
 to download it again and verify the fix.
 

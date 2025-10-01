@@ -10,7 +10,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Full and incremental backups
 
       - The backup type `rsync` creates complete and then incremental backups
-        using [Hardlinks](how-do-hardlinks-work-with-rsync.md).
+        using [hardlinks](how-do-hardlinks-work-with-rsync.md).
       - The backup types `dd` and `tar` always create complete backups (also zipped).
         **Note**: With the `dd` backup, you can activate the option that only the space occupied by the partitions
         and not the entire SD card is backed up.

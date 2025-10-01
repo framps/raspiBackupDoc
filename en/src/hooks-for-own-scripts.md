@@ -6,7 +6,6 @@ changes are actually necessary in the backup script, but which then have to be
 would have to be updated again after each update of *raspiBackup* to a new version.
 version. The extensions (plugins) are independent of the
 version of *raspiBackup* and are therefore recommended in this case.
-recommended in this case.
 
 [Example extensions](https://github.com/framps/raspiBackup/tree/master/extensions)
 are available and can be used as a template for your own extensions.
@@ -71,7 +70,7 @@ are called:
 
 ### Example extensions
 
-1. the easiest way is to install and activate the sample extensions with the [Installer](https://www.linux-tips-and-tricks.de/de/installation).
+1. The easiest way is to install and activate the sample extensions with the [Installer](https://www.linux-tips-and-tricks.de/de/installation).
     and activate them. Either via the menu sequence
     **Install components-\>Install sample extensions** or
     directly via the command line with the `-e` option.
@@ -85,7 +84,7 @@ are called:
     raspiBackupInstallUI.sh -e
     ```
 
-2. if you want to install the sample extensions manually, you can download the `tgz` file with
+2. If you want to install the sample extensions manually, you can download the `tgz` file with
     [this link](https://www.linux-tips-and-tricks.de/raspiBackupSampleExtensions.tgz) with a browser
     or download it directly to the Raspberry as follows and copy it to
     `/usr/local/bin`:
@@ -127,8 +126,7 @@ DEFAULT_EXTENSIONS="temp mem disk execute"
 ### Notification extension
 
 For notifications via *Slack*, *Pushover* and *Telegram* no extensions need to be
-extensions need to be written. It is sufficient to configure the notifications in *raspiBackup*
-is sufficient.
+written. It is sufficient to configure the notifications in *raspiBackup*.
 If you want to supply other notification targets, you can do this in a script
 with the name `raspiBackup_notify.sh`.
 
@@ -159,21 +157,19 @@ The plugins generate the following messages:
 The example extensions use messages that start from the number range 1000
 such as RBK1000I. If you create your own extensions, you should
 write messages, they should start at 2000 and not use the range below
-range below 1999.
+1999.
 
 ### Interface
 
-An extension is given the current status code of *raspiBackup*
-in the call. A status code of 0 in the poster extensions means: the backup
+An extension receives current status code of *raspiBackup*
+in as parameter. A status code of 0 in the poster extensions means: the backup
 was successful. Any other status code means that the backup
-was canceled.
+was unsuccessfull.
 
 ### eMailExtension
 
-If you want to program the sending of emails yourself, you can use the email extension
-can be used.
+If you want to program the sending of emails yourself, you can use the email extension.
 This is particularly helpful if the email programs supported by the script do not support your own email client.
-do not support your own email client.
 In addition, the appearance of the email can be changed as desired.
 An extension that uses `mailx` can be found in the example extensions.
 
@@ -202,7 +198,7 @@ append="$5" # file to append
 - The extensions are called in the scope of *raspiBackup*. Therefore there is access
   to its internal script variables. However, this is strongly discouraged,
   as the internals can change at any time. For this reason, it is also
-  it is also advisable to provide your own variables with an extension-specific prefix,
+  advisable to provide your own variables with an extension-specific prefix,
   to avoid possible conflicts with variable names used by *raspiBackup*.
 
 - If you would like to share your extension code, you are welcome to create a pull request on [*GitHub*](https://github.com/framps/raspiBackup).

@@ -13,7 +13,7 @@ In normal backup mode, the two RaspbianOS partitions
 to an external
 partition (USB stick, USB disk, ...), this external partition is backed up as well as the boot
 partition and the boot partition from the SD card are backed up. If
-this backup is restored, the [Option `-R`](restore-options.md#parm_R) must be used,
+this backup is restored, the [option `-R`](restore-options.md#parm_R) must be used,
 to specify the target device for the external root partition.
 
 [.status]: translated

@@ -1,11 +1,11 @@
 # Regression tests executed before a new release
 
 Each new version of *raspiBackup* is subjected to a regression test before release.
-regression test before release. Due to the many options and possible hardware and
-hardware and software environments, a complete regression test is not possible.
-possible. However, this ensures that the primary functionality
+Due to the many options and possible hardware and
+and software environments, a complete regression test is not possible.
+However, this ensures that the primary functionality
 of *raspiBackup* to create a backup for the various backup types and modes
-backup for the various backup types and modes is definitely successful. Also, all
+is definitely successful. Also, all
 new features, although they were of course already tested during development, are also
 tested again.
 
@@ -28,8 +28,8 @@ images are started via Qemu and the following tests are carried out:
   - The number of active services of the original image is verified with `service --status-all`.
 
 Every user of *raspiBackup* who uses additional options is strongly advised to
-is strongly advised to carefully test backup and restore after a version upgrade of *raspiBackup*.
-Restore again carefully. In this context, please refer to the
+carefully test backup and restore after a version upgrade of *raspiBackup*.
+In this context, please refer to the
 [disclaimer](introduction.md#disclaimer).
 
 

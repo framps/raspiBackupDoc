@@ -25,29 +25,29 @@ Note: <clonedevice> is the device that is to receive the clone, e.g. `/dev/mmcbl
         ```
         curl -s -O https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh
         ```
-     2. move the script to `/usr/local/bin`
+     2. Move the script to `/usr/local/bin`
         ```
         sudo mv raspiBackupAndClone.sh /usr/local/bin
         ```
-     3. make `raspiBackupAndClone.sh` executable
+     3. Make `raspiBackupAndClone.sh` executable
         ```
         sudo chmod x /usr/local/bin/raspiBackupAndClone.sh
         ```
 
  2. One-time initialization of the cloned device
 
-     1. create a partition-oriented backup with 
+     1. Create a partition-oriented backup with 
         ```
         sudo raspiBackup -P -t rsync <backup directory>
         ```
-     2. restore the backup just created to the cloned device with
+     2. Restore the backup just created to the cloned device with
         ```
         sudo raspiBackup -d <clonedevice> <backup directory>
         ```
 
  3. Use `raspiBackupAndClone.sh` instead of `raspiBackup.sh`
 
-     1. in the file `/etc/systemd/system/raspiBackup.service`
+     1. In the file `/etc/systemd/system/raspiBackup.service`
         ```
         ExecStart=/usr/local/bin/raspiBackup.sh
         ```
@@ -59,7 +59,7 @@ Note: <clonedevice> is the device that is to receive the clone, e.g. `/dev/mmcbl
 If a backup is to be created manually,
 must be called `raspiBackupAndClone.sh` instead of `raspiBackup.sh`.
 
-Note: If no `rsync` backup is possible, the line `USE_RSYNC=1` must be deleted in `raspiBackupAndClone.sh`.
+Note: If no `rsync` backup is possible, the
 line `USE_RSYNC=1` must be changed to `USE_RSYNC=0`. Then the restore
 takes considerably longer, however, as no synchronization but a full restore
 is performed.

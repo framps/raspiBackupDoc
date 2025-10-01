@@ -15,7 +15,6 @@ configuration file. See [Restore options](restore-options.md).
 
 As with the backup, *raspiBackup* offers the option of configuring pre and post exits for the restore,
 pre and post exits to perform actions before and after the restore.
-actions before and after the restore. The syntax is the same as for the backup extensions.
 
 | Config option | Standard |
 |----------------------------|----------|
@@ -45,9 +44,8 @@ queries can be suppressed during the restore.
 
 However, as this can cause unintentional deletion of
 devices, this option must be used to
-by means of a regular expression
-to define which restored devices
-may be overwritten without a query.
+define which restored devices
+may be overwritten without a prompt. 
 
 | Config-Option | Default |
 |----------------------------|----------|
