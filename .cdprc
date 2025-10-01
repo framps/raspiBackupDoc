@@ -228,7 +228,7 @@ edit_files_as_book() {
 export -f edit_files_as_book
 
 
-edit_files_as_books() {
+edit_files_as_book_side_by_side() {
     lang="de"
     TMPFILE_META=$( mktemp tmp.XXXXXXXX )
         FZF_HEADER=">> Please select file to edit and press ENTER. (ESC to cancel.) <<"
@@ -253,7 +253,7 @@ edit_files_as_books() {
         unset FZFPOS_FILE
 }
 
-export -f edit_files_as_books
+export -f edit_files_as_book_side_by_side
 
 
 get_escaped_status () {
@@ -331,7 +331,7 @@ edit_by_status() {
                        --bind="alt-t:execute(edit_translate_already_translated)+reload(__list_stati)" \
                        --bind="alt-b:execute(edit_files_as_book de)" \
                        --bind="alt-B:execute(edit_files_as_book en)" \
-                       --bind="alt-S:execute(edit_files_as_books)" \
+                       --bind="alt-S:execute(edit_files_as_book_side_by_side)" \
                        --bind="alt-g:execute(edit_grepped_files)" \
                        --bind="alt-G:execute(edit_grepped_files '^\[\.status\]:\s{3}')" \
                        --bind="alt-m:execute(edit_meta_files)" \
@@ -396,7 +396,7 @@ alias vibs='edit_by_status'
 alias vigf='edit_grepped_files'
 alias vimf='edit_meta_files'
 alias viab='edit_files_as_book'
-alias viabs='edit_files_as_books'
+alias viabs='edit_files_as_book_side_by_side'
 
 
 check_ssh_id() {
