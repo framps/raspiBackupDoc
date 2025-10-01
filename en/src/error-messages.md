@@ -631,6 +631,17 @@ It is even better to prepare a dedicated SD card with a small *Raspberry Pi OS* 
 lite*) and use this SD card for the restore. There is no
 usbmount is installed.
 
+### RBK0343E: File system check on %1 ended incorrectly with RC %2
+
+Cause:
+
+The file system is checked after the restore. This should not have any errors If there are errors, the restore is aborted.
+
+Further actions:
+
+The RC %2 indicates the exact error from fsck on partition %1.
+Usually the device on which the restore was performed is not OK and should be replaced by another device (e.g. new SD card).
+
 
 ### RBK1005E: bc not found. bc must be installed with 'sudo apt-get install bc'.
 
