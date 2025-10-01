@@ -644,6 +644,17 @@ Noch besser ist es, eine dedizierte SD-Karte mit einem kleinen *Raspberry Pi OS*
 lite*) vorzubereiten und diese SD-Karte zum Restore nutzen. Dort ist kein
 usbmount installiert.
 
+### RBK0343E: Dateisystemcheck auf %1 fehlerhaft beendet mit RC %2
+
+Ursache:
+
+Nach dem Restore wird das Filesystem geprüft. Dieses sollte keine Fehler haben Bei Fehlern wird der Restore abgebrochen.
+
+Weitere Aktionen:
+
+Der RC %2 gibt an welcher Fehler genau von fsck auf der Partition %1.
+Üblicherweise ist das Gerät auf welchem restored wurde nicht OK und sollte durch ein anderes Gerät (z.B. neue SD Karte)
+ersetzt werden.
 
 ### RBK1005E: bc nicht gefunden. bc muss installiert werden mit 'sudo apt-get install bc'.
 
