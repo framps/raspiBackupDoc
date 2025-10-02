@@ -199,7 +199,8 @@ aktuell:
 
 Einige dieser Tools haben eigene Aliases:
 
-  - Alt-b/Alt-B: `viab [De/en]` "vi files as book"
+  - Alt-b/Alt-shift-B: `viab [De/en]` "vi files as book"
+  - Alt-shift-S: `viabs` "vi as book side by side"
   - Alt-g: `vigf` "vi grepped files"
   - Alt-m: `vimf` "vi meta files"
 
@@ -219,13 +220,16 @@ It starts a TUI for selecting Markdown files by their status for editing.
 Within the main screen of the TUI there are additional hotkeys active:
 
   * Alt-r / Alt-t for more selection screens, meant for supporting translation.
-    They list files "(r)eady for translation" / "(t)ranslated" and open
-    the selected file in both language versions in a split editor window.
+    They list files with status "(r)eady for translation" / "(t)ranslated" and
+    open the selected file in both language versions in a split editor window.
 
   * Alt-b for a selection of all German Markdown files ordered as in the
     corresponding SUMMARY.md file - like the produced (b)ook.
     Alt-shift-B the same for the English version.
     This one has its own alias 'viab [DE|en]' ("vi as book").
+
+    And additionally Alt-shift-S or alias 'viabs' for editing both DE/EN files
+    in a splitscreen ("vi as book side by side").
 
   * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
 
