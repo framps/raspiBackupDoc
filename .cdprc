@@ -146,7 +146,7 @@ edit_grepped_files() {
 
     # Switch between Ripgrep mode and fzf filtering mode (Alt-g)
     rm -f /tmp/rg-fzf-{r,f}
-    RG_PREFIX="${RG_IGN} --column --line-number --no-heading --color=always "
+    RG_PREFIX="${RG} --column --line-number --no-heading --color=always "
     INITIAL_QUERY="${*:-}"
     # shellcheck disable=2016
     fzf --ansi --disabled --query "$INITIAL_QUERY" \
