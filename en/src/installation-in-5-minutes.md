@@ -35,7 +35,7 @@ However, the standard installation with the installer is described here.
 ## The *raspiBackup* installer
 
 *raspiBackup* has a menu-driven UI installer and basic configurator,
-`raspiBackupInstallUI`, with which * raspiBackup* can be easily installed 
+`raspiBackupInstallUI`, with which *raspiBackup* can be easily installed 
 and the basic features configured.
 
 There are also update functions for the installer itself and for *raspiBackup*.
