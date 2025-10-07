@@ -62,7 +62,9 @@ jobs:
 
       - name: Install mdBook
         run: |
-          rustup uninstall stable
+          # to "fix" a rare error with rustup the following line seems to help:
+          # rustup uninstall stable
+          # After curing the problem I commented it out again...
           rustup update
           cargo install --version ${MDB_VERSION} mdbook
           cargo install --version ${MDB_ADMONISH_VERSION} mdbook-admonish
