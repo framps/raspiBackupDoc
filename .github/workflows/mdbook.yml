@@ -62,6 +62,7 @@ jobs:
 
       - name: Install mdBook
         run: |
+          rustup uninstall stable
           rustup update
           cargo install --version ${MDB_VERSION} mdbook
           cargo install --version ${MDB_ADMONISH_VERSION} mdbook-admonish
