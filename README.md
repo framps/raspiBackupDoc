@@ -11,6 +11,9 @@
 > All the documentation about the tool chain created by @rpi-simonz is written in German. If somebody is interested to add new pages or enhance the documentation and is not a German native speaker please create an issue and
 > you will get help to complete your task 😉
 
+The documentation is bilingual, with English as the default and German for visitors from German-speaking countries.
+To change the language, click on the small globe icon in the top right-hand corner.
+
 <!-- Hinweis:
      Hier in der `README.md` und den anderen GitHub-Dateien wird *GitHub Flavored Markdown* verwendet.
      Siehe z.B. https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
