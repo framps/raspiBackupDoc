@@ -10,9 +10,11 @@
 >
 > All the documentation about the tool chain created by @rpi-simonz is written in German. If somebody is interested to add new pages or enhance the documentation and is not a German native speaker please create an issue and
 > you will get help to complete your task 😉
-
-The documentation is bilingual, with English as the default and German for visitors from German-speaking countries.
-To change the language, click on the small globe icon in the top right-hand corner.
+>
+> The documentation is bilingual, with English as the default and German for visitors from German-speaking countries.
+> To change the language, click on the small globe icon in the top right-hand corner.
+> 
+> The generated documentation can be accessed at: https://framps.github.io/raspiBackupDoc
 
 <!-- Hinweis:
      Hier in der `README.md` und den anderen GitHub-Dateien wird *GitHub Flavored Markdown* verwendet.
@@ -28,10 +30,10 @@ To change the language, click on the small globe icon in the top right-hand corn
 > Dokumentation in ein neues Format zu bringen und übersichtlicher zu gestalten. Dadurch hat er auch eine Überarbeitung der Dokumentation angestoßen die längst 
 > mal fällig war.
 
-Die Dokumentation wird zweisprachig ausgeführt, Englisch als Default und Deutsch für Besucher aus den deutschsprachigen Ländern.
-Zum Wechseln der Sprache ist oben rechts ein kleines Globus-Icon vorhanden.
-
-Die generierte Dokumentation ist zu erreichen unter: https://framps.github.io/raspiBackupDoc/
+> Die Dokumentation wird zweisprachig ausgeführt, Englisch als Default und Deutsch für Besucher aus den deutschsprachigen Ländern.
+> Zum Wechseln der Sprache ist oben rechts ein kleines Globus-Icon vorhanden.
+> 
+> Die generierte Dokumentation ist zu erreichen unter: https://framps.github.io/raspiBackupDoc
 
 [![Screenshot von raspiBackupDoc](readme-images/Screenshot_raspiBackupDoc.png)](https://framps.github.io/raspiBackupDoc/)
 
