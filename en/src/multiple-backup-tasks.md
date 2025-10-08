@@ -28,7 +28,7 @@ For the second backuptask, the following files must be duplicated in the same di
 
 The files must then be adapted:
 
-`raspiBackup.servicei``change to i`raspiBackup2.service` in `raspiBackup2.timer`:
+`raspiBackup.service``change to `raspiBackup2.service` in file `raspiBackup2.timer`:
 ```
 [Timer]
 OnCalendar=Sat *-*-* 01:00:00
@@ -59,8 +59,8 @@ The second backuptask must then be activated. To do this
 the following commands must be executed:
 
 ```
-sudo systemctl start raspiBackup2.timer
 sudo systemctl enable raspiBackup2.timer
+sudo systemctl start raspiBackup2.timer
 ```
 
 **Note**:

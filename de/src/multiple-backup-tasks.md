@@ -28,7 +28,7 @@ Für die weitere Backuptask sind folgende Dateien im selben Verzeichnis  mit dem
 
 Danach ist eine Anpassung der Dateien notwendig:
 
-`raspiBackup.service` ändern in `raspiBackup2.service` in `raspiBackup2.timer`:
+`raspiBackup.service` ändern in `raspiBackup2.service` in der Datei `raspiBackup2.timer`:
 
 ```
 [Timer]
@@ -60,8 +60,8 @@ Anschliessend ist die Aktivierung der zweiten Backuptask notwendig. Dazu
 sind folgende Befehle auszuführen:
 
 ```
-sudo systemctl start raspiBackup2.timer
 sudo systemctl enable raspiBackup2.timer
+sudo systemctl start raspiBackup2.timer
 ```
 
 **Hinweis**:
