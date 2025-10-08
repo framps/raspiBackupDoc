@@ -28,7 +28,7 @@ Für die weitere Backuptask sind folgende Dateien im selben Verzeichnis  mit dem
 
 Danach ist eine Anpassung der Dateien notwendig:
 
-raspiBackup.service`ändern in raspiBackup2.service in raspiBackup2.timer:
+`raspiBackup.service``ändern in `raspiBackup2.service` in `raspiBackup2.timer`:
 ```
 [Timer]
 OnCalendar=Sat *-*-* 01:00:00
@@ -37,11 +37,11 @@ Unit=raspiBackup2.service
 Die Zeile `OnCalendar` muss entsprechend dem gewünschten Rhythmus und Zeit definiert werden.
 Dabei ist darauf zu achten dass die Syntax dem Systemd Timer Format entspricht.
 
-Anschliessend sind folgende Änderungen in raspiBackup2.service notwendig:
+Anschliessend sind folgende Änderungen in `raspiBackup2.service` notwendig:
 
 Entweder wird eine weitere Konfigurationsdatei wie folgt mit der Option -f angegeben
 ```
-Service]
+[Service]
 Type=simple
 ExecStart=/usr/local/bin/raspiBackup.sh -f /usr/local/etc/raspiBackup2.conf
 ```
@@ -50,7 +50,7 @@ oder es werden weitere Optionen direkt im Aufruf definiert. Im folgenden Beispie
 der Backuptyp auf tar und die Anzahl Backups auf 42 geändert.
 
 ```
-Service]
+[Service]
 Type=simple
 ExecStart=/usr/local/bin/raspiBackup.sh -t tar -k 42
 ```

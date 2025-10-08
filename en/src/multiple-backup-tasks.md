@@ -28,7 +28,7 @@ For the second backuptask, the following files must be duplicated in the same di
 
 The files must then be adapted:
 
-raspiBackup.service`change to raspiBackup2.service in raspiBackup2.timer:
+`raspiBackup.servicei``change to i`raspiBackup2.service` in `raspiBackup2.timer`:
 ```
 [Timer]
 OnCalendar=Sat *-*-* 01:00:00
@@ -37,11 +37,11 @@ Unit=raspiBackup2.service
 The line `OnCalendar` must be defined according to the desired rhythm and time.
 Make sure that the syntax corresponds to the Systemd timer format.
 
-The following changes must then be made in raspiBackup2.service:
+The following changes must then be made in `raspiBackup2.service`:
 
 Either another configuration file is specified as follows with the -f option
 ```
-Service]
+[Service]
 Type=simple
 ExecStart=/usr/local/bin/raspiBackup.sh -f /usr/local/etc/raspiBackup2.conf
 ```
@@ -50,12 +50,12 @@ or further options are defined directly in the call. In the following example
 the backup type is changed to tar and the number of backups to 42.
 
 ```
-Service]
+[Service]
 Type=simple
 ExecStart=/usr/local/bin/raspiBackup.sh -t tar -k 42
 ```
 
-The second backup task must then be activated. To do this
+The second backuptask must then be activated. To do this
 the following commands must be executed:
 
 ```
