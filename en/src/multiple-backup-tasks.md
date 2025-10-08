@@ -1,26 +1,26 @@
 # Multiple backup tasks
 
-Normally it is sufficient to use a back-up task that can be configured with the installer,
+Normally, it is sufficient to use one back-up task that can be configured with the installer,
 to use. However, there are also scenarios in which several different backups are
 different times with different retention values need to be executed.
 must be executed.
 
 The *raspiBackup* installer only allows one backup task to be configured. Further
-backup tasks must be configured manually. When configuring the *raspiBackup*
+backup tasks must then be configured manually. When configuring the *raspiBackup*
 options, an additional configuration file can be created and used. If only a few
-options are different, these options should be specified at runtime. Otherwise
+options are different, these options should be added at runtime. Otherwise
 configuration must be updated manually each time the *raspiBackup* version is updated.
-manually. In the following, the name raspiBackup2 is used for the second backuptask.
+manually. In the following, the name raspiBackup2 is used for the second backup task.
 
-## Configuration of the first backup task
+## Configuration of the first backuptask
 
-First, the first back-up task must be initially configured with the installer and further configuration options
+First you configure the first backuptask with the installer and further configuration options
 must then be adapted in the configuration file. This configuration serves as a template
 for the second backuptask.
 
-## Configuration of the second backup task
+## Configuration of the second backuptask
 
-The following files must be duplicated in the same directory for the second back-up task:
+For the second backuptask, the following files must be duplicated in the same directory with the name raspiBackup2:
 
 * /etc/systemd/system/raspiBackup.timer
 * /etc/systemd/system/raspiBackup.service
@@ -28,7 +28,7 @@ The following files must be duplicated in the same directory for the second back
 
 The files must then be adapted:
 
-raspiBackup.timer must be changed to raspiBackup2.timer.
+raspiBackup.service`change to raspiBackup2.service in raspiBackup2.timer:
 ```
 [Timer]
 OnCalendar=Sat *-*-* 01:00:00
@@ -37,7 +37,7 @@ Unit=raspiBackup2.service
 The line `OnCalendar` must be defined according to the desired rhythm and time.
 Make sure that the syntax corresponds to the Systemd timer format.
 
-The following must then be changed in raspiBackup2.service:
+The following changes must then be made in raspiBackup2.service:
 
 Either another configuration file is specified as follows with the -f option
 ```
@@ -55,7 +55,7 @@ Type=simple
 ExecStart=/usr/local/bin/raspiBackup.sh -t tar -k 42
 ```
 
-The second back-up task must then be activated. To do this
+The second backup task must then be activated. To do this
 the following commands must be executed:
 
 ```
@@ -64,6 +64,6 @@ sudo systemctl enable raspiBackup2.timer
 ```
 
 **Note**:
-If different backup types are used, no second backup directory is required.
+If different backup types are used, no other backup directory is required.
 
-
+[.status]: translated

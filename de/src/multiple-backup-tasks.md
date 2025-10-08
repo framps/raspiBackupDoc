@@ -20,7 +20,7 @@ für den zweiten Backuptask.
 
 ## Konfiguration des zweiten Backuptasks
 
-Für die weitere Backuptask sind folgende Dateien im selben Verzeichnis zu duplizieren:
+Für die weitere Backuptask sind folgende Dateien im selben Verzeichnis  mit dem Namen raspiBackup2 zu duplizieren:
 
 * /etc/systemd/system/raspiBackup.timer
 * /etc/systemd/system/raspiBackup.service
