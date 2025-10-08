@@ -66,6 +66,7 @@ Dies ermöglicht einige kleine Kniffe:
             - [msmtp Konfiguration für einen web.de Account](msmtp-configuration-for-web-de-account.md)
             - [Exim4 Konfiguration](exim4-configuration.md)
             - [nullmailer Konfiguration](nullmailer-configuration.md)
+        - [Mehrere Backuptasks](multiple-backup-tasks.md)
 
     - [Restore](restore-intro.md)
         - [Restore einzelner Dateien](how-to-retrieve-single-files-or-directories-from-the-backup.md)

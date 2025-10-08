@@ -66,7 +66,7 @@ That allows for some tricks:
             - [msmtp configuration for a web.de account](msmtp-configuration-for-web-de-account.md)
             - [Exim4 configuration](exim4-configuration.md)
             - [nullmailer configuration](nullmailer-configuration.md)
-
+        - [Multiple backuptasks](multiple-backup-tasks.md) 
     - [Restore](restore-intro.md)
         - [Restore single files/directories](how-to-retrieve-single-files-or-directories-from-the-backup.md)
         - [Manual rsync restore](manual-restore.md)
