@@ -65,7 +65,7 @@ jobs:
           # to "fix" a rare error with rustup
           # "detected conflict: 'lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-4762c639c5141640.rlib"
           # the following line seems to help:
-          rustup uninstall stable
+          # rustup uninstall stable
           rustup update
           cargo install --version ${MDB_VERSION} mdbook
           cargo install --version ${MDB_ADMONISH_VERSION} mdbook-admonish
