@@ -62,10 +62,14 @@ jobs:
 
       - name: Install mdBook
         run: |
-          # to "fix" a rare error with rustup
+          # To "fix" a rare error with rustup
           # "detected conflict: 'lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-4762c639c5141640.rlib"
           # the following line seems to help:
-          # rustup uninstall stable
+          #     rustup uninstall stable
+          # But a (probably) better fix is: Clean all GitHub Actions caches.
+          # So the above command is commented out again.
+          # We will see in the future...
+          
           rustup update
           cargo install --version ${MDB_VERSION} mdbook
           cargo install --version ${MDB_ADMONISH_VERSION} mdbook-admonish
