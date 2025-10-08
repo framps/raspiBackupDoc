@@ -21,7 +21,11 @@ Bei GitHub muss dazu noch in den Einstellungen des Repositories unter
 
 ![github-pages-settings](readme-images/m1-github-pages-settings.png)
 
-
+**Hinweis**: Manchmal (selten) kommt es beim Build in *GitHub Actions* zu einem Abbruch,
+der nicht durch Fehler in den Markdown-Dateien zu erklären bzw. durch deren
+Behebung zu beseitigen ist. Dann ist es oft hilfreich,
+manuell die Caches bei *GitHub Actions* zu löschen.
+Der erste dann folgende Build dauert dann natürlich ein paar Minuten länger...
 
 ## Ablauf bei Veröffentlichung auf einem (normalen) Webserver
 
@@ -84,7 +88,7 @@ Bei GitHub muss dazu noch in den Einstellungen des Repositories unter
 
 > [!TIP]
 > Wenn unbedingt nötig, geht es auch ohne lokales Generieren:  
-> Man kann aus dem *GitGub Actions Workflow* die automatisch gebauten Artifacts herunterladen und auspacken.
+> Man kann aus dem *GitHub Actions Workflow* die automatisch gebauten Artifacts herunterladen und auspacken.
 > Das ist dann die generierte Webseite.
 >
 > Dann ist allerdings obiger Aufruf von `lftp` noch anzupassen, weil die Webseite schon in finaler Struktur vorliegt.
