@@ -471,6 +471,8 @@ Within the main screen of the TUI there are additional hotkeys active:
     And additionally Alt-shift-S or alias 'viabs' for editing both DE/EN files
     in a splitscreen ("vi as book side by side").
 
+  * Alt-n for creating a new (pair of) files and open them for edit/translate.
+
   * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
 
   * Alt-g for calling an interactive (g)rep-Tool using ripgrep, fzf and vim.
