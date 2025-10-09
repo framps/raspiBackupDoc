@@ -9,22 +9,22 @@ Der Code steht auf [github](https://github.com/framps/raspiBackup/tree/master/ex
 Um die Extension zu nutzen ist wie folgt vorzugehen:
 
 1) Download der Extension
-```
-cd /usr/local/bin
-sudo wget https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/extensions_userprovided/raspiBackup_docker_pre.sh
-sudo wget https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/extensions_userprovided/raspiBackup_docker_post.sh
-sudo chmod +x raspiBackup_docker*.sh
-```
+   ```
+   cd /usr/local/bin
+   sudo wget https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/extensions_userprovided/raspiBackup_docker_pre.sh
+   sudo wget https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/extensions_userprovided/raspiBackup_docker_post.sh
+   sudo chmod +x raspiBackup_docker*.sh
+   ```
 
 2) Anschließend muss die Extension noch in *raspiBackup* bekanntgemacht werden.
    Dazu ist die Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` anzupassen.
 
-Sollte noch keine Extension aktiv sein reicht folgende Definition:
-```
-DEFAULT_EXTENSIONS="docker"
-```
+   Sollte noch keine Extension aktiv sein reicht folgende Definition:
+   ```
+   DEFAULT_EXTENSIONS="docker"
+   ```
 
-Ansonsten muss `docker` noch zu den schon existierenden Extensions zugefügt werden.
+   Ansonsten muss `docker` noch zu den schon existierenden Extensions zugefügt werden.
 
 **Hinweis**:
 In den `DEFAULT_STOPSERVICES` und `DEFAULT_STARTSERVICES` Definitionen sollten keine Befehle stehen,
