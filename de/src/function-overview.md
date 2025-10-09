@@ -168,6 +168,8 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     Für Entwickler bietet *raspiBackup* verschiedene [Erweiterungspunkte](hooks-for-own-scripts.md),
     um Vor- und Nachbereitungen bei der Sicherung wie auch dem Zurücksichern
     durch eigenen Code ausführen zu können.
+    U.A. existiert eine Extension, die Dockercontainer vor dem Backup stoppt und anschließend
+    wieder startet.
 
   - Sicherung von *NVMe* Speicher
 

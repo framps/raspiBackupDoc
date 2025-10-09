@@ -29,3 +29,5 @@ Ansonsten muss `docker` noch zu den schon existierenden Extensions zugefügt wer
 **Hinweis**:
 In den `DEFAULT_STOPSERVICES` und `DEFAULT_STARTSERVICES` Definitionen sollten keine Befehle stehen,
 die Docker starten oder stoppen.
+
+[.status]: translated

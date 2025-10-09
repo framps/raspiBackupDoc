@@ -166,6 +166,8 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     For developers, *raspiBackup* offers various [extension points](hooks-for-own-scripts.md),
     to perform pre- and post-processing during backup as well as during restore
     by your own code.
+    For example there exists an extension which stops docker containers before the backup
+    and starts them at the end again.
 
   - Backup of *NVMe* storage
 

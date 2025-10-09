@@ -29,3 +29,5 @@ Otherwise, `docker` must be added to the existing extensions.
 **Note**:
 There should be no commands in the `DEFAULT_STOPSERVICES` and `DEFAULT_STARTSERVICES` definitions,
 that start or stop Docker.
+
+[.status]: translated
