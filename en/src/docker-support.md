@@ -2,7 +2,7 @@
 
 A *raspiBackup* user has written a *raspiBackup* extension
 which ensures that all Docker containers are stopped before the backup
-are stopped and restarted at the end.
+and finally started again. 
 
 The code is available on [github](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided)
 
