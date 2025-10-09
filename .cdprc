@@ -100,6 +100,27 @@ edit_translate_file() {
 export -f edit_translate_file
 
 
+create_translate_new_file() {
+    clear
+    while true ; do
+        echo -e "New filename (without path, without extension '.md'): \c"
+        read -r new_file
+        if [[ ! -f "de/src/${new_file}.md" ]] && [[ ! -f "en/src/${new_file}.md" ]] ; then
+            break
+        fi
+        echo "The file '${new_file}.md' already exists. Please choose another name..."
+        echo ""
+    done
+    FILE="${new_file}.md"
+
+    echo "# ${new_file}" | tee -a "de/src/${FILE}" >> "en/src/${FILE}"
+
+    ${VIM_PROJECT} -c "vsplit de/src/${FILE}|wincmd h" en/src/"${FILE}"
+}
+
+export -f create_translate_new_file
+
+
 edit_translate_by_status() {
     while true; do
         TMPFILE_TRANS=$( mktemp tmp.XXXXXXXX )
@@ -336,6 +357,7 @@ edit_by_status() {
                        --bind="alt-G:execute(edit_grepped_files '^\[\.status\]:\s{3}')" \
                        --bind="alt-m:execute(edit_meta_files)" \
                        --bind="alt-s:execute(vimdiff -c 'syntax off| windo set nospell' {de,en}/src/SUMMARY.md)" \
+                       --bind="alt-n:execute(create_translate_new_file)" \
                        --preview='V={}; __list_files_with_status "$V"')
         set --
 
