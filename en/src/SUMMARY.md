@@ -61,6 +61,7 @@ That allows for some tricks:
         - [Backup directory structure](backup-directory-structure.md)
         - [Rotation strategy](smart-recycle.md)
         - [Snapshots](snapshots.md)
+        - [Docker support](docker-support.md)
         - [Configuration update when upgrading to a new version](configuration-update-when-upgrading-to-a-new-version.md)
         - [Multiple backuptasks](multiple-backup-tasks.md)
         - [Configuration examples](configuration-examples.md)
