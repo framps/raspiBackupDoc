@@ -270,7 +270,11 @@ Cursor-Tasten, Enter, ESC und TAB.
   - Esc bzw. Cursor links brechen ab/gehen einen Schritt zurück
 
 Die in `vibs` eingebauten Tools können per Tastenkombination aufgerufen werden.
-Das sind aktuell:
+
+Zusätzlich zu den im Folgenden mit Beispiel-Screenshots aufgeführten Funktionen
+gibt es in einfachen Dateiauswahllisten noch die Tastenkombination Alt-t,
+mit der die selektierte Datei in geteiltem Bildschirm in DE und EN parallel
+zum Editieren geöffnet wird.
 
 ### Erzeugen einer neuen Datei bzw. Datei-Paares (DE/EN) [Alt-n]
 
