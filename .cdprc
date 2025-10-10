@@ -125,9 +125,17 @@ create_translate_new_file() {
     done
     FILE="${new_file}.md"
 
-    echo "# ${new_file}" | tee -a "de/src/${FILE}" >> "en/src/${FILE}"
+    cat <<-EOF | tee -a "de/src/${FILE}" >> "en/src/${FILE}"
+	# ${new_file}
+
+
+
+
+	[.status]: rft "ready for translation. Later: translated"
+	EOF
 
     ${VIM_PROJECT} -c "vsplit de/src/${FILE}|wincmd h" en/src/"${FILE}"
+
 }
 
 export -f create_translate_new_file
@@ -457,7 +465,7 @@ fi
 
 [[ $PATH =~ ^./bin: ]] || export PATH=./bin:$PATH
 
-cat <<EOF
+cat <<EOFCDPRC
 
 
 *******************************************************************************
@@ -497,6 +505,8 @@ Within the main screen of the TUI there are additional hotkeys active:
     This one has its own alias 'vigf' ("vi grepped files").
     Alt-Shift-G is the same with current status as preselected query.
 
+  * Ctrl-r for reloading/refreshing the list of status entries
+
 
 The above functions handle Markdown source files for the documentation itself.
 Administration files like README, Makefile and book.toml can be selected too:
@@ -511,4 +521,5 @@ Ctrl-t, Ctrl-e ("translate to english"). Please read EDIT.md for more details.
 *******************************************************************************
 
 
-EOF
+EOFCDPRC
+

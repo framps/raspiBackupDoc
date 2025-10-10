@@ -232,6 +232,7 @@ Within the main screen of the TUI there are additional hotkeys active:
     This one has its own alias 'vigf' ("vi grepped files").
     Alt-Shift-G is the same with current status as preselected query.
 
+  * Ctrl-r for reloading/refreshing the list of status entries
 
 The above functions handle Markdown source files for the documentation itself.
 Administration files like README, Makefile and book.toml can be selected too:
@@ -275,6 +276,10 @@ Zusätzlich zu den im Folgenden mit Beispiel-Screenshots aufgeführten Funktione
 gibt es in einfachen Dateiauswahllisten noch die Tastenkombination Alt-t,
 mit der die selektierte Datei in geteiltem Bildschirm in DE und EN parallel
 zum Editieren geöffnet wird.
+
+**Hinweis**: Der Hauptbildschirm kann mit Ctrl-r ("reload") aufgefrischt werden,
+zum Beispiel, falls nicht alle neuen/geänderten Stati angezeigt werden.
+
 
 ### Erzeugen einer neuen Datei bzw. Datei-Paares (DE/EN) [Alt-n]
 
