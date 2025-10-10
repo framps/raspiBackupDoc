@@ -103,12 +103,24 @@ export -f edit_translate_file
 create_translate_new_file() {
     clear
     while true ; do
-        echo -e "New filename (without path, without extension '.md'): \c"
+        echo -e "=== Creating a new file (pair of files in DE/EN) ===\n"
+        echo "Naming conventions:"
+        echo ""
+        echo "  - in English language"
+        echo "  - lower case"
+        echo "  - short and meaningful"
+        echo "  - no spaces, no special characters. Recommended: Only [a-z], [0-9] and '-'"
+        echo -e "\nPlease choose a name (without path, without extension '.md'): \c"
         read -r new_file
+        if [[ -z "$new_file" ]] ; then
+            return
+        fi
         if [[ ! -f "de/src/${new_file}.md" ]] && [[ ! -f "en/src/${new_file}.md" ]] ; then
             break
         fi
-        echo "The file '${new_file}.md' already exists. Please choose another name..."
+        echo ""
+        echo "Ooops, the file '${new_file}.md' already exists. Please choose another name!"
+        echo ""
         echo ""
     done
     FILE="${new_file}.md"

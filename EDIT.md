@@ -198,7 +198,9 @@ Darin sind weitere Tools eingebaut, die per Tastenkombination aufgerufen
 werden können, aktuell:
 
   - Erzeugen einer neuen Datei bzw. Datei-Paares (DE/EN) und
-    Editieren in geteiltem Bildschirm
+    Editieren in geteiltem Bildschirm (Alt-n)
+    ![Beispiel für Alt-n (1)](readme-images/alt-n--1.png "Erzeugung einer neuen Datei DE/EN")
+    ![Beispiel für Alt-n (2)](readme-images/alt-n--2.png "Editieren der neuen Dateien DE/EN")
   - Auswahl noch zu übersetzender/schon übersetzter Dateien (Alt-r/Alt-t)
     ![Beispiel für Alt-r/Alt-t](readme-images/vitar.png "Auswahl von Übersetzungen")
     ![Beispiel für den Splitscreen bei Alt-r/Alt-t](readme-images/vitar-split.png "Splitscreen mit EN/DE")
