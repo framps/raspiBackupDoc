@@ -261,14 +261,23 @@ Hier der Hauptbildschirm von `vibs`:
 
   ![Beispiel für vibs](readme-images/vibs.png "Auswahl nach Status")
 
-Die hier eingebauten Tools können per Tastenkombination aufgerufen werden.
+Die Navigation in `vibs` und den integrierten Tools geschieht mit den
+Cursor-Tasten, Enter, ESC und TAB.
+
+  - Cursor auf/ab bewegt den Selektionsbalken auf und ab.
+  - TAB markiert einen Eintrag zur Mehrfachauswahl (wo vorhanden/erlaubt)
+  - Enter bzw. Cursor rechts wählen die selektierte/markierten Datei(en) aus
+  - Esc bzw. Cursor links brechen ab/gehen einen Schritt zurück
+
+Die in `vibs` eingebauten Tools können per Tastenkombination aufgerufen werden.
 Das sind aktuell:
 
 ### Erzeugen einer neuen Datei bzw. Datei-Paares (DE/EN) [Alt-n]
 
+![Beispiel für Alt-n (1)](readme-images/alt-n--1.png "Erzeugung einer neuen Datei DE/EN")
+
 ... und Editieren in geteiltem Bildschirm
 
-![Beispiel für Alt-n (1)](readme-images/alt-n--1.png "Erzeugung einer neuen Datei DE/EN")
 ![Beispiel für Alt-n (2)](readme-images/alt-n--2.png "Editieren der neuen Dateien DE/EN")
 
 ### Auswahl noch zu übersetzender/schon übersetzter Dateien [Alt-r/Alt-t]
