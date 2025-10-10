@@ -34,7 +34,7 @@ installer then generates the corresponding commands in the configuration file.
 
 ### FHEM
 
-FHEM does not use ACLs.
+FHEM does not use ACLs. See [FAQ24](faq.md#faq24) how to get rid of any ACL error messages.
 
 FHEM runs as a system service and thus appears in the installer as a service and can be
 can simply be selected there with M3->C6, so that FHEM is stopped before the backup

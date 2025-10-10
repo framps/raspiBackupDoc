@@ -460,8 +460,11 @@ Daten zu schreiben, was von rsync nicht unterstützt wird.
 
 Hinweis: Synology unterstützt keine ACLs mit NFS3 as of 13.5.2022.
 
-Hinweis: Mit folgendem Befehl findet mal alle Dateien mit ACLs: sudo
-getfacl -Rs /Der Befehl braucht Zeit, bis er fertig ist.
+Hinweis: Mit folgendem Befehl findet mal alle Dateien mit ACLs:
+```
+sudo getfacl -Rs /
+```
+Der Befehl braucht Zeit, bis er fertig ist.
 
 Mögliche Lösungen:
 

@@ -34,7 +34,8 @@ Installer generiert dann die entsprechenden Befehle in der Konfigurationsdatei.
 
 ### FHEM
 
-FHEM nutzt keine ACLs.
+FHEM nutzt keine ACLs. Siehe [FAQ24](faq.md#faq24)
+wie ACL Fehlermeldungen zu beseitigen sind.
 
 FHEM läuft als System Service und taucht somit im Installer als Service auf und
 kann dort einfach mit M3->C6 ausgewählt werden, so dass FHEM vor dem Backup

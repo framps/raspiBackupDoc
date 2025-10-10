@@ -459,8 +459,11 @@ data, which is not supported by rsync.
 
 Note: Synology does not support ACLs with NFSv3 as of 13.5.2022.
 
-Note: The following command will find all files with ACLs: sudo
-getfacl -Rs /The command takes time to complete.
+Note: The following command will find all files with ACLs:
+```
+sudo getfacl -Rs /
+```
+The command takes time to complete.
 
 Possible solutions:
 
@@ -486,7 +489,7 @@ Possible solutions:
 In Bullseye, Debian has introduced persistent journaling and thus
 exists /var/log/journal with ACLs on the system. If you are using *raspiBackup* Release
 0.6.6 or earlier must at least upgrade to release 0.6.6.1 or use the workaround
-use the workaround described on *GitHub* in [Issue 393](https://github.com/framps/raspiBackup/issues/393).
+described on *GitHub* in [Issue 393](https://github.com/framps/raspiBackup/issues/393).
 
 
 <a name="faq25"></a>
@@ -503,7 +506,7 @@ remove the metadata_csum. Then perform the restore with *raspiBackup*.
 ### 26) Why do I get the message `???? RBK0160E: Destination /dev/sda with xx GiB is smaller than the backup source with yy GiB` although both SD cards are the same size?
 
 SD cards that are specified with a certain size (e.g. 16GB) are nevertheless
-nevertheless different in size. With the command `sudo fdisk -l /dev/mmcblk0`
+different in size. With the command `sudo fdisk -l /dev/mmcblk0`
 you get the following output, for example, which tells you the exact size:
 
 ```

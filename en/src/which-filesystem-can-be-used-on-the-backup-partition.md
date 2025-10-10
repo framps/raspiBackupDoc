@@ -20,7 +20,8 @@ and their restrictions.
 | filesystem | dd | tar | rsync |
 |------------|------------|----------|------------|
 | SMB | yes | yes | restricted <br> Goes via the detour with the use of a loop device. See also [FAQ24](faq.md#faq24). |
-NFS | yes | yes | yes | **recommended** <br> Backing up ACLs is also possible, but only via the detour of using a loop device. Or you can switch off the backup of ACLs. See also [FAQ24](faq.md#faq24). |
+NFS | yes | yes | yes | **recommended** <br> Backing up ACLs works if Posix ACLs are supported by the server. If not it's also possible,
+but only via the detour of using a loop device. Or you can switch off the backup of ACLs. See also [FAQ24](faq.md#faq24). |
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/578-welches-dateisystem-kann-auf-dem-backupgeraet-benutzt-werden
