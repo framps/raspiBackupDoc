@@ -189,42 +189,10 @@ die zur Nutzung nur ge-source-d werden muss:
 source .cdprc`
 ```
 
-Der zentrale Einstig ist der Alias `vibs` ("vi by status")
-zur Auswahl von Datei(en) mit einem gewünschten Status:
+`.cdprc` ist Teil des Tools [cdp - "cd project"](https://github.com/rpi-simonz/cdp) von *rpi-simonz*,
+kann aber auch wie hier beschrieben eigenständig verwendet werden.
 
-  ![Beispiel für vibs](readme-images/vibs.png "Auswahl nach Status")
-
-Darin sind weitere Tools eingebaut, die per Tastenkombination aufgerufen
-werden können, aktuell:
-
-  - Erzeugen einer neuen Datei bzw. Datei-Paares (DE/EN) und
-    Editieren in geteiltem Bildschirm (Alt-n)
-    ![Beispiel für Alt-n (1)](readme-images/alt-n--1.png "Erzeugung einer neuen Datei DE/EN")
-    ![Beispiel für Alt-n (2)](readme-images/alt-n--2.png "Editieren der neuen Dateien DE/EN")
-  - Auswahl noch zu übersetzender/schon übersetzter Dateien (Alt-r/Alt-t)
-    ![Beispiel für Alt-r/Alt-t](readme-images/vitar.png "Auswahl von Übersetzungen")
-    ![Beispiel für den Splitscreen bei Alt-r/Alt-t](readme-images/vitar-split.png "Splitscreen mit EN/DE")
-  - Auflistung aller Dateien in Buch-Reihenfolge,
-    wie in SUMMARY.md definiert (Alt-b für DE und Alt-Shift-B für EN)
-    ![Beispiel für Alt-b](readme-images/viab.png "Dateien in Buch-Reihenfolge")
-  - DE/EN Dateien in Buch-Reihenfolge in geteiltem Bildschirm
-    (Alt-Shift-S) ![Beispiel für Alt-Shift-S](readme-images/viabs.png "Dateien in Buch-Reihenfolge in geteiltem Bildschirm")
-  - Abgleich der SUMMARY.md in den (beiden) Sprachen (Alt-s)
-    ![Beispiel für Alt-s](readme-images/vids.png "Abgleich der verschiedenen SUMMARY.md")
-  - Interaktives Grep-Tool (Alt-g)
-    ![Beispiel für Alt-g](readme-images/vigf.png "Interaktives Grep-Tool")
-  - Auswahl der Meta-Dateien (Doku und Verwaltung) (Alt-m)
-    ![Beispiel für Alt-m](readme-images/vimf.png "Auswahl der Meta Dateien")
-
-Einige dieser Tools haben zusätzlich eigene Aliases:
-
-  - Alt-b/Alt-Shift-B: `viab [De/en]` "vi files as book"
-  - Alt-Shift-S: `viabs` "vi as book side by side"
-  - Alt-g: `vigf` "vi grepped files"
-  - Alt-m: `vimf` "vi meta files"
-
-
-Die aktuelle Liste der eingebauten Tools wird auch beim `source .cdprc` angezeigt:
+Die aktuelle Liste der eingebauten Tools wird beim `source .cdprc` angezeigt:
 
 ```
 *******************************************************************************
@@ -278,8 +246,60 @@ Ctrl-t, Ctrl-e ("translate to english"). Please read EDIT.md for more details.
 *******************************************************************************
 ```
 
-`.cdprc` ist Teil des Tools [cdp - "cd project"](https://github.com/rpi-simonz/cdp) von *rpi-simonz*,
-kann aber auch wie beschrieben eigenständig verwendet werden.
+
+Der zentrale Einstig ist der Alias `vibs` ("vi by status")
+zur Auswahl von Datei(en) mit einem gewünschten Status.
+
+Einige der in `vibs` eingebauten Tools haben zusätzlich eigene Aliase:
+
+  - Alt-b/Alt-Shift-B: `viab [de/en]` "vi files as book"
+  - Alt-Shift-S: `viabs` "vi as book side by side"
+  - Alt-g: `vigf` "vi grepped files"
+  - Alt-m: `vimf` "vi meta files"
+
+Hier der Hauptbildschirm von `vibs`:
+
+  ![Beispiel für vibs](readme-images/vibs.png "Auswahl nach Status")
+
+Die hier eingebauten Tools können per Tastenkombination aufgerufen werden.
+Das sind aktuell:
+
+### Erzeugen einer neuen Datei bzw. Datei-Paares (DE/EN) [Alt-n]
+
+... und Editieren in geteiltem Bildschirm
+
+![Beispiel für Alt-n (1)](readme-images/alt-n--1.png "Erzeugung einer neuen Datei DE/EN")
+![Beispiel für Alt-n (2)](readme-images/alt-n--2.png "Editieren der neuen Dateien DE/EN")
+
+### Auswahl noch zu übersetzender/schon übersetzter Dateien [Alt-r/Alt-t]
+
+![Beispiel für Alt-r/Alt-t](readme-images/vitar.png "Auswahl von Übersetzungen")
+![Beispiel für den Splitscreen bei Alt-r/Alt-t](readme-images/vitar-split.png "Splitscreen mit EN/DE")
+
+### Auflistung aller Dateien in Buch-Reihenfolge (DE: [Alt-b], EN: [Alt-Shift-B])
+
+(wie in SUMMARY.md definiert)
+
+![Beispiel für Alt-b](readme-images/viab.png "Dateien in Buch-Reihenfolge")
+
+### DE/EN Dateien in Buch-Reihenfolge in geteiltem Bildschirm [Alt-Shift-S]
+
+![Beispiel für Alt-Shift-S](readme-images/viabs.png "Dateien in Buch-Reihenfolge in geteiltem Bildschirm")
+
+### Abgleich der SUMMARY.md in den beiden Sprachen [Alt-s]
+
+![Beispiel für Alt-s](readme-images/vids.png "Abgleich der verschiedenen SUMMARY.md")
+
+### Interaktives Grep-Tool [Alt-g]
+
+![Beispiel für Alt-g](readme-images/vigf.png "Interaktives Grep-Tool")
+
+### Auswahl der Meta-Dateien (Doku und Verwaltung) [Alt-m]
+
+![Beispiel für Alt-m](readme-images/vimf.png "Auswahl der Meta Dateien")
+
+
+## Weitere Tools
 
 Des weiteren befinden sich im `bin/` Verzeichnis
 
