@@ -28,7 +28,8 @@ Beispiel:
     │   │   ├── SUMMARY.md
     │   │   └── ...
 
-Die eigentlichen Inhalte sind Textdateien (im *Markdown*-Format), die sich mit jedem Texteditor bearbeiten lassen.
+Die eigentlichen Inhalte sind Textdateien (im *Markdown*-Format),
+die sich mit jedem Texteditor bearbeiten lassen.
 
 Hilfreich ist ein Editor, der bei der Darstellung unterstützt ("Syntax Highlighting").
 
@@ -42,7 +43,8 @@ Eine kurze Einführung zum verwendeten Generierungstool *mdbook* gibt es [hier](
 Dies ist der wichtigste Teil der Dokumentation.
 
 In der Datei `SUMMARY.md` wird die Struktur des zu erzeugenden Buches erfasst.
-Und zwar durch einen "Baum" von (Markdown-)Links mit Kapitelnamen und den dazugehörigen Dateien im Filesystem (`*.md`).
+Und zwar durch einen "Baum" von (Markdown-)Links mit Kapitelnamen und den
+dazugehörigen Dateien im Filesystem (`*.md`).
 
 Das bildet das Inhaltsverzeichnis!
 
@@ -58,15 +60,17 @@ Beispiel:
     - [Backup](backup.md)
     - [Restore]()
 
-Wenn die Links dort schon Dateinamen enthalten, werden diese Dateien automatisch angelegt
-und sie sind im Inhaltsverzeichnis anklickbar.
+Wenn die Links dort schon Dateinamen enthalten, werden diese Dateien
+automatisch angelegt und sie sind im Inhaltsverzeichnis anklickbar.
 
-Bei leeren Links (wie oben z.B. bei `[Updates]()`) wird nur ein nicht anklickbarer Eintrag erzeugt.
+Bei leeren Links (wie oben z.B. bei `[Updates]()`) wird zunächst nur ein nicht
+anklickbarer Eintrag erzeugt.
 
 Die Struktur wird also in beiden Fällen im Dokument schon gut sichtbar.
 
-Die `SUMMARY.md` wird insbesondere auch zum Synchronisieren der verschiedenen Sprachversionen genutzt.
-Deshalb sind die Dateinamen in Englisch und bei beiden Sprachen identisch!
+Die `SUMMARY.md` wird insbesondere auch zum Synchronisieren der verschiedenen
+Sprachversionen genutzt. Deshalb sind die Dateinamen in englischer Sprache
+und bei beiden Sprachversionen identisch!
 
 
 ## Die einzelnen Dateien/Kapitel
@@ -91,8 +95,8 @@ Wie der Name "Erweitertes Commonmark" ahnen lässt, bietet es zusätzliche Featu
 
 Ein relativ spezielles Feature sind [Link-Referenzen](https://spec.commonmark.org/0.31.2/#link-reference-definitions).
 
-Dieses Feature wird hier explizit erwähnt, weil es im Projekt für weiterreichende Aufgaben eingesetzt wird,
-wie es im nächsten Kapitel beschrieben wird.
+Dieses Feature wird hier explizit erwähnt, weil es im Projekt für weiterreichende
+Aufgaben eingesetzt wird, wie es im nächsten Kapitel beschrieben wird.
 
 Link-Referenzen werden zur leichteren Verlinkung (z.B. bei Mehrfachnennung) eingesetzt:
 
@@ -102,7 +106,7 @@ Bla, blubb ...
 Und nicht vergessen: siehe [hier](ein_langer_pfad_und_dateiname_zum_hinweis23.md "Wichtigster Hinweis! Bitte beachten")
 ```
 
-kann damit übersichtlicher werden zu (Achtung, andere Klammerung beachten!):
+kann damit übersichtlicher werden zu (Achtung, geänderte Klammerung beachten!):
 
 ```
 Siehe in [hier][hinweis23]
@@ -122,19 +126,22 @@ mit optionalem Link-Titel: `[name]: Linkadresse "Link Title"`.
 
 ### Spezielle hier in diesem Projekt genutzte Markdown-Features
 
-Um die Arbeit an den Inhalten der Dateien und auch an den Übersetzungen besser organisieren zu können,
-gibt es in diesem Projekt in vielen Markdown-Dateien ergänzende "Tags", Markierungen, Kommentare.
+Um die Arbeit an den Inhalten der Dateien und auch an den Übersetzungen besser
+organisieren zu können, gibt es in diesem Projekt in vielen Markdown-Dateien
+ergänzende "Tags", Markierungen, Kommentare.
 
-Da *Markdown* aber nativ keine Kommentare unterstützt, werden oben beschiebene *Commonmarks Link References* "zweckentfremdet".
-Allerdings muss die Syntax auch in diesem Fall eingehalten werden: `[name]: Linkadresse "Link Title"`.
+Da *Markdown* aber nativ keine Kommentare unterstützt, werden oben beschiebene
+*Commonmarks Link References* "zweckentfremdet".
+Allerdings muss die Syntax auch in diesem Fall eingehalten werden:
+`[name]: Linkadresse "Link Title"`.
 
 Um diese Spezial-Nutzung, also die gewünschte Unsichtbarkeit für den normalen Nutzer,
-deutlich zu machen, beginnen die Namen mit einem Punkt `.`.
+deutlich zu machen, beginnen die Namen hier mit einem Punkt `.`.
 
 Bei einheitlicher Benennung lassen sich damit auch `grep` oder andere Tools
 (vimgrep,...) einsetzen, um die Dokumentenmenge im Griff zu haben.
 
-Der optionale Linktitel (in `""`!) lässt sich für etwas längeren (also mehrwortigen) Text nutzen.
+Der optionale Linktitel (in `""`!) lässt sich für etwas längeren Text nutzen.
 
 
 Hier einige Beispiele für diese Tags/"Kommentare":
@@ -167,29 +174,39 @@ Hier einige Beispiele für diese Tags/"Kommentare":
 [.workaround]: _ "Probleme beim Syntax-Highlighting in vim-markdown bei non-balanced-underlines"
 ```
 
-## Tools zur weiteren Unterstützung der Autoren
+## Hilfsmittel zur weiteren Unterstützung der Autoren
 
-Einige davon befinden sich in der Datei `.cdprc`,
+Zur Unterstützung bei der Arbeit mit den (eventuell vielen) Dateien
+stehen diverse Tools zur Verfügung. Diese Tools sind zur Nutzung im
+Terminal/in der Shell eines Linux-Systems ausgelegt (CLI/TUI).
+
+Als Editor wird *vim* ("vi improved") verwendet.
+
+Die meisten Tools sind in der Bash-Script-Datei `.cdprc` implementiert,
 die zur Nutzung nur ge-source-d werden muss:
 
 ```
 source .cdprc`
 ```
 
-Der zentrale Einstig ist dann der Alias `vibs` ("vi by status")
-zur Auswahl von Datei(en) mit einem gewünschten Status
+Der zentrale Einstig ist der Alias `vibs` ("vi by status")
+zur Auswahl von Datei(en) mit einem gewünschten Status:
 
   ![Beispiel für vibs](readme-images/vibs.png "Auswahl nach Status")
 
-Darin sind weitere Tools eingebaut, die per Tastenkombination aufgerufen werden können,
-aktuell:
+Darin sind weitere Tools eingebaut, die per Tastenkombination aufgerufen
+werden können, aktuell:
 
+  - Erzeugen einer neuen Datei bzw. Datei-Paares (DE/EN) und
+    Editieren in geteiltem Bildschirm
   - Auswahl noch zu übersetzender/schon übersetzter Dateien (Alt-r/Alt-t)
     ![Beispiel für Alt-r/Alt-t](readme-images/vitar.png "Auswahl von Übersetzungen")
     ![Beispiel für den Splitscreen bei Alt-r/Alt-t](readme-images/vitar-split.png "Splitscreen mit EN/DE")
   - Auflistung aller Dateien in Buch-Reihenfolge,
     wie in SUMMARY.md definiert (Alt-b für DE und Alt-Shift-B für EN)
     ![Beispiel für Alt-b](readme-images/viab.png "Dateien in Buch-Reihenfolge")
+  - DE/EN Dateien in Buch-Reihenfolge in geteiltem Bildschirm
+    (Alt-Shift-S) ![Beispiel für Alt-Shift-S](readme-images/viabs.png "Dateien in Buch-Reihenfolge in geteiltem Bildschirm")
   - Abgleich der SUMMARY.md in den (beiden) Sprachen (Alt-s)
     ![Beispiel für Alt-s](readme-images/vids.png "Abgleich der verschiedenen SUMMARY.md")
   - Interaktives Grep-Tool (Alt-g)
@@ -197,10 +214,10 @@ aktuell:
   - Auswahl der Meta-Dateien (Doku und Verwaltung) (Alt-m)
     ![Beispiel für Alt-m](readme-images/vimf.png "Auswahl der Meta Dateien")
 
-Einige dieser Tools haben eigene Aliases:
+Einige dieser Tools haben zusätzlich eigene Aliases:
 
-  - Alt-b/Alt-shift-B: `viab [De/en]` "vi files as book"
-  - Alt-shift-S: `viabs` "vi as book side by side"
+  - Alt-b/Alt-Shift-B: `viab [De/en]` "vi files as book"
+  - Alt-Shift-S: `viabs` "vi as book side by side"
   - Alt-g: `vigf` "vi grepped files"
   - Alt-m: `vimf` "vi meta files"
 
@@ -217,7 +234,15 @@ the main one is 'vibs' ("vi by status").
 
 It starts a TUI for selecting Markdown files by their status for editing.
 
+After selecting a status and pressing 'Enter' or 'Cursor right' a list of
+corresponding files is shown.
+Selecting a file and pressing 'Enter'/'Cursor right' opens that file for editing.
+Pressing 'Alt-t' does almost the same, but opens both language versions
+of that file in a splitscreen to support translating/proof reading.
+
 Within the main screen of the TUI there are additional hotkeys active:
+
+  * Alt-n for creating a new (pair of) files and open them for edit/translate.
 
   * Alt-r / Alt-t for more selection screens, meant for supporting translation.
     They list files with status "(r)eady for translation" / "(t)ranslated" and
@@ -225,13 +250,11 @@ Within the main screen of the TUI there are additional hotkeys active:
 
   * Alt-b for a selection of all German Markdown files ordered as in the
     corresponding SUMMARY.md file - like the produced (b)ook.
-    Alt-shift-B the same for the English version.
+    Alt-Shift-B the same for the English version.
     This one has its own alias 'viab [DE|en]' ("vi as book").
 
-    And additionally Alt-shift-S or alias 'viabs' for editing both DE/EN files
+    And additionally Alt-Shift-S or alias 'viabs' for editing both DE/EN files
     in a splitscreen ("vi as book side by side").
-
-  * Alt-n for creating a new (pair of) files and open them for edit/translate.
 
   * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
 
@@ -239,55 +262,66 @@ Within the main screen of the TUI there are additional hotkeys active:
     This one has its own alias 'vigf' ("vi grepped files").
     Alt-Shift-G is the same with current status as preselected query.
 
+
 The above functions handle Markdown source files for the documentation itself.
 Administration files like README, Makefile and book.toml can be selected too:
 
   * Alt-m for editing the (M)eta files.
     This one has its own alias 'vimf' ("vi meta files").
 
+Complementing all these functions there might be (there are!) tools in the used
+editor as well, *vim* in this case.
+For example there is a translation helper DE..EN using *DeepL*:
+Ctrl-t, Ctrl-e ("translate to english"). Please read EDIT.md for more details.
 *******************************************************************************
 ```
 
 `.cdprc` ist Teil des Tools [cdp - "cd project"](https://github.com/rpi-simonz/cdp) von *rpi-simonz*,
 kann aber auch wie beschrieben eigenständig verwendet werden.
 
-Des weiteren im `bin/` Verzeichnis
+Des weiteren befinden sich im `bin/` Verzeichnis
 
   - `check_files.sh`   # prüft auf Konsistenz zwischen deutschen und englischen Dateien und den SUMMARY.md's.
   - `deepl-usage.sh`   # siehe unten
+  - `mdlinkcheck.py`
 
-Und das Makefile, siehe [MAINTAIN.md](MAINTAIN.md).
 
-Außerdem gibt es noch das extra zu installierende [mdlinkcheck.py](https://github.com/rpi-simonz/mdlinkcheck)
-zum Überprüfen der projekt-internen Links in den Markdown-Dateien.
+Obiges `mdlinkcheck.py` ist (auch) als eigenständiges Projekt online [mdlinkcheck.py](https://github.com/rpi-simonz/mdlinkcheck).
+Es wird zum Überprüfen der projekt-internen Links in den Markdown-Dateien verwendet.
+
+Und zwar über das `Makefile`, siehe [MAINTAIN.md](MAINTAIN.md).
 
 
 ## Tools zur Übersetzung
 
-Neben den in `vibs` enthaltenen Tools für den Zugriff auf zu übersetzende/schon übersetzte Dateien (s.o.)
-ist die Benutzung von [DeepL](https://www.deepl.com) per Plugin für `vim` möglich.
+Neben den in `vibs` enthaltenen Tools für den Zugriff auf zu übersetzende/schon
+übersetzte Dateien (s.o.) ist die Benutzung von [DeepL](https://www.deepl.com) per Plugin für `vim` möglich.
 
 Hier vorab eine kurze Zusammenfassung:
 
-*DeepL* bietet eine [API](https://www.deepl.com/de/pro-api) an, die mit einer Begrenzung auf 500.00 Zeichen pro Monat gratis verwendet werden kann.
+*DeepL* bietet eine [API](https://www.deepl.com/de/pro-api) an, die - mit einer Begrenzung auf 500.00 Zeichen pro Monat -
+gratis verwendet werden kann.
 
-Es ist allerdings eine Registrierung, inkl. Name, Adresse und Kreditkartendaten erforderlich,
-um Missbrauch zu unterbinden...
+Es ist allerdings eine Registrierung, inkl. Name, Adresse und Kreditkartendaten
+erforderlich, um Missbrauch zu unterbinden...
 
-Nach Registrierung erhält man einen API-Key, der bei den jeweiligen Aufrufen angegeben werden muss.
+Nach Registrierung erhält man einen API-Key, der bei den jeweiligen Aufrufen
+angegeben werden muss.
 
-Zum Beispiel lässt sich die API mit `curl` und diversen Programmiersprachen, z.B. per [Python](https://github.com/DeepLcom/deepl-python) nutzen.
+Zum Beispiel lässt sich die API mit `curl` und diversen Programmiersprachen,
+z.B. per [Python](https://github.com/DeepLcom/deepl-python) nutzen.
 
 Für die Integration per Plugin in `vim` habe ich [deepl.vim von ryicoh](https://github.com/ryicoh/deepl.vim) gewählt.
 
-Dieses Plugin lässt sich installieren z.B. mittels [junegunn's vim-plug](https://github.com/junegunn/vim-plug) per Eintrag in die `.vimrc`
+Dieses Plugin lässt sich installieren z.B. mittels [junegunn's vim-plug](https://github.com/junegunn/vim-plug)
+per Eintrag in die `.vimrc`:
 
 ```
 Plug 'ryicoh/deepl.vim'
 ```
 
-Leider hat das Plugin einen Bug, der unter bestimmten Umständen zu zusätzlichen Leerzeilen führt.
-Deshalb habe ich es geforked und korrigiert.
+Leider hat das Plugin einen Bug, der unter bestimmten Umständen zu
+zusätzlichen Leerzeilen führt. Deshalb habe ich es geforked und korrigiert.
 
 Bitte also alternativ in `.vimrc` eintragen:
 
@@ -311,26 +345,26 @@ let g:deepl#auth_key = readfile(expand('~/.config/deepl.auth_key'))[0]
 vmap <C-t><C-e> <Cmd>call deepl#v("EN")<CR>
 ```
 
-Der Arbeitsablauf könnte dann sein:
+Der Arbeitsablauf könnte dann folgendermaßen sein:
 
  1. `vibs`
- 2. `Alt-R` - Aufruf der noch zu übersetzenden Dateien
+ 2. `Alt-r` - Aufruf der noch zu übersetzenden Dateien
  3. Datei auswählen ==> *vim* mit Split-Window englisch/deutsch
  4. Kopieren des deutschen Textes in die englische Datei unter Berücksichtigung der `[.status]:` etc.
- 5. In der englischen (aber noch deutschsprachigen) Datei:
+ 5. In der englischen (aber gerade noch deutschsprachigen) Datei:
      1. schrittweise (z.B. per Absatz) den Text markieren
-     2. die passende PlugIn-Hotkey-Folge (Default: t, ctrl-e) zum Übersetzen
-        Bzw. jetzt ctrl-t, ctrl-e. Ist leichter schnell hintereinander zu tippen. (s.o.)
+     2. die passende PlugIn-Hotkey-Folge zum Übersetzen nach Englisch tippen: ctrl-t, ctrl-e.
+        (Hinweis: Das ist leichter schnell hintereinander zu tippen als der Default: t, ctrl-e.)
      3. nacharbeiten
  6. In der deutschen Datei `[.status]: rft` auf "translated" ändern
     Speichern und Schließen mit `:xa`   ;-)
     Weiter bei 3.
 
-Wenn `vim` innerhalb von `vibs` über die oben beschriebenen Übersetzungs-Funktionen `Alt-r` und `Alt-t` aufgerufen wird,
-wird aktuell folgendes Layout verwendet:
+Wenn `vim` innerhalb von `vibs` über die oben beschriebenen Übersetzungs-Funktionen
+`Alt-r` und `Alt-t` aufgerufen wird, wird aktuell folgendes Layout verwendet:
 
  1. In Tab 1 ist die zu englische Datei für sich alleine
- 2. In Tab 2 links englisch und rechts zum Vergleich die deutsche Version
+ 2. In Tab 2 links die englisch und rechts zum Vergleich die deutsche Datei
  3. In Tab 3 links die englische SUMMARY.md und rechts die deutsche SUMMARY.md
 
 Das Umschalten zwischen den TABs ist in `vim` ja auf vielfältige Weise möglich.

@@ -457,7 +457,15 @@ the main one is 'vibs' ("vi by status").
 
 It starts a TUI for selecting Markdown files by their status for editing.
 
+After selecting a status and pressing 'Enter' or 'Cursor right' a list of
+corresponding files is shown.
+Selecting a file and pressing 'Enter'/'Cursor right' opens that file for editing.
+Pressing 'Alt-t' does almost the same, but opens both language versions
+of that file in a splitscreen to support translating/proof reading.
+
 Within the main screen of the TUI there are additional hotkeys active:
+
+  * Alt-n for creating a new (pair of) files and open them for edit/translate.
 
   * Alt-r / Alt-t for more selection screens, meant for supporting translation.
     They list files with status "(r)eady for translation" / "(t)ranslated" and
@@ -465,19 +473,18 @@ Within the main screen of the TUI there are additional hotkeys active:
 
   * Alt-b for a selection of all German Markdown files ordered as in the
     corresponding SUMMARY.md file - like the produced (b)ook.
-    Alt-shift-B the same for the English version.
+    Alt-Shift-B the same for the English version.
     This one has its own alias 'viab [DE|en]' ("vi as book").
 
-    And additionally Alt-shift-S or alias 'viabs' for editing both DE/EN files
+    And additionally Alt-Shift-S or alias 'viabs' for editing both DE/EN files
     in a splitscreen ("vi as book side by side").
-
-  * Alt-n for creating a new (pair of) files and open them for edit/translate.
 
   * Alt-s for calling 'vimdiff' with the (S)UMMARY.md files of both languages.
 
   * Alt-g for calling an interactive (g)rep-Tool using ripgrep, fzf and vim.
     This one has its own alias 'vigf' ("vi grepped files").
     Alt-Shift-G is the same with current status as preselected query.
+
 
 The above functions handle Markdown source files for the documentation itself.
 Administration files like README, Makefile and book.toml can be selected too:
