@@ -85,7 +85,7 @@ fi
 export RG RG_IGN
 
 unset FZF FZF_MULTI
-export FZF="fzf --reverse --exact --no-sort --bind=left:abort,right:accept"
+export FZF="fzf --reverse --exact --no-sort --track --bind=left:abort,right:accept"
 export FZF_MULTI="${FZF} --multi --bind alt-a:select-all,alt-d:deselect-all"
 
 
