@@ -1,6 +1,7 @@
 # Arbeiten an/in/mit den Inhalten der Dokumentation
 
-Normalerweise befinden sich bei *mdbook* alle Inhalte in einem direkten Unterverzeichnis `src/`.
+Bei dem für die Dokumentation verwendeten Generieungstool *mdbook* befinden sich
+normalerweise alle Inhalte in einem direkten Unterverzeichnis `src/`.
 
 Da die Dokumentation von *raspiBackup* aber mehrsprachig aufgebaut ist,
 befinden sich die Inhalte hier im Projekt sprachabhängig in den Unterverzeichnissen
@@ -8,10 +9,11 @@ befinden sich die Inhalte hier im Projekt sprachabhängig in den Unterverzeichni
     de/src/
     en/src/
 
-In den (jeweiligen!) Verzeichnissen `src/` können bei Bedarf auch Bilder, Icons etc. untergebracht werden,
-sinnvollerweise in passend benannten Unterverzeichnissen. Das heisst: Für jede Sprache extra.
-Diese eventuelle mehrfache Speicherung von gleichen Dateien beruht auf der zugrundeliegenden Technik
-und lässt sich zur Zeit nicht vermeiden.
+In den (jeweiligen!) Verzeichnissen `src/` können bei Bedarf auch Bilder, Icons
+etc. untergebracht werden, sinnvollerweise in passend benannten Unterverzeichnissen.
+Das heisst: Für jede Sprache extra.
+Diese eventuelle mehrfache Speicherung von gleichen Dateien beruht auf der
+zugrunde liegenden Technik und lässt sich zur Zeit nicht vermeiden.
 
 Beispiel:
 
@@ -31,7 +33,7 @@ Beispiel:
 Die eigentlichen Inhalte sind Textdateien (im *Markdown*-Format),
 die sich mit jedem Texteditor bearbeiten lassen.
 
-Hilfreich ist ein Editor, der bei der Darstellung unterstützt ("Syntax Highlighting").
+Hilfreich ist ein Editor, der "Syntax Highlighting" für *Markdown* unterstützt.
 
 Eine kurze Einführung zum verwendeten Generierungstool *mdbook* gibt es [hier](MDBOOK_INTRO.md).
 
