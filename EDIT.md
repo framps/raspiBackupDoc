@@ -1,8 +1,8 @@
 # Arbeiten an/in/mit den Inhalten der Dokumentation
 
-Alle Inhalte befinden sich standardmäßig in einem direkten Unterverzeichnis `src/`.
+Normalerweise befinden sich bei *mdbook* alle Inhalte in einem direkten Unterverzeichnis `src/`.
 
-Da die Dokumentation von *raspiBackup* mehrsprachig aufgebaut ist,
+Da die Dokumentation von *raspiBackup* aber mehrsprachig aufgebaut ist,
 befinden sich die Inhalte hier im Projekt sprachabhängig in den Unterverzeichnissen
 
     de/src/
