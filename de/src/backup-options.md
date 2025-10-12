@@ -380,11 +380,17 @@ zu ignorieren.
 
 **Achtung**:
 Die Parameter müssen der jeweiligen Syntax des Backuptools
-gehorchen und führen sonst zum Abbruch des Backups. Für rsync oder tar könnte
-die Liste wie folgt aussehen:
+gehorchen und führen sonst zum Abbruch des Backups oder es werden nicht die 
+gewünschten Dateien und Verzeichnisse excluded.
 
+Beispiel für rsync:
 ```
-"--exclude=/backup/* --exclude=/rsnapshot/* --exclude=/www-data*/* --exclude=/home/pi/.local/share/Trash"
+"--exclude=/backup/* --exclude=/rsnapshot/* --exclude=/home/pi/.local/share/Trash"
+```
+
+Beispiel für tar:
+```
+"--exclude=/backup --exclude=/rsnapshot --exclude=/home/pi/.local/share/Trash"
 ```
 
 Die Anführungszeichen sind wichtig! Weitere Informationen zu der Syntax finden
