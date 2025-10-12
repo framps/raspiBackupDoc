@@ -452,6 +452,19 @@ check_ssh_id() {
     ssh-add -T "$IDFILE"
 }
 
+cat <<-EOFNOTE
+	**********************************************************
+	Note: Added the project-local directory 'bin/' to PATH!
+	      It is recommended to close this shell
+	      when finished with project work.
+	**********************************************************
+
+EOFNOTE
+
+if [[ ! $PATH =~ ^./bin: ]] ; then
+    export PATH=./bin:$PATH
+fi
+
 if [[ -f .private-conf.sh ]] ; then
     echo "*** Check/unlock SSH keys (and set possibly more private settings):"
     echo ""
@@ -462,8 +475,6 @@ if [[ -f .private-conf.sh ]] ; then
     #export WEBSERVER_ROOTDIR="httpdocs"
     source .private-conf.sh
 fi
-
-[[ $PATH =~ ^./bin: ]] || export PATH=./bin:$PATH
 
 cat <<EOFCDPRC
 
