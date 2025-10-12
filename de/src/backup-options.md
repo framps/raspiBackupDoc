@@ -399,20 +399,12 @@ sich auf der man Page der jeweiligen Backuptools.
 Folgende Verzeichnisse werden niemals gesichert:
 
 - Der Backupfad, der im Aufruf angegeben wurde
-- /proc/*
-- /lost+found/*
-- /sys/*
-- /dev/*
-- /tmp/*
-- /boot/*
-- /run/*
-- /proc/*
-- /lost+found/*
-- /sys/*
-- /dev/*
-- /tmp/*
-- /boot/*
-- /run/*
+- /proc
+- /lost+found
+- /sys
+- /dev
+- /tmp
+- /run
 
 Außerdem werden alle gemounteten Verzeichnisse von externen Geräten, die nicht
 auf / gemounted sind, nicht gesichert. Es wird nur die Boot Partition
@@ -429,7 +421,7 @@ Wenn die Option -P benutzt wird, werden in allen Partitionsbackups die o.g. Verz
 
 **tar**:
 
-- verzeichnis/* - Excluded Verzeichnis auf allen Partitionen
+- verzeichnis - Excluded Verzeichnis auf allen Partitionen
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
