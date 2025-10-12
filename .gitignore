@@ -6,9 +6,11 @@ book
 # ... possibly generated/"printed" PDF files
 **/*.pdf
 
-# ... my (rpi-simonz) local/private file with ssh-handling data etc.
+# ... optional local+private file with ssh-handling data etc.
 .private-conf.sh
 
-# ... vim editor files
+# ... temporary vim editor files
+# listed here (and not in local+personal config file .git/info/exclude)
+# because vim is an integral tool in this project in the meantime
 Session.vim
 **/*.swp
