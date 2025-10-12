@@ -376,11 +376,16 @@ Extension of the exclude list during backup to ignore certain directories during
 
 **Attention**:
 The parameters must obey the respective syntax of the backup tool
-otherwise the backup will be aborted. For rsync or tar the list could
-look like this:
+otherwise the backup will be aborted or the directories or files are not excluded. 
 
+Exmaple for rsync:
 ```
 "--exclude=/backup/* --exclude=/rsnapshot/* --exclude=/www-data*/* --exclude=/home/pi/.local/share/Trash"
+```
+
+Exmaple for tar:
+```
+"--exclude=/backup --exclude=/rsnapshot --exclude=/home/pi/.local/share/Trash"
 ```
 
 The quotation marks are important! Further information on the syntax can be found
