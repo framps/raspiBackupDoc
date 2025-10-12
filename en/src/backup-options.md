@@ -394,20 +394,12 @@ can be found on the man page of the respective backup tools.
 The following directories are never backed up:
 
 - The backup path that was specified in the call
-- /proc/*
-- /lost found/*
-- /sys/*
-- /dev/*
-- /tmp/*
-- /boot/*
-- /run/*
-- /proc/*
-- /lost found/*
-- /sys/*
-- /dev/*
-- /tmp/*
-- /boot/*
-- /run/*
+- /proc
+- /lost found
+- /sys
+- /dev
+- /tmp
+- /run
 
 In addition, all mounted directories from external devices that are not
 mounted on / are not backed up. Only the boot partition
@@ -424,7 +416,7 @@ If the -P option is used, the above-mentioned directories are excluded from all 
 
 **tar**:
 
-- directory/* - Excluded directory on all partitions
+- directory - Excluded directory on all partitions
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|
