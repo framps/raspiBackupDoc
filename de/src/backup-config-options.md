@@ -1,6 +1,6 @@
 # Backup Konfigurationsoptionen
 
-Die folgenden Optionen müssen in einer [Konfigurationsdatei](invocation-options.md#config-file) definiert werden.
+Die folgenden Optionen müssen in einer [Konfigurationsdatei](invocation-options.md#configFiles) definiert werden.
 Die meisten Aufrufoptionen können dort auch konfiguriert werden. Siehe dazu [Backup-Optionen](backup-options.md).
 
 <div class="table-wrapper-for-options">
