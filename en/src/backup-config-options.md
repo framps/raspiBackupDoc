@@ -1,8 +1,7 @@
 # Backup configuration options
 
-Most of the invocation options can also be defined in the configuration file
-`/usr/local/etc/raspiBackup.conf`.
-See [Backup options](backup-options.md).
+The following options must be defined in a [configuration file](invocation-options.md#config-file).
+Most invocation options can be configured there also. See [Backup options](backup-options.md) for more information.
 
 <div class="table-wrapper-for-options">
 
