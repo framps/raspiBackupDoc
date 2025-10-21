@@ -1,6 +1,7 @@
 # Backup Konfigurationsoptionen
 
 Die meisten Aufrufoptionen können auch in der Konfigurationsdatei
+`/usr/local/etc/raspiBackup.conf`
 definiert werden. Siehe dazu [Backup-Optionen](backup-options.md).
 
 <div class="table-wrapper-for-options">
