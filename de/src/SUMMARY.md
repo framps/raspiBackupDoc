@@ -82,6 +82,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Umziehen des Raspberry Betriebssystems von SD-Karte auf SSD, USB Platte oder USB Stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [Wie kann ich die Betaversion installieren und ausprobieren?](how-can-i-install-and-test-the-beta-version.md)
         - [Wird eine externe Rootpartition unterstützt?](external-root-partition.md)
+        - [Tipps für grosse SD Karten, HDDs und SSDs](large_devices.md)
 
 - [Aufruf und Optionen](invocation-options.md)
     - [Backup](backup.md)
