@@ -13,9 +13,9 @@ and which partitions are to be restored (`option -T`). This allows you to regula
 back up only the first two partitions on which the OS is located in a very short time.
 The other large partitions, which are used for data, can be backed up separately
 at other times when fast backups are not required. If the system does not boot,
-only the first two system partitions are restored.
+only the first two system partitions have to be restored.
 
-It is even faster if the `option -00` is used when restoring an rsync backup. Then the partitionsi
+It is even faster if the `option -00` is used when restoring an rsync backup. Then the partitions
 are not reformatted and the complete partitions are not restored,
 but only the changes that have occurred in the meantime are restored via rsync.
 In this way, you can quickly restore individual partitions to the state they had at
