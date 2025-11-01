@@ -17,13 +17,15 @@ The primary platforms (Linux, Mac or Windows) of the users are also covered ther
 [Instructions for installing, configuring and using raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) in the German Raspberry forum.
 
 
-## Use raspiBackup with installer or without?
+## Installation options
+                                                                                                                      |
+There are different ways to install *raspiBackup:
 
-There are different ways to start *raspiBackup*.
+1) Via the installer and to configure a basic configuration of raspiBackup 
+2) [Directly from the command line](installer.md) with a default configuration with option `-i`
+3) [Manually](using-raspibackup-without-installation.md) 
 
-Even an ["adhoc"-use](using-raspibackup-without-installation.md) of *raspiBackup* without any installation is possible.
-
-However, the standard installation with the installer is described here.
+The standard installation with the installer is described here.
 
 **Note**: If you want to read the source code of *raspiBackup* and/or the installer
 *raspiBackupInstallUI* before installation, you can do this via the following links:

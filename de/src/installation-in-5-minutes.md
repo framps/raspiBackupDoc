@@ -17,21 +17,21 @@ Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benut
 **Hinweis:** Von *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine weitere
 [Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/).im deutschen Raspberryforum.
 
+## Installationsmöglichkeiten
 
-## Mit Installer oder ohne?
+Es gibt verschiedene Möglichkeiten, *raspiBackup* zu installieren:
 
-Es gibt verschiedene Möglichkeiten, *raspiBackup* zu starten.
+1) Mit den Installer mit dem eine Basiskonfiguration von raspiBackup konfiguriert werden kann
+2) [Direkt von der Befehlszeile](installer.md) mit einer Standardkonfiguration mit der Option `-i`
+3) [Manuell](using-raspibackup-without-installation.md)
 
-Sogar eine ["adhoc"-Nutzung](using-raspibackup-without-installation.md) von *raspiBackup* ganz ohne Installation ist möglich.
-
-Hier wird aber nun auf die standardmäßige Installation mit dem Installer eingegangen.
+Die standardmäßige Installation mit dem Installer iwird hier beschrieben.
 
 **Hinweis**: Wer sich vor der Installation den Sourcecode von *raspiBackup* und/oder den Installer
 *raspiBackupInstallUI* ansehen möchte, kann dies über die folgende Links tun:
 
   - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
   - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
-
 
 ## Der *raspiBackup* Installer
 

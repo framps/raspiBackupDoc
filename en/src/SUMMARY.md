@@ -49,7 +49,7 @@ That allows for some tricks:
 - [Quickstart-Installation in 5 minutes](installation-in-5-minutes.md)
     - [Use without installation](using-raspibackup-without-installation.md)
 
-- [Installer invocation and options](installer.md)
+- [Installer - invocation and options](installer.md)
     - [Manual installation and configuration](manual-installation-and-configuration.md)
     - [Statistics](statistics.md)
     - [Updates](updates.md)
@@ -83,7 +83,7 @@ That allows for some tricks:
         - [Is an external root partition supported?](external-root-partition.md)
         - [Tips for large SDs, HDDs and SSDs](large_devices.md)
 
-- [Invocation and options](invocation-options.md)
+- [raspiBackup - Invocation and options](invocation-options.md)
     - [Backup](backup.md)
         - [Options](backup-options.md)
         - [Configuration](backup-config-options.md)
