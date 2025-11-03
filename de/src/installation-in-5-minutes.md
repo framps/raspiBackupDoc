@@ -25,7 +25,7 @@ Es gibt verschiedene Möglichkeiten, *raspiBackup* zu installieren:
 2) [Direkt von der Befehlszeile](installer.md) mit einer Standardkonfiguration mit der Option `-i`
 3) [Manuell](using-raspibackup-without-installation.md)
 
-Die standardmäßige Installation mit dem Installer iwird hier beschrieben.
+Die standardmäßige Installation mit dem Installer wird hier beschrieben.
 
 **Hinweis**: Wer sich vor der Installation den Sourcecode von *raspiBackup* und/oder den Installer
 *raspiBackupInstallUI* ansehen möchte, kann dies über die folgende Links tun:
