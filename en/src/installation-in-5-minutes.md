@@ -123,8 +123,8 @@ Any manual changes in the *Systemd* configuration file `/etc/systemd/system/rasp
 should be made "carefully". They could easily lead to
 that the installer can no longer change the configuration file.
 
-The installer always creates a debug log in the file
-`/root/raspiBackupInstallUI.log`, which should be provided in a git issue, if there
+The installer always creates a debug log in the current directory in file
+`raspiBackupInstallUI.log`, which should be provided if there
 are any installer issues.
 
 ## The notification by e-mail
