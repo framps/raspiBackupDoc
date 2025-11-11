@@ -124,8 +124,8 @@ Eventuelle manuelle Änderungen in der *Systemd*-Konfigurationsdatei `/etc/syste
 sollten "vorsichtig" vorgenommen werden. Sie könnten leicht dazu führen,
 dass der Installer die Konfigurationsdatei nicht mehr ändern kann.
 
-Sollte es doch einmal ein Problem geben: Vom Installer wird immer ein Debuglog in der Datei
-`/root/raspiBackupInstallUI.log` angelegt, welches bei der Suche nach der Ursache hilft.
+Sollte es doch einmal ein Problem geben: Vom Installer wird immer ein Debuglog im aktuellen Verzeichnis in der Datei
+`raspiBackupInstallUI.log` angelegt, welches bei der Suche nach der Ursache hilft.
 
 
 ## Die Benachrichtigung per eMail
