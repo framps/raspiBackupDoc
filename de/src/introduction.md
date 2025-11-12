@@ -6,6 +6,7 @@ unbeabsichtigten Änderungen, durch die das System nicht mehr oder fehlerhaft bo
 das System wieder auf einen vorherigen Zustand zurücksetzen zu können.
 
 *raspiBackup* erstellt eine Systemsicherung einer Raspberry Pi **bei laufendem System**.
+Siehe dazu auch [FAQ1]faq.md#faq1).
 Das kann manuell oder automatisch in regelmäßigen Abständen geschehen.
 Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten.
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
