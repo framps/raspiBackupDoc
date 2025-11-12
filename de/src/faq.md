@@ -28,10 +28,10 @@ Die sicherste Methode ist natürlich das System vollständig zu stoppen.
 Bei einem Backup wird nur gesichert was sich auf dem Speichermedium
 und nicht was sich noch im Hauptspeicher befindet.
 
-Ein Systemstopp ist leider nicht regelmäßig und automatisch
-vornehmbar. Wenn man alle aktiven Services wie MySQL, SMB, NFS,
-ownCloud, Webserver und alle anderen aktiven Services immer vor dem Backup
-stoppt, um keine Dateninkonsistenzen zu erzeugen, kann das Backup zum
+Ein Backup einer gestoppten Raspberry ist automatisch nur mit großem Aufwand möglich.
+Wenn man aber alle aktiven Services wie MySQL, SMB, NFS,
+ownCloud, webserver und alle anderen aktiven Services immer vor dem Backup
+stoppt um keine Dateninkonsistenzen zu erzeugen, kann das Backup zum
 Wiederherstellen der Raspi genutzt werden. Stoppt man die Services nicht,
 besteht eine hohe Wahrscheinlichkeit, dass das Backup inkonsistent wird.
 Dazu gibt es die Parameter `-a` und `-o`, um die entsprechenden Stopp- und
