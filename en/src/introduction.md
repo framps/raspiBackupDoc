@@ -6,6 +6,7 @@ unintentional change that causes the system to no longer boot or to boot incorre
 to be able to recover and reset the system to a previous state.
 
 *raspiBackup* creates a system backup of a Raspberry Pi **while the system is running**.
+See also [Is a backup of a running system reliable? Shouldn't the entire system be stopped before the backup?](faq.html#1-is-a-backup-of-a-running-system-reliable-shouldnt-the-entire-system-be-stopped-before-the-backup).
 This can be done manually or automatically at regular intervals.
 A backup always contains the entire system, i.e. system data and user data.
 The system therefore reboots immediately once it has been restored.
