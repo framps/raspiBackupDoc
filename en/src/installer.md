@@ -1,6 +1,6 @@
 # Installer - Invocation and options
 
-The download and installation of the *raspiBackup* installer is described [here](installation-in-5-minutes.md#download-commands).
+The download and installation of the *raspiBackup* installer is described [here](installation-in-5-minutes.md).
 
 ## Invocation
 
