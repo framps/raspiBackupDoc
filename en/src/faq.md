@@ -28,11 +28,11 @@ The safest method is of course to stop the system completely.
 During a backup, only what is on the storage medium is backed up
 and not what is still in the main memory.
 
-Unfortunately, it is not possible to stop the system regularly and
-automatically. If all active services such as mysql, samba, nfs,
-Owncloud, web server and all other active services are always stopped before the backup
-to avoid data inconsistencies, the backup can be used to restore the Raspi.
-be used to restore the Raspi. If the services are not stopped,
+Unfortunately, it is not possible to backup a Raspberry automatically without a lot of effort.
+But if all active services such as mysql, samba, nfs,
+owncloud, web server and all other active services are always stopped before the backup
+to avoid data inconsistencies, the backup can be used to restore the Raspberry.
+If the services are not stopped,
 there is a high probability that the backup will become inconsistent.
 For this purpose, the parameters `-a` and `-o` are used to specify the corresponding stop and
 start commands before and after the backup. See also [FAQ18](#faq18) on this.
