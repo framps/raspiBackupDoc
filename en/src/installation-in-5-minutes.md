@@ -72,25 +72,21 @@ Please note: [Why is it better not to use dd as the backup type](why-shouldn-t-y
 **Before** the first backup, it is advisable to check/ensure that the
 correct backup destination or the correct backup partition is used.
 
-The following commands are helpful here:
+The following command is helpful here:
 
 ```
-sudo blkid -o list
-mount | grep backup
+lsblk
 ```
 
-
+<a name="download-commands"></a>
 ## Download and install the installer
 
 To download, install and start the *raspiBackup* installer, execute
-in the command line on the Raspberry following commands:
+in the command line on the Raspberry following commands or, much better, just copy and
+paste the following commands into an open command window.
 
 ```
-pushd /tmp
-curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install
-sudo bash ./install
-popd
-```
+cd ~; curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install; sudo bash ./install
 
 **Note**: A manual installation without `sudo` usage is documented on
 [this page](manual-installation-and-configuration.md).
