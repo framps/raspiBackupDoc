@@ -1,5 +1,7 @@
 # Installer - Aufruf und Optionen
 
+Der Download und die Installation des Installers ist [hier](installation-in-5-minutes.md#download-commands) beschrieben.
+
 ## Aufruf
 
 ```
