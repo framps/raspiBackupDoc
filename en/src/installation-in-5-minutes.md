@@ -87,6 +87,7 @@ paste the following commands into an open command window.
 
 ```
 cd ~; curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install; sudo bash ./install
+```
 
 **Note**: A manual installation without `sudo` usage is documented on
 [this page](manual-installation-and-configuration.md).
