@@ -55,7 +55,7 @@ In the standard configuration, *raspiBackup* assumes that there is a
 mountpoint `/backup` under which the backup directory is mounted.
 
 This mountpoint should be created before the installation and then
-the external backup directory/device (USB disk, USB stick, NFS drive, ...)
+the **external** backup directory/device (USB disk, USB stick, NFS drive, ...)
 should be mounted there.
 
 In the following example, an external USB disk or USB stick is mounted:
@@ -64,6 +64,13 @@ In the following example, an external USB disk or USB stick is mounted:
 sudo mkdir -p /backup
 sudo mount /dev/sda1 /backup
 ```
+
+Another line must then be inserted in `/etc/fstab`. The PARTUUID 
+from the following example must be adapted and is displayed with `lsblk -o PARTUUID`.
+
+```
+PARTUUID=aeddf698-02    /backup     ext4    defaults,noatime,nofail,async   0  0  
+```        
 
 Depending on the desired backup type, *raspiBackup* requires a certain file system for this partition.
 This is explained in chapter "[Which file system can be used on the backup partition?](which-filesystem-can-be-used-on-the-backup-partition.md)".
