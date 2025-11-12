@@ -66,7 +66,7 @@ sudo mount /dev/sda1 /backup
 ```
 
 Another line must then be inserted in `/etc/fstab`. The PARTUUID 
-from the following example must be adapted and is PARTUUID to use is displayed with `lsblk -o PARTUUID`.
+from the following example must be adapted and the PARTUUID to use is displayed with `lsblk -o PARTUUID`.
 
 ```
 PARTUUID=aeddf698-02    /backup     ext4    defaults,noatime,nofail,async   0  0  
