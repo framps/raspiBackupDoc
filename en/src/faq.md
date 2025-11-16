@@ -711,9 +711,8 @@ use the -R option.
 ### 38) Where can I ask questions and get help with Linux questions and problems that have nothing to do with *raspiBackup*?
 
 *raspiBackup* was developed to make it as easy as possible for Linux beginners to back up their
-Raspberry as easily as possible. However, a certain amount of
-Linux knowledge is necessary. Common problems with *raspiBackup* are simple Linux problems.
-beginners are simple Linux problems. Such questions are not answered in the
+Raspberry as easy as possible. However, a certain amount of
+Linux knowledge is necessary. Common problems with *raspiBackup* are simple Linux problems. Such questions are not answered in the
 answered in the contact channels. There are forums with
 competent members who are happy to help. A recommended one is the
 [German Raspberry Pi forum](https://forum-raspberrypi.de/forum/).
