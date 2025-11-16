@@ -74,7 +74,7 @@ to the standard options of *raspiBackup*.
 
 **Use at your own risk!
 
-| Config-Option | Standard |
+| Config option | Standard |
 |----------------------------|----------|
 | DEFAULT_RSYNC_BACKUP_ADDITIONAL_OPTIONS | none |
 
@@ -94,10 +94,20 @@ This can be used to overwrite the tar default backup options.
 
 **Use at your own risk!
 
-| Config-Option | Standard |
+| Config option | Standard |
 |----------------------------|----------|
 | DEFAULT_TAR_BACKUP_OPTIONS | -cpi |
 
+### DEFAULT_RSYNC_BACKUP_OPTION_EXCLUDE_ACLS
+
+**Available starting with release 0.7.2**
+
+This option can be used to disable the backup of ACLs with rsync. 
+Useful when the backup partition is connected via nfs which doesn't support ACLs. 
+
+| Config option | Standard |
+|----------------------------|----------|
+| DEFAULT_RSYNC_BACKUP_OPTION_EXCLUDE_ACLS | 0 |
 
 ### DEFAULT_TAR_BACKUP_ADDITIONAL_OPTIONS
 

@@ -89,11 +89,26 @@ des Backups aufzunehmen!
 benutzt wurde. Im partitionsorientierten Modus (Option `-P`) kann keine externe
 Rootpartition mitgesichert werden.
 
+<a name="parm_resizeLastPartitionFS"></a>
+### --resizeLastPartitionFS: Letzte Partition anpassen
+
+**Verfügbar ab Release 7.2**
+
+Während der Wiederherstellung eines paritionsorientierten Backups
+kann die letzte Partition auf die maximal verfügbare
+Größe des Zielgerätes der externen Partition ausgedehnt werden. Wird die
+Option ausgeschaltet mit `--resizeLastParitionFS-`, wird die letzte Partition so groß
+angelegt, wie sie auf dem Originalsystem war.
+
+| Option | Standard | Im Installer | Konfigurationsname |
+|--------|----------|--------------|--------------------|
+| --resizeLastPartitionFS    |  ja          |   nein       |                    |
+
 <a name="parm_resizeRootFS"></a>
-### --resizeRootFS: Rootfilesystem anpassen
+### --resizeRootFS: Rootpartition anpassen
 
 Während der Wiederherstellung kann die Rootpartition auf die maximal verfügbare
-Größe des Zielgerätes der externen Partition ausgedehnt werden. Wird die
+Größe des Zielgerätes ausgedehnt werden. Wird die
 Option ausgeschaltet mit `--resizeRootFS-`, wird die Rootpartition so groß
 angelegt, wie sie auf dem Originalsystem war. Nutzt man die Option -P, so wird die letzte
 Partition auf dem Gerät erweitert. Liegen mehr als 2 Partitionen vor, ist es dann nicht die Rootpartition.

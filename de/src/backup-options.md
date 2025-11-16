@@ -314,6 +314,32 @@ in der Debugdatei erstellt.
 |-------------|----------|--------------|--------------------|
 | --systemstatus | aus | nein |  |
 
+<a name="parm_tarcompressiontool"></a>
+### --tarCompressionTool: Definition des zu nutzenden tar Kompressionstools
+
+**Verfügbar ab Release 0.7.2**
+
+Standard beim Kompressonieren von tar Backups ist gzip. Mit dieser Option kann ein
+anderes Kompressionsverfahren gewählt werden wie z.B. zstd.
+
+| Optionsname | Standard | Im Installer | Konfigurationsname |
+|-------------|----------|--------------|--------------------|
+| --tarCompressionTool | nein | nein | DEFAULT_TAR_COMPRESSION_TOOL |
+
+Mögliche Kompressionsverfahren sind: `bzip2`, `gzip`, `lzip`, `lzma`,  `lzop`,  `xz` und  `zstd`
+
+Mit der Option `--tarCompressionToolOptions` können noch Optionen für das Kompressionstool
+mitgegeben werden.
+
+<a name="parm_tarcompressiontooloptions"></a>
+### --tarCompressionToolOptions: Zusätzliche Optionen für das genutzte tar Kompressionstool
+
+**Verfügbar ab Release 0.7.2**
+
+| Optionsname | Standard | Im Installer | Konfigurationsname |
+|-------------|----------|--------------|--------------------|
+| --tarCompressionToolOptions | nein | nein | DEFAULT_TAR_COMPRESSION_TOOL_OPTIONS |
+
 <a name="parm_unsupportedEnvironment"></a>
 ### --unsupportedEnvironment: Nutzung auf nicht unterstützter HW und OS
 

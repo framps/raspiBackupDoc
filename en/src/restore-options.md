@@ -89,11 +89,27 @@ of the backup!
 In partition-oriented mode (option `-P`) no external root partition can be
 backed up.
 
-<a name="parm_resizeRootFS"></a>
-### --resizeRootFS: Customize root file system
+<a name="parm_resizeLastPartitionFS"></a>
+### --resizeLastPartitionFS: Letzte Partition anpassen
 
-During the restore, the root partition can be resized to the maximum available
-size of the target device of the external partition. If the
+**Available starting with release 7.2**
+
+During the restoration of a partition-oriented backup
+the last partition can be extended to the maximum available
+size of the target device. If the
+option is switched off with `--resizeLastParitionFS-`, the last partition is created as large
+as it was on the original system.
+
+| Option | Default | In Installer | Configuration name |
+|--------|----------|--------------|--------------------|
+| --resizeLastPartitionFS | yes | no | |
+
+
+<a name="parm_resizeRootFS"></a>
+### --resizeRootFS: Expand root parition 
+
+During the restore, the root partition can be expanded to the maximum available
+size of the target device. If the
 option is switched off with `--resizeRootFS-`, the root partition is created as large
 as it was on the original system. If the -P option is used, the last partition on the
 partition on the device is extended. If there are more than 2 partitions, it is not the root partition.

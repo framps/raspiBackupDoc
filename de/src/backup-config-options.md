@@ -90,6 +90,17 @@ Damit können die rsync Standard-Backupoptionen überschrieben werden.
 |----------------------------|----------|
 | DEFAULT_RSYNC_BACKUP_OPTIONS | --delete -aHAx |
 
+### DEFAULT_RSYNC_BACKUP_OPTION_EXCLUDE_ACLS
+
+**Verfügbar ab Release 0.7.2**
+
+Mit dieser Option kann das SIchern von ACLs bei rsync ausgeschaltet werden. 
+Nützlich, wenn die Backuppartition per nfs angebunden ist und keine ACLs unterstützt werden. 
+
+| Config-Option | Standard |
+|----------------------------|----------|
+| DEFAULT_RSYNC_BACKUP_OPTION_EXCLUDE_ACLS | 0 |
+
 ### DEFAULT_TAR_BACKUP_OPTIONS
 
 Damit können die tar Standard-Backupoptionen überschrieben werden.
