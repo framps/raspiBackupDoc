@@ -50,7 +50,7 @@ use the appropriate Windows tools to restore dd backups. For other
 backup types such as tar or rsync a Linux is necessary.
 
 However, you can use the Raspberry for this: You record a new SD
-card with RaspbianOS and copy *raspiBackup* to it. Then you close
+card with RaspbianOS and copy *raspiBackup* to it. Then you connect
 the device to which the backup is to be restored,
 and the medium with the backup to the Raspberry.
 Then invoke *raspiBackup* and have the desired backup written back to the
