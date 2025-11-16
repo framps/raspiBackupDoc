@@ -733,7 +733,6 @@ This is done automatically by *raspiBackup* during the upgrade. See also
 ### 41) Where can I find the debug log of raspiBackup?
 
 The debug log is called `raspiBackup.log` for backup and `raspiBackup.logr` for restore.
-restore.
 
 - If *raspiBackup* ends successfully, the log file is in the backup directory
 - If *raspiBackup* does not end successfully, the log file is in the home directory of the caller
