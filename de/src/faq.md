@@ -197,7 +197,7 @@ oder -probleme siehe [FAQ38](#faq38) und [FAQ47](#faq47).
 Es gibt verschiedene Optionen:
 
 - In [*GitHub*](https://github.com/framps/raspiBackup) können Problemberichte (Issues) erstellt werden bei Fragen oder
-  Problemen. Das ist meine präferierte Option. Dazu ist eine einmalige
+  Problemen. Das ist die präferierte Option. Dazu ist eine einmalige
   Registrierung notwendig. Diese sowie die Benutzung von *GitHub* ist kostenlos.
 
 - Im Raspberry Forum gibt es ein [Unterforum zu Backups](https://forum-raspberrypi.de/forum/board/153-backup/), wo Fragen zu
@@ -396,7 +396,7 @@ Backups nicht größer werden als 4GB.
 ### 20) Ich habe Probleme beim Sichern meiner Backups auf einer Synology. Wie kann ich die beseitigen?
 
 Es gibt diverse Benutzer von *raspiBackup* die ihre Backups per NFS auf einer
-Synology erfolgreich sichern. Es gibt eine spezielle Seite wo ich und
+Synology erfolgreich sichern. Es gibt eine spezielle Seite wo
 Benutzer von *raspiBackup* beschrieben haben, was sie an der Synology
 konfiguriert haben, damit alles funktioniert.
 
