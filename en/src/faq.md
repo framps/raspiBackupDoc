@@ -30,7 +30,7 @@ and not what is still in the main memory.
 
 Unfortunately, it is not possible to backup a Raspberry automatically without a lot of effort.
 But if all active services such as mysql, samba, nfs,
-owncloud, web server and all other active services are always stopped before the backup
+owncloud, web server are always stopped before the backup
 to avoid data inconsistencies, the backup can be used to restore the Raspberry.
 If the services are not stopped,
 there is a high probability that the backup will become inconsistent.
