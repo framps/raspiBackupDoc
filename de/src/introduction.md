@@ -6,7 +6,7 @@ unbeabsichtigten Änderungen, durch die das System nicht mehr oder fehlerhaft bo
 das System wieder auf einen vorherigen Zustand zurücksetzen zu können.
 
 *raspiBackup* erstellt eine Systemsicherung einer Raspberry Pi **bei laufendem System**.
-Siehe dazu [Ist ein Backup eines laufenden Systems zuverlässig und sollte nicht das gesamte System vor dem Backup gestoppt werden ?](faq.md#1-ist-ein-backup-eines-laufenden-systems-zuverl%C3%A4ssig-sollte-nicht-das-gesamte-system-vor-dem-backup-gestoppt-werden)
+Siehe dazu [Ist ein Backup eines laufenden Systems zuverlässig und sollte nicht das gesamte System vor dem Backup gestoppt werden ?](faq.md#faq1)
 Das kann manuell oder automatisch in regelmäßigen Abständen geschehen.
 Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten.
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
