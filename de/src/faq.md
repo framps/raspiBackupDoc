@@ -740,7 +740,7 @@ Restore.
 
 - Wenn *raspiBackup* erfolgreich endet, steht das Logfile im Backupverzeichnis
 - Wenn *raspiBackup* nicht erfolgreich endet, steht das Logfile im Heimverzeichnis des Aufrufers
-    - Wenn *raspiBackup* über die Konsole gestartet wurde, steht das Logfile im aktuellen Verzeichnis aus dem `raspiBackup` aufgerufen wurde. Das ist üblicherweise `/home/<user>` oder `/root`
+    - Wenn *raspiBackup* über die Konsole gestartet wurde, steht das Logfile üblicherweise in `/home/<user>` oder `/root`
     - Wenn *raspiBackup* über Cron oder systemd im Hintergrund gestartet wurde, steht das Logfile in `/root`
 - Wenn *raspiBackup* unerwartet endet oder mit kill gestoppt wurde, findet sich das Logfile in `/tmp`
 - Das Logfile vom Restore steht im aktuellen Verzeichnis aus dem `raspiBackup`aufgerufen wurde. Das ist üblicherweise `/home/<user>` oder `/root`.
