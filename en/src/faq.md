@@ -726,7 +726,7 @@ The debug log is called `raspiBackup.log` for backup and `raspiBackup.logr` for 
     - If *raspiBackup* was started via the console, the log file is either in `/home/<user>` or `/root`.
     - If *raspiBackup* was started via cron or systemd in the background, the log file is located in `/root`.
 - If *raspiBackup* ends unexpectedly or was stopped with kill, the log file is located in `/tmp`.
-- The log file for the restore is either in `/home/<user>` or `/root`
+- The log file for the restore is located in current directory when`raspiBackup` was invoked. This usually is `/home/<user>` or `/root`
 
 <a name="faq42"></a>
 ### 42) Where can the /boot and /root partitions be located?
