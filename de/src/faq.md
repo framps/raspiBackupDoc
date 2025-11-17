@@ -740,10 +740,10 @@ Restore.
 
 - Wenn *raspiBackup* erfolgreich endet, steht das Logfile im Backupverzeichnis
 - Wenn *raspiBackup* nicht erfolgreich endet, steht das Logfile im Heimverzeichnis des Aufrufers
-    - Wenn *raspiBackup* über die Konsole gestartet wurde, steht das Logfile entweder in `/home/<user>` oder `/root`
+    - Wenn *raspiBackup* über die Konsole gestartet wurde, steht das Logfile im aktuellen Verzeichnis aus dem `raspiBackup` aufgerufen wurde. Das ist üblicherweise `/home/<user>` oder `/root`
     - Wenn *raspiBackup* über Cron oder systemd im Hintergrund gestartet wurde, steht das Logfile in `/root`
 - Wenn *raspiBackup* unerwartet endet oder mit kill gestoppt wurde, findet sich das Logfile in `/tmp`
-- Das Logfile beim Restore steht entweder in `/home/<user>` oder `/root`
+- Das Logfile vom Restore steht im aktuellen Verzeichnis aus dem `raspiBackup`aufgerufen wurde. Das ist üblicherweise `/home/<user>` oder `/root`.
 
 <a name="faq42"></a>
 ### 42) Wo können die /boot und /root Partition liegen ?
