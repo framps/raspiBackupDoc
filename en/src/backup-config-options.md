@@ -103,7 +103,7 @@ This can be used to overwrite the tar default backup options.
 **Available starting with release 0.7.2**
 
 This option can be used to disable the backup of ACLs with rsync. 
-Useful when the backup partition is connected via nfs which doesn't support ACLs. 
+Useful when the backup partition is connected via nfs3 which doesn't support ACLs. 
 
 | Config option | Standard |
 |----------------------------|----------|

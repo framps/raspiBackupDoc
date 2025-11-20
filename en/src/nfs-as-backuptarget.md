@@ -128,7 +128,7 @@ Raspberry Pi fstab entries for NFS3 and NFS4
 # Entry for the NAS backup, mount with NFS version 3
 192.168.X.XXX:/volume1/backup /media/nas-backup nfs rw,nfsvers=3 0 0
 # Entry for the NAS backup, mount with NFS version 4
-#192.168.X.XXX:/volume1/backup /media/nas-backup nfs rw 0 0
+#192.168.X.XXX:/volume1/backup /media/nas-backup nfs4 rw 0 0
 ```
 
 Extract from `raspiBackup.conf` stored under `/usr/local/etc/`

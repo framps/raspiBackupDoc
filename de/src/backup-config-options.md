@@ -94,8 +94,8 @@ Damit können die rsync Standard-Backupoptionen überschrieben werden.
 
 **Verfügbar ab Release 0.7.2**
 
-Mit dieser Option kann das SIchern von ACLs bei rsync ausgeschaltet werden. 
-Nützlich, wenn die Backuppartition per nfs angebunden ist und keine ACLs unterstützt werden. 
+Mit dieser Option kann das SIchern von ACLs bei rsync ausgeschaltet werden.
+Nützlich, wenn die Backuppartition per nfs3 angebunden ist und keine ACLs unterstützt werden.
 
 | Config-Option | Standard |
 |----------------------------|----------|

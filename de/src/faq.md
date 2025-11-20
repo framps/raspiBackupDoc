@@ -561,13 +561,13 @@ mitgeteilt. DougieLawson hat die [Lösung des Problems beschrieben](https://www.
 Letztendlich musste der folgende Eintrag in der /etc/fstab
 
 ```
-192.168.2.203:/data/raspi /media/nas nfs defaults 0 0
+192.168.2.203:/data/raspi /media/nas nfs defaults,nfsvers=3 0 0
 ```
 
 wie folgt geändert werden
 
 ```
-192.168.2.203:/data/raspi /media/nas nfs defaults,noatime,noauto,x-systemd.automount 0 0
+192.168.2.203:/data/raspi /media/nas nfs defaults,nfsvers=3,noatime,noauto,x-systemd.automount 0 0
 ```
 
 BastiFanta hat einen anderen Grund dafür gefunden:

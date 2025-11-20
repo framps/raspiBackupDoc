@@ -146,7 +146,7 @@ Generally on any device that can be mounted under Linux
   - External USB stick
   - External USB disk
   - smb network drive
-  - nfs network drive
+  - nfs network drive with nfs version 3
   - sshfs network drive
   - webdav network drive
   - ftpfs network drive
@@ -383,8 +383,8 @@ backups are not larger than 4GB.
 <a name="faq20"></a>
 ### 20) I have problems backing up my backups to a Synology. How can I fix this?
 
-There are several users of *raspiBackup* who successfully back up their backups via nfs on a
-Synology successfully. There is a special page where 
+There are several users of *raspiBackup* who successfully back up their backups via nfs3 on a
+Synology successfully. There is a special page where
 users of *raspiBackup* have described what they have configured on the Synology
 so that everything works.
 
@@ -547,13 +547,13 @@ shared. DougieLawson has described the [solution to the problem](https://www.ras
 In the end, the following entry in /etc/fstab
 
 ```
-192.168.2.203:/data/raspi /media/nas nfs defaults 0 0
+192.168.2.203:/data/raspi /media/nas nfs nfsvers=3,defaults 0 0
 ```
 
 should be changed as follows
 
 ```
-192.168.2.203:/data/raspi /media/nas nfs defaults,noatime,noauto,x-systemd.automount 0 0
+192.168.2.203:/data/raspi /media/nas nfs defaults,nfsvers=3,noatime,noauto,x-systemd.automount 0 0
 ```
 
 BastiFanta has found another reason for this:
@@ -917,7 +917,7 @@ To install the latest version, the options
 <a name="faq58"></a>
 ### 58) What do I have to consider if I want to back up to an nfs mounted backup partition with rsync?
 
-The partition must be exported from the NFS server with `no_root_squash`.
+The partition must be exported from the NFS server with `no_root_squash` and nfs version 3 has to be used.
 
 <a name="faq59"></a>
 ### 59) rsync reports that files have disappeared during the backup process on the system and aborts with return code 24. How can I prevent this?
