@@ -149,7 +149,7 @@ Generell auf jedem Device, welches unter Linux gemounted werden kann
   - Externer USB Stick
   - Externe USB Platte
   - SMB Netzwerklaufwerk
-  - NFS Netzwerklaufwerk
+  - NFS Netzwerklaufwerk - Wenn der Backuptyp rsync genutzt werden soll muss nfs Version 3 genutzt werden
   - SSHFS Netzwerklaufwerk
   - WebDAV Netzwerklaufwerk
   - FtpFS Netzwerklaufwerk

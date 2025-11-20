@@ -75,7 +75,7 @@ asterix:/backup    /backup    nfs    nfsvers=3,users,rw,sync,hard,intr,noauto,us
 ```
 
 Dabei ist "asterix" der Hostname der NAS und "/backup" der exportierte NFS
-Mount. Weitere Hinweise zu Synology-spezifischen Einstellungen und
+mount. Weitere Hinweise zu Synology-spezifischen Einstellungen und
 Problemlösungen finden sich [hier](nfs-as-backuptarget.md)
 
 

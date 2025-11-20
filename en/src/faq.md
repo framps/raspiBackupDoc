@@ -146,7 +146,7 @@ Generally on any device that can be mounted under Linux
   - External USB stick
   - External USB disk
   - smb network drive
-  - nfs network drive with nfs version 3
+  - nfs network drive - If backup type rsync should be used nfs version 3 has to be used
   - sshfs network drive
   - webdav network drive
   - ftpfs network drive
