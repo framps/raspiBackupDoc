@@ -937,7 +937,7 @@ erneuert. Um dann den neuesten Stand zu installieren müssen die Optionen
 <a name="faq58"></a>
 ### 58) Was muß ich beachten, wenn ich mit rsync auf eine NFS gemountete Backuppartition sichern will?
 
-Die Partition muss vom NFS Server mit `no_root_squash` exportiert werden.
+Die Partition muss vom NFS Server mit `no_root_squash` exportiert werden und das nfs Protokoll v3 muss genutzt werden.
 
 
 <a name="faq59"></a>
