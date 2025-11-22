@@ -1,5 +1,11 @@
 # NFS als Backupziel
 
+NFS ist ein unter Linux viel genutztes Filesystem um remote auf Dateien zuzugreifen und eignet sich perfekt um Backups abzulegen. Leider gibt es unterschiedliche nfs Versionen sowie unterschiedliche Implementierungen - je nach genutzem nfs Server. Insbesondere verhalten sich die nfs Server unterschiedlich in Bezug auf ACLs.
+
+ACLs werden normalerweise auf Raspberries nicht genutzt und müssen deshalb auch nicht ins Backup kopiert werden. Werden aber doch ACLs genutzt wird es kompliziert die per nfs ins Backup zu bekommen. Der Backuptyp tar unterstützt ACLs. Auch werden ACLs im EXT3/4 Dateisystem gesichert.
+
+nfs Version 4 unterstützt keine ACLs. nfs Version 3 dagegen meistens schon. Allerdings unterstützt Synology auch mit Version 3 keine ACLs. Mit der Option `nfsvers=3` bzw `nfsvers=4` kann beim Mount definiert werden, welche nfs Version genutzt werden soll.
+
 Es macht sehr viel Sinn, die Backups von [raspiBackup](https://linux-tips-and-tricks.de/de/raspibackup)
 auf einem NAS abzulegen und das NFS Protokoll dazu zu nutzen. Im Folgenden wird beschrieben, wie
 das bei einer Synology zu konfigurieren ist. Natürlich kann man auch jedes andere NAS nutzen, sofern es NFS unterstützt.
@@ -12,9 +18,6 @@ damit *rsync* genutzt werden kann. Im UI muss dann bei Squash No-mapping eingetr
 werden.
 
 ![Synology Konfiguration](images/synology-nfs-defs.png)
-
-Es darf **NICHT** *NFS4* aktiviert werden wie im Screenshot zu sehen ist! Es muss
-*NFS3* genutzt werden. Mit *NFS4* habe ich es nicht hinbekommen.
 
 ![Synology NFS Konfiguration](images/synologyNFSAddtlSettings.png)
 
@@ -47,7 +50,7 @@ unter dem Mountpoint `/backup` unter der Annahme, dass 192.168.0.11 die Synology
 ist:
 
 ```
-192.168.0.11:/volume1/raspiBackups /backup nfs rw,nfsvers=3 0 0
+192.168.0.11:/volume1/raspiBackups /backup nfs rw 0 0
 ```
 
 **Es ist dringend zu empfehlen, den Mountpoint `/backup` zu nutzen und nicht z.B.
@@ -128,7 +131,7 @@ Raspberry Pi fstab Einträge für NFS3 und NFS4
 # Entry for the NAS backup, mount with NFS version 3
 192.168.X.XXX:/volume1/backup /media/nas-backup nfs rw,nfsvers=3 0 0
 # Entry for the NAS backup, mount with NFS version 4
-#192.168.X.XXX:/volume1/backup /media/nas-backup nfs nfsvers=3,rw 0 0
+#192.168.X.XXX:/volume1/backup /media/nas-backup nfs nfsvers=4,rw 0 0
 ```
 
 Auszug aus der `raspiBackup.conf` abgelegt unter `/usr/local/etc/`
@@ -182,7 +185,7 @@ Wie folgt wurde erfolgreich ein TAR-Backup via NFS 4.1 auf einem QNAP-NAS erstel
 Inhalt - `/etc/fstab`:
 
 ```
-<NAS-IP/-Hostname>:/<Share name>  /backup   nfs4    defaults,_netdev,noatime    0    2
+<NAS-IP/-Hostname>:/<Share name>  /backup   nfs    defaults,_netdev,noatime    0    2
 ```
 
 

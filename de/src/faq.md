@@ -149,7 +149,7 @@ Generell auf jedem Device, welches unter Linux gemounted werden kann
   - Externer USB Stick
   - Externe USB Platte
   - SMB Netzwerklaufwerk
-  - NFS Netzwerklaufwerk - Wenn der Backuptyp rsync genutzt werden soll muss nfs Version 3 genutzt werden
+  - NFS Netzwerklaufwerk
   - SSHFS Netzwerklaufwerk
   - WebDAV Netzwerklaufwerk
   - FtpFS Netzwerklaufwerk
@@ -446,17 +446,7 @@ rsync: set_acl: sys_acl_set_file(media/pi, ACL_TYPE_ACCESS): Operation not suppo
 ```
 
 Die Ursache liegt darin, dass NFS4 mit rsync keine Posix ACLs
-unterstützt. Diese sind aber auch in 99% der Fälle nicht notwendig. Die
-folgende Zeile in der `/etc/mke2fs.conf`
-
-```
-default_mntopts = acl,user_xattr
-```
-
-bewirkt, dass jeder mount immer die ACL für eine Partition einschaltet. Das
-trifft dann auch für die Backuppartition von *raspiBackup* zu, die
-standardmäßig auf /backup gemounted wird. Somit wird immer versucht, ACL
-Daten zu schreiben, was von rsync nicht unterstützt wird.
+unterstützt. Diese sind aber auch in 99% der Fälle nicht notwendig.
 
 Hinweis: Synology unterstützt keine ACLs mit NFS3 as of 13.5.2022.
 
@@ -468,19 +458,14 @@ Der Befehl braucht Zeit, bis er fertig ist.
 
 Mögliche Lösungen:
 
-1. Füge die folgende Zeile
-
-   ```
-   DEFAULT_RSYNC_BACKUP_OPTIONS="-aHx --delete --force --sparse"
-   ```
-   (kein großes A) in `/usr/local/etc/raspiBackup.conf`
-   ein und damit sichert *rsync* keine ACLs mehr.
-
 1. Nutze *tar* und nicht *rsync*
+
+2. Ab *raspiBackup* Release 0.7.2 bewirkt die Option `DEFAULT_RSYNC_BACKUP_OPTION_EXCLUDE_ACLS=1` dass rsync
+keine ACLs sichert
 
 1. Benutze ein lokal angeschlossenes Gerät welches mit *ext4* formatiert ist
 
-1. Benutze *NFS* version2 oder version3. Lies dazu [diesen Artikel](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). Diese
+1. Benutze *NFS* version3. Lies dazu [diesen Artikel](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). Diese
    Option funktioniert aber nicht mit einer Synology.
 
 1. Benutze `raspiBackupWrapper.sh`, in dem sich Code befindet, der ein Loop
@@ -561,7 +546,7 @@ mitgeteilt. DougieLawson hat die [Lösung des Problems beschrieben](https://www.
 Letztendlich musste der folgende Eintrag in der /etc/fstab
 
 ```
-192.168.2.203:/data/raspi /media/nas nfs defaults,nfsvers=3 0 0
+192.168.2.203:/data/raspi /media/nas nfs defaults 0 0
 ```
 
 wie folgt geändert werden

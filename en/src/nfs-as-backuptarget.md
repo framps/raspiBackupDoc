@@ -1,5 +1,11 @@
 # NFS as backup target 
 
+NFS is a widely used file system under Linux to access files remotely and is perfect for storing backups. Unfortunately, there are different nfs versions and different implementations - depending on the nfs server used. In particular, the nfs servers behave differently with regard to ACLs.
+
+ACLs are not normally used on Raspberries and therefore do not need to be copied to the backup. However, if ACLs are used, it becomes complicated to get them into the backup via nfs. The backup type tar supports ACLs. ACLs are also backed up in the EXT3/4 file system.
+
+nfs version 4 does not support ACLs. nfs version 3 usually does. However, Synology does not support ACLs with version 3 either. The option `nfsvers=3` or `nfsvers=4` can be used to define which nfs version should be used for the mount.
+
 It makes a lot of sense to store the backups from [raspiBackup](https://linux-tips-and-tricks.de/de/raspibackup)
 to a NAS and to use the NFS protocol for this purpose. The following describes how
 to configure this on a Synology. Of course, you can also use any other NAS as long as it supports NFS.
@@ -47,7 +53,7 @@ under the mountpoint `/backup` under the assumption that 192.168.0.11 is the Syn
 is:
 
 ```
-192.168.0.11:/volume1/raspiBackups /backup nfs rw,nfsvers=3 0 0
+192.168.0.11:/volume1/raspiBackups /backup nfs rw 0 0
 ```
 
 **It is strongly recommended to use the mountpoint `/backup` and not e.g.
@@ -85,7 +91,7 @@ Call up the installer and configure the regular backup time.
 
 ACLs can actually be backed up with *NFS3*. This works, for example, if you set up a
 Raspberry as an NFS server (see [https://linux-tips-and-tricks.de](https://linux-tips-and-tricks.de/de/synology/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern)).
-However, this does not work with a *Synology* - even if it uses *NFS3*.
+However, this does not work with a *Synology* - even if *NFS3* is used.
 
 An inquiry to Synology on 13.5.2022 provided the following answer:
 

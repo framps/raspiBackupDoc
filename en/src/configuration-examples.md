@@ -69,7 +69,7 @@ and this speeds up the backup process a lot, as only the changed files are backe
 An example entry in `/etc/fstab` could look like this:
 
 ```
-asterix:/backup /backup nfs nfsvers=3,users,rw,sync,hard,intr,noauto,user 0 0
+asterix:/backup /backup nfs users,rw,sync,hard,intr,noauto,user 0 0
 ```
 
 where "asterix" is the hostname of the NAS and "/backup" is the exported NFS

@@ -146,7 +146,7 @@ Generally on any device that can be mounted under Linux
   - External USB stick
   - External USB disk
   - smb network drive
-  - nfs network drive - If backup type rsync should be used nfs version 3 has to be used
+  - nfs network drive
   - sshfs network drive
   - webdav network drive
   - ftpfs network drive
@@ -433,19 +433,9 @@ rsync: set_acl: sys_acl_set_file(media/pi, ACL_TYPE_ACCESS): Operation not suppo
 ```
 
 The reason is that nfs version 4 with rsync does not support Posix ACLs.
-However, these are not necessary in 99% of cases. The
-following line in the `/etc/mke2fs.conf`
+However, these are not necessary in 99% of cases.
 
-```
-default_mntopts = acl,user_xattr
-```
-
-causes each mount to always switch on the acl for a partition. This
-also applies to the backup partition of *raspiBackup*, which is
-is mounted on /backup by default. This means that an attempt is always made to write acl
-data, which is not supported by rsync.
-
-Note: Synology does not support ACLs with NFSv3 as of 13.5.2022.
+Note: Synology does not support ACLs with NFS as of 13.5.2022.
 
 Note: The following command will find all files with ACLs:
 ```
@@ -455,19 +445,14 @@ The command takes time to complete.
 
 Possible solutions:
 
-1. add the following line
-
-   ```
-   DEFAULT_RSYNC_BACKUP_OPTIONS="-aHx --delete --force --sparse"
-   ```
-   (no capital A) in `/usr/local/etc/raspiBackup.conf`
-   and thus *rsync* no longer backs up ACLs.
-
 1. use *tar* and not *rsync
+
+2. As of *raspiBackup* release 0.7.2, the option `DEFAULT_RSYNC_BACKUP_OPTION_EXCLUDE_ACLS=1` forces rsync
+to backup no ACLs
 
 1. use a locally connected device which is formatted with *ext4
 
-1. use *nfs* version2 or *nfs* version3. Read [this article](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). This
+1. use *nfs* *nfs* version3. Read [this article](https://www.linux-tips-and-tricks.de/de/faq/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern). This
    option does not work with a Synology.
 
 1. use `raspiBackupWrapper.sh`, which contains code that creates a loopback
@@ -553,7 +538,7 @@ In the end, the following entry in /etc/fstab
 should be changed as follows
 
 ```
-192.168.2.203:/data/raspi /media/nas nfs defaults,nfsvers=3,noatime,noauto,x-systemd.automount 0 0
+192.168.2.203:/data/raspi /media/nas nfs defaults,nfsvers=4,noatime,noauto,x-systemd.automount 0 0
 ```
 
 BastiFanta has found another reason for this:
@@ -917,7 +902,7 @@ To install the latest version, the options
 <a name="faq58"></a>
 ### 58) What do I have to consider if I want to back up to an nfs mounted backup partition with rsync?
 
-The partition must be exported from the NFS server with `no_root_squash` and nfs version 3 has to be used.
+The partition must be exported from the NFS server with `no_root_squash` and nfs version 4 if no ACLs are used and nfs version 3 otherwise.
 
 <a name="faq59"></a>
 ### 59) rsync reports that files have disappeared during the backup process on the system and aborts with return code 24. How can I prevent this?

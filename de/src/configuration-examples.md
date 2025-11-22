@@ -71,7 +71,7 @@ Dateien gesichert werden.
 Ein Beispieleintrag in der `/etc/fstab` könnte wie folgt aussehen:
 
 ```
-asterix:/backup    /backup    nfs    nfsvers=3,users,rw,sync,hard,intr,noauto,user    0    0
+asterix:/backup    /backup    nfs    users,rw,sync,hard,intr,noauto,user    0    0
 ```
 
 Dabei ist "asterix" der Hostname der NAS und "/backup" der exportierte NFS
