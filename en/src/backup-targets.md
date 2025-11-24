@@ -12,7 +12,7 @@ SSHFS, CurlFtpFS and [WebDAV](webdav-as-backuptarget.md) also work for storing b
 The [*AVM FRITZ!Box*](avm-fritzbox-as-backuptarget.md) also supports SMB and can therefore also be used as a backup target.
 
 ```admonish info title="Note"
-The respective backup targets must have a formatted partition in which the backups are stored. See [Advantages and disadvantages of the respective
+The respective backup targets have to have a formatted partition in which the backups are stored. See [Advantages and disadvantages of the respective
 Filesystems](which-filesystem-can-be-used-on-the-backup-partition.md).
 ```
 

@@ -18,7 +18,7 @@ Commands to restart services after the backup. E.g. for SMB "service
 smbd start" (**Attention:** quotation marks at the beginning and end). This option is
 mandatory together with the -o option.
 
-Several commands must be separated by `&&`. These commands should have the
+Several commands have to be separated by `&&`. These commands should have the
 exact reverse order to the commands in the -o parameter.
 
 **Example**:
@@ -27,13 +27,13 @@ exact reverse order to the commands in the -o parameter.
 -a "service nfs-kernel-server start && service smbd start"
 ```
 
-If **no** service is really to be started, a colon ":" must be given as an argument.
+If **no** service is really to be started, a colon ":" should be used.
 
 See also [FAQ1](faq.md#faq1) and [FAQ18](faq.md#faq18)
 
 **Note**:
 The parameters can be set with the installer. If they are updated manually the installer
-will not be able to update any more.  
+will not be able to update any more.
 
 **Attention**:
 The commands are executed as root. No sudo is necessary.
@@ -94,7 +94,7 @@ Further invocation options for the dd backup (e.g. "conv=notrunc,noerror,sync")
 
 This mounts the specified partition or mountpoint before the backup
 and umounted at the end. If it was already mounted,
-the partition will not be remounted at the end. The mountpoint must be defined in /etc/fstab
+the partition will not be remounted at the end. The mountpoint has to be defined in /etc/fstab
 and can then either be the mountpoint itself (e.g. /backup)
 or the backup partition (e.g. /dev/sdb1).
 
@@ -189,7 +189,7 @@ are used to reduce the snapshot time.
 
 **Note**:
 As the snapshot directories are not included in the backup cycle process,
-they must be deleted manually.
+Delete them manually.
 
 | Option name | Default | In installer | Configuration name |
 |-------------|----------|--------------|--------------------|
@@ -224,7 +224,7 @@ Commands to stop services before the backup so that no inconsistent backup
 is created. E.g. for SMB "service smbd stop" (note: quotation marks at the beginning and end).
 beginning and end). This option is mandatory together with the -a option.
 
-Several commands must be separated by `&&`. These commands should have the
+Several commands have to be separated by `&&`. These commands should have the
 have the exact reverse order to the commands in the -a parameter.
 
 Example:
@@ -233,7 +233,7 @@ Example:
 -o "service smbd stop && service nfs-kernel-server stop"
 ```
 
-If **no** service is really to be stopped, the colon ":" must be given as an argument.
+If **no** service is really to be stopped, the colon ":" has to be given as an argument.
 
 See also [FAQ1](faq.md#faq1) and [FAQ18](faq.md#faq18)
 
@@ -341,7 +341,7 @@ The `--tarCompressionToolOptions` option can be used to specify options for the 
 ### --unsupportedEnvironment: Use on unsupported HW and OS
 
 If *raspiBackup* is started on [unsupported environments](supported-hardware-and-software.md)
-this option must be specified.
+this option is required. 
 
 | option name | default | in installer | configuration name |
 |-------------|----------|--------------|--------------------|
@@ -400,8 +400,8 @@ See also [FAQ16](faq.md#faq16).
 Extension of the exclude list during backup to ignore certain directories during backup.
 
 **Attention**:
-The parameters must obey the respective syntax of the backup tool
-otherwise the backup will be aborted or the directories or files are not excluded. 
+The parameters have to obey the respective syntax of the backup tool
+otherwise the backup will be aborted or the directories or files are not excluded.
 
 Exmaple for rsync:
 ```

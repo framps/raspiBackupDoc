@@ -1,9 +1,9 @@
 # AVM FRITZ!Box as backup target
 
 If you don't have a NAS, but would like to back up your Raspberries with *raspiBackup*,
-you can of course also use the NAS storage of a Fritzbox. However, you must
+you can of course also use the NAS storage of a Fritzbox. However, you have to
 use backup type tar for this, as the SMB protocol does not support
-hardlinks and therefore no rsync backup 
+hardlinks and therefore no rsync backup
 which provides incremental backups can be used.
 
 An [article from andwil.de](https://www.andwil.de/weblog/linux-fritznas-mounten-cifs) was very helpful for using a Fritzbox for this purpose.
@@ -31,7 +31,7 @@ sudo raspiBackup -t tar
 ```
 can be created.
 
-After the restoretest was successful, the backup type must be configured to tar in the installer
+After the restoretest was successful, the backup type should be configured to tar in the installer
 and the time of the regular backup configured.
 
 [.status]: translated

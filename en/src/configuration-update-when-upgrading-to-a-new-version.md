@@ -90,7 +90,7 @@ cycle to test whether everything still works as before.
 *raspiBackup* also supports the use of [different
 configuration files](invocation-options.md#configFiles). However, the automatic configuration upgrade is only
 done for the standard configuration `/usr/local/etc/raspiBackup.conf`.
-All other configuration files must be extended manually by
+All other configuration files have to  be iupdated manually by
 taking the configuration lines marked as new and
 and copying them to the other configuration files.
 

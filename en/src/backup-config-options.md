@@ -1,6 +1,6 @@
 # Backup configuration options
 
-The following options must be defined in a [configuration file](invocation-options.md#configFiles).
+The following options have to be defined in a [configuration file](invocation-options.md#configFiles).
 Most invocation options can be configured there also. See [Backup options](backup-options.md) for more information.
 
 <div class="table-wrapper-for-options">
@@ -26,7 +26,7 @@ stopping and starting system services (option -a and -o).
 
 With this option, dd backups only save the space occupied by defined partitions.
 This means that a 32GB SD card, for example, which only has an 8GB partition defined, only requires 8GB for the
-and not 32GB. To do this, however, you must use gparted or resize2fs
+and not 32GB. To do this, however, you should use gparted or resize2fs
 ito reduce the root partition size accordingly, because the root partition usually fills
 the entire rest of the SD card.
 

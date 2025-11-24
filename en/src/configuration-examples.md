@@ -19,7 +19,7 @@ There are also configuration examples for various e-mail clients on the followin
 ### A Windows user wants to be able to back up his Raspberry and restore it to Windows.
 
 To be able to restore an image under Windows, a dd
-image of *raspiBackup* must be created. The following configuration options are
+image of *raspiBackup* has to be created. The following configuration options are
 at least necessary:
 
 ```
@@ -51,11 +51,11 @@ DEFAULT_ZIP_BACKUP=1
 ```
 
 also reduces the size of the image, but this cannot be restored directly
-under Windows. It must first be unzipped.
+under Windows. Unzipi it first.
 
 ## A Raspberry should be backed up as quickly as possible. The backup partition is an EXT4 file system mounted via NFS, which is provided by a NAS
 
-First, the backup partition of the NAS must be mounted. This should be done in
+First, the backup partition of the NAS should be mounted. This should be done in
 `/etc/fstab` where the NFS partition should be defined and will automatically ibe mounted under `/backup`.
 
 ```
@@ -86,7 +86,7 @@ DEFAULT_KEEPBACKUPS=n
 
 The remote Windows backup file system should be defined in `/etc/fstab` and
 be mounted automatically. The entire system is backed up each time.
-Please note that the file system on the SMB drive must support files larger
+Please note that the file system on the SMB drive has to support files larger
 than 4GB, because the tar files are usually over 4GB in size. FAT32 is not
 sufficient. See also [Which filesystem can be used on the backup partition](which-filesystem-can-be-used-on-the-backup-partition.md)
 
@@ -133,14 +133,14 @@ DEFAULT_BACKUPPATH="/USBStick"
 ```
 
 In order for `rsync` to use hardlinks and for the backup to be fast, the
-backup partition must be formatted with ext3/4. If you want to exchange data with Windows
+backup partition has to be formatted with ext3/4. If you want to exchange data with Windows
 and the partition was formatted with Windows, use `tar` as the backup type.
 backup type. However, the backup will then take longer and
 and requires considerably more space.
 
-**Note**: If the USB partition is to be accessible from Windows, it must be formatted with NTFS.
+**Note**: If the USB partition is to be accessible from Windows, it should be formatted with NTFS.
 In this case, however, no backup type `rsync` is possible. NTFS can only be used with the backup types `dd` and `tar` and
-the DEFAULT_BACKUPTYPE must then be set accordingly.
+the DEFAULT_BACKUPTYPE has then be set accordingly.
 
 An example entry in `/etc/fstab` could look like this:
 

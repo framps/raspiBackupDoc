@@ -83,14 +83,14 @@ back up everything with the backup type `dd` or use the partition-oriented mode.
 Cause:
 
 *raspiBackup* prevents it from being started several times in parallel. Either
-*raspiBackup* is still running or the previous *raspiBackup* run terminated with 
+*raspiBackup* is still running or the previous *raspiBackup* run terminated with
 an error and the lock was not removed.
 
 Further actions:
 
 With `ps -ef | grep raspiBackup` you can check whether *raspiBackup* is currently running.
 If yes, you have to wait until *raspiBackup* has finished.
-If not, the lock file must be deleted with `sudo rm /var/lock/raspiBackup`.
+If not, delete the lock file with `sudo rm /var/lock/raspiBackup`.
 
 ### RBK0019E: Option -a and -o not specified.
 
@@ -98,16 +98,16 @@ Cause:
 
 *raspiBackup* allows a running system to be backed up. Before the backup
 all important running services should be stopped and restarted at the end,
-to avoid creating an inconsistent backup. If you have not defined any services to be stopped and
-services to be stopped and started via the installer, the services must be specified with the
+to avoid creating an inconsistent backup. If you have not defined any services to be stopped
+and started via the installer, the services have to be specified with
 both options in the call.
 
 These options can be configured with the *raspiBackup* installer for Systemd services.
 
 Further actions:
 
-The two options with corresponding parameters must be specified
-or the services must be defined with the installer in the configuration file.
+The two options with corresponding parameters have to be specified
+or the services should be defined with the installer in the configuration file.
 Details can be found in [FAQ18](faq.md#faq18).
 
 
@@ -115,14 +115,14 @@ Details can be found in [FAQ18](faq.md#faq18).
 
 Cause:
 
-A backup file system that is to receive an `rsync` backup must support softlinks.
+A backup file system that is to receive an `rsync` backup has to support softlinks.
 This is only supported by *EXT2*, *EXT3* and *EXT4*. *FAT32* or *NTFS*
 do not support them. Details can be found in [FAQ19](faq.md#faq19)
 
 Further actions:
 
-Either the backup partition must be formatted with EXT2, 3 or 4 or another backup type such as
-`dd` or `tar` must be used.
+Either the backup partition should be formatted with EXT2, 3 or 4 or another backup type such as
+`dd` or `tar`should be used.
 
 
 ### RBK0021E: Backup program of type %1 terminated with RC %2.
@@ -180,7 +180,7 @@ should be replaced. To do this, restore the last backup to a new system device.
 
 If the backup partition is mounted via NFS, read [this article](https://www.linux-tips-and-tricks.de/de/raspibackupmeldungen/2-uncategorised/605-wie-kann-man-acls-mit-rsync-auf-nfs-gemounteten-partitionen-sichern).
 
-If authorization problems exist, it must be ensured that the
+If authorization problems exist, ensure that the
 user root has all rights on the backup device.
 
 ### RBK0027E: No external device connected to %1. The SD card would be used for the backup.
@@ -194,7 +194,7 @@ and if the SD card is small, it will overflow.
 Further actions:
 
 Now be `/backup` which is the default path. In this directory
-an external backup device must be mounted.
+an external backup device has to be mounted.
 A corresponding entry in `/etc/fstab` can be used to connect the mount point `/backup` to an external partition.
 You can check this with
 
@@ -273,8 +273,8 @@ If the backup only has one MBR, the target partition can only be extended up to 
 
 Further actions:
 
-The system to be restored uses *MBR* and must be converted to *GPT*.
-Then another backup must be created - this time with *GPT*. This can then be
+The system to be restored uses *MBR* and has to be converted to *GPT*.
+Then create another backup - this time with *GPT*. This can then be
 be restored to disks larger than 2TB.
 
 ### RBK0061E: No boot partition files found in %s that start with %s.
@@ -288,7 +288,7 @@ Further actions:
 
 A directory was specified as the backup directory which contains no or incomplete backup data.
 It is documented in the [Backup directory structure](backup-directory-structure.md) chapter,
-which files must be in the backup directory.
+which files have to be in the backup directory.
 A backup directory always begins with the host name of the Raspberry followed
 followed by the backup type and the creation date of the backup.
 Examples: `raspberrypi-dd-backup-20160415-222900` oder
@@ -329,13 +329,13 @@ or manually delete the 5th line in the file with the extension .sfdisk in the ba
 Cause:
 
 *raspiBackup* wants to create partitions when restoring the backup.
-To do this, the entire device must be specified as the
+To do this, the entire device should be specified as the
 as the target device. A single partition is not allowed.
 
 Further actions:
 
-Instead of e.g. `/dev/sdb1`, which is a single partition, 
-`/dev/sdb` must be specified. But ATTENTION: All data on the SD card
+Instead of e.g. `/dev/sdb1`, which is a single partition,
+specify `/dev/sdb`. But **ATTENTION:** All data on the SD card
 will then be overwritten. So make sure beforehand that no other data
 on other partitions are still required. See also [this page](restore.md) for
 recovery.
@@ -345,13 +345,13 @@ recovery.
 Cause:
 
 *raspiBackup* generates a backup directory which follows a specific format.
-format. Its format must be as follows:
+Its format has to be as follows:
 `<hostname>-<backuptype>-backup-<date>-<time>`.
 For more information, see chapter [Backup directory structure](backup-directory-structure.md).
 
 Further actions:
 
-The backup directory must be renamed according to the above form.
+Rename the backup directory according to the above form.
 
 
 ### RBK0105I: New backup directory %1 is deleted.
@@ -362,8 +362,7 @@ An error occurred and *raspiBackup* deletes the empty or inconsistent new backup
 
 Further actions:
 
-A previous message indicates an error that must be rectified.
-
+None
 
 ### RBK0109E: Unsupported file system %s on partition %s.
 
@@ -410,8 +409,8 @@ The file system of the backup partition only allows file sizes up to 4GB and is 
 
 Further actions:
 
-Another file system must be created on the backup space. Which one this
-must be depends on the backup method. On [this page](which-filesystem-can-be-used-on-the-backup-partition.md) you will find a table from which the correct
+Another file system should be created on the backup space. Which one this
+depends on the backup method. On [this page](which-filesystem-can-be-used-on-the-backup-partition.md) you will find a table from which the correct
 table from which the correct file system can be taken.
 
 
@@ -419,13 +418,13 @@ table from which the correct file system can be taken.
 
 Cause:
 
-When a partition is written, it must not be mounted.
+When a partition is written, it should not be mounted.
 
 Further actions:
 
 With the command `sudo mount | grep <device>` (<device> is mentioned in the message)
 to find out which partition is mounted and with `sudo umount <partition>`, where
-<partition> must be the mounted partition, the partition (e.g. /dev/sda1)
+<partition> has to be the mounted partition (e.g. /dev/sda1)
 release it.
 
 
@@ -439,7 +438,7 @@ backup. With tar or rsync backup, the full size of the device is not necessar.
 
 Further actions:
 
-A larger SD card must be used. Alternatively, you can use the tool
+A larger SD card should be used. Alternatively, you can use the tool
 pishrink to reduce the size of the dd image and then restore it with *raspiBackup*.
 See also [FAQ26](faq.md#faq26).
 
@@ -556,8 +555,8 @@ partition is not exported with no_root_squash.
 
 Further actions:
 
-Either the backup method dd or tar must be selected or a backup partition
-that supports Linux file attributes must be used.
+Either the backup method dd or tar should be selected or a backup partition
+that supports Linux file attributes should be used.
 Details can be found on [this page](which-filesystem-can-be-used-on-the-backup-partition.md).
 
 ### RBK0266E: The authorization to create Linux file attributes on %s is missing (file system: %s)
@@ -566,10 +565,10 @@ Cause:
 
 A backup partition mounted via NFS lacks the necessary authorization
 for root to set all file attributes. As a rule, the NFS server does not export the
-backup partition with no_root_squash. This option must be set in the file
+backup partition with no_root_squash. This option should be set in the file
 /etc/exports on the NFS server for the exported partition.
-A file system must also be exported that supports Linux file attributes
-file attributes - i.e. ext3 or ext4. ntfs or fat32 cannot be used.
+A file system should also be exported that supports Linux file attributes
+- i.e. ext3 or ext4. ntfs or fat32 cannot be used.
 
 Further actions:
 
@@ -609,13 +608,13 @@ Delete or move directories or files not created by *raspiBackup* to other locati
 Cause:
 
 A restore may not be performed onto the running system. Also
-the restore device must not be mounted. This check prevents the accidental overwriting
+the restore device should not be mounted. This check prevents the accidental overwriting
 an active and otherwise used device. If usbmount
-is active, it must first be deactivated.
+is active, it has to be first deactivated.
 
 Further actions:
 
-The restore device must be released with umount or usbmount must be deactivated.
+The restore device should be released with umount or usbmount must be deactivated.
 
 
 ### RBK0277E: Restore is not possible if 'usbmount' is installed.

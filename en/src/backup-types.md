@@ -11,7 +11,7 @@ All backup types can be completely restored with *raspiBackup*. A `dd` backup ca
 A `dd` backup creates a consistent binary image of the system.
 The entire device with the system is always read and backed up. This means that
 data that has not changed is also backed up. It also means
-that the restore device must be at least as large as the original system for the restore.
+that the restore device has to be at least as large as the original system for the restore.
 No partition is resized. This causes problems especially
 with SD cards, as the SD cards - although 32GB in size, for example - always have slight
 differences and therefore a restore of a 32GB system to another 32GB SD card
@@ -57,7 +57,7 @@ initial backup has already been created.
 ![decisiontree](images/decisiontree_en.dia.jpg)
 
 ``` admonish info title="Note"
-The [advantages and disadvantages of the possible file systems](which-filesystem-can-be-used-on-the-backup-partition.md) must be taken into account.
+Take the [advantages and disadvantages of the possible file systems](which-filesystem-can-be-used-on-the-backup-partition.md) into account.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#vornach
