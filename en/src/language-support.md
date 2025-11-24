@@ -1,6 +1,6 @@
 # Language support
 
-For displaying it's dialogs and messages *raspiBackup* the system language is used.
+For displaying it's installer dialogs and *raspiBackup* messages the system language is used.
 English is used as default if that language isn't supported by *raspiBackup* yet.
 
 <a name="supported-languages"></a>
