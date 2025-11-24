@@ -69,8 +69,8 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     The backup run messages can be sent from *raspiBackup* by e-mail or *Telegram*,
     *Slack* or *PushOver*. Smilies indicate the success or
     failure of the backup run. Other smilies inform about other important
-    important events such as the availability of a beta or a new release
-    or a reminder to perform a restoretest to test the backup integrity.
+    events such as the availability of a beta or a new release
+    or a reminder to perform a restore test to test the backup integrity.
     
   - Supported email clients: *mailx*/*mail*, *sendEmail*, *ssmtp* and *msmtp*.
     Unsupported e-mail clients can be integrated using an e-mail plug-in.
@@ -101,7 +101,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
       - Generally any device that can be mounted under Linux
 
   - An external root file system on a hard disk or USB stick is automatically
-    automatically backed up in mixed mode during normal backup mode
+    backed up in mixed mode during normal backup mode
     and restored with `tar` or `rsync`.
 
   - Snapshots
