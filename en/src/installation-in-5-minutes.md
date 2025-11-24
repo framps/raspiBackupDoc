@@ -19,7 +19,7 @@ The primary platforms (Linux, Mac or Windows) of the users are also covered ther
 
 ## Installation options
                                                                                                                       |
-There are different ways to install *raspiBackup:
+There are different ways to install *raspiBackup*:
 
 1) Via the installer and to configure a basic configuration of raspiBackup 
 2) [Directly from the command line](installer.md) with a default configuration with option `-i`
