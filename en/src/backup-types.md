@@ -54,7 +54,7 @@ initial backup has already been created.
 
 <a name="decisiontree"></a>
 
-![decisiontree](images/decisiontree_de.dia.jpg)
+![decisiontree](images/decisiontree_en.dia.jpg)
 
 ``` admonish info title="Note"
 The [advantages and disadvantages of the possible file systems](which-filesystem-can-be-used-on-the-backup-partition.md) must be taken into account.
