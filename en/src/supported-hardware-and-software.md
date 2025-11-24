@@ -7,7 +7,7 @@ requires the two partitions `/boot` and `/root` as they exist in *Raspberry Pi O
 
 This means that you can try out *raspiBackup* on the respective environment and if
 it runs successfully, you can be happy and use it. But if it does not
-runs or gives error messages, **no** support is given. You can create an
+run or gives error messages, **no** support is given. You can create an
 issue in *GitHub* and attach the debug log. This way *framp* can check whether the problem can be solved with
 with a few small changes. If major changes are necessary,
 these are not made and therefore *raspiBackup* cannot be used in the environment.
