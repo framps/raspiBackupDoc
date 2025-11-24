@@ -3,13 +3,13 @@
 ## Normal backup
 
 Each backup run creates a subdirectory in the backup directory,
-which has the following format:
+which has the following name:
 \<hostname\>.
 
-A further directory is created underneath:
+A further directory is created underneath for every scheduled backup:
 \<hostname\>@\<osversion\>-\<backuptype\>-\<backupdate\>.
 
-If the `-M` option is used (*raspiBackup* snapshot), the option value is appended:
+If the `-M` option is used (*raspiBackup* snapshot), the `-M` parameter value is appended:
 \<hostname\>@\<osversion\>-\<backuptype\>-\<backupdate\>.-\<-M parameter\>.
 
 **Examples:**
@@ -30,7 +30,7 @@ If `-M "Hello world"` is used the directory name will be
  │ └── raspberrypi@debian12-rsync-backup-20160415-222900_Hello_world
 ```
 
-Enclosed is the directory structure of my backup server, which in this case is also
+Enclosed is the directory structure of a backup server, which in this case is also
 a Raspberry Pi. Different backup types can be combined per Pi.
 Each backup is stored in a new subdirectory.
 
