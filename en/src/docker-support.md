@@ -13,7 +13,7 @@ To use the extension, execute following steps:
    cd /usr/local/bin
    sudo wget https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/extensions_userprovided/raspiBackup_docker_pre.sh
    sudo wget https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/extensions_userprovided/raspiBackup_docker_post.sh
-   sudo chmod x raspiBackup_docker*.sh
+   sudo chmod +x raspiBackup_docker*.sh
    ```
 
 2) The extension must then be defined in *raspiBackup*.
