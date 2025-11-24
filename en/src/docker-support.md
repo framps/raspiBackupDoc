@@ -16,15 +16,15 @@ To use the extension, execute following steps:
    sudo chmod x raspiBackup_docker*.sh
    ```
 
-2) The extension must then be defined in *raspiBackup*.
-   To do this, the configuration file `/usr/local/etc/raspiBackup.conf` must be updated as follows.
+2) The extension should then be defined in *raspiBackup*.
+   To do this, the configuration file `/usr/local/etc/raspiBackup.conf` has to be be updated as follows.
 
    If no extension is active yet, the following definition is sufficient:
    ```
    DEFAULT_EXTENSIONS="docker"
    ```
 
-      Otherwise, `docker` must be added to the existing extensions.
+      Otherwise, `docker` should be added to the existing extensions.
 
 **Note**:
 There should be no commands in the `DEFAULT_STOPSERVICES` and `DEFAULT_STARTSERVICES` definitions,
