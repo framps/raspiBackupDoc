@@ -1,8 +1,8 @@
 # Intelligent rotation strategy - Smart Recycle
 
 *raspiBackup* can either keep a configurable number of backups or use an intelligent backup rotation strategy.
-It is also called the ["generation principle in
-of data backup"](https://de.wikipedia.org/wiki/Generationenprinzip). The implementation was inspired by Manuel Dewald's
+It is also called the ["generation principle of data backup"](https://de.wikipedia.org/wiki/Generationenprinzip). 
+The implementation was inspired by Manuel Dewald's
 article ["Automating backups on a Raspberry Pi NAS"](https://opensource.com/article/18/8/automate-backups-raspberry-pi).
 The following backups are then kept by default,
 if daily backups are created:
@@ -26,8 +26,7 @@ and the annual backup on the first Monday of the year.
 
 ``` admonish info title="Note"
 If several daily backups are created, the **newest** daily backup is always kept.
-backup is always kept. For the weekly, monthly and annual backups
-the **oldest** backups are kept.
+For the weekly, monthly and annual backups the **oldest** backups are kept.
 
 For example, with two existing daily backups from 10:00 and
 13:00, the backup created at 13:00 is selected.
