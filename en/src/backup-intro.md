@@ -3,7 +3,7 @@
 In normal backup mode, *raspiBackup* always creates a complete backup of the system. 
 This includes the first two partitions only (/boot and /root).
 In partition-oriented backup mode, any number of partitions can be backed up. 
-Which partitions to be back up can be choosenhbut the first two partitions have to be 
+Which partitions to be back up can be choosen but the first two partitions have to be 
 included all the time.
 
 If *raspiBackup* has just been installed and configured, it's recommended
