@@ -103,7 +103,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
       - *FtpFS* Netzwerklaufwerk
       - Generell jedes Device, welches unter Linux gemounted werden kann
 
-  - Ein externes Rootfilesystem auf einer Platte oder einem USB Stick wird
+  - Ein externes Rootfilesystem (hybrider Bootmodus) auf einer Platte oder einem USB Stick wird
     automatisch im gemischten Modus beim normalen Backupmodus mitgesichert
     und restored bei `tar` oder `rsync`.
 

@@ -1,4 +1,4 @@
-# Is an external root partition supported?
+# Is an external root partition supported (hybrid boot mode)?
 
 Older Raspberries that do not yet support USB boot mode,
 can be configured in such a way that only the boot partition
@@ -14,7 +14,7 @@ to an external
 partition (USB stick, USB disk, ...), this external partition is backed up as well as the boot
 partition and the boot partition from the SD card are backed up. If
 this backup is restored, the [option `-R`](restore-options.md#parm_R) must be used,
-to specify the target device for the external root partition.
+to specify the target device for the external root partition required in hybrid boot mode.
 
 [.status]: translated
 

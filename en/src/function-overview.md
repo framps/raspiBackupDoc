@@ -101,7 +101,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
       - Generally any device that can be mounted under Linux
 
   - An external root file system on a hard disk or USB stick is automatically
-    backed up in mixed mode during normal backup mode
+    backed up in hybrid boot mode during normal backup mode
     and restored with `tar` or `rsync`.
 
   - Snapshots

@@ -6,7 +6,8 @@ There are two backup modes:
 
    In this mode, the first two partitions (the boot partition and the root partition)
    of the SD card are backed up. In addition, the `tar` and `rsync` backup
-   also back up an external root partition, i.e. a root partition stored on a USB stick or USB disk.
+   also back up an external root partition, i.e. a root partition stored on a USB stick or USB disk
+   (hybrid boot mode)
    If the target device is larger than the source device during the restore,
    the second partition is automatically extended accordingly.
 

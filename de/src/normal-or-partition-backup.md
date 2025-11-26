@@ -7,7 +7,7 @@ Es existieren zwei Backupmodi:
    In diesem Modus werden die ersten zwei Partitionen (die Bootpartition und die
    Rootpartition) der SD-Karte gesichert. Außerdem wird beim `tar` und `rsync` Backup
    auch eine externe Rootpartition, d.h. eine auf einen USB Stick oder USB Platte
-   ausgelagerte Rootpartition, gesichert.
+   ausgelagerte Rootpartition (hybrider Boot Modus), gesichert.
    Falls das Zielgerät beim Restore größer ist als das Quellgerät,
    wird automatisch die zweite Partition entsprechend erweitert.
 

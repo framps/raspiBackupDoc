@@ -378,7 +378,8 @@ partition. With * all partitions are backed up.
 Type of backup, which can be either dd, tar or rsync. rsync is used for
 ext3/ext4 partition, rsync uses hardlinks to minimize the required storage space.
 
-[Detailed information on the backup types](backup-types.md) An external root file system is
+[Detailed information on the backup types](backup-types.md) An external root file system
+used in hybrid boot mode is
 automatically with a `tar` or `rsync` backup saved, unless the `-P` option is used.
 With the `-z` option, the `dd` and `tar` backups are also zipped or reduced in size.
 reduced in size.
@@ -428,8 +429,8 @@ The following directories are never backed up:
 
 In addition, all mounted directories from external devices that are not
 mounted on / are not backed up. Only the boot partition
-/dev/mmcblk0p1 and the root partition /dev/mmcblk0p2 or the external root
-root directory on e.g. /dev/sda1 is backed up.
+/dev/mmcblk0p1 and the root partition /dev/mmcblk0p2 or the external
+root directory used in hybrid boot mode on e.g. /dev/sda1 is backed up.
 
 **Note for the partition-oriented mode**:
 If the -P option is used, the above-mentioned directories are excluded from all partition backups.

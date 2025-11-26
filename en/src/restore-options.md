@@ -68,7 +68,7 @@ memory usage before and after the backup run.
 ### -R: External root partition
 
 This option can be used to restore backups of systems that use an external
-partition as root partition, such as USB sticks or hard disks.
+partition as root partition (hybrid boot mode), such as USB sticks or hard disks.
 This is only possible if a `tar` or `rsync` backup is available.
 The parameter defines the partition on which the root directory is to be restored.
 is to be restored.  Example: `/dev/sdb1`.
@@ -87,7 +87,7 @@ of the backup!
 
 **Note:** This option is only available if the normal backup mode has been used.
 In partition-oriented mode (option `-P`) no external root partition can be
-backed up.
+backed up (hybrid boot mode).
 
 <a name="parm_resizeLastPartitionFS"></a>
 ### --resizeLastPartitionFS: Letzte Partition anpassen

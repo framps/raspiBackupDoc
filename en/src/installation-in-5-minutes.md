@@ -65,12 +65,12 @@ sudo mkdir -p /backup
 sudo mount /dev/sda1 /backup
 ```
 
-Another line must then be inserted in `/etc/fstab`. The PARTUUID 
+Another line must then be inserted in `/etc/fstab`. The PARTUUID
 from the following example must be adapted and the PARTUUID to use is displayed with `lsblk -o PARTUUID`.
 
 ```
-PARTUUID=aeddf698-02    /backup     ext4    defaults,noatime,nofail,async   0  0  
-```        
+PARTUUID=aeddf698-02    /backup     ext4    defaults,noatime,nofail,async   0  0
+```
 
 Depending on the desired backup type, *raspiBackup* requires a certain file system for this partition.
 This is explained in chapter "[Which file system can be used on the backup partition?](which-filesystem-can-be-used-on-the-backup-partition.md)".

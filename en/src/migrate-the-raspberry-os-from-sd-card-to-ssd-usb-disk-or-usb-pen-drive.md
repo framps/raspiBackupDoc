@@ -5,7 +5,7 @@ device configuration. There are 3 possible scenarios:
 
 1. `/boot` and `/` to SD card
 2. `/boot` on SD card and `/` externally on an SSD, USB disk or USB stick
-   (Older Rasperry, which cannot use USB boot mode)
+   (Older Rasperry, which cannot use USB boot mode) and is called hybrid boot mode
 3. `/boot` and `/` on an SSD, USB disk or USB stick
    (USB boot mode on newer Raspberries)
 

@@ -129,7 +129,7 @@ Gemeinsamkeiten der Beispielaufrufe:
 
 1. Das gesicherte System heißt im Beispielaufruf "raspberrypi".
 1. Der **Ziel**-Datenträger, der den Restore der Boot-/bzw.
-   Boot- und Root-Partition erhalten soll, ist im Beispiel als `/dev/sdf` verfügbar.  
+   Boot- und Root-Partition erhalten soll, ist im Beispiel als `/dev/sdf` verfügbar.
    [Weiter unten](#devicenames) ist beschrieben, wie man den aktuellen Wert für `-d` herausfinden kann
 1. **Achtung**: Alle bestehenden Daten der **Ziel**-Datenträger werden nach einer Sicherheitsabfrage
    von *raspiBackup* vor dem Restore gelöscht.
@@ -149,7 +149,7 @@ sudo raspiBackup.sh -d /dev/sdf /remote/raspifix/disks/backup/rsync/raspberrypi/
 sudo raspiBackup.sh -d /dev/sdf /remote/raspifix/disks/backup/rsync/raspberrypi/raspberrypi-rsync-backup-20141230-213032/
 ```
 
-### Restore auf eine SD-Karte und eine externe Partition
+### Restore auf eine SD-Karte und eine externe Partition (hybrider Bootmodus)
 
 1. Um den Restore der externe Rootpartition aufzunehmen, wurde auf `/dev/sda`
    eine entsprechend große Partition `/dev/sda1` angelegt. Eine Formatierung ist nicht notwendig.
@@ -188,7 +188,7 @@ Hier sieht man, dass
 
 Somit ist der Parameter für  `-d` `/dev/sda` (Externe SD-Karte).
 
-Falls eine externe Rootpartition mitgesichert wurde, ist noch `-R /dev/sdb1` (Externe
+Falls eine externe Rootpartition mitgesichert wurde (hybrider Bootmodus), ist noch `-R /dev/sdb1` (Externe
 Rootpartition) notwendig.
 
 Die Parameter müssen natürlich den lokalen Gegebenheiten angepasst werden.

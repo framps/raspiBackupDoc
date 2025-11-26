@@ -66,7 +66,7 @@ In normal mode, *raspiBackup* backs up two partitions with tar or rsync:
 The boot and the root partition that exist on the system. If
 the root partition has been moved to an external medium, the external
 root partition is also backed up. With dd backup, the entire SD card is
-is backed up. In this case, however, no external root partition can be backed up.
+is backed up. In this case, however, no external root partition can be backed up (hybrid boot mode).
 
 In partition-oriented mode, any number of partitions of the system are
 system are backed up. However, no other external partitions are backed up.

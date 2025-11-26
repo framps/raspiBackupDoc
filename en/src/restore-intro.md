@@ -15,7 +15,7 @@ It must be another card, USB disk, SSD or NVMe device connected with a card read
 A restore requires a **Linux system**for a tar or rsync backup. You should usually use a Raspberry for this. Other Linux systems
 also work, but it is not 100% guaranteed that they will always work.
 
-If an external root file system has been backed up, it will also be restored to an external device.
+If an external root file system has been backed up (hybrid boot mode), it will also be restored to an external device.
 (Only in normal backup mode with `tar` or `rsync` backup).
 
 A [manual restore](manual-restore.md) of the data with the previously used backup tools `dd`, `tar` or `rsync` is of course also possible.
@@ -51,7 +51,7 @@ Any backup can be restored using the Raspberry Pi.
 1. Connect the medium that contains the backup (e.g. a hard disk)
    and mount it or mount a network drive with the backup data.
 
-1. If the root partition is located on an external partition, connect another device with a preformatted partition
+1. If the root partition is located on an external partition (hybrid boot mode), connect another device with a preformatted partition
    which will get the external partition been restored
 
 1. Start *raspiBackup* for restore to the [device](#devicenames).
@@ -97,7 +97,7 @@ the backup was created**.
 
 The device to which the backup is to be restored is connected to the Linux system,
 the backup partition is mounted
-and a partition is provided for any external root file system.
+and a partition is provided for any external root file system in hybrid boot mode.
 
 Then start *raspiBackup* to restore to a [device](#devicenames).
 
@@ -146,7 +146,7 @@ sudo raspiBackup.sh -d /dev/sdf /remote/raspifix/disks/backup/rsync/raspberrypi/
 sudo raspiBackup.sh -d /dev/sdf /remote/raspifix/disks/backup/rsync/raspberrypi/raspberrypi-rsync-backup-20141230-213032/
 ```
 
-### Restore to an SD card and an external partition
+### Restore to an SD card and an external partition (hybrid boot mode)
 
 1. To receive the restore of the external root partition, a correspondingly large partition `/dev/sda` was created on `/dev/sda`.
    Formatting is not necessary.
@@ -185,8 +185,8 @@ Here you can see that
 
 The parameter for `-d` is therefore `/dev/sda` (external SD card).
 
-If an external root partition was also backed up, `-R /dev/sdb1` (external root partition) is also required.
-root partition) is required.
+If an external root partition was also backed up, `-R /dev/sdb1` (external root partition) is also required
+(hybrid boot mode).
 
 The parameters must of course be adapted to the local conditions.
 

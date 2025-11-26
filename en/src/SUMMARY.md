@@ -80,7 +80,7 @@ That allows for some tricks:
         - [How to create a cold standby clone with raspiBackup?](how-to-create-a-cold-standby-clone-with-raspibackup.md)
         - [Migrate the Raspberry OS from SD-card to SSD, USB-disk or USB-pen-drive](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [How can I install and test the beta version?](how-can-i-install-and-test-the-beta-version.md)
-        - [Is an external root partition supported?](external-root-partition.md)
+        - [Is an external root partition supported? (hybrid boot mode)](external-root-partition.md)
         - [Tips for large SDs, HDDs and SSDs](large_devices.md)
 
 - [raspiBackup - Invocation and options](invocation-options.md)

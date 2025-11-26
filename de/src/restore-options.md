@@ -68,7 +68,7 @@ Speicherbelegung vor und nach dem Backuplauf ausgeben.
 ### -R: Externe Rootpartition
 
 Durch diese Option kann man Backups von Systemen restoren, die eine externe
-Partition als Rootpartition benutzen, wie USB Sticks oder Festplatten.
+Partition als Rootpartition benutzen (hybrider Bootmodus), wie USB Sticks oder Festplatten.
 Dieses ist nur möglich, wenn ein `tar` oder `rsync` Backup vorliegt.
 Der Parameter definiert die Partition, auf welchem das root Verzeichnis restored
 werden soll.  Beispiel: `/dev/sdb1`.

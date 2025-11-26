@@ -64,7 +64,7 @@ Raspberry wieder.
 
 Im normalen Modus sichert *raspiBackup* mit tar oder rsync zwei Partitionen:
 Die Boot und die Rootpartition die auf dem System. Wenn
-die Rootpartition auf ein externes Medium verlagert wurde wird auch die
+die Rootpartition auf ein externes Medium verlagert wurde (hybrider Bootmodus) wird auch die
 externe Rootpartition gesichert. Mit dem dd Backup wird die gesamte SD-Karte
 gesichert. Dann kann aber keine externe root Partition mitgesichert werden.
 

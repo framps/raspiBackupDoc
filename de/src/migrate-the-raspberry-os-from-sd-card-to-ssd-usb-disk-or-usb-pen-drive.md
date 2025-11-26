@@ -5,7 +5,7 @@ Gerätekonfiguration zurückzuspielen. Es gibt 3 mögliche Szenarien:
 
 1. `/boot` und `/` auf SD-Karte
 2. `/boot` auf SD-Karte und `/` extern auf einer SSD, USB Platte oder USB Stick
-   (Ältere Rasperry, welche keinen USB Boot Mode kann)
+   (Ältere Rasperry, welche keinen USB Boot Mode kann). Wird auch hybrider Bootmodus genannt.
 3. `/boot` und `/` auf einer SSD, USB Platte oder USB Stick
    (USB Boot Mode auf neueren Raspberries)
 
