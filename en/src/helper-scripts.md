@@ -1,9 +1,9 @@
-# Utilities
+# Extension scripts
 
-Various auxiliary programs are presented on the following pages:
+Various scripts are presented on the following pages whcih extend the functionality of **raspiBackup**:
 
   - [raspiBackupDialog - a convenient helper script for raspiBackup](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
-  - [Other useful helper programs](useful-helper-scripts.md)
+  - [Other useful extension scripts](useful-helper-scripts.md)
 
 [.status]: translated
 

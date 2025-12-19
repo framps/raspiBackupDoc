@@ -99,9 +99,9 @@ That allows for some tricks:
 
 - [Error messages](error-messages.md)
 
-- [Helper scripts](helper-scripts.md)
-    - [raspiBackupDialog - a convenient helper script](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
-    - [More helpful scripts](useful-helper-scripts.md)
+- [Extension scripts](helper-scripts.md)
+    - [raspiBackupDialog - A convenient extension script](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
+    - [More extension scripts](useful-helper-scripts.md)
 
 - [Backup targets](backup-targets.md)
     - [NFS as backuptarget](nfs-as-backuptarget.md)
