@@ -23,7 +23,7 @@ Image von *raspiBackup* erstellt werden. Folgende Konfigurationsoptionen sind
 dazu wenigstens notwendig:
 
 ```
-DEFAULT_BACKUPTYPE=dd
+DEFAULT_BACKUPTYPE=d
 DEFAULT_KEEPBACKUPS=n
 ```
 
