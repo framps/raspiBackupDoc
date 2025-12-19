@@ -1,7 +1,8 @@
-# Other useful utilities
+# Other extension scripts
 
-In the meantime, various auxiliary programs for *raspiBackup* have been developed. These
-are not officially supported and are intended as examples for your own utilities
+In the meantime, various extension scripts for *raspiBackup* have been developed. These
+are not officially supported and are intended as examples for your own extension of
+**raspiBackup** functionality
 and can be adapted to your own requirements.
 
 They are available for download on [*GitHub*](https://github.com/framps/raspiBackup/tree/master/helper):
