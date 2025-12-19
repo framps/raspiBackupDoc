@@ -1,8 +1,8 @@
-# Weitere nützliche Hilfsprogramme
+# Weitere nützliche Erweiterungsscripte
 
-Mittlerweile sind verschiedene Hilfsprogramme zu *raspiBackup* entstanden. Diese
-sind nicht offiziell unterstützt und als Beispiele für eigene Hilfsprogramme
-gedacht und für eigene Anforderungen angepasst werden können.
+Mittlerweile sind verschiedene Erweiterungsscripte zu *raspiBackup* entstanden. Diese
+sind nicht offiziell unterstützt und als Beispiele für eigene Erweiterungen von **raspiBackup**
+gedacht und die für eigene Anforderungen angepasst werden können.
 
 Sie stehen auf [*GitHub*](https://github.com/framps/raspiBackup/tree/master/helper) zum Download zur Verfügung:
 
