@@ -328,6 +328,8 @@ Possible compression methods are: `bzip2`, `gzip`, `lzip`, `lzma`, `lzop`, `xz` 
 
 The `--tarCompressionToolOptions` option can be used to specify options for the compression tool.
 
+**Note:** Don't use option `-z` because this will deactivate this option and a gzipped tar file will be created.
+
 <a name="parm_tarcompressiontooloptions"></a>
 ### --tarCompressionToolOptions: Additional options for the tar compression tool
 
