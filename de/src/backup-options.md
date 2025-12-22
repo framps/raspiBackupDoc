@@ -473,6 +473,8 @@ Backup verkleinern mit gzip bei dd oder tar Backup
 |-------------|----------|--------------|--------------------|
 | -z | aus | konfigurierbar | DEFAULT_ZIP_BACKUP |
 
+**Hinweis**: Mit dieser Option werden die tar Compressiontooloptionen deaktiviert.
+
 
 </div>
 
