@@ -468,6 +468,8 @@ Reduce backup size with gzip for dd or tar backup
 |-------------|----------|--------------|--------------------|
 | -z | off | configurable | DEFAULT_ZIP_BACKUP |
 
+**Note:** This option deactivates the tar compressiontool options.
+
 
 </div>
 
