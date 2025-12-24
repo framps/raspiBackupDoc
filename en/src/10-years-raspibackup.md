@@ -10,13 +10,11 @@ Initial version
 =============================================================================
 ```
 
-Unfortunately, this cvs no longer exists, because it would be interesting to see
-how the script has changed over the last 10 years. Initially t had about 50
-lines of code. Now there are 8000 lines of code.
+Unfortunately, this cvs no longer exist.
 
-In the [wayback machine](https://web.archive.org/) I found an initial version of *raspiBackup* on this website 6/2013.
-initial version of *raspiBackup*. I put it on my website as [raspiBackup_201306.sh](https://www.linux-tips-and-tricks.de/raspiBackup/raspiBackup_201306.sh).
-It was not 50 but 314 lines of code.
+In the [wayback machine](https://web.archive.org/) from 6_2013 I found an almost initial version of *raspiBackup* on my website.
+I put it on my website for viewing as [raspiBackup_201306.sh](https://www.linux-tips-and-tricks.de/raspiBackup/raspiBackup_201306.sh).
+It had 314 lines of code. Now it has about 8000 LOCs.
 
 My son gave me a Raspberry for Christmas 2013. I enthusiastically started
 working with it and quickly added a second Raspberry, which was then
