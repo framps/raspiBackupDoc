@@ -422,12 +422,16 @@ can be found on the man page of the respective backup tools.
 The following directories are never backed up:
 
 - The backup path that was specified in the call
+- All mounted partitions other than the root partition
 - /proc
 - /lost found
 - /sys
 - /dev
 - /tmp
 - /run
+- /var/swap
+- /swapfile
+- /media
 
 In addition, all mounted directories from external devices that are not
 mounted on / are not backed up. Only the boot partition
