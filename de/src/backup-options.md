@@ -426,7 +426,8 @@ sich auf der man Page der jeweiligen Backuptools.
 
 Folgende Verzeichnisse werden niemals gesichert:
 
-- Alle extern gemounteten PartitionenDer Backupfad, der im Aufruf angegeben wurde
+- Der Backupfad, der im Aufruf angegeben wurde
+- Alle gemounteten Partitionen außer der Root Partition
 - /proc
 - /lost+found
 - /sys
