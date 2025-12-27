@@ -426,13 +426,16 @@ sich auf der man Page der jeweiligen Backuptools.
 
 Folgende Verzeichnisse werden niemals gesichert:
 
-- Der Backupfad, der im Aufruf angegeben wurde
+- Alle extern gemounteten PartitionenDer Backupfad, der im Aufruf angegeben wurde
 - /proc
 - /lost+found
 - /sys
 - /dev
 - /tmp
 - /run
+- /var/swap
+- /swapfile
+- /media
 
 Außerdem werden alle gemounteten Verzeichnisse von externen Geräten, die nicht
 auf / gemounted sind, nicht gesichert. Es wird nur die Boot Partition
