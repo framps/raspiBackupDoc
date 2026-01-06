@@ -54,6 +54,10 @@ That allows for some tricks:
     - [Statistics](statistics.md)
     - [Updates](updates.md)
 
+- [Typical usecases](usecases.md)
+    - [Typical backup usecases](usecases-backup.md)
+    - [Typical restore usecases](usecases-restore.md)
+
 - [Function details](function-intro.md)
     - [Backup](backup-intro.md)
         - [Decision tree for backup types](backup-types.md)
@@ -64,7 +68,7 @@ That allows for some tricks:
         - [Docker support](docker-support.md)
         - [Configuration update when upgrading to a new version](configuration-update-when-upgrading-to-a-new-version.md)
         - [Multiple backuptasks](multiple-backup-tasks.md)
-        - [Configuration examples](configuration-examples.md)
+        - [eMail configuration examples](configuration-examples.md)
             - [msmtp configuration for a web.de account](msmtp-configuration-for-web-de-account.md)
             - [Exim4 configuration](exim4-configuration.md)
             - [nullmailer configuration](nullmailer-configuration.md)

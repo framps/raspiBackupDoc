@@ -54,6 +54,10 @@ Dies ermöglicht einige kleine Kniffe:
     - [Statistiken](statistics.md)
     - [Updates](updates.md)
 
+- [Typische Nutzungsbeispiele](usecases.md)
+    - [Backupnutzungsbeispiele](usecases-backup.md)
+    - [Restorenutzungsbeispiele](usecases-restore.md)
+
 - [Funktionsdetails](function-intro.md)
     - [Backup](backup-intro.md)
         - [Entscheidungsbaum für Backuptypen](backup-types.md)
@@ -63,7 +67,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Snapshots](snapshots.md)
         - [Docker Support](docker-support.md)
         - [Konfigurationsupdate bei einem Upgrade auf eine neue Version](configuration-update-when-upgrading-to-a-new-version.md)
-        - [Konfigurationsbeispiele](configuration-examples.md)
+        - [eMail Konfigurationsbeispiele](configuration-examples.md)
             - [msmtp Konfiguration für einen web.de Account](msmtp-configuration-for-web-de-account.md)
             - [Exim4 Konfiguration](exim4-configuration.md)
             - [nullmailer Konfiguration](nullmailer-configuration.md)
