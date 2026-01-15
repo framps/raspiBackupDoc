@@ -1,8 +1,12 @@
 # Installer - Aufruf und Optionen
 
-Der Download und die Installation des Installers ist [hier](installation-in-5-minutes.md) beschrieben.
+## Installer download, Aufruf und Installation
 
-## Aufruf
+```
+curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
+```
+
+## Aufruf wenn der Installer schon installiert wurde
 
 ```
 sudo raspiBackupInstallUI {Optionen}

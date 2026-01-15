@@ -19,13 +19,13 @@ The primary platforms (Linux, Mac or Windows) of the users are also covered ther
 
 ## Installation options
                                                                                                                      
-There are different ways to install *raspiBackup*:
+There are different ways to install and configure *raspiBackup*:
 
-1) Via the installer and to configure a basic configuration of raspiBackup 
-2) [Directly from the command line](installer.md) with a default configuration with option `-i`
-3) [Manually](using-raspibackup-without-installation.md) 
-
-The standard installation with the installer is described here.
+1) Download and invocation of the installer. That's the most convenient installation method. 
+```
+ curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
+```
+2) [Manually without installer](using-raspibackup-without-installation.md) 
 
 **Note**: If you want to read the source code of *raspiBackup* and/or the installer
 *raspiBackupInstallUI* before installation, you can do this via the following links:

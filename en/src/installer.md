@@ -1,8 +1,12 @@
 # Installer - Invocation and options
 
-The download and installation of the *raspiBackup* installer is described [here](installation-in-5-minutes.md).
+## Installer download, invocation and installation
 
-## Invocation
+```
+curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
+```
+
+## Invocation if the installer was already installed
 
 ```
 sudo raspiBackupInstallUI {Options}
