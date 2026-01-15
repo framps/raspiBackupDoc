@@ -38,8 +38,8 @@ There are different ways to install and configure *raspiBackup*:
 
     The source code for *raspiBackup* and the installer can be viewed on the following pages. 
 
-  - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
-  - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
+   - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
+   - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
 
 
 ## The *raspiBackup* installer
