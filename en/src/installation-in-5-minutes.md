@@ -29,7 +29,7 @@ There are different ways to install and configure *raspiBackup*:
 
 2) Download and invoke the installer on the command line to install *raspiBackup* with it's default konfiguration. 
    Intended for experienced *raspiBackup* users who want to install raspiBackup on additional Raspberries.
-```
+   ```
    curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
    ```
    [Here](installer.md) the standard configuration is described. 
