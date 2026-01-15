@@ -33,10 +33,9 @@ Es gibt verschiedene Möglichkeiten, *raspiBackup* zu installieren bzw zu konfig
    ```
    [Hier](installer.md) wird die Standardkonfiguration beschrieben.
 
-3) [Manuell ohne den Installer](using-raspibackup-without-installation.md).
+3) [Manuell ohne den Installer](using-raspibackup-without-installation.md) für Leute, die dem Installer und sudo nicht trauen.
 
-   Wer sich vor der Installation den Sourcecode von *raspiBackup* und/oder den Installer
-   *raspiBackupInstallUI* ansehen möchte, kann dies über die folgende Links tun:
+   Der Sourcecode von *raspiBackup* und dem Installer ist auf folgenden Seiten einsehbar.
 
   - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
   - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
