@@ -21,16 +21,22 @@ Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benut
 
 Es gibt verschiedene Möglichkeiten, *raspiBackup* zu installieren bzw zu konfigurieren:
 
-1) Download und Aufruf des Installers. Das ist die bequemste Methode.
-```
- curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
-```
-[Hier](installer.md) werden ein paar Detailinformationen zu ein paar Konfigurationsoptionen gegeben.
+1) Download und Aufruf des Installers auf der Befehlszeile um *raspiBackup* zu installieren. Das ist die bequemste Methode.
+   ```
+   curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
+   ```
+   [Hier](installer.md) werden ein paar Detailinformationen zu ein paar Konfigurationsoptionen gegeben.
 
-2) [Manuell ohne den Installer](using-raspibackup-without-installation.md)
+2) Download und Aufruf des Installers auf der Befehlszeile um *raspiBackup* mit der Standarkonfiguration zu installieren. Für erfahrene *raspiBackup* Nutzer gedacht die raspiBackup auf weiteren Raspberries installieren wollen.
+    ```
+   curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
+   ```
+   [Hier](installer.md) wird die Standardkonfiguration beschrieben.
 
-**Hinweis**: Wer sich vor der Installation den Sourcecode von *raspiBackup* und/oder den Installer
-*raspiBackupInstallUI* ansehen möchte, kann dies über die folgende Links tun:
+3) [Manuell ohne den Installer](using-raspibackup-without-installation.md).
+
+   Wer sich vor der Installation den Sourcecode von *raspiBackup* und/oder den Installer
+   *raspiBackupInstallUI* ansehen möchte, kann dies über die folgende Links tun:
 
   - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
   - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)

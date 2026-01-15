@@ -1,51 +1,19 @@
 # Installer - Aufruf und Optionen
 
-## Installer download, Aufruf und Installation
+## Installer Download, Aufruf und Installation
+
+Eingabe der folgenden Befehle in einem Befehlsfenster um den Installer runterzuladen und aufzurufen:
 
 ```
 curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
 ```
+und Nutzung der Installermenus um *raspiBackup* zu installieren und die wichtigsten Optionen zu konfigurieren.
 
 ## Aufruf wenn der Installer schon installiert wurde
 
 ```
-sudo raspiBackupInstallUI {Optionen}
+sudo raspiBackupInstallUI
 ```
-
-Es existieren zwei verschiedene Möglichkeiten den *raspiBackup* Installer `raspiBackupInstallUI`
-aufzurufen:
-
-1.  Aufruf ohne Optionen oder mit Option `-t`
-    Der Installer startet mit einem Menu über welches *raspiBackup* konfiguriert werden kann.
-    Option `-t` steuert ob crond oder systemd genutzt wird.
-1.  Aufruf mit Optionen
-    Sofern eine andere Option als `-t`genutzt wird führt der Installer die gewählte Funktion
-    sofort ohne Menu aus.
-
-## Optionen
-
-Mit folgenden Optionen kann der Installer bestimmte Funktionen direkt ohne Menüführung vornehmen:
-
-* -i: Re/Installation von *raspiBackup*
-* -e: Re/Installation von den *raspiBackup* Beispielerweiterungen
-* -h: Anzeige eines Hilfetextes
-* -U: Update vom Installer `raspiBackupInstallUI`
-* -u: Deinstallation von *raspiBackup* inklusive Installer
-* -t: Nutzung von entweder crond oder systemd als Backuptimer bei Option -i, Default ist systemd
-
-<a name="deinstallation"></a>
-## Deinstallation
-
-*raspiBackup* und der Installer können auch wieder deinstalliert werden:
-
-```
-sudo raspiBackupInstallUI -u
-```
-
-**Hinweis:**
-Dabei wird der Installer wie auch *raspiBackup* mit all seinen Dateien gelöscht!
-
-
 
 ## Details zu einigen Menüpunkten
 
@@ -145,9 +113,46 @@ Der Installer erstellt folgende Dateien:
 
   - *raspiBackupInstallUI.sh* `/usr/local/bin`
 
+## Aufrufoptionen des Installers
 
+```
+sudo raspiBackupInstallUI {Optionen}
+```
 
-## Aufruf der Installation ohne Installer direkt von der Befehlszeile - online
+Es existieren zwei verschiedene Möglichkeiten den *raspiBackup* Installer `raspiBackupInstallUI`
+aufzurufen:
+
+1.  Aufruf ohne Optionen oder mit Option `-t`
+    Der Installer startet mit einem Menu über welches *raspiBackup* konfiguriert werden kann.
+    Option `-t` steuert ob crond oder systemd genutzt wird.
+1.  Aufruf mit Optionen
+    Sofern eine andere Option als `-t`genutzt wird führt der Installer die gewählte Funktion
+    sofort ohne Menu aus.
+
+## Optionen
+
+Mit folgenden Optionen kann der Installer bestimmte Funktionen direkt ohne Menüführung vornehmen:
+
+* -i: Re/Installation von *raspiBackup*
+* -e: Re/Installation von den *raspiBackup* Beispielerweiterungen
+* -h: Anzeige eines Hilfetextes
+* -U: Update vom Installer `raspiBackupInstallUI`
+* -u: Deinstallation von *raspiBackup* inklusive Installer
+* -t: Nutzung von entweder crond oder systemd als Backuptimer bei Option -i, Default ist systemd
+
+<a name="deinstallation"></a>
+## Deinstallation
+
+*raspiBackup* und der Installer können auch wieder deinstalliert werden:
+
+```
+sudo raspiBackupInstallUI -u
+```
+
+**Hinweis:**
+Dabei wird der Installer wie auch *raspiBackup* mit all seinen Dateien gelöscht!
+
+## Aufruf der Installation ohne Installer direkt von der Befehlszeile
 
 Wer keine menügesteuerte Installation nutzen möchte, kann die Installation von *raspiBackup*
 und den Beispielextensions oder die Deinstallation direkt von der Befehlszeile aufrufen.

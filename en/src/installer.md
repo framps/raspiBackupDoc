@@ -2,49 +2,18 @@
 
 ## Installer download, invocation and installation
 
+Enter the following commands in a command window to dowload and invoke the installer
+ 
 ```
 curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
 ```
-
+and use the installer menus to install *raspiBackup* and to configure the most important options.
+ 
 ## Invocation if the installer was already installed
 
 ```
-sudo raspiBackupInstallUI {Options}
+sudo raspiBackupInstallUI
 ```
-
-There are two different ways to invoke the *raspiBackup* installer `raspiBackupInstallUI`:
-
-1. Invoke without options or with option `-t`
-    The installer starts with a menu via which *raspiBackup* can be configured.
-    Option `-t` controls whether crond or systemd is used.
-1. Invoke with options
-    If an option other than `-t` is used, the installer executes the selected function
-    immediately without a menu.
-
-## Options
-
-The following options allow the installer to perform certain functions directly without a menu:
-
-* -i: Re/Installation of *raspiBackup*
-* -e: Re/Installation of the *raspiBackup* sample extensions
-* -h: Display a help text
-* -U: Update from the installer `raspiBackupInstallUI
-* -u: Uninstall *raspiBackup* including installer
-* -t: Use either crond or systemd as backup timer with option -i, default is systemd
-
-<a name="uninstallation"></a>
-## Uninstallation
-
-*raspiBackup* and the installer can also be uninstalled:
-
-```
-sudo raspiBackupInstallUI -u
-```
-
-**Note:**
-This will delete the installer as well as *raspiBackup* with all its files!
-
-
 
 ## Details on some menu items
 
@@ -139,9 +108,46 @@ The installer creates the following files:
 
   - *raspiBackupInstallUI.sh* `/usr/local/bin`
 
+## Installer invocation options  
+
+```
+sudo raspiBackupInstallUI {Options}
+```
+
+There are two different ways to invoke the *raspiBackup* installer `raspiBackupInstallUI`:
+
+1. Invoke without options or with option `-t`
+    The installer starts with a menu via which *raspiBackup* can be configured.
+    Option `-t` controls whether crond or systemd is used.
+1. Invoke with options
+    If an option other than `-t` is used, the installer executes the selected function
+    immediately without a menu.
+
+## Options
+
+The following options allow the installer to perform certain functions directly without a menu:
+
+* -i: Re/Installation of *raspiBackup*
+* -e: Re/Installation of the *raspiBackup* sample extensions
+* -h: Display a help text
+* -U: Update from the installer `raspiBackupInstallUI
+* -u: Uninstall *raspiBackup* including installer
+* -t: Use either crond or systemd as backup timer with option -i, default is systemd
+
+<a name="uninstallation"></a>
+## Uninstallation
+
+*raspiBackup* and the installer can also be uninstalled:
+
+```
+sudo raspiBackupInstallUI -u
+```
+
+**Note:**
+This will delete the installer as well as *raspiBackup* with all its files!
 
 
-## Call the installation without installer directly from the command line - online
+## Call the installation without installer directly from the command line without the menu 
 
 If you do not want to use a menu-driven installation, you can run the installation of *raspiBackup*
 and the sample extensions or uninstall directly from the command line.
