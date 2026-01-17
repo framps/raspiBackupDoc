@@ -24,7 +24,8 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
       - the **normal backup mode** only backs up the boot and root partition
       - the **partition-oriented mode** backs up any number of partitions on the system device. 
-      ``` admonish caution title="Note"
+
+      **Note:** 
       Only partitions on the system device are backed up. Backing up partitions of other devices is not supported. Larger amounts of data can be backed up by raspiBackup using partition-oriented backup if they are stored on other partitions of the system device, such as /dev/sda3 or /dev/mmcblk0p3
  
   - Any number of backups from the past can be stored

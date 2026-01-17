@@ -27,7 +27,7 @@ There are two backup modes:
    If the target device is larger than the
    source device during the restore, the last partition is expanded to use the entire target device.
 
-``` admonish caution title="Note"
+``` admonish note title="Note"
 Only partitions of the system device are backed up. Backing up partitions on other devices is not supported. Larger amounts of data can be backed up by *raspiBackup* using partition-oriented backup if they are stored on other partitions of the system device, such as /dev/sda3 or /dev/mmcblk0p3
 
 [.status]: translated

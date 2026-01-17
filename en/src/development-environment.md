@@ -9,7 +9,7 @@ After successful testing, a new version of
 
 In the beginning, all possible test variants were always tested manually. 
 However, this is quite time-consuming and many SD cards are worn out in the process.
-For this reason, the [regression tests](regressiontests-executed.md) are now executed in a [simulated Raspberry](https://www.linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren). This is much faster and since then SD no longer breaks so often.
+For this reason, the [regression tests](regressiontests-executed.md) are now executed in a [simulated Raspberry](https://www.linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) running on a Raspberry 5. This is much faster and since then SD no longer breaks so often.
 
 All source code is maintained in a *git* repository. New
 releases are created in a development branch. When a new release is ready

@@ -9,7 +9,7 @@ manuell getestet werden. Nach erfolgreichen Test steht eine neue Version von
 
 Zu Anfang wurden immer alle möglichen Testvarianten zu Fuß durchgetestet.
 Allerdings ist das ziemlich zeitaufwändig und es werden dabei viele SD-Karten
-verschlissen. Deshalb werden die [Regressionstests](regressiontests-executed.md) nun in einer auf dem Desktop
+verschlissen. Deshalb werden die [Regressionstests](regressiontests-executed.md) nun auf einer Raspberry 5 in einer
 [simulierten Raspberry](https://www.linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) vorgenommen. Das geht wesentlich schneller und seitdem
 geht auch nicht mehr so häufig eine SD kaputt.
 

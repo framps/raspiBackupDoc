@@ -27,7 +27,7 @@ Es existieren zwei Backupmodi:
    Falls das Zielgerät beim Restore größer ist als das
    Quellgerät, wird die letzte Partition soweit erweitert, dass das gesamte Zielgerät genutzt wird.
 
-``` admonish caution title="Wichtiger Hinweis"
+``` admonish note title="Hinweis"
 Es werden nur Partitionen des Systemgerätes gesichert. Ein Backup von Partitionen von anderen Geräten wird nicht unterstützt. Größere Datenmengen können von *raspiBackup* mit dem partitionsorientierten Backup mitgesichert werden wenn sie auf weiteren Partitionen des Systemgerätes wie z.B. /dev/sda3 oder /dev/mmcblk0p3 abgelegt werden
 
 [.status]: translated
