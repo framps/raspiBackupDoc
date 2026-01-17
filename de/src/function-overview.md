@@ -30,7 +30,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
       - der **normale Backupmodus** sichert nur die Boot- und Rootparition
       - der **partitionsorientierte Modus** sichert beliebig viele Partitionen des Systemgerätes
       ``` admonish caution title="Hinweis"
-      Es werden nur Partitionen vom Systemgerät gesichert. Ein Backup von Partitionen von anderen Geräten wird nicht unterstützt. Größere Datenmengen können von raspiBackup mit dem partitionsorientierten Backup mitgesichert werden wenn sie auf weiteren Partitionen des Systemgerätes wie z.B. /dev/sda3 oder /dev/mmcblk0p3 abgelegt werden
+      Es werden nur Partitionen des Systemgerätes gesichert. Ein Backup von Partitionen von anderen Geräten wird nicht unterstützt. Größere Datenmengen können von raspiBackup mit dem partitionsorientierten Backup mitgesichert werden wenn sie auf weiteren Partitionen des Systemgerätes wie z.B. /dev/sda3 oder /dev/mmcblk0p3 abgelegt werden
 
   - Eine beliebige Anzahl von Backups aus der Vergangenheit können vorgehalten werden
 
