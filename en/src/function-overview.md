@@ -18,13 +18,15 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Two backup strategies
 
       - A defined number of backups are kept
-      - Backups are kept according to the [grandfather-father-son backup strategy](https://framps.github.io/raspiBackupDoc/smart-recycle.html) (GVS).
+      - Backups are kept according to the [grandfather-father-son backup strategy](https://framps.github.io/raspiBackupDoc/smart-recycle.html) (GVS)
 
   - Two [backup modes](normal-or-partition-backup.md):
 
       - the **normal backup mode** only backs up the boot and root partition
-      - the **partition-oriented mode** backs up any number of partitions
-
+      - the **partition-oriented mode** backs up any number of partitions on the system device. 
+      ``` admonish caution title="Hinweis"
+      Only partitions from the system device are backed up. Backing up partitions from other devices is not supported. Larger amounts of data can be backed up by raspiBackup using partition-oriented backup if they are stored on other partitions of the system device, such as /dev/sda3 or /dev/mmcblk0p3.
+ 
   - Any number of backups from the past can be stored
 
     Not only a single backup is created, but also a backup history.
