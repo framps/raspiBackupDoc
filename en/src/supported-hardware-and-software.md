@@ -42,7 +42,7 @@ The desktop version should be used on a RPi4/RPi5 with at least 4GB memory.
 ## Ubuntu
 
 If the official Ubuntu version for Raspberries is used, this
-is supported by *raspiBackup*. However, at least a Raspberry Pi 4 with 4GB, better 
+is supported by *raspiBackup*. However, at least a Raspberry Pi 4 with 4GB, better
 with 8GB memory, should be used. The same applies to a Raspberry Pi 5. Presumably
 the requirements for an Ubuntu server system are lower.
 

@@ -50,7 +50,7 @@ entsprechende Windowstools nutzen, um dd Backups wiederherzustellen. Für andere
 Backuptypen wie tar oder rsync ist ein Linux notwendig.
 
 Allerdings kann man dazu die Raspberry benutzen: Man bespielt eine neue SD
-Karte mit RaspbianOS und kopiert darauf *raspiBackup*. Dann schließt man
+Karte mit Raspberry Pi OS und kopiert darauf *raspiBackup*. Dann schließt man
 das Gerät, auf welches das Backup zurückgespielt werden soll,
 sowie das Medium mit dem Backup an die Raspberry an.
 Danach ruft man *raspiBackup* auf und lässt ein gewünschtes Backup auf das
@@ -615,7 +615,7 @@ Unterverzeichnisse überwacht werden.
 
 Prinzipiell sollte das gehen bzw. geht es schon für bestimmte nicht
 Raspberry Hardware. Einfach ausprobieren. *raspiBackup* wird aber [nur für
-RaspbianOS und Raspberry HW](supported-hardware-and-software.md) unterstützt. D.h. wenn es funktioniert, sei
+Raspberry Pi OS und Raspberry HW](supported-hardware-and-software.md) unterstützt. D.h. wenn es funktioniert, sei
 glücklich. Wenn es nicht funktioniert, frage aber nicht nach Support. :-)
 
 Beim Aufruf muss dann noch die Option `--unsupportedEnvironment` mitgegeben werden.

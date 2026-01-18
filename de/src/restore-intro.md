@@ -39,7 +39,7 @@ Weitere Themen auf dieser Seite:
 ------------------
 
 
-## Wiederherstellungsszenario mit einer Raspberry mit RaspbianOS
+## Wiederherstellungsszenario mit einer Raspberry mit Raspberry Pi OS
 
 Jedes Backup kann mit der/einer Raspberry Pi wiederhergestellt werden.
 
@@ -104,7 +104,7 @@ und eine Partition für ein eventuelles externes Rootfilesystem bereitgestellt.
 
 Dann *raspiBackup* zum Restore starten, Aufruf siehe [unten](#devicenames).
 
-Wenn kein RaspbianOS und/oder keine Raspberry Pi genutzt werden,
+Wenn kein Raspberry Pi OS und/oder keine Raspberry Pi genutzt werden,
 muss noch die Option [--unsupportedEnvironment](general-options.md#parm_unsupportedEnvironment) angegeben werden.
 
 Siehe auch [Unterstützte Hard- und Software](supported-hardware-and-software.md).

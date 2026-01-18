@@ -38,7 +38,7 @@ Further topics on this page:
 ------------------
 
 
-## Recovery scenario with a Raspberry with RaspbianOS
+## Recovery scenario with a Raspberry with Raspberry Pi OS
 
 Any backup can be restored using the Raspberry Pi.
 
@@ -101,7 +101,7 @@ and a partition is provided for any external root file system in hybrid boot mod
 
 Then start *raspiBackup* to restore to a [device](#devicenames).
 
-If no RaspbianOS and/or no Raspberry Pi is used,
+If no Raspberry Pi OS and/or no Raspberry Pi is used,
 the option [--unsupportedEnvironment](general-options.md#parm_unsupportedEnvironment) must be specified.
 
 See also [Supported hardware and software](supported-hardware-and-software.md).

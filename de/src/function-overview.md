@@ -180,7 +180,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Unterstütze Betriebssysteme
 
-      - RaspbianOS / Raspberry Pi OS
+      - Raspberry Pi OS
       - Ubuntu
 
   - Einfacher Systemumzug auf andere Speichermedien

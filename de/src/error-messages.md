@@ -591,7 +591,7 @@ Mit no_root_squash die Backuppartition auf dem NFS Server exportieren.
 
 Ursache:
 
-*raspiBackup* wird nur für Raspberry Pis und RaspbianOS und Ubuntu unterstützt. Man kann mit
+*raspiBackup* wird nur für Raspberry Pis und Raspberry Pi OS und Ubuntu unterstützt. Man kann mit
 der Option --unsupportedEnvironment trotzdem versuchen, *raspiBackup* zu nutzen,
 denn es läuft auch unter vielen anderen Linux Distributionen und
 raspberrykompatibler Hardware. Bei Fehlern wird aber wegen fehlender Testhard-

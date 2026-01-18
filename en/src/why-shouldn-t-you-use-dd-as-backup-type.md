@@ -44,7 +44,7 @@ or *Etcher*.
 
 Instead, you can start *raspiBackup* on a Raspberry.
 If you only have **one** Raspberry available, you should get a one-time
-"emergency SD card" with Raspbian and *raspiBackup* and put it aside,
+"emergency SD card" with Raspberry Pi OS and *raspiBackup* and put it aside,
 until you need it...
 
 For rsync you need an ext2/3/4 file system on the backup partition. This

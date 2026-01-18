@@ -44,7 +44,7 @@ oder *Etcher* vorgenommen werden.
 
 Stattdessen kann man aber *raspiBackup* auf einer Raspberry starten.
 Hat man nur **eine** Raspberry zur Verfügung, sollte man sich einmalig eine
-"Not-SD-Karte" mit Raspbian und *raspiBackup* erstellen und beiseite legen,
+"Not-SD-Karte" mit Raspberry Pi OS und *raspiBackup* erstellen und beiseite legen,
 bis man sie braucht...
 
 Für rsync benötigt man ein ext2/3/4 Filesystem auf der Backuppartition. Dieses

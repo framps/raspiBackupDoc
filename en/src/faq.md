@@ -50,7 +50,7 @@ use the appropriate Windows tools to restore dd backups. For other
 backup types such as tar or rsync a Linux is necessary.
 
 However, you can use the Raspberry for this: You nstall on a new SD
-card RaspbianOS and copy *raspiBackup* to it. Then you connect
+card Raspberry Pi OS and copy *raspiBackup* to it. Then you connect
 the device to which the backup is to be restored
 and the medium with the backup to the Raspberry.
 Then invoke *raspiBackup* and have the desired backup written back to the
@@ -600,7 +600,7 @@ subdirectories are also monitored.
 
 In principle, this should be possible or is already possible for certain non
 Raspberry hardware. Just try it out. But *raspiBackup* will [only for
-RaspbianOS and Raspberry HW](supported-hardware-and-software.md). I.e. if it works, be
+Raspberry Pi OS and Raspberry HW](supported-hardware-and-software.md). I.e. if it works, be
 happy. But if it doesn't work, don't ask for support. :-)
 
 The option `--unsupportedEnvironment` must then be specified as an invocation parameter.

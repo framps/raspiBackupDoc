@@ -2,7 +2,7 @@
 
 *raspiBackup* wird primär auf einem Linux Desktop entwickelt, aber
 natürlich auf einer richtigen Raspberry getestet. Dazu gibt es verschiedene
-vorab erstellte RaspbianOS Images, die zuerst mit *raspiBackup* restored
+vorab erstellte Raspberry Pi OS  Images, die zuerst mit *raspiBackup* restored
 und dann mit den neuen bzw. geänderten Code von *raspiBackup*
 manuell getestet werden. Nach erfolgreichen Test steht eine neue Version von
 *raspiBackup* an, allgemein verfügbar gemacht zu werden.

@@ -13,7 +13,7 @@ Der Regressionstest wird in einer virtualisierten Umgebung auf einem Linux
 Desktop, in der eine [Raspi per Qemu](https://linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) simuliert wird, durchgeführt.
 (Siehe [Entwicklungsumgebung](development-environment.md).)
 
-Als Basis wird ein *RaspbianOS Lite* genommen.
+Als Basis wird ein *Raspberry Pi OS Lite* genommen.
 Dieses wird mit den Standardoptionen von *raspiBackup* per
 `dd`, `tar` und `rsync` im normalen Modus gesichert, sowohl für ein reines SD
 Kartensystem als auch für ein reines USB Bootsystem. Außerdem wird ein `tar` und

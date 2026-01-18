@@ -8,7 +8,7 @@ and the root file system on an external USB disk.
 *raspiBackup* supports external root partitions and
 an external root partition is also backed up.
 
-In normal backup mode, the two RaspbianOS partitions
+In normal backup mode, the two Raspberry Pi OS partitions
 `/boot` and `/root` of the system device are normally backed up. However, if the root partition
 to an external
 partition (USB stick, USB disk, ...), this external partition is backed up as well as the boot
