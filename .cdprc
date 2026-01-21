@@ -75,7 +75,7 @@ fi
 # Since arrays are not exportable(!?) as required for e.g. __list_files_with_status
 # a normal variable is used for that:
 unset RG RG_IGN
-export RG="rg --type=markdown --no-ignore-parent"
+export RG="rg --type=markdown --no-ignore-parent --smart-case"
 if [[ -f .rgignore_cdprc ]] ; then
     export RG_IGN="${RG} --ignore-file=.rgignore_cdprc"
 else
@@ -85,7 +85,7 @@ fi
 export RG RG_IGN
 
 unset FZF FZF_MULTI
-export FZF="fzf --reverse --exact --no-sort --track --bind=left:abort,right:accept"
+export FZF="fzf --reverse --exact --smart-case --no-sort --track --bind=left:abort,right:accept"
 export FZF_MULTI="${FZF} --multi --bind alt-a:select-all,alt-d:deselect-all"
 
 
@@ -201,7 +201,7 @@ edit_grepped_files() {
         --color "hl:-1:underline,hl+:-1:underline:reverse" \
         --prompt '1. ripgrep> ' \
         --delimiter : \
-        --header 'Alt-g: Switch between ripgrep/fzf' \
+        --header 'Alt-g: Switch between ripgrep/fzf  (Hint: Both have smart-case matching enabled)' \
         --preview "${BAT} --color=always --theme=ansi {1} --highlight-line {2}" \
         --preview-window 'up,60%,border-bottom,+{2}+3/3,~3' \
         --bind 'enter:execute(${VIM_PROJECT} {1} +{2})'
