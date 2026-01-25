@@ -38,8 +38,8 @@ If a dd or tar backup is available, the files have to be extracted from the back
 To do this, a snapshot is created (option -M) and then the backup is restored to the new system device.
 
 ```
-sudo raspiBackup -M "Systemumzug" <Backupverzeichnis>
-sudo raspiBackup -d /dev/sda <Backupverzeichnis>_Systemumzug
+sudo raspiBackup -M "systemmove" <backup directory>
+sudo raspiBackup -d /dev/sda <backup directory>_systemmove
 ```
 
 ## A system with a separate data partition no longer boots
