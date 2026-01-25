@@ -46,7 +46,7 @@ sudo raspiBackup -d /dev/sda <Backupverzeichnis>_Systemumzug
 Ein Restore der Datenpartition ist nicht notwendig. Es muss nur die Boot- und Systempartition restored werden.
 
 ```
-sudo raspiBackup -d /dev/sda -T "1 2
+sudo raspiBackup -d /dev/sda -T "1 2"
 ```
 
 Falls nur wenige Änderungen an der Systempartition vorgenommen wurden kann zusätzlich die Option `-00` genutzt werden.
