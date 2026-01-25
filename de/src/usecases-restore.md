@@ -43,10 +43,10 @@ sudo raspiBackup -d /dev/sda <Backupverzeichnis>_Systemumzug
 
 ## Ein System mit einer separaten Datenpartition bootet nicht mehr
 
-Ein Restore der Datenpartition ist nicht notwendig. Es muss nur die Systempartition (erste Partition) restored werden.
+Ein Restore der Datenpartition ist nicht notwendig. Es muss nur die Boot- und Systempartition restored werden.
 
 ```
-sudo raspiBackup -d /dev/sda -T "1"
+sudo raspiBackup -d /dev/sda -T "1 2
 ```
 
 Falls nur wenige Änderungen an der Systempartition vorgenommen wurden kann zusätzlich die Option `-00` genutzt werden.
