@@ -140,6 +140,26 @@ An example entry in `/etc/fstab` could look like this:
 ```
 LABEL=usb /USBStick ext4 defaults,noatime,nofail 0 2
 ```
+## Nachdem ein Backup erstellt wurde soll das Backup anschliessend sofort auf ein Device zurückgespielt werden um im Backupfall dieses sofort einsetzen zu können
+
+Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hilft folgendes Helperscript:
+
+*raspiBackup* erstellt Backups die im Backupfalle restored werden müssen um dann das System neu zu starten. Das bedeutet eine gewisse Nichtverfügbarkeit des Systems bis der Backup restored wurde. Um die Nichtverfügbarkeit zu minimieren gibt es deshalb ein Helperscript aus der Sammlung der *raspiBackup* [Helpderscripts](https://github.com/framps/raspiBackup/tree/master/helper) mit dem Namen **raspiBackupAndClone**. Um dieses nutzen zu können sind ein paar manuelle Konfigurationen notwendig.
+
+1. Das Script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) ist in /usr/local/bin zu kopieren und ausführbar zu machen
+2. Die Zeile /etc/systemd/system/raspiBackup.service
+   ```
+   ExecStart=/usr/local/bin/raspiBackup.sh
+   ```
+   ist in
+   ```
+   ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
+   ```
+zu ändern wobei \<restoredevice\> das Device sein muss auf dem das Backup restored werden soll.
+Z.B. `/dev/sda` oder `/dev/mmcblk1`
+
+
+
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/konfigurationsbeispiele
 [.source]: https://www.linux-tips-and-tricks.de/en/configuration-samples
