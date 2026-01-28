@@ -140,25 +140,22 @@ An example entry in `/etc/fstab` could look like this:
 ```
 LABEL=usb /USBStick ext4 defaults,noatime,nofail 0 2
 ```
-## Nachdem ein Backup erstellt wurde soll das Backup anschliessend sofort auf ein Device zurückgespielt werden um im Backupfall dieses sofort einsetzen zu können
+## Once a backup has been created, it should be restored to a device immediately so that it can be used right away in the event of a backup
 
-Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hilft folgendes Helperscript:
+It is often important to keep downtime to a minimum. The following helper script can help with this:
 
-*raspiBackup* erstellt Backups die im Backupfalle restored werden müssen um dann das System neu zu starten. Das bedeutet eine gewisse Nichtverfügbarkeit des Systems bis der Backup restored wurde. Um die Nichtverfügbarkeit zu minimieren gibt es deshalb ein Helperscript aus der Sammlung der *raspiBackup* [Helpderscripts](https://github.com/framps/raspiBackup/tree/master/helper) mit dem Namen **raspiBackupAndClone**. Um dieses nutzen zu können sind ein paar manuelle Konfigurationen notwendig.
-
-1. Das Script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) ist in /usr/local/bin zu kopieren und ausführbar zu machen
-2. Die Zeile /etc/systemd/system/raspiBackup.service
+*raspiBackup* creates backups that must be restored in the event of a backup failure in order to restart the system. This means that the system will be unavailable until the backup has been restored. To minimize this downtime, there is a helper script from the *raspiBackup* [Helperscripts](https://github.com/framps/raspiBackup/tree/master/helper) collection called **raspiBackupAndClone**. A few manual configurations are necessary to use this.
+ 
+1. Copy the script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) to /usr/local/bin and make it executable.
+2. Change the line /etc/systemd/system/raspiBackup.service
    ```
    ExecStart=/usr/local/bin/raspiBackup.sh
    ```
-   ist in
-   ```
+   to
+    ```
    ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
    ```
-zu ändern wobei \<restoredevice\> das Device sein muss auf dem das Backup restored werden soll.
-Z.B. `/dev/sda` oder `/dev/mmcblk1`
-
-
+   where \<restoredevice\> must be the device on which the backup is to be restored. For example, `/dev/sda` or `/dev/mmcblk1`. 
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/konfigurationsbeispiele

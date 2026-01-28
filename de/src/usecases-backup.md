@@ -158,8 +158,8 @@ Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hil
    ```
    ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
    ```
-zu ändern wobei \<restoredevice\> das Device sein muss auf dem das Backup restored werden soll.
-Z.B. `/dev/sda` oder `/dev/mmcblk1`
+   zu ändern wobei \<restoredevice\> das Device sein muss auf dem das Backup restored werden soll. Z.B. `/dev/sda` oder `/dev/mmcblk1`
+
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/konfigurationsbeispiele
