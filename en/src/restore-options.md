@@ -55,7 +55,7 @@ data of the source system on the target device. If there is not enough space, th
 <a name="parm_N"></a>
 ### -N: Extensions to be called before and after the restore
 
-Activation of own script extensions (plugins). See [this page](hooks-for-own-scripts.md),
+Activation of own script extensions. See [this page](hooks-for-own-scripts.md),
 which also offers two sample extensions that control the CPU temperature and the
 memory usage before and after the backup run.
 

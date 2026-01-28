@@ -160,11 +160,11 @@ There are various possibilities:
     is used and performs additional actions before and after the
     backup run, e.g. to save other things.
 
-  - Any extension points (extensions) can be called before and after the backup
+  - Any extensionpoints can be called before and after the backup
     and/or restore from *raspiBackup*. Two
     example extensions (see [here](hooks-for-own-scripts.md)) additionally report the CPU temperature before
     and after the backup run as well as the occupied main memory. An
-    eMailExtension allows you to control any other eMail client.
+    eMailExtensionPoint allows you to control any other eMail client.
 
 <a name="faq10"></a>
 ### 10) Which eMailClients are supported by *raspiBackup*?
@@ -176,7 +176,7 @@ sendEmail. Other email clients can be addressed via an email extension
 <a name="faq11"></a>
 ### 11) My eMailClient is unfortunately not supported by *raspiBackup*. How can I still receive emails?
 
-*raspiBackup* can use an email extension (extension plugpoint) to send the email.
+*raspiBackup* can use an eMailExtensionipoint to send the email.
 To do this, you have to write a small script, which sets the
 eMailParameters corresponding to the eMailClient used and
 calls the eMailClient with the correct syntax. An example extension

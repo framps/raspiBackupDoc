@@ -163,25 +163,25 @@ Da gibt es verschiedene Möglichkeiten:
     wird benutzt und nimmt vor und nach dem
     Backuplauf weitere Aktionen vor wie z.B. weitere Dinge zu sichern.
 
-  - Beliebige Erweiterungspunkte (Extensions) können vor und nach dem Backup
+  - Beliebige Erweiterungspunkte können vor und nach dem Backup
     und/oder restore von *raspiBackup* aufgerufen werden. Zwei
     Beispielerweiterungen (Siehe [hier](hooks-for-own-scripts.md)) melden zusätzlich die CPU Temperatur vor
-    und nach dem Backuplauf sowie den belegten Hauptspeicher. Eine
-    eMailExtension erlaubt es beliebige andere eMailClients anzusteuern.
+    und nach dem Backuplauf sowie den belegten Hauptspeicher. Ein
+    eMailErweiterungspunkt erlaubt es beliebige andere eMailClients anzusteuern.
 
 
 <a name="faq10"></a>
 ### 10) Welche eMailClients werden von *raspiBackup* unterstützt?
 
 *raspiBackup* unterstützt Exim4, Postfix und nullmailer, ssmtp, msmtp und
-sendEmail. Andere eMailClients können über ein eMail Erweiterung (Extension)
+sendEmail. Andere eMailClients können über einen eMail Erweiterungspunkt
 angesprochen werden (Details siehe [hier](hooks-for-own-scripts.md)).
 
 
 <a name="faq11"></a>
 ### 11) Mein eMailClient wird leider nicht von *raspiBackup* unterstützt. Wie kann ich trotzdem eMails erhalten?
 
-*raspiBackup* kann eine eMailErweiterung (extension plugpoint) zum Senden der
+*raspiBackup* kann eine eMailErweiterungspunkt zum Senden der
 eMail benutzen. Dazu muss ein kleines Script geschrieben werden, welches die
 eMailParameter entsprechende dem verwendeten eMailClient aufbereitet und
 den eMailClient mit der korrekten Syntax aufruft. Eine Beispielerweiterung

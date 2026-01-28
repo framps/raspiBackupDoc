@@ -198,7 +198,7 @@ Delete them manually.
 <a name="parm_N"></a>
 ### -N: Extensions to be called before and after the backup
 
-Activation of own script extensions (plugins). See [this page](hooks-for-own-scripts.md),
+Activation of own script extensions. See [this page](hooks-for-own-scripts.md),
 which also offers two sample extensions that control the CPU temperature and the
 memory usage before and after the backup run.
 

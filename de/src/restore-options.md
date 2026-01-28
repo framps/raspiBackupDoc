@@ -55,7 +55,7 @@ Daten des Quellsystems vorhanden sein. Ist nicht genügend Platz, wird der Resto
 <a name="parm_N"></a>
 ### -N: Erweiterungen, die vor und nach dem Restore aufgerufen werden sollen
 
-Aktivierung von eigenen Scripterweiterungen (Plugins). Siehe dazu [diese Seite](hooks-for-own-scripts.md),
+Aktivierung von eigenen Scripterweiterungen. Siehe dazu [diese Seite](hooks-for-own-scripts.md),
 die auch zwei Beispielerweiterungen anbietet, die die CPU Temperatur und die
 Speicherbelegung vor und nach dem Backuplauf ausgeben.
 

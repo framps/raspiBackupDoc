@@ -131,7 +131,7 @@ Dies ermöglicht einige kleine Kniffe:
 
 # Ergänzende Informationen für Entwickler
 
-- [Erweiterungen/Plugins](hooks-for-own-scripts.md)
+- [Erweiterungspunkte](hooks-for-own-scripts.md)
 - [Erweiterungsscripte](extension-scripts.md)
 - [Unterstütze weitere Sprachen](local-language-support-for-languages-other-than-de-and-en-l10n.md)
 

@@ -1,10 +1,10 @@
-# Erweiterungen/Plugins
+# Erweiterungspunkte
 
 Es besteht die Möglichkeit, eigene Codeerweiterungen vor und nach dem
 Backupprozess des Scripts einzubinden. Dieses ist sinnvoll, wenn
 eigentlich Änderungen im Backupscript notwendig sind, die aber dann
 nach jedem Update von *raspiBackup* auf eine neue Version wieder neu
-eingepflegt werden müssten. Die Extensions (Plugins) sind unabhängig vom
+eingepflegt werden müssten. Die Extensions sind unabhängig vom
 jeweiligen Codestand von *raspiBackup* und deshalb in diesem Falle zu
 empfehlen.
 
@@ -16,17 +16,17 @@ und nach dem Backup ausgegeben.
 Die letzte Erweiterung wird nur am Ende des Backups aufgerufen und kann bei Erfolg
 bzw. Misserfolg des Backups unterschiedliche Aktionen auslösen.
 
-Wer nützliche Erweiterungenfür die Community erstellt hat, kann sie gerne im
+Wer nützliche Erweiterungen für die Community erstellt hat, kann sie gerne im
 deutschen [Raspberry Pi Forum](https://forum-raspberrypi.de/forum/board/164-raspibackup/) vorstellen und die Downloadlocation nennen.
-Sollten Fähigkeiten der Plugins fehlen, bitte einen [Issue bei *GitHub*](https://github.com/framps/raspiBackup/issues) anlegen.
+Sollten Fähigkeiten der Erweiterungspunkte fehlen, bitte einen [Issue bei *GitHub*](https://github.com/framps/raspiBackup/issues) anlegen.
 
 Außerdem existieren interessante, von
-[*raspiBackup* Nutzern geschriebene, Plugins](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
+[*raspiBackup* Nutzern geschriebene Erweiterungen](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
 
 
 ### Plugin-Aufrufstellen beim Backup
 
-Die verschiedenen Plugins werden an folgenden Stellen im Backupverlauf
+Die verschiedenen Erweiterungen werden an folgenden Stellen im Backupverlauf
 aufgerufen:
 
   - eMail Plugin (mem)
@@ -59,7 +59,7 @@ aufgerufen:
 
 ### Plugin-Aufrufstellen beim Restore
 
-Die verschiedenen Plugins werden an folgenden Stellen im Restoreverlauf
+Die verschiedenen Erweiterungen werden an folgenden Stellen im Restoreverlauf
 aufgerufen:
 
   - PRE_RESTORE_EXTENSION
@@ -111,7 +111,7 @@ Dadurch werden die folgenden Scripts nach`/usr/local/bin` kopiert:
    genutzt werden soll.
 
 
-Um die Plugins zu aktivieren, ist noch folgender zusätzlicher
+Um die Erweiterungen zu aktivieren, ist noch folgender zusätzlicher
 Aufrufparameter bei *raspiBackup* notwendig:
 
 ```
@@ -144,7 +144,7 @@ müssen `raspiBackup_<extension>_pre.sh` und/oder
 
 Alle anderen Extensions müssen kein `_pre` und `_post` am Ende haben.
 
-Die Plugins erzeugen folgende Meldungen:
+Die Erweiterungen erzeugen folgende Meldungen:
 
 ```
 --- RBK1001I: Memory usage - Pre backup - Used: 97 MB Free: 130 MB - Post backup - Used: 98 MB Free: 121 MB

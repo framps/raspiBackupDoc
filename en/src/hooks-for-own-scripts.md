@@ -1,10 +1,10 @@
-# Extensions/Plugins
+# Extensionpoints
 
 It is possible to integrate your own code extensions before and after the
 back-up process of the script. This is useful if
 changes are actually necessary in the backup script, but which then have to be
 would have to be updated again after each update of *raspiBackup* to a new version.
-version. The extensions (plugins) are independent of the
+version. The extensions are independent of the
 version of *raspiBackup* and are therefore recommended in this case.
 
 [Example extensions](https://github.com/framps/raspiBackup/tree/master/extensions)
@@ -19,13 +19,13 @@ Anyone who has created useful extensions for the community is welcome to post th
 German [Raspberry Pi Forum](https://forum-raspberrypi.de/forum/board/164-raspibackup/) and name the download location.
 If plugin features are missing, please create an [Issue at *GitHub*](https://github.com/framps/raspiBackup/issues).
 
-In addition, there are interesting plugins provided by
-[*raspiBackup* users written plugins](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
+In addition, there are interesting extensions provided by
+[*raspiBackup* users written extensions](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
 
 
-### Plugin invocation locations during backup
+### Extension invocation locations during backup
 
-The various plugins are called at the following points in the backup process
+The extensions are called at the following points in the backup process
 are called:
 
   - eMail plugin (mem)
@@ -110,7 +110,7 @@ This will copy the following scripts to `/usr/local/bin`:
    is to be used.
 
 
-To activate the plugins, the following additional
+To activate the extension, the following additional
 invocation parameter for *raspiBackup* is necessary:
 
 ```
@@ -142,7 +142,7 @@ must be called `raspiBackup_<extension>_pre.sh` and/or
 
 All other extensions must not have `_pre` and `_post` at the end.
 
-The plugins generate the following messages:
+The extensions generate the following messages:
 
 ```
 --- RBK1001I: Memory usage - Pre backup - Used: 97 MB Free: 130 MB - Post backup - Used: 98 MB Free: 121 MB
