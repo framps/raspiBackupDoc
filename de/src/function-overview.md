@@ -150,9 +150,9 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     Liste von Fehlermeldungen und wie man die Fehlermeldungen beseitigen
     kann und vieles mehr ist dokumentiert
 
-  - Hilfs- und Beispielscripts
+  - Erweiterungsscripts
 
-    Verschiedene [Hilfs- und Beispielscripts](useful-helper-scripts.md) stehen zur Verfügung.
+    Verschiedene [Erweiterunsscripte](extension-scripts.md) stehen zur Verfügung.
 
     Sie können die Funktionalität von *raspiBackup* erweitern und entweder unverändert genutzt
     oder an eigene Anforderungen angepasst werden.

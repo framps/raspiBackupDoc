@@ -103,9 +103,7 @@ That allows for some tricks:
 
 - [Error messages](error-messages.md)
 
-- [Extension scripts](helper-scripts.md)
-    - [raspiBackupDialog - A convenient extension script](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
-    - [More extension scripts](useful-helper-scripts.md)
+- [raspiBackupDialog](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
 
 - [Backup targets](backup-targets.md)
     - [NFS as backuptarget](nfs-as-backuptarget.md)
@@ -131,9 +129,8 @@ That allows for some tricks:
 # Developer guide
 
 - [Extensionspoints](hooks-for-own-scripts.md)
-- [Extension scripts](extension-scripts.md)
+- [Extensionscripts](extension-scripts.md)
 - [Support new languages](local-language-support-for-languages-other-than-de-and-en-l10n.md)
-
 
 [.status]: z_SUMMARY
 [.status]: translated

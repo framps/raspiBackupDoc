@@ -148,9 +148,9 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     list of error messages and how to eliminate the error messages
     and much more is documented
 
-  - Helper and sample scripts
+  - Extension scripts 
 
-    Various [helper and example scripts](useful-helper-scripts.md) are available.
+    Various [extension scrtips](extension-scripts.md) are available.
 
     They can extend the functionality of *raspiBackup* and can either be used unchanged
     or adapted to your own requirements.

@@ -104,9 +104,7 @@ Dies ermöglicht einige kleine Kniffe:
 
 - [Fehlermeldungen und -suche](error-messages.md)
 
-- [Erweiterungsscripte](helper-scripts.md)
-    - [raspiBackupDialog - Ein komfortables Erweiterungsscript](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
-    - [Weitere Erweiterungsscripte](useful-helper-scripts.md)
+- [raspiBackupDialog](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
 
 - [Backupziele](backup-targets.md)
     - [NFS als Backupziel](nfs-as-backuptarget.md)
