@@ -197,9 +197,9 @@ Für *Postfix* und *nullmailer* muss mail benutzt werden und die mailtools insta
 Für *sendEmail* muss der Parameter -E zusätzlich genutzt werden für weitere
 obligatorische Parameter (Siehe [Parameter -E Beschreibung](#parm_E) für Details).
 
-Es kann auch ein eMailPlugin benutzt werden, um eMails zu verschicken. Damit
+Es kann auch ein eMail-Erweiterung benutzt werden, um eMails zu verschicken. Damit
 können beliebige weitere eMailClients in *raspiBackup* eingebunden werden. Der `-s`
-Parameter muss dann "mailext" sein. Details zum eMailPlugin siehe [diese Seite](hooks-for-own-scripts.md).
+Parameter muss dann "mailext" sein. Details zur eMail-Erweiterung siehe [diese Seite](hooks-for-own-scripts.md).
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|

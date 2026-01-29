@@ -78,7 +78,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     Sicherungsintegrität zu testen.
 
   - Unterstützte eMail-Clients: *mailx*/*mail*, *sendEmail*, *ssmtp* und *msmtp*.
-    Nicht unterstützte eMail-Clients können durch ein eMail-Plugin eingebunden werden.
+    Nicht unterstützte eMail-Clients können durch eine eMail-iErweiterung eingebunden werden.
 
   - Einfaches Update von *raspiBackup* auf die aktuelle Version
 

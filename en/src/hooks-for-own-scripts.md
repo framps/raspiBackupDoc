@@ -17,7 +17,7 @@ and can trigger different actions if the backup is successful or unsuccessful.
 
 Anyone who has created useful extensions for the community is welcome to post them in the
 German [Raspberry Pi Forum](https://forum-raspberrypi.de/forum/board/164-raspibackup/) and name the download location.
-If plugin features are missing, please create an [Issue at *GitHub*](https://github.com/framps/raspiBackup/issues).
+If extension features are missing, please create an [Issue at *GitHub*](https://github.com/framps/raspiBackup/issues).
 
 In addition, there are interesting extensions provided by
 [*raspiBackup* users written extensions](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
@@ -28,8 +28,8 @@ In addition, there are interesting extensions provided by
 The extensions are called at the following points in the backup process
 are called:
 
-  - eMail plugin (mem)
-  - Notification (notify) plugin, if activated (DEFAULT_NOTIFY_START)
+  - eMail extension (mem)
+  - Notification extension (notify), if activated (DEFAULT_NOTIFY_START)
   - Slack*, *Pushover* and *Telegram* notifications, if configured and if
     switched on (DEFAULT_NOTIFY_START)
   - BEFORE_STOPSERVICES (defined commands are executed)
@@ -56,9 +56,9 @@ are called:
 
 
 
-### Plugin invocation positions during restore
+### Extension invocation positions during restore
 
-The various plugins are called at the following points in the restore process
+The various extensions are called at the following points in the restore process
 are called:
 
   - PRE_RESTORE_EXTENSION

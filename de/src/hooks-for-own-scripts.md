@@ -24,13 +24,13 @@ Außerdem existieren interessante, von
 [*raspiBackup* Nutzern geschriebene Erweiterungen](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
 
 
-### Plugin-Aufrufstellen beim Backup
+### Erweiterungsaufrufstellen beim Backup
 
 Die verschiedenen Erweiterungen werden an folgenden Stellen im Backupverlauf
 aufgerufen:
 
-  - eMail Plugin (mem)
-  - Notification (notify) Plugin, wenn eingeschaltet (DEFAULT_NOTIFY_START)
+  - eMail Erweiterung (mem)
+  - Notification Erweiterung (notify), wenn eingeschaltet (DEFAULT_NOTIFY_START)
   - *Slack*, *Pushover* und *Telegram* Notifications, falls konfiguriert und wenn
     eingeschaltet (DEFAULT_NOTIFY_START)
   - BEFORE_STOPSERVICES (Definierte Befehle werden ausgeführt)
@@ -57,7 +57,7 @@ aufgerufen:
 
 
 
-### Plugin-Aufrufstellen beim Restore
+### Erweiterungsaufrufstellen beim Restore
 
 Die verschiedenen Erweiterungen werden an folgenden Stellen im Restoreverlauf
 aufgerufen:
