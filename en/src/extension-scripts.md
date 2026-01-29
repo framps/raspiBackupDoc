@@ -55,9 +55,8 @@ They are available for download on [*GitHub*](https://github.com/framps/raspiBac
 ## User-written extensions
 
 There are also [Extensions](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided),
-written by *raspiBackup* users and made generally available in the *raspiBackup
-available in the *raspiBackup* repository via PR.
-Further own extensions will be added via PR.
+written by *raspiBackup* users and made generally available in the 
+*raspiBackup* repository via PR. Any user written extensions are welcome in a PR.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/507-raspibackup-nuetzliche-hilfsprogramme
