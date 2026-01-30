@@ -106,11 +106,9 @@ The code of *raspiBackup* is available under the GPL on [*GitHub*](https://githu
 *raspiBackup* was created for personal use and, as it proved to be very useful,
 made available to the general public.
 
-The correct functionality is tested as far as possible
-but it cannot be ruled out that errors in
-*raspiBackup* the expected functionality is not guaranteed.
-Anyone using *raspiBackup* does so at their own risk.
-
+Correct functionality is tested as far as possible, but it cannot be ruled out that errors in 
+**raspiBackup** may prevent the expected functionality from being guaranteed. 
+Anyone who uses **raspiBackup** does so at their own risk.
 The creator of *raspiBackup* is in no way liable for
 any malfunction of the script.
 
