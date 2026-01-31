@@ -48,12 +48,18 @@ Backupspace zu sparen. Voraussetzung: Der Backupspace unterstützt Hardlinks
 
 ### DEFAULT_MAIL_ON_ERROR_ONLY
 
-Nur im Fehlerfalle wird eine eMailbenachrichtigung gesendet. 
+Nur im Fehlerfalle wird eine eMailbenachrichtigung gesendet.
 
 **Ausnahmen:**
-Gibt es eine Warmeldung, ein neues Release, eine Beta oder wird an einen Restoretest erinnert, wird eine eMail trotzdem gesendet.
+
+In folgenden Fällen wird trotz dieser Option eine eMail gesendet:
+1. Bei jeder Warnmeldung
+1. Hinweis auf die Verfügbarkeit eines neuen Releases (RBK0080I)
+1. Hinweis auf die Verfügbarkeit einer Beta (RBK0168I)
+1. Hinweis wieder einen Restoretest durchzuführen (RBK0202I)
 
 **Hinweis:**
+
 Sollte *raspiBackup* wegen außergewöhnlicher Umstände abstürzen, kann es passieren,
 dass keine eMail gesendet wird.
 

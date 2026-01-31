@@ -48,9 +48,19 @@ Prerequisite: The backup space supports hard links
 
 ### DEFAULT_MAIL_ON_ERROR_ONLY
 
-An email notification is only sent in the event of an error.
+An eMail notification is only sent in the event of an error.
+
+**Exceptions:**
+
+In the following cases an email will be sent despite this option:
+1. For every warning message 
+1. Notification of the availability of a new release (RBK0080I)
+1. Notification of the availability of a beta (RBK0168I)
+1. Notification to perform a restore test again (RBK0202I) 
+
 **Note:**
-If *raspiBackup* crashes due to exceptional circumstances, it may happen that no e-mail is sent,
+
+If *raspiBackup* crashes due to exceptional circumstances it may happen that no eMail is sent,
 
 | Config option | Default |
 |----------------------------|----------|
