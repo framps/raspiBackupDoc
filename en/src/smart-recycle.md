@@ -16,7 +16,7 @@ This can be adapted to the respective requirements using the installer.
 
 If weekly backups are created, the daily backups are of course omitted.
 The respective retention periods for daily, weekly, monthly and yearly backups can be
-mannually configured with options.
+manually configured with options.
 
 So if you only want to have weekly, monthly and annual backups, this can be configured.
 It should be noted that the weekly backup day then
@@ -44,7 +44,7 @@ annual backups always from the 1st of the year.
 
 ## Graphical representation
 
-![smartStrategy](images/smartStrategy.jpg)
+![smart Strategy](images/smartStrategy.jpg)
 
 
 ## Example - backup directory (daily backup run, default options: 7/4/12/3)

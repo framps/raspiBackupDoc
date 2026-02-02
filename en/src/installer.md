@@ -2,7 +2,7 @@
 
 ## Installer download, invocation and installation
 
-Enter the following commands in a command window to dowload and invoke the installer
+Enter the following commands in a command window to download and invoke the installer
  
 ```
 curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
@@ -32,7 +32,7 @@ to keep backup versions:
    are deleted in each case. In the installer, the number of
    backups to be kept is defined with 4 numbers. The default is
    `7 4 12 3`.
- 
+
    1. Daily backups (7)
    1. Weekly backups (4)
    1. Monthly backups (12)
@@ -47,7 +47,7 @@ to keep backup versions:
 Since *raspiBackup* does not back up any memory contents, all services that hold important information
 in memory should be stopped before the backup.
 
-*raspiBackup* offers the option of automatically stop services before the backup and then 
+*raspiBackup* offers the option of automatically stop services before the backup and then
 restart them afterwards. All services preselected in the installer should always be stopped.
 As it cannot be ruled out that other services on the system may also hold important data
 in the memory and should be stopped before the backup, the list of services that are not
@@ -64,7 +64,7 @@ so that they can complete any open transactions.
 ### Regular backup - Menu C9
 
 *raspiBackup* offers the possibility to create regular backups automatically.
-This is done by default via *Systemd*, but can also be started with **Cron* 
+This is done by default via *Systemd*, but can also be started with **Cron*
 if the option `-t` is used when the installer is started.
 
 The day of the week on which a backup is to be created can be defined in the installer.
@@ -147,7 +147,7 @@ sudo raspiBackupInstallUI -u
 This will delete the installer as well as *raspiBackup* with all its files!
 
 
-## Call the installation without installer directly from the command line without the menu 
+## Call the installation without installer directly from the command line without the menu
 
 If you do not want to use a menu-driven installation, you can run the installation of *raspiBackup*
 and the sample extensions or uninstall directly from the command line.

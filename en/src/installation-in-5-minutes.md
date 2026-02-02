@@ -21,22 +21,22 @@ The primary platforms (Linux, Mac or Windows) of the users are also covered ther
                                                                                                                      
 There are different ways to install and configure *raspiBackup*:
 
-1) Download and invoke the installer on the command line to install *raspiBackup*. The convenient method. 
+1) Download and invoke the installer on the command line to install *raspiBackup*. The convenient method.
    ```
    curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
    ```
    [Here](installer.md) you will find some detailed information about a few configuration options.
 
-2) Download and invoke the installer on the command line to install *raspiBackup* with it's default konfiguration. 
+2) Download and invoke the installer on the command line to install *raspiBackup* with it's default configuration.
    Intended for experienced *raspiBackup* users who want to install raspiBackup on additional Raspberries.
    ```
    curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
    ```
-   [Here](installer.md) the standard configuration is described. 
+   [Here](installer.md) the standard configuration is described.
 
 3) [Manually without installer](using-raspibackup-without-installation.md) for folks who don't trust the installer and sudo.
 
-    The source code for *raspiBackup* and the installer can be viewed on the following pages. 
+    The source code for *raspiBackup* and the installer can be viewed on the following pages.
 
    - [Download *raspiBackup*](https://github.com/framps/raspiBackup/blob/master/raspiBackup.sh)
    - [Download raspiBackupInstallUI](https://github.com/framps/raspiBackup/blob/master/installation/raspiBackupInstallUI.sh)
@@ -44,7 +44,7 @@ There are different ways to install and configure *raspiBackup*:
 
 ## The *raspiBackup* installer
 
-*raspiBackup* has a menu-driven UI installer and basic configurator,
+*raspiBackup* has a menu-driven UI installer and basic configuraton,
 `raspiBackupInstallUI`, with which *raspiBackup* can be easily installed
 and the basic features configured.
 
@@ -125,7 +125,7 @@ The installer can be restarted at any time in the command line with
 
 ## Systemd to start the backup automatically at regular intervals
 
-After both backup and restore have been successfully tested and the 
+After both backup and restore have been successfully tested and the
 services to be stopped before the backup have been configured, *raspiBackup* can be scheduled via *Systemd timer*
 for automatic execution at the desired interval.
 

@@ -6,7 +6,7 @@
 
 ------------------
 
-**Hinweis:** Optionen in der Konfigdatei, die ja/an oder nein/aus als Parameter
+**Hinweis:** Optionen in der Konfigurationsdatei, die ja/an oder nein/aus als Parameter
 benötigen, müssen 0 für nein und 1 für ja sein. Kein Eintrag in
 der Standardspalte bedeutet, der Standard ist `""`
 

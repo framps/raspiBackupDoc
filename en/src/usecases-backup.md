@@ -1,4 +1,4 @@
-# Typical backup usecases 
+# Typical backup use cases 
 
 Various application examples of
 *raspiBackup* and their configuration are presented and explained. They are intended to
@@ -44,12 +44,12 @@ DEFAULT_ZIP_BACKUP=1
 ```
 
 also reduces the size of the image, but this cannot be restored directly
-under Windows. Unzipi it first.
+under Windows. Unzip it first.
 
 ## A Raspberry should be backed up as quickly as possible. The backup partition is an EXT4 file system mounted via NFS, which is provided by a NAS
 
 First, the backup partition of the NAS should be mounted. This should be done in
-`/etc/fstab` where the NFS partition should be defined and will automatically ibe mounted under `/backup`.
+`/etc/fstab` where the NFS partition should be defined and will automatically be mounted under `/backup`.
 
 ```
 DEFAULT_BACKUPTYPE=rsync

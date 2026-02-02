@@ -6,7 +6,7 @@ months a full backup can be created with `tar` and in between a weekly `rsync` d
 However, this requires manual configuration of *Systemd* timers and requires
 good *Systemd* knowledge. The *raspiBackupInstaller* configures only one backup type.
 
-All backup types can be completely restored with *raspiBackup*. A `dd` backup can also be restored wth a Windows system.
+All backup types can be completely restored with *raspiBackup*. A `dd` backup can also be restored with a Windows system.
 
 A `dd` backup creates a consistent binary image of the system.
 The entire device with the system is always read and backed up. This means that
@@ -54,7 +54,7 @@ initial backup has already been created.
 
 <a name="decisiontree"></a>
 
-![decisiontree](images/decisiontree_en.dia.jpg)
+![decision tree](images/decisiontree_en.dia.jpg)
 
 ``` admonish info title="Note"
 Take the [advantages and disadvantages of the possible file systems](which-filesystem-can-be-used-on-the-backup-partition.md) into account.

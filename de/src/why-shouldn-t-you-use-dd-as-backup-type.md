@@ -15,7 +15,7 @@ zu nutzen.
    gemeldet, wenn die Bits nicht gelesen werden können. Es kommt aber auch immer
    mal wieder vor, dass es Filesystemfehler gibt. Diese entstehen i.d.R. durch
    plötzlichen Stromausfall. Diese Fehler bemerkt dd nicht. D.h. dd sichert
-   eine Parition inklusive der Filesystemfehler, die dann beim Restore auch
+   eine Partition inklusive der Filesystemfehler, die dann beim Restore auch
    wiederhergestellt werden. Somit hat man eine exakte Kopie des Systems mit
    Filesystemfehlern. Man legt immer weiter Backups an, im Glauben das alles OK
    ist und löscht dann irgendwann auch alte Backups. Somit werden nach und nach
@@ -54,7 +54,7 @@ kann unter Linux erstellt werden. Den Restore wird auch wieder mit
 ## Weitere Nachteile von dd Backups
 
 Bei einem dd Backup wird immer die gesamte Partition gesichert - selbst wenn
-nur ein Bruchteil der Partition (z.B. 33%) genutzt wird. Dass heisst bei einer
+nur ein Bruchteil der Partition (z.B. 33%) genutzt wird. Dass heißt bei einer
 64GB Partition werden immer 42GB umsonst gesichert, der Sicherungsprozess
 dauert unnötigerweise 66% länger und die Sicherung belegt 66% mehr
 Speicherplatz. Es gibt die Option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY** mit der
@@ -63,8 +63,8 @@ man nur die existierende Rootpartition sichert und nicht das gesamte Gerät.
 ## Welchen Backuptyp ist der Beste?
 
 Die effizienteste Backuptyp ist *rsync*. Durch die Benutzung von Hardlinks
-werden nur Dateien kopiert, die sich geändert haben und somit ist jeder ausser
-dem ersten Backupvorgang relativ schnell beendet. Ausserdem liegen die
+werden nur Dateien kopiert, die sich geändert haben und somit ist jeder außer
+dem ersten Backupvorgang relativ schnell beendet. Außerdem liegen die
 Backupdateien entpackt vor und auf sie kann direkt zugegriffen werden, wenn nur
 ein paar Dateien aus dem Backup benötigt werden. Bei *tar* und *dd* muss man
 die Backups erst umständlich entpacken.

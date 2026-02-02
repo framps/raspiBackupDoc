@@ -143,7 +143,7 @@ Ein Beispieleintrag in der `/etc/fstab` könnte wie folgt aussehen:
 LABEL=usb    /USBStick    ext4     defaults,noatime,nofail        0    2
 ```
 
-## Nachdem ein Backup erstellt wurde soll das Backup anschliessend sofort auf ein Device zurückgespielt werden um im Backupfall dieses sofort einsetzen zu können
+## Nachdem ein Backup erstellt wurde soll das Backup anschließend sofort auf ein Device zurückgespielt werden um im Backupfall dieses sofort einsetzen zu können
 
 Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hilft folgendes Helperscript:
 

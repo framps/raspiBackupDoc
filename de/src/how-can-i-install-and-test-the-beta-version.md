@@ -30,7 +30,7 @@ sudo raspiBackup -U
 ```
 
 Dabei wird die aktuelle *raspiBackup* Version gesichert, so dass jederzeit
-wieder auf die vorhergehende Version zurückgewechselt werden kann.
+wieder auf die vorhergehende Version zurück gewechselt werden kann.
 Dies geschieht mit
 
 ```
@@ -49,7 +49,7 @@ die Records gelesen werden, wäre es gut, sie in Englisch zu erstellen. Es ist
 aber auch kein Problem, nur Deutsch zu schreiben. Die Records werden dann
 bearbeitet und gefixed. Wenn eine neue Version bereitsteht, wird der Ersteller
 über *GitHub* informiert werden und sie kann mit `sudo *raspiBackup*.sh -U -S`
-erneut runtergeladen und der Fix verifiziert werden.
+erneut heruntergeladen und der Fix verifiziert werden.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/594-wie-kann-ich-die-betaversion-installieren-und-ausprobieren

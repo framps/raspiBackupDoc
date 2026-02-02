@@ -9,7 +9,7 @@ Es wird als hybrider Bootmodus bezeichnet.
 *raspiBackup* unterstützt externe Rootpartitionen und
 eine ausgelagerte Rootpartition wird mitgesichert.
 
-Im normalen Backupmodus werden normalerwesie die beiden Raspberry Pi OS-Partitionen
+Im normalen Backupmodus werden normalerweise die beiden Raspberry Pi OS-Partitionen
 `/boot` und `/root` vom Systemgerät gesichert. Wenn die Rootpartition aber
 auf eine externe
 Partition (USB Stick, USB Platte, ...) ausgelagert wurde (hybrider Bootmodus), wird diese externe

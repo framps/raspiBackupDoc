@@ -150,7 +150,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
   - Extension scripts 
 
-    Various [extension scrtips](extension-scripts.md) are available.
+    Various [extension scripts](extension-scripts.md) are available.
 
     They can extend the functionality of *raspiBackup* and can either be used unchanged
     or adapted to your own requirements.

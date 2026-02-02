@@ -51,7 +51,7 @@ Any backup can be restored using the Raspberry Pi.
 1. Connect the medium that contains the backup (e.g. a hard disk)
    and mount it or mount a network drive with the backup data.
 
-1. If the root partition is located on an external partition (hybrid boot mode), connect another device with a preformatted partition
+1. If the root partition is located on an external partition (hybrid boot mode), connect another device with a pre formatted partition
    which will get the external partition been restored
 
 1. Start *raspiBackup* for restore to the [device](#devicenames).

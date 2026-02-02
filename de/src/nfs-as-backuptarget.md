@@ -80,7 +80,7 @@ Den regelmäßigen Backup noch nicht konfigurieren.
 
 ### Test des Backups und Restores von der Commandline
 
-### Einrichten des regelmässigen Backups im Installer
+### Einrichten des regelmäßigen Backups im Installer
 
 Aufruf des Installers und Konfiguration des regelmäßigen Backupzeitpunktes.
 

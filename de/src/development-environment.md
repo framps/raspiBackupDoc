@@ -7,7 +7,7 @@ und dann mit den neuen bzw. geänderten Code von *raspiBackup*
 manuell getestet werden. Nach erfolgreichen Test steht eine neue Version von
 *raspiBackup* an, allgemein verfügbar gemacht zu werden.
 
-Zu Anfang wurden immer alle möglichen Testvarianten zu Fuß durchgetestet.
+Zu Anfang wurden immer alle möglichen Testvarianten zu Fuß durch getestet.
 Allerdings ist das ziemlich zeitaufwändig und es werden dabei viele SD-Karten
 verschlissen. Deshalb werden die [Regressionstests](regressiontests-executed.md) nun auf einer Raspberry 5 in einer
 [simulierten Raspberry](https://www.linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) vorgenommen. Das geht wesentlich schneller und seitdem

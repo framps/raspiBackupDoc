@@ -87,7 +87,7 @@ die ich in *raspiBackup* Entwicklung und Support reinstecke.
 
 Auch kann ich damit Test-Hardware kaufen, denn
 ich kann und will nicht meine Produktivsysteme stilllegen, um *raspiBackup* zu
-testen und zu maintainen. Außerdem bin ich nicht mehr bereit, einen Cent
+testen und zu warten. Außerdem bin ich nicht mehr bereit, einen Cent
 in benötigte HW für *raspiBackup* zu stecken. *raspiBackup* ist kostenlos
 verfügbar und Nutzer sollen sich erkenntlich zeigen und die benötigte HW durch Spenden finanzieren.
 

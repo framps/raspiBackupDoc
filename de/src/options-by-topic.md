@@ -41,7 +41,7 @@
   - [-0: Keine Partitionierung](restore-options.md#parm_0)
   - [-00: Keine Partitionierung und Formatierung](restore-options.md#parm_00)
   - [-1: Partitionierungsfehler ignorieren](restore-options.md#parm_1)
- 
+
 <a name="messages-and-log"></a>
 ## Optionen, die die Meldungen und das Log betreffen
 

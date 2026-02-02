@@ -2,7 +2,7 @@
 
 ## Installer Download, Aufruf und Installation
 
-Eingabe der folgenden Befehle in einem Befehlsfenster um den Installer runterzuladen und aufzurufen:
+Eingabe der folgenden Befehle in einem Befehlsfenster um den Installer herunterzuladen und aufzurufen:
 
 ```
 curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
@@ -166,7 +166,7 @@ curl https://raspibackup.linux-tips-and-tricks.de/install | sudo bash -s -- -i
 Statt `-i` kann jede andere Installeroption mitgegeben werden.
 
 Änderungen an der Konfiguration können nun manuell mit einem Editor vorgenommen werden.
-Siehe dazu [Aufruf und Optionen](invocation-options.md). 
+Siehe dazu [Aufruf und Optionen](invocation-options.md).
 
 Man kann aber auch den Installer mit seinen Menüs benutzen, um die Konfiguration
 der primären Optionen anzupassen sowie den regulären Backup ein- oder auszuschalten.

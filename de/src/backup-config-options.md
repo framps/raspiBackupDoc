@@ -38,7 +38,7 @@ Siehe dazu auch [FAQ16](faq.md#faq16).
 
 ### DEFAULT_LINK_BOOTPARTITIONFILES
 
-Sich selten ändernde Bootparition Backups werden mit Hardlinks verknüpft, um
+Sich selten ändernde Bootpartition Backups werden mit Hardlinks verknüpft, um
 Backupspace zu sparen. Voraussetzung: Der Backupspace unterstützt Hardlinks
 (ext3/ext4 Filesystem).
 

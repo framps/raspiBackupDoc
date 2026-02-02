@@ -27,7 +27,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Zwei [Backupmodi](normal-or-partition-backup.md):
 
-      - der **normale Backupmodus** sichert nur die Boot- und Rootparition
+      - der **normale Backupmodus** sichert nur die Boot- und Rootpartition
       - der **partitionsorientierte Modus** sichert beliebig viele Partitionen des Systemgerätes
 
       **Hinweis:**
@@ -78,7 +78,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     Sicherungsintegrität zu testen.
 
   - Unterstützte eMail-Clients: *mailx*/*mail*, *sendEmail*, *ssmtp* und *msmtp*.
-    Nicht unterstützte eMail-Clients können durch eine eMail-iErweiterung eingebunden werden.
+    Nicht unterstützte eMail-Clients können durch eine eMail-Erweiterung eingebunden werden.
 
   - Einfaches Update von *raspiBackup* auf die aktuelle Version
 

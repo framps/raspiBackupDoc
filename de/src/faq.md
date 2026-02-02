@@ -16,7 +16,7 @@ kleines Script geschrieben, welches zuerst ein dd Backup, dann später, da
 ein dd Backup ja immer die gesamte SD-Karte sichert obwohl nur Bruchteile
 davon benutzt werden, ein tar Backup automatisch erstellte. Zum Schluss
 wurde dann ein rsync Backup implementiert um durch die Hardlinks Backupzeit
-und -space zu sparen. Nachdem imer mal wieder eine Wiederherstellung
+und -space zu sparen. Nachdem immer mal wieder eine Wiederherstellung
 notwendig war und alles gut klappte dachte *framp* dass das Script
 auch anderen Raspberryfreunden hilfreich sein könnte und publizierte
 *raspiBackup*. Siehe auch [10 Jahre *raspiBackup*](10-years-raspibackup.md)
@@ -99,7 +99,7 @@ entsprechenden Linuxtools wieder auf die Partitionen zurückspielen.
 
 Beim dd Backuptyp muss man nach den Restore auf ein größeres Gerät mit
 Linux Repartitionierungstools nach der Wiederherstellung die Partitionsgröße
-anpassen, wenn man für die zweite Parition sämtlichen Platz nutzen will. Ein
+anpassen, wenn man für die zweite Partition sämtlichen Platz nutzen will. Ein
 dd Restore auf ein kleineres Gerät geht nicht.
 
 Ohne Probleme funktioniert es bei einem kleineren oder größeren Gerät,
