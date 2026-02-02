@@ -1,8 +1,9 @@
 # Vergleich partitionsorientierter Backup und normaler Backup
 
-Es existieren zwei Backupmodi:
+Es existieren zwei verschiedene Backupmodi:
 
-1. Normaler Backup
+<a name="normalBackup"></a>
+1. **Normaler Backup**
 
    In diesem Modus werden die ersten zwei Partitionen (die Bootpartition und die
    Rootpartition) der SD-Karte gesichert. Außerdem wird beim `tar` und `rsync` Backup
@@ -15,7 +16,8 @@ Es existieren zwei Backupmodi:
    Es wird aber dringend davon abgeraten, ein `dd` Backup zu nutzen.
    Siehe: [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)
 
-2. Partitionsorientierter Backup
+<a name="partitionBackup"></a>
+1. **Partitionsorientierter Backup**
 
    In diesem Modus wird jede auf dem System befindliche oder eine bestimmte ausgewählte
    Anzahl von Partitionen mit `tar` oder `rsync` gesichert. Dabei ist die Anzahl der

@@ -10,6 +10,7 @@ See also [Is a backup of a running system reliable? Shouldn't the entire system 
 This can be done manually or automatically at regular intervals.
 A backup always contains the entire system, i.e. system data and user data.
 The system therefore reboots immediately once it has been restored.
+A restore can always be performed completely. The [partition-oriented backup](normal-or-partition-backup.md#parititionBackup) also supports a complete partition wise restore. In addition, it supports a delta restore for the rsync backup type, i.e., only the changes since the last backup are reversed. This significantly reduces the restore time.
 
 For **installation and configuration** of *raspiBackup* there is an
 [installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured similar to `raspi-config`. More specific settings can be configured in a configuration file.
