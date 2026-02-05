@@ -24,10 +24,10 @@ stopping and starting system services (option -a and -o).
 
 ### DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY
 
-With this option, dd backups only save the space occupied by defined partitions.
-This means that a 32GB SD card, for example, which only has an 8GB partition defined, only requires 8GB for the
-and not 32GB. To do this, however, you should use gparted or resize2fs
-ito reduce the root partition size accordingly, because the root partition usually fills
+With this option, dd backups only the space occupied by defined partitions.
+This means that a 32GB SD card, for example, which only has an 8GB root partition defined, only has to backup 8GB plus the boot partition size
+and not 32GB. To do this, however, gparted or resize2fs have to be used 
+to reduce the root partition size accordingly, because the root partition usually fills
 the entire rest of the SD card.
 
 See also [FAQ16](faq.md#faq16).
