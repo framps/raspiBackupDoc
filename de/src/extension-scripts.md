@@ -20,8 +20,9 @@ Sie stehen auf [*GitHub*](https://github.com/framps/raspiBackup/tree/master/help
 
 1. **raspiBackupWrapper.sh**: Damit kann man vor und nach dem Aufruf von
    *raspiBackup* verschiedene Dinge erledigen lassen. Der Code mounted schon die
-   Backuppartition und unmounted sie, falls sie vorher nicht gemounted war. Es
-   ist etwas bash Script Kenntnis notwendig, um das Script dem eigenen Bedarf
+   Backuppartition und unmounted sie, falls sie vorher nicht gemounted war. Ausserdem
+   kann am Ende pishrink aufgerufen werden um ein erstelltes dd Image noch zu verkleinern.
+   Es ist etwas bash Script Kenntnis notwendig, um das Script dem eigenen Bedarf
    anzupassen.
 
    **Hinweis**
@@ -29,17 +30,17 @@ Sie stehen auf [*GitHub*](https://github.com/framps/raspiBackup/tree/master/help
    reicht es, die vorhandenen [Erweiterungspunkte](hooks-for-own-scripts.md)
    zu nutzen, um die Funktionalität von *raspiBackup* für die eigenen Bedürfnisse zu erweitern.
 
-2. **raspiBackupNfsWrapper.sh**: Es wird von dem Script geprüft, ob ein NFS Server
+3. **raspiBackupNfsWrapper.sh**: Es wird von dem Script geprüft, ob ein NFS Server
    verfügbar ist und nur dann *raspiBackup* gestartet. Außer ein paar
    Definitionen des NFS Servers ist nichts anzupassen.
 
-3. **raspiBackupRestore2Image.sh**: Mit diesem Script kann ein tar oder rsync
+4. **raspiBackupRestore2Image.sh**: Mit diesem Script kann ein tar oder rsync
    Backup, welches in normalen Backupmodus erstellt wurde, in ein dd Backup
    umgewandelt werden. Außerdem wird pishrink benutzt, um die Größe des dd Images
    soweit wie möglich zu minimieren. kmbach hat die Erstellung des Scripts angeregt.
    Das Script erfordert keine Änderungen.
 
-4. **raspiImageMail.sh**: Dieses Script wurde von dem *raspiBackup* Benutzer kmbach
+5. **raspiImageMail.sh**: Dieses Script wurde von dem *raspiBackup* Benutzer kmbach
    erstellt, weil er am Ende vom Aufruf von raspiBackupRestore2Image.sh eine eMail
    erhalten wollte. Dazu werden die *raspiBackup* eMail Konfigurationsparameter benutzt.
    Das Script erfordert keine Änderungen.
