@@ -20,9 +20,9 @@ They are available for download on [*GitHub*](https://github.com/framps/raspiBac
 
 1. **raspiBackupWrapper.sh**: This can be used to execute before and after
    *raspiBackup* various things. The code already mounts the
-   backup partition and unmounts it if it was not mounted before. It
-   some bash script knowledge is necessary to customize the script to your needs.
-   customize the script.
+   backup partition and unmounts it if it was not mounted before. In addition it's possible
+   to invoke pishrink afterwards to shrink a dd image as small as possible.
+   There is some bash script knowledge necessary to customize the script to your needs.
 
    **Note**
    This script was created when *raspiBackup* had no extension points. Normally
