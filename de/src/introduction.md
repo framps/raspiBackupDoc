@@ -12,6 +12,11 @@ Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
 Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientierte Backup](normal-or-partition-backup.md#partitionlBackup) unterstützt auch einen vollständigen partitionsweisen Restore. Außerdem unterstützt er bei dem rsync Backuptyp ein Deltarestore, d.h. es werden nur die Änderungen vom letzten Backup zurückgenommen. Dadurch reduziert sich die Restorezeit signifikant.
 
+raspiBackup erstellt jedes mal ein neues Backup und somit eine Backuphistorie, auf die jederzeit gezielt zurückgegriffen werden kann.
+Das ist unterschiedlich zu existierenden Clone Backuptools die 
+nur die letzten Änderungen des einzigen Backups updaten und damit bei dd und tar Backups von *raspiBackup* viel schneller sind.
+Wird allerdings der rsync Backuptyp genutzt werden nur Deltabackups erstellt die ebenso schnell erstellt sind. Zusätzlich kann mit *raspiBackup* immer auf ältere Backups zurückgegriffen werden falls notwendig.
+
 Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
 Optionen von *raspiBackup* konfiguriert werden können, vergleichbar mit `raspi-config`.
