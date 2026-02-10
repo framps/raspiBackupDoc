@@ -49,7 +49,7 @@ initial backup has already been created.
 | ddz | yes | long | smaller | yes | yes | high | no | all, fat32 only up to 4GB |
 | tar | yes | medium | medium | no | medium | yes | all, fat32 only up to 4GB |
 | tgz | yes | medium | medium | yes | yes | medium | yes | all, fat32 only up to 4GB |
-| rsync | yes | short with hardlinks | small with hardlinks | no | no | hardly | yes | ext3/ext4 |
+| rsync | no | short with hardlinks | small with hardlinks | no | no | hardly | yes | ext3/ext4 |
 
 
 <a name="decisiontree"></a>
