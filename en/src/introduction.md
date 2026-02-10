@@ -12,8 +12,8 @@ A backup always contains the entire system, i.e. system data and user data.
 The system therefore reboots immediately once it has been restored.
 A restore can always be performed completely. The [partition-oriented backup](normal-or-partition-backup.md#parititionBackup) also supports a complete partition wise restore. In addition, it supports a delta restore for the rsync backup type, i.e., only the changes since the last backup are reversed. This significantly reduces the restore time.
 
-raspiBackup creates a new backup each time, thus creating a backup history that can be accessed at any time.
-This differs from existing clone backup tools, which only update the latest changes to the single backup and are therefore much faster than dd and tar backups from *raspiBackup*. However, if the rsync backup type is used, only delta backups are created, which are just as fast. In addition, *raspiBackup* allows you to access older backups if necessary.
+raspiBackup creates a new backup each time, providing a backup history that can be accessed at any time. This differs from existing clone backup tools, which only update the latest changes in the existing clone with rsync, meaning that only a backup of the latest status is available.
+This means that the clone is created faster than with raspiBackup. However, the rsync backup type also only backs up the latest changes, and this backup type should be used if backup speed is an important criterion.
 
 For **installation and configuration** of *raspiBackup* there is an
 [installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured similar to `raspi-config`. More specific settings can be configured in a configuration file.
