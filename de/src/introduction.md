@@ -15,7 +15,7 @@ Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientier
 Als Linux Backuptools können *dd*, *tar* und *rsync* gewählt werden. Zusätzlich besteht noch die Möglichkeit bei *dd* und *tar* die Backups zu verkleinern. Siehe [hier eine Beschreibung](backup-types.md) der Vor- und Nachteile der jeweiligen Tools sowie einen Entscheidungsbaum, welcher Backuptyp zu wählen ist.
 
 raspiBackup erstellt jedes mal ein neues Backup und somit ist eine Backuphistorie verfügbar, auf die jederzeit gezielt zurückgegriffen werden kann. Das ist unterschiedlich zu existierenden Clone Backuptools die
-nur die letzten Änderungen im existierende Clone mit rsync updaten und somit nur ein Backup des letzten Standes verfügbar ist. Dadurch ist ein Clone schnell auf den aktuellen Stand gebracht. Allerdings werden beim Backuptyp rsync ebenfalls nur die letzten Änderungen gesichert und ist damit die schnellste Backupmethode von raspiBackup. Dieser Backuptyp sollte genutzt werden wenn die Backupgeschwindigkeit ein wichtiges Kriterium ist.
+nur die letzten Änderungen im existierende Clone mit rsync updaten und somit nur ein Backup des letzten Standes verfügbar ist. Dadurch ist ein Clone schnell auf den aktuellen Stand gebracht. Allerdings werden beim Backuptyp rsync ebenfalls nur die letzten Änderungen gesichert und ist damit die schnellste Backupmethode von *raspiBackup*. Dieser Backuptyp sollte genutzt werden wenn die Backupgeschwindigkeit ein wichtiges Kriterium ist.
 
 Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
