@@ -187,6 +187,20 @@ parms="$4"        # addtl email parms passed with -E
 append="$5"       # file to append
 ```
 
+### Zugriff auf das Backupverzeichnis, Meldungen und Debuglog
+
+*raspiBackup* schreibt ganz am Ende in die Datei `/tmp/raspiBackup.vars` die folgenden Informationen:
+
+```
+BACKUP_TARGETDIR=\<Backupverzeichnisname\>
+BACKUP_TARGETFILE=\Backupdateiname\>
+MSG_FILE=\<Messagefilename\>
+LOG_FILE=\<Logfilename\>
+```
+
+Diese Informationen können mit `source /tmp/raspiBackup.vars` gelesen werden so dass anschliessend die Variablen
+**BACKUP_TARGETDIR**, **BACKUP_TARGETFILE**, **MSG_FILE** und **LOG_FILE** gesetzt sind und auf die Dateien zugegriffen werden kann.
+
 ### Hinweise
 
 - **Achtung:** Die Erweiterungen laufen mit **root** Rechten und können
