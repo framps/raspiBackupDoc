@@ -6,7 +6,7 @@ gedacht und die für eigene Anforderungen angepasst werden können.
 
 Sie stehen auf [*GitHub*](https://github.com/framps/raspiBackup/tree/master/helper) zum Download zur Verfügung:
 
-1. **raspiBackupAndClone.sh**: Dieses Script erstellt eine Backupversion mit *raspiBackup*
+1. **[raspiBackupAndClone.sh](https://github.com/framps/raspiBackup/blob/master/helper/raspiBackupAndClone.sh)**: Dieses Script erstellt eine Backupversion mit *raspiBackup*
    und restored anschließend das aktuelle Backup auf ein angeschlossenes Device. Somit hat
    man nach dem Backup immer ein aktuelles Backupsystem, von welchem man booten kann,
    wenn das Systemdevice korrupt wurde. Nimmt man den partitionsorientierten Backup mit rsync,

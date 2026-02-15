@@ -192,10 +192,10 @@ append="$5"       # file to append
 *raspiBackup* schreibt ganz am Ende in die Datei `/tmp/raspiBackup.vars` die folgenden Informationen:
 
 ```
-BACKUP_TARGETDIR=\<Backupverzeichnisname\>
-BACKUP_TARGETFILE=\Backupdateiname\>
-MSG_FILE=\<Messagefilename\>
-LOG_FILE=\<Logfilename\>
+BACKUP_TARGETDIR=<Backupverzeichnisname>
+BACKUP_TARGETFILE=Backupdateiname>
+MSG_FILE=<Messagefilename>
+LOG_FILE=<Logfilename>
 ```
 
 Diese Informationen können mit `source /tmp/raspiBackup.vars` gelesen werden so dass anschliessend die Variablen
