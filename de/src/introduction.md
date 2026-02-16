@@ -17,6 +17,8 @@ Als Linux Backuptools können *dd*, *tar* und *rsync* gewählt werden. Zusätzli
 raspiBackup erstellt jedes mal ein neues Backup und somit ist eine Backuphistorie verfügbar, auf die jederzeit gezielt zurückgegriffen werden kann. Das ist unterschiedlich zu existierenden Clone Backuptools die
 nur die letzten Änderungen im existierende Clone mit rsync updaten und somit nur ein Backup des letzten Standes verfügbar ist. Dadurch ist ein Clone schnell auf den aktuellen Stand gebracht. Allerdings werden beim Backuptyp rsync ebenfalls nur die letzten Änderungen gesichert und ist damit die schnellste Backupmethode von *raspiBackup*. Dieser Backuptyp sollte genutzt werden wenn die Backupgeschwindigkeit ein wichtiges Kriterium ist.
 
+Wer die Vorteile einer Backuphistorie und eines aktuellen Clones nutzen will der kann eines der beiden Erweiterungsscripte nutzen: raspiBackupRestore2Image oder raspiBackupAndClonei, die [hier](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html) beschrieben sind, nutzen.
+
 Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
 Optionen von *raspiBackup* konfiguriert werden können, vergleichbar mit `raspi-config`.
