@@ -11,6 +11,7 @@ Below is an incomplete list of other backup tools that can be used to back up a 
 - [rpi-backup](https://github.com/nanhantianyi/rpi-backup): Script to quickly create an img backup directly without using dd. Cmdlinetool
 - [pibackup](https://github.com/Chocorean/pibackup): Creates a dd backup, shrinks the dd image and keeps a configurable number of backups. Cmdlinetool.
 - [shrink-backup](https://github.com/UnconnectedBedna/shrink-backup): Another backup tool, which works similar to rpi-clone and image-backup. Cmdlinetool.
+- [pi-safe](https://github.com/RichardMidnight/pi-safe)
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/raspibackup#anderetools
