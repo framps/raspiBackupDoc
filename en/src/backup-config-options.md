@@ -70,8 +70,7 @@ If *raspiBackup* crashes due to exceptional circumstances it may happen that no 
 
 This option can be used to configure a reboot of the backed up system at the end of the backup.
 
-**Note**: The services that were stopped before the backup are not restarted.
-restarted. This is unnecessary as they are started anyway when the system is restarted.
+**Note**: The services that were stopped before the backup are not restarted. This is unnecessary as they are started anyway when the system is restarted.
 
 | Config option | Default |
 |----------------------------|----------|
