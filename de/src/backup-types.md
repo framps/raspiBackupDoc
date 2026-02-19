@@ -51,7 +51,7 @@ initiales Backup erstellt wurde.
 | ddz    | ja         | lang       | kleiner     | ja               | ja           | hoch           | nein                       | alle, fat32 nur bis 4GB |
 | tar    | ja         | mittel     | mittel      | nein             | nein         | mittel         | ja                         | alle, fat32 nur bis 4GB |
 | tgz    | ja         | mittel     | mittel      | ja               | ja           | mittel         | ja                         | alle, fat32 nur bis 4GB |
-| rsync  | no         | kurz mit Hardlinks | klein mit Hardlinks | nein | nein     | kaum           | ja                         | ext3/ext4 |
+| rsync  | nein       | kurz mit Hardlinks | klein mit Hardlinks | nein | nein     | kaum           | ja                         | ext3/ext4 |
 
 
 <a name="decisiontree"></a>
