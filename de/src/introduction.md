@@ -83,7 +83,8 @@ Eine Anerkennung des Entwicklungs- und Wartungsaufwands sowie Supports für
 1. Werde ein [*GitHub* Sponsor](https://github.com/sponsors/framps) für *raspiBackup*
 2. Paypal: Die eMail `framp att linux-tips-and-tricks dott de` ist PayPal bekannt
    und ein jeder kann mit einem PayPal Konto an diese eMail ein Trinkgeld geben.
-3. Keines von beidem: Einfach bei der o.g. eMail nachfragen. Es findet sich
+3. Bitcoins: Die Adresse ist
+4. Keines von allem: Einfach bei der o.g. eMail nachfragen. Es findet sich
    gewiss eine Alternative. Z.B. wurde Trinkgeld schon mehrmals auf die
    gute alte Art per Brief zugeschickt :-)
 
