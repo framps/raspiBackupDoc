@@ -81,7 +81,8 @@ Acknowledgment of the development and maintenance effort as well as support for
 1. Become a [*GitHub* sponsor](https://github.com/sponsors/framps) for *raspiBackup*
 2. Paypal: The email `framp att linux-tips-and-tricks dott de` is known to PayPal
    and anyone with a PayPal account can tip this email.
-3. Neither: Just ask at the above eMail. There is
+3. Bitcoins: Address is
+4. Neither: Just ask at the above eMail. There is
    certainly an alternative. For example, donations have been sent several times in the
    the good old way by letter :-)
 
