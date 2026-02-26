@@ -37,7 +37,7 @@ This also makes it possible to build a hotfix on this code version.
 This is usually done and the hotfix is verified before it is included in the next release.
 
 Most issues are managed in [*GitHub*](https://github.com/framps/raspiBackup/issues). For each new release
-here on *GitHub*](https://github.com/framps/raspiBackup/releases) a summary of the bugfixes and new functionality.
+there exists on *GitHub* a [summary of the bugfixes and new functionality](https://github.com/framps/raspiBackup/releases).
 
 
 [.status]: translated
