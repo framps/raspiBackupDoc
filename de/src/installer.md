@@ -14,6 +14,13 @@ und Nutzung der Installermenus um *raspiBackup* zu installieren und die wichtigs
 ```
 sudo raspiBackupInstallUI
 ```
+## Navigation
+
+* Auswahl: Pfeiltasten
+* Bestätigung und Auswahl: Enter
+* Abbruch/Zurück: ESC oder Tab
+* Umschalten zwischen Menupunkten und Schaltflächen: Tab
+* Markieren (Checkliste): Leertaste
 
 ## Details zu einigen Menüpunkten
 
