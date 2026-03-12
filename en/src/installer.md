@@ -14,6 +14,13 @@ and use the installer menus to install *raspiBackup* and to configure the most i
 ```
 sudo raspiBackupInstallUI
 ```
+## Navigation
+
+* Selection: Arrow keys
+* Confirmation and selection: Enter
+* Cancel/Back: ESC or Tab
+* Switch between menu items and buttons: Tab
+* Select (checklist): Space bar
 
 ## Details on some menu items
 
