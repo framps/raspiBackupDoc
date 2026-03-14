@@ -527,8 +527,11 @@ Administration files like README, Makefile and book.toml can be selected too:
 
 Complementing all these functions there might be (there are!) tools in the used
 editor as well, *vim* in this case.
+
 For example there is a translation helper DE..EN using *DeepL*:
 Ctrl-t, Ctrl-e ("translate to english"). Please read EDIT.md for more details.
+
+And you can use *vim*'s integrated spell checker.
 *******************************************************************************
 
 
