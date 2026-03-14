@@ -1,6 +1,6 @@
 # Arbeiten an/in/mit den Inhalten der Dokumentation
 
-Bei dem für die Dokumentation verwendeten Generieungstool *mdbook* befinden sich
+Bei dem für die Dokumentation verwendeten Generierungstool *mdbook* befinden sich
 normalerweise alle Inhalte in einem direkten Unterverzeichnis `src/`.
 
 Da die Dokumentation von *raspiBackup* aber mehrsprachig aufgebaut ist,
@@ -11,7 +11,7 @@ befinden sich die Inhalte hier im Projekt sprachabhängig in den Unterverzeichni
 
 In den (jeweiligen!) Verzeichnissen `src/` können bei Bedarf auch Bilder, Icons
 etc. untergebracht werden, sinnvollerweise in passend benannten Unterverzeichnissen.
-Das heisst: Für jede Sprache extra.
+Das heißt: Für jede Sprache extra.
 Diese eventuelle mehrfache Speicherung von gleichen Dateien beruht auf der
 zugrunde liegenden Technik und lässt sich zur Zeit nicht vermeiden.
 
@@ -35,7 +35,7 @@ die sich mit jedem Texteditor bearbeiten lassen.
 
 Hilfreich ist ein Editor, der "Syntax Highlighting" für *Markdown* unterstützt.
 
-Eine kurze Einführung zum verwendeten Generierungstool *mdbook* gibt es [hier](MDBOOK_INTRO.md).
+Eine kurze Einführung zum Generierungstool *mdbook* gibt es [hier](MDBOOK_INTRO.md).
 
 **Tipp**: Siehe auch Originalbeschreibung von *mdbook* <https://rust-lang.github.io/mdBook/guide/creating.html>
 
@@ -79,7 +79,7 @@ und bei beiden Sprachversionen identisch!
 
 Die **Dateinamen** der Kapiteldateien bitte immer
 
-  - englisch-sprachig
+  - englischsprachig
   - kurz und prägnant
   - ohne Leerzeichen, ohne Sonderzeichen
   - kleingeschrieben
@@ -132,7 +132,7 @@ Um die Arbeit an den Inhalten der Dateien und auch an den Übersetzungen besser
 organisieren zu können, gibt es in diesem Projekt in vielen Markdown-Dateien
 ergänzende "Tags", Markierungen, Kommentare.
 
-Da *Markdown* aber nativ keine Kommentare unterstützt, werden oben beschiebene
+Da *Markdown* aber nativ keine Kommentare unterstützt, werden oben beschriebene
 *Commonmarks Link References* "zweckentfremdet".
 Allerdings muss die Syntax auch in diesem Fall eingehalten werden:
 `[name]: Linkadresse "Link Title"`.

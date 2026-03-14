@@ -92,7 +92,7 @@ Dies ist der einfachste Weg!
    Diese editieren, dann committen
 
    ![Editieren anklicken](readme-images/06-click-edit.png)
-   ![Editieren und commiten](readme-images/07-edit-and-commit.png)
+   ![Editieren und committen](readme-images/07-edit-and-commit.png)
 
 1. und in einem neuen Branch speichern
 

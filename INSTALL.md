@@ -20,7 +20,7 @@ Zur Installation von *Rust* siehe:
   - https://www.rust-lang.org/tools/install
   - https://www.rust-lang.org/learn/get-started
 
-Am Einfachsten geht die Installation von Rust folgendermassen:
+Am Einfachsten geht die Installation von Rust folgendermaßen:
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh

@@ -113,7 +113,7 @@ Wenn nun das Ergebnis im lokalen Webserver/Browser zufriedenstellend ist,
 kann die Webseite, also die generierte Sammlung von HTML- und anderen Dateien im Verzeichnis `book/`,
 natürlich noch veröffentlicht werden.
 
-Dies kann .z.B. durch Hochladen zu einem Webserver/Webhoster o.Ä. geschehen.
+Dies kann z.B. durch Hochladen zu einem Webserver/Webhoster o.Ä. geschehen.
 Oder per *GitHub Pages*.
 
 
