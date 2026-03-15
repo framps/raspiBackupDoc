@@ -58,8 +58,8 @@ initiales Backup erstellt wurde.
 
 ![Entscheidungsbaum](images/decisiontree_de.dia.jpg)
 
-``` admonish info title="Filesysteme"
-Die [Vor- und Nachteile der möglichen Filesysteme](which-filesystem-can-be-used-on-the-backup-partition.md) sind zu beachten.
+> [!NOTE]
+> Die [Vor- und Nachteile der möglichen Filesysteme](which-filesystem-can-be-used-on-the-backup-partition.md) sind zu beachten.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#vornach

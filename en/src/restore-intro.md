@@ -82,18 +82,17 @@ with the [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/).
 
 ## Restore scenario for Linux users
 
-``` admonish note title="Note"
-In principle, any Linux OS can be used to restore a backup.
-But with possible incompatibilities of its tools, compared to the Linux tools used for the backup
-Linux tools used for the backup, there may be problems.
-An occasional candidate for this is `sfdisk`,
-which has changed to be incompatible with both *Jessie* and *Bullseye*.
-
-Therefore:
-
-**A restore should always be performed with the same OS that was used to create the backup.
-the backup was created**.
-```
+> [!NOTE]
+> In principle, any Linux OS can be used to restore a backup.
+> But with possible incompatibilities of its tools, compared to the Linux tools
+> used for the backup Linux tools used for the backup, there may be problems.
+> An occasional candidate for this is `sfdisk`,
+> which has changed to be incompatible with both *Jessie* and *Bullseye*.
+>
+> Therefore:
+>
+> **A restore should always be performed with the same OS that was used
+> to create the backup.**
 
 The device to which the backup is to be restored is connected to the Linux system,
 the backup partition is mounted

@@ -586,7 +586,7 @@ The following options exist to eliminate the problem:
     important and test thoroughly whether the restored application starts again
     starts again if the files are missing.
 
-  - inotifywait -m -e delete -e create -e move -e modify -e attrib <directory>
+  - inotifywait -m -e delete -e create -e move -e modify -e attrib \<directory>
 
 It may be necessary to add the -r option so that all subdirectories are also
 subdirectories are also monitored.
@@ -827,7 +827,7 @@ There is a [script at *GitHub*](https://github.com/framps/raspiBackup/blob/maste
 curl -s https://raw.githubusercontent.com/framps/raspiBackup/master/scripts/raspiBackupDownloadFromGit.sh | sudo bash -s -- <brand name>
 ```
 
-Where <branchname> must be the *GitHub* branch from which you want to download
+Where \<branchname> must be the *GitHub* branch from which you want to download
 `raspiBackup.sh` you want to download. Then invoke this *raspiBackup* version
 as follows (**Attention:** Pay attention to the leading dot !)
 

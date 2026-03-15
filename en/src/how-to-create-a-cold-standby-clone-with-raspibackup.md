@@ -17,7 +17,7 @@ The help tool is called [raspiBackupAndClone.sh](https://github.com/framps/raspi
 
 The following steps are necessary to use it:
 
-Note: <clonedevice> is the device that is to receive the clone, e.g. `/dev/mmcblk0` or `/dev/sda`.
+Note: \<clonedevice> is the device that is to receive the clone, e.g. `/dev/mmcblk0` or `/dev/sda`.
 
  1. Install `raspiBackupAndClone.sh
 
@@ -36,7 +36,7 @@ Note: <clonedevice> is the device that is to receive the clone, e.g. `/dev/mmcbl
 
  2. One-time initialization of the cloned device
 
-     1. Create a partition-oriented backup with 
+     1. Create a partition-oriented backup with
         ```
         sudo raspiBackup -P -t rsync <backup directory>
         ```

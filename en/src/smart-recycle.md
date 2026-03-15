@@ -21,26 +21,26 @@ manually configured with options.
 So if you only want to have weekly, monthly and annual backups, this can be configured.
 It should be noted that the weekly backup day then
 defines the backup day of the month: If, for example, Monday is configured as
-weekly backup day, the monthly backup is always on the first Monday of the month 
+weekly backup day, the monthly backup is always on the first Monday of the month
 and the annual backup on the first Monday of the year.
 
-``` admonish info title="Note"
-If several daily backups are created, the **newest** daily backup is always kept.
-For the weekly, monthly and annual backups the **oldest** backups are kept.
+> [!NOTE]
+> If several daily backups are created, the **newest** daily backup is always kept.
+> For the weekly, monthly and annual backups the **oldest** backups are kept.
+>
+> For example, with two existing daily backups from 10:00 and
+> 13:00, the backup created at 13:00 is selected.
+>
+> If there are backups on Monday and Friday during the week, the weekly backup
+> of Monday is selected.
+>
+> If there is a backup on the 1st, 10th and 20th of a month, the backup from the
+> 1st is selected for the monthly backup.
+>
+> For daily backups, weekly backups are therefore always from Monday,
+> monthly backups always from the first of the month and
+> annual backups always from the 1st of the year.
 
-For example, with two existing daily backups from 10:00 and
-13:00, the backup created at 13:00 is selected.
-
-If there are backups on Monday and Friday during the week, the weekly backup
-of Monday is selected.
-
-If there is a backup on the 1st, 10th and 20th of a month, the backup from the
-1st is selected for the monthly backup.
-
-For daily backups, weekly backups are therefore always from Monday,
-monthly backups always from the first of the month and
-annual backups always from the 1st of the year.
-```
 
 ## Graphical representation
 
@@ -88,28 +88,27 @@ The `--smartRecycleOptions "7 4 12 3"` option is active by default.
 With `--smartRecycleOptions "0 4 12 0"`, for example, the last 4
 weekly and the last 12 monthly backups are retained.
 
-``` admonish caution title="Important note"
-As long as the option `--smarteRecycleDryrun` is not switched off
-*raspiBackup* only writes messages about which backups would be deleted and which would be kept.
-
-You can therefore first check whether the result corresponds to what you want.
-This prevents existing backups from being deleted unintentionally.
-
-This is particularly important if, after switching to the intelligent rotation strategy
-you want to continue using the previous backup directory and not use a new directory.
-
-If you have carefully checked that the intelligent rotation strategy deletes the
-correct backups and removes the desired backups, the
-option `--smartRecycleDryrun-` (note the `-` at the end!) in each backup run
-the intelligent rotation strategy is applied and
-**backups that are no longer required are deleted unrecoverable**.
-
-Alternatively, the configuration option
-
-`DEFAULT_SMART_RECYCLE_DRYRUN=0`
-
-produces the same result.
-```
+> [!CAUTION]
+> As long as the option `--smarteRecycleDryrun` is not switched off
+> *raspiBackup* only writes messages about which backups would be deleted and which would be kept.
+>
+> You can therefore first check whether the result corresponds to what you want.
+> This prevents existing backups from being deleted unintentionally.
+>
+> This is particularly important if, after switching to the intelligent rotation strategy
+> you want to continue using the previous backup directory and not use a new directory.
+>
+> If you have carefully checked that the intelligent rotation strategy deletes the
+> correct backups and removes the desired backups, the
+> option `--smartRecycleDryrun-` (note the `-` at the end!) in each backup run
+> the intelligent rotation strategy is applied and
+> **backups that are no longer required are deleted unrecoverable**.
+>
+> Alternatively, the configuration option
+>
+> `DEFAULT_SMART_RECYCLE_DRYRUN=0`
+>
+> produces the same result.
 
 On Wikipedia - in the article [Generation principle](https://de.wikipedia.org/wiki/Generationenprinzip) - it is nicely explained
 how the rotation principle works.

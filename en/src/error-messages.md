@@ -422,9 +422,9 @@ When a partition is written, it should not be mounted.
 
 Further actions:
 
-With the command `sudo mount | grep <device>` (<device> is mentioned in the message)
+With the command `sudo mount | grep <device>` (\<device> is mentioned in the message)
 to find out which partition is mounted and with `sudo umount <partition>`, where
-<partition> has to be the mounted partition (e.g. /dev/sda1)
+\<partition> has to be the mounted partition (e.g. /dev/sda1)
 release it.
 
 

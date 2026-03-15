@@ -1,4 +1,4 @@
-# Usage tips 
+# Usage tips
 
 At the top of the pages there are two groups of icons for operating
 the documentation:
@@ -22,10 +22,9 @@ Type `?` to display a small keyboard navigation aid.
 
 <br>
 
-``` admonish info title="Note"
-To reduce the translation effort given the amount of documentation pages all German pages were
-translated with [DeepL](https://www.deepl.com) into English.
-Thank you very much to DeepL who offers to use the translator for free.
-```
+> [!NOTE]
+> To reduce the translation effort given the amount of documentation pages
+> all German pages were translated with [DeepL](https://www.deepl.com) into English.
+> Thank you very much to DeepL who offers to use the translator for free.
 
 [.status]: translated

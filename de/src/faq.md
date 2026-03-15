@@ -601,7 +601,7 @@ Folgende Optionen existieren, um das Problem zu beseitigen:
     wichtig ist und gründlich testen ob die restorte Anwendung wieder
     startet wenn die Dateien fehlen..
 
-  - inotifywait -m -e delete -e create -e move -e modify -e attrib <Verzeichnis>
+  - inotifywait -m -e delete -e create -e move -e modify -e attrib \<Verzeichnis>
 
 U.U. muss noch die Option -r zugefügt werden, damit auch alle
 Unterverzeichnisse überwacht werden.
@@ -844,7 +844,7 @@ Dazu gibt es ein [Script bei *GitHub*](https://github.com/framps/raspiBackup/blo
 curl -s https://raw.githubusercontent.com/framps/raspiBackup/master/scripts/raspiBackupDownloadFromGit.sh | sudo bash -s -- <Branchname>
 ```
 
-Dabei muss <Branchname> der *GitHub* Branch sein, von dem man sich
+Dabei muss \<Branchname> der *GitHub* Branch sein, von dem man sich
 `raspiBackup.sh` downloaden möchte. Danach ruft man diese *raspiBackup* Version
 wie folgt auf (**Achtung:** Auf den führenden Punkt achten !)
 

@@ -8,10 +8,9 @@ especially easy to perform the restore: Before the restore, the list of existing
 the list of existing backups is displayed and you can select which backup
 should be restored.
 
-``` admonish info title="Note"
-It is recommended to download *raspiBackupDialog* after successful installation and configuration of *raspiBackup
-of *raspiBackup* and try it out.
-```
+> [!TIP]
+> It is recommended to download *raspiBackupDialog* after successful installation
+> and configuration of *raspiBackup* and try it out.
 
 ## Installation and call
 

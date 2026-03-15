@@ -56,8 +56,8 @@ initial backup has already been created.
 
 ![decision tree](images/decisiontree_en.dia.jpg)
 
-``` admonish info title="Note"
-Take the [advantages and disadvantages of the possible file systems](which-filesystem-can-be-used-on-the-backup-partition.md) into account.
+> [!NOTE]
+> Take the [advantages and disadvantages of the possible file systems](which-filesystem-can-be-used-on-the-backup-partition.md) into account.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackup#vornach

@@ -11,10 +11,9 @@ to connect non-locally connected backup partitions.
 SSHFS, CurlFtpFS and [WebDAV](webdav-as-backuptarget.md) also work for storing backups on remote servers.
 The [*AVM FRITZ!Box*](avm-fritzbox-as-backuptarget.md) also supports SMB and can therefore also be used as a backup target.
 
-```admonish info title="Note"
-The respective backup targets have to have a formatted partition in which the backups are stored. See [Advantages and disadvantages of the respective
-Filesystems](which-filesystem-can-be-used-on-the-backup-partition.md).
-```
+> [!NOTE]
+> The respective backup targets have to have a formatted partition in which the backups are stored.
+> See [Advantages and disadvantages of the respective Filesystems](which-filesystem-can-be-used-on-the-backup-partition.md).
 
 In addition to the following chapters, see also [How to access external data from the Raspberry Pi](https://linux-tips-and-tricks.de/de/13-raspberry/423-wie-kann-man-von-der-pi-unter-linux-auf-externe-daten-zugreifen).
 

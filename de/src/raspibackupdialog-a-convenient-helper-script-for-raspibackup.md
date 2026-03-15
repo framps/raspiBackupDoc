@@ -8,10 +8,9 @@ einfach ist besonders der Restore durchzuführen: Vor dem Restore wird die Liste
 der vorhandenen Backups angezeigt und man kann auswählen, welches Backup
 wieder hergestellt werden soll.
 
-``` admonish info title="Hinweis"
-Es ist empfehlenwert, *raspiBackupDialog* nach erfolgreicher Installation und Konfiguration
-von *raspiBackup* einfach mal downzuloaden und auszuprobieren.
-```
+> [!TIP]
+> Es ist empfehlenwert, *raspiBackupDialog* nach erfolgreicher Installation und Konfiguration
+> von *raspiBackup* einfach mal downzuloaden und auszuprobieren.
 
 ## Installation und Aufruf
 
