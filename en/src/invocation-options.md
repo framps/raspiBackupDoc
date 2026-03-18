@@ -9,6 +9,10 @@ raspiBackup Option1 Option2 Option3 ... Backup directory
 All options that switch something on or off can be activated or deactivated
 by appendedng `+` or `-` when invoking *raspiBackup*.
 
+**Note**:
+If a parameter is used on the command line which starts with `-` this parameter has to start with `\-`. This 
+is not required if this parameter is added to the configuration file.
+
 Example: The `-z` option and the `-z` option switch backup compression on.
 The `-z-` option, on the other hand, switches backup compression off, regardless of
 what is in the configuration file in the parameter `DEFAULT_ZIP_BACKUP`. This allows an
