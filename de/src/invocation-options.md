@@ -9,6 +9,10 @@ raspiBackup Option1 Option2 Option3 ... Backupverzeichnis
 Alle Optionen, die etwas ein- oder ausschalten, können durch
 ein angehängtes `+` oder `-` beim Aufruf von *raspiBackup* gezielt ein- oder ausgeschaltet werden.
 
+**Hinweis**:
+Sofern in der Befehlszeile ein Parameter, der mit `-` beginnt, genutzt wird muss dieser mit `\-` beginnen.  
+Das ist nicht erforderlich wenn der Parameter in der Konfigurationsdatei genutzt wird.
+
 Beispiel: Die Option `-z` sowie die Option `-z+` schaltet die Backupcompression ein.
 Mit der Option `-z-` wird dagegen die Backupcompression ausgeschaltet, und zwar unabhängig davon,
 was in der Konfigurationsdatei in dem Parameter `DEFAULT_ZIP_BACKUP` steht. Damit kann eine
