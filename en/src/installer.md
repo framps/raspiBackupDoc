@@ -1,5 +1,10 @@
 # Installer - Invocation and options
 
+The installer is primarily designed to quickly and easily install *raspiBackup*
+and perform the most important configuration steps so that a backup can be created.
+However, you can also run the installer at any time to change the basic configuration.
+Advanced configuration always requires editing the configuration file.
+
 ## Installer download, invocation and installation
 
 Enter the following commands in a command window to download and invoke the installer

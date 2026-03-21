@@ -1,5 +1,10 @@
 # Installer - Aufruf und Optionen
 
+Der Installer ist primär dafür gedacht *raspiBackup* schnell und einfach zu installieren
+und die wichtigsten Konfigurationen vorzunehmen damit ein Backup erstellt werden kann.
+Allerdings kann man den Installer auch immer wieder aufrufen um die Basiskonfiguration
+zu ändern. Die fortschrittliche Konfiguration erfordert immer eine Änderung der Konfigurationsdatei.
+
 ## Installer Download, Aufruf und Installation
 
 Eingabe der folgenden Befehle in einem Befehlsfenster um den Installer herunterzuladen und aufzurufen:
