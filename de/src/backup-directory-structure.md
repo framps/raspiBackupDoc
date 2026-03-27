@@ -4,13 +4,13 @@
 
 Jeder Backuplauf erstellt im Backupverzeichnis ein Unterverzeichnis,
 welches folgendes Format hat:
-\<hostname\>.
+`<hostname>`.
 
 Jeweils darunter wird ein weiteres Verzeichnis erstellt:
-\<hostname\>@\<osversion\>-\<backuptyp\>-\<backupdatum\>.
+`<hostname>@<osversion>-<backuptyp>-<backupdatum>`.
 
 Bei Verwendung der Option `-M` (*raspiBackup* Snapshot) wird der Optionswert noch angehängt:
-\<hostname\>@\<osversion\>-\<backuptyp\>-\<backupdatum\>\<-M parameter\>.
+`<hostname>@<osversion>-<backuptyp>-<backupdatum><-M parameter>`.
 
 **Beispiele:**
 
