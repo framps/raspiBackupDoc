@@ -75,7 +75,7 @@ fi
 # Since arrays are not exportable(!?) as required for e.g. __list_files_with_status
 # a normal variable is used for that:
 unset RG RG_IGN
-export RG="rg --type=markdown --no-ignore-parent --smart-case"
+export RG="rg --type=markdown --no-ignore-parent --smart-case --engine=auto"
 if [[ -f .rgignore_cdprc ]] ; then
     export RG_IGN="${RG} --ignore-file=.rgignore_cdprc"
 else
