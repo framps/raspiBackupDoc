@@ -436,6 +436,7 @@ edit_by_status() {
 
 alias vibs='edit_by_status'
 alias vigf='edit_grepped_files'
+alias vigftags='edit_grepped_files "[^\\\\\`]<(?!(http|a |/a>|div |/div>|!-- toc|br>|center>|/center>)).*>"'
 alias vimf='edit_meta_files'
 alias viab='edit_files_as_book'
 alias viabs='edit_files_as_book_side_by_side'
