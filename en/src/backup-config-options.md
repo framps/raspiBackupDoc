@@ -1,6 +1,7 @@
 # Backup configuration options
 
-The following options have to be defined in a [configuration file](invocation-options.md#configFiles).
+The following options can only be defined in a [configuration file](invocation-options.md#configFiles).
+There doesn't exist an invocation option. 
 Most invocation options can be configured there also. See [Backup options](backup-options.md) for more information.
 
 <div class="table-wrapper-for-options">
