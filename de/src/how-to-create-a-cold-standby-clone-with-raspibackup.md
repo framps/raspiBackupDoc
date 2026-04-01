@@ -17,7 +17,8 @@ Das Hilfstool heißt [raspiBackupAndClone.sh](https://github.com/framps/raspiBac
 
 Folgende Schritte sind notwendig, um es einzusetzen:
 
-Hinweis: \<clonedevice\> ist im Folgenden das Device, welches den Clone erhalten soll, also z.B. `/dev/mmcblk0` oder `/dev/sda`.
+> [!NOTE]
+> \<clonedevice\> ist im Folgenden das Device, welches den Clone erhalten soll, also z.B. `/dev/mmcblk0` oder `/dev/sda`.
 
  1. `raspiBackupAndClone.sh` installieren
 
