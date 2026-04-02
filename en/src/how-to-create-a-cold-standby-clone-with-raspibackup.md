@@ -20,7 +20,7 @@ The following steps are necessary to use it:
 > [!NOTE]
 > \<clonedevice\> is the device that is to receive the clone, e.g. `/dev/mmcblk0` or `/dev/sda`.
 
- 1. Install `raspiBackupAndClone.sh
+ 1. Install `raspiBackupAndClone.sh`
 
      1. download `raspiBackupAndClone.sh`
         ```
@@ -55,7 +55,7 @@ The following steps are necessary to use it:
         change to
         ```
         ExecStart=/usr/local/bin/raspiBackupAndClone.sh <clonedevice>
-        ````
+        ```
 
 If a backup is to be created manually,
 must be called `raspiBackupAndClone.sh` instead of `raspiBackup.sh`.
