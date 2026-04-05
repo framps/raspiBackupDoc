@@ -11,6 +11,8 @@ auf einem NAS abzulegen und das NFS Protokoll dazu zu nutzen. Im Folgenden wird 
 das bei einer Synology zu konfigurieren ist. Natürlich kann man auch jedes andere NAS nutzen, sofern es NFS unterstützt.
 Auch eine Raspberry kann als NFS Server konfiguriert und genutzt werden.
 
+**Hinweis**: Ab der Release 0.7.2 gibt es eine [Konfigurationsoption](https://framps.github.io/raspiBackupDoc/de/backup-config-options.html#default_rsync_backup_option_exclude_acls), mit der die Sicherung von ACLs abgeschaltet werden kann.
+
 ## *raspiBackup* - Nutzung von NFS am Beispiel einer Synology
 
 **Wichtig**: Die Partition auf dem NAS muss mit `no_root_squash` exportiert werden,
