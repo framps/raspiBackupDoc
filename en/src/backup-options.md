@@ -386,7 +386,7 @@ automatically with a `tar` or `rsync` backup saved, unless the `-P` option is us
 With the `-z` option, the `dd` and `tar` backups are also zipped or reduced in size.
 reduced in size.
 The default compresion tool used is gzip for dd and tar. For tar the option [--tarcompressionTool](
-[https://framps.github.io/raspiBackupDoc/de/backup-options.html?highlight=ta#--tarcompressiontool-definition-des-zu-nutzenden-tar-kompressionstools]) can also be used instead of option `-z` to use another compression tool.
+[https://framps.github.io/raspiBackupDoc/backup-options.html#--tarcompressiontool-definition-of-the-tar-compression-tool-to-be-used]) can also be used instead of option `-z` to use another compression tool.
 
 **Note**:
 With the dd backup, the configuration parameter
