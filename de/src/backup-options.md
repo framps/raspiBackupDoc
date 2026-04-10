@@ -387,7 +387,8 @@ minimieren.
 [Detailinformationen zu den Backuptypen](backup-types.md) Ein externes Rootfilesystem wird
 automatisch bei `tar` oder `rsync` Backup mitgesichert, sofern nicht die Option `-P`
 benutzt wird. Mit der Option `-z` werden die `dd` und `tar` Backups zusätzlich noch gezippt bzw.
-verkleinert.
+verkleinert. Das Standard Kompressionsverfahren ist bei dd und tar gzip. Bei tar kann mit der Option [--tarcompressionTool](
+https://framps.github.io/raspiBackupDoc/de/backup-options.html?highlight=ta#--tarcompressiontool-definition-des-zu-nutzenden-tar-kompressionstools) statt mit der Option `-z` ein anderes Kompressionstool gewählt werden. 
 
 **Hinweis**:
 Beim dd Backup kann durch den Konfigurationsparameter
