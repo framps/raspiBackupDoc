@@ -22,7 +22,7 @@ Damit existiert immer ein Clone des letzten Backups auf einem Gerät welches sof
 Sofern der Backptyp rsync genutzt wird, erfolgt kein Restore des eben gerade erstellten Backups auf das Clonegerät, sondern es werden nur alle Änderungen am System synchronisiert.
 Damit ist der Update des Clones sehr schnell erledigt. [Hier](how-to-create-a-cold-standby-clone-with-raspibackup.md) ist beschrieben welche Schritte notwendig sind um *raspiBackupAndClone* zu nutzen.
 
-Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
+Zur Installation und Konfiguration von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
 Optionen von *raspiBackup* konfiguriert werden können, vergleichbar mit `raspi-config`.
 Speziellere Einstellungen lassen sich in einer Konfigurationsdatei vornehmen.
