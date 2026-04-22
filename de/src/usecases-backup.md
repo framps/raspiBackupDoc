@@ -149,16 +149,23 @@ Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hil
 
 *raspiBackup* erstellt Backups die im Backupfalle restored werden müssen um dann das System neu zu starten. Das bedeutet eine gewisse Nichtverfügbarkeit des Systems bis der Backup restored wurde. Um die Nichtverfügbarkeit zu minimieren gibt es deshalb ein Helperscript aus der Sammlung der *raspiBackup* [Helpderscripts](https://github.com/framps/raspiBackup/tree/master/helper) mit dem Namen **raspiBackupAndClone**. Um dieses nutzen zu können sind ein paar manuelle Konfigurationen notwendig.
 
-1. *raspiBackup* installieren und konfigurieren. Möglichst rsync nehmen damit ein Restore ein Syncrestore ist und entsprechend schnell endet.
+1. *raspiBackup* installieren und konfigurieren. Möglichst rsync nehmen damit ein Restore ein Syncrestore und kein Vollrestore ist und somit entsprechend schnell endet.
 2. raspiBackup einmal manuell starten damit das erste Backup erstellt wird.
+   ```
+   sudo raspiBackup
+   ```
 1. Das Script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) ist in /usr/local/bin zu kopieren und ausführbar zu machen
+   ```
+   sudo cp raspiBackupAndClone.sh /usr/local/bin
+   sudo chmod +x /usr/local/bin/raspiBackupAndCLone.sh
+   ```
 1. *raspiBackupAndClone.sh* einmal mit dem Device welches den Clone erhalten soll, aufrufen.
 
-   Beispiel: 
-   ``` 
-   raspiBackupAndClone.sh /dev/sda
+   Beispiel:
    ```
-   **Achtung**: Sicherstellen dass das richtige Device genommen wird. Ansonsten droht Datenverlust.   
+   sudo raspiBackupAndClone.sh /dev/sda
+   ```
+   **Achtung**: Sicherstellen dass das richtige Device genommen wird. Ansonsten droht Datenverlust.
 1. Den Clone testen ob er bootet und auch sonst alles in Ordnung ist.
 2. Die Zeile /etc/systemd/system/raspiBackup.service
    ```
@@ -169,6 +176,9 @@ Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hil
    ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
    ```
    zu ändern wobei \<restoredevice\> das Device sein muss auf dem das Backup restored werden soll. Z.B. `/dev/sda` oder `/dev/mmcblk0`
+   ```
+   sudo nano /etc/systemd/system/raspiBackup.service
+   ```
 
 Ab dann wird bei jedem Backuplauf automatisch nach jedem Backup der letzte Backup noch gecloned.
 

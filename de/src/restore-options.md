@@ -26,7 +26,7 @@ Ebenso ist manuell auch die [Wiederherstellung einzelner Dateien/Verzeichnisse](
 ### -C: Auf Badblocks prüfen
 
 Beim Formatieren wird mittels `mkfs.ext4 -c` auf Bad Blocks geprüft.
-Hinweis: Die Restorezeit wird dadurch erhöht.
+**Hinweis:** Die Restorezeit wird dadurch erhöht.
 
 | Option | Standard | Im Installer | Konfigurationsname |
 |--------|----------|--------------|--------------------|
@@ -192,7 +192,7 @@ weitere Details.
 |--------|----------|--------------|--------------------|
 | -1     |  aus     |    nein      |                    |
 
-Hinweis: Diese Option kann unerwartete Ergebnisse haben.
+**Hinweis**: Diese Option kann unerwartete Ergebnisse haben.
 Benutze die Option nur, wenn Du weißt, was Du tust.
 
 </div>

@@ -275,7 +275,7 @@ root@raspberrypi:/media/nas-backup/raspberrypi# du -shl *
 4,7G raspberrypi-rsync-backup-20160822-2016
 ```
 
-Note: [How do hardlinks work together with rsync?](how-do-hardlinks-work-with-rsync.md).
+**Note:** [How do hardlinks work together with rsync?](how-do-hardlinks-work-with-rsync.md).
 And also a [Youtube video](https://www.youtube.com/watch?v=pIhSca_q2lo&t=4s).
 
 <a name="faq18"></a>
@@ -435,9 +435,9 @@ rsync: set_acl: sys_acl_set_file(media/pi, ACL_TYPE_ACCESS): Operation not suppo
 The reason is that nfs version 4 with rsync does not support Posix ACLs.
 However, these are not necessary in 99% of cases.
 
-Note: Synology does not support ACLs with NFS as of 13.5.2022.
+**Note:** Synology does not support ACLs with NFS as of 13.5.2022.
 
-Note: The following command will find all files with ACLs:
+**Note:** The following command will find all files with ACLs:
 ```
 sudo getfacl -Rs /
 ```

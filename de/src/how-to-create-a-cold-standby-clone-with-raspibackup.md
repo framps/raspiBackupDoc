@@ -17,7 +17,7 @@ Das Hilfstool heißt [raspiBackupAndClone.sh](https://github.com/framps/raspiBac
 
 Folgende Schritte sind notwendig, um es einzusetzen:
 
-Hinweis: <clonedevice> ist im Folgenden das Device, welches den Clone erhalten soll, also z.B. `/dev/mmcblk0` oder `/dev/sda`.
+**Hinweis:** <clonedevice> ist im Folgenden das Device, welches den Clone erhalten soll, also z.B. `/dev/mmcblk0` oder `/dev/sda`.
 
  1. `raspiBackupAndClone.sh` installieren
 
@@ -59,7 +59,7 @@ Hinweis: <clonedevice> ist im Folgenden das Device, welches den Clone erhalten s
 Falls manuell ein Backup erstellt werden soll,
 muss `raspiBackupAndClone.sh` statt `raspiBackup.sh` aufgerufen werden.
 
-Hinweis: Falls kein `rsync` Backup möglich ist, muss in `raspiBackupAndClone.sh` die
+**Hinweis:** Falls kein `rsync` Backup möglich ist, muss in `raspiBackupAndClone.sh` die
 Zeile `USE_RSYNC=1` in `USE_RSYNC=0` geändert werden. Dann dauert der Restore
 allerdings wesentlich länger, da keine Synchronisation sondern ein Vollrestore
 vorgenommen wird.

@@ -145,8 +145,25 @@ LABEL=usb /USBStick ext4 defaults,noatime,nofail 0 2
 It is often important to keep downtime to a minimum. The following helper script can help with this:
 
 *raspiBackup* creates backups that must be restored in the event of a backup failure in order to restart the system. This means that the system will be unavailable until the backup has been restored. To minimize this downtime, there is a helper script from the *raspiBackup* [Helperscripts](https://github.com/framps/raspiBackup/tree/master/helper) collection called **raspiBackupAndClone**. A few manual configurations are necessary to use this.
- 
-1. Copy the script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) to /usr/local/bin and make it executable.
+
+1. Install and configure *raspiBackup*. If possible, use rsync so that the restore is a sync restore rather than a full restore, allowing it to complete quickly.
+2. Run raspiBackup manually once to create the first backup.
+   ```
+   sudo raspiBackup
+   ```
+11. Copy the script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) to /usr/local/bin and make it executable.
+   ```
+   sudo cp raspiBackupAndClone.sh /usr/local/bin
+   sudo chmod +x /usr/local/bin/raspiBackupAndCLone.sh
+   ```
+11. Run *raspiBackupAndClone.sh* once on the device that is to receive the clone.
+
+   Example:
+   ```
+   sudo raspiBackupAndClone.sh /dev/sda
+   ```
+   **Warning**: Make sure you select the correct device. Otherwise, you risk data loss.
+1. Test the clone to see if it boots and that everything else is working properly.
 2. Change the line /etc/systemd/system/raspiBackup.service
    ```
    ExecStart=/usr/local/bin/raspiBackup.sh
@@ -155,7 +172,15 @@ It is often important to keep downtime to a minimum. The following helper script
     ```
    ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
    ```
-   where \<restoredevice\> must be the device on which the backup is to be restored. For example, `/dev/sda` or `/dev/mmcblk1`. 
+   where \<restoredevice\> must be the device on which the backup is to be restored. For example, `/dev/sda` or `/dev/mmcblk1`.
+   ```
+   sudo nano /etc/systemd/system/raspiBackup.service
+   ```
+
+From then on, the most recent backup will be automatically cloned after every backup run.
+
+
+
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/konfigurationsbeispiele
