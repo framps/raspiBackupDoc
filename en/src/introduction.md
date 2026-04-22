@@ -19,7 +19,7 @@ This means that the clone is created very fast. However, the rsync backup type a
 
 There is a helper script called **raspiBackupAndClone** available, which, with a few manual configuration steps, can be used to automatically restore the backup to a device immediately after a successful backup.
 This ensures that there is always a clone of the latest backup on a device that can be deployed immediately if the original system stops working.
-If the rsync backup type and partition-oriented mode are used, the backup that was just created is not restored to the clone device; instead, only all updates on the system are synchronized.
+If the rsync backup type is used, the backup that was just created is not restored to the clone device; instead, only all updates on the system are synchronized.
 This ensures that updating the clone is completed very quickly. See [here](how-to-create-a-cold-standby-clone-with-raspibackup.md) for the details how to use **raspiBackupAndClone**.
 
 If you want to take advantage of a backup history and a current clone, you can also use the *raspiBackupRestore2Image* extension script, which is described [here](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html).
