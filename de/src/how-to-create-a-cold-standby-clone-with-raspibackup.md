@@ -9,7 +9,7 @@ zu können, also einen Clone.
 
 Mit Hilfe eines kleinen Hilfstools ist dieses aber möglich: Mit diesem
 wird ein Backup erstellt und anschließend dieser Backup auf ein Medium
-zurückgespielt. Wird der Backuptyp `rsync` genutzt zusammen mit dem paritionsorientierten Modus,
+zurückgespielt. Wird der Backuptyp `rsync` genutzt,
 ist der Restore nur eine
 Synchronisation der Änderungen von dem letzten Backup zum aktuellen Backup und endet
 somit viel schneller.
