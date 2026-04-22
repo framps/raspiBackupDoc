@@ -20,9 +20,7 @@ nur die letzten Änderungen im existierende Clone mit rsync updaten und somit nu
 Es existiert ein Helperscript mit dem Namen **raspiBackupAndClone**, welches mit ein paar manuellen Konfigurationsschritten genutzt werden kann, um automatisch nach einem erfolgreichen Backup dieses Backup sofort auf ein Gerät zurückzuspielen.
 Damit existiert immer ein Clone des letzten Backups auf einem Gerät welches sofort eingesetzt werden kann, falls das Originalsystem nicht mehr funktionieren sollte.
 Sofern der Backptyp rsync genutzt wird, erfolgt kein Restore des eben gerade erstellten Backups auf das Clonegerät, sondern es werden nur alle Änderungen am System synchronisiert.
-Damit ist der Update des Clones sehr schnell erledigt. [Hier](how-to-create-a-cold-standby-clone-with-raspibackup.md) ist beschrieben welche Schritte notwendig sind um **raspiBackupAndClone** zu nutzen.
-
-Wer die Vorteile einer Backuphistorie und eines aktuellen Clones nutzen will der kann auch das Erweiterungsscript *raspiBackupRestore2Image* nutzen welches [hier](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html) beschrieben st.
+Damit ist der Update des Clones sehr schnell erledigt. [Hier](how-to-create-a-cold-standby-clone-with-raspibackup.md) ist beschrieben welche Schritte notwendig sind um *raspiBackupAndClone* zu nutzen.
 
 Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
