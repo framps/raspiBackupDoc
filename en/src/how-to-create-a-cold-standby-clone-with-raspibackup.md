@@ -21,6 +21,7 @@ The following steps are necessary to use it:
 > [!NOTE]
 > \<clonedevice\> is the device that is to receive the clone, e.g. `/dev/mmcblk0` or `/dev/sda`.
 
+ 1. Install and configure **raspiBackup**
  1. Install `raspiBackupAndClone.sh`
 
      1. download `raspiBackupAndClone.sh`
@@ -46,6 +47,7 @@ The following steps are necessary to use it:
         ```
         sudo raspiBackup -d <clonedevice> <backup directory>
         ```
+
  1. Run **raspiBackupAndClone** once manually
     ```
     sudo raspiBackupAndClone.sh <clonedevice>
@@ -62,14 +64,9 @@ The following steps are necessary to use it:
         ```
         ExecStart=/usr/local/bin/raspiBackupAndClone.sh <clonedevice>
         ```
-
-If a backup is to be created manually,
-must be called `raspiBackupAndClone.sh` instead of `raspiBackup.sh`.
-
-Note: If no `rsync` backup is possible, the
-line `USE_RSYNC=1` must be changed to `USE_RSYNC=0`. Then the restore
-takes considerably longer, however, as no synchronization but a full restore
-is performed.
+        ```
+        sudo nano /etc/systemd/system/raspiBackup.service
+        ```
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/684-wie-kann-man-mit-raspibackup-einen-clone-erstellen

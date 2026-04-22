@@ -13,7 +13,7 @@ zurückgespielt. Wird der Backuptyp `rsync` genutzt,
 ist der Restore nur eine
 Synchronisation der Änderungen von dem letzten Backup zum aktuellen Backup und endet
 somit viel schneller.
-Für alle anderen iBackuptypen und Backupmodes ist der Restore immer ein normaler Restore und keine Synchronisation.
+Für alle anderen Backuptypen und Backupmodes ist der Restore immer ein normaler Restore und keine Synchronisation.
 
 Das Hilfstool heißt [raspiBackupAndClone.sh](https://github.com/framps/raspiBackup/blob/master/helper/raspiBackupAndClone.sh) und steht auf *GitHub* zur Verfügung.
 
@@ -22,8 +22,7 @@ Folgende Schritte sind notwendig, um es einzusetzen:
 > [!NOTE]
 > \<clonedevice\> ist im Folgenden das Device, welches den Clone erhalten soll, also z.B. `/dev/mmcblk0` oder `/dev/sda`.
 
-
- 1. **raspiBackup** installieren und konfigurieren.
+ 1. **raspiBackup** installieren und konfigurieren
  1. `raspiBackupAndClone.sh` installieren
 
      1. Download von `raspiBackupAndClone.sh`
@@ -55,6 +54,7 @@ Folgende Schritte sind notwendig, um es einzusetzen:
     sudo raspiBackupAndClone.sh <clonedevice>
     ```
     und aufmerksame Prüfung des Clones
+
  3. Regelmäßigen Aufruf von `raspiBackupAndClone.sh` statt `raspiBackup.sh` einstellen
 
      1. In der Datei `/etc/systemd/system/raspiBackup.service`
