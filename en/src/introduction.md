@@ -14,7 +14,7 @@ A restore can always be performed completely. The [partition-oriented backup](no
 
 *dd*, *tar*, and *rsync* can be selected as Linux backup tools. In addition, *dd* and *tar* offer the option of reducing the size of backups. See [here for a description](backup-types.md) of the advantages and disadvantages of each tool, as well as a decision tree to help you choose the right backup type.
 
-*raspiBackup* creates a new backup each time, providing a backup history that can be accessed at any time. This differs from existing clone backup tools, which only update the latest changes in the existing clone with rsync, meaning that only a backup of the latest status is available.
+*raspiBackup* creates a new backup each time, providing a backup history that can be accessed at any time. This differs from existing **clone** backup tools, which only update the latest changes in the existing clone with rsync, meaning that only a backup of the latest status is available.
 This means that the clone is created very fast. However, the rsync backup type also only backs up the latest changes and is therefore the fastest backup method of *raspiBackup*. This backup type should be used if backup speed is an important criterion.
 
 There is a helper script called **raspiBackupAndClone** available, which, with a few manual configuration steps, can be used to automatically restore the backup to a device immediately after a successful backup.
