@@ -10,7 +10,7 @@ Siehe dazu [Ist ein Backup eines laufenden Systems zuverlässig und sollte nicht
 Das kann manuell oder automatisch in regelmäßigen Abständen geschehen.
 Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten.
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
-Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientierte Backup](normal-or-partition-backup.md#partitionlBackup) unterstützt auch einen vollständigen partitionsweisen Restore. Außerdem unterstützt er bei dem rsync Backuptyp ein Deltarestore, d.h. es werden nur die Änderungen vom letzten Backup zurückgenommen. Dadurch reduziert sich die Restorezeit signifikant.
+Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientierte Backup](normal-or-partition-backup.md#partitionalBackup) unterstützt auch einen vollständigen partitionsweisen Restore. Außerdem unterstützt er bei dem rsync Backuptyp ein Deltarestore, d.h. es werden nur die Änderungen vom letzten Backup zurückgenommen. Dadurch reduziert sich die Restorezeit signifikant.
 
 Als Linux Backuptools können *dd*, *tar* und *rsync* gewählt werden. Zusätzlich besteht noch die Möglichkeit bei *dd* und *tar* die Backups zu verkleinern. Siehe [hier eine Beschreibung](backup-types.md) der Vor- und Nachteile der jeweiligen Tools sowie einen Entscheidungsbaum, welcher Backuptyp zu wählen ist.
 

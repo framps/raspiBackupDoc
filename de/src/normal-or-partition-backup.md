@@ -16,7 +16,7 @@ Es existieren zwei verschiedene Backupmodi:
    Es wird aber dringend davon abgeraten, ein `dd` Backup zu nutzen.
    Siehe: [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)
 
-<a name="partitionBackup"></a>
+<a name="partitionalBackup"></a>
 1. **Partitionsorientierter Backup**
 
    In diesem Modus wird jede auf dem System befindliche oder eine bestimmte ausgewählte

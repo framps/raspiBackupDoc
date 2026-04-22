@@ -10,7 +10,7 @@ See also [Is a backup of a running system reliable? Shouldn't the entire system 
 This can be done manually or automatically at regular intervals.
 A backup always contains the entire system, i.e. system data and user data.
 The system therefore reboots immediately once it has been restored.
-A restore can always be performed completely. The [partition-oriented backup](normal-or-partition-backup.md#parititionBackup) also supports a complete partition wise restore. In addition, it supports a delta restore for the rsync backup type, i.e., only the changes since the last backup are reversed. This significantly reduces the restore time.
+A restore can always be performed completely. The [partition-oriented backup](normal-or-partition-backup.md#partitionBackup) also supports a complete partition wise restore. In addition, it supports a delta restore for the rsync backup type, i.e., only the changes since the last backup are reversed. This significantly reduces the restore time.
 
 *dd*, *tar*, and *rsync* can be selected as Linux backup tools. In addition, *dd* and *tar* offer the option of reducing the size of backups. See [here for a description](backup-types.md) of the advantages and disadvantages of each tool, as well as a decision tree to help you choose the right backup type.
 
