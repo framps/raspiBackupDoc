@@ -17,6 +17,7 @@ Sie stehen auf [*GitHub*](https://github.com/framps/raspiBackup/tree/master/help
    natürlich nicht, denn darin befindet sich dieselbe Fehlkonfiguration. In diesem Falle muss man ein
    älteres noch funktionierendes Backup manuell restoren.
 
+   Eine genaue Beschrebung wie **raspiBackupAndClone** zu konfigurieren ist ist [hier](how-to-create-a-cold-standby-clone-with-raspibackup.md) zu finden.
 
 1. **raspiBackupWrapper.sh**: Damit kann man vor und nach dem Aufruf von
    *raspiBackup* verschiedene Dinge erledigen lassen. Der Code mounted schon die

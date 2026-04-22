@@ -18,6 +18,8 @@ They are available for download on [*GitHub*](https://github.com/framps/raspiBac
    will of course not help, as it contains the same misconfiguration. In this case you have to restore an
    manually restore an older, still functioning backup.
 
+   Detailed instructions on how to configure **raspiBackupAndClone** are available [here](how-to-create-a-cold-standby-clone-with-raspibackup.md).
+
 1. **raspiBackupWrapper.sh**: This can be used to execute before and after
    *raspiBackup* various things. The code already mounts the
    backup partition and unmounts it if it was not mounted before. In addition it's possible

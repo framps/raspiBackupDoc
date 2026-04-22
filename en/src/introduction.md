@@ -17,7 +17,12 @@ A restore can always be performed completely. The [partition-oriented backup](no
 raspiBackup creates a new backup each time, providing a backup history that can be accessed at any time. This differs from existing clone backup tools, which only update the latest changes in the existing clone with rsync, meaning that only a backup of the latest status is available.
 This means that the clone is created very fast. However, the rsync backup type also only backs up the latest changes and is therefore the fastest backup method of *raspiBackup*. This backup type should be used if backup speed is an important criterion.
 
-If you want to take advantage of a backup history and an up-to-date clone, you can use one of the two extension scripts: raspiBackupRestore2Image or raspiBackupAndClone, which are described [here](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html).
+There is a helper script called **raspiBackupAndClone** available, which, with a few manual configuration steps, can be used to automatically restore the backup to a device immediately after a successful backup.
+This ensures that there is always a clone of the latest backup on a device that can be deployed immediately if the original system stops working.
+If the rsync backup type and partition-oriented mode are used, the backup that was just created is not restored to the clone device; instead, only all updates on the system are synchronized.
+This ensures that updating the clone is completed very quickly. See [here](how-to-create-a-cold-standby-clone-with-raspibackup.md) for the details how to use **raspiBackupAndClone**.
+
+If you want to take advantage of a backup history and a current clone, you can also use the *raspiBackupRestore2Image* extension script, which is described [here](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html).
 
 For **installation and configuration** of *raspiBackup* there is an
 [installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured similar to `raspi-config`. More specific settings can be configured in a configuration file.

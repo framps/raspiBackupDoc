@@ -123,8 +123,7 @@ DEFAULT_PARTITIONS_TO_BACKUP="1 2 5"
 
 ```
 DEFAULT_BACKUPTYPE=rsync
-DEFAULT_KEEPBACKUPS=n
-DEFAULT_BACKUPPATH="/USBStick"
+DEFAULT_KEEPBACKUPS=DEFAULT_BACKUPPATH="/USBStick"
 ```
 
 Damit `rsync` Hardlinks benutzt und das Backup schnell ist, muss die
@@ -147,41 +146,7 @@ LABEL=usb    /USBStick    ext4     defaults,noatime,nofail        0    2
 
 Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hilft folgendes Helperscript:
 
-*raspiBackup* erstellt Backups die im Backupfalle restored werden müssen um dann das System neu zu starten. Das bedeutet eine gewisse Nichtverfügbarkeit des Systems bis der Backup restored wurde. Um die Nichtverfügbarkeit zu minimieren gibt es deshalb ein Helperscript aus der Sammlung der *raspiBackup* [Helpderscripts](https://github.com/framps/raspiBackup/tree/master/helper) mit dem Namen **raspiBackupAndClone**. Um dieses nutzen zu können sind ein paar manuelle Konfigurationen notwendig.
-
-1. *raspiBackup* installieren und konfigurieren. Möglichst rsync nehmen damit ein Backup ain Deltabackup ist und den partitionsorientierten Modus damit der Restore auf das Clonedevice nur eine Synchronisation ist und kein Vollrestore und somit entsprechend schnell endet.
-2. **Wichtig:** raspiBackup einmal manuell starten damit das erste Backup erstellt wird. Bei einem rsync Backup wird das das eine Mal länger dauern.
-   ```
-   sudo raspiBackup
-   ```
-1. Das Script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) ist in /usr/local/bin zu kopieren und ausführbar zu machen
-   ```
-   sudo cp raspiBackupAndClone.sh /usr/local/bin
-   sudo chmod +x /usr/local/bin/raspiBackupAndCLone.sh
-   ```
-1. *raspiBackupAndClone.sh* einmal mit dem Device welches den Clone erhalten soll, aufrufen.
-
-   Beispiel:
-   ```
-   sudo raspiBackupAndClone.sh /dev/sda
-   ```
-   **Achtung**: Sicherstellen dass das richtige Device genommen wird. Ansonsten droht Datenverlust.
-1. Den Clone testen ob er bootet und auch sonst alles in Ordnung ist.
-2. Die Zeile /etc/systemd/system/raspiBackup.service
-   ```
-   ExecStart=/usr/local/bin/raspiBackup.sh
-   ```
-   ist in
-   ```
-   ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
-   ```
-   zu ändern wobei \<restoredevice\> das Device sein muss auf dem das Backup restored werden soll. Z.B. `/dev/sda` oder `/dev/mmcblk0`
-   ```
-   sudo nano /etc/systemd/system/raspiBackup.service
-   ```
-
-Ab dann wird bei jedem Backuplauf automatisch nach jedem Backup der letzte Backup noch gecloned.
-
+*raspiBackup* erstellt Backups die im Backupfalle restored werden müssen um dann das System neu zu starten. Das bedeutet eine gewisse Nichtverfügbarkeit des Systems bis der Backup restored wurde. Um die Nichtverfügbarkeit zu minimieren gibt es deshalb ein Helperscript aus der Sammlung der *raspiBackup* [Helpderscripts](https://github.com/framps/raspiBackup/tree/master/helper) mit dem Namen **raspiBackupAndClone**. Um dieses nutzen zu können sind ein paar manuelle Konfigurationen notwendig. Die genauen Anweisungen dazu befinden sich [hier](how-to-create-a-cold-standby-clone-with-raspibackup.md).
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/konfigurationsbeispiele

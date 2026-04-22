@@ -17,7 +17,12 @@ Als Linux Backuptools können *dd*, *tar* und *rsync* gewählt werden. Zusätzli
 raspiBackup erstellt jedes mal ein neues Backup und somit ist eine Backuphistorie verfügbar, auf die jederzeit gezielt zurückgegriffen werden kann. Das ist unterschiedlich zu existierenden Clone Backuptools die
 nur die letzten Änderungen im existierende Clone mit rsync updaten und somit nur ein Backup des letzten Standes verfügbar ist. Dadurch ist ein Clone schnell auf den aktuellen Stand gebracht. Allerdings werden beim Backuptyp rsync ebenfalls nur die letzten Änderungen gesichert und ist damit die schnellste Backupmethode von *raspiBackup*. Dieser Backuptyp sollte genutzt werden wenn die Backupgeschwindigkeit ein wichtiges Kriterium ist.
 
-Wer die Vorteile einer Backuphistorie und eines aktuellen Clones nutzen will der kann eines der beiden Erweiterungsscripte nutzen: raspiBackupRestore2Image oder raspiBackupAndClonei, die [hier](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html) beschrieben sind.
+Es existiert ein Helperscript mit dem Namen **raspiBackupAndClone**, welches mit ein paar manuellen Konfigurationsschritten genutzt werden kann, um automatisch nach einem erfolgreichen Backup dieses Backup sofort auf ein Gerät zurückzuspielen.
+Damit existiert immer ein Clone des letzten Backups auf einem Gerät welches sofort eingesetzt werden kann, falls das Originalsystem nicht mehr funktionieren sollte.
+Sofern der Backptyp rsync sowie der partitionsorientere Modus genutzt wird, erfolgt kein Restore des eben gerade erstellten Backups auf das Clonegerät, sondern es werden nur alle Änderungen am System synchronisiert.
+Damit ist der Update des Clones sehr schnell erledigt. [Hier](how-to-create-a-cold-standby-clone-with-raspibackup.md) ist beschrieben welche Schritte notwendig sind um **raspiBackupAndClone** zu nutzen.
+
+Wer die Vorteile einer Backuphistorie und eines aktuellen Clones nutzen will der kann auch das Erweiterungsscript *raspiBackupRestore2Image* nutzen welches [hier](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html) beschrieben st.
 
 Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
