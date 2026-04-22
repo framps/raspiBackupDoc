@@ -193,7 +193,7 @@ more details.
 |--------|----------|--------------|--------------------|
 | -1 | off | no |
 
-Note: This option can have unexpected results.
+**Note:** This option can have unexpected results.
 Only use this option if you know what you are doing.
 
 </div>

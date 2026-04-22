@@ -10,16 +10,19 @@ Siehe dazu [Ist ein Backup eines laufenden Systems zuverlässig und sollte nicht
 Das kann manuell oder automatisch in regelmäßigen Abständen geschehen.
 Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten.
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
-Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientierte Backup](normal-or-partition-backup.md#partitionlBackup) unterstützt auch einen vollständigen partitionsweisen Restore. Außerdem unterstützt er bei dem rsync Backuptyp ein Deltarestore, d.h. es werden nur die Änderungen vom letzten Backup zurückgenommen. Dadurch reduziert sich die Restorezeit signifikant.
+Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientierte Backup](normal-or-partition-backup.md#partitionalBackup) unterstützt auch einen vollständigen partitionsweisen Restore. Außerdem unterstützt er bei dem rsync Backuptyp ein Deltarestore, d.h. es werden nur die Änderungen vom letzten Backup zurückgenommen. Dadurch reduziert sich die Restorezeit signifikant.
 
 Als Linux Backuptools können *dd*, *tar* und *rsync* gewählt werden. Zusätzlich besteht noch die Möglichkeit bei *dd* und *tar* die Backups zu verkleinern. Siehe [hier eine Beschreibung](backup-types.md) der Vor- und Nachteile der jeweiligen Tools sowie einen Entscheidungsbaum, welcher Backuptyp zu wählen ist.
 
-raspiBackup erstellt jedes mal ein neues Backup und somit ist eine Backuphistorie verfügbar, auf die jederzeit gezielt zurückgegriffen werden kann. Das ist unterschiedlich zu existierenden Clone Backuptools die
+raspiBackup erstellt jedes mal ein neues Backup und somit ist eine Backuphistorie verfügbar, auf die jederzeit gezielt zurückgegriffen werden kann. Das ist unterschiedlich zu existierenden **Clone** Backuptools die
 nur die letzten Änderungen im existierende Clone mit rsync updaten und somit nur ein Backup des letzten Standes verfügbar ist. Dadurch ist ein Clone schnell auf den aktuellen Stand gebracht. Allerdings werden beim Backuptyp rsync ebenfalls nur die letzten Änderungen gesichert und ist damit die schnellste Backupmethode von *raspiBackup*. Dieser Backuptyp sollte genutzt werden wenn die Backupgeschwindigkeit ein wichtiges Kriterium ist.
 
-Wer die Vorteile einer Backuphistorie und eines aktuellen Clones nutzen will der kann eines der beiden Erweiterungsscripte nutzen: raspiBackupRestore2Image oder raspiBackupAndClonei, die [hier](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html) beschrieben sind.
+Es existiert ein Helperscript mit dem Namen **raspiBackupAndClone**, welches mit ein paar manuellen Konfigurationsschritten genutzt werden kann, um automatisch nach einem erfolgreichen Backup dieses Backup sofort auf ein Gerät zurückzuspielen.
+Damit existiert immer ein Clone des letzten Backups auf einem Gerät welches sofort eingesetzt werden kann, falls das Originalsystem nicht mehr funktionieren sollte.
+Sofern der Backptyp rsync genutzt wird, erfolgt kein Restore des eben gerade erstellten Backups auf das Clonegerät, sondern es werden nur alle Änderungen am System synchronisiert.
+Damit ist der Update des Clones sehr schnell erledigt. [Hier](how-to-create-a-cold-standby-clone-with-raspibackup.md) ist beschrieben welche Schritte notwendig sind um *raspiBackupAndClone* zu nutzen.
 
-Zur **Installation und Konfiguration** von *raspiBackup* gibt es einen
+Zur Installation und Konfiguration von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
 Optionen von *raspiBackup* konfiguriert werden können, vergleichbar mit `raspi-config`.
 Speziellere Einstellungen lassen sich in einer Konfigurationsdatei vornehmen.

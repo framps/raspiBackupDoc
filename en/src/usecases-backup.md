@@ -1,4 +1,4 @@
-# Typical backup use cases 
+# Typical backup usecases 
 
 Various application examples of
 *raspiBackup* and their configuration are presented and explained. They are intended to
@@ -44,12 +44,12 @@ DEFAULT_ZIP_BACKUP=1
 ```
 
 also reduces the size of the image, but this cannot be restored directly
-under Windows. Unzip it first.
+under Windows. Unzipi it first.
 
 ## A Raspberry should be backed up as quickly as possible. The backup partition is an EXT4 file system mounted via NFS, which is provided by a NAS
 
 First, the backup partition of the NAS should be mounted. This should be done in
-`/etc/fstab` where the NFS partition should be defined and will automatically be mounted under `/backup`.
+`/etc/fstab` where the NFS partition should be defined and will automatically ibe mounted under `/backup`.
 
 ```
 DEFAULT_BACKUPTYPE=rsync
@@ -140,22 +140,13 @@ An example entry in `/etc/fstab` could look like this:
 ```
 LABEL=usb /USBStick ext4 defaults,noatime,nofail 0 2
 ```
-## Once a backup has been created, it should be restored to a device immediately so that it can be used right away in the event of a backup
+
+## Once a backup has been created, it should be restored to a device immediately so that it can be used right away in the event of a backup failure
 
 It is often important to keep downtime to a minimum. The following helper script can help with this:
 
-*raspiBackup* creates backups that must be restored in the event of a backup failure in order to restart the system. This means that the system will be unavailable until the backup has been restored. To minimize this downtime, there is a helper script from the *raspiBackup* [Helperscripts](https://github.com/framps/raspiBackup/tree/master/helper) collection called **raspiBackupAndClone**. A few manual configurations are necessary to use this.
- 
-1. Copy the script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) to /usr/local/bin and make it executable.
-2. Change the line /etc/systemd/system/raspiBackup.service
-   ```
-   ExecStart=/usr/local/bin/raspiBackup.sh
-   ```
-   to
-    ```
-   ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
-   ```
-   where \<restoredevice\> must be the device on which the backup is to be restored. For example, `/dev/sda` or `/dev/mmcblk1`. 
+*raspiBackup* creates backups that must be restored in the event of a backup failure in order to restart the system. This means the system will be unavailable for a certain period of time until the backup has been restored. To minimize this downtime, there is a helper script from the *raspiBackup* [helper scripts](https://github.com/framps/raspiBackup/tree/master/helper) collection called **raspiBackupAndClone**. A few manual configurations are required to use this script. The exact instructions for this can be found [here](how-to-create-a-cold-standby-clone-with-raspibackup.md).
+
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/konfigurationsbeispiele

@@ -448,9 +448,9 @@ rsync: set_acl: sys_acl_set_file(media/pi, ACL_TYPE_ACCESS): Operation not suppo
 Die Ursache liegt darin, dass NFS4 mit rsync keine Posix ACLs
 unterstützt. Diese sind aber auch in 99% der Fälle nicht notwendig.
 
-Hinweis: Synology unterstützt keine ACLs mit NFS3 as of 13.5.2022.
+**Hinweis:** Synology unterstützt keine ACLs mit NFS3 as of 13.5.2022.
 
-Hinweis: Mit folgendem Befehl findet mal alle Dateien mit ACLs:
+**Hinweis:** Mit folgendem Befehl findet mal alle Dateien mit ACLs:
 ```
 sudo getfacl -Rs /
 ```

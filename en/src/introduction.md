@@ -10,16 +10,19 @@ See also [Is a backup of a running system reliable? Shouldn't the entire system 
 This can be done manually or automatically at regular intervals.
 A backup always contains the entire system, i.e. system data and user data.
 The system therefore reboots immediately once it has been restored.
-A restore can always be performed completely. The [partition-oriented backup](normal-or-partition-backup.md#parititionBackup) also supports a complete partition wise restore. In addition, it supports a delta restore for the rsync backup type, i.e., only the changes since the last backup are reversed. This significantly reduces the restore time.
+A restore can always be performed completely. The [partition-oriented backup](normal-or-partition-backup.md#partitionBackup) also supports a complete partition wise restore. In addition, it supports a delta restore for the rsync backup type, i.e., only the changes since the last backup are reversed. This significantly reduces the restore time.
 
 *dd*, *tar*, and *rsync* can be selected as Linux backup tools. In addition, *dd* and *tar* offer the option of reducing the size of backups. See [here for a description](backup-types.md) of the advantages and disadvantages of each tool, as well as a decision tree to help you choose the right backup type.
 
-raspiBackup creates a new backup each time, providing a backup history that can be accessed at any time. This differs from existing clone backup tools, which only update the latest changes in the existing clone with rsync, meaning that only a backup of the latest status is available.
+*raspiBackup* creates a new backup each time, providing a backup history that can be accessed at any time. This differs from existing **clone** backup tools, which only update the latest changes in the existing clone with rsync, meaning that only a backup of the latest status is available.
 This means that the clone is created very fast. However, the rsync backup type also only backs up the latest changes and is therefore the fastest backup method of *raspiBackup*. This backup type should be used if backup speed is an important criterion.
 
-If you want to take advantage of a backup history and an up-to-date clone, you can use one of the two extension scripts: raspiBackupRestore2Image or raspiBackupAndClone, which are described [here](https://framps.github.io/raspiBackupDoc/de/extension-scripts.html).
+There is a helper script called **raspiBackupAndClone** available, which, with a few manual configuration steps, can be used to automatically restore the backup to a device immediately after a successful backup.
+This ensures that there is always a clone of the latest backup on a device that can be deployed immediately if the original system stops working.
+If the rsync backup type is used, the backup that was just created is not restored to the clone device; instead, only all updates on the system are synchronized.
+This ensures that updating the clone is completed very quickly. See [here](how-to-create-a-cold-standby-clone-with-raspibackup.md) for the details how to use *raspiBackupAndClone*.
 
-For **installation and configuration** of *raspiBackup* there is an
+For installation and configuration of *raspiBackup* there is an
 [installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured similar to `raspi-config`. More specific settings can be configured in a configuration file.
 
 All functions and applications of *raspiBackup* are described in the first chapter

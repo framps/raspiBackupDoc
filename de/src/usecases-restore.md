@@ -5,7 +5,7 @@ Hier werden verschiedene Anwendungsbeispiele von
 Eine Übersicht aller Optionen findet sich
 im Kapitel [Wiederherstellen/Restore](restore.md).
 
-*Hinweis*
+**Hinweis**
 In den folgenden Beispielen wird /dev/sda als das Gerät genommen, auf welches restored werden soll.
 
 <!-- toc -->

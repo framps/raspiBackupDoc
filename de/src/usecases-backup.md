@@ -123,8 +123,7 @@ DEFAULT_PARTITIONS_TO_BACKUP="1 2 5"
 
 ```
 DEFAULT_BACKUPTYPE=rsync
-DEFAULT_KEEPBACKUPS=n
-DEFAULT_BACKUPPATH="/USBStick"
+DEFAULT_KEEPBACKUPS=DEFAULT_BACKUPPATH="/USBStick"
 ```
 
 Damit `rsync` Hardlinks benutzt und das Backup schnell ist, muss die

@@ -7,13 +7,13 @@ beiden Partitionen `/boot` und `/root` benötigt, wie sie bei *Raspberry Pi OS* 
 
 D.h. man kann *raspiBackup* auf dem jeweiligen Environment ausprobieren und wenn
 es erfolgreich läuft, kann man sich freuen und es nutzen. Wenn es aber nicht
-läuft bzw. Fehlermeldungen bringt, wird **kein** Support gegeben. Man kann einen
-Issue in *GitHub* erstellen und das Debuglog beifügen. So kann *framp* prüfen, ob vielleicht mit ein
+läuft bzw. Fehlermeldungen bringt, wird **kein** Support gegeben. Es ist möglich einen
+Issue in *GitHub* zu erstellen und das Debuglog beizufügen. So kann *framp* prüfen, ob vielleicht mit ein
 paar kleinen Änderungen das Problem beseitigt werden kann. Sind größere Änderungen notwendig,
-werden diese nicht vorgenommen und somit kann *raspiBackup* in dem Environment nicht genutzt werden.
+werden diese nicht vorgenommen und somit kann *raspiBackup* in dem Environment leider nicht genutzt werden.
 Aber auch wenn ein Fix das Problem beseitigt, bleibt das Environment nicht unterstützt.
 
-Insbesondere kann meist ein beliebiges Linux OS auf einer beliebigen Hardware genutzt werden,
+Insbesondere kann meist auch ein beliebiges Linux OS auf einer beliebigen Hardware genutzt werden,
 um ein Backup zu restoren. Auch hier ist dann die Option `--unsupportedEnvironment`
 notwendig. Sollte es doch Probleme geben, muss eine Raspberry zum Restore genutzt werden.
 
