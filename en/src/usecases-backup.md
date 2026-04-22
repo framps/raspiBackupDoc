@@ -151,12 +151,12 @@ It is often important to keep downtime to a minimum. The following helper script
    ```
    sudo raspiBackup
    ```
-11. Copy the script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) to /usr/local/bin and make it executable.
+1. Copy the script [*raspiBackupAndClone.sh*](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/helper/raspiBackupAndClone.sh) to /usr/local/bin and make it executable.
    ```
    sudo cp raspiBackupAndClone.sh /usr/local/bin
    sudo chmod +x /usr/local/bin/raspiBackupAndCLone.sh
    ```
-11. Run *raspiBackupAndClone.sh* once on the device that is to receive the clone.
+1. Run *raspiBackupAndClone.sh* once on the device that is to receive the clone.
 
    Example:
    ```
@@ -169,7 +169,7 @@ It is often important to keep downtime to a minimum. The following helper script
    ExecStart=/usr/local/bin/raspiBackup.sh
    ```
    to
-    ```
+   ```
    ExecStart=/usr/local/bin/raspiBackupiAndClone.sh <restoredevice>
    ```
    where \<restoredevice\> must be the device on which the backup is to be restored. For example, `/dev/sda` or `/dev/mmcblk1`.
