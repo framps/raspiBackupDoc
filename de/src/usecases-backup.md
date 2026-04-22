@@ -149,8 +149,8 @@ Oftmals ist es wichtig die Downtime so minimal wie möglich zu halten. Dabei hil
 
 *raspiBackup* erstellt Backups die im Backupfalle restored werden müssen um dann das System neu zu starten. Das bedeutet eine gewisse Nichtverfügbarkeit des Systems bis der Backup restored wurde. Um die Nichtverfügbarkeit zu minimieren gibt es deshalb ein Helperscript aus der Sammlung der *raspiBackup* [Helpderscripts](https://github.com/framps/raspiBackup/tree/master/helper) mit dem Namen **raspiBackupAndClone**. Um dieses nutzen zu können sind ein paar manuelle Konfigurationen notwendig.
 
-1. *raspiBackup* installieren und konfigurieren. Möglichst rsync nehmen damit ein Restore ein Syncrestore und kein Vollrestore ist und somit entsprechend schnell endet.
-2. raspiBackup einmal manuell starten damit das erste Backup erstellt wird.
+1. *raspiBackup* installieren und konfigurieren. Möglichst rsync nehmen damit ein Backup ain Deltabackup ist und den partitionsorientierten Modus damit der Restore auf das Clonedevice nur eine Synchronisation ist und kein Vollrestore und somit entsprechend schnell endet.
+2. **Wichtig:** raspiBackup einmal manuell starten damit das erste Backup erstellt wird. Bei einem rsync Backup wird das das eine Mal länger dauern.
    ```
    sudo raspiBackup
    ```

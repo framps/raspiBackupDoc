@@ -146,8 +146,9 @@ It is often important to keep downtime to a minimum. The following helper script
 
 *raspiBackup* creates backups that must be restored in the event of a backup failure in order to restart the system. This means that the system will be unavailable until the backup has been restored. To minimize this downtime, there is a helper script from the *raspiBackup* [Helperscripts](https://github.com/framps/raspiBackup/tree/master/helper) collection called **raspiBackupAndClone**. A few manual configurations are necessary to use this.
 
-1. Install and configure *raspiBackup*. If possible, use rsync so that the restore is a sync restore rather than a full restore, allowing it to complete quickly.
-2. Run raspiBackup manually once to create the first backup.
+1. Install and configure *raspiBackup*. If possible, use rsync so that the backup is a delta backup, and use partition-based mode so that restoring to the cloned device is simply a synchronization rather than a full restore, allowing the process to complete quickly.
+
+2. **Important:** Run raspiBackup manually once to create the first backup. For a rsync backup it will take this time longer than all future backups.
    ```
    sudo raspiBackup
    ```
