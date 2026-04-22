@@ -9,7 +9,7 @@ in the event of an error, i.e. a clone.
 
 However, this is possible with the help of a small auxiliary tool: With this
 a backup is created and this backup is then restored to a medium.
-to a medium. If the backup type `rsync` is used together with the praitionoriented mode, the restore is only a
+to a medium. If the backup type `rsync` is used, the restore is only a
 synchronization of the changes from the last backup to the current backup and
 finishes much earlier.
 For all other backup types and backup modes, the restore is always a standard restore and not a synchronization.
