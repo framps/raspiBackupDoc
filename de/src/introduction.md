@@ -73,9 +73,8 @@ Viele weitere Videos zu allen möglichen Themen zu *raspiBackup* finden sich im 
 * Klicke [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/),
   um *raspiBackup* auf Reddit zu folgen.
 
-``` admonish info title="Hinweis"
-Jegliche anderen Kommunikationswege wie z.B. eMails, die leider gerne genutzt werden, werden ignoriert!
-```
+> [!NOTE]
+> Jegliche anderen Kommunikationswege wie z.B. eMails, die leider gerne genutzt werden, werden ignoriert!
 
 <a name="donation"></a>
 ## Trinkgeld

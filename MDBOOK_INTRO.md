@@ -122,11 +122,7 @@ Oder per *GitHub Pages*.
 
 Es kann natürlich sein, dass beim `mdbook build` Fehler auftreten.
 
- - Falls der Präprozessor `mdbook-admonish` nicht installiert ist:
-
-        2025-05-27 02:53:49 [INFO] (mdbook::book): Book building has started
-        2025-05-27 02:53:49 [WARN] (mdbook::preprocess::cmd): The command wasn't found, is the "admonish" preprocessor installed?
-        2025-05-27 02:53:49 [WARN] (mdbook::preprocess::cmd): 	Command: mdbook-admonish
+ - Falls ein Präprozessor, z.B. `mdbook-toc` nicht installiert ist
 
    Siehe dazu bei [Compilation aus den Quelltexten](INSTALL.md#compile-from-sources)
 

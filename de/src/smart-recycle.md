@@ -24,24 +24,23 @@ Backuptag den Backuptag des Monats definiert: Wird z.B. Montag als
 wöchentlicher Backuptag konfiguriert, ist das monatliche Backup immer am ersten
 Montag im Monat und das jährliche Backup am ersten Montag im Jahr.
 
-``` admonish info title="Hinweis"
-Bei mehreren möglichen täglichen Backups wird immer das **neueste** tägliche
-Backup aufbewahrt. Bei den wöchentlichen, monatlichen und jährlichen Backups
-sind es dagegen die jeweils **ältesten** Backups.
-
-Zum Beispiel wird bei zwei existierenden täglichen Backups von 10:00 und
-13:00 Uhr der um 13:00 Uhr erstellte Backup gewählt.
-
-Gibt es in der Woche Montag und Freitag Backups, wird der wöchentliche Backup
-von Montag gewählt.
-
-Gibt es einen Backup am 1., 10. und 20. eines Monats, wird das Backup vom
-1. für den monatlichen Backup gewählt.
-
-Bei täglichen Backups sind somit wöchentliche Backups immer vom Montag,
-monatliche Backups immer vom Ersten des Monats und
-jährliche Backups immer vom 1.1. des Jahres.
-```
+> [!NOTE]
+> Bei mehreren möglichen täglichen Backups wird immer das **neueste** tägliche
+> Backup aufbewahrt. Bei den wöchentlichen, monatlichen und jährlichen Backups
+> sind es dagegen die jeweils **ältesten** Backups.
+>
+> Zum Beispiel wird bei zwei existierenden täglichen Backups von 10:00 und
+> 13:00 Uhr der um 13:00 Uhr erstellte Backup gewählt.
+>
+> Gibt es in der Woche Montag und Freitag Backups, wird der wöchentliche Backup
+> von Montag gewählt.
+>
+> Gibt es einen Backup am 1., 10. und 20. eines Monats, wird das Backup vom
+> 1. für den monatlichen Backup gewählt.
+>
+> Bei täglichen Backups sind somit wöchentliche Backups immer vom Montag,
+> monatliche Backups immer vom Ersten des Monats und
+> jährliche Backups immer vom 1.1. des Jahres.
 
 ## Grafische Darstellung
 
@@ -89,28 +88,27 @@ Standardmäßig ist die Option `--smartRecycleOptions "7 4 12 3"` aktiv.
 Mit `--smartRecycleOptions "0 4 12 0"` werden z.B. die letzten 4
 wöchentlichen und die letzten 12 monatlichen Backups vorgehalten.
 
-``` admonish caution title="Wichtiger Hinweis"
-Solange man nicht die Option `--smarteRecycleDryrun` ausgeschaltet hat, schreibt
-*raspiBackup* nur Meldungen, welche Backups gelöscht und welche aufgehoben **würden**.
-
-Man kann somit erst einmal kontrollieren, ob das Ergebnis dem Gewünschten entspricht.
-Dadurch lässt sich verhindern, dass unbeabsichtigt existierende Backups gelöscht werden.
-
-Das ist besonders wichtig, wenn man nach Umstellung auf die intelligente Rotationsstrategie
-das bisherige Backupverzeichnis weiterhin benutzen möchte und kein neues Verzeichnis benutzt.
-
-Wurde sorgfältig geprüft, dass die intelligente Rotationstrategie die
-richtigen Backups löscht und die gewünschten Backups aufhebt, wird mit der
-Option `--smartRecycleDryrun-` (das `-` am Ende beachten!) in jedem Backuplauf
-die intelligente Rotationstrategie angewendet und
-**nicht mehr benötigte Backups werden unwideruflich gelöscht**.
-
-Alternativ bewirkt die Konfigurationsoption
-
-`DEFAULT_SMART_RECYCLE_DRYRUN=0`
-
-dasselbe Ergebnis.
-```
+> [!CAUTION]
+> Solange man nicht die Option `--smarteRecycleDryrun` ausgeschaltet hat, schreibt
+> *raspiBackup* nur Meldungen, welche Backups gelöscht und welche aufgehoben **würden**.
+>
+> Man kann somit erst einmal kontrollieren, ob das Ergebnis dem Gewünschten entspricht.
+> Dadurch lässt sich verhindern, dass unbeabsichtigt existierende Backups gelöscht werden.
+>
+> Das ist besonders wichtig, wenn man nach Umstellung auf die intelligente Rotationsstrategie
+> das bisherige Backupverzeichnis weiterhin benutzen möchte und kein neues Verzeichnis benutzt.
+>
+> Wurde sorgfältig geprüft, dass die intelligente Rotationstrategie die
+> richtigen Backups löscht und die gewünschten Backups aufhebt, wird mit der
+> Option `--smartRecycleDryrun-` (das `-` am Ende beachten!) in jedem Backuplauf
+> die intelligente Rotationstrategie angewendet und
+> **nicht mehr benötigte Backups werden unwideruflich gelöscht**.
+>
+> Alternativ bewirkt die Konfigurationsoption
+>
+> `DEFAULT_SMART_RECYCLE_DRYRUN=0`
+>
+> dasselbe Ergebnis.
 
 Auf Wikipedia - im Artikel [Generationenprinzip](https://de.wikipedia.org/wiki/Generationenprinzip) - wird schön erklärt,
 wie das Rotationsprinzip funktioniert.

@@ -25,7 +25,7 @@ For (3) the following command is required to restore:
 sudo raspiBackup.sh -d <USB device> <Backup>
 ```
 
-Where <USB device> can be an SSD, a USB disk or a USB stick
+Where \<USB device\> can be an SSD, a USB disk or a USB stick
 
 
 If you want to move to a large USB device, the option

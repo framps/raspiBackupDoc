@@ -243,4 +243,56 @@ Mit fenced Codeblocks (per Triple-Backticks) ist es eindeutig:
             print("")
             ```
 
+
+## Test mit neuem Parser ab mdbook 0.5
+
+
+Der neue Parser ist bezüglich von in den Markdown Text eingefügtem HTML-Code pingeliger als die Versionen bis 0.4.
+
+Das wird besonders deutlich, wenn keine echte HTML-Formatierung, sondern Pseudo-HTML-Tags verwendet werden.
+
+* Normaler Text
+
+  * mit <b>eingebettetem HTML</b>.
+  * Ein pseudo-HTML Tag, der nicht angezeigt wird (nur öffnend: das ergibt eine Parser-Warnung): <parameter>
+
+    ```
+    WARN unclosed HTML tag `<parameter>` found in `markdown-playground.md` while exiting Item
+    HTML tags must be closed before exiting a markdown element.
+    ```
+
+* Als Zitat verhält es sich identisch:
+
+  > Text mit <b>eingebettetem HTML</b>.
+  >
+  > Ein Pseudo-HTML Tag, nur öffnend, keine Anzeige: <parameter>
+
+* Korrekturversuch mit auch-schließendem Tag ```<parameter/>```:
+
+  * keine Warnung mehr, aber natürlich immer noch keine Anzeige: <parameter/>
+
+* Korrektur per Escape mit Backslash (eher als Workaround zu sehen) ```\<parameter>```:
+
+  * das deaktiviert die HTML-Interpretation und zeigt es endlich an: \<parameter>
+
+
+Sinnvoller erscheint die Verwendung von Formatierung als *Code* für Pseudo-HTML-Tags:
+
+
+* In single Backticks: `<parameter>`
+* In triple Backticks: ```<parameter>```
+
+
+* Dieselbe Zeilen in einem eingerückten Codeblock:
+
+      Normaler Text mit <b>eingebettetem HTML</b>.
+      Pseudo-HTML Tag, nur öffnend: <parameter>
+
+* Dieselbe Zeilen in einem fenced Codeblock:
+
+  ```
+  Normaler Text mit <b>eingebettetem HTML</b>.
+  Pseudo-HTML Tag, nur öffnend: <parameter>
+  ```
+
 [.status]: z_Markdown_Playground

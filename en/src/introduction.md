@@ -71,9 +71,8 @@ Many more videos on all kinds of *raspiBackup* topics can be found in the [raspi
 * Click [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/),
   to follow *raspiBackup* on Reddit.
 
-``` admonish info title="Note"
-Any other communication channels such as e-mails, which are unfortunately often used, will be ignored!
-```
+> [!NOTE]
+> Any other communication channels such as e-mails, which are unfortunately often used, will be ignored!
 
 <a name="donation"></a>
 ## Donations

@@ -31,9 +31,8 @@ jobs:
     env:
       # Use pinned versions to allow caching (?)
       # Don't use MDBOOK_... because those env variables give warnings in "mdbook build"
-      MDB_VERSION: 0.4.52
-      MDB_ADMONISH_VERSION: "^1.20"
-      MDB_TOC_VERSION: 0.14.2
+      MDB_VERSION: 0.5.2
+      MDB_TOC_VERSION: 0.15.3
     steps:
       - uses: actions/checkout@v4
 
@@ -49,7 +48,7 @@ jobs:
 
           # the hashFiles always return an emtpy string here. Why?
           # key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/Cargo.lock') }}
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.MDB_VERSION }}-${{ env.MDB_ADMONISH_VERSION }}-${{ env.MDB_TOC_VERSION }}
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ env.MDB_VERSION }}-${{ env.MDB_TOC_VERSION }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
@@ -69,10 +68,9 @@ jobs:
           # But a (probably) better fix is: Clean all GitHub Actions caches.
           # So the above command is commented out again.
           # We will see in the future...
-          
+
           rustup update
           cargo install --version ${MDB_VERSION} mdbook
-          cargo install --version ${MDB_ADMONISH_VERSION} mdbook-admonish
           cargo install --version ${MDB_TOC_VERSION} mdbook-toc
 
       - name: Setup Pages
@@ -84,13 +82,13 @@ jobs:
           echo -e "# Version of this documentation\n\n" > en/src/doc-version-info-automatically-generated.md
           echo -e "# Version dieser Dokumentation\n\n"  > de/src/doc-version-info-automatically-generated.md
           ( echo -e "## Last commit\n\n\`\`\`" ; git log -n 1 ; echo '```' ; UNCOMMITED=$(git status --porcelain '*.md*') ; [ -n "$UNCOMMITED" ] && { echo -e "\n\`\`\`\n## Plus yet uncommited changes\n\n$UNCOMMITED\n\`\`\`"; } ; echo -e "\nBuild: $(date --iso-8601=minutes)  (with: $(mdbook --version))" ) | tee -a  en/src/doc-version-info-automatically-generated.md  de/src/doc-version-info-automatically-generated.md
-          mdbook build -d ../book    en
-          mdbook build -d ../book/de de
+          mdbook build -d book    en
+          mdbook build -d book/de de
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./book
+          path: book
 
   # Deployment job
   deploy:

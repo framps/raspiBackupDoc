@@ -25,7 +25,7 @@ Für (3) ist folgender Befehl zum Restore notwendig:
 sudo raspiBackup.sh -d <USB Gerät> <Backup>
 ```
 
-Dabei kann <USB Gerät> eine SSD, eine USB Platte oder ein USB Stick sein
+Dabei kann \<USB Gerät\> eine SSD, eine USB Platte oder ein USB Stick sein
 
 
 Wenn auf ein grosses USB Gerät umgezogen werden soll, ist die Option

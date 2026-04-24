@@ -433,9 +433,9 @@ Wenn eine Partition neu beschrieben wird, darf sie nicht gemounted sein.
 
 Weitere Aktionen:
 
-Mit dem Befehl `sudo mount | grep <device>` (<device> ist in der Meldung genannt)
+Mit dem Befehl `sudo mount | grep <device>` (\<device\> ist in der Meldung genannt)
 herausfinden, welche Partition gemounted ist und mit `sudo umount <partition>`, wobei
-<partition> die gemountete Partition sein muss, die Partition (z.B. /dev/sda1)
+\<partition\> die gemountete Partition sein muss, die Partition (z.B. /dev/sda1)
 freigeben.
 
 

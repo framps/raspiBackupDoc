@@ -5,12 +5,11 @@ But both are able to print messages in any language from a coding point of view 
 Anybody who is willing to help to add support for a yet unsupported language is welcome
 to translate *raspiBackup* messages.
 
-``` admonish info title="Note"
-Don't hesitate if you're willing to add a new language to *raspiBackup* even you don't have any programming experience.
-You don't have to fiddle with the programming stuff. You have only
-to translate all messages into your native language. You even don't have
-to create a PR to get the new language into *raspiBackup*. All this programming stuff will be handled by *raspiBackup* developers for you.
-```
+> [!NOTE]
+> Don't hesitate if you're willing to add a new language to *raspiBackup* even you don't have any programming experience.
+> You don't have to fiddle with the programming stuff. You have only
+> to translate all messages into your native language. You even don't have
+> to create a PR to get the new language into *raspiBackup*. All this programming stuff will be handled by *raspiBackup* developers for you.
 
 Just add your interest in an [issue on *GitHub*](https://github.com/framps/raspiBackup/issues) and
 you will immediate get individual support to add new messages in your native language

@@ -9,10 +9,6 @@ build-dir = "book"
 
 [preprocessor]
 
-[preprocessor.admonish]
-command = "mdbook-admonish"
-assets_version = "3.0.3" # do not edit: managed by `mdbook-admonish install`
-
 [preprocessor.toc]
 command = "mdbook-toc"
 # optionally restrict to given renderer(s)
@@ -25,12 +21,13 @@ max-level = 3
 # [output.markdown]
 
 [output.html]
-additional-css = ["mdbook-admonish.css", "language-picker.css", "raspiBackupDoc.css"]
+additional-css = ["language-picker.css", "raspiBackupDoc.css"]
 site-url = "/raspiBackupDoc/"
 no-section-label = false
 git-repository-url = "https://github.com/framps/raspiBackupDoc"
-git-repository-icon = "fa-github"
+git-repository-icon = "fab-github"
 edit-url-template = "https://github.com/framps/raspiBackupDoc/edit/main/de/{path}"
+sidebar-header-nav = false
 
 [output.html.fold]
 enable = true
