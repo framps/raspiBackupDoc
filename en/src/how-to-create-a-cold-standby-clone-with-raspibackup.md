@@ -37,11 +37,11 @@ The following steps are necessary to use it:
         sudo chmod x /usr/local/bin/raspiBackupAndClone.sh
         ```
 > [!IMPORTANT]
-> It is important to restore a backup to the cloned device in order to initialize the clone.
+> Don't forget to execute the following steps to initialize the clone.
 
  3. One-time initialization of the cloned device
 
-     1. Create a partition-oriented backup with
+     1. Create a rsync backup with
         ```
         sudo raspiBackup
         ```
