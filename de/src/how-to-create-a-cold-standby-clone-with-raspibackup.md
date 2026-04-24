@@ -37,6 +37,8 @@ Folgende Schritte sind notwendig, um es einzusetzen:
         ```
         sudo chmod +x /usr/local/bin/raspiBackupAndClone.sh
         ```
+> [!IMPORTANT]
+> Es ist wichtig einmal ein Backup auf das Clonedevice zurückzuspielen um den Clone zu initialisieren.
 
  2. Einmaliges Initialisierung des Clonedevices
 
