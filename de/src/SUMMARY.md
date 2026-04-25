@@ -64,7 +64,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Vergleich partitionsorientierter Backup und normaler Backup](normal-or-partition-backup.md)
         - [Backupverzeichnisstruktur](backup-directory-structure.md)
         - [Intelligente Rotationsstrategie](smart-recycle.md)
-        - [Snapshots](snapshots.md)
+       - [Snapshots](snapshots.md)
         - [Docker Support](docker-support.md)
         - [Konfigurationsupdate bei einem Upgrade auf eine neue Version](configuration-update-when-upgrading-to-a-new-version.md)
         - [eMail Konfigurationsbeispiele](configuration-examples.md)
@@ -79,6 +79,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Manual tgz restore](manual-restore-of-a-tgz-backup.md)
 
     - [Allgemein](more-questions-and-answers.md)
+        - [Benachrichtigungen](notifications.md)
         - [Welches Filesystem kann auf der Backuppartition benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)
         - [Wie funktionieren Hardlinks zusammen mit rsync?](how-do-hardlinks-work-with-rsync.md)
         - [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md)
