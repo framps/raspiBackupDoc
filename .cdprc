@@ -376,7 +376,7 @@ edit_by_status() {
                        --bind="alt-g:execute(edit_grepped_files)" \
                        --bind="alt-G:execute(edit_grepped_files '^\[\.status\]:\s{3}')" \
                        --bind="alt-m:execute(edit_meta_files)" \
-                       --bind="alt-s:execute(vimdiff -c 'syntax off| windo set nospell' {de,en}/src/SUMMARY.md)" \
+                       --bind="alt-s:execute(vimdiff -c 'syntax off| windo set nospell| set diffopt=filler,context:1000000' {de,en}/src/SUMMARY.md)" \
                        --bind="alt-n:execute(create_translate_new_file)" \
                        --preview='V={}; __list_files_with_status "$V"')
         set --
