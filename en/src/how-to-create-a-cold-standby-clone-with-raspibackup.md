@@ -37,7 +37,10 @@ The following steps are necessary to use it:
         sudo chmod x /usr/local/bin/raspiBackupAndClone.sh
         ```
 > [!IMPORTANT]
-> Don't forget to execute the following steps to initialize the clone.
+> Don't forget to execute the following steps to initialize the \<clonedevice\>
+> [!WARNING]
+> Make sure that the specified \<clonedevice\> is the correct device. Otherwise,
+> you risk losing data.
 
  3. One-time initialization of the cloned device
 
