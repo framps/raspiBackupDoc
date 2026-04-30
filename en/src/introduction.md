@@ -22,6 +22,9 @@ This ensures that there is always a clone of the latest backup on a device that 
 If the rsync backup type is used, the backup that was just created is not restored to the clone device; instead, only all updates on the system are synchronized.
 This ensures that updating the clone is completed very quickly. See [here](how-to-create-a-cold-standby-clone-with-raspibackup.md) for the details how to use *raspiBackupAndClone*.
 
+> [!NOTE]
+> It's planned to add the raspiBackupAndClone functionality in raspiBackup (See here).
+
 For installation and configuration of *raspiBackup* there is an
 [installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured similar to `raspi-config`. More specific settings can be configured in a configuration file.
 
