@@ -641,6 +641,15 @@ Further actions:
 The RC %2 indicates the exact error from fsck on partition %1.
 Usually the device on which the restore was performed is not OK and should be replaced by another device (e.g. new SD card).
 
+### RBK0357I: No notification and eMail sent because raspiBackup is invoked in
+
+Cause:
+
+Notifications and emails are sent only when raspiBackup is running in the background
+
+Further actions:
+
+If you want to test the notification configuration or email sending in the console, you can force this using the `-F` option
 
 ### RBK1005E: bc not found. bc must be installed with 'sudo apt-get install bc'.
 

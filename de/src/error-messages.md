@@ -656,6 +656,15 @@ Der RC %2 gibt an welcher Fehler genau von fsck auf der Partition %1.
 Üblicherweise ist das Gerät auf welchem restored wurde nicht OK und sollte durch ein anderes Gerät (z.B. neue SD Karte)
 ersetzt werden.
 
+### RBK0357I: Keine eMail und Notification gesendet da raspiBackup in der Konsole aufgerufen wurde
+
+Ursache:
+
+Benachrichtigungen und eMails werden nur gesendet, wenn raspiBackup im Background aufgerufen wird.
+
+Weitere Aktionen:
+Soll die Benachrichtigungskonfiguration oder das eMailsenden in der Konsole getestet werden, kann das mit der Option `-F` erzwungen werden werden.
+
 ### RBK1005E: bc nicht gefunden. bc muss installiert werden mit 'sudo apt-get install bc'.
 
 Ursache:
