@@ -20,6 +20,10 @@ To enable the creation of a clone, follow these steps:
 
    In the installer, configure `<Clonegerät>` at `M3->C10`. After that, you no longer need to specify the `--clone` option on the command line. The regular backup then will also create a clone all the time.
 
+3) Update the configuration file /usr/local/etc/raspiBackup.conf
+
+   The cloned device has to be configured in the DEFAULT_CLONE_DEVICE option.
+
 > [!CAUTION]
 > The clone device will be overwritten with the backup. Only with the rsync backup type
 > a check is performed to ensure that the partitioning matches. It is therefore essential to make sure that the clone device is the correct
