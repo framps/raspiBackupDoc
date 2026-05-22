@@ -1,13 +1,14 @@
 # Restore Einführung
 
 *raspiBackup* stellt **komplette** Wiederherstellungen zur Verfügung, d.h. alle Partitionen
-werden i.d.R. wiederhergestellt.
+werden wiederhergestellt oder synchronisiert.
 Im Gegensatz dazu können beim partitionsorientierten Modus die zu restorenden Partitionen ausgewählt
 und somit nur Teile restored werden.
 
 Bei einem Restore werden auf dem Ziel-Datenträger (SD-Karte, USB-Platte, ...)
 neue Partitionen angelegt und dann mit dem entsprechenden Tool (`dd`, `tar` oder `rsync`)
-die Daten dorthin restored.
+die Daten dorthin restored. Beim rsync Backuptyp wird mit der Option `-00` ein Backup
+nur synchronisiert und damit wesentlich schneller wieder zurückgesetzt.
 
 Der Ziel-Datenträger darf also aktuell nicht vom Betriebssystem selbst benutzt werden.
 Es muss eine weitere, mit einem Kartenleser angeschlossene Karte, USB-Platte, SSD oder NVMe Gerät sein.

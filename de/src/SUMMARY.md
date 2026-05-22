@@ -72,7 +72,7 @@ Dies ermöglicht einige kleine Kniffe:
             - [Exim4 Konfiguration](exim4-configuration.md)
             - [nullmailer Konfiguration](nullmailer-configuration.md)
         - [Mehrere Backuptasks](multiple-backup-tasks.md)
-   - [Backup und Clone](how-to-enable-cloning.md)
+   - [Backup und Clone](how-to-enable-clone.md)
    - [Restore](restore-intro.md)
         - [Restore einzelner Dateien](how-to-retrieve-single-files-or-directories-from-the-backup.md)
         - [Manueller rsync Restore](manual-restore.md)

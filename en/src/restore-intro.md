@@ -1,13 +1,13 @@
 # Restore Introduction
 
-*raspiBackup* provides **complete** restores, i.e. all partitions are usually restored.
-
+*raspiBackup* provides **complete** restores, i.e. all partitions are restored or synchronized.
 In contrast, in partition-oriented mode, the partitions to be restored can be selected
 and thus only parts can be restored.
 
 During a restore, new partitions are created on the target data device (SD card, USB disk, ...)
 and then with the appropriate tool (`dd`, `tar` or `rsync`)
-the data is restored there.
+the data is restored there. For the rsync backup type the option `-00` can be used to
+force a synchonization and thus the restore will finish much faster.
 
 The target data device must therefore not the currently used operating system.
 It must be another card, USB disk, SSD or NVMe device connected with a card reader.
