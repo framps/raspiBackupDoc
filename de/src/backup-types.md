@@ -56,7 +56,7 @@ initiales Backup erstellt wurde.
 
 <a name="decisiontree"></a>
 
-![Entscheidungsbaum](images/decisiontree_de.dia.jpg)
+![Entscheidungsbaum](images/decisiontree.dia.jpg)
 
 > [!NOTE]
 > Die [Vor- und Nachteile der möglichen Filesysteme](which-filesystem-can-be-used-on-the-backup-partition.md) sind zu beachten.

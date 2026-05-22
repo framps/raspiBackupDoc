@@ -19,4 +19,4 @@ The main options for notifications are described [here](general-config-options.m
 
 You also have the option to receive notifications only when **raspiBackup** encounters an error. Keep in mind that if **raspiBackup** crashes, it may not be able to send an email.
 
-[.status]: rft "ready for translation. Later: translated"
+[.status]: translated

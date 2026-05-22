@@ -72,13 +72,12 @@ That allows for some tricks:
             - [msmtp configuration for a web.de account](msmtp-configuration-for-web-de-account.md)
             - [Exim4 configuration](exim4-configuration.md)
             - [nullmailer configuration](nullmailer-configuration.md)
-
+   - [Backup and clone](how-to-enable-cloning.md)
    - [Restore](restore-intro.md)
         - [Restore single files/directories](how-to-retrieve-single-files-or-directories-from-the-backup.md)
         - [Manual rsync restore](manual-restore.md)
         - [Manual tgz restore](manual-restore-of-a-tgz-backup.md)
-
-    - [General](more-questions-and-answers.md)
+   - [General](more-questions-and-answers.md)
         - [Notifications](notifications.md)
         - [Which filesystem can be used on the backup partition?](which-filesystem-can-be-used-on-the-backup-partition.md)
         - [How do hardlinks work with rsync?](how-do-hardlinks-work-with-rsync.md)

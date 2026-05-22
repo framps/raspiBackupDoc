@@ -19,4 +19,4 @@ Die hauptsächlichen Optionen für die Benachrichtigungen sind [hier](general-co
 
 Außerdem besteht die Möglichkeit, Benachrichtigungen nur zu bekommen, wenn **raspiBackup** einen Fehler bekommt. Dabei ist zu berücksichtigen, dass ein harter Abbruch von **raspiBackup** u.U. nicht mehr dazu kommt, eine eMail zu schicken.
 
-[.status]: rft "ready for translation. Later: translated"
+[.status]: translated

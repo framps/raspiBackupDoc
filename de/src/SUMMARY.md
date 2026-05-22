@@ -72,13 +72,12 @@ Dies ermöglicht einige kleine Kniffe:
             - [Exim4 Konfiguration](exim4-configuration.md)
             - [nullmailer Konfiguration](nullmailer-configuration.md)
         - [Mehrere Backuptasks](multiple-backup-tasks.md)
-
-    - [Restore](restore-intro.md)
+   - [Backup und Clone](how-to-enable-cloning.md)
+   - [Restore](restore-intro.md)
         - [Restore einzelner Dateien](how-to-retrieve-single-files-or-directories-from-the-backup.md)
         - [Manueller rsync Restore](manual-restore.md)
         - [Manual tgz restore](manual-restore-of-a-tgz-backup.md)
-
-    - [Allgemein](more-questions-and-answers.md)
+   - [Allgemein](more-questions-and-answers.md)
         - [Benachrichtigungen](notifications.md)
         - [Welches Filesystem kann auf der Backuppartition benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)
         - [Wie funktionieren Hardlinks zusammen mit rsync?](how-do-hardlinks-work-with-rsync.md)
