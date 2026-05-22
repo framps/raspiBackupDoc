@@ -21,7 +21,7 @@ Das Erstellen eines Clones wird wie folgt eingeschaltet:
    Im Installer ist das `<Clonegerät>` bei `M3->C10` zu konfigurieren.
    Danach ist es auf der Befehlszeile nicht mehr notwendig die Option `--clone` anzugeben. Der regelmäßige Backup erstellt dann auch immer einen Clone.
 
-> [!WARNING]
+> [!CAUTION]
 > Das Clonegerät wird mit dem Backup überschrieben. Nur beim Backuptyp rsync findet
 > eine gewisse Prüfung statt dass die Partitionierung übereinstimmt. Es ist also unbedingt darauf zu achten, dass das Clonegerät das richtige
 > Gerät ist. Ansonsten droht Datenverlust.
