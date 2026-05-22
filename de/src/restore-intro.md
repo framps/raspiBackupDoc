@@ -28,6 +28,13 @@ Es wird ein Backup erstellt und dann auf einem anderen Gerät restored.
 Typische Anwendung ist, eine SD-Karte auf eine SSD oder NVMe zu kopieren
 und danach das System mit der SSD/NVMe und nicht mehr mit einer SD-Karte zu betreiben.
 
+Ein Restorebefehl sieht normalerweise wie folgt aus:
+
+```
+sudo raspiBackup -d <Restoredevice> <Pfad auf das Backup>
+```
+wobei `<Restoredevice>` z.B. `/dev/sda`, `/dev/mmcblk1p` oder `/dev/nvme1n1` ist.
+
 Eine vollständige Liste aller Restore Aufrufoptionen findet sich [hier](restore-options.md).
 
 ------------------

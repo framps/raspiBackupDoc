@@ -26,6 +26,9 @@ Das Erstellen eines Clones wird wie folgt eingeschaltet:
 > eine gewisse Prüfung statt dass die Partitionierung übereinstimmt. Es ist also unbedingt darauf zu achten, dass das Clonegerät das richtige
 > Gerät ist. Ansonsten droht Datenverlust.
 
+> [!NOTE]
+> Wird der Backuptyp rsync genutzt muss einmalig ein Backup auf das Clonegerät zurückgespielt und damit der Clone initialisiert werden, damit spätere Backups nur noch synchronisiert werden können. Details siehe dazu [hier](restore-intro.md)
+
 Soll die Erstellung eines Clones wieder ausgeschaltet werden muss mit dem Installer bei `M3->C10` das Clonegerät wieder gelöscht werden.
 
 [.status]: translated

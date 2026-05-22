@@ -27,6 +27,13 @@ A backup is created and then restored to another device.
 A typical application is to copy an SD card to an SSD or NVMe
 and then operate the system with the SSD/NVMe and no longer with an SD card.
 
+A restore command usually looks like this:
+
+```
+sudo raspiBackup -d <Restoredevice> <Path to Backup>
+```
+where `<Restoredevice>` for example is `/dev/sda`, `/dev/mmcblk1p` or `/dev/nvme1n1`.
+
 For a complete list of all restore options see [here](restore-options.md).
 
 ------------------

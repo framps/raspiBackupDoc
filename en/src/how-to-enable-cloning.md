@@ -25,6 +25,10 @@ To enable the creation of a clone, follow these steps:
 > a check is performed to ensure that the partitioning matches. It is therefore essential to make sure that the clone device is the correct
 > device. Otherwise, there is a risk of data loss.
 
+
+> [!NOTE]
+> If the rsync backup type is used, a backup must be restored to the clone device once to initialize the clone, so that subsequent backups can simply be synchronized. For details see [here](restore-intro.md)
+
 If you want to disable the creation of a clone, you have to use the installer to delete the clone device at `M3->C10`
 
 [.status]: translated
