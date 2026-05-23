@@ -27,9 +27,9 @@ Das Erstellen eines Clones wird wie folgt eingeschaltet:
 
 
 > [!CAUTION]
-> Das Clonegerät wird mit dem Backup überschrieben. Nur beim Backuptyp rsync findet
-> eine gewisse Prüfung statt dass die Partitionierung übereinstimmt. Es ist also unbedingt darauf zu achten, dass das Clonegerät das richtige
-> Gerät ist. Ansonsten droht Datenverlust.
+> Das Clonegerät wird mit dem Backup überschrieben.
+> Es ist also unbedingt darauf zu achten, dass das Clonegerät das richtige
+> Gerät ist. Ansonsten droht Datenverlust. Am sichersten ist es `/dev/disk/by-uuid/<UUID>` oder `/dev/disk/by-partuuid/<PARTUUID>` zu nutzen und nicht einfach `/dev/sda` oder ähnlich.
 
 > [!NOTE]
 > Wird der Backuptyp rsync genutzt muss einmalig ein Backup auf das Clonegerät zurückgespielt und damit der Clone initialisiert werden, damit spätere Backups nur noch synchronisiert werden können. Details siehe dazu [hier](restore-intro.md)
