@@ -5,9 +5,10 @@
 
 *raspiBackup* can restore a backup to a locally connected device immediately after creating it.
 This provides a backup that can be used right away to immediately restart a failed device or an OS that no longer boots
-by switching the boot medium. Without this feature, an existing backup must first be restored.
-This takes a little longer. If the rsync backup type is used, the restoration is simply a synchronization with the backup and
-completes very quickly. The dd and tar backup types always involve a full restoration of the backup and therefore take longer.
+by switching the boot medium. Without this feature, an existing backup must first be restored
+and requires more time. If the rsync backup type is used, the restore is simply a synchronization with the backup and
+completes very quickly. A tar backup type always is a full restore of the backup and therefore takes much longer. 
+A dd backup type is not supported.
 
 Steps to enable cloning:
 
