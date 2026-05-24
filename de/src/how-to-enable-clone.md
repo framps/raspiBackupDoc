@@ -1,7 +1,7 @@
 # Erstellung eines Clones am Ende des Backups
 
 > [!NOTE]
-> Diese Funktionalität steht erst mit *raspiBackup* Release 0.7.3 zur Verfügung
+> Diese Funktionalität steht erst mit *raspiBackup* Release 0.7.3 zur Verfügung und ist momentan im Beta Stadium
 
 *raspiBackup* kann nach der Erstellung eines Backups dieses Backup sofort auf ein lokal angeschlossenes Gerät zurückspielen.
 Damit existiert ein Backup, welches sofort genutzt werden kann, um ein ausgefallenes Gerät oder ein nicht mehr startbares OS
@@ -35,6 +35,10 @@ Vorgehensweise um das Cloning einzuschalten:
 > Das Clonegerät wird mit dem Backup überschrieben. Es ist also unbedingt darauf zu achten, dass das Clonegerät das richtige Gerät ist.
 > Ansonsten droht Datenverlust. Deshalb muss `/dev/disk/by-partuuid/<PARTUUID>` genutzt werden und nicht einfach `/dev/sda` oder ähnlich. Die PARTUUIDs der verfügbaren Partitionen werden mit folgendem Befehl angezeigt: `lsblk -o NAME,FSTYPE,LABEL,PARTUUID`
 
+> [!NOTE]
+> Die Beta akzeptiert bislang keine partuuid Geräte. Vorerst werden Geräte wie /dev/sda oder /dev/mmcblk0 akzeptiert.
+> Vorsicht wenn mehrere Geräte an USB angeschlossen sind !
+
 > [!WARNING]
 > Bei bestimmten Konfigurationen kann es sein, dass nach einem Neustart der Raspberry von dem Clonegerät gebootet wird.
 > Das kann besonders dann auftreten, wenn per USB Boot von einer USB Platte oder USB SSD gebootet wird und das Clonegerät ebenfalls per USB angeschlossen ist.
@@ -44,4 +48,4 @@ Vorgehensweise um das Cloning einzuschalten:
 
 Soll die Erstellung eines Clones wieder ausgeschaltet werden muss mit dem Installer bei `M3->C10` das Clonegerät wieder gelöscht werden. Soll wieder manuell ein Backup zurückgespielt werden muss vorher das Cloning ausgeschaltet werden.
 
-[.status]: translated
+[ästatus]: translated

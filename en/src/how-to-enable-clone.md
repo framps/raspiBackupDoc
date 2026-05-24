@@ -1,7 +1,7 @@
 # How to create a clone at the end of a backup
 
 > [!NOTE]
-> This feature is available starting with *raspiBackup* version 0.7.3
+> This feature is available starting with *raspiBackup* version 0.7.3 and as of now in Beta 
 
 *raspiBackup* can restore a backup to a locally connected device immediately after creating it.
 This provides a backup that can be used right away to immediately restart a failed device or an OS that no longer boots
@@ -35,7 +35,10 @@ Steps to enable cloning:
 > It is therefore essential to ensure that the clone device is the correct device.
 > Otherwise, you risk losing data. That is why you must use `/dev/disk/by-partuuid/<PARTUUID>` and not simply `/dev/sda` or something similar. The PARTUUIDs of the available partitions can be displayed using the following command: `lsblk -o NAME,FSTYPE,LABEL,PARTUUID`
 
-
+> [!NOTE]
+> The beta does not currently support partuuid devices. For now, devices such as /dev/sda or /dev/mmcblk0 are supported.
+> Be careful if multiple devices are connected via USB!
+>
 > [!WARNING]
 > In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
 > This can occur especially when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB.
