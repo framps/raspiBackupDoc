@@ -7,7 +7,8 @@
 Damit existiert ein Backup, welches sofort genutzt werden kann, um ein ausgefallenes Gerät oder ein nicht mehr startbares OS
 durch Wechsel des Bootmediums sofort wieder zu starten. Ohne diese Funktion muss erst ein existierendes Backup zurückgespielt werden.
 Dieses dauert etwas länger. Wird der Backuptyp rsync genutzt ist das Zurückspielen nur eine Synchonisation mit dem Backup und
-sehr schnell beendet. Die Backuptypen dd und tar sind immer ein vollständiges Zurückspielen des Backups und dauern dementsprechend länger.
+sehr schnell beendet. Der Backuptyp tar ist immer ein vollständiges Zurückspielen des Backups und dauert dementsprechend länger.
+Der Backuptyp dd wird nicht unterstützt.
 
 Vorgehensweise um das Cloning einzuschalten:
 
