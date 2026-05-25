@@ -32,20 +32,14 @@ Vorgehensweise um das Cloning einzuschalten:
 
       In der Option DEFAULT_CLONE_DEVICE muss das Clonedevice konfiguriert werden.
 
-> [!CAUTION]
-> Das Clonegerät wird mit dem Backup überschrieben. Es ist also unbedingt darauf zu achten, dass das Clonegerät das richtige Gerät ist.
-> Ansonsten droht Datenverlust. Deshalb muss `/dev/disk/by-partuuid/<PARTUUID>` genutzt werden und nicht einfach `/dev/sda` oder ähnlich. Die PARTUUIDs der verfügbaren Partitionen werden mit folgendem Befehl angezeigt: `lsblk -o NAME,FSTYPE,LABEL,PARTUUID`
-
-> [!NOTE]
-> Die Beta akzeptiert bislang keine partuuid Geräte. Vorerst werden Geräte wie /dev/sda oder /dev/mmcblk0 akzeptiert.
-> Vorsicht wenn mehrere Geräte an USB angeschlossen sind !
+> [!Note]
+> Das Clonegerät wird mit dem Backup überschrieben. Deshalb werden verschiedenen Tests von *raspiBackup*
+> vorgenommen, um ein versehentliches Überschreiben von anderen angeschlossenen Geräten zu verhindern
+> und dann wird der Clone sofort abgebrochen.
 
 > [!WARNING]
 > Bei bestimmten Konfigurationen kann es sein, dass nach einem Neustart der Raspberry von dem Clonegerät gebootet wird.
 > Das kann besonders dann auftreten, wenn per USB Boot von einer USB Platte oder USB SSD gebootet wird und das Clonegerät ebenfalls per USB angeschlossen ist.
-
-> [!NOTE]
-> Wird der Backuptyp rsync genutzt muss einmalig ein Backup auf das Clonegerät zurückgespielt und damit der Clone initialisiert werden, damit spätere Backups nur noch synchronisiert werden können. Details siehe dazu [hier](restore-intro.md)
 
 Soll die Erstellung eines Clones wieder ausgeschaltet werden muss mit dem Installer bei `M3->C10` das Clonegerät wieder gelöscht werden. Soll wieder manuell ein Backup zurückgespielt werden muss vorher das Cloning ausgeschaltet werden.
 

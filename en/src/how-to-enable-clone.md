@@ -31,16 +31,12 @@ Steps to enable cloning:
 
       The cloned device has to be configured in the DEFAULT_CLONE_DEVICE option.
 
-> [!CAUTION]
-> The clone device will be overwritten with the backup.
-> It is therefore essential to ensure that the clone device is the correct device.
-> Otherwise, you risk losing data. That is why you must use `/dev/disk/by-partuuid/<PARTUUID>` and not simply `/dev/sda` or something similar. The PARTUUIDs of the available partitions can be displayed using the following command: `lsblk -o NAME,FSTYPE,LABEL,PARTUUID`
+> [!Note]
+> The clone device will be overwritten by the backup. For this reason, *raspiBackup* performs various checks
+> to prevent accidental overwriting of other connected devices,
+> and then the cloning process is immediately aborted.
 
-> [!NOTE]
-> The beta does not currently support partuuid devices. For now, devices such as /dev/sda or /dev/mmcblk0 are supported.
-> Be careful if multiple devices are connected via USB!
->
-> [!WARNING]
+> > [!WARNING]
 > In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
 > This can occur especially when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB.
 
