@@ -1,18 +1,18 @@
 # How to create a clone at the end of a backup
 
 > [!NOTE]
-> This feature is available starting with *raspiBackup* version 0.7.3 and as of now in Beta 
+> This feature is available starting with *raspiBackup* version 0.7.3 and as of now in Beta
 
 *raspiBackup* can restore a backup to a locally connected device immediately after creating it.
 This provides a backup that can be used right away to immediately restart a failed device or an OS that no longer boots
 by switching the boot medium. Without this feature, an existing backup must first be restored
 and requires more time. If the rsync backup type is used, the restore is simply a synchronization with the backup and
-completes very quickly. A tar backup type always is a full restore of the backup and therefore takes much longer. 
+completes very quickly. A tar backup type always is a full restore of the backup and therefore takes much longer.
 A dd backup type is not supported.
 
 Steps to enable cloning:
 
-1) Create a backup with cloning disabled.
+1) Create a backup
 
 2) Restore the backup to the clone device
 
@@ -35,8 +35,10 @@ Steps to enable cloning:
 > The clone device will be overwritten by the backup. For this reason, *raspiBackup* performs various checks
 > to prevent accidental overwriting of other connected devices,
 > and then the cloning process is immediately aborted.
+> 1) Only one instance of each cloned device type is allowed. This means, for example, that two /dev/sd or /dev/mmcblk devices are not allowed.
+> 2) If multiple cloned device types are to be allowed anyway, the configuration variable `DEFAULT_CLONE_ROOT_PARTUUID` must contain the PARTUUID of the root partition of the cloned device, and it must match.
 
-> > [!WARNING]
+> [!WARNING]
 > In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
 > This can occur especially when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB.
 
