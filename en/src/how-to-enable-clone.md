@@ -31,12 +31,12 @@ Steps to enable cloning:
 
       The cloned device has to be configured in the DEFAULT_CLONE_DEVICE option.
 
-> [!Note]
+> [!IMPORTANT]
 > *raspiBackup* performs various checks to prevent accidental overwriting of other connected devices.
 > 1) If the configuration variable `DEFAULT_CLONE_ROOT_PARTUUID` is defined, the PARTUUID of the root partition of the cloned device must match the defined PARTUUID.
 > 2) If no PARTUUID is defined, there must be exactly one instance of the cloned device type. This means, for example, that two /dev/sd or /dev/mmcblk devices are not allowed
 
-> [!WARNING]
+> [!CAUTION]
 > In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
 > This can occur especially when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB.
 
