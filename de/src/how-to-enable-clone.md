@@ -32,12 +32,12 @@ Vorgehensweise um das Cloning einzuschalten:
 
       In der Option DEFAULT_CLONE_DEVICE muss das Clonedevice konfiguriert werden.
 
-> [!Note]
+> [!IMPORTANT]
 > Es werden verschiedenen Tests von *raspiBackup* vorgenommen, um ein versehentliches Überschreiben von anderen angeschlossenen Geräten zu verhindern.
 > 1) Ist die Konfigurationsvariable `DEFAULT_CLONE_ROOT_PARTUUID` definiert muss die PARTUUID der Rootpartition des Clonedevices mit der definierten PARTUUID übereinstimmen.
 > 2) Ist keine PARTUUID definiert, darf vom Clonedevicetyp nur genau einer vorhanden sein. D.h. z.B. zwei /dev/sd oder /dev/mmcblk sind nicht erlaubt
 
-> [!WARNING]
+> [!CAUTION]
 > Bei bestimmten Konfigurationen kann es sein, dass nach einem Neustart der Raspberry von dem Clonegerät gebootet wird.
 > Das kann besonders dann auftreten, wenn per USB Boot von einer USB Platte oder USB SSD gebootet wird und das Clonegerät ebenfalls per USB angeschlossen ist.
 
