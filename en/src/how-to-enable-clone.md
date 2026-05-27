@@ -1,4 +1,4 @@
-# How to create a clone at the end of a backup
+# Create a clone at the end of a backup
 
 > [!NOTE]
 > This feature is available starting with *raspiBackup* version 0.7.3 and as of now in Beta
@@ -42,6 +42,6 @@ Steps to enable cloning:
 > In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
 > This can occur especially when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB.
 
-If you want to disable cloning, use the installer to delete the cloned device at `M3->C10` or manualls delete the clone device in the config file.
+If you want to disable cloning, use the installer to delete the cloned device at `M3->C10` or manually delete the clone device in the config file.
 
 [.status]: translated
