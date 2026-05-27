@@ -42,9 +42,6 @@ Steps to enable cloning:
 > In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
 > This can occur especially when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB.
 
-> [!NOTE]
-> If the rsync backup type is used, a backup must be restored to the clone device once to initialize the clone, so that subsequent backups can simply be synchronized. For details see [here](restore-intro.md)
-
-If you want to disable cloning, you must use the installer to delete the cloned device at `M3->C10`. If you want to restore a backup manually, you must first disable cloning.
+If you want to disable cloning, use the installer to delete the cloned device at `M3->C10` or manualls delete the clone device in the config file.
 
 [.status]: translated
