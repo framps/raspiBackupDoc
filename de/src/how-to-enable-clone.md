@@ -28,7 +28,7 @@ Vorgehensweise um das Cloning einzuschalten:
       Im Installer ist das `<Clonegerät>` bei `M3->C10` zu konfigurieren.
       Danach ist es auf der Befehlszeile nicht mehr notwendig die Option `--clone` anzugeben. Der regelmäßige Backup erstellt dann auch immer einen Clone.
 
-   3) Anpassung der Kopnfigurationsdatei /usr/local/etc/raspiBackup.conf
+   3) Manuelle Anpassung der Kopnfigurationsdatei /usr/local/etc/raspiBackup.conf
 
       In der Option DEFAULT_CLONE_DEVICE muss das Clonedevice konfiguriert werden.
 
@@ -36,7 +36,7 @@ Vorgehensweise um das Cloning einzuschalten:
 > Das Clonegerät wird mit dem Backup überschrieben. Deshalb werden verschiedenen Tests von *raspiBackup*
 > vorgenommen, um ein versehentliches Überschreiben von anderen angeschlossenen Geräten zu verhindern
 > und dann wird der Clone sofort abgebrochen.
-> 1) Es darf vom Clonedevicetyp nur einer vorhanden sein. D.h. iz.B. zwei /dev/sd oder /dev/mmcblk sind nicht erlaubt
+> 1) Es darf vom Clonedevicetyp nur einer vorhanden sein. D.h. z.B. zwei /dev/sd oder /dev/mmcblk sind nicht erlaubt
 > 2) Sollen trotzdem mehrere Clonedevicetypen erlaubt sein, muss in der Konfigurationsvariable `DEFAULT_CLONE_ROOT_PARTUUID` die PARTUUID der Rootpartition des Clonedevices stehen und übereinstimmen.
 
 > [!WARNING]
