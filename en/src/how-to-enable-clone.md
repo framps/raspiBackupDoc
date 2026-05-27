@@ -32,11 +32,9 @@ Steps to enable cloning:
       The cloned device has to be configured in the DEFAULT_CLONE_DEVICE option.
 
 > [!Note]
-> The clone device will be overwritten by the backup. For this reason, *raspiBackup* performs various checks
-> to prevent accidental overwriting of other connected devices,
-> and then the cloning process is immediately aborted.
-> 1) Only one instance of each cloned device type is allowed. This means, for example, that two /dev/sd or /dev/mmcblk devices are not allowed.
-> 2) If multiple cloned device types are to be allowed anyway, the configuration variable `DEFAULT_CLONE_ROOT_PARTUUID` must contain the PARTUUID of the root partition of the cloned device, and it must match.
+> *raspiBackup* performs various checks to prevent accidental overwriting of other connected devices.
+> 1) If the configuration variable `DEFAULT_CLONE_ROOT_PARTUUID` is defined, the PARTUUID of the root partition of the cloned device must match the defined PARTUUID.
+> 2) If no PARTUUID is defined, there must be exactly one instance of the cloned device type. This means, for example, that two /dev/sd or /dev/mmcblk devices are not allowed
 
 > [!WARNING]
 > In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
