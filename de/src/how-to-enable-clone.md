@@ -43,6 +43,6 @@ Vorgehensweise um das Cloning einzuschalten:
 > Bei bestimmten Konfigurationen kann es sein, dass nach einem Neustart der Raspberry von dem Clonegerät gebootet wird.
 > Das kann besonders dann auftreten, wenn per USB Boot von einer USB Platte oder USB SSD gebootet wird und das Clonegerät ebenfalls per USB angeschlossen ist.
 
-Soll die Erstellung eines Clones wieder ausgeschaltet werden muss mit dem Installer bei `M3->C10` das Clonegerät wieder gelöscht werden. Soll wieder manuell ein Backup zurückgespielt werden muss vorher das Cloning ausgeschaltet werden.
+Soll die Erstellung eines Clones wieder ausgeschaltet werden muss mit dem Installer bei `M3->C10` das Clonegerät wieder gelöscht werden bzw manuell in der Konfigurationsdatei gelõscht werden.
 
 [ästatus]: translated
