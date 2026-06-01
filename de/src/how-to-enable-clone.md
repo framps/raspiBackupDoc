@@ -6,8 +6,8 @@
 *raspiBackup* kann nach der Erstellung eines Backups dieses Backup sofort auf ein lokal angeschlossenes Gerät zurückspielen.
 Damit existiert ein Backup, welches sofort genutzt werden kann, um ein ausgefallenes Gerät oder ein nicht mehr startbares OS
 durch Wechsel des Bootmediums sofort wieder zu starten. Ohne diese Funktion muss erst ein existierendes Backup zurückgespielt werden.
-Dieses dauert etwas länger. Wird der Backuptyp rsync genutzt ist das Zurückspielen nur eine Synchonisation mit dem Backup und
-sehr schnell beendet. Der Backuptyp tar ist immer ein vollständiges Zurückspielen des Backups und dauert dementsprechend länger.
+Dieses dauert seine Zeit. Wird der Backuptyp rsync genutzt ist das Zurückspielen des aktuellen Backups auf das Clonegerät nur eine Synchonisation mit dem aktuellen Backup und
+sehr schnell beendet. Der Backuptyp tar ist immer ein vollständiges Zurückspielen des Backups auf das Clonegerät und dauert dementsprechend länger.
 
 Es werden nur der Backuptyp rsync und tar sowie beide Backupmodes unterstützt.
 
