@@ -4,7 +4,7 @@
 > This feature is available starting with *raspiBackup* version 0.7.3 and as of now in Beta
 
 *raspiBackup* can restore a backup to a locally connected device immediately after creating it.
-This provides a backup that can be used right away to immediately restart a failed device or an OS that no longer boots
+This provides a so called cold backup that can be used right away to immediately restart a failed device or an OS that no longer boots
 by switching the boot medium. Without this feature, an existing backup must first be restored
 and this takes time. If the rsync backup type is used, the restore of current backup to the  clone device is simply a synchronization with the backup and
 completes very quickly. A tar backup type always is a full restore of the backup and takes much longer.
@@ -59,5 +59,12 @@ refers to the locally connected device to which the current backup is to be sync
 > This can occur particularly when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB. Thorough testing is essential in such cases.
 
 If you want to disable the creation of a clone, you must use the installer to delete the clone device and the PARTUUID at `M3->C10`, or do so manually in the configuration file.
+
+
+## Summary of key features related to cloning
+
+1) A clone must be initialized by restoring a backup. During this process, the clone device is assigned new PARTUUIDs, and `/etc/fstab` and `/boot/cmdline.txt` are synchronized with the new PARTUUIDs.
+2) When cloning, the clone device is not assigned new PARTUUIDs. Since `/etc/fstab` and `/boot/cmdline.txt` repeatedly receive the system’s PARTUUIDs, the PARTUUIDs are continuously synchronized with those of the clone device.
+3) During cloning, `DEFAULT_CLONE_PARTUUID` must contain a PARTUUID of a clone partition to prevent accidentally overwriting the wrong device. Additionally, the partitioning of the clone device must match the partitioning of the system (number and size). The last partition may be smaller or larger.
 
 [.status]: translated
