@@ -23,7 +23,7 @@ Sofern der Backptyp rsync genutzt wird, erfolgt kein Restore des eben gerade ers
 Damit ist der Update des Clones sehr schnell erledigt. [Hier](how-to-create-a-cold-standby-clone-with-raspibackup.md) ist beschrieben welche Schritte notwendig sind um *raspiBackupAndClone* zu nutzen.
 
 > [!NOTE]
-> Es ist geplant die raspiBackupAndClone Funktionalität in raspiBackup einzubauen (Siehe [hier](https://framps.github.io/raspiBackupDoc/de/how-to-enable-clone.html)
+> Es ist geplant die raspiBackupAndClone Funktionalität in raspiBackup einzubauen (Siehe [hier](https://framps.github.io/raspiBackupDoc/de/how-to-enable-clone.html))
 
 Zur Installation und Konfiguration von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
