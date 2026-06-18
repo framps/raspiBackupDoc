@@ -14,8 +14,8 @@ Konfiguration während der Installation helfen.
 Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](restore-intro.md) beschrieben.
 Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benutzer eingegangen.
 
-**Hinweis:** Von *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine weitere
-[Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/).im deutschen Raspberryforum.
+**Hinweis:** Von *raspiBackup*-User [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine sehr gute
+[Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) im deutschen Raspberryforum.
 
 ## Installationsmöglichkeiten
 
