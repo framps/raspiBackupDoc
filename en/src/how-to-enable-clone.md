@@ -25,16 +25,16 @@ Steps to enable cloning:
 
 4) Enable cloning
 
-   1) Manually edit the configuration file /usr/local/etc/raspiBackup.conf
+   1) Use the installer
 
-      In the `DEFAULT_CLONE_DEVICE` option, the clone device `/dev/sda` must be specified, and a PARTUUID must be configured in the `DEFAULT_CLONE_PARTUUID` option.
+      In the installer, the `<clone device>` and the PARTUUID should be configured on `M3->C10`. The PARTUUID
+ has to be separated from the clone device by spaces.
 
-   2) Installer
+      **Note**: The cloning device has to be connected to the system.
 
-      In the installer, the `<clone device>` and the PARTUUID must be configured as `M3->C10`. The PARTUUID
- must be separated from the clone device by spaces.
+   2) Manually edit the configuration file /usr/local/etc/raspiBackup.conf
 
-      **Note**: The cloning device must be connected.
+      In the `DEFAULT_CLONE_DEVICE` option, the clone device `/dev/sda` should be specified and a PARTUUID should be configured in the `DEFAULT_CLONE_PARTUUID` option.
 
 5) Creating a backup and a clone
 
