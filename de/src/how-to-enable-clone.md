@@ -25,7 +25,7 @@ Vorgehensweise um das Cloning einzuschalten:
 
 4) Cloning einschalten
 
-   1) Manuelle Anpassung der Kopnfigurationsdatei /usr/local/etc/raspiBackup.conf
+   1) Manuelle Anpassung der Konfigurationsdatei /usr/local/etc/raspiBackup.conf
 
       In der Option `DEFAULT_CLONE_DEVICE` muss das Clonedevice `/dev/sda` sowie die PARTUUID in der Option
       `DEFAULT_CLONE_PARTUUID` eine PARTUUID konfiguriert werden.
