@@ -93,11 +93,8 @@ Eine Anerkennung des Entwicklungs- und Wartungsaufwands sowie Supports für
    gewiss eine Alternative. Z.B. wurde Trinkgeld schon mehrmals auf die
    gute alte Art per Brief zugeschickt :-)
 
-Das Trinkgeld wird primär dazu genutzt, Verbrauchsmaterialien wie SD-Karten, Adapter, Kabel etc.,
-die für das Entwickeln und Testen benötigt werden, zu kaufen. Sofern das Trinkgeld ausreicht,
-wird damit auch neue Hardware gekauft, um in *raspiBackup* den notwendigen
-Hardwaresupport einzubauen und die korrekte Funktionalität
-auf der neuen Hardware zu verifizieren.
+Das Trinkgeld wird primär dazu genutzt, Verbrauchsmaterialien wie SD-Karten und USB Speichermedien sowie Adapter, Kabel etc.,
+die für das Entwickeln und Testen benötigt werden, zu kaufen. 
 
 ## Danksagungen
 
