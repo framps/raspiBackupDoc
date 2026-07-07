@@ -91,10 +91,8 @@ Acknowledgment of the development and maintenance effort as well as support for
    certainly an alternative. For example, donations have been sent several times in the
    the good old way by letter :-)
 
-The donation is primarily used to buy consumables such as SD cards, adapters, cables etc.,
-needed for development and testing. If the donations are sufficient,
-new hardware is also purchased in order to add the necessary hardware support into *raspiBackup*
-and to verify the correct functionality on the new hardware.
+The donation is primarily used to buy consumables such as SD cards and USB devices, adapters, cables etc.,
+needed for development and testing.
 
 ## Acknowledgements
 
