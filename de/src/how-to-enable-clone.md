@@ -58,7 +58,7 @@ Vorgehensweise um das Cloning einzuschalten:
 
 Soll die Erstellung eines Clones wieder ausgeschaltet werden muss mit dem Installer bei `M3->C10` das Clonegerät und die PARTUUID bzw manuell in der Konfigurationsdatei gelõscht werden.
 
-## Zusammenfassung der wesentlichen Funktionen im Zusammanhang mit einem Clone
+## Zusammenfassung der wesentlichen Funktionen im Zusammenhang mit einem Clone
 
 1) Ein Clone muss durch das Zurückspielen eines Backups initialisiert werden. Dabei wird das Clonegerät mit neuen PARTUUIDs versehen und idort `/etc/fstab` sowie `/boot/cmdline.txt` mit den neuen PARTUUIDs gesynct.
 2) Beim Clone wird das Clonegerät nicht mit neuen PARTUUIDs versehen. Da `/etc/fstab` und `/boot/cmdline.txt` durch den Clone immer wieder die PARTUUIs des Systems erhalten, werden die PARTUUIDs immer wieder mit den PARTUUIDs des Clonegerätes gesycnt.
