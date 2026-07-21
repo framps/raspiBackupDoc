@@ -1,8 +1,5 @@
 # Create a clone at the end of a backup
 
-> [!NOTE]
-> This feature is available starting with *raspiBackup* version 0.7.3 and as of now in Beta
-
 *raspiBackup* can restore a backup to a locally connected device immediately after creating it.
 This provides a so called cold backup that can be used right away to immediately restart a failed device or an OS that no longer boots
 by switching the boot medium. Without this feature, an existing backup must first be restored
