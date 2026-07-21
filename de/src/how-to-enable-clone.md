@@ -1,8 +1,5 @@
 # Erstellung eines Clones am Ende eines Backups
 
-> [!NOTE]
-> Diese Funktionalität steht erst mit *raspiBackup* Release 0.7.3 zur Verfügung und ist momentan im Beta Stadium
-
 *raspiBackup* kann nach der Erstellung eines Backups dieses  sofort auf ein lokal angeschlossenes Gerät zurückspielen.
 Damit existiert ein sogenannter kalter Backup, welcher sofort genutzt werden kann, um ein ausgefallenes Gerät oder ein nicht mehr startbares OS
 durch Wechsel des Bootmediums sofort wieder zu starten. Ohne diese Funktion muss erst ein existierendes Backup zurückgespielt werden.
