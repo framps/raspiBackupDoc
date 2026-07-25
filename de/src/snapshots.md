@@ -13,7 +13,7 @@ und durch die Beschreibung im Namen des Backupverzeichnisses kann der Grund
 des Snapshots erkannt werden. Das ist zum Beispiel sehr hilfreich, bevor man ein
 Softwareupdate vornimmt oder eine andere größere Änderung plant. Wenn das
 Update schief geht, hat man schnell wieder den vorherigen Stand hergestellt.
-Wenn er erfolgreich war, muss man den Snapshot im Backupverzeichnis manuell löschen.
+Wenn er erfolgreich war, muss man den Snapshot im Backupverzeichnis manuell löschen. Die Restoreoption `-00` setzt dann bei einem `rsync` Backup schnell das System wieder auf den vorherigen Stand zurück.
 
 **Hinweis:**
 *raspiBackup* Snapshots sind keine Snapshots im eigentlichen Sinne wie sie z.B. mit *btrfs* erstellt werden können.

@@ -14,6 +14,7 @@ This is very helpful, for example, before carrying out a
 software update or planning another major change. If the
 update goes wrong, you can quickly restore the previous status.
 If it was successful, the snapshot must be deleted manually from the backup directory.
+The `-00` restore option quickly restores the system to its previous state after an `rsync` backup.
 
 **Note:**
 *raspiBackup* snapshots are not snapshots in the true sense of the word as they can be created with *btrfs*, for example.
