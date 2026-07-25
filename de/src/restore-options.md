@@ -171,9 +171,8 @@ und dann ein Backup restoren. Details dazu siehe [FAQ #6](faq.md#faq6)
 <a name="parm_00"></a>
 ### -00: Keine Partitionierung und Formatierung
 
-Hiermit wird keine Formatierung der mit der Option `-T`
-ausgewählten Partitionen bei einem `rsync` partitionsorientierten Backup
-vorgenommen. Dadurch wird der Restoreprozess extrem beschleunigt, da nur neue,
+Hiermit wird keine Formatierung bei einem `rsync` Backup
+vorgenommen und es wird der Restoreprozess dadurch extrem beschleunigt, da nur neue,
 geänderte oder gelöschte Dateien gesynced werden.
 
 | Option | Standard | Im Installer | Konfigurationsname |
