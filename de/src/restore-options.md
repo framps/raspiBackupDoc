@@ -6,7 +6,8 @@ welche Partitionen restored werden sollen. Wird beim partitionsorientierten Modu
 der `rsync` Backuptyp genutzt, kann bei einem Restore auch ein Deltarestore gewählt werden (Option -00).
 Das heißt, es werden mit `rsync` nur die geänderten Dateien und gelöschte Dateien aus dem Backup
 kopiert sowie nicht im Backup vorhandene Dateien - also neu erstellte Dateien - gelöscht.
-Damit ist ein sehr schneller Restore möglich.
+Damit ist ein sehr schneller Restore möglich, der aber nur möglich ist, wenn ein existierendes System
+auf einen vorherigen Backupstand gebracht werden soll.
 
 Unabhängig von *raspiBackup* ist auch ein [manueller Restore](manual-restore.md)
 der Daten mit den zuvor benutzten Backuptools `dd`, `tar` oder `rsync` möglich.
