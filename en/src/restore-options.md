@@ -173,9 +173,8 @@ For details see [FAQ #6](faq.md#faq6)
 <a name="parm_00"></a>
 ### -00: No partitioning and formatting
 
-This will not format the partitions selected with the `-T`
-option during an `rsync` partition-oriented backup.
-This speeds up the restore process considerably, as only new, changed or deleted files are synced,
+This will not format the partitions during restore of a `rsync` backup.
+This speeds up the restore process considerably, as only new, changed or deleted files are synced.
 
 | Option | Default | In Installer | Configuration name |
 |--------|----------|--------------|--------------------|
