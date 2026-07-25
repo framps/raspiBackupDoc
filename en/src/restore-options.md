@@ -6,7 +6,7 @@ If the partition-oriented mode
 the `rsync` backup type is used, a delta restore can also be selected for a restore (option -00).
 This means that only the changed files and deleted files from the backup are copied with `rsync
 and files not present in the backup - i.e. newly created files - are deleted.
-This allows a very fast restore.
+This allows a very fast restore but can used only if an existing system should be restored to an earlier backup level.
 
 Independent of *raspiBackup*, a [manual restore](manual-restore.md)
 of the data with the previously used backup tools `dd`, `tar` or `rsync` is also possible.
