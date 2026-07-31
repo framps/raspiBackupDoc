@@ -326,6 +326,8 @@ other compression method, e.g. zstd.
 
 Possible compression methods are: `bzip2`, `gzip`, `lzip`, `lzma`, `lzop`, `xz` and `zstd`
 
+Starting with release 0.7.3 `lz4` is also available.
+
 The `--tarCompressionToolOptions` option can be used to specify options for the compression tool.
 
 **Note:** Don't use option `-z` in parallel because this will deactivate this option and a gzipped tar file will be created.
