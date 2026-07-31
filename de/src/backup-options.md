@@ -328,6 +328,8 @@ anderes Kompressionsverfahren gewählt werden wie z.B. zstd.
 
 Mögliche Kompressionsverfahren sind: `bzip2`, `gzip`, `lzip`, `lzma`,  `lzop`,  `xz` und  `zstd`
 
+Ab Release 0.7.3 ist auch `lz4` verfügbar.
+
 Mit der Option `--tarCompressionToolOptions` können noch Optionen für das Kompressionstool
 mitgegeben werden.
 
