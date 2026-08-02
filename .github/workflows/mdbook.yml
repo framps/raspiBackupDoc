@@ -31,8 +31,8 @@ jobs:
     env:
       # Use pinned versions to allow caching (?)
       # Don't use MDBOOK_... because those env variables give warnings in "mdbook build"
-      MDB_VERSION: 0.5.2
-      MDB_TOC_VERSION: 0.15.3
+      MDB_VERSION: 0.5.4
+      MDB_TOC_VERSION: 0.15.4
     steps:
       - uses: actions/checkout@v4
 
