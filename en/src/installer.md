@@ -10,7 +10,7 @@ Advanced configuration always requires editing the configuration file.
 Enter the following commands in a command window to download and invoke the installer
  
 ```
-wget -nv https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh
+curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh
 ```
 and use the installer menus to install *raspiBackup* and to configure the most important options.
  
