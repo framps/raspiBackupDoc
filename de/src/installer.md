@@ -10,7 +10,7 @@ zu ändern. Die fortschrittliche Konfiguration erfordert immer eine Änderung de
 Eingabe der folgenden Befehle in einem Befehlsfenster um den Installer herunterzuladen und aufzurufen:
 
 ```
-curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
+curl -sSLO https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh
 ```
 und Nutzung der Installermenus um *raspiBackup* zu installieren und die wichtigsten Optionen zu konfigurieren.
 
