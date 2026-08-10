@@ -180,7 +180,6 @@ email="$1" # target email address
 subject="$2" # email subject
 content="$3" # email contents
 parms="$4" # addtl email parms passed with -E
-append="$5" # file to append
 ```
 
 ### Access to the backup directory, messages, and debug log
