@@ -59,14 +59,14 @@ Many more videos on all kinds of *raspiBackup* topics can be found in the [raspi
   to find out about current activities and peripheral information about *raspiBackup* on Facebook.
   Questions about *raspiBackup* are also possible. Please only report problems in [*GitHub*](https://github.com/framps/raspiBackup/issues).
 
-* Click [![Twitter](images/icons/Twitter-f-Logo__blue_29.png)](https://www.twitter.com/linuxframp),
+* Click [![Twitter](images/icons/Twitter-f-Logo__blue_29.png)](https://www.twitter.com/linuxframp)
   to follow *raspiBackup* on Twitter.
 
-* Click [![RaspberryForum](images/icons/RaspberryForumSmall.png)](https://forum-raspberrypi.de/forum/board/153-backup/),
-  to ask questions about Raspberry backups in general and *raspiBackup* in particular or to read existing threads about *raspiBackup* in the German RaspberryForum.
+* Click [RaspberryPiForum](https://forums.raspberrypi.com/viewtopic.php?p=2384877)
+  to ask questions about *raspiBackup*
 
-* Click [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/),
-  to follow *raspiBackup* on Reddit.
+* Click [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/)
+  to follow *raspiBackup* on Reddit
 
 > [!NOTE]
 > Any other communication channels such as e-mails, which are unfortunately often used, will be ignored!

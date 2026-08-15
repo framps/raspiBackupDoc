@@ -61,13 +61,13 @@ Viele weitere Videos zu allen möglichen Themen zu *raspiBackup* finden sich im 
   um auf Facebook aktuelle Aktivitäten und Randinformationen zu *raspiBackup* zu erfahren.
   Fragen zu *raspiBackup* sind auch möglich. Probleme bitte nur im [*GitHub*](https://github.com/framps/raspiBackup/issues) melden.
 
-* Klicke [![Twitter](images/icons/Twitter-f-Logo__blue_29.png)](https://www.twitter.com/linuxframp),
-  um *raspiBackup* auf Twitter zu folgen.
+* Klicke [![Twitter](images/icons/Twitter-f-Logo__blue_29.png)](https://www.twitter.com/linuxframp)
+  um *raspiBackup* auf Twitter zu folgen
 
-* Klicke [![RaspberryForum](images/icons/RaspberryForumSmall.png)](https://forum-raspberrypi.de/forum/board/153-backup/),
+* Klicke [![RaspberryForum](images/icons/RaspberryForumSmall.png)](https://forum-raspberrypi.de/forum/board/153-backup/)
   um im deutschen RaspberryForum Fragen zu Raspberry Backups im Allgemeinen und *raspiBackup* im Speziellen zu stellen oder existierende Threads zu *raspiBackup* zu lesen.
 
-* Klicke [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/),
+* Klicke [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/)
   um *raspiBackup* auf Reddit zu folgen.
 
 > [!NOTE]
@@ -88,7 +88,7 @@ Eine Anerkennung des Entwicklungs- und Wartungsaufwands sowie Supports für
    gute alte Art per Brief zugeschickt :-)
 
 Das Trinkgeld wird primär dazu genutzt, Verbrauchsmaterialien wie SD-Karten und USB Speichermedien sowie Adapter, Kabel etc.,
-die für das Entwickeln und Testen benötigt werden, zu kaufen. 
+die für das Entwickeln und Testen benötigt werden, zu kaufen.
 
 ## Danksagungen
 
