@@ -17,13 +17,7 @@ A restore can always be performed completely. The [partition-oriented backup](no
 *raspiBackup* creates a new backup each time, providing a backup history that can be accessed at any time. This differs from existing **clone** backup tools, which only update the latest changes in the existing clone with rsync, meaning that only a backup of the latest status is available.
 This means that the clone is created very fast. However, the rsync backup type also only backs up the latest changes and is therefore the fastest backup method of *raspiBackup*. This backup type should be used if backup speed is an important criterion.
 
-There is a helper script called **raspiBackupAndClone** available, which, with a few manual configuration steps, can be used to automatically restore the backup to a device immediately after a successful backup.
-This ensures that there is always a clone of the latest backup on a device that can be deployed immediately if the original system stops working.
-If the rsync backup type is used, the backup that was just created is not restored to the clone device; instead, only all updates on the system are synchronized.
-This ensures that updating the clone is completed very quickly. See [here](how-to-create-a-cold-standby-clone-with-raspibackup.md) for the details how to use *raspiBackupAndClone*.
-
-> [!NOTE]
-> It's planned to add the raspiBackupAndClone functionality in raspiBackup (See [here](https://framps.github.io/raspiBackupDoc/de/how-to-enable-clone.html)).
+Starting with Release 0.7.3, *raspiBackup* can also create a clone on another device after creating a backup. [Here](how-to-create-a-cold-standby-clone-with-raspibackup.md) you'll find a description of the steps required to use this cloning feature.
 
 For installation and configuration of *raspiBackup* there is an
 [installer](installation-in-5-minutes.md), with which the most important options of *raspiBackup* can be easily and quickly configured similar to `raspi-config`. More specific settings can be configured in a configuration file.
