@@ -167,7 +167,7 @@ and the sample extensions or uninstall directly from the command line.
 (This installation installs the standard configuration).
 
 ```
-curl https://raw.githubusercontent.com/framps/raspiBackup/master/published/install.sh | sudo bash -s -- -i
+curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh -i
 ```
 
 Any other installer option can be specified instead of `-i`.

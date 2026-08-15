@@ -101,7 +101,9 @@ in the command line on the Raspberry following commands or, much better, just co
 paste the following commands into an open command window.
 
 ```
-cd ~; curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install; sudo bash ./install
+curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && 
+sudo bash ./raspiBackupInstallUI.sh
+`
 ```
 
 **Note**: A manual installation without `sudo` usage is documented on
@@ -121,7 +123,6 @@ The installer can be restarted at any time in the command line with
 `sudo raspiBackupInstallUI` to update the configuration.
 
 ![Installation demo video](images/raspiBackupInstall_de.gif)
-
 
 ## Systemd to start the backup automatically at regular intervals
 

@@ -96,12 +96,13 @@ lsblk
 <a name="download-commands"></a>
 ## Download und Installation des Installers
 
-Zum Download, der Installation und Start des *raspiBackup* Installers bitte
-folgendes in der Befehlszeile auf der Raspberry eingeben oder noch besser 
+Zum Download, der Installation und Start des *raspiBackup* Installers ist
+folgendes in der Befehlszeile auf der Raspberry eingeben oder noch besser
 per copy und paste in er Befehlszeile einfügen:
 
 ```
-cd ~; curl -o install -L https://raspibackup.linux-tips-and-tricks.de/install; sudo bash ./install
+curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && 
+sudo bash ./raspiBackupInstallUI.sh
 ```
 
 **Hinweis**: Eine manuelle Installation ohne `sudo` Nutzung ist in einer extra

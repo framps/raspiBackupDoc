@@ -172,7 +172,7 @@ und den Beispielextensions oder die Deinstallation direkt von der Befehlszeile a
 (Bei dieser Installation wird die Standardkonfiguration installiert.)
 
 ```
-curl https://raw.githubusercontent.com/framps/raspiBackup/master/published/install.sh | sudo bash -s -- -i
+curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh -i
 ```
 
 Statt `-i` kann jede andere Installeroption mitgegeben werden.
