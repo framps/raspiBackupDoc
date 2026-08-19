@@ -354,6 +354,10 @@ gestartet, muss diese Option angegeben werden.
 |-------------|----------|--------------|--------------------|
 | --unsupportedEnvironment | aus | nein |  |
 
+**Hinweis**
+Wenn ein nicht unterstütztes System auch regelmäßig gesichert werden soll, dann muss in der Datei `/etc/systemd/system/raspiBackup.service` die Zeile `ExecStart=/usr/local/bin/raspiBackup.sh
+` wie folgt erweitert werden: `ExecStart=/usr/local/bin/raspiBackup.sh --unsupportedEnvironment`
+
 <a name="parm_P"></a>
 ### -P: Partitionsorientierter Backupmodus
 
