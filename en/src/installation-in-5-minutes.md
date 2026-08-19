@@ -103,7 +103,6 @@ paste the following commands into an open command window.
 ```
 curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && 
 sudo bash ./raspiBackupInstallUI.sh
-`
 ```
 
 **Note**: A manual installation without `sudo` usage is documented on
