@@ -333,7 +333,9 @@ Ab Release 0.7.3 ist auch `lz4` verfügbar.
 Mit der Option `--tarCompressionToolOptions` können noch Optionen für das Kompressionstool
 mitgegeben werden.
 
-**Hinweis:** Die Option `-z` darf nicht parallel genutzt werden da sie diese Option deaktiviert und ein gzipptes tar File erstellt wird.
+**Hinweis:** 
+
+Die Option `-z` darf nicht parallel genutzt werden da sie diese Option deaktiviert und ein gzipptes tar File erstellt wird.
 
 <a name="parm_tarcompressiontooloptions"></a>
 ### --tarCompressionToolOptions: Zusätzliche Optionen für das genutzte tar Kompressionstool
@@ -355,8 +357,9 @@ gestartet, muss diese Option angegeben werden.
 | --unsupportedEnvironment | aus | nein |  |
 
 **Hinweis**
+
 Wenn ein nicht unterstütztes System auch regelmäßig gesichert werden soll, dann muss in der Datei `/etc/systemd/system/raspiBackup.service` die Zeile `ExecStart=/usr/local/bin/raspiBackup.sh
-` wie folgt erweitert werden: `ExecStart=/usr/local/bin/raspiBackup.sh --unsupportedEnvironment`
+` zu `ExecStart=/usr/local/bin/raspiBackup.sh --unsupportedEnvironment` erweitert werden.
 
 <a name="parm_P"></a>
 ### -P: Partitionsorientierter Backupmodus
