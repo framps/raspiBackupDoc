@@ -351,6 +351,9 @@ this option is required.
 |-------------|----------|--------------|--------------------|
 | --unsupportedEnvironment | off | no | |
 
+**Note**
+If you want to back up an unsupported system on a regular basis, you must modify the following line `ExecStart=/usr/local/bin/raspiBackup.sh` in the file `/etc/systemd/system/raspiBackup.service` to `ExecStart=/usr/local/bin/raspiBackup.sh --unsupportedEnvironment`
+
 <a name="parm_P"></a>
 ### -P: Partition-oriented backup mode
 
