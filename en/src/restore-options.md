@@ -43,8 +43,8 @@ Device on which the backup is restored.
 
 Example: `-/dev/sda`
 
-**Note:** The parameter must be a device and not a partition. It must not be a
-partition number such as `/dev/sda1` must not be present.
+**Note:** The parameter hast to be a device and not a partition. There should be no
+leading partition number such as `/dev/sda1`. 
 
 **Attention:** This device is usually completely deleted and recreated! With `tar` and
 and `rsync` backup, the size of the *root* partition is automatically
