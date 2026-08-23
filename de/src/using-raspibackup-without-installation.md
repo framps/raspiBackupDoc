@@ -1,7 +1,7 @@
 <a name="adhoc"></a>
 # *raspiBackup* ohne Installation nutzen
 
-1. Download von *raspiBackup*: `curl -sSLO  https://www.linux-tips-and-tricks.de/raspiBackup.sh`
+1. Download von *raspiBackup*: `curl -sSLO https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackup.sh`
 
 1. Mount der Backuppartition unter `/backup` oder Angabe der Backuppartition als letzten
    Parameter im Aufruf, also z.B. `sudo bash ./raspiBackup.sh /media/pi`
