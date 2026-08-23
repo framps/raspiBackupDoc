@@ -47,7 +47,7 @@ Beispiel: `-/dev/sda`
 **Hinweis:** Der Parameter muss ein Device sein und keine Partition. Es darf keine
 Partitionsnummer wie z.B. bei `/dev/sda1` vorhanden sein.
 
-**Achtung:** Dieses Device wird i.d.R. vollständig gelöscht und neu angelegt! Beim `tar` und
+**Achtung:** Dieses Device wird normalerweise vollständig gelöscht und neu angelegt außer wenn eine der Optionen `-0` oder `-00` genutzt werden! Beim `tar` und
 `rsync` Backup wird automatisch die Größe der *root* Partition entsprechend
 verkleinert oder vergrößert, wenn das Zielgerät eine andere Größe
 hat als das gesicherte System. Dabei muss natürlich auf dem Zielgerät noch genügend Platz für die
