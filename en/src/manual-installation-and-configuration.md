@@ -12,16 +12,16 @@ Prerequisites: Login as user `pi` to the home directory and an active network co
    `sudo raspiBackupInstallUI` and update the default configuration.
 
    ```
-    curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
+    curl -sSLO https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
     ```
 
 2. You can also download and install *raspiBackup* manually.
 
    1. Download the necessary files:
       ```
-      curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackup.sh
-      curl -sSLO https://www.linux-tips-and-tricks.de/raspiBackupInstallUI.sh
-      curl -sSL https://www.linux-tips-and-tricks.de/raspiBackup_de.conf > raspiBackup.conf
+      curl -sSLO https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackup.sh
+      curl -sSLO https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh
+      curl -sSL https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackup_en.conf > raspiBackup.conf
       ```
 
    2. Now the files must be copied into the corresponding directories and ownership and access rights must be adjusted:
