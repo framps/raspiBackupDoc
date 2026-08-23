@@ -46,7 +46,7 @@ Example: `-/dev/sda`
 **Note:** The parameter hast to be a device and not a partition. There should be no
 leading partition number such as `/dev/sda1`. 
 
-**Attention:** This device is usually completely deleted and recreated! With `tar` and
+**Attention:** This device is completely deleted and recreated if you don't use either option `-0`or `-00`! With `tar` and
 and `rsync` backup, the size of the *root* partition is automatically
 reduced or enlarged if the target device has a different size
 than the backed up system. Of course, there must still be enough space on the target device for the
