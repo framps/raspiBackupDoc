@@ -7,19 +7,6 @@ and can be adapted to your own requirements.
 
 They are available for download on [*GitHub*](https://github.com/framps/raspiBackup/tree/master/helper):
 
-1. **raspiBackupAndClone.sh**: This script creates a backup version with *raspiBackup*
-   and then restores the current backup to a connected device. This way
-   you always have a current backup system after the backup, from which you can boot,
-   if the system device has been corrupted. If you use the partition-oriented backup with rsync,
-   the restore is only a synchronization of the changes to the previous state and this is
-   much faster than a full restore with tar or dd.
-
-   **Note**: If the system no longer boots due to any misconfiguration, the cloned backup
-   will of course not help, as it contains the same misconfiguration. In this case you have to restore an
-   manually restore an older, still functioning backup.
-
-   Detailed instructions on how to configure **raspiBackupAndClone** are available [here](how-to-create-a-cold-standby-clone-with-raspibackup.md).
-
 1. **raspiBackupWrapper.sh**: This can be used to execute before and after
    *raspiBackup* various things. The code already mounts the
    backup partition and unmounts it if it was not mounted before. In addition it's possible
