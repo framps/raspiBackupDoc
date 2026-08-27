@@ -35,6 +35,9 @@ Ein Restorebefehl sieht normalerweise wie folgt aus:
 sudo raspiBackup -d <Restoredevice> <Pfad auf das Backup>
 ```
 wobei `<Restoredevice>` z.B. `/dev/sda`, `/dev/mmcblk1p` oder `/dev/nvme1n1` ist.
+`<Pfad auf das Backup>` muss das Backupverzeichnis sein welches aus dem Hostnamen der Raspberry besteht gefolgt von dem Unterverzeichnisnamen des jeweiligen Backups.
+Wenn z.B. der Hostname `asterix` ist muss der Pfad 
+`asterix/asterix@debian12-rsync-backup-20250907-030050` oder ein anderes Backupverzeichnis in `asterix` sein.
 
 Eine vollständige Liste aller Restore Aufrufoptionen findet sich [hier](restore-options.md).
 
