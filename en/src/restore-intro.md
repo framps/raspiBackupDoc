@@ -51,7 +51,7 @@ Any backup can be restored using the Raspberry Pi.
 
 1. Start a *Raspberry Pi OS* on the Raspberry
 
-1. Install *raspiBackup
+1. Install *raspiBackup*
 
 1. Connect the system device to which the backup is to be restored (e.g. an SD card with an SD card reader or SSD).
 
