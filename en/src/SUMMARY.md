@@ -129,7 +129,7 @@ That allows for some tricks:
 
 # Developer guide
 
-- [Extensionspoints](hooks-for-own-scripts.md)
+- [Extensionpoints](hooks-for-own-scripts.md)
 - [Extensionscripts](extension-scripts.md)
 - [Support new languages](local-language-support-for-languages-other-than-de-and-en-l10n.md)
 
