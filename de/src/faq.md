@@ -200,7 +200,7 @@ Es gibt verschiedene Optionen:
   Problemen. Das ist die präferierte Option. Dazu ist eine einmalige
   Registrierung notwendig. Diese sowie die Benutzung von *GitHub* ist kostenlos.
 
-- Im Raspberry Forum gibt es ein [Unterforum zu Backups](https://forum-raspberrypi.de/forum/board/153-backup/), wo Fragen zu
+- Im Raspberry Forum gibt es ein [Unterforum zu Backups](https://forum-raspberrypi.de/forum/board/164-raspibackup/), wo Fragen zu
   *raspiBackup* gestellt und Probleme berichtet werden können. *framp* wird über
   alle neuen Threads informiert und kann sich dem Thread widmen.
 
