@@ -7,7 +7,7 @@
 <a name="faq0"></a>
 ### 0) Wie entstand *raspiBackup*?
 
-Bei *framp* liefen zu Hause drei Raspis. Zwei davon 7/24 - also rund um die Uhr.
+Bei *framp* liefen zuerst zu Hause drei Raspis. Zwei davon 7/24 - also rund um die Uhr.
 Ein jeder Server sollte regelmäßig gesichert werden denn es können immer mal
 unvorhergesehene Umstände eintreten, die eine Wiederherstellung eines
 vorherigen Standes erfordern. Speziell die SD-Karte der Raspberry neigt dazu,
