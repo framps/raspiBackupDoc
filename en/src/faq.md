@@ -7,7 +7,7 @@
 <a name="faq0"></a>
 ### 0) How was *raspiBackup* created?
 
-*framp* had three Raspis running at home. Two of them run 7/24.
+*framp* had three Raspis running at home initially. Two of them run 7/24.
 Every server should be backed up regularly because unforeseen
 circumstances can always occur that require a restoration of a previous
 status. Especially the SD card of the Raspberry tends to
@@ -18,7 +18,7 @@ of it are used, a tar backup was created automatically. Finally
 a rsync backup was implemented to save backup time and space through the usage of hardlinks.
 and backup space. After a restore was necessary again and again
 and everything worked well, *framp* thought that the script
-could also be helpful for other Raspberry friends and published
+could also be helpful for other Raspberry users and published
 *raspiBackup*. See also [10 years *raspiBackup*](10-years-raspibackup.md)
 
 <a name="faq1"></a>
