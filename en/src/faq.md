@@ -194,7 +194,7 @@ There are several options:
 This is the preferred option. This requires a one-time
   registration is necessary. This and the use of *GitHub* is free of charge.
 
-- In the Raspberry forum there is a [subforum on backups](https://forum-raspberrypi.de/forum/board/153-backup/), where questions about
+- In the Raspberry forum there exists a [thread about raspiBackup](https://forums.raspberrypi.com/viewtopic.php?p=2384877), where questions about
   *raspiBackup* can be asked and problems can be reported. *framp* will be informed about
   all new threads and can dedicate himself to the thread.
 
