@@ -49,15 +49,14 @@ Any backup can be restored using *raspiBackup*. (See
 use the appropriate Windows tools to restore dd backups. For other
 backup types such as tar or rsync a Linux is necessary.
 
-However, you can use the Raspberry for this: You nstall on a new SD
-card Raspberry Pi OS and copy *raspiBackup* to it. Then you connect
+However, you can also use the Raspberry for this: You install on a new SD
+card Raspberry Pi OS and *raspiBackup*. Then you connect
 the device to which the backup is to be restored
 and the medium with the backup to the Raspberry.
 Then invoke *raspiBackup* and have the desired backup written back to the
 device. Then shut down the system,
 insert the device with the restored backup and restart the
 Raspberry again.
-
 
 <a name="faq3"></a>
 ### 3) What can *raspiBackup* back up and restore?
