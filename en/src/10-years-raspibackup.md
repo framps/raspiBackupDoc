@@ -13,7 +13,7 @@ Initial version
 Unfortunately, this cvs no longer exist.
 
 In the [wayback machine](https://web.archive.org/) from 6_2013 I found an almost initial version of *raspiBackup* on my website.
-I put it on my website for viewing as [raspiBackup_201306.sh](https://www.linux-tips-and-tricks.de/raspiBackup/raspiBackup_201306.sh).
+I put it on github for viewing as [raspiBackup_201306.sh](https://raw.githubusercontent.com/framps/raspiBackup/refs/heads/master/scripts/raspiBackup_201306.sh).
 It had 314 lines of code. Now it has about 8000 LOCs.
 
 My son gave me a Raspberry for Christmas 2013. I enthusiastically started
