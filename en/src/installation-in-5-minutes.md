@@ -14,7 +14,7 @@ Restoring a backup is described in detail [on a separate page](restore-intro.md)
 The primary platforms (Linux, Mac or Windows) of the users are also covered there.
 
 **Note:** From *raspiBackup* user [Franjo_G](https://forum-raspberrypi.de/user/57610-franjo-g/) there is an tutorial how to install raspiBackup available
-[Instructions for installing, configuring and using raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) in the German Raspberry forum. In any case it's recommended to check raspiBackupDialog which writes English messages and enhances the usage of raspiBackup. See the [extension scripts](https://framps.github.io/raspiBackupDoc/extension-scripts.html]) for details.
+[Instructions for installing, configuring and using raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) in the German Raspberry forum. In any case it's worth to check raspiBackupDialog which writes English messages and enhances the usage of raspiBackup. See [extension scripts](https://framps.github.io/raspiBackupDoc/extension-scripts.html) for details.
 
 
 ## Installation options
