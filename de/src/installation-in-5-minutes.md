@@ -15,7 +15,7 @@ Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](res
 Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benutzer eingegangen.
 
 **Hinweis:** Von *raspiBackup*-User [Franjo G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine sehr gute
-[Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) im deutschen Raspberryforum.
+[Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) im deutschen Raspberryforum. In jedem Falle ist es zu empfehlen, sich mal sein raspiBackupDialog anzusehen welche die Benutzung von raspiBackup noch vereinfacht. Details dazu finden sich in den [Erweiterungen](https://framps.github.io/raspiBackupDoc/extension-scripts.html.
 
 ## Installationsmöglichkeiten
 
