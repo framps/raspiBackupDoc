@@ -82,7 +82,6 @@ That allows for some tricks:
         - [Which filesystem can be used on the backup partition?](which-filesystem-can-be-used-on-the-backup-partition.md)
         - [How do hardlinks work with rsync?](how-do-hardlinks-work-with-rsync.md)
         - [Why shouldn't you use dd as backup type?](why-shouldn-t-you-use-dd-as-backup-type.md)
-        - [How to create a cold standby clone with raspiBackup?](how-to-create-a-cold-standby-clone-with-raspibackup.md)
         - [Migrate the Raspberry OS from SD-card to SSD, USB-disk or USB-pen-drive](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [How can I install and test the beta version?](how-can-i-install-and-test-the-beta-version.md)
         - [Is an external root partition supported? (hybrid boot mode)](external-root-partition.md)
