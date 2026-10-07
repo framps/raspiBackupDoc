@@ -114,7 +114,7 @@ Dies ermöglicht einige kleine Kniffe:
 - [Tipps zur Homeautomation](tips-homeautomation.md)
 
 - [Hilfreiche Links zum Thema Backup](helpful-links.md)
-- [Andere Backuptools](other-raspberry-backup-tools.md)
+- [Weitere Backuptools](other-raspberry-backup-tools.md)
 
 - [Verschiedenes](miscellaneous.md)
     - [Versionshistorie](version-history.md)

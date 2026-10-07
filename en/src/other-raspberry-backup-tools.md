@@ -12,7 +12,6 @@ Below is an incomplete list of other backup tools that can be used to back up a 
 - [pibackup](https://github.com/Chocorean/pibackup): Creates a dd backup, shrinks the dd image and keeps a configurable number of backups. Cmdlinetool.
 - [shrink-backup](https://github.com/UnconnectedBedna/shrink-backup): Another backup tool, which works similar to rpi-clone and image-backup. Cmdlinetool.
 - [pi-safe](https://github.com/RichardMidnight/pi-safe)
-- [pibackup - RaspberryFpc](https://github.com/RaspberryFpc/pibackup): Creates a backup of the first two partitions and compressed the image with zstd. UI Tool
 - [pibackup - Chocorean](https://github.com/Chocorean/pibackup): Creates a shrinked backup and rotates versions. Cmdlinetool
 
 [.status]: translated
