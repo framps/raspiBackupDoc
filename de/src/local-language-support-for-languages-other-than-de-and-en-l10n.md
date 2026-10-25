@@ -17,11 +17,12 @@ to raspiBackupInstallUI and *raspiBackup*.
 
 Right now following languages are supported:
 
-  - ZH - Chinese
-  - EN - English
-  - FI - Finnish
-  - FR - French
+  - ZH - Chinese (Translator: [GoogleBeEvil](https://github.com/GoogleBeEvil)
   - DE - German
+  - EN - English 
+  - FI - Finnish (Translator: [teemue](https://github.com/teemue)
+  - FR - French (Translator: [mgrafr](https://github.com/mgrafr)
+  - ES - Spanish (Translator: [majegarza](https://github.com/majegarza)
 
 ## Basic activities to add a new language to *raspiBackup*
 
