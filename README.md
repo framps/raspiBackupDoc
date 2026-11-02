@@ -1,7 +1,7 @@
 > [!NOTE]
 > This repository was initially created by [rpi-simonz](https://github.com/rpi-simonz) with all its logic
 > and all German pages were taken from [framp's website](https://www.linux-tips-and-tricks.de/de/raspibackup) to bring the outdated documentation up to date. Ultimately, this repository was transferred from him to framp
-> because it logically belongs to raspiBackup and should have the same owner.[rpi-simonz](https://github.com/rpi-simonz) is, of course, a collaborator on this repository 😀
+> because it logically belongs to raspiBackup and should have the same owner.[rpi-simonz](https://github.com/rpi-simonz) is, of course, a collaborator of this repository 😀
 > 
 > A big thank you therefore goes to [rpi-simonz](https://github.com/rpi-simonz/), who single-handedly did all the groundwork with great enthusiasm and dedication to bring the raspiBackup
 > documentation into a new format and make it clearer. In doing so, he also initiated a revision of the documentation that was long 
