@@ -118,7 +118,7 @@ Otherwise, all messages are in English.
 A list of supported languages can be found [here](language-support.md#supported-languages).
 
 If you want to help to give *raspiBackup* another language, you are welcome to do so,
-Details can be found [in this description](../local-language-support-for-languages-other-than-de-and-en-l10n.md).
+Details can be found [in this description](local-language-support-for-languages-other-than-de-and-en-l10n.md).
 
 | Option name | Default | In Installer | Configuration name |
 |-------------|----------|--------------|--------------------|
