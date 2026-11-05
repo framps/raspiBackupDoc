@@ -1,19 +1,18 @@
-# Typical restore usecases 
+# Typical restore use cases
 
-Various application examples of
-*raspiBackup* and their configuration are presented and explained hoe to use
-a backup for restore.
-overview of all options can be found in
+Various use cases of
+*raspiBackup* are presented here showing how a backup can be used for a restore.
+An overview of all options can be found
 in the [Restore](restore.md) chapter.
 
-*Note*
-In the following examples, /dev/sda is taken as the device to be restored.
+**Note**:
+In the following examples, /dev/sda is taken as the device to be restored to.
 
 <!-- toc -->
 
 ## A system no longer started because an SD card became unusable
 
-In this case, the entire backup must be restored to a new SD card
+In this case, the entire backup must be restored to a new SD card.
 
 ```
 sudo raspiBackup -d /dev/sda <backup>
@@ -44,7 +43,7 @@ sudo raspiBackup -d /dev/sda <backup directory>_systemmove
 
 ## A system with a separate data partition no longer boots
 
-A restore of the data partition is not necessary. Only the boot and system partition must be restored.
+A restore of the data partition is not necessary. Only the boot and system partitions have to be restored.
 
 ```
 sudo raspiBackup -d /dev/sda -T "1 2"

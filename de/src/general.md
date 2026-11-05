@@ -8,6 +8,6 @@ werden können, sind in [Allgemeine Konfigurationsoptionen](general-config-optio
 beschrieben.
 
 Siehe auch [Backup Optionen](backup-options.md) und [Backup Konfigurationsoptionen](backup-config-options.md)
-sowie [Restore Optionen](restore-options.md) und [Restore Konfigurationsoptionen](restore-config-options.md)
+sowie [Restore Optionen](restore-options.md) und [Restore Konfigurationsoptionen](restore-config-options.md).
 
 [.status]: translated

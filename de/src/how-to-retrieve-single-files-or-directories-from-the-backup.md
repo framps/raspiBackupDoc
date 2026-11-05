@@ -3,7 +3,7 @@
 Manchmal ist nicht ein kompletter Restore des ganzen Systems, sondern nur
 einzelner Datei(en) oder Verzeichnisse gewünscht.
 Dies wird nicht direkt von *raspiBackup* unterstützt.
-Da *raspiBackup* zum Restore des Gesamtsystem nur Standard-Linux-Tools
+Da *raspiBackup* zum Restore des Gesamtsystems nur Standard-Linux-Tools
 verwendet, ist das aber für alle Backuptypen manuell möglich.
 
 Allerdings müssen diese Aktivitäten auf einem Linux-System durchgeführt
@@ -18,7 +18,7 @@ zusätzliche Schritte auf der Kommandozeile.
 Zuerst muss die dd Image-Datei verfügbar gemacht werden.
 
 Im folgenden Beispiel ist die USB-Platten-Partition `/dev/sda1` und wird nach
-`/mnt` gemounted mit:
+`/mnt` gemountet mit:
 
 ```
 sudo mount -o ro /dev/sda1 /mnt
@@ -45,7 +45,7 @@ raspberrypi-dd-backup-20160415-222900.img2      122880 15646719 15523840 7.4G 83
 
 Es sind also 8192 für die erste und 122880 für die zweite Partition.
 
-Nun wird die Partition nach `/media` gemounted, in dem Beispiel die zweite, die root-Partition.
+Nun wird die Partition nach `/media` gemountet, in dem Beispiel die zweite, die root-Partition.
 Hinweis: Der Offset ist mit der Sektorgröße, hier 512, zu multiplizieren.
 
 ```
@@ -73,7 +73,7 @@ sudo umount /mnt
 
 Zuerst muss die tar-Datei verfügbar gemacht werden.
 
-Im folgenden Beispiel ist die USB-Platten-Partition `/dev/sda1` und wird nach `/mnt` gemounted mit:
+Im folgenden Beispiel ist die USB-Platten-Partition `/dev/sda1` und wird nach `/mnt` gemountet mit:
 
 ```
 sudo mount -o ro /dev/sda1 /mnt
@@ -94,7 +94,7 @@ Schließlich wurde das `/etc`-Verzeichnis aus der tar-Datei nach `/tmp` extrahie
 
 Zu Beginn muss Zugriff auf das rsync-Backup-Verzeichnis bestehen.
 
-Im folgenden Beispiel ist die USB-Platten-Partition `/dev/sda1` und wird nach `/mnt` gemounted mit:
+Im folgenden Beispiel ist die USB-Platten-Partition `/dev/sda1` und wird nach `/mnt` gemountet mit:
 
 ```
 sudo mount -o ro /dev/sda1 /mnt

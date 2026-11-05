@@ -1,7 +1,7 @@
 # Configuration update when upgrading to a new version
 
 Whenever a *raspiBackup* version is upgraded,
-immediately checks are executed whether the new version requires a new
+it is immediately checked whether the new version requires a new
 configuration version. If so, the local configuration is automatically
 merged with the new configuration in a new
 configuration file of *raspiBackup*.
@@ -17,9 +17,9 @@ sudo raspiBackup.sh --updateConfig
 ```
 
 When merging the two configurations, *raspiBackup* writes
-various information messages. The following messages are written
+various information messages. The following messages are written,
 for example, when upgrading from *raspiBackup* 0.6.4.3 to *raspiBackup*
-0.6.5 is upgraded.
+0.6.5.
 
 ```
 --- RBK0241I: Current configuration v0.1.3 is merged with the new configuration v0.1.4 in /usr/local/etc/raspiBackup.conf.merged.
@@ -43,10 +43,10 @@ is carried out.
 
 Which changes are made can be seen in the
 messages `RBK0248I`. Finally, you will be asked whether the
-merged configuration file should be activated. Of course
-a backup of the existing configuration file in
-`/usr/local/etc/raspiBackup.conf.bak ` beforehand. If you answer with "yes",
-the configuration merge is completed and the following
+merged configuration file should be activated. Of course,
+a backup of the existing configuration file is created beforehand in
+`/usr/local/etc/raspiBackup.conf.bak`. If you answer with "yes",
+the configuration merge is completed and you get the following
 messages:
 
 ```
@@ -54,8 +54,8 @@ messages:
 --- RBK0244I: Merged configuration /usr/local/etc/raspiBackup.conf.merged is copied to /usr/local/etc/raspiBackup.conf and activated.
 ```
 
-This is the simplest method for updating the configuration file
-and is done quickly.
+This is the simplest method for updating the configuration file,
+and it is done quickly.
 
 However, you can also answer "no" and not activate the merged configuration file
 immediately. You will then receive the following
@@ -80,9 +80,9 @@ DEFAULT_SMART_RECYCLE_OPTIONS="7 4 12 1"`
 ```
 
 You can now use an editor to manually view the merged
-configuration file `/usr/local/etc/raspiBackup.conf.merged` manually with an editor,
-and change it if necessary. Finally, the file for
-activation file is copied to `/usr/local/etc/raspiBackup.conf`.
+configuration file `/usr/local/etc/raspiBackup.conf.merged`, check it
+and change it if necessary. Finally, the file is
+copied to `/usr/local/etc/raspiBackup.conf` for activation.
 
 Finally, as always after an upgrade, it makes sense to perform a backup/restore
 cycle to test whether everything still works as before.
@@ -90,8 +90,8 @@ cycle to test whether everything still works as before.
 *raspiBackup* also supports the use of [different
 configuration files](invocation-options.md#configFiles). However, the automatic configuration upgrade is only
 done for the standard configuration `/usr/local/etc/raspiBackup.conf`.
-All other configuration files have to  be updated manually by
-taking the configuration lines marked as new and
+All other configuration files have to be updated manually by
+taking the configuration lines marked as new
 and copying them to the other configuration files.
 
 [.status]: translated

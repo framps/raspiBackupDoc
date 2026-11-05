@@ -1,11 +1,11 @@
 # Move the Raspberry operating system from SD card to SSD, USB disk or USB stick
 
-*raspiBackup* is designed to restore a backup to the original device configuration.
+*raspiBackup* is designed to restore a backup to the original
 device configuration. There are 3 possible scenarios:
 
-1. `/boot` and `/` to SD card
+1. `/boot` and `/` on SD card
 2. `/boot` on SD card and `/` externally on an SSD, USB disk or USB stick
-   (Older Rasperry, which cannot use USB boot mode) and is called hybrid boot mode
+   (older Raspberries which do not support USB boot mode). Also called hybrid boot mode.
 3. `/boot` and `/` on an SSD, USB disk or USB stick
    (USB boot mode on newer Raspberries)
 
@@ -25,14 +25,14 @@ For (3) the following command is required to restore:
 sudo raspiBackup.sh -d <USB device> <Backup>
 ```
 
-Where \<USB device\> can be an SSD, a USB disk or a USB stick
+Where \<USB device\> can be an SSD, a USB disk or a USB stick.
 
 
 If you want to move to a large USB device, the option
-`--resizeRootFS-` is useful, which does not expand the root partition, because then the rest of the
+`--resizeRootFS-` is useful, which does not expand the root partition, because then
 the rest of the USB device can be used for further partitions.
 
-Details on the restore can be found in "[Restore/Restore](restore.md)".
+Details on the restore can be found in "[Restore](restore.md)".
 
 
 [.status]: translated

@@ -1,17 +1,17 @@
 # msmtp configuration for a web.de account
 
-The user *gNeadr* from *raspiBackup* had problems setting up the e-mail notification
+The user *gNeandr* from *raspiBackup* had problems setting up the eMail notification
 for his web.de account. After he
 successfully managed to configure everything correctly, he fortunately
 offered to publish his installation and configuration steps here
-to make it easier for other *raspiBackup* users,
-to configure the email configuration for *raspiBackup*.
+to make it easier for other *raspiBackup* users
+to set up the eMail configuration for *raspiBackup*.
 
 There is not much to configure in *raspiBackup*.
-The difficulty is to configure the eMailClient correctly.
+The difficulty is to configure the eMail client correctly.
 
-Enclosed are the installation and configuration steps for *gNeandr* -
-Once again, thank you very much for providing it.
+Below are the installation and configuration steps from *gNeandr* -
+once again, thank you very much for providing it.
 
 ```
 Raspberry Installation 2023-08-20
@@ -70,13 +70,13 @@ Then install the SD card in the Raspberry and start it/connect the power adapter
 
 Check with Fritzbox, change the name of the 'raspberry' if necessary.
 
-Start Raspberry via SSH with :
+Start Raspberry via SSH with:
 
 ```
 ssh pi@192.123.123.7X (ip of the Raspberry as configured above)
 ```
 
-## Configure and update/upgrade Raspberry/RASPIAN OS
+## Configure and update/upgrade Raspberry/RASPBIAN OS
 
 To be on the safe side, change the password ...
 (see also https://www.raspberrypi.org/documentation/configuration/security.md)
@@ -86,7 +86,7 @@ To be on the safe side, change the password ...
 $ sudo raspi-config
 ```
 
-Setting e.g:
+Setting e.g.:
 
 ```
 │ 1 Change User Password Change password for the 'pi' user │
@@ -114,7 +114,7 @@ $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
 
-## mSMTP for sending email e.g. from *raspiBackup*
+## mSMTP for sending eMails e.g. from *raspiBackup*
 
 This compilation is based on: <https://goneuland.de/raspberry-pi-e-mails-versenden-mit-msmtp/>
 
@@ -153,7 +153,7 @@ $ sudo nano /etc/msmtprc
 ```
 
 The following listing of "/etc/msmtprc" shows the settings for sending via an
-existing EMail account at WEB.de
+existing eMail account at WEB.de.
 
 For your own use, the lines following "# Customize" must be changed with your own values.
 
@@ -202,7 +202,7 @@ The next steps adjust the rights of the file.
 $ sudo chmod 600 /etc/msmtprc
 ```
 
-Set the e-mail program with "set sendmail":
+Set the eMail program with "set sendmail":
 
 ```
 $ sudo nano /etc/mail.rc
@@ -233,12 +233,12 @@ To: yyyyyy@web.de
 E-mail test
 ```
 
-## *raspiBackup* Configuration for sending e-mails with mSMTP
+## *raspiBackup* configuration for sending eMails with mSMTP
 
 ### Customization
 
 The configuration file "raspiBackup.conf" is adapted to the above mSMTP setup
-for *raspiBackup* email notifications with:
+for *raspiBackup* eMail notifications with:
 
 ```
 $ sudo nano /usr/local/etc/raspiBackup.conf
@@ -254,7 +254,7 @@ DEFAULT_EMAIL_PARMS=""
 DEFAULT_MAIL_PROGRAM="mail"
 ```
 
-### Test email notification from *raspiBackup* with mSMTP for WEB.de
+### Test eMail notification from *raspiBackup* with mSMTP for WEB.de
 
 ```
 $ sudo *raspiBackup* -m detailed -F

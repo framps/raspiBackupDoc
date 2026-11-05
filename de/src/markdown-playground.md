@@ -254,7 +254,7 @@ Das wird besonders deutlich, wenn keine echte HTML-Formatierung, sondern Pseudo-
 * Normaler Text
 
   * mit <b>eingebettetem HTML</b>.
-  * Ein pseudo-HTML Tag, der nicht angezeigt wird (nur öffnend: das ergibt eine Parser-Warnung): <parameter>
+  * Ein pseudo-HTML Tag, der nicht angezeigt wird (nur öffnend: das ergibt eine Parser-Warnung): <parameter/>
 
     ```
     WARN unclosed HTML tag `<parameter>` found in `markdown-playground.md` while exiting Item
@@ -265,7 +265,7 @@ Das wird besonders deutlich, wenn keine echte HTML-Formatierung, sondern Pseudo-
 
   > Text mit <b>eingebettetem HTML</b>.
   >
-  > Ein Pseudo-HTML Tag, nur öffnend, keine Anzeige: <parameter>
+  > Ein Pseudo-HTML Tag, nur öffnend, keine Anzeige: <parameter/>
 
 * Korrekturversuch mit auch-schließendem Tag ```<parameter/>```:
 

@@ -2,11 +2,11 @@
 
 A *raspiBackup* user has written a *raspiBackup* extension
 which ensures that all Docker containers are stopped before the backup
-and finally started again.
+and started again at the end.
 
-The code is available on [github](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided)
+The code is available on [github](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided).
 
-To use the extension, execute following steps:
+To use the extension, execute the following steps:
 
 1) Download the extension
    ```
@@ -16,18 +16,18 @@ To use the extension, execute following steps:
    sudo chmod +x raspiBackup_docker*.sh
    ```
 
-2) The extension then has to be defined in *raspiBackup*.
-   To do this, update the configuration file `/usr/local/etc/raspiBackup.conf` as follows.
+2) The extension then has to be made known to *raspiBackup*.
+   To do this, the configuration file `/usr/local/etc/raspiBackup.conf` has to be updated.
 
    If no extension is active yet, the following definition is sufficient:
    ```
    DEFAULT_EXTENSIONS="docker"
    ```
 
-      Otherwise, `docker` has to be added to the existing extensions.
+   Otherwise, `docker` has to be added to the existing extensions.
 
 **Note**:
-There should be no commands in the `DEFAULT_STOPSERVICES` and `DEFAULT_STARTSERVICES` definitions,
+There should be no commands in the `DEFAULT_STOPSERVICES` and `DEFAULT_STARTSERVICES` definitions
 that start or stop Docker.
 
 [.status]: translated

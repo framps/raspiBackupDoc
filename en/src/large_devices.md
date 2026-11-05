@@ -23,7 +23,7 @@ the time of the backup. Of course, this only works if the device of the original
 and the file system are not defective. Otherwise, a complete long restore must be carried out.
 
 If you want to make full use of devices > 2TB,
-[mbr2gpt from RonR](https://forums.raspberrypi.com/viewtopic.php?t=196778) can be used toi
+[mbr2gpt from RonR](https://forums.raspberrypi.com/viewtopic.php?t=196778) is recommended to
 convert the system from mbr to gpt.
 
 [.status]: translated

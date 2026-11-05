@@ -6,29 +6,29 @@ Anybody who is willing to help to add support for a yet unsupported language is 
 to translate *raspiBackup* messages.
 
 > [!NOTE]
-> Don't hesitate if you're willing to add a new language to *raspiBackup* even you don't have any programming experience.
-> You don't have to fiddle with the programming stuff. You have only
-> to translate all messages into your native language. You even don't have
+> Don't hesitate if you're willing to add a new language to *raspiBackup* even if you don't have any programming experience.
+> You don't have to fiddle with the programming stuff. You only have
+> to translate all messages into your native language. You don't even have
 > to create a PR to get the new language into *raspiBackup*. All this programming stuff will be handled by *raspiBackup* developers for you.
 
 Just add your interest in an [issue on *GitHub*](https://github.com/framps/raspiBackup/issues) and
-you will immediate get individual support to add new messages in your native language
+you will immediately get individual support to add new messages in your native language
 to raspiBackupInstallUI and *raspiBackup*.
 
-Right now following languages are supported:
+Right now the following languages are supported:
 
   - ZH - Chinese (Translator: [GoogleBeEvil](https://github.com/GoogleBeEvil))
   - DE - German
-  - EN - English 
+  - EN - English
   - FI - Finnish (Translator: [teemue](https://github.com/teemue))
   - FR - French (Translator: [mgrafr](https://github.com/mgrafr))
   - ES - Spanish (Translator: [majegarza](https://github.com/majegarza))
 
 ## Basic activities to add a new language to *raspiBackup*
 
-There exist two files printing messages: `raspiBackup` and `raspiBackupInstallUI`.
+There are two files printing messages: `raspiBackup` and `raspiBackupInstallUI`.
 
-Following steps have to be done to support a new language to them:
+The following steps have to be done to add support for a new language:
 
 1. For every message a new line for the new language has to be added to the code. Example for FI:
 
@@ -57,7 +57,7 @@ Following steps have to be done to support a new language to them:
    ```
    SUPPORTED_LANGUAGES=("EN" "DE")
    ```
-   To enable Finnish the line has to be changed changed to
+   To enable Finnish the line has to be changed to
    ```
    SUPPORTED_LANGUAGES=("EN" "DE" "FI")
    ```

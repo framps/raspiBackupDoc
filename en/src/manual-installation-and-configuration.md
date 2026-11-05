@@ -9,7 +9,7 @@ Prerequisites: Login as user `pi` to the home directory and an active network co
 1. The *raspiBackup* installer is downloaded and started in `/usr/local/bin` on the Raspberry
    and invoked. Thereby *raspiBackup* is installed with its
    standard options. You can then start *raspiBackup* with
-   `sudo raspiBackupInstallUI` and update the default configuration.
+   `sudo raspiBackupInstallUI` and change the default configuration.
 
    ```
     curl -sSLO https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh; sudo bash ./raspiBackupInstallUI.sh -i
@@ -44,18 +44,18 @@ Prerequisites: Login as user `pi` to the home directory and an active network co
 
    3. Now the installer can be invoked with `sudo raspiBackupInstallUI` and *raspiBackup* can be configured.
 
-3. A restore of a backup should then be carried out,
-   to familiarize yourself with how to restore the backup and to test the backup.
-   test the backup. There is nothing more annoying if, at the time when you need the backup,
-   you realize that the backup does not contain everything or is even
-   even unusable.
+3. A restore of a backup should then be carried out
+   to familiarize yourself with how to restore the backup and to
+   test the backup. There is nothing more annoying than realizing, at the time you need the backup,
+   that the backup does not contain everything or is even
+   unusable.
 
 If you want to install *raspiBackup* on a system that does not have
 internet access, you must run *2.1* on a system that has an internet connection.
 Then copy the files to the target system
 and run *2.2* and *2.3* there. However, you must bear in mind that
-no notifications can be sent and you get no notifications from
-*raspiBackup* for new versions.
+no notifications can be sent and you will not be notified by
+*raspiBackup* about new versions.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/538-raspibackup-manuelle-installation

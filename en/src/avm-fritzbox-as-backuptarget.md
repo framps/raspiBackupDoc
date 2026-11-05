@@ -2,7 +2,7 @@
 
 If you don't have a NAS, but would like to back up your Raspberries with *raspiBackup*,
 you can of course also use the NAS storage of a Fritzbox. However, you have to
-use backup type tar for this, as the SMB protocol does not support
+use backup type tar for this, as the SMB protocol used does not support
 hardlinks and therefore no rsync backup
 which provides incremental backups can be used.
 
@@ -15,15 +15,15 @@ Here is an example line in the /etc/fstab:
 //192.168.0.1/FRITZ.NAS/USB-Sandisk3-2Gen1-01 /backup cifs noauto,user,vers=3.0,credentials=/home/pi/.smbcredentials,noserverino,uid=1000,gid=1000 0 0
 ```
 
-In addition
+In addition,
 ```
 chmod 600 ~/.smbcredentials
 ```
 
 ensures that the Fritzbox access data can only be read by the user.
-This is not absolutely necessary with the Raspberry, where normally only one user
-works on it. But it is good practice to always make sure data
-can only be read and changed by the respective user.
+This is not absolutely necessary on a Raspberry, where normally only one user
+works. But it is good practice to always make access data
+readable and changeable only by the respective user.
 
 Then a backup with
 ```
@@ -31,8 +31,8 @@ sudo raspiBackup -t tar
 ```
 can be created.
 
-After the restoretest was successful, the backup type should be configured to tar in the installer
-and the time of the regular backup configured.
+After the restore test was successful, the backup type should be configured to tar in the installer
+and the time of the regular backup should be defined.
 
 [.status]: translated
 

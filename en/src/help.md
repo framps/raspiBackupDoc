@@ -6,15 +6,15 @@ the documentation:
 ![Menu-left](images/mdbook-icons-left.png)
 
   - Show/hide a table of contents
-  - Selection of a theme
+  - Select a theme
   - Search function
 
-![Menü-right](images/mdbook-icons-right.png)
+![Menu-right](images/mdbook-icons-right.png)
 
   - Language selection (German/English)
   - Print
   - *GitHub* page of the documentation project
-  - Suggest changes to the current page in *GitHub
+  - Suggest changes to the current page in *GitHub*
 
 <br>
 
@@ -23,8 +23,8 @@ Type `?` to display a small keyboard navigation aid.
 <br>
 
 > [!NOTE]
-> To reduce the translation effort given the amount of documentation pages
-> all German pages were translated with [DeepL](https://www.deepl.com) into English.
-> Thank you very much to DeepL who offers to use the translator for free.
+> To reduce the translation effort given the amount of documentation pages,
+> all German pages were translated into English with [DeepL](https://www.deepl.com).
+> Many thanks to DeepL for offering the translator free of charge.
 
 [.status]: translated

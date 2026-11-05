@@ -13,14 +13,14 @@ nur synchronisiert und damit wesentlich schneller wieder zurückgesetzt.
 Der Ziel-Datenträger darf also aktuell nicht vom Betriebssystem selbst benutzt werden.
 Es muss eine weitere, mit einem Kartenleser angeschlossene Karte, USB-Platte, SSD oder NVMe Gerät sein.
 
-Ein Restore benötigt ein **Linuxsystem**. Dazu sollte man i.d.R. eine Raspberry nehmen. Andere Linuxsysteme
+Ein Restore benötigt ein **Linuxsystem**. Dazu sollte man i.d.R. einen Raspberry nehmen. Andere Linuxsysteme
 funktionieren auch, es ist aber nicht 100% garantiert, dass es damit immer funktioniert.
 
 Sollte ein externes Rootfilesystem gesichert worden sein, wird es auch wieder
 auf ein externes Gerät zurückgespielt
 (Nur bei normalem Backupmodus mit `tar` oder `rsync` Backup).
 
-Ein [manueller Restore](manual-restore.md)  der Daten mit den zuvor benutzten Backuptools `dd`, `tar` oder `rsync`
+Ein [manueller Restore](manual-restore.md) der Daten mit den zuvor benutzten Backuptools `dd`, `tar` oder `rsync`
 ist natürlich auch möglich. Ebenso ist (manuell) auch die Wiederherstellung einzelner Dateien
 möglich, insbesondere beim `rsync` Backup sehr einfach.
 
@@ -35,8 +35,8 @@ Ein Restorebefehl sieht normalerweise wie folgt aus:
 sudo raspiBackup -d <Restoredevice> <Pfad auf das Backup>
 ```
 wobei `<Restoredevice>` z.B. `/dev/sda`, `/dev/mmcblk1p` oder `/dev/nvme1n1` ist.
-`<Pfad auf das Backup>` muss das Backupverzeichnis sein welches aus dem Hostnamen der Raspberry besteht gefolgt von dem Unterverzeichnisnamen des jeweiligen Backups.
-Wenn z.B. der Hostname `asterix` ist muss der Pfad 
+`<Pfad auf das Backup>` muss das Backupverzeichnis sein, welches aus dem Hostnamen des Raspberry besteht, gefolgt von dem Unterverzeichnisnamen des jeweiligen Backups.
+Wenn z.B. der Hostname `asterix` ist, muss der Pfad
 `asterix/asterix@debian12-rsync-backup-20250907-030050` oder ein anderes Backupverzeichnis in `asterix` sein.
 
 Eine vollständige Liste aller Restore Aufrufoptionen findet sich [hier](restore-options.md).
@@ -50,15 +50,15 @@ Weitere Themen auf dieser Seite:
 ------------------
 
 
-## Wiederherstellungsszenario mit einer Raspberry mit Raspberry Pi OS
+## Wiederherstellungsszenario mit einem Raspberry mit Raspberry Pi OS
 
-Jedes Backup kann mit der/einer Raspberry Pi wiederhergestellt werden.
+Jedes Backup kann mit dem/einem Raspberry Pi wiederhergestellt werden.
 
-1. Ein *Raspberry Pi OS* auf der Raspberry starten
+1. Ein *Raspberry Pi OS* auf dem Raspberry starten
 
 1. *raspiBackup* installieren
 
-1. Das Systemgerät auf welchem das Backup wiederhergestellt werden soll (z.B. eine SD-Karte mit einem SD-Kartenleser oder SSD), anschließen.
+1. Das Systemgerät, auf welchem das Backup wiederhergestellt werden soll (z.B. eine SD-Karte mit einem SD-Kartenleser oder SSD), anschließen.
 
 1. Das Medium, welches das Backup enthält (z.B. eine Platte), anschließen
    und mounten bzw. ein Netzwerklaufwerk mit den Backupdaten mounten.
@@ -66,7 +66,7 @@ Jedes Backup kann mit der/einer Raspberry Pi wiederhergestellt werden.
 1. Falls die Rootpartition ausgelagert wurde, ein weiteres Gerät mit
    einer vorformatierten Partition anschließen,
    die die ausgelagerte Rootpartition enthalten soll,
-   welche wiederhergestellt werden wird
+   welche wiederhergestellt werden wird.
 
 1. *raspiBackup* zum Restore starten, Aufruf siehe [unten](#devicenames).
 
@@ -98,7 +98,7 @@ mit dem [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/), res
 
 > [!NOTE]
 > Im Prinzip kann zwar jedes Linux OS genutzt werden, um ein Backup zu restoren.
-> Aber bei möglichen Inkompatibiliäten dessen Tools, im Vergleich zu den beim Backup
+> Aber bei möglichen Inkompatibilitäten dessen Tools im Vergleich zu den beim Backup
 > verwendeten Linux-Tools, kann es Probleme geben.
 > Ein gelegentlich auftauchender Kandidat dafür ist `sfdisk`,
 > das sich sowohl zu *Jessie* als auch zu *Bullseye* inkompatibel geändert hatte.
@@ -109,12 +109,12 @@ mit dem [Win32DiskImager](http://sourceforge.net/projects/win32diskimager/), res
 > das Backup erstellt wurde**.
 
 Es wird das Gerät, auf welches das Backup restored werden soll,
-an das Linuxsystem angeschlossen, die Backuppartition gemounted
+an das Linuxsystem angeschlossen, die Backuppartition gemountet
 und eine Partition für ein eventuelles externes Rootfilesystem bereitgestellt.
 
 Dann *raspiBackup* zum Restore starten, Aufruf siehe [unten](#devicenames).
 
-Wenn kein Raspberry Pi OS und/oder keine Raspberry Pi genutzt werden,
+Wenn kein Raspberry Pi OS und/oder kein Raspberry Pi genutzt werden,
 muss noch die Option [--unsupportedEnvironment](general-options.md#parm_unsupportedEnvironment) angegeben werden.
 
 Siehe auch [Unterstützte Hard- und Software](supported-hardware-and-software.md).
@@ -124,7 +124,7 @@ Siehe auch [Unterstützte Hard- und Software](supported-hardware-and-software.md
 
 Notwendige Hardware für den Restore:
 
-1. Eine laufende Raspberry Pi mit einem laufenden *Raspberry Pi OS* oder einem anderen
+1. Ein laufender Raspberry Pi mit einem laufenden *Raspberry Pi OS* oder einem anderen
    Linux Betriebssystem oder ein anderer Linux Rechner mit installiertem *raspiBackup*.
 
 1. Ein angeschlossenes Zielgerät des Backups
@@ -133,14 +133,14 @@ Notwendige Hardware für den Restore:
 
 1. Falls eine externe Rootpartition wiederherzustellen ist oder der USB Boot
    Mode benutzt wird, wo keine SD-Karte mehr benutzt wird, muss noch per USB eine
-   weitere Platte angeschlossen sein
+   weitere Platte angeschlossen sein.
 
 Gemeinsamkeiten der Beispielaufrufe:
 
 1. Das gesicherte System heißt im Beispielaufruf "raspberrypi".
 1. Der **Ziel**-Datenträger, der den Restore der Boot-/bzw.
    Boot- und Root-Partition erhalten soll, ist im Beispiel als `/dev/sdf` verfügbar.
-   [Weiter unten](#devicenames) ist beschrieben, wie man den aktuellen Wert für `-d` herausfinden kann
+   [Weiter unten](#devicenames) ist beschrieben, wie man den aktuellen Wert für `-d` herausfinden kann.
 1. **Achtung**: Alle bestehenden Daten der **Ziel**-Datenträger werden nach einer Sicherheitsabfrage
    von *raspiBackup* vor dem Restore gelöscht.
 1. Das zu restorende Backup ist verfügbar unter
@@ -161,7 +161,7 @@ sudo raspiBackup.sh -d /dev/sdf /remote/raspifix/disks/backup/rsync/raspberrypi/
 
 ### Restore auf eine SD-Karte und eine externe Partition (hybrider Bootmodus)
 
-1. Um den Restore der externe Rootpartition aufzunehmen, wurde auf `/dev/sda`
+1. Um den Restore der externen Rootpartition aufzunehmen, wurde auf `/dev/sda`
    eine entsprechend große Partition `/dev/sda1` angelegt. Eine Formatierung ist nicht notwendig.
 
 ```
@@ -171,7 +171,7 @@ sudo raspiBackup.sh -d /dev/sdf -R /dev/sda1 /remote/raspifix/disks/backup/rsync
 <a name="devicenames"></a>
 ## Wie kann man die Gerätenamen der externen SD-Karte und externen Platte herausfinden?
 
-Auf der Raspberry ist folgender Befehl einzugeben:
+Auf dem Raspberry ist folgender Befehl einzugeben:
 
 ```
 fdisk -l | egrep "^Disk /|^/dev"
@@ -196,7 +196,7 @@ Hier sieht man, dass
   - die externe Platte `/dev/sdb`, auf die die Rootpartition gebracht werden soll,
     300GB groß ist und eine Partition `/dev/sdb1` hat.
 
-Somit ist der Parameter für  `-d` `/dev/sda` (Externe SD-Karte).
+Somit ist der Parameter für `-d` `/dev/sda` (Externe SD-Karte).
 
 Falls eine externe Rootpartition mitgesichert wurde (hybrider Bootmodus), ist noch `-R /dev/sdb1` (Externe
 Rootpartition) notwendig.
@@ -209,10 +209,10 @@ Die Parameter müssen natürlich den lokalen Gegebenheiten angepasst werden.
 Ein Backup sollte regelmäßig getestet werden: Ob der Restore immer noch
 funktioniert und auch immer noch alle Daten beinhaltet.
 
-Nichts ist so frustrierend, wenn man in dem Moment, wo man das Backup benötigt,
+Nichts ist so frustrierend, wie wenn man in dem Moment, wo man das Backup benötigt,
 feststellt, dass das Backup korrupt ist oder nicht alle Daten enthält...
 
-Ein Test ist bei der Raspberry recht einfach:
+Ein Test ist beim Raspberry recht einfach:
 
 Eine neue SD-Karte einlegen, das Backup restoren und von der neuen SD-Karte booten.
 Wird keine SD-Karte genutzt, also z.B. eine SSD, kann der Restoretest
@@ -222,7 +222,7 @@ sofern sie groß genug ist, alle Daten der SSD aufzunehmen.
 Falls aus irgendwelchen Gründen der Restore mit dem Script fehlschlägt, kann man
 natürlich jederzeit die vom Script gesicherten Daten mit den Standard
 Linuxtools, die zum Backup genutzt wurden - `dd`, `tar` oder `rsync` - manuell
-restoren. Allerdings geht das dann nicht ganz so bequem wie mit dem Script
+restoren. Allerdings geht das dann nicht ganz so bequem wie mit dem Script,
 und es sind entsprechende Linux Kenntnisse erforderlich ;-)
 Siehe dazu auch [Manueller Restore eines Backups](manual-restore.md).
 

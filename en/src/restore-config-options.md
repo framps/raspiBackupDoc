@@ -1,6 +1,6 @@
 # Restore configuration options
 
-Most of the invocation options can also be defined in the configuration file
+Most of the invocation options can also be defined in the
 configuration file. See [Restore options](restore-options.md).
 
 <div class="table-wrapper-for-options">
@@ -13,10 +13,10 @@ configuration file. See [Restore options](restore-options.md).
 
 ### DEFAULT_RESTORE_EXTENSIONS
 
-As with the backup, *raspiBackup* offers the option of configuring pre and post exits for the restore,
-pre and post exits to perform actions before and after the restore.
+As with the backup, *raspiBackup* offers the option of configuring
+pre and post exits for the restore to perform actions before and after the restore.
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_RESTORE_EXTENSIONS | none |
 
@@ -40,14 +40,14 @@ Number of reminders to perform a backup restore test.
 ### DEFAULT_YES_NO_DEVICES
 
 The invocation option `-Y` can be used to suppress the yes/no
-queries can be suppressed during the restore.
+queries during the restore.
 
 However, as this can cause unintentional deletion of
 devices, this option must be used to
-define which restored devices
-may be overwritten without a prompt. 
+define which restore devices
+may be overwritten without a prompt.
 
-| Config-Option | Default |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_YES_NO_DEVICES | loop |
 

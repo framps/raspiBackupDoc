@@ -1,6 +1,6 @@
-# Typical usecases
+# Typical use cases
 
-The following pages explain typical usecases for **raspiBackup**:
+The following pages explain typical use cases for **raspiBackup**:
 
-   - [Create backups](usecases-backup.md) 
+   - [Create backups](usecases-backup.md)
    - [Restore backups](usecases-restore.md)

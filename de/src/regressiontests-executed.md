@@ -1,4 +1,4 @@
-# Regressionstests die vor einem neuen Release ausgeführt werden
+# Regressionstests, die vor einem neuen Release ausgeführt werden
 
 Jede neue Version von *raspiBackup* wird vor der Veröffentlichung einem
 Regressionstest unterzogen. Bedingt durch die vielen Optionen und möglichen
@@ -10,7 +10,7 @@ neuen Features, obwohl sie natürlich schon beim Entwickeln getestet wurden, noc
 einmal getestet.
 
 Der Regressionstest wird in einer virtualisierten Umgebung auf einem Linux
-Desktop, in der eine [Raspi per Qemu](https://linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) simuliert wird, durchgeführt.
+Desktop, in der ein [Raspi per Qemu](https://linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) simuliert wird, durchgeführt.
 (Siehe [Entwicklungsumgebung](development-environment.md).)
 
 Als Basis wird ein *Raspberry Pi OS Lite* genommen.
@@ -22,10 +22,10 @@ Kartensystem als auch für ein reines USB Bootsystem. Außerdem wird ein `tar` u
 Danach werden alle jeweiligen Backups mit *raspiBackup* wieder restored, diese
 Images per Qemu gestartet und die folgenden Tests durchgeführt:
 
-  - `/boot/firmware/cmdline.txt` wird aus der VM per `scp` auf den Host downloaded und geprüft
-  - `/etc/fstab` wird aus der VM per `scp` auf den Host downloaded und geprüft
-  - IP-Adresse 8.8.8.8 wird in der VM gepinged und getestet, ob der ping erfolgreich war
-  - Die Anzahl der aktiven Services des Original Images wird mit verifiziert `service --status-all`
+  - `/boot/firmware/cmdline.txt` wird aus der VM per `scp` auf den Host heruntergeladen und geprüft
+  - `/etc/fstab` wird aus der VM per `scp` auf den Host heruntergeladen und geprüft
+  - IP-Adresse 8.8.8.8 wird in der VM gepingt und getestet, ob der ping erfolgreich war
+  - Die Anzahl der aktiven Services des Originalimages wird mit `service --status-all` verifiziert
 
 Jedem Benutzer von *raspiBackup*, der darüber hinausgehende Optionen benutzt, wird
 dringend nahegelegt, nach einem Versionsupgrade von *raspiBackup* Backup und

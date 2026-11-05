@@ -17,7 +17,7 @@ additional steps on the command line.
 First, the dd image file must be made available.
 
 In the following example, the USB disk partition is `/dev/sda1` and is mounted to
-`/mnt` mounted with:
+`/mnt` with:
 
 ```
 sudo mount -o ro /dev/sda1 /mnt
@@ -44,7 +44,7 @@ raspberrypi-dd-backup-20160415-222900.img2 122880 15646719 15523840 7.4G 83 Linu
 
 So there are 8192 for the first partition and 122880 for the second partition.
 
-Now the partition is mounted after `/media`, in the example the second, the root partition.
+Now the partition is mounted to `/media`, in the example the second, the root partition.
 Note: The offset must be multiplied by the sector size, in this case 512.
 
 ```
@@ -72,7 +72,7 @@ sudo umount /mnt
 
 First the tar file must be made available.
 
-In the following example, the USB disk partition is `/dev/sda1` and is mounted to `/mnt` with :
+In the following example, the USB disk partition is `/dev/sda1` and is mounted to `/mnt` with:
 
 ```
 sudo mount -o ro /dev/sda1 /mnt
@@ -93,7 +93,7 @@ Finally, the `/etc` directory has been extracted from the tar file to `/tmp`. Ac
 
 Access to the rsync backup directory must be available at the beginning.
 
-In the following example, the USB disk partition is `/dev/sda1` and is mounted to `/mnt` with :
+In the following example, the USB disk partition is `/dev/sda1` and is mounted to `/mnt` with:
 
 ```
 sudo mount -o ro /dev/sda1 /mnt

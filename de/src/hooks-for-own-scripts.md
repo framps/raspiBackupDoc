@@ -1,7 +1,7 @@
 # Erweiterungspunkte
 
 Es besteht die Möglichkeit, eigene Codeerweiterungen vor und nach dem
-Backupprozess des Scripts einzubinden. Dieses ist sinnvoll, wenn
+Backupprozess des Scripts einzubinden. Dies ist sinnvoll, wenn
 eigentlich Änderungen im Backupscript notwendig sind, die aber dann
 nach jedem Update von *raspiBackup* auf eine neue Version wieder neu
 eingepflegt werden müssten. Die Extensions sind unabhängig vom
@@ -10,7 +10,7 @@ empfehlen.
 
 [Beispielerweiterungen](https://github.com/framps/raspiBackup/tree/master/extensions)
 stehen zur Verfügung und können als Vorlage für eigene Erweiterungen dienen.
-Durch die ersten wird die CPU Temperatur sowie die Hauptspeicher- und
+Durch die ersten werden die CPU Temperatur, die Hauptspeicher- und
 Backuppartitionsbelegung sowie die Partitionsbelegung vor
 und nach dem Backup ausgegeben.
 Die letzte Erweiterung wird nur am Ende des Backups aufgerufen und kann bei Erfolg
@@ -41,7 +41,7 @@ aufgerufen:
 ... Erstellen des Backups ...
 
   - POST_BACKUP_EXTENSION
-  - START_SERVICES (Definierte Befehle werden ausgeführt
+  - START_SERVICES (Definierte Befehle werden ausgeführt)
   - AFTER_STARTSERVICES (Definierte Befehle werden ausgeführt)
 
 ... Aufräumarbeiten, wie das Löschen von obsoleten Backups (kann länger dauern) ...
@@ -49,7 +49,7 @@ aufgerufen:
   - FINAL_COMMANDS (ab Release 0.6.8) (Definierte Befehle werden ausgeführt)
   - eMail (mail) Plugin
   - Notification (notify) Plugin
-  - *Slack*, *Pushover* und *Telegram* Notifications falls konfiguriert
+  - *Slack*, *Pushover* und *Telegram* Notifications, falls konfiguriert
 
 ... Final housekeeping ...
 
@@ -64,7 +64,7 @@ aufgerufen:
 
   - PRE_RESTORE_EXTENSION
 
-... restoren des Backups ...
+... Restoren des Backups ...
 
   - POST_RESTORE_EXTENSION
  
@@ -87,7 +87,7 @@ aufgerufen:
 
 2.  Wer die Beispielerweiterungen manuell installieren möchte, kann die `tgz`-Datei mit
     [diesem Link](https://www.linux-tips-and-tricks.de/raspiBackupSampleExtensions.tgz) mit einem Browser downloaden
-    oder auch direkt wie folgt auf die Raspberry downloaden und nach
+    oder auch direkt wie folgt auf den Raspberry downloaden und nach
     `/usr/local/bin` auspacken:
 
     ```
@@ -95,13 +95,13 @@ aufgerufen:
     tar -xzf raspiBackupSampleExtensions.tgz -C /usr/local/bin
     ```
 
-Dadurch werden die folgenden Scripts nach`/usr/local/bin` kopiert:
+Dadurch werden die folgenden Scripts nach `/usr/local/bin` kopiert:
 
 1. `raspiBackup_mem_pre.sh` und `raspiBackup_mem_post.sh` -
-   Berichtet Memory Usage der Raspberry vor und nach dem Backup
+   Berichtet die Memory Usage des Raspberry vor und nach dem Backup
 
 2. `raspiBackup_temp_pre.sh` und `raspiBackup_temp_post.sh` -
-   Berichtet die CPU Temperatur der Raspberry vor und nach dem Backup
+   Berichtet die CPU Temperatur des Raspberry vor und nach dem Backup
 
 3. `raspiBackup_disk_pre.sh` und `raspiBackup_disk_post.sh` -
    Berichtet die Plattennutzung vor und nach dem Backup
@@ -118,7 +118,7 @@ Aufrufparameter bei *raspiBackup* notwendig:
 -N "temp mem disk execute"
 ```
 
-bzw. in die Konfigurationsdatei ist folgende Zeile aufzunehmen
+bzw. in die Konfigurationsdatei ist folgende Zeile aufzunehmen:
 
 ```
 DEFAULT_EXTENSIONS="temp mem disk execute"
@@ -163,21 +163,21 @@ Bereich unter 1999 benutzen.
 
 ### Interface
 
-Eine Erweiterungn bekommt im Aufruf den aktuellen Statuscode von *raspiBackup*
+Eine Erweiterung bekommt im Aufruf den aktuellen Statuscode von *raspiBackup*
 mitgegeben. Ein Statuscode von 0 bedeutet in den Posterweiterungen: das Backup
 war erfolgreich. Jeder andere Statuscode bedeutet, dass das Backup
 abgebrochen wurde.
 
-### eMailErweiterung
+### eMail Erweiterung
 
-Möchte man den Versand von eMails selbst programmieren, kann die emailErweiterung
+Möchte man den Versand von eMails selbst programmieren, kann die eMail Erweiterung
 genutzt werden.
-Das ist dann besonders hilfreich, wenn die vom Script unterstützen eMailProgramme
-den eigenen eMailClient nicht unterstützen.
+Das ist dann besonders hilfreich, wenn die vom Script unterstützten eMail Programme
+den eigenen eMail Client nicht unterstützen.
 Außerdem kann das Aussehen der eMail beliebig geändert werden.
-Eine Erweiterung, das `mailx` benutzt, befindet sich in den Beispielerweiterungen.
+Eine Erweiterung, die `mailx` benutzt, befindet sich in den Beispielerweiterungen.
 
-Die folgenden Parameter werden der eMailerweiterung übergeben:
+Die folgenden Parameter werden der eMail Erweiterung übergeben:
 
 ```
 email="$1"        # target email address
@@ -192,12 +192,12 @@ parms="$4"        # addtl email parms passed with -E
 
 ```
 BACKUP_TARGETDIR=<Backupverzeichnisname>
-BACKUP_TARGETFILE=Backupdateiname>
+BACKUP_TARGETFILE=<Backupdateiname>
 MSG_FILE=<Messagefilename>
 LOG_FILE=<Logfilename>
 ```
 
-Diese Informationen können mit `source /tmp/raspiBackup.vars` gelesen werden so dass anschliessend die Variablen
+Diese Informationen können mit `source /tmp/raspiBackup.vars` gelesen werden, sodass anschließend die Variablen
 **BACKUP_TARGETDIR**, **BACKUP_TARGETFILE**, **MSG_FILE** und **LOG_FILE** gesetzt sind und auf die Dateien zugegriffen werden kann.
 
 ### Hinweise

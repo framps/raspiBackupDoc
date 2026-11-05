@@ -6,8 +6,8 @@ Wer *raspiBackup* aber aus verschiedenen Gründen manuell installieren möchte, 
 
 Voraussetzungen: Login als Benutzer `pi` ins Home-Verzeichnis und eine aktive Netzwerkverbindung.
 
-1. Der *raspiBackup* Installer wird in `/usr/local/bin` auf der Raspberry
-   downloaded und aufgerufen. Dabei wird *raspiBackup* mit seinen
+1. Der *raspiBackup* Installer wird in `/usr/local/bin` auf den Raspberry
+   heruntergeladen und aufgerufen. Dabei wird *raspiBackup* mit seinen
    Standardoptionen installiert. Anschließend kann man *raspiBackup* mit
    `sudo raspiBackupInstallUI` aufrufen und die Standardkonfiguration ändern.
 
@@ -42,12 +42,12 @@ Voraussetzungen: Login als Benutzer `pi` ins Home-Verzeichnis und eine aktive Ne
       sudo ln -s /usr/local/bin/raspiBackupInstallUI.sh /usr/local/bin/raspiBackupInstallUI
       ```
 
-   3. Nun kann der Installer mit `sudo raspiBackupInstallUI` aufgerufen werden und *raspiBackup* konfiguriert werden.
+   3. Nun kann der Installer mit `sudo raspiBackupInstallUI` aufgerufen und *raspiBackup* konfiguriert werden.
 
 3. Anschließend sollte ein Restore eines Backups vorgenommen werden,
    um sich mit der Art, wie das Backup zu restoren ist, vertraut zu machen und das
-   Backup zu testen. Es ist nichts ärgerlicher, wenn man zu dem Zeitpunkt, wenn
-   man das Backup benötigt, feststellt, das das Backup nicht alles enthält oder
+   Backup zu testen. Es ist nichts ärgerlicher, als wenn man zu dem Zeitpunkt, wenn
+   man das Backup benötigt, feststellt, dass das Backup nicht alles enthält oder
    sogar nicht brauchbar ist.
 
 Will man *raspiBackup* auf einem System installieren, welches keinen

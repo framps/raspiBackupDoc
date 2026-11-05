@@ -7,13 +7,13 @@ Advanced configuration always requires editing the configuration file.
 
 ## Installer download, invocation and installation
 
-Enter the following commands in a command window to download and invoke the installer
- 
+Enter the following commands in a command window to download and invoke the installer:
+
 ```
 curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh
 ```
 and use the installer menus to install *raspiBackup* and to configure the most important options.
- 
+
 ## Invocation if the installer was already installed
 
 ```
@@ -32,15 +32,14 @@ sudo raspiBackupInstallUI
 <a name="backup versions"></a>
 ### Backup versions - Menu C3
 
-*raspiBackup* offers two different ways to store backup versions
-to keep backup versions:
+*raspiBackup* offers two different ways to keep backup versions:
 
 1. A *maximum number of backups* that is kept for each backup type (option -k).
    In the configuration file, the number of backups can be defined for each backup type (option --keep\<type\>).
    If the number is exceeded, the oldest backup is deleted.
 
-1. Use of the *intelligent backup strategy*. Backups are created according to a specific rule
-   which defines the number of days, weeks, months and years a backup should be kept. Older backups
+1. Use of the *intelligent backup strategy*. According to a specific rule, backups
+   of the last days, weeks, months and years are kept. Older backups
    are deleted in each case. In the installer, the number of
    backups to be kept is defined with 4 numbers. The default is
    `7 4 12 3`.
@@ -59,16 +58,16 @@ to keep backup versions:
 Since *raspiBackup* does not back up any memory contents, all services that hold important information
 in memory should be stopped before the backup.
 
-*raspiBackup* offers the option of automatically stop services before the backup and then
+*raspiBackup* offers the option of automatically stopping services before the backup and then
 restart them afterwards. All services preselected in the installer should always be stopped.
 As it cannot be ruled out that other services on the system may also hold important data
 in the memory and should be stopped before the backup, the list of services that are not
-active services must be carefully checked and, if necessary, these services must also be
+preselected but active must be carefully checked and, if necessary, these services must also be
 selected so that they are stopped before the backup.
 
 After selecting the services that are to be stopped, the order in which they are to be stopped must be defined.
 In general, the sequence does not matter, but if a service has dependencies on another service, the service should
-only be stopped after the dependent service. For example
+only be stopped after the dependent service. For example,
 all services that work with a database should be stopped before stopping the database
 so that they can complete any open transactions.
 
@@ -76,12 +75,13 @@ so that they can complete any open transactions.
 ### Regular backup - Menu C9
 
 *raspiBackup* offers the possibility to create regular backups automatically.
-This is done by default via *Systemd*, but can also be started with **Cron*
-if the option `-t` is used when the installer is started.
+This is done by default via *Systemd*, but can also be switched to *Cron*
+with the option `-t` when installing the installer.
 
 The day of the week on which a backup is to be created can be defined in the installer.
 It's also possible to have a daily backup.
-The time of the backup is also defined in hours and minutes. The default is Sunday at 05:00.
+In addition, the time of the backup is defined in hours and minutes.
+The default is Sunday at 05:00.
 
 
 ## Default configuration and location of the configuration file
@@ -91,8 +91,8 @@ The installer creates the following files:
   - Configuration file `/usr/local/etc/raspiBackup.conf`
 
     The following default values are set in this file and can be changed with the
-    can be changed with the installer. All other options must be changed with an editor
-    or overwritten with a invocation option.
+    installer. All other options must be changed with an editor
+    or overwritten with an invocation option.
 
     | Option | Setting |
     |----------------------|----------------------|
@@ -111,7 +111,7 @@ The installer creates the following files:
 
     [Invocation and options](backup-options.md) are described in detail.
 
-  - *Systemd timer* Configuration `/etc/systemd/system/raspiBackup.timer`.
+  - *Systemd timer* configuration `/etc/systemd/system/raspiBackup.timer`
 
     This file controls the invocation of *raspiBackup* and in the standard case the
     weekly backup is switched off. However, it can be switched on with the installer.
@@ -120,7 +120,7 @@ The installer creates the following files:
 
   - *raspiBackupInstallUI.sh* `/usr/local/bin`
 
-## Installer invocation options  
+## Installer invocation options
 
 ```
 sudo raspiBackupInstallUI {Options}
@@ -128,10 +128,10 @@ sudo raspiBackupInstallUI {Options}
 
 There are two different ways to invoke the *raspiBackup* installer `raspiBackupInstallUI`:
 
-1. Invoke without options or with option `-t`
+1. Invoke without options or with option `-t`:
     The installer starts with a menu via which *raspiBackup* can be configured.
     Option `-t` controls whether crond or systemd is used.
-1. Invoke with options
+1. Invoke with options:
     If an option other than `-t` is used, the installer executes the selected function
     immediately without a menu.
 
@@ -142,7 +142,7 @@ The following options allow the installer to perform certain functions directly 
 * -i: Re/Installation of *raspiBackup*
 * -e: Re/Installation of the *raspiBackup* sample extensions
 * -h: Display a help text
-* -U: Update from the installer `raspiBackupInstallUI
+* -U: Update of the installer `raspiBackupInstallUI`
 * -u: Uninstall *raspiBackup* including installer
 * -t: Use either crond or systemd as backup timer with option -i, default is systemd
 
@@ -158,13 +158,12 @@ sudo raspiBackupInstallUI -u
 **Note:**
 This will delete the installer as well as *raspiBackup* with all its files!
 
-
-## Call the installation without installer directly from the command line without the menu
+## Invoke the installation without installer directly from the command line
 
 If you do not want to use a menu-driven installation, you can run the installation of *raspiBackup*
 and the sample extensions or uninstall directly from the command line.
 
-(This installation installs the standard configuration).
+(This installation installs the standard configuration.)
 
 ```
 curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh -i

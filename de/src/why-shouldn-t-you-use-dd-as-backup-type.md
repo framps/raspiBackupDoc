@@ -17,8 +17,8 @@ zu nutzen.
    plötzlichen Stromausfall. Diese Fehler bemerkt dd nicht. D.h. dd sichert
    eine Partition inklusive der Filesystemfehler, die dann beim Restore auch
    wiederhergestellt werden. Somit hat man eine exakte Kopie des Systems mit
-   Filesystemfehlern. Man legt immer weiter Backups an, im Glauben das alles OK
-   ist und löscht dann irgendwann auch alte Backups. Somit werden nach und nach
+   Filesystemfehlern. Man legt immer weiter Backups an, im Glauben, dass alles OK
+   ist, und löscht dann irgendwann auch alte Backups. Somit werden nach und nach
    unbemerkt Backups ohne Filesystemfehler durch Backups mit Filesystemfehlern
    ersetzt. Wenn dann ein Restore benötigt wird, hat man kein Backup mehr ohne
    Filesystemfehler und kann nur hoffen, dass die Filesystemfehler keine
@@ -42,28 +42,28 @@ der Backuppartition genutzt werden wie für dd.
 Der Restore kann allerdings nicht mehr mit Windowsprogrammen wie *Win32DiskImager*
 oder *Etcher* vorgenommen werden.
 
-Stattdessen kann man aber *raspiBackup* auf einer Raspberry starten.
-Hat man nur **eine** Raspberry zur Verfügung, sollte man sich einmalig eine
-"Not-SD-Karte" mit Raspberry Pi OS und *raspiBackup* erstellen und beiseite legen,
+Stattdessen kann man aber *raspiBackup* auf einem Raspberry starten.
+Hat man nur **einen** Raspberry zur Verfügung, sollte man sich einmalig eine
+"Not-SD-Karte" mit Raspberry Pi OS und *raspiBackup* erstellen und beiseitelegen,
 bis man sie braucht...
 
 Für rsync benötigt man ein ext2/3/4 Filesystem auf der Backuppartition. Dieses
-kann unter Linux erstellt werden. Den Restore wird auch wieder mit
-*raspiBackup* auf einer Raspberry vorgenommen.
+kann unter Linux erstellt werden. Der Restore wird auch wieder mit
+*raspiBackup* auf einem Raspberry vorgenommen.
 
 ## Weitere Nachteile von dd Backups
 
 Bei einem dd Backup wird immer die gesamte Partition gesichert - selbst wenn
-nur ein Bruchteil der Partition (z.B. 33%) genutzt wird. Dass heißt bei einer
+nur ein Bruchteil der Partition (z.B. 33%) genutzt wird. Das heißt, bei einer
 64GB Partition werden immer 42GB umsonst gesichert, der Sicherungsprozess
 dauert unnötigerweise 66% länger und die Sicherung belegt 66% mehr
-Speicherplatz. Es gibt die Option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY** mit der
+Speicherplatz. Es gibt die Option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY**, mit der
 man nur die existierende Rootpartition sichert und nicht das gesamte Gerät.
 
-## Welchen Backuptyp ist der Beste?
+## Welcher Backuptyp ist der beste?
 
-Die effizienteste Backuptyp ist *rsync*. Durch die Benutzung von Hardlinks
-werden nur Dateien kopiert, die sich geändert haben und somit ist jeder außer
+Der effizienteste Backuptyp ist *rsync*. Durch die Benutzung von Hardlinks
+werden nur Dateien kopiert, die sich geändert haben, und somit ist jeder außer
 dem ersten Backupvorgang relativ schnell beendet. Außerdem liegen die
 Backupdateien entpackt vor und auf sie kann direkt zugegriffen werden, wenn nur
 ein paar Dateien aus dem Backup benötigt werden. Bei *tar* und *dd* muss man

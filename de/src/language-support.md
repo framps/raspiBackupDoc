@@ -12,7 +12,7 @@ Unterstützte Sprachen sind
    1. Französisch (FR)
 
 Wer helfen möchte, *raspiBackup* eine weitere Sprache zu geben, ist herzlich eingeladen,
-dieses zu tun. Details dazu finden sich [in dieser englischsprachigen Beschreibung](../local-language-support-for-languages-other-than-de-and-en-l10n.md).
+dies zu tun. Details dazu finden sich [in dieser englischsprachigen Beschreibung](../local-language-support-for-languages-other-than-de-and-en-l10n.md).
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/raspibackupcategoried/603-raspibackup-local-language-support-for-languages-other-than-de-and-en-l10n

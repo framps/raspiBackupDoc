@@ -1,4 +1,4 @@
-# WebDAV as backup destination
+# WebDAV as backup target
 
 For *raspiBackup*, **davfs** must be used because it mounts the *WebDAV* drive in the same way
 as it is done for all other drives in Linux.
@@ -47,26 +47,26 @@ https://seafile/seafdav       /remote/webdav  davfs   rw,noauto,user  
 ```
 
 Since *davfs* stores the program for mounting in `/usr/sbin/mount.davfs`,
-mount` expects it in `/sbin`, you have to set up the following link:
+but `mount` expects it in `/sbin`, you have to set up the following link:
 
 ```
 sudo ln -s /usr/sbin/mount.davfs /sbin/mount.davfs
 ```
 
-Due to an error in the WebDAV implementation at *t-online* no files can be created.
+Due to an error in the WebDAV implementation at *t-online*, no files can be created.
 The message always appears that the file
-exists - although it does not. Therefore, the
-`/etc/davfs2/davfs2.conf` the following line must be inserted,
+exists - although it does not. Therefore, the following line must be inserted into
+`/etc/davfs2/davfs2.conf`
 to switch off the locks.
 
 ```
 use_locks 0
 ```
 
-If you want to mount the disk space automatically when booting the system
-the `noauto` in the `/etc/fstab` must be removed. This is for
+If you want to mount the disk space automatically when booting the system,
+the `noauto` in the `/etc/fstab` must be removed. This is not necessary for
 **raspiBackup** if the `dynamicmount` option is used.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/12-networking/190-wie-kann-man-medienspeicher-oder-smartdrive-unter-linux-einbinden>
-[.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/644-nutzung-von-webdav-als-backupziel-fuer-raspibackup>1
+[.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/644-nutzung-von-webdav-als-backupziel-fuer-raspibackup>

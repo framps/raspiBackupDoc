@@ -6,20 +6,20 @@
 raspiBackup Option1 Option2 Option3 ... Backup directory
 ```
 
-All options that switch something on or off can be activated or deactivated
-by appendedng `+` or `-` when invoking *raspiBackup*.
+All options that switch something on or off can be explicitly switched on or off
+by appending `+` or `-` when invoking *raspiBackup*.
 
-**Note**:
-If a parameter starting with `-` is used on the command line this parameter has to start with `\-`.
-This is not required if this parameter is added to the configuration file.
+> [!NOTE]
+> If a parameter starting with `-` is used on the command line, this parameter has to start with `\-`.
+> This is not required if the parameter is used in the configuration file.
 
-Example: The `-z` option and the `-z` option switch backup compression on.
+Example: The `-z` option and the `-z+` option switch backup compression on.
 The `-z-` option, on the other hand, switches backup compression off, regardless of
 what is in the configuration file in the parameter `DEFAULT_ZIP_BACKUP`. This allows an
-option can be switched off in the command line, although it is switched on in the
-configuration file is switched on.
+option to be switched off on the command line, although it is switched on in the
+configuration file.
 
-There are corresponding options in the configuration file for most invocation options
+For most invocation options there are corresponding options in the configuration file
 `/usr/local/etc/raspiBackup.conf`. In addition, other configuration files
 can be used to selectively set or overwrite certain options.
 
@@ -27,9 +27,9 @@ can be used to selectively set or overwrite certain options.
 ## Configuration files
 
 <a name="configfiles"></a>
-In addition to `/usr/local/etc/raspiBackup.conf`, there are other configuration files,
-which are read if available. The options have the highest priority,
-that are specified when the file is called.
+In addition to `/usr/local/etc/raspiBackup.conf`, there are other configuration files
+which are read if available. The options
+specified on invocation have the highest priority.
 
 The priority of the option sources can be seen in the following table:
 
@@ -44,28 +44,28 @@ The priority of the option sources can be seen in the following table:
 **Note:**
 Options in the configuration file that require yes/on or no/off as parameters
 must be 0 for no and 1 for yes.
-No entry in the default column means the default is `""`
+No entry in the default column means the default is `""`.
 
 **Note:**
 During a version upgrade, only the default configuration file
-`/usr/local/etc/raspiBackup.conf` is updated with
+`/usr/local/etc/raspiBackup.conf` is
 updated with new configuration options. All other configuration files
 may need to be updated manually.
 
-There are various options for the backup and restore call:
+There are various options for the backup and restore invocation:
 
 1. Invocation options and their configuration option ([Backup](backup.md) / [Restore](restore.md)).
-   The configuration options can be temporarily overwritten by the corresponding iinvocation options.
-   overwritten by the corresponding invocation options
-1. pure configuration options that cannot be overwritten by an invocation option
+   The configuration options can be temporarily
+   overwritten by the corresponding invocation options.
+1. Pure configuration options that cannot be overwritten by an invocation option
    ([Backup](backup-config-options.md) / [Restore](restore-config-options.md))
 1. General invocation and configuration options for both the backup
-   and restore ([call-options](general.md))
+   and the restore ([Invocation options](general.md))
 
 ## Help text on the console
 
-As long as you are on the console, a list of the available
-available invocation options and their current status with the
+When working on the console, a list of the
+available invocation options and their current status can be displayed with the
 options `-h` or `--help`.
 
 ## Thematic list of invocation options

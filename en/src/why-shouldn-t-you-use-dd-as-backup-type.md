@@ -12,13 +12,13 @@ instead.
 ## Why?
 
 1. dd backs up an entire partition 1 to 1 at bit level. Errors are reported
-   if the bits cannot be read. However, there are also
-   file system errors occur from time to time. These are usually caused by
+   if the bits cannot be read. However, file system errors
+   also occur from time to time. These are usually caused by
    sudden power failure. These errors are not noticed by dd. This means that dd backs up
    a partition including the file system errors, which are then also restored during the restore.
    Thus you have an exact copy of the system with
    file system errors. You keep creating backups in the belief that everything is OK
-   and then delete old backups at some point. Thus, little by little
+   and then delete old backups at some point. Thus, little by little and
    unnoticed, backups without file system errors are replaced by backups with file system errors.
    If a restore is then required, you no longer have a backup without
    file system errors and can only hope that the file system errors have not
@@ -30,21 +30,21 @@ instead.
    dd. If you then boot the system, it does not start or there are
    error messages from system services. Then the users get in touch and
    create a problem report because *raspiBackup* is not working correctly.
-   After they are then asked to perform a restore to a new SD card
+   After they are then asked to perform a restore to a new SD card,
    the problem disappears. These problem reports are
    unnecessary effort that should be avoided.
 
 ## What now?
 
 Switching to tar is quick and easy. The same file system can be used on the
-on the backup partition can be used as for dd.
+backup partition as for dd.
 
 However, the restore can no longer be carried out with Windows programs such as *Win32DiskImager*
 or *Etcher*.
 
 Instead, you can start *raspiBackup* on a Raspberry.
-If you only have **one** Raspberry available, you should get a one-time
-"emergency SD card" with Raspberry Pi OS and *raspiBackup* and put it aside,
+If you only have **one** Raspberry available, you should create a one-time
+"emergency SD card" with Raspberry Pi OS and *raspiBackup* and put it aside
 until you need it...
 
 For rsync you need an ext2/3/4 file system on the backup partition. This
@@ -55,23 +55,23 @@ can be created under Linux. The restore is also done with
 
 With a dd backup, the entire partition is always backed up - even if
 only a fraction of the partition (e.g. 33%) is used. This means that with a
-64GB partition, 42GB are always backed up for nothing, the backup process takes
+64GB partition, 42GB are always backed up for nothing, the backup process
 unnecessarily takes 66% longer and the backup occupies 66% more disk space.
-There is the option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY** with which
+There is the option **DD_BACKUP_SAVE_USED_PARTITIONS_ONLY**, with which
 only the existing root partition is backed up and not the entire device.
 
 ## Which backup type is the best?
 
-The most efficient backup type is *rsync*. By using hardlinks
+The most efficient backup type is *rsync*. By using hardlinks,
 only files that have changed are copied and therefore all but the first
 backup process is completed relatively quickly. In addition, the
-files are unpacked and can be accessed directly if only a few files from the backup are needed.
+backup files are unpacked and can be accessed directly if only a few files from the backup are needed.
 With *tar* and *dd* 
 the backups have to be unpacked first.
 
 ## Further information
 
-  - [How do hardlinks work](how-do-hardlinks-work-with-rsync.md)
+  - [How do hardlinks work?](how-do-hardlinks-work-with-rsync.md)
   - [Which file system can be used on the backup device?](which-filesystem-can-be-used-on-the-backup-partition.md)
 
 [.status]: translated

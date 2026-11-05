@@ -2,17 +2,17 @@
 
 **Mit *raspiBackup* erhältst Du schnell und sicher regelmäßig ein vollständiges Systembackup
 Deiner Raspberries und eine konfigurierbare Backuphistorie
-und kannst somit Deine Raspberry vollständig wiederherstellen,
-so dass sie wieder mit einem alten Backupstand bootet**.
+und kannst somit Deinen Raspberry vollständig wiederherstellen,
+sodass er wieder mit einem alten Backupstand bootet**.
 
-  - Automatische regelmäßige Sicherung einer laufenden Raspberry Pi (sie sichert sich selbst)
+  - Automatische regelmäßige Sicherung eines laufenden Raspberry Pi (er sichert sich selbst)
     Siehe dazu auch [Ist ein Backup eines laufenden Systems zuverlässig? Sollte nicht das gesamte System vor dem Backup gestoppt werden?](faq.md#faq1)
 
   - Vollständige und inkrementelle Sicherungen
 
       - Der Backuptyp `rsync` erstellt vollständige und dann inkrementelle Sicherungen
         mittels Nutzung von [Hardlinks](how-do-hardlinks-work-with-rsync.md).
-      - Die Backuptypen `dd` und `tar` erstellen immer vollständige Sicherungen (auch gezipped).
+      - Die Backuptypen `dd` und `tar` erstellen immer vollständige Sicherungen (auch gezippt).
         **Hinweis**: Beim `dd` Backup ist per Option einschaltbar, dass nur der von den Partitionen
         belegte Platz und nicht die gesamte SD-Karte gesichert wird.
 
@@ -31,16 +31,16 @@ so dass sie wieder mit einem alten Backupstand bootet**.
       - der **partitionsorientierte Modus** sichert beliebig viele Partitionen des Systemgerätes
 
       **Hinweis:**
-      Es werden nur Partitionen des Systemgerätes gesichert. Ein Backup von Partitionen von anderen Geräten wird nicht unterstützt. Größere Datenmengen können von raspiBackup mit dem partitionsorientierten Backup mitgesichert werden wenn sie auf weiteren Partitionen des Systemgerätes wie z.B. /dev/sda3 oder /dev/mmcblk0p3 abgelegt werden
+      Es werden nur Partitionen des Systemgerätes gesichert. Ein Backup von Partitionen von anderen Geräten wird nicht unterstützt. Größere Datenmengen können von raspiBackup mit dem partitionsorientierten Backup mitgesichert werden, wenn sie auf weiteren Partitionen des Systemgerätes wie z.B. /dev/sda3 oder /dev/mmcblk0p3 abgelegt werden.
 
-  - Eine beliebige Anzahl von Backups aus der Vergangenheit können vorgehalten werden
+  - Eine beliebige Anzahl von Backups aus der Vergangenheit kann vorgehalten werden
 
     Es wird nicht nur ein einzelnes Backup erstellt, sondern eine Backuphistorie.
     Entweder definiert man eine Anzahl von Backups, die vorgehalten werden sollen,
     oder man nutzt das *GVS*-Prinzip (in *raspiBackup* "Intelligente Rotationsstrategie"
-    genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://framps.github.io/raspiBackupDoc/smart-recycle.html)
+    genannt, siehe [Großvater-Vater-Sohn Generationenprinzip](https://framps.github.io/raspiBackupDoc/smart-recycle.html))
 
-  - Eine intelligente Backupstrategie steht zur Verfügung
+  - Eine intelligente Backupstrategie steht zur Verfügung.
     Z. B. können Backups der letzten 7 Tage, der letzten 4 Wochen, der letzten 12 Monate und
     der letzten n Jahre aufgehoben werden.
 
@@ -48,11 +48,11 @@ so dass sie wieder mit einem alten Backupstand bootet**.
 
     Die wichtigsten Optionen von *raspiBackup* können in Deutsch, Englisch, Finnisch,
     Chinesisch und Französisch konfiguriert werden,
-    so dass die erste [Sicherung in 5 Minuten](installation-in-5-minutes.md) erstellt werden kann.
+    sodass die erste [Sicherung in 5 Minuten](installation-in-5-minutes.md) erstellt werden kann.
 
   - Open source
 
-    *raspiBackup* ist unter der GNU Lizenz als OpenSource und kostenlos verfügbar.
+    *raspiBackup* ist unter der GNU Lizenz als Open Source und kostenlos verfügbar.
     Ein [Trinkgeld](introduction.md#donation) ist aber trotzdem gern gesehen 😉
 
   - Alle weiteren z.T. sehr mächtigen Optionen sind [ausführlich dokumentiert](invocation-options.md)
@@ -60,7 +60,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Beliebige Verzeichnisse und Dateien können aus dem Backup ausgeschlossen werden
 
-  - Verschiedene Backuptypen können pro System gemischt werden (z.B. pro Tag ein `rsync` Backup, jeder Woche ein `dd` Backup)
+  - Verschiedene Backuptypen können pro System gemischt werden (z.B. pro Tag ein `rsync` Backup, jede Woche ein `dd` Backup)
 
   - Automatisches Stoppen und Starten von aktiven Services vor und nach dem Backup
 
@@ -88,12 +88,12 @@ so dass sie wieder mit einem alten Backupstand bootet**.
 
       1. Boot von einem USB Gerät oder SSD (USB boot Modus): Beide Partitionen
          liegen auf einem USB Gerät. Wird von den neueren Raspberries ab Modell 3B
-         unterstützt
+         unterstützt.
       2. Boot von der SD-Karte: Beide Partitionen liegen auf der SD-Karte
-         (jedes Modell)
+         (jedes Modell).
       3. Gemischter Modus: Boot von der SD-Karte und Nutzung der Rootpartition
          von einem USB Gerät. Das ist notwendig bei älteren Raspberries, die
-         noch keinen USB Boot unterstützen
+         noch keinen USB Boot unterstützen.
 
   - Beliebige Backupziele sind möglich, z.B.
 
@@ -104,7 +104,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
       - *SSHFS* Netzwerklaufwerk
       - *WebDAV* Netzwerklaufwerk
       - *FtpFS* Netzwerklaufwerk
-      - Generell jedes Device, welches unter Linux gemounted werden kann
+      - Generell jedes Device, welches unter Linux gemountet werden kann
 
   - Ein externes Rootfilesystem (hybrider Bootmodus) auf einer Platte oder einem USB Stick wird
     automatisch im gemischten Modus beim normalen Backupmodus mitgesichert
@@ -125,7 +125,7 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     *Win32Diskimager* oder ähnliche Tools können genutzt werden.
     `tar` und `rsync` benötigen zur Wiederherstellung ein Linuxsystem.
     Es wird empfohlen, dazu eine vorkonfigurierte SD-Karte mit *Raspberry Pi OS*
-    zu nutzen und auf einer Raspberry zu starten.
+    zu nutzen und auf einem Raspberry zu starten.
 
   - Anpassung von `/etc/fstab` und `/boot/cmdline.txt` an neue UUIDs, PARTUUIDs
     oder LABELs, damit das System sofort wieder startet.
@@ -134,9 +134,9 @@ so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Benachrichtigungen bei neuen Releases
 
-    Sobald ein Beta oder eine neue Release verfügbar ist, schreibt *raspiBackup* eine
+    Sobald eine Beta oder ein neues Release verfügbar ist, schreibt *raspiBackup* eine
     Meldung, die darauf hinweist. Ein Upgrade ist einfach vorzunehmen. Ebenso ein
-    Downgrade zurück auf eine vorhergehende Release.
+    Downgrade zurück auf ein vorhergehendes Release.
 
   - Regressionstestsuite
 
@@ -146,13 +146,13 @@ so dass sie wieder mit einem alten Backupstand bootet**.
 
   - Dokumentation
 
-    Benutzerhandbuch mit z.B. FAQs, Konfigurationsbeispiele, NFS Konfiguration,
+    Benutzerhandbuch mit z.B. FAQs, Konfigurationsbeispielen, NFS Konfiguration,
     Liste von Fehlermeldungen und wie man die Fehlermeldungen beseitigen
-    kann und vieles mehr ist dokumentiert
+    kann und vieles mehr ist dokumentiert.
 
   - Erweiterungsscripts
 
-    Verschiedene [Erweiterunsscripte](extension-scripts.md) stehen zur Verfügung.
+    Verschiedene [Erweiterungsscripte](extension-scripts.md) stehen zur Verfügung.
 
     Sie können die Funktionalität von *raspiBackup* erweitern und entweder unverändert genutzt
     oder an eigene Anforderungen angepasst werden.
@@ -171,14 +171,14 @@ so dass sie wieder mit einem alten Backupstand bootet**.
     Für Entwickler bietet *raspiBackup* verschiedene [Erweiterungspunkte](hooks-for-own-scripts.md),
     um Vor- und Nachbereitungen bei der Sicherung wie auch dem Zurücksichern
     durch eigenen Code ausführen zu können.
-    U.A. existiert eine Extension, die Dockercontainer vor dem Backup stoppt und anschließend
+    U.a. existiert eine Extension, die Dockercontainer vor dem Backup stoppt und anschließend
     wieder startet.
 
   - Sicherung von *NVMe* Speicher
 
-    Wird für Raspberry 5 und Compute Model 4 (CM4) unterstützt
+    Wird für Raspberry 5 und Compute Module 4 (CM4) unterstützt.
 
-  - Unterstütze Betriebssysteme
+  - Unterstützte Betriebssysteme
 
       - Raspberry Pi OS
       - Ubuntu

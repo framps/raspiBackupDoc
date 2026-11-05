@@ -48,7 +48,7 @@ https://seafile/seafdav       /remote/webdav  davfs   rw,noauto,user  
 ```
 
 Da *davfs* das Programm zum Mounten in `/usr/sbin/mount.davfs` ablegt,
-`mount` ihn aber in `/sbin` erwartet, muss man den folgenden Link einrichten:
+`mount` es aber in `/sbin` erwartet, muss man den folgenden Link einrichten:
 
 ```
 sudo ln -s /usr/sbin/mount.davfs /sbin/mount.davfs

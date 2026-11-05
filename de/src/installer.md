@@ -3,18 +3,18 @@
 Der Installer ist primär dafür gedacht, *raspiBackup* schnell und einfach zu installieren
 und die wichtigsten Konfigurationen vorzunehmen, damit ein Backup erstellt werden kann.
 Allerdings kann man den Installer auch immer wieder aufrufen, um die Basiskonfiguration
-zu ändern. Die fortschrittliche Konfiguration erfordert immer eine Änderung der Konfigurationsdatei.
+zu ändern. Die erweiterte Konfiguration erfordert immer eine Änderung der Konfigurationsdatei.
 
 ## Installer Download, Aufruf und Installation
 
-Eingabe der folgenden Befehle in einem Befehlsfenster um den Installer herunterzuladen und aufzurufen:
+Eingabe der folgenden Befehle in einem Befehlsfenster, um den Installer herunterzuladen und aufzurufen:
 
 ```
 curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh
 ```
-und Nutzung der Installermenus um *raspiBackup* zu installieren und die wichtigsten Optionen zu konfigurieren.
+und Nutzung der Installermenüs, um *raspiBackup* zu installieren und die wichtigsten Optionen zu konfigurieren.
 
-## Aufruf wenn der Installer schon installiert wurde
+## Aufruf, wenn der Installer schon installiert wurde
 
 ```
 sudo raspiBackupInstallUI
@@ -24,13 +24,13 @@ sudo raspiBackupInstallUI
 * Auswahl: Pfeiltasten
 * Bestätigung und Auswahl: Enter
 * Abbruch/Zurück: ESC oder Tab
-* Umschalten zwischen Menupunkten und Schaltflächen: Tab
+* Umschalten zwischen Menüpunkten und Schaltflächen: Tab
 * Markieren (Checkliste): Leertaste
 
 ## Details zu einigen Menüpunkten
 
 <a name="backupversionen"></a>
-### Backupversionen - Menu C3
+### Backupversionen - Menü C3
 
 *raspiBackup* bietet zwei verschiedene Möglichkeiten an, Backupversionen
 vorzuhalten:
@@ -45,7 +45,7 @@ vorzuhalten:
    werden jeweils gelöscht. Im Installer wird die Zahl der
    jeweils vorzuhaltenden Backups mit 4 Zahlen definiert. Der Standard ist
    `7 4 12 3`.
- 
+
    1. tägliche Backups (7)
    1. wöchentliche Backups (4)
    1. monatliche Backups (12)
@@ -55,9 +55,9 @@ vorzuhalten:
 
 
 <a name="services"></a>
-### Zu stoppende und startenden Services - Menu C6
+### Zu stoppende und startende Services - Menü C6
 
-Da *raspiBackup* keine Speicherinhalte sichert sollten alle Services, die wichtige Informationen
+Da *raspiBackup* keine Speicherinhalte sichert, sollten alle Services, die wichtige Informationen
 im Speicher halten, vor dem Backup gestoppt werden.
 
 *raspiBackup* bietet die Möglichkeit, vor dem Backup Services automatisch zu stoppen und anschließend
@@ -76,10 +76,10 @@ gestoppt werden, damit sie noch offene Transaktionen beenden können.
 
 
 <a name="regularbackup"></a>
-### Regelmäßiger Backup - Menu C9
+### Regelmäßiger Backup - Menü C9
 
 *raspiBackup* bietet die Möglichkeit, regelmäßig automatisch Backups zu erstellen.
-Dieses erfolgt standardmäßig per *Systemd*, kann aber auch mit der Option `-t`
+Dies erfolgt standardmäßig per *Systemd*, kann aber auch mit der Option `-t`
 beim Installieren des Installers auf *Cron* umgestellt werden.
 
 Im Installer kann der Wochentag definiert werden, an dem ein Backup erstellt
@@ -101,7 +101,7 @@ Der Installer erstellt folgende Dateien:
     | Option               | Einstellung          |
     |----------------------|----------------------|
     | Backuppfad           | /backup              |
-    | Backupmode           | normal               |
+    | Backupmodus          | normal               |
     | Backuptyp            | rsync                |
     | Sprache              | Sprache des Systems  |
     | Zip                  | nein                 |
@@ -131,15 +131,15 @@ Der Installer erstellt folgende Dateien:
 sudo raspiBackupInstallUI {Optionen}
 ```
 
-Es existieren zwei verschiedene Möglichkeiten den *raspiBackup* Installer `raspiBackupInstallUI`
+Es existieren zwei verschiedene Möglichkeiten, den *raspiBackup* Installer `raspiBackupInstallUI`
 aufzurufen:
 
-1.  Aufruf ohne Optionen oder mit Option `-t`
-    Der Installer startet mit einem Menu über welches *raspiBackup* konfiguriert werden kann.
-    Option `-t` steuert ob crond oder systemd genutzt wird.
-1.  Aufruf mit Optionen
-    Sofern eine andere Option als `-t`genutzt wird führt der Installer die gewählte Funktion
-    sofort ohne Menu aus.
+1.  Aufruf ohne Optionen oder mit Option `-t`:
+    Der Installer startet mit einem Menü, über welches *raspiBackup* konfiguriert werden kann.
+    Option `-t` steuert, ob crond oder systemd genutzt wird.
+1.  Aufruf mit Optionen:
+    Sofern eine andere Option als `-t` genutzt wird, führt der Installer die gewählte Funktion
+    sofort ohne Menü aus.
 
 ## Optionen
 
@@ -148,7 +148,7 @@ Mit folgenden Optionen kann der Installer bestimmte Funktionen direkt ohne Menü
 * -i: Re/Installation von *raspiBackup*
 * -e: Re/Installation von den *raspiBackup* Beispielerweiterungen
 * -h: Anzeige eines Hilfetextes
-* -U: Update vom Installer `raspiBackupInstallUI`
+* -U: Update des Installers `raspiBackupInstallUI`
 * -u: Deinstallation von *raspiBackup* inklusive Installer
 * -t: Nutzung von entweder crond oder systemd als Backuptimer bei Option -i, Default ist systemd
 

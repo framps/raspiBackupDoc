@@ -1,12 +1,12 @@
 # Docker Support
 
-Ein raspiBackup Nutzer hat eine *raspiBackup* Extension geschrieben
-die dafür sorgt dass vor dem Backup sämtliche Dockercontainer
+Ein *raspiBackup* Nutzer hat eine *raspiBackup* Extension geschrieben,
+die dafür sorgt, dass vor dem Backup sämtliche Dockercontainer
 gestoppt werden und zum Schluss wieder gestartet werden.
 
 Der Code steht auf [github](https://github.com/framps/raspiBackup/tree/master/extensions_userprovided) zur Verfügung.
 
-Um die Extension zu nutzen ist wie folgt vorzugehen:
+Um die Extension zu nutzen, ist wie folgt vorzugehen:
 
 1) Download der Extension
    ```
@@ -19,12 +19,12 @@ Um die Extension zu nutzen ist wie folgt vorzugehen:
 2) Anschließend muss die Extension noch in *raspiBackup* bekanntgemacht werden.
    Dazu ist die Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` anzupassen.
 
-   Sollte noch keine Extension aktiv sein reicht folgende Definition:
+   Sollte noch keine Extension aktiv sein, reicht folgende Definition:
    ```
    DEFAULT_EXTENSIONS="docker"
    ```
 
-   Ansonsten muss `docker` noch zu den schon existierenden Extensions zugefügt werden.
+   Ansonsten muss `docker` noch zu den schon existierenden Extensions hinzugefügt werden.
 
 **Hinweis**:
 In den `DEFAULT_STOPSERVICES` und `DEFAULT_STARTSERVICES` Definitionen sollten keine Befehle stehen,

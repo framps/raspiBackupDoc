@@ -1,18 +1,18 @@
-# *raspiBackupDialog* - a comfortable help script for *raspiBackup*
+# *raspiBackupDialog* - a convenient helper script for *raspiBackup*
 
-An agile user of *raspiBackup* - [Franjo-G](https://github.com/franjo-G) - has written a very useful little helper script called [raspiBackupDialog](https://github.com/franjo-G).
-help script with the name [raspiBackupDialog](https://github.com/framps/raspiBackup/blob/master/helper/raspiBackupDialog.sh), which shows in a dialog
-the most important invocation options for the backup and restore in a dialog and with
-which then triggers *raspiBackup*. *raspiBackup* snapshots are supported. Very
-especially easy to perform the restore: Before the restore, the list of existing
-the list of existing backups is displayed and you can select which backup
+An agile user of *raspiBackup* - [Franjo-G](https://github.com/franjo-G) - has written a very useful little
+helper script called [raspiBackupDialog](https://github.com/framps/raspiBackup/blob/master/helper/raspiBackupDialog.sh), which queries
+the most important invocation options for the backup and restore in a dialog and
+then triggers *raspiBackup* with them. *raspiBackup* snapshots are supported. The restore
+is especially easy to perform: Before the restore, the list of
+existing backups is displayed and you can select which backup
 should be restored.
 
 > [!TIP]
-> It is recommended to download *raspiBackupDialog* after successful installation
+> It is recommended to simply download *raspiBackupDialog* after successful installation
 > and configuration of *raspiBackup* and try it out.
 
-## Installation and call
+## Installation and invocation
 
 *raspiBackupDialog* is available as a helper script in the *GitHub* repository.
 
@@ -22,7 +22,7 @@ It can be downloaded to the current directory as follows:
 curl -s https://raw.githubusercontent.com/framps/raspiBackup/master/scripts/raspiBackupDownloadFromGit.sh | bash -s -- master helper/raspiBackupDialog.sh
 ```
 
-Now it can be called with :
+Now it can be called with:
 
 ```
 sudo ./raspiBackupDialog.sh

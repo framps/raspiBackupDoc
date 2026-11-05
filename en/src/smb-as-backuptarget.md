@@ -1,4 +1,4 @@
-# SMB as backup destination
+# SMB as backup target
 
 It is actually recommended to use NFS instead of SMB to store the backups
 from *raspiBackup*.
@@ -7,10 +7,10 @@ instead of a full backup, which is necessary with SMB.
 But there may still be reasons why you want to store a *raspiBackup* on an
 SMB drive.
 
-The following describes how to configure this on a Synology
+The following describes how to configure this on a Synology.
 AutoFS is also configured.
 If autoFS is not already used, the same behavior can be achieved with *raspiBackup* using the
-option `dynamicMount` to achieve the same behavior.
+option `dynamicMount`.
 
 To automatically mount the SMB backup partition when *raspiBackup*
 uses it, a shared folder must be defined and configured on the NAS.
@@ -33,15 +33,15 @@ sudo apt install autofs
     ```
 
 This defines an SMB shared folder with the name `raspiBackup`
-is defined on the NAS with the mountpoint `synoRaspiBackup`.
+on the NAS with the mountpoint `synoRaspiBackup`.
 
-  - `/etc/auto.master`.
+  - `/etc/auto.master`
 
     ```
     /mnt /etc/auto.cifs --timeout=600 --ghost
     ```
 
-ensures that the SMB partition of the NAS in `/mnt/synoRaspiBackup
+ensures that the SMB partition of the NAS in `/mnt/synoRaspiBackup`
 is automatically mounted as soon as it is accessed.
 
 ## Definition of the SMB access data
@@ -61,7 +61,7 @@ chmod 600 /home/pi/raspiBackup.conf
 ## Definition of the SMB partition as backup partition in raspiBackup
 
 Call the raspiBackupInstaller with `sudo raspiBackupInstallUI`
-and definition of `/mnt/synoRaspiBackup` (`M3 -> C2`)
+and define `/mnt/synoRaspiBackup` (`M3 -> C2`).
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/raspibackupcategoried/687-raspibackup-nutzung-einer-synology-als-backupspace-mit-cifs-samba-und-autofs

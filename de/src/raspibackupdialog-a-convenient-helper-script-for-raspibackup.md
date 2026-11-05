@@ -6,10 +6,10 @@ die wichtigsten Aufrufoptionen für den Backup und den Restore abfragt und mit
 denen dann *raspiBackup* anstößt. *raspiBackup* Snapshots werden unterstützt. Sehr
 einfach ist besonders der Restore durchzuführen: Vor dem Restore wird die Liste
 der vorhandenen Backups angezeigt und man kann auswählen, welches Backup
-wieder hergestellt werden soll.
+wiederhergestellt werden soll.
 
 > [!TIP]
-> Es ist empfehlenwert, *raspiBackupDialog* nach erfolgreicher Installation und Konfiguration
+> Es ist empfehlenswert, *raspiBackupDialog* nach erfolgreicher Installation und Konfiguration
 > von *raspiBackup* einfach mal downzuloaden und auszuprobieren.
 
 ## Installation und Aufruf
@@ -45,7 +45,7 @@ sudo raspiBackupDialog.sh
 ## Aufrufoptionen
 
 ```
-sudo raspiBackupDialog.sh --select            # Startet einen restore. Das Image kann aus einer Liste ausgefählt werden.
+sudo raspiBackupDialog.sh --select            # Startet einen Restore. Das Image kann aus einer Liste ausgewählt werden.
 sudo raspiBackupDialog.sh --last              # Startet einen Restore vom letzten Backup.
 sudo raspiBackupDialog.sh --backup            # Startet einen Backup.
 sudo raspiBackupDialog.sh --delete            # Ein Backup kann zum Löschen ausgewählt werden.
@@ -53,7 +53,7 @@ sudo raspiBackupDialog.sh --mountfs "fstab"   # Das Backupverzeichnis wird gemä
 sudo raspiBackupDialog.sh --mountfs "*.mount" # Das Backupverzeichnis wird per systemctl start *.mount gemountet.
 ```
 
-Falls das Verzeichnis schon gemounted war, wird es nicht unmounted. Ansonsten wird es wieder umounted.
+Falls das Verzeichnis schon gemounted war, wird es nicht unmounted. Ansonsten wird es wieder unmounted.
 
 Dynamic mount funktioniert auch mit cron.
 

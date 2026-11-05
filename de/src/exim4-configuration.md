@@ -5,8 +5,8 @@ Folgende Variablen werden in der Beschreibung genutzt:
   - eMail Domain: MYDOMAIN (z.B. dummy.de)
   - Hostname des Servers: HOSTNAME (z.B. myserver)
   - smtp Hostname, um eMails abzuliefern: SMTP_PROVIDER_HOST (z.B. mail.your-server.de)
-  - Userid, um emails zu senden: SMTP_INPUT_USERNAME
-  - Password, um emails zu senden: SMTP_INPUT_PASSWORD
+  - Userid, um eMails zu senden: SMTP_INPUT_USERNAME
+  - Passwort, um eMails zu senden: SMTP_INPUT_PASSWORD
 
 ## Änderungen bzw. Einfügungen:
 

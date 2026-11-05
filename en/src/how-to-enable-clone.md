@@ -1,10 +1,10 @@
 # Create a clone at the end of a backup
 
 *raspiBackup* can restore a backup to a locally connected device immediately after creating it.
-This provides a so called cold backup that can be used right away to immediately restart a failed device or an OS that no longer boots
+This provides a so-called cold backup that can be used right away to immediately restart a failed device or an OS that no longer boots
 by switching the boot medium. Without this feature, an existing backup must first be restored
-and this takes time. If the rsync backup type is used, the restore of current backup to the  clone device is simply a synchronization with the backup and
-completes very quickly. A tar backup type always is a full restore of the backup and takes much longer.
+and this takes time. If the rsync backup type is used, the restore of the current backup to the clone device is only a synchronization with the current backup and
+completes very quickly. With the tar backup type, the backup is always fully restored to the clone device, which takes correspondingly longer.
 
 Only the rsync and tar backup types, as well as both backup modes, are supported.
 
@@ -24,39 +24,39 @@ Steps to enable cloning:
 
    1) Use the installer
 
-      In the installer, the `<clone device>` and the PARTUUID should be configured on `M3->C10`. The PARTUUID
- has to be separated from the clone device by spaces.
+      In the installer, the `<clone device>` and the PARTUUID has to be configured at `M3->C10`. The PARTUUID
+      has to be separated from the clone device by spaces.
 
-      **Note**: The cloning device has to be connected to the system.
+      **Note**: The clone device has to be connected for this.
 
    2) Manually edit the configuration file /usr/local/etc/raspiBackup.conf
 
-      In the `DEFAULT_CLONE_DEVICE` option, the clone device `/dev/sda` should be specified and a PARTUUID should be configured in the `DEFAULT_CLONE_PARTUUID` option.
+      In the `DEFAULT_CLONE_DEVICE` option, the clone device `/dev/sda` and in the option
+      `DEFAULT_CLONE_PARTUUID` the PARTUUID have to be configured.
 
-5) Creating a backup and a clone
+5) Create a backup and a clone
 
    1) Command line
 
       At the command line, specify the option `--clone <clone device>` when starting the backup. `<clone device>`
-refers to the locally connected device to which the current backup is to be synchronized or restored. In the example, it would be `--clone /dev/sda`
+      is the locally connected device to which the current backup is to be synchronized or restored. In the example, it would be `--clone /dev/sda`.
 
       **Note**: A PARTUUID must have been configured beforehand.
 
    2) Regular automatic invocation
 
-      If the installer is configured to run on a regular basis, a backup and a clone are automatically created at regular intervals.
+      If regular invocation is configured in the installer, a backup and a clone are automatically created at regular intervals.
 
 > [!IMPORTANT]
 > The following checks are performed to prevent accidental overwriting of other connected devices:
-> 1) The configuration variable `DEFAULT_CLONE_PARTUUID` must match the PARTUUID of a partition on the cloned device.
+> 1) The configuration variable `DEFAULT_CLONE_PARTUUID` must match the PARTUUID of a partition on the clone device.
 > 2) The partitioning of the clone device must match the partitioning of the running system. The size of the last partition may differ.
 
 > [!CAUTION]
-> In certain configurations, the Raspberry Pi may boot from the cloning device after a reboot.
-> This can occur particularly when booting via USB from a USB hard drive or USB SSD and the cloning device is also connected via USB. Thorough testing is essential in such cases.
+> In certain configurations, the Raspberry Pi may boot from the clone device after a reboot.
+> This can occur particularly when booting via USB from a USB hard drive or USB SSD and the clone device is also connected via USB. Thorough testing is essential in such cases.
 
 If you want to disable the creation of a clone, you must use the installer to delete the clone device and the PARTUUID at `M3->C10`, or do so manually in the configuration file.
-
 
 ## Summary of key features related to cloning
 

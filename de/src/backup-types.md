@@ -1,14 +1,14 @@
 # Entscheidungsbaum für Backuptypen
 
-Es gibt verschiedene Backuptypen und eine jede hat ihre Vor- und Nachteile.
+Es gibt verschiedene Backuptypen, und jeder hat ihre Vor- und Nachteile.
 Es können unterschiedliche Backuptypen kombiniert werden. Z.B. kann alle
 Monate ein Vollbackup mit `tar` erstellt werden und dazwischen wöchentlich ein `rsync` Delta Backup.
 Das erfordert aber eine manuelle Konfiguration von *Systemd* Timern und erfordert
 gute *Systemd*-Kenntnisse. Der *raspiBackupInstaller* konfiguriert nur genau einen
-Backuptypen.
+Backuptyp.
 
 Sämtliche Backuptypen können mit *raspiBackup* vollständig wiederhergestellt
-werden. Ein `dd`Backup kann auch unter Windows restored werden.
+werden. Ein `dd` Backup kann auch unter Windows restored werden.
 
 Ein `dd` Backup erstellt ein in sich konsistentes binäres Abbild des Systems.
 Dabei wird immer das ganze Gerät mit dem System gelesen und gesichert. Das bedeutet, dass
@@ -30,12 +30,12 @@ mit eingeschaltetem Zippen mit `-z`). Ein Restore mit Windowstools ist nicht mö
 Ein `tar` Backup sichert alle auf dem Systemgerät gespeicherten Daten, wobei allerdings das Backup nicht
 so groß ist, wie bei einem `dd` Backup, da nur die Daten gesichert werden, die
 tatsächlich existieren. Deshalb kann auch ein `tar` Backup auf Geräten
-restored werden, die kleiner ist als das Originalgerät. Natürlich nur, sofern alle
+restored werden, die kleiner sind als das Originalgerät. Natürlich nur, sofern alle
 gesicherten Daten auf das neue Device passen.
 
 Ein `tgz` Backup sichert das gesamte System, wie ein `tar` Backup. Diese Methode
 belastet die CPU stark, da die Datenmenge reduziert wird. (Es ist ein `tar` Backup
-mit eingeschaltetem Zippen mit `-z`)
+mit eingeschaltetem Zippen mit `-z`.)
 
 Ein `rsync` Backup sichert außer beim ersten Mal nur die Daten, die sich zum
 letzten Backup geändert haben. Durch die Hardlinks des *ext3*/*ext4* Dateisystems

@@ -8,7 +8,7 @@
 
 **Hinweis:** Optionen in der Konfigurationsdatei, die ja/an oder nein/aus als Parameter
 benötigen, müssen 0 für nein und 1 für ja sein. Kein Eintrag in
-der Standardspalte bedeutet, der Standard ist `""`
+der Standardspalte bedeutet, der Standard ist `""`.
 
 <div class="table-wrapper-for-options">
 
@@ -28,9 +28,9 @@ ein Verzeichnis angegeben wird. (Siehe [Aufruf und Optionen](invocation-options.
 
 ### DEFAULT_COLOR_CODES
 
-Hiermit können die html und VT100 Colorcodes definiert werden. Default
-ist gelb für Warnungen und Rot für Fehler. Das erste Pärchen der Definition legt
-die Codes für Warnung das zweite Pärchen die Definition für Fehler fest. Dabei
+Hiermit können die HTML und VT100 Colorcodes definiert werden. Standard
+ist Gelb für Warnungen und Rot für Fehler. Das erste Pärchen der Definition legt
+die Codes für Warnungen, das zweite Pärchen die Definition für Fehler fest. Dabei
 ist die erste Definition der HTML Colorcode und die zweite Definition der VT100
 Colorcode.
 
@@ -46,10 +46,10 @@ Siehe [ANSI Colorcodes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 ist es notwendig, sich auf <https://pushover.net/> registriert zu haben und eine
 Application eingerichtet zu haben.
 
-Mit den Notifications definiert man, ob man in Erfolgs- und/oder Fehlerfalle
+Mit den Notifications definiert man, ob man im Erfolgs- und/oder Fehlerfalle
 benachrichtigt werden will. Mögliche Optionen sind "S" für Erfolg (Success)
 und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die *raspiBackup*
-Meldungen als Datei geschickt.. Es können die Optionen beliebig kombiniert
+Meldungen als Datei geschickt. Es können die Optionen beliebig kombiniert
 werden. Beispiel: "SF" oder "SM".
 
 Die Prioritäten entsprechen den verfügbaren *Pushover* Prioritäten.
@@ -80,7 +80,7 @@ Optionen übermittelt, die für [Statistikzwecke](statistics.md) genutzt werden.
 
 ### DEFAULT_SENDER_EMAIL
 
-Die eMailAdresse des Versenders kann bei ssmtp und msmtp angegeben werden.
+Die eMail Adresse des Versenders kann bei ssmtp und msmtp angegeben werden.
 
 | Config-Option              | Standard |
 |----------------------------|----------|
@@ -91,7 +91,7 @@ Die eMailAdresse des Versenders kann bei ssmtp und msmtp angegeben werden.
 
 *raspiBackup* kann Benachrichtigungen per *Slack* schicken.
 
-Mit den Notifications definiert man, ob man in Erfolgs- und/oder Fehlerfalle
+Mit den Notifications definiert man, ob man im Erfolgs- und/oder Fehlerfalle
 benachrichtigt werden will. Mögliche Optionen sind "S" für Erfolg (Success)
 und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die *raspiBackup*
 Meldungen als Datei geschickt. Es können die Optionen beliebig kombiniert
@@ -106,7 +106,7 @@ werden. Beispiel: "SF" oder "SM".
 
 *raspiBackup* kann Benachrichtigungen per *Telegram* schicken.
 
-Mit den Notifications definiert man, ob man in Erfolgs- und/oder Fehlerfalle
+Mit den Notifications definiert man, ob man im Erfolgs- und/oder Fehlerfalle
 benachrichtigt werden will. Mögliche Optionen sind "S" für Erfolg (Success)
 und/oder "F" für den Fehlerfall (Failure). Mit "M" werden die *raspiBackup*
 Meldungen als Datei geschickt. Es können die Optionen beliebig kombiniert

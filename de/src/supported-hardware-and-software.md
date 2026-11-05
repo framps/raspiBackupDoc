@@ -2,30 +2,30 @@
 
 *raspiBackup* wird nur auf Raspberry Pi Hardware mit dem *Raspberry Pi OS* und *Ubuntu*
 unterstützt. Es läuft aber auch auf anderer Raspberry Pi kompatibler Hardware und
-anderen Linux Distributions erfolgreich. Dabei ist zu beachten, dass *raspiBackup* die
+anderen Linux Distributionen erfolgreich. Dabei ist zu beachten, dass *raspiBackup* die
 beiden Partitionen `/boot` und `/root` benötigt, wie sie bei *Raspberry Pi OS* existieren.
 
-D.h. man kann *raspiBackup* auf dem jeweiligen Environment ausprobieren und wenn
+D.h. man kann *raspiBackup* auf dem jeweiligen Environment ausprobieren, und wenn
 es erfolgreich läuft, kann man sich freuen und es nutzen. Wenn es aber nicht
-läuft bzw. Fehlermeldungen bringt, wird **kein** Support gegeben. Es ist möglich einen
+läuft bzw. Fehlermeldungen bringt, wird **kein** Support gegeben. Es ist möglich, einen
 Issue in *GitHub* zu erstellen und das Debuglog beizufügen. So kann *framp* prüfen, ob vielleicht mit ein
 paar kleinen Änderungen das Problem beseitigt werden kann. Sind größere Änderungen notwendig,
-werden diese nicht vorgenommen und somit kann *raspiBackup* in dem Environment leider nicht genutzt werden.
+werden diese nicht vorgenommen, und somit kann *raspiBackup* in dem Environment leider nicht genutzt werden.
 Aber auch wenn ein Fix das Problem beseitigt, bleibt das Environment nicht unterstützt.
 
 Insbesondere kann meist auch ein beliebiges Linux OS auf einer beliebigen Hardware genutzt werden,
 um ein Backup zu restoren. Auch hier ist dann die Option `--unsupportedEnvironment`
-notwendig. Sollte es doch Probleme geben, muss eine Raspberry zum Restore genutzt werden.
+notwendig. Sollte es doch Probleme geben, muss ein Raspberry zum Restore genutzt werden.
 
-Unter der Tatsache, dass *raspiBackup* **umsonst** ist, ist es zu teuer/zu aufwändig für *framp*,
+Angesichts der Tatsache, dass *raspiBackup* **umsonst** ist, ist es zu teuer/zu aufwändig für *framp*,
 
  1) sich alle mögliche Hardware für die Tests anzuschaffen
  1) alle mögliche Hardware- und Softwaretestkombinationen aufzubauen
- 1) jeweils alles bei einer neuen Release zu testen
+ 1) jeweils alles bei einem neuen Release zu testen
 
 Also kann *framp* *raspiBackup* nur unter den genannten Voraussetzungen unterstützen.
 
-Es besteht die Möglichkeit der [Donation](introduction.md#donation)
+Es besteht die Möglichkeit der [Donation](introduction.md#donation),
 und je nach Aufwand besteht die Chance, dass zukünftig weitere
 Environments von *raspiBackup* unterstützt werden.
 
@@ -42,7 +42,7 @@ Die Desktop Version sollte wenigstens auf einem RPi4/RPi5 mit 4GB Speicher genut
 ## Ubuntu
 
 Sofern die offizielle Ubuntuversion für Raspberries genutzt wird, ist diese
-von *raspiBackup* unterstützt. Es sollte aber wenigstens eine Raspberry Pi 4 mit 4GB, besser noch
+von *raspiBackup* unterstützt. Es sollte aber wenigstens ein Raspberry Pi 4 mit 4GB, besser noch
 mit 8GB Speicher, genutzt werden. Selbiges trifft für einen Raspberry Pi 5 zu. Vermutlich
 sind die Anforderungen an ein Ubuntu Server System geringer.
 
@@ -52,11 +52,11 @@ sind die Anforderungen an ein Ubuntu Server System geringer.
 mit einer SD-Karte, eMMC Speicher und NVMe.
 
 Wie man CM4 NVMe Devices auf Linux verfügbar macht, um ein NVMe Backup von *raspiBackup* zu restoren,
-ist der [englischsprachigen Seite](https://www.linux-tips-and-tricks.de/en/raspberrye/614-raspberry-compute-module-4-setup-guide) beschrieben.
+ist auf der [englischsprachigen Seite](https://www.linux-tips-and-tricks.de/en/raspberrye/614-raspberry-compute-module-4-setup-guide) beschrieben.
 
 ## Unterstützte Geräte
 
-*raspiBackup* unterstützt folgende Geräte und Speicher
+*raspiBackup* unterstützt folgende Geräte und Speicher:
 
   - SD-Karten
   - Platten/HDDs
@@ -67,7 +67,7 @@ ist der [englischsprachigen Seite](https://www.linux-tips-and-tricks.de/en/raspb
   - NVMe Speicher
 
 Als Backupziel für die Backups kann prinzipiell alles genutzt werden,
-was unter Linux mountbar ist. Dazu gehören u.A.
+was unter Linux mountbar ist. Dazu gehören u.a.:
 
   - SMB Netzwerklaufwerke
   - NFS Netzwerklaufwerke
@@ -75,7 +75,7 @@ was unter Linux mountbar ist. Dazu gehören u.A.
   - WebDAV Netzwerklaufwerke
   - FtpFS Netzwerklaufwerke
 
-Auf [Backupziele](backup-targets.md) finden sich Beispiele für SMB, NFS und WebDAV Konfiguration.
+Unter [Backupziele](backup-targets.md) finden sich Beispiele für SMB, NFS und WebDAV Konfigurationen.
 
 [.source]: https://linux-tips-and-tricks.de/de/raspibackupcategoried/608-unterstuetzte-hard-und-software/
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/609-supported-hard-and-software/

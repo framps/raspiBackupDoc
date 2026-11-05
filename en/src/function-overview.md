@@ -1,7 +1,7 @@
 # Function overview
 
-**With *raspiBackup* you can quickly and securely obtain a complete system backup
-of your Raspberries and a configurable backup history on a regular basis
+**With *raspiBackup* you quickly and securely get a regular complete system backup
+of your Raspberries and a configurable backup history,
 and can thus completely restore your Raspberry so that it boots again with an old backup status**.
 
   - Automatic regular backup of a running Raspberry Pi (it backs itself up)
@@ -18,26 +18,26 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Two backup strategies
 
       - A defined number of backups are kept
-      - Backups are kept according to the [grandfather-father-son backup strategy](https://framps.github.io/raspiBackupDoc/smart-recycle.html) (GVS)
+      - Backups are kept according to the [grandfather-father-son backup strategy](https://framps.github.io/raspiBackupDoc/smart-recycle.html) (GFS)
 
   - Two [backup modes](normal-or-partition-backup.md):
 
-      - the **normal backup mode** only backs up the boot and root partition
-      - the **partition-oriented mode** backs up any number of partitions on the system device. 
+      - the **normal backup mode** only backs up the boot and root partitions
+      - the **partition-oriented mode** backs up any number of partitions of the system device
 
-      **Note:** 
-      Only partitions on the system device are backed up. Backing up partitions of other devices is not supported. Larger amounts of data can be backed up by raspiBackup using partition-oriented backup if they are stored on other partitions of the system device, such as /dev/sda3 or /dev/mmcblk0p3
- 
-  - Any number of backups from the past can be stored
+      **Note:**
+      Only partitions of the system device are backed up. Backing up partitions of other devices is not supported. Larger amounts of data can be backed up by *raspiBackup* using partition-oriented backup if they are stored on other partitions of the system device, such as /dev/sda3 or /dev/mmcblk0p3.
 
-    Not only a single backup is created, but also a backup history.
+  - Any number of backups from the past can be kept
+
+    Not only a single backup is created, but a backup history.
     You can either define a number of backups to be kept,
-    or you use the *GFS* principle (in *raspiBackup* called "Intelligent Rotation Strategy"
-    see [Grandfather-father-son generation principle](https://framps.github.io/raspiBackupDoc/smart-recycle.html)
+    or you use the *GFS* principle (in *raspiBackup* called "intelligent rotation strategy",
+    see [Grandfather-father-son generation principle](https://framps.github.io/raspiBackupDoc/smart-recycle.html))
 
-  - An intelligent backup strategy is available
+  - An intelligent backup strategy is available.
     For example, backups of the last 7 days, the last 4 weeks, the last 12 months and
-    the last n years can be saved.
+    the last n years can be kept.
 
   - Simple [installation](installation-in-5-minutes.md) with menu-driven installer (comparable to `raspi-config`)
 
@@ -54,7 +54,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     and can be defined in a configuration file.
 
     The individual backup types are described in detail [here](backup-types.md).
-    There is also a [decision tree](backup-types.md#decisiontree),
+    There is also a [decision tree](backup-types.md#decisiontree)
     to quickly find the right backup type.
 
   - Any directories and files can be excluded from the backup
@@ -69,14 +69,14 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
   - Notifications
 
-    The backup run messages can be sent from *raspiBackup* by e-mail or *Telegram*,
+    The backup run messages can be sent from *raspiBackup* by eMail or *Telegram*,
     *Slack* or *PushOver*. Smilies indicate the success or
     failure of the backup run. Other smilies inform about other important
     events such as the availability of a beta or a new release
     or a reminder to perform a restore test to test the backup integrity.
-    
-  - Supported email clients: *mailx*/*mail*, *sendEmail*, *ssmtp* and *msmtp*.
-    Unsupported e-mail clients can be integrated using an e-mail plug-in.
+
+  - Supported eMail clients: *mailx*/*mail*, *sendEmail*, *ssmtp* and *msmtp*.
+    Unsupported eMail clients can be integrated using an eMail extension.
 
   - Simple update of *raspiBackup* to the current version
 
@@ -85,21 +85,21 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - All boot modes are supported
 
       1. Boot from a USB device or SSD (USB boot mode): Both partitions
-         are located on a USB device. Supported by the newer Raspberries since model 3B
+         are located on a USB device. Supported by the newer Raspberries since model 3B.
       2. Boot from the SD card: Both partitions are on the SD card
-         (every model)
+         (every model).
       3. Mixed mode: Boot from the SD card and use the root partition
          from a USB device. This is necessary for older Raspberries that
-         do not support USB boot
+         do not support USB boot yet.
 
-  - Any backup destinations are possible, e.g.
+  - Any backup targets are possible, e.g.
 
       - External USB stick
       - External USB disk or SSD
       - *SMB* network drive
       - *NFS* network drive
       - *SSHFS* network drive
-      - WebDAV* network drive
+      - *WebDAV* network drive
       - *FtpFS* network drive
       - Generally any device that can be mounted under Linux
 
@@ -114,12 +114,12 @@ and can thus completely restore your Raspberry so that it boots again with an ol
     These are named backups that are not deleted automatically.
     They are used, for example, to back up important intermediate steps during system upgrades
     to be able to revert to previous versions at any time in the event of problems. In contrast
-    to normal backups a free selectable descriptive text will be be added to the backup directory.
+    to normal backups, a freely selectable descriptive text will be added to the backup directory.
     That way it's possible to identify the purpose of the snapshots.
 
   - Simple restoration of a backup
 
-    A backup of the `dd` backup type can also be restored from a Windows system.
+    A backup of the `dd` backup type can also be restored on a Windows system.
     *Win32Diskimager* or similar tools can be used.
     `tar` and `rsync` require a Linux system for a restore.
     It is recommended to use a preconfigured SD card with *Raspberry Pi OS*
@@ -146,9 +146,9 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
     User manual with e.g. FAQs, configuration examples, NFS configuration,
     list of error messages and how to eliminate the error messages
-    and much more is documented
+    and much more is documented.
 
-  - Extension scripts 
+  - Extension scripts
 
     Various [extension scripts](extension-scripts.md) are available.
 
@@ -166,15 +166,15 @@ and can thus completely restore your Raspberry so that it boots again with an ol
 
   - Extension points
 
-    For developers, *raspiBackup* offers various [extension points](hooks-for-own-scripts.md),
+    For developers, *raspiBackup* offers various [extension points](hooks-for-own-scripts.md)
     to perform pre- and post-processing during backup as well as during restore
-    by your own code.
-    For example there exists an extension which stops docker containers before the backup
-    and starts them at the end again.
+    with your own code.
+    Among others, there is an extension which stops Docker containers before the backup
+    and starts them again afterwards.
 
   - Backup of *NVMe* storage
 
-    Supported for Raspberry 5 and Compute Model 4 (CM4)
+    Supported for Raspberry 5 and Compute Module 4 (CM4).
 
   - Supported operating systems
 
@@ -184,7 +184,7 @@ and can thus completely restore your Raspberry so that it boots again with an ol
   - Simple system migration to other storage media
 
     Each backup can be restored to an SD card, USB disk, SSD or NVMe SSD.
-    And that easy the system has been moved to another device.
+    And the system has moved to another device.
 
   - Support for *Volumio*
 

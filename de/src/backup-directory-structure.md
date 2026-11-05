@@ -14,7 +14,7 @@ Bei Verwendung der Option `-M` (*raspiBackup* Snapshot) wird der Optionswert noc
 
 **Beispiele:**
 
-Die Raspberry hat den Hostnamen "raspberrypi" und es wird ein
+Der Raspberry hat den Hostnamen "raspberrypi", und es wird ein
 `rsync` Backup von einem *Bookworm* OS am 15.04.2016 um 22:29:00 erstellt.
 Dann entstehen folgende Verzeichnisse:
 
@@ -23,7 +23,7 @@ Dann entstehen folgende Verzeichnisse:
  │   └── raspberrypi@debian12-rsync-backup-20160415-222900
 ```
 
-Gibt man als Parameter für die Option `-M "Hello world"` mit,
+Gibt man als Parameter für die Option `-M "Hello world"` mit, entsteht:
 
 ```
  ├── raspberrypi
@@ -31,11 +31,11 @@ Gibt man als Parameter für die Option `-M "Hello world"` mit,
 ```
 
 Anbei die Verzeichnisstruktur meines Backupservers, der in diesem Falle auch
-eine Raspberry Pi ist. Verschiedene Backuptypen können pro Pi kombiniert
+ein Raspberry Pi ist. Verschiedene Backuptypen können pro Pi kombiniert
 werden. Jedes Backup wird in einem neuen Unterverzeichnis abgelegt.
 
 Pro Raspberry System werden immer drei bzw. fünf weitere Dateien zusätzlich zum
-eigentlichen Backup erstellt und sind notwendig für den Restore, wenn es kein `dd`
+eigentlichen Backup erstellt, die für den Restore notwendig sind, wenn es kein `dd`
 Backup ist. Damit ist es Linuxkundigen möglich, ein Backup auch manuell zu restoren.
 Dies ist im Kapitel [Manueller Restore](manual-restore.md) beschrieben.
 

@@ -21,7 +21,7 @@ chmod 600 ~/.smbcredentials
 ```
 
 dafür gesorgt werden, dass die Fritzbox-Zugangsdaten nur vom Nutzer gelesen werden
-können. Das ist zwar bei der Raspberry, wo normalerweise nur ein Nutzer drauf
+können. Das ist zwar beim Raspberry, auf dem normalerweise nur ein Nutzer
 arbeitet, nicht unbedingt nötig. Aber es ist gute Praxis, Zugangsdaten immer
 nur für den jeweiligen Nutzer les- und änderbar zu machen.
 

@@ -1,18 +1,18 @@
 # Erstellung eines Clones am Ende eines Backups
 
-*raspiBackup* kann nach der Erstellung eines Backups dieses  sofort auf ein lokal angeschlossenes Gerät zurückspielen.
+*raspiBackup* kann nach der Erstellung eines Backups dieses sofort auf ein lokal angeschlossenes Gerät zurückspielen.
 Damit existiert ein sogenannter kalter Backup, welcher sofort genutzt werden kann, um ein ausgefallenes Gerät oder ein nicht mehr startbares OS
 durch Wechsel des Bootmediums sofort wieder zu starten. Ohne diese Funktion muss erst ein existierendes Backup zurückgespielt werden.
-Dieses dauert seine Zeit. Wird der Backuptyp rsync genutzt ist das Zurückspielen des aktuellen Backups auf das Clonegerät nur eine Synchonisation mit dem aktuellen Backup und
+Dies dauert seine Zeit. Wird der Backuptyp rsync genutzt, ist das Zurückspielen des aktuellen Backups auf das Clonegerät nur eine Synchronisation mit dem aktuellen Backup und
 sehr schnell beendet. Der Backuptyp tar ist immer ein vollständiges Zurückspielen des Backups auf das Clonegerät und dauert dementsprechend länger.
 
-Es werden nur der Backuptyp rsync und tar sowie beide Backupmodes unterstützt.
+Es werden nur die Backuptypen rsync und tar sowie beide Backupmodi unterstützt.
 
 > [!NOTE]
 > Im Folgenden wird als Clonegerät `/dev/sda` angenommen. Andere Beispiele wären `/dev/mmcblk1` oder `/dev/nvme1n1`.
-> Ausserdem wird eine PARTUUID `2a6bd249-01` angenommen.
+> Außerdem wird eine PARTUUID `2a6bd249-01` angenommen.
 
-Vorgehensweise um das Cloning einzuschalten:
+Vorgehensweise, um das Cloning einzuschalten:
 
 1) Erstellen eines Backups
 
@@ -36,32 +36,32 @@ Vorgehensweise um das Cloning einzuschalten:
 
 5) Erstellen eines Backups sowie eines Clones
 
-   1) Befehlzeile
+   1) Befehlszeile
 
-      Auf der Befehlszeile ist beim Starten des Backups die Option `--clone <Clonegerät>` anzugegeben. `<Clonegerät>`
-      ist dabei das lokal angeschlossene Gerät auf welchem der aktuelle Backup synchronisiert bzw zurückgespielt werden soll. Im Beispiel wäre es `--clone /dev/sda`
+      Auf der Befehlszeile ist beim Starten des Backups die Option `--clone <Clonegerät>` anzugeben. `<Clonegerät>`
+      ist dabei das lokal angeschlossene Gerät, auf welches der aktuelle Backup synchronisiert bzw. zurückgespielt werden soll. Im Beispiel wäre es `--clone /dev/sda`.
 
       **Hinweis**: Eine PARTUUID muss vorher konfiguriert worden sein.
 
    2) Regelmäßiger automatischer Aufruf
 
-      Ist im Installer der regelmäßige Aufruf konfiguriert wird automatisch regelmäßig ein Backup und ein Clone erstellt.
+      Ist im Installer der regelmäßige Aufruf konfiguriert, wird automatisch regelmäßig ein Backup und ein Clone erstellt.
 
 > [!IMPORTANT]
 > Es werden folgende Tests vorgenommen, um ein versehentliches Überschreiben von anderen angeschlossenen Geräten zu verhindern:
 > 1) Die Konfigurationsvariable `DEFAULT_CLONE_PARTUUID` muss mit der PARTUUID einer Partition des Clonedevices übereinstimmen.
-> 2) Die Partitionierung des Clonegerätes muss mit der Partitionierung des laufenden Systems übereinstimmen. Die letzte Partionsgröße darf unterschiedlich sein.
+> 2) Die Partitionierung des Clonegerätes muss mit der Partitionierung des laufenden Systems übereinstimmen. Die letzte Partitionsgröße darf unterschiedlich sein.
 
 > [!CAUTION]
-> Bei bestimmten Konfigurationen kann es sein, dass nach einem Neustart der Raspberry von dem Clonegerät gebootet wird.
+> Bei bestimmten Konfigurationen kann es sein, dass nach einem Neustart des Raspberry von dem Clonegerät gebootet wird.
 > Das kann besonders dann auftreten, wenn per USB Boot von einer USB Platte oder USB SSD gebootet wird und das Clonegerät ebenfalls per USB angeschlossen ist. Ein sorgfältiger Test ist dann unumgänglich.
 
-Soll die Erstellung eines Clones wieder ausgeschaltet werden muss mit dem Installer bei `M3->C10` das Clonegerät und die PARTUUID bzw manuell in der Konfigurationsdatei gelõscht werden.
+Soll die Erstellung eines Clones wieder ausgeschaltet werden, müssen das Clonegerät und die PARTUUID mit dem Installer bei `M3->C10` bzw. manuell in der Konfigurationsdatei gelöscht werden.
 
 ## Zusammenfassung der wesentlichen Funktionen im Zusammenhang mit einem Clone
 
-1) Ein Clone muss durch das Zurückspielen eines Backups initialisiert werden. Dabei wird das Clonegerät mit neuen PARTUUIDs versehen und idort `/etc/fstab` sowie `/boot/cmdline.txt` mit den neuen PARTUUIDs gesynct.
-2) Beim Clone wird das Clonegerät nicht mit neuen PARTUUIDs versehen. Da `/etc/fstab` und `/boot/cmdline.txt` durch den Clone immer wieder die PARTUUIs des Systems erhalten, werden die PARTUUIDs immer wieder mit den PARTUUIDs des Clonegerätes gesycnt.
-3) Beim Clone muss die `DEFAULT_CLONE_PARTUUID` eine PARTUUID einer Clonepartition enthalten damit nicht aus Versehen ein falsches Gerät überschrieben wird. Zusätzlich muss die Partitionierung des Clonegerätes mit der Paritionierung des Systems übereinstimmen (Anzahl und Größe). Die letzte Parition kann kleiner oder größer sein.
+1) Ein Clone muss durch das Zurückspielen eines Backups initialisiert werden. Dabei wird das Clonegerät mit neuen PARTUUIDs versehen und dort `/etc/fstab` sowie `/boot/cmdline.txt` mit den neuen PARTUUIDs gesynct.
+2) Beim Clone wird das Clonegerät nicht mit neuen PARTUUIDs versehen. Da `/etc/fstab` und `/boot/cmdline.txt` durch den Clone immer wieder die PARTUUIDs des Systems erhalten, werden die PARTUUIDs immer wieder mit den PARTUUIDs des Clonegerätes gesynct.
+3) Beim Clone muss die `DEFAULT_CLONE_PARTUUID` eine PARTUUID einer Clonepartition enthalten, damit nicht aus Versehen ein falsches Gerät überschrieben wird. Zusätzlich muss die Partitionierung des Clonegerätes mit der Partitionierung des Systems übereinstimmen (Anzahl und Größe). Die letzte Partition kann kleiner oder größer sein.
 
 [.status]: translated

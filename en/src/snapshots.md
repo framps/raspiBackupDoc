@@ -5,8 +5,8 @@ These are normal backups, but they have two special features:
 
   - Snapshots are **not automatically deleted** by the selected backup strategy
   - Snapshots must be given a description as a parameter to the `-M` option.
-    This is appended to the end of the directory name and allows to give the snapshot
-    directories meaningful names to remember their purpose.
+    This is appended to the end of the directory name and allows the reason for the snapshot
+    to be recorded.
 
 This makes it very easy to create a snapshot out of sequence
 and the reason for the snapshot can be recognized by the description.

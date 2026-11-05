@@ -1,8 +1,7 @@
 # Backup configuration options
 
 The following options can only be defined in a [configuration file](invocation-options.md#configFiles).
-There doesn't exist an invocation option. 
-Most invocation options can be configured there also. See [Backup options](backup-options.md) for more information.
+Most invocation options can also be configured there. See [Backup options](backup-options.md).
 
 <div class="table-wrapper-for-options">
 
@@ -25,11 +24,11 @@ stopping and starting system services (option -a and -o).
 
 ### DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY
 
-With this option, dd backups only the space occupied by defined partitions.
-This means that a 32GB SD card, for example, which only has an 8GB root partition defined, ther only will be 8GB plus the boot partition size
-and not 32GB saved. To do this, however, gparted or resize2fs have to be used 
-before to reduce the root partition size, because the root partition usually fills
-the entire rest of the SD card.
+With this option, dd backups only save the space occupied by defined partitions.
+This means that a 32GB SD card, for example, which only has an 8GB partition defined, only needs 8GB
+and not 32GB for the backup. To do this, however, gparted or resize2fs have to be used
+beforehand to reduce the root partition size, because the root partition usually fills
+the entire rest of the SD card and therefore unused space is also backed up.
 
 See also [FAQ16](faq.md#faq16).
 
@@ -40,10 +39,10 @@ See also [FAQ16](faq.md#faq16).
 ### DEFAULT_LINK_BOOTPARTITIONFILES
 
 Rarely changing boot partition backups are linked with hardlinks to save backup space.
-Prerequisite: The backup space supports hard links
+Prerequisite: The backup space supports hardlinks
 (ext3/ext4 file system).
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_LINK_BOOTPARTITIONFILES | none |
 
@@ -53,15 +52,15 @@ An eMail notification is only sent in the event of an error.
 
 **Exceptions:**
 
-In the following cases an email will be sent despite this option:
-1. For every warning message 
+In the following cases an eMail will be sent despite this option:
+1. For every warning message
 1. Notification of the availability of a new release (RBK0080I)
 1. Notification of the availability of a beta (RBK0168I)
-1. Notification to perform a restore test again (RBK0202I) 
+1. Notification to perform a restore test again (RBK0202I)
 
 **Note:**
 
-If *raspiBackup* crashes due to exceptional circumstances it may happen that no eMail is sent,
+If *raspiBackup* crashes due to exceptional circumstances, it may happen that no eMail is sent.
 
 | Config option | Default |
 |----------------------------|----------|
@@ -79,12 +78,12 @@ This option can be used to configure a reboot of the backed up system at the end
 
 ### DEFAULT_RSYNC_BACKUP_ADDITIONAL_OPTIONS
 
-Backup options that can be used for rsync backup in addition
+Backup options that are used for rsync backup in addition
 to the standard options of *raspiBackup*.
 
-**Use at your own risk!
+**Use at your own risk!**
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_RSYNC_BACKUP_ADDITIONAL_OPTIONS | none |
 
@@ -92,9 +91,9 @@ to the standard options of *raspiBackup*.
 
 This can be used to overwrite the rsync default backup options.
 
-**Use at your own risk!
+**Use at your own risk!**
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_RSYNC_BACKUP_OPTIONS | --delete -aHAx |
 
@@ -102,9 +101,9 @@ This can be used to overwrite the rsync default backup options.
 
 This can be used to overwrite the tar default backup options.
 
-**Use at your own risk!
+**Use at your own risk!**
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_TAR_BACKUP_OPTIONS | -cpi |
 
@@ -113,9 +112,9 @@ This can be used to overwrite the tar default backup options.
 **Available starting with release 0.7.2**
 
 This option can be used to disable the backup of ACLs with rsync.
-Useful when the backup partition is connected via nfs which doesn't support ACLs.
+Useful when the backup partition is connected via nfs and ACLs are not supported.
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_RSYNC_BACKUP_OPTION_EXCLUDE_ACLS | 0 |
 
@@ -124,9 +123,9 @@ Useful when the backup partition is connected via nfs which doesn't support ACLs
 Backup options that are used for tar backup in addition
 to the standard options.
 
-**Use at your own risk!
+**Use at your own risk!**
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_TAR_BACKUP_ADDITIONAL_OPTIONS | none |
 

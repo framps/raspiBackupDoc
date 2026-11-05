@@ -10,13 +10,13 @@ wenn täglich Backups erstellt werden:
   1. Backups des aktuellen Tages und der letzten 6 Tage
   2. Backups der aktuellen Woche sowie der letzten 3 Wochen
   3. Backups des aktuellen Monats sowie der letzten 11 Monate
-  4. Backup des aktuellen Jahres sowie der letzten 2 Jahre
+  4. Backups des aktuellen Jahres sowie der letzten 2 Jahre
 
-Dieses lässt sich mit dem Installer den jeweiligen Bedürfnissen anpassen.
+Dies lässt sich mit dem Installer den jeweiligen Bedürfnissen anpassen.
 
 Werden wöchentliche Backups erstellt, entfallen natürlich die täglichen Backups.
 Die jeweilige Aufbewahrungsdauer für täglich, wöchentlich, monatlich und
-jährlich lassen sich mit Optionen konfigurieren.
+jährlich lässt sich mit Optionen konfigurieren.
 
 Möchte man also nur wöchentliche, monatliche und jährliche Backups haben, kann
 das konfiguriert werden. Dabei ist zu beachten, dass dann der wöchentliche
@@ -72,7 +72,7 @@ Montag im Monat und das jährliche Backup am ersten Montag im Jahr.
     20190501 7. monatliches Backup
     20190401 8. monatliches Backup
     20190301 9. monatliches Backup
-    20190201 10.monatliches Backup
+    20190201 10. monatliches Backup
 
     20190101 11. monatliches Backup und 1. jährliches Backup
     20181201 12. monatliches Backup
@@ -89,7 +89,7 @@ Mit `--smartRecycleOptions "0 4 12 0"` werden z.B. die letzten 4
 wöchentlichen und die letzten 12 monatlichen Backups vorgehalten.
 
 > [!CAUTION]
-> Solange man nicht die Option `--smarteRecycleDryrun` ausgeschaltet hat, schreibt
+> Solange man nicht die Option `--smartRecycleDryrun` ausgeschaltet hat, schreibt
 > *raspiBackup* nur Meldungen, welche Backups gelöscht und welche aufgehoben **würden**.
 >
 > Man kann somit erst einmal kontrollieren, ob das Ergebnis dem Gewünschten entspricht.
@@ -98,11 +98,11 @@ wöchentlichen und die letzten 12 monatlichen Backups vorgehalten.
 > Das ist besonders wichtig, wenn man nach Umstellung auf die intelligente Rotationsstrategie
 > das bisherige Backupverzeichnis weiterhin benutzen möchte und kein neues Verzeichnis benutzt.
 >
-> Wurde sorgfältig geprüft, dass die intelligente Rotationstrategie die
+> Wurde sorgfältig geprüft, dass die intelligente Rotationsstrategie die
 > richtigen Backups löscht und die gewünschten Backups aufhebt, wird mit der
 > Option `--smartRecycleDryrun-` (das `-` am Ende beachten!) in jedem Backuplauf
-> die intelligente Rotationstrategie angewendet und
-> **nicht mehr benötigte Backups werden unwideruflich gelöscht**.
+> die intelligente Rotationsstrategie angewendet und
+> **nicht mehr benötigte Backups werden unwiderruflich gelöscht**.
 >
 > Alternativ bewirkt die Konfigurationsoption
 >

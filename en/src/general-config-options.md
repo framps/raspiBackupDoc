@@ -7,34 +7,34 @@
 ------------------
 
 **Note:** Options in the config file that require yes/on or no/off as parameters
-must be 0 for no and 1 for yes. No entry in the
-in the default column means the default is `""`
+must be 0 for no and 1 for yes. No entry in
+the default column means the default is `""`.
 
 <div class="table-wrapper-for-options">
 
 <a name="backuppath"></a>
 ### DEFAULT_BACKUPPATH
 
-This configuration variable defines the directory in which the backups are
+This configuration variable defines the directory in which the backups
 are stored.
 
-| config option | default |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_BACKUPATH | /backup |
 
 This option can be overwritten when invoking *raspiBackup*
-with the option [-p](backup-options.md#parm_p) or by specifying a directory at the end
-a directory is specified at the end. (See [invocation and options](invocation-options.md)).
+with the option [-p](backup-options.md#parm_p) or by specifying
+a directory at the end. (See [Invocation and options](invocation-options.md)).
 
 ### DEFAULT_COLOR_CODES
 
-The html and VT100 color codes can be defined here. Default
+The HTML and VT100 color codes can be defined here. Default
 is yellow for warnings and red for errors. The first pair of the definition defines
-the codes for warnings and the second pair the definition for errors. Here
+the codes for warnings, the second pair the definition for errors. Here
 the first definition is the HTML color code and the second definition is the VT100
-Colorcode.
+color code.
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_COLOR_CODES | ("#FF8000 33" "#FF0000 31") |
 
@@ -42,21 +42,21 @@ See [ANSI Colorcodes](https://en.wikipedia.org/wiki/ANSI_escape_code)
 
 ### DEFAULT_PUSHOVER_*
 
-*raspiBackup* can send notifications via *pushover*. For this
+*raspiBackup* can send notifications via *Pushover*. For this
 it is necessary to have registered at <https://pushover.net/> and to have set up an
 application.
 
 With the notifications you define whether you want to be notified in case of success and/or error.
 Possible options are "S" for success
-and/or "F" in the event of an error (Failure). With "M" the *raspiBackup*
+and/or "F" for failure. With "M" the *raspiBackup*
 messages are sent as a file. The options can be combined as desired.
 Example: "SF" or "SM".
 
 The priorities correspond to the available *Pushover* priorities.
 
-The sounds correspond to the available *pushover* sounds.
+The sounds correspond to the available *Pushover* sounds.
 
-| Config option | Standard |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_PUSHOVER_TOKEN | none |
 | DEFAULT_PUSHOVER_USER | none |
@@ -72,17 +72,17 @@ The sounds correspond to the available *pushover* sounds.
 ### DEFAULT_SEND_STATS
 
 During the version check, a few *raspiBackup*
-options that are used for [statistics purposes](statistics.md).
+options are transmitted that are used for [statistics purposes](statistics.md).
 
-| config option | default |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_SEND_STATS | yes |
 
 ### DEFAULT_SENDER_EMAIL
 
-The e-mail address of the sender can be specified for ssmtp and msmtp.
+The eMail address of the sender can be specified for ssmtp and msmtp.
 
-| Config-Option | Default |
+| Config option | Default |
 |----------------------------|----------|
 | DEFAULT_SENDER_EMAIL | root@$(hostname) |
 
@@ -97,7 +97,7 @@ and/or "F" for failure. With "M" the *raspiBackup*
 messages are sent as a file. The options can be combined as desired.
 Example: "SF" or "SM".
 
-| Config option | Standard |
+| Config option | Default |
 |-----------------------------|----------|
 | DEFAULT_SLACK_WEBHOOK_URL | none |
 | DEFAULT_SLACK_NOTIFICATIONS | none |
@@ -107,12 +107,12 @@ Example: "SF" or "SM".
 *raspiBackup* can send notifications via *Telegram*.
 
 With the notifications you define whether you want to be notified in case of success and/or error.
-Possible options are "S" for success (Success)
+Possible options are "S" for success
 and/or "F" for failure. With "M" the *raspiBackup*
 messages are sent as a file. The options can be combined as desired.
 Example: "SF" or "SM".
 
-| Config option | Standard |
+| Config option | Default |
 |-----------------------------|----------|
 | DEFAULT_TELEGRAM_TOKEN | none |
 | DEFAULT_TELEGRAM_CHATID | none |

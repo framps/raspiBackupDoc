@@ -2,7 +2,7 @@
 
 Auf den folgenden Seiten werden verschiedene Themen zu *raspiBackup* genauer erklärt.
 
-Dazu gehört ein [Entscheidungsbaum](backup-types.md), der hilft, den richtigen Backuptypen zu wählen. Weiterhin
+Dazu gehört ein [Entscheidungsbaum](backup-types.md), der hilft, den richtigen Backuptyp zu wählen. Weiterhin
 die Erklärung der [Unterschiede vom normalen und partitionsorientierten Backupmodus](normal-or-partition-backup.md),
 wie die [intelligente Rotationsstrategie](smart-recycle.md) funktioniert, was *raspiBackup* [Snapshots](snapshots.md)
 sind und welche [Erweiterungsmöglichkeiten](hooks-for-own-scripts.md) es gibt.

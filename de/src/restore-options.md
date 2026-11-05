@@ -3,7 +3,7 @@
 *raspiBackup* restored standardmäßig beim normalen Backupmodus das [**gesamte System**](restore-intro.md).
 Beim partitionsorientierten Modus kann dagegen beim Restore ausgewählt werden,
 welche Partitionen restored werden sollen. Wird beim partitionsorientierten Modus
-der `rsync` Backuptyp genutzt, kann bei einem Restore auch ein Deltarestore gewählt werden (Option -00).
+der `rsync` Backuptyp genutzt, kann bei einem Restore auch ein Deltarestore gewählt werden (Option `-00`).
 Das heißt, es werden mit `rsync` nur die geänderten Dateien und gelöschte Dateien aus dem Backup
 kopiert sowie nicht im Backup vorhandene Dateien - also neu erstellte Dateien - gelöscht.
 Damit ist ein sehr schneller Restore möglich, der aber nur möglich ist, wenn ein existierendes System
@@ -47,7 +47,7 @@ Beispiel: `-/dev/sda`
 **Hinweis:** Der Parameter muss ein Device sein und keine Partition. Es darf keine
 Partitionsnummer wie z.B. bei `/dev/sda1` vorhanden sein.
 
-**Achtung:** Dieses Device wird normalerweise vollständig gelöscht und neu angelegt außer wenn eine der Optionen `-0` oder `-00` genutzt werden! Beim `tar` und
+**Achtung:** Dieses Device wird normalerweise vollständig gelöscht und neu angelegt, außer wenn eine der Optionen `-0` oder `-00` genutzt wird! Beim `tar` und
 `rsync` Backup wird automatisch die Größe der *root* Partition entsprechend
 verkleinert oder vergrößert, wenn das Zielgerät eine andere Größe
 hat als das gesicherte System. Dabei muss natürlich auf dem Zielgerät noch genügend Platz für die
@@ -70,9 +70,9 @@ Speicherbelegung vor und nach dem Backuplauf ausgeben.
 
 Durch diese Option kann man Backups von Systemen restoren, die eine externe
 Partition als Rootpartition benutzen (hybrider Bootmodus), wie USB Sticks oder Festplatten.
-Dieses ist nur möglich, wenn ein `tar` oder `rsync` Backup vorliegt.
-Der Parameter definiert die Partition, auf welchem das root Verzeichnis restored
-werden soll.  Beispiel: `/dev/sdb1`.
+Dies ist nur möglich, wenn ein `tar` oder `rsync` Backup vorliegt.
+Der Parameter definiert die Partition, auf welche das root Verzeichnis restored
+werden soll. Beispiel: `/dev/sdb1`.
 
 | Option | Standard | Im Installer | Konfigurationsname |
 |--------|----------|--------------|--------------------|
@@ -95,10 +95,10 @@ Rootpartition mitgesichert werden.
 
 **Verfügbar ab Release 7.2**
 
-Während der Wiederherstellung eines paritionsorientierten Backups
+Während der Wiederherstellung eines partitionsorientierten Backups
 kann die letzte Partition auf die maximal verfügbare
 Größe des Zielgerätes der externen Partition ausgedehnt werden. Wird die
-Option ausgeschaltet mit `--resizeLastParitionFS-`, wird die letzte Partition so groß
+Option ausgeschaltet mit `--resizeLastPartitionFS-`, wird die letzte Partition so groß
 angelegt, wie sie auf dem Originalsystem war.
 
 | Option | Standard | Im Installer | Konfigurationsname |
@@ -111,7 +111,7 @@ angelegt, wie sie auf dem Originalsystem war.
 Während der Wiederherstellung kann die Rootpartition auf die maximal verfügbare
 Größe des Zielgerätes ausgedehnt werden. Wird die
 Option ausgeschaltet mit `--resizeRootFS-`, wird die Rootpartition so groß
-angelegt, wie sie auf dem Originalsystem war. Nutzt man die Option -P, so wird die letzte
+angelegt, wie sie auf dem Originalsystem war. Nutzt man die Option `-P`, so wird die letzte
 Partition auf dem Gerät erweitert. Liegen mehr als 2 Partitionen vor, ist es dann nicht die Rootpartition.
 
 | Option | Standard | Im Installer | Konfigurationsname |
@@ -133,8 +133,8 @@ alle Partitionen restored.
 ### --updateUUIDs: Anpassen der UUIDs
 
 Beim Restore werden immer die PARTUUIDs, UUIDs und LABELs
-des Originals restored. Dieses erzeugt i.d.R. Probleme, wenn man das restorte
-System am Originalsystem mounted. Mit dieser Option werden neue PARTUUIDs, UUIDs und LABEL beim
+des Originals restored. Dies erzeugt i.d.R. Probleme, wenn man das restorte
+System am Originalsystem mountet. Mit dieser Option werden neue PARTUUIDs, UUIDs und LABELs beim
 Restore generiert.
 
 | Option | Standard | Im Installer | Konfigurationsname |
@@ -145,7 +145,7 @@ Restore generiert.
 ### -Y: Automatisierter Restore
 
 Standardmäßig wird vor dem Restore angezeigt, wie das Restoredevice gerade
-aussieht und abgefragt, ob man das Device wirklich überschreiben will. Soll der
+aussieht, und abgefragt, ob man das Device wirklich überschreiben will. Soll der
 Restore automatisiert erfolgen, wird mit dieser Option die Abfrage unterdrückt.
 
 **Achtung:** Dadurch kann man u.U. unbeabsichtigt das falsche Device überschreiben
@@ -155,15 +155,15 @@ und wichtige Daten löschen.
 |--------|----------|--------------|--------------------|
 | -Y     |  aus     |   nein       |                    |
 
-Zusätzlich muss noch die Option `DEFAULT_YES_NO_RESTORE`in der Konfigurationsdatei
-entsprechend gesetzt sein für die Restoredevices.
+Zusätzlich muss noch die Option `DEFAULT_YES_NO_RESTORE` in der Konfigurationsdatei
+für die Restoredevices entsprechend gesetzt sein.
 
 <a name="parm_0"></a>
 ### -0: Keine Partitionierung
 
 Es wird kein neues Partitionslayout auf dem Zielgerät erstellt, sondern das
 existierende benutzt. Somit kann man eine gewünschte Partitionierung vor dem Restore vornehmen
-und dann ein Backup restoren. Details dazu siehe [FAQ #6](faq.md#faq6)
+und dann ein Backup restoren. Details dazu siehe [FAQ #6](faq.md#faq6).
 
 | Option | Standard | Im Installer | Konfigurationsname |
 |--------|----------|--------------|--------------------|
@@ -174,7 +174,7 @@ und dann ein Backup restoren. Details dazu siehe [FAQ #6](faq.md#faq6)
 
 Hiermit wird keine Formatierung bei einem `rsync` Backup
 vorgenommen und es wird der Restoreprozess dadurch extrem beschleunigt, da nur neue,
-geänderte oder gelöschte Dateien gesynced werden.
+geänderte oder gelöschte Dateien gesynct werden.
 
 | Option | Standard | Im Installer | Konfigurationsname |
 |--------|----------|--------------|--------------------|
@@ -184,8 +184,8 @@ geänderte oder gelöschte Dateien gesynced werden.
 ### -1: Partitionierungsfehler ignorieren
 
 Das Partitionslayout wird auf der SD-Karte erstellt, so wie es auf dem Quellgerät
-existiert und dabei werden sämtliche Fehler, die entdeckt werden - inklusive des
-Fehlers, dass das Zielgerät zu klein ist - ignoriert.  Siehe [FAQ #6](faq.md#faq6) für
+existiert, und dabei werden sämtliche Fehler, die entdeckt werden - inklusive des
+Fehlers, dass das Zielgerät zu klein ist - ignoriert. Siehe [FAQ #6](faq.md#faq6) für
 weitere Details.
 
 | Option | Standard | Im Installer | Konfigurationsname |

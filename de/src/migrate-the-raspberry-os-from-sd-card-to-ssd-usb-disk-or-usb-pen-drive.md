@@ -5,9 +5,9 @@ Gerätekonfiguration zurückzuspielen. Es gibt 3 mögliche Szenarien:
 
 1. `/boot` und `/` auf SD-Karte
 2. `/boot` auf SD-Karte und `/` extern auf einer SSD, USB Platte oder USB Stick
-   (Ältere Rasperry, welche keinen USB Boot Mode kann). Wird auch hybrider Bootmodus genannt.
+   (ältere Raspberries, die keinen USB Bootmodus unterstützen). Wird auch hybrider Bootmodus genannt.
 3. `/boot` und `/` auf einer SSD, USB Platte oder USB Stick
-   (USB Boot Mode auf neueren Raspberries)
+   (USB Bootmodus auf neueren Raspberries)
 
 *raspiBackup* kann aber auch dafür benutzt werden, sehr einfach von (1) nach (2) oder (3) zu migrieren.
 
@@ -25,10 +25,10 @@ Für (3) ist folgender Befehl zum Restore notwendig:
 sudo raspiBackup.sh -d <USB Gerät> <Backup>
 ```
 
-Dabei kann \<USB Gerät\> eine SSD, eine USB Platte oder ein USB Stick sein
+Dabei kann \<USB Gerät\> eine SSD, eine USB Platte oder ein USB Stick sein.
 
 
-Wenn auf ein grosses USB Gerät umgezogen werden soll, ist die Option
+Wenn auf ein großes USB Gerät umgezogen werden soll, ist die Option
 `--resizeRootFS-` sinnvoll, die die Rootpartition nicht expandiert, denn dann kann
 der Rest des USB Gerätes für weitere Partitionen genutzt werden.
 

@@ -14,7 +14,7 @@ definiert werden. Siehe dazu [Restoreoptionen](restore-options.md).
 ### DEFAULT_RESTORE_EXTENSIONS
 
 *raspiBackup* bietet für den Restore wie beim Backup die Möglichkeit,
-auch pre und post Exits zu konfigurieren, um vor und nach dem Restore noch
+auch pre- und post-Exits zu konfigurieren, um vor und nach dem Restore noch
 Aktionen vorzunehmen. Die Syntax ist genauso wie für die Backup Extensions.
 
 | Config-Option              | Standard |
@@ -43,9 +43,9 @@ Anzahl der Erinnerungen, einen Backup Restore Test durchzuführen.
 Mit der Aufrufoption `-Y` können die Ja/Nein
 Abfragen beim Restore unterdrückt werden.
 
-Da dieses aber unbeabsichtigtes Löschen von
-Devices bewirken kann muss mit dieser Option
-vermitteles eines regulären Ausdruckes
+Da dies aber unbeabsichtigtes Löschen von
+Devices bewirken kann, muss mit dieser Option
+mittels eines regulären Ausdrucks
 definiert werden, welche Restoredevices
 ohne Abfrage überschrieben werden dürfen.
 

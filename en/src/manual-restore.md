@@ -3,7 +3,7 @@
 A backup created by *raspiBackup* contains all the information required for a restore
 and can be restored manually.
 
-For various reasons, a *raspiBackup* user wanted to restore a rsync backup
+For various reasons, a *raspiBackup* user wanted to restore an rsync backup
 manually and has kindly described this in detail.
 
 ```

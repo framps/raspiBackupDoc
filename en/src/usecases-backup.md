@@ -1,15 +1,15 @@
-# Typical backup usecases 
+# Typical backup use cases
 
-Various application examples of
+Various use cases of
 *raspiBackup* and their configuration are presented and explained. They are intended to
-help you to find the right one from the multitude of possible applications or
+help you to find the right one from the multitude of possible applications or to
 customize the example according to your own requirements. An
-overview of all options can be found in [invocation and options](backup-options.md).
+overview of all options can be found in [Invocation and options](backup-options.md).
 Various methods for restoring a backup are described in the [Restore](restore.md) chapter.
 
 <!-- toc -->
 
-## A Windows user wants to be able to back up his Raspberry and restore it to Windows.
+## A Windows user wants to back up their Raspberry and be able to restore it under Windows
 
 To be able to restore an image under Windows, a dd
 image of *raspiBackup* has to be created. The following configuration options are
@@ -20,7 +20,7 @@ DEFAULT_BACKUPTYPE=d
 DEFAULT_KEEPBACKUPS=n
 ```
 
-## A Windows user has a 32GB SD card and only uses 12GB of it, which he only wants to back up
+## A Windows user has a 32GB SD card and only uses 12GB of it, and only wants to back up those 12GB
 
 In addition to the options mentioned, the following option is required:
 
@@ -30,26 +30,26 @@ DEFAULT_DD_BACKUP_SAVE_USED_PARTITIONS_ONLY=1
 
 However, it is also necessary to shrink the root partition of the Raspberry,
 as the entire free space on the SD card is backed up by default.
-However, this is not possible under Windows, but a Linux system can be used
-and use the tools `gparted` or `resize2fs` to shrink the root partition.
+However, this is not possible under Windows. A Linux system has to be used
+with the tools `gparted` or `resize2fs` to shrink the root partition.
 
-## A Windows user wants to create an absolutely minimal image with pishrink
+## A Windows user wants to create an absolutely minimal image with *pishrink*
 
 To create a minimal backup, you can use the *pishrink* tool. For this purpose
-there is the script `raspiBackupWrapper.sh`, with which at the end of the backup
-the dd image will be shrinked via *pishrink*. The option
+there is the script `raspiBackupWrapper.sh`, with which the dd image can be shrunk via *pishrink*
+at the end of the backup. The option
 
 ```
 DEFAULT_ZIP_BACKUP=1
 ```
 
 also reduces the size of the image, but this cannot be restored directly
-under Windows. Unzipi it first.
+under Windows. It has to be unzipped first.
 
 ## A Raspberry should be backed up as quickly as possible. The backup partition is an EXT4 file system mounted via NFS, which is provided by a NAS
 
-First, the backup partition of the NAS should be mounted. This should be done in
-`/etc/fstab` where the NFS partition should be defined and will automatically ibe mounted under `/backup`.
+First, the backup partition of the NAS has to be mounted. For this, the NFS partition should be defined in
+`/etc/fstab` and automatically mounted under `/backup`.
 
 ```
 DEFAULT_BACKUPTYPE=rsync
@@ -81,7 +81,7 @@ The remote Windows backup file system should be defined in `/etc/fstab` and
 be mounted automatically. The entire system is backed up each time.
 Please note that the file system on the SMB drive has to support files larger
 than 4GB, because the tar files are usually over 4GB in size. FAT32 is not
-sufficient. See also [Which filesystem can be used on the backup partition](which-filesystem-can-be-used-on-the-backup-partition.md)
+sufficient. See also [Which file system can be used on the backup partition?](which-filesystem-can-be-used-on-the-backup-partition.md).
 
 An example entry in `/etc/fstab` could look like this:
 
@@ -89,10 +89,10 @@ An example entry in `/etc/fstab` could look like this:
 //asterix/backup/ /backup cifs noauto,noatime,user,utf8,umask=000,uid=1000,gid=1000,credentials=/etc/samba/auth.asterix.cifsuser 0 0
 ```
 
-## A major change to the Raspberry is intended and various intermediate states should be backed up for security reasons
+## A major change to the Raspberry is intended and various intermediate states should be backed up to be on the safe side
 
 This requires a finished configuration of *raspiBackup* (see
-previous examples). Then *raspiBackup* only needs to be configured with the option
+previous examples). Then *raspiBackup* only needs to be invoked with the option
 
 ```
 -M "This is a descriptive name of the backup"
@@ -101,7 +101,7 @@ previous examples). Then *raspiBackup* only needs to be configured with the opti
 and a backup with exactly this descriptive name will be created in the backup directory `/backup`.
 
 **Note**: This backup is a so-called [snapshot](snapshots.md) and is ignored during the backup recycle.
-The backup has to be deleted manually if required.
+The backup can be deleted manually if required.
 
 ## A USB boot system is to be backed up with additional partitions
 
@@ -127,13 +127,13 @@ DEFAULT_BACKUPPATH="/USBStick"
 
 In order for `rsync` to use hardlinks and for the backup to be fast, the
 backup partition has to be formatted with ext3/4. If you want to exchange data with Windows
-and the partition was formatted with Windows, use `tar` as the backup type.
+and the partition was formatted with Windows, use `tar` as the
 backup type. However, the backup will then take longer and
-and requires considerably more space.
+require considerably more space.
 
-**Note**: If the USB partition is to be accessible from Windows, it should be formatted with NTFS.
+**Note**: If the USB partition is to be accessible from Windows, it has to be formatted with NTFS.
 In this case, however, no backup type `rsync` is possible. NTFS can only be used with the backup types `dd` and `tar` and
-the DEFAULT_BACKUPTYPE has then be set accordingly.
+the DEFAULT_BACKUPTYPE has to be set accordingly.
 
 An example entry in `/etc/fstab` could look like this:
 
@@ -141,11 +141,11 @@ An example entry in `/etc/fstab` could look like this:
 LABEL=usb /USBStick ext4 defaults,noatime,nofail 0 2
 ```
 
-## Once a backup has been created, it should be restored to a device immediately so that it can be used right away in the event of a backup failure
+## Once a backup has been created, it should be restored to a device immediately so that it can be used right away in an emergency
 
 It is often important to keep downtime to a minimum. The following helper script can help with this:
 
-*raspiBackup* creates backups that must be restored in the event of a backup failure in order to restart the system. This means the system will be unavailable for a certain period of time until the backup has been restored. To minimize this downtime, there is a helper script from the *raspiBackup* [helper scripts](https://github.com/framps/raspiBackup/tree/master/helper) collection called **raspiBackupAndClone**. A few manual configurations are required to use this script. The exact instructions for this can be found [here](how-to-create-a-cold-standby-clone-with-raspibackup.md).
+*raspiBackup* creates backups that must be restored in an emergency in order to restart the system. This means the system will be unavailable for a certain period of time until the backup has been restored. To minimize this downtime, there is a helper script from the *raspiBackup* [helper scripts](https://github.com/framps/raspiBackup/tree/master/helper) collection called **raspiBackupAndClone**. A few manual configurations are required to use this script. The exact instructions for this can be found [here](how-to-create-a-cold-standby-clone-with-raspibackup.md).
 
 
 [.status]: translated

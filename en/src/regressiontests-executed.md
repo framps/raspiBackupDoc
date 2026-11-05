@@ -1,17 +1,17 @@
 # Regression tests executed before a new release
 
 Each new version of *raspiBackup* is subjected to a regression test before release.
-Due to the many options and possible hardware and
+Due to the many options and possible hardware
 and software environments, a complete regression test is not possible.
 However, this ensures that the primary functionality
 of *raspiBackup* to create a backup for the various backup types and modes
 is definitely successful. Also, all
-new features, although they were of course already tested during development, are also
+new features, although they were of course already tested during development, are
 tested again.
 
 The regression test is carried out in a virtualized environment on a Linux
 desktop, in which a [Raspi per Qemu](https://linux-tips-and-tricks.de/de/raspberryd/22-wie-kann-man-raspberry-pi-unter-kvm-emulieren) is simulated.
-(See [development-environment](development-environment.md).)
+(See [Development environment](development-environment.md).)
 
 A *Raspberry Pi OS Lite* is taken as the basis.
 This is installed with the standard options of *raspiBackup* via
@@ -25,11 +25,11 @@ images are started via Qemu and the following tests are carried out:
   - `/boot/firmware/cmdline.txt` is downloaded from the VM via `scp` to the host and checked
   - `/etc/fstab` is downloaded from the VM to the host via `scp` and checked
   - IP address 8.8.8.8 is pinged in the VM and tested to see if the ping was successful
-  - The number of active services of the original image is verified with `service --status-all`.
+  - The number of active services of the original image is verified with `service --status-all`
 
 Every user of *raspiBackup* who uses additional options is strongly advised to
 carefully test backup and restore after a version upgrade of *raspiBackup*.
-In this context, please refer to the
+In this context, please note the
 [disclaimer](introduction.md#disclaimer).
 
 

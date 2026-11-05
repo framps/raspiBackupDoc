@@ -13,8 +13,8 @@ ein angehängtes `+` oder `-` beim Aufruf von *raspiBackup* gezielt ein- oder au
 > Sofern in der Befehlszeile ein Parameter, der mit `-` beginnt, genutzt wird, muss dieser mit `\-` beginnen.
 > Das ist nicht erforderlich, wenn der Parameter in der Konfigurationsdatei genutzt wird.
 
-Beispiel: Die Option `-z` sowie die Option `-z+` schaltet die Backupcompression ein.
-Mit der Option `-z-` wird dagegen die Backupcompression ausgeschaltet, und zwar unabhängig davon,
+Beispiel: Die Option `-z` sowie die Option `-z+` schalten die Backupkompression ein.
+Mit der Option `-z-` wird dagegen die Backupkompression ausgeschaltet, und zwar unabhängig davon,
 was in der Konfigurationsdatei in dem Parameter `DEFAULT_ZIP_BACKUP` steht. Damit kann eine
 Option in der Befehlszeile ausgeschaltet werden, obwohl sie in der
 Konfigurationsdatei eingeschaltet ist.
@@ -44,7 +44,7 @@ Die Priorität der Optionsquellen ist aus folgender Tabelle ersichtlich:
 **Hinweis:**
 Optionen in der Konfigurationsdatei, die ja/an oder nein/aus als Parameter
 benötigen, müssen 0 für nein und 1 für ja sein.
-Kein Eintrag in der Standardspalte bedeutet, der Standard ist `""`
+Kein Eintrag in der Standardspalte bedeutet, der Standard ist `""`.
 
 **Hinweis:**
 Bei einem Versionsupgrade wird nur die Standardkonfigurationsdatei
@@ -56,7 +56,7 @@ Es existieren für den Backup- und Restore-Aufruf verschiedene Optionen:
 
 1. Aufrufoptionen sowie deren Konfigurationsoption ([Backup](backup.md) / [Restore](restore.md)).
    Die Konfigurationsoptionen können durch die entsprechenden Aufrufoptionen temporär
-   überschrieben werden
+   überschrieben werden.
 1. Reine Konfigurationsoptionen, die nicht per Aufrufoption überschrieben werden können
    ([Backup](backup-config-options.md) / [Restore](restore-config-options.md))
 1. Allgemeine Aufruf- und Konfigurationsoptionen sowohl für den Backup
@@ -65,7 +65,7 @@ Es existieren für den Backup- und Restore-Aufruf verschiedene Optionen:
 ## Hilfetext auf der Konsole
 
 Sofern man sich auf der Konsole bewegt, kann eine Liste der
-verfügbaren Aufrufoptionen sowie deren aktuellen Status mit den
+verfügbaren Aufrufoptionen sowie deren aktueller Status mit den
 Optionen `-h` oder `--help` ausgegeben werden.
 
 ## Thematische Liste von Aufruf-Optionen

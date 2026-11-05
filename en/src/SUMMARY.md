@@ -7,14 +7,14 @@
 Note: This file here (SUMMARY.md) is used by *mdbook* to determine the
 contents and structure of the book to be generated.
 
-Following data is read for this:
+The following data is evaluated for this:
 
   - the headings level 1 (#)
   - links for prefix- and suffix-chapters
   - all lists (even nested)
   - horizontal rules ---
 
-Lists are only allowed to have links in it.
+Lists are only allowed to contain links.
 Any link provides the title of a chapter and the name of the corresponding file.
 
 That allows for some tricks:
@@ -46,7 +46,7 @@ That allows for some tricks:
 
 - [Language support](language-support.md)
 
-- [Quickstart-Installation in 5 minutes](installation-in-5-minutes.md)
+- [Quickstart - Installation in 5 minutes](installation-in-5-minutes.md)
     - [Use without installation](using-raspibackup-without-installation.md)
 
 - [Installer - invocation and options](installer.md)
@@ -54,20 +54,20 @@ That allows for some tricks:
     - [Statistics](statistics.md)
     - [Updates](updates.md)
 
-- [Typical usecases](usecases.md)
-    - [Typical backup usecases](usecases-backup.md)
-    - [Typical restore usecases](usecases-restore.md)
+- [Typical use cases](usecases.md)
+    - [Typical backup use cases](usecases-backup.md)
+    - [Typical restore use cases](usecases-restore.md)
 
 - [Function details](function-intro.md)
     - [Backup](backup-intro.md)
         - [Decision tree for backup types](backup-types.md)
-        - [Comparison of partition orientated and normal backup](normal-or-partition-backup.md)
+        - [Comparison of partition-oriented and normal backup](normal-or-partition-backup.md)
         - [Backup directory structure](backup-directory-structure.md)
-        - [Rotation strategy](smart-recycle.md)
+        - [Intelligent rotation strategy](smart-recycle.md)
         - [Snapshots](snapshots.md)
         - [Docker support](docker-support.md)
         - [Configuration update when upgrading to a new version](configuration-update-when-upgrading-to-a-new-version.md)
-        - [Multiple backuptasks](multiple-backup-tasks.md)
+        - [Multiple backup tasks](multiple-backup-tasks.md)
         - [eMail configuration examples](configuration-examples.md)
             - [msmtp configuration for a web.de account](msmtp-configuration-for-web-de-account.md)
             - [Exim4 configuration](exim4-configuration.md)
@@ -80,12 +80,12 @@ That allows for some tricks:
    - [General](more-questions-and-answers.md)
         - [Notifications](notifications.md)
         - [Which filesystem can be used on the backup partition?](which-filesystem-can-be-used-on-the-backup-partition.md)
-        - [How do hardlinks work with rsync?](how-do-hardlinks-work-with-rsync.md)
-        - [Why shouldn't you use dd as backup type?](why-shouldn-t-you-use-dd-as-backup-type.md)
-        - [Migrate the Raspberry OS from SD-card to SSD, USB-disk or USB-pen-drive](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
+        - [How do hardlinks work together with rsync?](how-do-hardlinks-work-with-rsync.md)
+        - [Why is it better not to use dd as a backup type?](why-shouldn-t-you-use-dd-as-backup-type.md)
+        - [Move the Raspberry OS from SD card to SSD, USB disk or USB stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [How can I install and test the beta version?](how-can-i-install-and-test-the-beta-version.md)
-        - [Is an external root partition supported? (hybrid boot mode)](external-root-partition.md)
-        - [Tips for large SDs, HDDs and SSDs](large_devices.md)
+        - [Is an external root partition supported (hybrid boot mode)?](external-root-partition.md)
+        - [Tips for large SD cards, HDDs and SSDs](large_devices.md)
 
 - [raspiBackup - Invocation and options](invocation-options.md)
     - [Backup](backup.md)
@@ -101,19 +101,19 @@ That allows for some tricks:
 
 - [Frequently asked questions / FAQ](faq.md)
 
-- [Error messages](error-messages.md)
+- [Error messages and troubleshooting](error-messages.md)
 
 - [raspiBackupDialog](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md)
 
 - [Backup targets](backup-targets.md)
-    - [NFS as backuptarget](nfs-as-backuptarget.md)
-    - [SMB as backuptarget](smb-as-backuptarget.md)
-    - [AVM FRITZ!Box as backuptarget](avm-fritzbox-as-backuptarget.md)
-    - [WebDAV as backuptarget](webdav-as-backuptarget.md)
+    - [NFS as backup target](nfs-as-backuptarget.md)
+    - [SMB as backup target](smb-as-backuptarget.md)
+    - [AVM FRITZ!Box as backup target](avm-fritzbox-as-backuptarget.md)
+    - [WebDAV as backup target](webdav-as-backuptarget.md)
 
 - [Tips for home automation](tips-homeautomation.md)
 
-- [Helpful links regarding backup](helpful-links.md)
+- [Helpful links on the subject of backup](helpful-links.md)
 - [Other backup tools](other-raspberry-backup-tools.md)
 
 - [Miscellaneous](miscellaneous.md)
@@ -124,12 +124,12 @@ That allows for some tricks:
     - [Development environment](development-environment.md)
     - [Users all over the world](list-of-countries-raspibackup-is-used-in-the-world.md)
     - [Version of this documentation](doc-version-info-automatically-generated.md)
-    - [Markdown Playground](markdown-playground.md)
+    - [Markdown playground](markdown-playground.md)
 
 # Developer guide
 
-- [Extensionpoints](hooks-for-own-scripts.md)
-- [Extensionscripts](extension-scripts.md)
+- [Extension points](hooks-for-own-scripts.md)
+- [Extension scripts](extension-scripts.md)
 - [Support new languages](local-language-support-for-languages-other-than-de-and-en-l10n.md)
 
 [.status]: z_SUMMARY

@@ -23,7 +23,7 @@ ioBroker nutzt ACLs. Wer sein Backup auf eine per NFS angebundene Synology oder 
 sichert, muss das Sichern von ACLs ausschalten, damit *rsync* nicht abbricht. Siehe
 dazu [FAQ24](faq.md#faq24), wie man das erreichen kann.
 
-Wenn man ein Backup wiederherstellt, lassen sich mit ioBroker fix die
+Wenn man ein Backup wiederherstellt, lassen sich mit ioBroker schnell die
 fehlenden ACLs neu erstellen. Außerdem sollte man den ioBroker vor dem
 Backup mit `systemctl stop iobroker` stoppen und nach dem Backup mit `systemctl
 start iobroker` wieder starten. Das lässt sich entweder direkt in der
@@ -34,11 +34,11 @@ Installer generiert dann die entsprechenden Befehle in der Konfigurationsdatei.
 
 ### FHEM
 
-FHEM nutzt keine ACLs. Siehe [FAQ24](faq.md#faq24)
+FHEM nutzt keine ACLs. Siehe [FAQ24](faq.md#faq24),
 wie ACL Fehlermeldungen zu beseitigen sind.
 
 FHEM läuft als System Service und taucht somit im Installer als Service auf und
-kann dort einfach mit M3->C6 ausgewählt werden, so dass FHEM vor dem Backup
+kann dort einfach mit M3->C6 ausgewählt werden, sodass FHEM vor dem Backup
 gestoppt und am Ende wieder gestartet wird.
 
 Zur manuellen Konfiguration in der Config dienen folgende Kommandos:
@@ -58,7 +58,7 @@ bei DEFAULT_STARTSERVICES
 ### SmartHomeNG
 
 SmartHomeNG läuft als System Service und taucht somit im Installer als Service
-auf und kann dort einfach mit M3->C6 ausgewählt werden, so dass SmartHomeNG vor
+auf und kann dort einfach mit M3->C6 ausgewählt werden, sodass SmartHomeNG vor
 dem Backup gestoppt und am Ende wieder gestartet wird.
 
 Wer es manuell in der Config konfigurieren will, sollte folgende Befehle aufnehmen:

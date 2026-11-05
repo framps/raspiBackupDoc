@@ -1,6 +1,6 @@
 # eMail configuration examples
 
-**raspiBackup** can send an eMail when a backup finishedi. Following pages describeis the configuration for common e-mail clients. There exists an eMail Extensionpoint which can be used to call any custom eMailClients.
+**raspiBackup** can send an eMail when a backup finishes. The following pages describe the configuration of common eMail clients. There is an eMail extension point which can be used to call any custom eMail clients.
 
    - [msmtp](msmtp-configuration-for-web-de-account.md)
    - [exim4](exim4-configuration.md)

@@ -12,7 +12,7 @@ Dazu werden ausgewertet:
   - die Überschriften Level 1 (#)
   - Links für Prefix- und Suffix-Kapitel
   - alle Listen (auch verschachtelt)
-  - Trennlinien (horizontal rules ---
+  - Trennlinien (horizontal rules ---)
 
 Die Listen dürfen ausschließlich Links enthalten.
 Jeder Link bestimmt den Titel eines Kapitels und den Namen der entsprechenden Datei.
@@ -61,7 +61,7 @@ Dies ermöglicht einige kleine Kniffe:
 - [Funktionsdetails](function-intro.md)
     - [Backup](backup-intro.md)
         - [Entscheidungsbaum für Backuptypen](backup-types.md)
-        - [Vergleich partitionsorientierter Backup und normaler Backup](normal-or-partition-backup.md)
+        - [Vergleich partitionsorientierter und normaler Backup](normal-or-partition-backup.md)
         - [Backupverzeichnisstruktur](backup-directory-structure.md)
         - [Intelligente Rotationsstrategie](smart-recycle.md)
         - [Snapshots](snapshots.md)
@@ -85,7 +85,7 @@ Dies ermöglicht einige kleine Kniffe:
         - [Umziehen des Raspberry Betriebssystems von SD-Karte auf SSD, USB Platte oder USB Stick](migrate-the-raspberry-os-from-sd-card-to-ssd-usb-disk-or-usb-pen-drive.md)
         - [Wie kann ich die Betaversion installieren und ausprobieren?](how-can-i-install-and-test-the-beta-version.md)
         - [Wird eine externe Rootpartition unterstützt?](external-root-partition.md)
-        - [Tipps für grosse SD Karten, HDDs und SSDs](large_devices.md)
+        - [Tipps für große SD-Karten, HDDs und SSDs](large_devices.md)
 
 - [raspiBackup - Aufruf und Optionen](invocation-options.md)
     - [Backup](backup.md)

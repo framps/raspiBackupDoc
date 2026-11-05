@@ -1,15 +1,15 @@
 # NFS als Backupziel
 
-NFS ist ein unter Linux viel genutztes Filesystem um remote auf Dateien zuzugreifen und eignet sich perfekt um Backups abzulegen. Leider gibt es unterschiedliche nfs Versionen sowie unterschiedliche Implementierungen - je nach genutzem nfs Server. Insbesondere verhalten sich die nfs Server unterschiedlich in Bezug auf ACLs.
+NFS ist ein unter Linux viel genutztes Filesystem, um remote auf Dateien zuzugreifen, und eignet sich perfekt, um Backups abzulegen. Leider gibt es unterschiedliche nfs Versionen sowie unterschiedliche Implementierungen - je nach genutztem nfs Server. Insbesondere verhalten sich die nfs Server unterschiedlich in Bezug auf ACLs.
 
-ACLs werden normalerweise auf Raspberries nicht genutzt und müssen deshalb auch nicht ins Backup kopiert werden. Werden aber doch ACLs genutzt wird es kompliziert die per nfs ins Backup zu bekommen. Der Backuptyp tar unterstützt ACLs. Auch werden ACLs im EXT3/4 Dateisystem gesichert.
+ACLs werden normalerweise auf Raspberries nicht genutzt und müssen deshalb auch nicht ins Backup kopiert werden. Werden aber doch ACLs genutzt, wird es kompliziert, diese per nfs ins Backup zu bekommen. Der Backuptyp tar unterstützt ACLs. Auch werden ACLs im EXT3/4 Dateisystem gesichert.
 
-nfs Version 4 unterstützt keine ACLs. nfs Version 3 dagegen meistens schon. Allerdings unterstützt Synology auch mit Version 3 keine ACLs. Mit der Option `nfsvers=3` bzw `nfsvers=4` kann beim Mount definiert werden, welche nfs Version genutzt werden soll.
+nfs Version 4 unterstützt keine ACLs. nfs Version 3 dagegen meistens schon. Allerdings unterstützt Synology auch mit Version 3 keine ACLs. Mit der Option `nfsvers=3` bzw. `nfsvers=4` kann beim Mount definiert werden, welche nfs Version genutzt werden soll.
 
 Es macht sehr viel Sinn, die Backups von [raspiBackup](https://linux-tips-and-tricks.de/de/raspibackup)
 auf einem NAS abzulegen und das NFS Protokoll dazu zu nutzen. Im Folgenden wird beschrieben, wie
 das bei einer Synology zu konfigurieren ist. Natürlich kann man auch jedes andere NAS nutzen, sofern es NFS unterstützt.
-Auch eine Raspberry kann als NFS Server konfiguriert und genutzt werden.
+Auch ein Raspberry kann als NFS Server konfiguriert und genutzt werden.
 
 **Hinweis**: Ab der Release 0.7.2 gibt es eine [Konfigurationsoption](https://framps.github.io/raspiBackupDoc/de/backup-config-options.html#default_rsync_backup_option_exclude_acls), mit der die Sicherung von ACLs abgeschaltet werden kann.
 
@@ -23,14 +23,14 @@ werden.
 
 ![Synology NFS Konfiguration](images/synologyNFSAddtlSettings.png)
 
-## Konfiguration einer Synology und der Raspberry, um ein rsync Backup per NFS auf einer Synology zu sichern
+## Konfiguration einer Synology und des Raspberry, um ein rsync Backup per NFS auf einer Synology zu sichern
 
 Im Wesentlichen sind folgende Schritte durchzuführen:
 
 1) Gemeinsamen NFS Ordner auf der Synology erstellen
-2) mount des gemeinsamen NFS Ordners auf der Raspi in der `/etc/fstab`
+2) Mount des gemeinsamen NFS Ordners auf dem Raspi in der `/etc/fstab`
 3) Installation und Konfiguration von *raspiBackup* per [Installer](installer.md) (keinen automatischen Backup konfigurieren)
-4) Test des Backups und Restores von der Commandline
+4) Test des Backups und Restores von der Befehlszeile
 5) Einrichten des regelmäßigen Backups in der Crontab per [Installer](installer.md)
 
 Es empfiehlt sich, vor dem Beginn die [FAQ](faq.md) zu lesen, wo die wichtigsten
@@ -39,15 +39,15 @@ Fragen und Antworten zu *raspiBackup* zusammengestellt sind.
 ### Gemeinsamen NFS Ordner auf der Synology erstellen
 
 Im DSM, Systemsteuerung -> Gemeinsamer Ordner -> Erstellen erstellt man einen
-gemeinsamen Ordner z.B. mit dem Namen `raspiBackups`. Eine Papierkorb braucht man
+gemeinsamen Ordner z.B. mit dem Namen `raspiBackups`. Einen Papierkorb braucht man
 nicht. Die NFS Berechtigungen müssen wie folgt eingestellt werden (Hinweis:
 *raspiBackup* läuft als root). Hostname oder IP: Hostname oder IP des NFS
 Clients, z.B. 192.168.0.10. Privileg: lesen/schreiben, Squash: keine Zuordnung,
 Sicherheit: sys.
 
-### Eintrag des gemeinsamen NFs Ordners auf der Raspi in der fstab
+### Eintrag des gemeinsamen NFS Ordners auf dem Raspi in der fstab
 
-Folgender Eintrag in der `/etc/fstab` bewirkt das Mounten des Synology NFS Orders
+Folgender Eintrag in der `/etc/fstab` bewirkt das Mounten des Synology NFS Ordners
 unter dem Mountpoint `/backup` unter der Annahme, dass 192.168.0.11 die Synology
 ist:
 
@@ -59,7 +59,7 @@ ist:
 `/home/pi/backup` oder andere Verzeichnisse.**
 
 
-### Manueller mount des gemeinsamen NFS Ordners
+### Manueller Mount des gemeinsamen NFS Ordners
 
 Jetzt kann man prüfen, ob der Backupspace auf der Synology freigegeben ist mit
 `showmount -e 192.168.0.11`. Danach kann man mit `sudo mount /backup` den NFS
@@ -80,7 +80,7 @@ Installation von *raspiBackup* gemäß [dieser Anleitung](installation-in-5-minu
 Dabei dann `rsync` als Backupmethode und `/backup` als Backuppfad angeben.
 Den regelmäßigen Backup noch nicht konfigurieren.
 
-### Test des Backups und Restores von der Commandline
+### Test des Backups und Restores von der Befehlszeile
 
 ### Einrichten des regelmäßigen Backups im Installer
 
@@ -88,7 +88,7 @@ Aufruf des Installers und Konfiguration des regelmäßigen Backupzeitpunktes.
 
 ## Hinweis zu ACLs
 
-Eigentlich kann man ACLs mit *NFS3* sichern. Das klappt z.B., wenn man eine
+Eigentlich kann man ACLs mit *NFS3* sichern. Das klappt z.B., wenn man einen
 Raspberry als NFS Server aufsetzt (Siehe [https://linux-tips-and-tricks.de](https://linux-tips-and-tricks.de/en/servere/604-how-to-backup-acls-with-rsync-on-a-nfs-partition)).
 Allerdings funktioniert das nicht mit einer *Synology* - auch wenn sie *NFS3* nutzt.
 
@@ -102,7 +102,7 @@ Eine Anfrage bei Synology am 13.5.2022 lieferte folgende Antwort:
 ### Hinweis von Udo
 
 Udo hat im Kommentar beschrieben, was man tun muss, damit der Automount der
-Synology beim Booten der Raspberry funktioniert.
+Synology beim Booten des Raspberry funktioniert.
 
 Es wurde verschiedentlich berichtet, dass es mit Synologies Probleme mit
 Hardlinks geben kann, die von rsync benutzt werden, wenn NFS4 benutzt wird. Mit
@@ -150,13 +150,13 @@ DEFAULT_BACKUPTYPE="rsync"
 
 ### Hinweise von Alfred
 
-Alfred bekam folgende Fehlermeldung von rsync
+Alfred bekam folgende Fehlermeldung von rsync:
 
 ```
 rsync: chown "/mnt/nas/arami nta/araminta-rs ync-backup-2016 1029-190948/mmc blk0p1/overlays /.w1-gpio-overl ay.dtb.ansSC4" failed: Operation not permitted (1)"
 ```
 
-Dann benutze er den rsync Befehl, den er im *raspiBackup*.log fand, den
+Dann benutzte er den rsync Befehl, den er im *raspiBackup*.log fand, den
 *raspiBackup* ausführt, um das Backup zu erstellen, um das Problem zu
 reproduzieren und gezielt ohne *raspiBackup* zu debuggen. Da er den -P Modus
 benutzt, musste er vorher noch folgende Befehle ausführen:
@@ -174,8 +174,8 @@ rsync --exclude="/mnt/nas" --exclude=/proc/* --exclude=/lost+found/* --exclude=/
 ```
 
 Dieser Befehl funktionierte ohne Fehlermeldung. Es lag aber daran, dass
-vergessen wurde 'sudo' zu benutzen. Als der Befehl dann nochmal mit sudo
-ausführte kam die Fehlermeldung wieder. Das weist IMHO auf ein Zugriffsproblem
+vergessen wurde, 'sudo' zu benutzen. Als er den Befehl dann nochmal mit sudo
+ausführte, kam die Fehlermeldung wieder. Das weist IMHO auf ein Zugriffsproblem
 auf dem Synology NAS hin. Nachdem dann auf dem NAS die NFS permissions von
 **'map all users to admin'** auf **'no mapping'** geändert wurde, bingo, funktionierte
 es auch mit sudo.

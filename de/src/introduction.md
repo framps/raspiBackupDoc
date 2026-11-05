@@ -5,19 +5,19 @@ Ausfalls des Systemspeichergerätes (SD-Karte, USB Disk, SSD, NVMe ...) oder auc
 unbeabsichtigten Änderungen, durch die das System nicht mehr oder fehlerhaft bootet,
 das System wieder auf einen vorherigen Zustand zurücksetzen zu können.
 
-*raspiBackup* erstellt eine Systemsicherung einer Raspberry Pi **bei laufendem System**.
-Siehe dazu [Ist ein Backup eines laufenden Systems zuverlässig und sollte nicht das gesamte System vor dem Backup gestoppt werden ?](faq.md#faq1)
+*raspiBackup* erstellt eine Systemsicherung eines Raspberry Pi **bei laufendem System**.
+Siehe dazu [Ist ein Backup eines laufenden Systems zuverlässig und sollte nicht das gesamte System vor dem Backup gestoppt werden?](faq.md#faq1)
 Das kann manuell oder automatisch in regelmäßigen Abständen geschehen.
 Ein Backup enthält immer das gesamte System, d.h. Systemdaten sowie Nutzerdaten.
 Deshalb bootet das System sofort wieder, wenn es zurückgespielt wurde.
-Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientierte Backup](normal-or-partition-backup.md#partitionalBackup) unterstützt auch einen vollständigen partitionsweisen Restore. Außerdem unterstützt er bei dem rsync Backuptyp ein Deltarestore, d.h. es werden nur die Änderungen vom letzten Backup zurückgenommen. Dadurch reduziert sich die Restorezeit signifikant.
+Ein Restore kann immer vollständig vorgenommen werden. Der [partitionsorientierte Backup](normal-or-partition-backup.md#partitionalBackup) unterstützt auch einen vollständigen partitionsweisen Restore. Außerdem unterstützt er bei dem rsync Backuptyp einen Deltarestore, d.h. es werden nur die Änderungen seit dem letzten Backup zurückgenommen. Dadurch reduziert sich die Restorezeit signifikant.
 
-Als Linux Backuptools können *dd*, *tar* und *rsync* gewählt werden. Zusätzlich besteht noch die Möglichkeit bei *dd* und *tar* die Backups zu verkleinern. Siehe [hier eine Beschreibung](backup-types.md) der Vor- und Nachteile der jeweiligen Tools sowie einen Entscheidungsbaum, welcher Backuptyp zu wählen ist.
+Als Linux Backuptools können *dd*, *tar* und *rsync* gewählt werden. Zusätzlich besteht noch die Möglichkeit, bei *dd* und *tar* die Backups zu verkleinern. Siehe [hier eine Beschreibung](backup-types.md) der Vor- und Nachteile der jeweiligen Tools sowie einen Entscheidungsbaum, welcher Backuptyp zu wählen ist.
 
-raspiBackup erstellt standardmäßig jedes Mal ein neues Backup und somit ist eine Backuphistorie verfügbar, auf die jederzeit gezielt zurückgegriffen werden kann. Das ist unterschiedlich zu existierenden **Clone** Backuptools die
-nur die letzten Änderungen im existierende Clone mit rsync updaten und somit nur ein Backup des letzten Standes verfügbar ist. Dadurch ist ein Clone schnell auf den aktuellen Stand gebracht. Allerdings werden beim Backuptyp rsync ebenfalls nur die letzten Änderungen gesichert und ist damit die schnellste Backupmethode von *raspiBackup*. Dieser Backuptyp sollte genutzt werden wenn die Backupgeschwindigkeit ein wichtiges Kriterium ist.
+*raspiBackup* erstellt standardmäßig jedes Mal ein neues Backup, und somit ist eine Backuphistorie verfügbar, auf die jederzeit gezielt zurückgegriffen werden kann. Das ist unterschiedlich zu existierenden **Clone** Backuptools, die
+nur die letzten Änderungen im existierenden Clone mit rsync updaten, und somit nur ein Backup des letzten Standes verfügbar ist. Dadurch ist ein Clone schnell auf den aktuellen Stand gebracht. Allerdings werden beim Backuptyp rsync ebenfalls nur die letzten Änderungen gesichert, und er ist damit die schnellste Backupmethode von *raspiBackup*. Dieser Backuptyp sollte genutzt werden, wenn die Backupgeschwindigkeit ein wichtiges Kriterium ist.
 
-Ab Release 0.7.3 kann *raspiBackup* nach dem Erstellen eines Backups auch einen Clone auf einem weiteren Gerät erstellen. [Hier](how-to-enable-clone.md) ist beschrieben welche Schritte notwendig sind um diese Clonefunktionalität zu nutzen.
+Ab Release 0.7.3 kann *raspiBackup* nach dem Erstellen eines Backups auch einen Clone auf einem weiteren Gerät erstellen. [Hier](how-to-enable-clone.md) ist beschrieben, welche Schritte notwendig sind, um diese Clonefunktionalität zu nutzen.
 
 Zur Installation und Konfiguration von *raspiBackup* gibt es einen
 [Installer](installation-in-5-minutes.md), mit dem menügesteuert einfach und schnell die wichtigsten
@@ -61,13 +61,13 @@ Viele weitere Videos zu allen möglichen Themen zu *raspiBackup* finden sich im 
   um auf Facebook aktuelle Aktivitäten und Randinformationen zu *raspiBackup* zu erfahren.
   Fragen zu *raspiBackup* sind auch möglich. Probleme bitte nur im [*GitHub*](https://github.com/framps/raspiBackup/issues) melden.
 
-* Klicke [![Twitter](images/icons/Twitter-f-Logo__blue_29.png)](https://www.twitter.com/linuxframp)
-  um *raspiBackup* auf Twitter zu folgen
+* Klicke [![Twitter](images/icons/Twitter-f-Logo__blue_29.png)](https://www.twitter.com/linuxframp),
+  um *raspiBackup* auf Twitter zu folgen.
 
-* Klicke [![RaspberryForum](images/icons/RaspberryForumSmall.png)](https://forum-raspberrypi.de/forum/board/153-backup/)
+* Klicke [![RaspberryForum](images/icons/RaspberryForumSmall.png)](https://forum-raspberrypi.de/forum/board/153-backup/),
   um im deutschen RaspberryForum Fragen zu Raspberry Backups im Allgemeinen und *raspiBackup* im Speziellen zu stellen oder existierende Threads zu *raspiBackup* zu lesen.
 
-* Klicke [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/)
+* Klicke [![Reddit](images/icons/reddit-icon.png)](https://www.reddit.com/r/raspiBackup/),
   um *raspiBackup* auf Reddit zu folgen.
 
 > [!NOTE]
@@ -83,7 +83,7 @@ Eine Anerkennung des Entwicklungs- und Wartungsaufwands sowie Supports für
 2. Paypal: Die eMail `framp att linux-tips-and-tricks dott de` ist PayPal bekannt
    und ein jeder kann mit einem PayPal Konto an diese eMail ein Trinkgeld geben.
 3. Bitcoins: Die Adresse ist `32MErztPzuKhN3YFEpmFtVLZTyxZ7zKPPt`
-4. Keines von allem: Einfach bei der o.g. eMail nachfragen. Es findet sich
+4. Nichts davon: Einfach bei der o.g. eMail nachfragen. Es findet sich
    gewiss eine Alternative. Z.B. wurde Trinkgeld schon mehrmals auf die
    gute alte Art per Brief zugeschickt :-)
 
@@ -94,7 +94,7 @@ die für das Entwickeln und Testen benötigt werden, zu kaufen.
 
 Es haben im Laufe der Zeit sehr viele Leute aus der Community durch Kommentare,
 Erweiterungsvorschläge und Beta- und Fixtests zu *raspiBackup* beigetragen.
-In Anbetracht der großen Anzahl ist es leider nicht möglich, jeden einzelnen aufzuführen.
+In Anbetracht der großen Anzahl ist es leider nicht möglich, jeden Einzelnen aufzuführen.
 
 Daher einfach: Vielen Dank an alle Unterstützer!
 
@@ -114,7 +114,7 @@ Der Code von *raspiBackup* steht unter der GPL auf [*GitHub*](https://github.com
 *raspiBackup* wurde für den persönlichen Gebrauch erstellt und, da es sich als sehr nützlich erwies,
 der Allgemeinheit zur Verfügung gestellt.
 
-Es wird im Rahmen des Möglichen die korrekte Funktionalität getestet
+Es wird im Rahmen des Möglichen die korrekte Funktionalität getestet,
 aber es kann nicht ausgeschlossen werden, dass durch Fehler in
 *raspiBackup* die erwartete Funktionalität nicht gewährleistet ist.
 Jeder, der *raspiBackup* benutzt, tut das auf sein eigenes Risiko.

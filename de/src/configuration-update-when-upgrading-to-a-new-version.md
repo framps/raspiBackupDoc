@@ -20,7 +20,7 @@ sudo raspiBackup.sh --updateConfig
 Beim Zusammenführen der beiden Konfigurationen schreibt *raspiBackup*
 verschiedene Informationsmeldungen. Die folgenden Meldungen werden
 beispielsweise geschrieben, wenn von *raspiBackup* 0.6.4.3 auf *raspiBackup*
-0.6.5 upgraded wird.
+0.6.5 upgegradet wird.
 
 ```
 --- RBK0241I: Aktuelle Konfiguration v0.1.3 wird mit der neuen Konfiguration v0.1.4 in /usr/local/etc/raspiBackup.conf.merged zusammengefügt.
@@ -39,15 +39,15 @@ beispielsweise geschrieben, wenn von *raspiBackup* 0.6.4.3 auf *raspiBackup*
 Man sieht, dass eine neue Konfigurationsdatei
 `/usr/local/etc/raspiBackup.conf.merged` erstellt wird und in dieser die
 Zusammenfügung der aktuellen Konfigurationsdatei
-`/usr/local/etc/raspiBackup.conf `mit der neuen Konfigurationsdatei
+`/usr/local/etc/raspiBackup.conf` mit der neuen Konfigurationsdatei
 vorgenommen wird.
 
 Welche Änderungen vorgenommen werden, kann in den
 Meldungen `RBK0248I` abgelesen werden. Zum Schluss wird man gefragt, ob die
 zusammengefügte Konfigurationsdatei aktiviert werden soll. Natürlich
 wird vorher ein Backup der existierenden Konfigurationsdatei in
-`/usr/local/etc/raspiBackup.conf.bak `vorgenommen. Antwortet man mit "ja",
-ist die Konfigurationszusammenfügung beendet und bekommt noch folgende
+`/usr/local/etc/raspiBackup.conf.bak` vorgenommen. Antwortet man mit "ja",
+ist die Konfigurationszusammenfügung beendet, und man bekommt noch folgende
 Meldungen:
 
 ```
@@ -56,7 +56,7 @@ Meldungen:
 ```
 
 Das ist die einfachste Methode, um die Konfigurationsdatei zu
-aktualisieren und ist schnell vorgenommen.
+aktualisieren, und ist schnell vorgenommen.
 
 Man kann aber auch mit "nein" antworten und die zusammengefügte
 Konfigurationsdatei nicht sofort aktivieren. Man erhält dann folgende
@@ -82,11 +82,11 @@ DEFAULT_SMART_RECYCLE_OPTIONS="7 4 12 1"`
 
 Nun kann man sich manuell mit einem Editor die zusammengeführte
 Konfigurationsdatei `/usr/local/etc/raspiBackup.conf.merged` ansehen,
-kontrollieren und wenn nötig ändern. Zum Schluss wird die Datei zur
+kontrollieren und, wenn nötig, ändern. Zum Schluss wird die Datei zur
 Aktivierung nach `/usr/local/etc/raspiBackup.conf` kopiert.
 
 Abschließend ist es sinnvoll, wie immer nach einem Upgrade, einen Backup/Restore
-Zyklus durchführen, um zu testen, ob noch alles wie vorher funktioniert.
+Zyklus durchzuführen, um zu testen, ob noch alles wie vorher funktioniert.
 
 *raspiBackup* unterstützt auch die Benutzung von [unterschiedlichen
 Konfigurationsdateien](invocation-options.md#configFiles). Der automatische Konfigurationsupgrade wird aber nur

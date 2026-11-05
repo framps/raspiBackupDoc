@@ -2,17 +2,17 @@
 
 Below is an incomplete list of other backup tools that can be used to back up a Raspberry.
 
-- [rpi-clone](https://github.com/geerlingguy/rpi-clone): Backup of a Raspberry via rsync. Cmdlinetool
+- [rpi-clone](https://github.com/geerlingguy/rpi-clone): Backup of a Raspberry via rsync. Cmdlinetool.
 - [piclone](https://github.com/raspberrypi-ui/piclone): Clone an SD card via `cp`. The UI is included in the Raspberry Pi OS desktop. No Cmdline version.
-- [image-backup](https://forums.raspberrypi.com/viewtopic.php?t=331396): From *RonR* in the English Raspberryforum. Cmdlinetool.
-- [borg](https://github.com/borgbackup/borg): Very powerful data backup tool that supports deduplication (English) Only suitable for experienced Linux users.
+- [image-backup](https://forums.raspberrypi.com/viewtopic.php?t=331396): From *RonR* in the English Raspberry forum. Cmdlinetool.
+- [borg](https://github.com/borgbackup/borg): Very powerful data backup tool that supports deduplication (English). Only suitable for experienced Linux users.
 - [restic](https://restic.readthedocs.io/en/stable/): Very powerful data backup tool (English). Only suitable for experienced Linux users.
-- urbackup](https://www.urbackup.org/): Very powerful backup tool. Only suitable for experienced Linux users.
-- [rpi-backup](https://github.com/nanhantianyi/rpi-backup): Script to quickly create an img backup directly without using dd. Cmdlinetool
+- [urbackup](https://www.urbackup.org/): Very powerful backup tool. Only suitable for experienced Linux users.
+- [rpi-backup](https://github.com/nanhantianyi/rpi-backup): Script to quickly create an img backup directly without using dd. Cmdlinetool.
 - [pibackup](https://github.com/Chocorean/pibackup): Creates a dd backup, shrinks the dd image and keeps a configurable number of backups. Cmdlinetool.
-- [shrink-backup](https://github.com/UnconnectedBedna/shrink-backup): Another backup tool, which works similar to rpi-clone and image-backup. Cmdlinetool.
+- [shrink-backup](https://github.com/UnconnectedBedna/shrink-backup): Another backup tool, which works similarly to rpi-clone and image-backup. Cmdlinetool.
 - [pi-safe](https://github.com/RichardMidnight/pi-safe)
-- [pibackup - Chocorean](https://github.com/Chocorean/pibackup): Creates a shrinked backup and rotates versions. Cmdlinetool
+- [pibackup - Chocorean](https://github.com/Chocorean/pibackup): Creates a shrunk backup and rotates versions. Cmdlinetool.
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/raspibackup#anderetools

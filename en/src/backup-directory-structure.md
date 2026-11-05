@@ -6,15 +6,15 @@ Each backup run creates a subdirectory in the backup directory,
 which has the following name:
 \<hostname\>.
 
-A further directory is created underneath for every scheduled backup:
+A further directory is created underneath each of them:
 \<hostname\>@\<osversion\>-\<backuptype\>-\<backupdate\>.
 
 If the `-M` option is used (*raspiBackup* snapshot), the `-M` parameter value is appended:
-\<hostname\>@\<osversion\>-\<backuptype\>-\<backupdate\>.-\<-M parameter\>.
+\<hostname\>@\<osversion\>-\<backuptype\>-\<backupdate\>\<-M parameter\>.
 
 **Examples:**
 
-The Raspberry has the hostname "raspberrypi" and an
+The Raspberry has the hostname "raspberrypi", and an
 `rsync` backup is created from a *Bookworm* OS on 15.04.2016 at 22:29:00.
 The following directories are then created:
 
@@ -23,26 +23,26 @@ The following directories are then created:
  │ └── raspberrypi@debian12-rsync-backup-20160415-222900
 ```
 
-If `-M "Hello world"` is used the directory name will be
+If `-M "Hello world"` is used, the directory name will be
 
 ```
  ├── raspberrypi
  │ └── raspberrypi@debian12-rsync-backup-20160415-222900_Hello_world
 ```
 
-Enclosed is the directory structure of a backup server, which in this case is also
+Below is the directory structure of my backup server, which in this case is also
 a Raspberry Pi. Different backup types can be combined per Pi.
 Each backup is stored in a new subdirectory.
 
 Three or five additional files are always created per Raspberry system in addition to the
-backup and are necessary for the restore if it is not an `dd` backup.
+backup and are necessary for the restore if it is not a `dd` backup.
 This makes it possible for Linux experts to restore a backup manually.
 This is described in the chapter [Manual restore](manual-restore.md).
 
   - `.img` - boot partition
   - `.mbr` - *Master Boot Record* of the system
   - `.sfdisk` - Partition layout of the system - output of the `sfdisk` command
-  - `.blkid` - (partition oriented mode) - output of the `blkid` command
+  - `.blkid` - (partition-oriented mode) - output of the `blkid` command
   - `.parted` - (partition-oriented mode) - output of the `parted` command
 
 

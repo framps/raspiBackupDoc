@@ -1,4 +1,4 @@
-# Vergleich partitionsorientierter Backup und normaler Backup
+# Vergleich partitionsorientierter und normaler Backup
 
 Es existieren zwei verschiedene Backupmodi:
 
@@ -7,8 +7,8 @@ Es existieren zwei verschiedene Backupmodi:
 
    In diesem Modus werden die ersten zwei Partitionen (die Bootpartition und die
    Rootpartition) der SD-Karte gesichert. Außerdem wird beim `tar` und `rsync` Backup
-   auch eine externe Rootpartition, d.h. eine auf einen USB Stick oder USB Platte
-   ausgelagerte Rootpartition (hybrider Boot Modus), gesichert.
+   auch eine externe Rootpartition, d.h. eine auf einen USB Stick oder eine USB Platte
+   ausgelagerte Rootpartition (hybrider Bootmodus), gesichert.
    Falls das Zielgerät beim Restore größer ist als das Quellgerät,
    wird automatisch die zweite Partition entsprechend erweitert.
 
@@ -23,9 +23,9 @@ Es existieren zwei verschiedene Backupmodi:
    Anzahl von Partitionen mit `tar` oder `rsync` gesichert. Dabei ist die Anzahl der
    Partitionen beliebig. Beim Restore kann ebenso ausgewählt werden, welche Partitionen
    zurückzuspielen sind.
-   Wird auf das Originalsystem zurückgespielt, weil durch Änderungen
-   am System es nicht mehr bootet, können bei einem rsync Backup nur die Änderungen zurückgespielt
-   werden statt das ganze Backup und der Restore endet wesentlich schneller.
+   Wird auf das Originalsystem zurückgespielt, weil es durch Änderungen
+   am System nicht mehr bootet, können bei einem rsync Backup nur die Änderungen zurückgespielt
+   werden statt des ganzen Backups, und der Restore endet wesentlich schneller.
    Falls das Zielgerät beim Restore größer ist als das
    Quellgerät, wird die letzte Partition soweit erweitert, dass das gesamte Zielgerät genutzt wird.
 

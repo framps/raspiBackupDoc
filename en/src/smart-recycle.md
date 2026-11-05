@@ -1,10 +1,10 @@
 # Intelligent rotation strategy - Smart Recycle
 
 *raspiBackup* can either keep a configurable number of backups or use an intelligent backup rotation strategy.
-It is also called the ["generation principle of data backup"](https://de.wikipedia.org/wiki/Generationenprinzip). 
+It is also called the ["generation principle of data backup"](https://de.wikipedia.org/wiki/Generationenprinzip).
 The implementation was inspired by Manuel Dewald's
 article ["Automating backups on a Raspberry Pi NAS"](https://opensource.com/article/18/8/automate-backups-raspberry-pi).
-The following backups are then kept by default,
+By default, the following backups are then kept
 if daily backups are created:
 
   1. Backups of the current day and the last 6 days
@@ -16,7 +16,7 @@ This can be adapted to the respective requirements using the installer.
 
 If weekly backups are created, the daily backups are of course omitted.
 The respective retention periods for daily, weekly, monthly and yearly backups can be
-manually configured with options.
+configured with options.
 
 So if you only want to have weekly, monthly and annual backups, this can be configured.
 It should be noted that the weekly backup day then
@@ -25,14 +25,14 @@ weekly backup day, the monthly backup is always on the first Monday of the month
 and the annual backup on the first Monday of the year.
 
 > [!NOTE]
-> If several daily backups are created, the **newest** daily backup is always kept.
+> If several daily backups exist, the **newest** daily backup is always kept.
 > For the weekly, monthly and annual backups the **oldest** backups are kept.
 >
 > For example, with two existing daily backups from 10:00 and
 > 13:00, the backup created at 13:00 is selected.
 >
 > If there are backups on Monday and Friday during the week, the weekly backup
-> of Monday is selected.
+> from Monday is selected.
 >
 > If there is a backup on the 1st, 10th and 20th of a month, the backup from the
 > 1st is selected for the monthly backup.
@@ -44,7 +44,7 @@ and the annual backup on the first Monday of the year.
 
 ## Graphical representation
 
-![smart Strategy](images/smartStrategy.jpg)
+![smartStrategy](images/smartStrategy.jpg)
 
 
 ## Example - backup directory (daily backup run, default options: 7/4/12/3)
@@ -83,26 +83,26 @@ and the annual backup on the first Monday of the year.
 ## Options
 
 The intelligent rotation strategy is activated with the `--smartRecycle` option.
-The storage quantities can be configured with the `--smartRecycleOptions` option.
+The retention quantities can be redefined with the `--smartRecycleOptions` option.
 The `--smartRecycleOptions "7 4 12 3"` option is active by default.
 With `--smartRecycleOptions "0 4 12 0"`, for example, the last 4
 weekly and the last 12 monthly backups are retained.
 
 > [!CAUTION]
-> As long as the option `--smarteRecycleDryrun` is not switched off
-> *raspiBackup* only writes messages about which backups would be deleted and which would be kept.
+> As long as the option `--smartRecycleDryrun` is not switched off,
+> *raspiBackup* only writes messages about which backups **would** be deleted and which would be kept.
 >
 > You can therefore first check whether the result corresponds to what you want.
 > This prevents existing backups from being deleted unintentionally.
 >
-> This is particularly important if, after switching to the intelligent rotation strategy
+> This is particularly important if, after switching to the intelligent rotation strategy,
 > you want to continue using the previous backup directory and not use a new directory.
 >
 > If you have carefully checked that the intelligent rotation strategy deletes the
-> correct backups and removes the desired backups, the
-> option `--smartRecycleDryrun-` (note the `-` at the end!) in each backup run
-> the intelligent rotation strategy is applied and
-> **backups that are no longer required are deleted unrecoverable**.
+> correct backups and keeps the desired backups, then with the
+> option `--smartRecycleDryrun-` (note the `-` at the end!) the
+> intelligent rotation strategy is applied in each backup run and
+> **backups that are no longer required are irrevocably deleted**.
 >
 > Alternatively, the configuration option
 >
@@ -118,6 +118,4 @@ The diagram in particular is another way of explaining the principle.
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/de/rotationsstrategie
 [.source]: https://www.linux-tips-and-tricks.de/en/smart-recycle
-
-
 

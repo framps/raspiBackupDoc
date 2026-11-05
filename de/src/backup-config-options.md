@@ -28,7 +28,7 @@ dd Backups sichern durch diese Option nur den von definierten Partitionen belegt
 Dadurch benötigt z.B. eine 32GB SD-Karte, die nur eine 8GB Partition definiert hat, für den
 Backup nur 8GB und nicht 32GB. Dazu muss aber vorher mittels gparted oder resize2fs
 die root Partition entsprechend verkleinert werden, denn üblicherweise füllt
-die root Partition den gesamten Rest der SD-Karte aus und somit wird auch nicht genutzer Platz gesichert.
+die root Partition den gesamten Rest der SD-Karte aus und somit wird auch nicht genutzter Platz gesichert.
 
 Siehe dazu auch [FAQ16](faq.md#faq16).
 
@@ -38,7 +38,7 @@ Siehe dazu auch [FAQ16](faq.md#faq16).
 
 ### DEFAULT_LINK_BOOTPARTITIONFILES
 
-Sich selten ändernde Bootpartition Backups werden mit Hardlinks verknüpft, um
+Sich selten ändernde Bootpartitionbackups werden mit Hardlinks verknüpft, um
 Backupspace zu sparen. Voraussetzung: Der Backupspace unterstützt Hardlinks
 (ext3/ext4 Filesystem).
 
@@ -48,7 +48,7 @@ Backupspace zu sparen. Voraussetzung: Der Backupspace unterstützt Hardlinks
 
 ### DEFAULT_MAIL_ON_ERROR_ONLY
 
-Nur im Fehlerfalle wird eine eMailbenachrichtigung gesendet.
+Nur im Fehlerfalle wird eine eMail Benachrichtigung gesendet.
 
 **Ausnahmen:**
 
@@ -56,7 +56,7 @@ In folgenden Fällen wird trotz dieser Option eine eMail gesendet:
 1. Bei jeder Warnmeldung
 1. Hinweis auf die Verfügbarkeit eines neuen Releases (RBK0080I)
 1. Hinweis auf die Verfügbarkeit einer Beta (RBK0168I)
-1. Hinweis wieder einen Restoretest durchzuführen (RBK0202I)
+1. Hinweis, wieder einen Restoretest durchzuführen (RBK0202I)
 
 **Hinweis:**
 

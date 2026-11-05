@@ -18,24 +18,24 @@ Das Laufzeitlog wird bei der eMail Benachrichtigung mitgeschickt.
 | -A | aus | nein | DEFAULT_APPEND_LOG |
 
 <a name="parm_coloring"></a>
-### --coloring: Kolorierungseinstellungen bei eMails und Konsolmeldungen
+### --coloring: Kolorierungseinstellungen bei eMails und Konsolenmeldungen
 
 Die Meldungen in der eMail sowie auf der Konsole können
 koloriert werden. Mögliche Werte sind `C` für Konsole und/oder `M` für eMail.
-Falls Postfix als eMail Client genutzt wird, siehe auch Option --eMailColoring.
+Falls Postfix als eMail Client genutzt wird, siehe auch Option `--eMailColoring`.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
 | --coloring  | automatisch | nein | DEFAULT_COLORING |
 
 <a name="parm_e"></a>
-### -e: eMailAdresse, an die die Benachrichtigung geschickt wird
+### -e: eMail Adresse, an die die Benachrichtigung geschickt wird
 
-email Addresse, die eine Status-email sowie die Meldungen des Backuplaufs
-zugesendet bekommt
+eMail Adresse, die eine Status-eMail sowie die Meldungen des Backuplaufs
+zugesendet bekommt.
 
-**Achtung**: Die Benachrichtigungsemail wird vom *root* Nutzer gesendet.
-D.h. der eMailClient auf dem System muss so konfiguriert werden, dass mit
+**Achtung**: Die Benachrichtigungs-eMail wird vom *root* Nutzer gesendet.
+D.h. der eMail Client auf dem System muss so konfiguriert werden, dass mit
 
 ```
 echo "eMail-Text" | sudo mail -s "Betreff" "Empfänger eMail"
@@ -44,13 +44,13 @@ echo "eMail-Text" | sudo mail -s "Betreff" "Empfänger eMail"
 die eMail erfolgreich gesendet wird.
 
 Mit der Konfigurationsoption DEFAULT_SENDER_EMAIL kann die
-Standardsenderadresse  "root@$(hostname)" bei Bedarf geändert werden.
+Standardsenderadresse "root@$(hostname)" bei Bedarf geändert werden.
 
 **Hinweis:** Die eMail Benachrichtigung funktioniert nur, wenn ein MTA wie z.B.
 nullmailer, msmtp, Postfix oder Exim4 entsprechend korrekt konfiguriert wurde.
-Für einige eMailClients gibt es [Konfigurationsanleitungen](configuration-examples.md).
+Für einige eMail Clients gibt es [Konfigurationsanleitungen](configuration-examples.md).
 Ansonsten ist [FAQ38](faq.md#faq38) zu berücksichtigen.
-Die eMailfunktion kann relativ einfach mit der "Fake"-Option -F
+Die eMail Funktion kann relativ einfach mit der "Fake"-Option `-F`
 getestet werden. Außerdem sind weitere Benachrichtigungsmöglichkeiten wie
 *Pushover*, *Slack* oder *Telegram* unterstützt.
 
@@ -59,17 +59,17 @@ getestet werden. Außerdem sind weitere Benachrichtigungsmöglichkeiten wie
 | -e | keine | konfigurierbar | DEFAULT_EMAIL |
 
 <a name="parm_E"></a>
-### -E: Optionale Parameter für die eMailClientProgramme
+### -E: Optionale Parameter für die eMail Clientprogramme
 
 Optionale weitere Parameter, die im eMail-Programmaufruf mitgegeben werden. Für
-sendEmail muss er z.B. wie folgt aussehen: "-f absender.mail@absenderdomain -s
+sendEmail müssen sie z.B. wie folgt aussehen: "-f absender.mail@absenderdomain -s
 smtp-server:587 -xu Username -xp Password".
 
 **Achtung**: Die Parameter für `-E` müssen in Anführungszeichen `"` eingeschlossen
 sein. Speziell zum Testen der eMail Benachrichtigungsfunktion ist der Parameter
 `-F` hilfreich.
 
-**Achtung**: Wenn der Parameter `-l 1` benutzt wird, steht das Password im Log und
+**Achtung**: Wenn der Parameter `-l 1` benutzt wird, steht das Passwort im Log und
 sollte vor Verschicken des Logs manuell maskiert werden.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
@@ -77,7 +77,7 @@ sollte vor Verschicken des Logs manuell maskiert werden.
 | -E | keine | nein | DEFAULT_EMAIL_PARMS |
 
 <a name="parm_eMailColoring"></a>
-### --eMailColoring: Steuerung, wo der genutzte eMailClient Kolorierungsinformationen akzeptiert
+### --eMailColoring: Steuerung, wo der genutzte eMail Client Kolorierungsinformationen akzeptiert
 
 Standardmäßig wird das eMailColoring über die "Subject" Zeile gesteuert, da
 dieser Weg von den meisten eMail Clients genutzt wird. Wenn man aber *Postfix*
@@ -103,7 +103,7 @@ Angabe einer Konfigurationsdatei, die eingelesen wird. Siehe
 ### -g: Fortschrittsanzeige
 
 Mit dieser Option wird beim Backup und Restore eine Fortschrittsanzeige
-angezeigt. Beim `tar` Backup steht keine  Fortschrittsanzeige zur Verfügung.
+angezeigt. Beim `tar` Backup steht keine Fortschrittsanzeige zur Verfügung.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
@@ -113,7 +113,7 @@ angezeigt. Beim `tar` Backup steht keine  Fortschrittsanzeige zur Verfügung.
 ### -G: Sprache der Meldungen
 
 Festlegung der Sprache der Meldungen. Standard ist die
-Systemsprache sofern sie unterstützt wird.
+Systemsprache, sofern sie unterstützt wird.
 Ansonsten sind alle Meldungen in Englisch.
 
 Eine Liste der unterstützten Sprachen findet sich [hier](language-support.md#supported-languages).
@@ -128,7 +128,7 @@ dieses zu tun. Details dazu finden sich [in dieser englischsprachigen Beschreibu
 <a name="parm_h"></a>
 ### -h: Hilfe
 
-Ausgabe der Aufrufsyntax mit seinen Parametern
+Ausgabe der Aufrufsyntax mit ihren Parametern
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|
@@ -144,8 +144,8 @@ Definiert, ob ein Debuglog erstellt wird:
 - debug -> Es wird ein Debuglog erstellt
 
 **Achtung**: Die Logausgabe kann sensitive Informationen enthalten.
-*raspiBackup* maskiert z.B. externe statische IP Adressen, eMailAdressen, Kennwörter für
-mount Befehle oder email Server, u.V.m. Es  können aber immer noch sensitive Informationen
+*raspiBackup* maskiert z.B. externe statische IP Adressen, eMail Adressen, Kennwörter für
+mount Befehle oder eMail Server, u.v.m. Es können aber immer noch sensitive Informationen
 im Debuglog enthalten sein, die noch manuell maskiert werden sollten.
 Das Debuglog wird immer im Backupverzeichnis abgelegt.
 Falls es Fehler gibt und das Backupverzeichnis wieder gelöscht werden wird,
@@ -157,14 +157,14 @@ wird das Log vorher in das Home-Verzeichnis des Aufrufers gesichert.
 
 
 <a name="parm_L"></a>
-### -L: Verzeichnis wo das Debuglog sowie die Laufzeitmeldungen gespeichert werden
+### -L: Verzeichnis, wo das Debuglog sowie die Laufzeitmeldungen gespeichert werden
 
 Definiert das Ziel der Logdatei `raspiBackup.log`.
 
 - varlog: Die Logdatei wird in `/var/log/` geschrieben
 - backup: Die Logdatei wird in das erzeugte Backup geschrieben
 - current: Die Logdatei wird in das aktuelle Verzeichnis geschrieben.
-- \<Dateiprefix\>:  Das Debuglog wird dort mit der Extension `.log` und die
+- \<Dateiprefix\>: Das Debuglog wird dort mit der Extension `.log` und die
   Messagedatei mit der Extension `.msg` abgelegt.
 
 Beispiel: `/home/pi/raspiBackup`
@@ -190,15 +190,15 @@ Meldungsdetails
 | -m | minimal | konfigurierbar | DEFAULT_MSG_LEVEL |
 
 <a name="parm_s"></a>
-### -s: eMailClientProgramm welches benutzt wird, um die eMail zu verschicken
+### -s: eMail Clientprogramm, welches benutzt wird, um die eMail zu verschicken
 
-email Programm, welches benutzt wird {mail|sendEmail|ssmtp|msmtp}.
-Für *Postfix* und *nullmailer* muss mail benutzt werden und die mailtools installiert werden.
-Für *sendEmail* muss der Parameter -E zusätzlich genutzt werden für weitere
+eMail Programm, welches benutzt wird {mail|sendEmail|ssmtp|msmtp}.
+Für *Postfix* und *nullmailer* muss mail benutzt und die mailtools installiert werden.
+Für *sendEmail* muss der Parameter `-E` zusätzlich genutzt werden für weitere
 obligatorische Parameter (Siehe [Parameter -E Beschreibung](#parm_E) für Details).
 
-Es kann auch ein eMail-Erweiterung benutzt werden, um eMails zu verschicken. Damit
-können beliebige weitere eMailClients in *raspiBackup* eingebunden werden. Der `-s`
+Es kann auch eine eMail-Erweiterung benutzt werden, um eMails zu verschicken. Damit
+können beliebige weitere eMail Clients in *raspiBackup* eingebunden werden. Der `-s`
 Parameter muss dann "mailext" sein. Details zur eMail-Erweiterung siehe [diese Seite](hooks-for-own-scripts.md).
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
@@ -259,7 +259,7 @@ Option `-U` vorgenommen wurde.
 | --updateConfig | aus | nein |  |
 
 <a name="parm_unsupportedEnvironment"></a>
-### --unsupportedEnvironment: Nicht unterstützte HW und SW wird akzeptiert
+### --unsupportedEnvironment: Nicht unterstützte HW und SW werden akzeptiert
 
 Wird *raspiBackup* auf nicht [unterstützten Umgebungen](supported-hardware-and-software.md)
 gestartet, ist diese Option anzugeben.
@@ -285,7 +285,7 @@ Version: 0.6.3.2 CommitSHA: 8fbcd1a CommitDate: 2018-02-19 CommitTime: 19:18:31#
 ### -v: Alle Meldungen des verwendeten Backuptools werden protokolliert
 
 Die verwendeten Backuptools `tar` und `rsync` zeigen detaillierte Informationen an
-(Verbose mode). Die Option ist besonders nützliche bei initialen manuellen
+(Verbose mode). Die Option ist besonders nützlich bei initialen manuellen
 Backuptests, um den Backupfortschritt verfolgen zu können.
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
@@ -299,7 +299,7 @@ Backuptests, um den Backupfortschritt verfolgen zu können.
 Es wird eine Liste aller existierenden Vorgängerversionen angezeigt und man
 kann die Version auswählen, die wiederhergestellt werden soll. Die aktuelle
 Version wird gesichert und kann dann auch mit dieser Option später
-wiederhergestellt werden (Siehe auch `-U` Parameter)
+wiederhergestellt werden (siehe auch `-U` Parameter).
 
 | Optionsname | Standard | Im Installer | Konfigurationsname |
 |-------------|----------|--------------|--------------------|

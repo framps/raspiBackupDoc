@@ -1,11 +1,11 @@
 # Schnellstart - Installation in 5 Minuten
 
-Die Dokumentation von *raspiBackup* ist Aufgrund der Fülle an Funktionen
+Die Dokumentation von *raspiBackup* ist aufgrund der Fülle an Funktionen
 mittlerweile sehr umfangreich geworden.
 
 Um den Einstieg zu erleichtern, wird auf dieser Seite deshalb kurzgefasst
 erklärt, wie *raspiBackup* in wenigen Minuten installiert und konfiguriert
-und dann Backups der Raspberry erstellt werden können.
+und dann Backups des Raspberry erstellt werden können.
 
 Im Kapitel [Konfigurationsbeispiele](configuration-examples.md) sind einige Inspirationen zum Einsatz von *raspiBackup*
 aufgeführt. Diese können zum Kennenlernen der Parameter dienen und damit bei der späteren
@@ -15,19 +15,19 @@ Das Wiederherstellen eines Backups ist detailliert [auf einer eigenen Seite](res
 Dort wird auch auf die primären Plattformen (Linux, Mac oder Windows) der Benutzer eingegangen.
 
 **Hinweis:** Von *raspiBackup*-User [Franjo G](https://forum-raspberrypi.de/user/57610-franjo-g/) gibt es eine sehr gute
-[Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) im deutschen Raspberryforum. In jedem Falle ist es zu empfehlen, sich mal sein raspiBackupDialog anzusehen welche die Benutzung von raspiBackup noch vereinfacht. Details dazu finden sich in den [Erweiterungen](https://framps.github.io/raspiBackupDoc/extension-scripts.html).
+[Anleitung zur Installation, Konfiguration und Nutzung von raspiBackup](https://forum-raspberrypi.de/article/7-raspibackup-installation-grundeinstellungen-erstes-backup-und-restore/) im deutschen Raspberryforum. In jedem Falle ist es zu empfehlen, sich mal sein *raspiBackupDialog* anzusehen, welches die Benutzung von *raspiBackup* noch vereinfacht. Details dazu finden sich in den [Erweiterungen](https://framps.github.io/raspiBackupDoc/extension-scripts.html).
 
 ## Installationsmöglichkeiten
 
-Es gibt verschiedene Möglichkeiten, *raspiBackup* zu installieren bzw zu konfigurieren:
+Es gibt verschiedene Möglichkeiten, *raspiBackup* zu installieren bzw. zu konfigurieren:
 
-1) Download und Aufruf des Installers auf der Befehlszeile um *raspiBackup* zu installieren. Das ist die bequemste Methode.
+1) Download und Aufruf des Installers auf der Befehlszeile, um *raspiBackup* zu installieren. Das ist die bequemste Methode.
    ```
    curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh
    ```
    [Hier](installer.md) werden ein paar Detailinformationen zu ein paar Konfigurationsoptionen gegeben.
 
-2) Download und Aufruf des Installers auf der Befehlszeile um *raspiBackup* mit der Standardkonfiguration zu installieren. Für erfahrene *raspiBackup* Nutzer gedacht die raspiBackup auf weiteren Raspberries installieren wollen.
+2) Download und Aufruf des Installers auf der Befehlszeile, um *raspiBackup* mit der Standardkonfiguration zu installieren. Für erfahrene *raspiBackup* Nutzer gedacht, die *raspiBackup* auf weiteren Raspberries installieren wollen.
     ```
    curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && sudo bash ./raspiBackupInstallUI.sh -i
    ```
@@ -59,11 +59,11 @@ wird eine Demo der Installation gezeigt.
 ## Vorbereitung: Das Backup-Ziel/Backup-Verzeichnis
 
 In der Standardkonfiguration geht *raspiBackup* davon aus, dass es einen
-Mountpoint `/backup` gibt, unter dem das Backupverzeichnis gemounted ist.
+Mountpoint `/backup` gibt, unter dem das Backupverzeichnis gemountet ist.
 
 Dieser Mountpoint sollte schon vor der Installation erstellt und dann dort
 das **externe** Backupverzeichnis/Gerät (USB-Platte, USB-Stick, NFS-Laufwerk, ...)
-gemounted werden.
+gemountet werden.
 
 Im folgenden Beispiel wird eine externe USB-Platte bzw. USB-Stick gemountet:
 
@@ -73,7 +73,7 @@ sudo mount /dev/sda1 /backup
 ```
 
 Danach muss eine weitere Zeile in der `/etc/fstab` eingefügt werden. Die PARTUUID
-aus dem folgenden Beispiel ist mit der richtige PARTUUID anzupassen, die mit `lsblk -o +PARTUUID` angezeigt wird:
+aus dem folgenden Beispiel ist mit der richtigen PARTUUID anzupassen, die mit `lsblk -o +PARTUUID` angezeigt wird:
 
 ```
 PARTUUID=aeddf698-02	/backup		ext4	defaults,noatime,nofail,async	0  0
@@ -84,8 +84,8 @@ PARTUUID=aeddf698-02	/backup		ext4	defaults,noatime,nofail,async	0  0
 Dies wird in Kapitel "[Welches Dateisystem kann auf der Backuppartition benutzt werden?](which-filesystem-can-be-used-on-the-backup-partition.md)" erklärt.
 Bitte beachten: [Warum sollte man dd als Backuptyp besser nicht benutzen?](why-shouldn-t-you-use-dd-as-backup-type.md).
 
-**Vor** dem ersten Backup ist es sinnvoll, zu prüfen/sicherstellen, dass wirklich das
-richtige Backupziel bzw die richtige Backuppartition genutzt wird.
+**Vor** dem ersten Backup ist es sinnvoll, zu prüfen/sicherzustellen, dass wirklich das
+richtige Backupziel bzw. die richtige Backuppartition genutzt wird.
 
 Hilfreich ist dabei folgender Befehl:
 
@@ -97,8 +97,8 @@ lsblk
 ## Download und Installation des Installers
 
 Zum Download, der Installation und Start des *raspiBackup* Installers ist
-folgendes in der Befehlszeile auf der Raspberry eingeben oder noch besser
-per copy und paste in er Befehlszeile einfügen:
+Folgendes in der Befehlszeile auf dem Raspberry einzugeben oder noch besser
+per Copy und Paste in die Befehlszeile einzufügen:
 
 ```
 curl -sSLO --fail https://raw.githubusercontent.com/framps/raspiBackup/master/published/raspiBackupInstallUI.sh && 
@@ -109,7 +109,7 @@ sudo bash ./raspiBackupInstallUI.sh
 [Anleitung](manual-installation-and-configuration.md) dokumentiert.
 
 Nun kann man die Installation mit Standardkonfiguration wählen und
-die wesentlichen Einstellungen im Konfigurationsmenü zu ändern.
+die wesentlichen Einstellungen im Konfigurationsmenü ändern.
 
 ![Screenshot Konfiguration (2019)](images/Screenshot_at_2019-04-10_07-52-15.png)
 
@@ -197,10 +197,10 @@ sollte man sich in einer ruhigen Stunde über alle weiteren Optionen von
 In jedem Falle ist es sinnvoll, sich die [FAQs](faq.md) durchzulesen.
 
 Jede Option kann in der Konfigurationsdatei `/usr/local/etc/raspiBackup.conf` definiert werden,
-so dass beim Aufruf keine weitere Optionen angegeben werden müssen.
+sodass beim Aufruf keine weiteren Optionen angegeben werden müssen.
 
 Details dazu finden sich im Kapitel [Aufruf und Optionen - Backup - Optionen](backup-options.md)
-und zu den Optionen, die sich **nur** über die Konfigurationsdatei einstellen lassen
+und zu den Optionen, die sich **nur** über die Konfigurationsdatei einstellen lassen,
 im Kapitel [Aufruf und Optionen - Backup - Konfiguration](backup-config-options.md).
 
 Ebenfalls nützlich: [raspiBackupDialog - ein komfortables Hilfsscript für raspiBackup](raspibackupdialog-a-convenient-helper-script-for-raspibackup.md),
@@ -211,7 +211,7 @@ welches die Nutzung und den Aufruf von *raspiBackup* vereinfacht.
 Sollte sich tatsächlich herausstellen, dass *raspiBackup* nicht den Anforderungen genügt,
 steht eine [Deinstallation](installer.md#deinstallation) per *raspiBackup* Installer zur Verfügung.
 Über einen der [Kontaktwege](introduction.md#contact_options) ist es vorher aber sinnvoll, einmal nachzufragen,
-ob die vermisste Funktionalität nicht doch in raspiBackup verfügbar ist.
+ob die vermisste Funktionalität nicht doch in *raspiBackup* verfügbar ist.
 
 [.status]: translated
 [.source]: https://linux-tips-and-tricks.de/de/installation

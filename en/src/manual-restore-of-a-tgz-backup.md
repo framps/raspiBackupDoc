@@ -1,15 +1,15 @@
 # Manual tgz restore
 
-The backup directory created by raspiBackup contains all information required to restore
-this backup also manually with standard Linux tools. The following page describes how to restore a normal tgz backup.
+The backup directory created by *raspiBackup* contains all information required to restore
+this backup manually with standard Linux tools. The following page describes how to restore a normal tgz backup.
 
 ## Create the partitions on the SD card
 
-First of all the SD card has to be plugged in in into a Raspberry which is used to restore the
-backup. It usually is detected as /dev/sda or /dev/sdb. Use lsblk to check what's the device
-used by the  SD card. In the following description I use /dev/sdb now.
+First of all the SD card has to be plugged into a Raspberry which is used to restore the
+backup. It usually is detected as /dev/sda or /dev/sdb. Use `lsblk` to check which device
+is used by the SD card. In the following description I use /dev/sdb now.
 
-Next mount the backuppartition on a mountpoint. /mnt iis used in the following description for the backup partition
+Next mount the backup partition on a mountpoint. /mnt is used in the following description for the backup partition
 and hostname raspberry and /media for the target SD card partitions.
 
 Now create the partitions with
@@ -40,7 +40,7 @@ sudo dd of=/dev/sdb1 if=/mnt/raspberry/raspberry-tgz-backup-20170812-134552/rasp
 sync
 ```
 
-You can check whether everything is OK with following commands:i
+You can check whether everything is OK with the following commands:
 ```
 sudo mount /dev/sdb1 /media; ls /media; sudo umount /media
 ```
@@ -61,7 +61,7 @@ Now format the second partition with
 sudo mkfs.ext4 /dev/sdb2
 ```
 
-You can check whether everything is OK with following commands:
+You can check whether everything is OK with the following commands:
 ```
 sudo mount /dev/sdb2 /media; df -h /media
 ```
@@ -72,7 +72,7 @@ Filesystem Size Used Avail Use% Mounted on
 /dev/sdb2 7.0G 24K 6.6G 1% /media
 ```
 
-Now restore the tgz Backup on the partition created just now:
+Now restore the tgz backup on the partition created just now:
 
 ```
 sudo tar --exclude /boot --same-owner --same-permissions --numeric-owner -x -v -z -f /mnt/raspberry/raspberry-tgz-backup-20170812-13455/raspberry-tgz-backup-20170812-134552.tgz -C /media
@@ -84,7 +84,7 @@ During the restore you should see the list of all files restored.
 
 ## Boot the restored system
 
-Now remove the target SD card, insert it in another Raspberry and boot the Raspberry with the restored backup.
+Now remove the target SD card, insert it into another Raspberry and boot the Raspberry with the restored backup.
 
 [.status]: translated
 [.source]: https://www.linux-tips-and-tricks.de/en/raspibackupcategorye/646-raspibackup-manual-restore-of-a-tgz-backup

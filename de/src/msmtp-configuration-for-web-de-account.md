@@ -1,14 +1,14 @@
 # msmtp Konfiguration für einen web.de Account
 
-Der Nutzer *gNeadr* von *raspiBackup* hatte Probleme, die eMail-Benachrichtigung
+Der Nutzer *gNeandr* von *raspiBackup* hatte Probleme, die eMail-Benachrichtigung
 für seinen web.de Account einzurichten. Nachdem es ihm
 erfolgreich gelungen war, alles richtig zu konfigurieren, bot er
 erfreulicherweise an, seine Installations- und Konfigurationsschritte hier zu
 veröffentlichen, damit andere *raspiBackup* Nutzer es leichter haben,
-die eMailKonfiguration für *raspiBackup* vorzunehmen.
+die eMail Konfiguration für *raspiBackup* vorzunehmen.
 
 In *raspiBackup* ist nicht viel zu konfigurieren.
-Die Schwierigkeit ist, den eMailClient richtig zu konfigurieren.
+Die Schwierigkeit ist, den eMail Client richtig zu konfigurieren.
 
 Anbei die Installations- und Konfigurationsschritte von *gNeandr* -
 noch einmal sehr herzlichen Dank für die Bereitstellung.
@@ -66,7 +66,7 @@ Danach im LX Dateimanager SDCard auswerfen.
 
 ## Raspberry starten und konfigurieren
 
-Danach SD-Karte in Raspberry installieren und diesen starten/Netzadapter anschliessen.
+Danach SD-Karte in Raspberry installieren und diesen starten/Netzadapter anschließen.
 
 Mit Fritzbox kontrollieren, ggf. Namen des 'raspberry' ändern.
 
@@ -76,9 +76,9 @@ Raspberry per SSH starten mit:
 ssh pi@192.123.123.7X (ip des Raspberry wie oben konfiguriert)
 ```
 
-## Raspberry/RASPIAN OS Konfigurieren & Update/Upgrade
+## Raspberry/RASPBIAN OS konfigurieren & Update/Upgrade
 
-Zur Sicherheit das Password ändern ...
+Zur Sicherheit das Passwort ändern ...
 (see also https://www.raspberrypi.org/documentation/configuration/security.md)
 ... dies erfolgt mit dem Raspberry Config tool:
 
@@ -114,7 +114,7 @@ $ sudo apt-get update
 $ sudo apt-get upgrade
 ```
 
-## mSMTP für Versand von EMail zB. aus *raspiBackup*
+## mSMTP für Versand von eMails z.B. aus *raspiBackup*
 
 Diese Zusammenstellung basiert auf: <https://goneuland.de/raspberry-pi-e-mails-versenden-mit-msmtp/>
 
@@ -146,19 +146,19 @@ There is NO WARRANTY, to the extent permitted by law.
 Die mit `<<===` bezeichneten Zeilen sind wichtig für die weitere mSMTP Konfiguration!
 
 
-### Config Datei erstellen (bzw anpassen) für Versand mit WEB.de
+### Config Datei erstellen (bzw. anpassen) für Versand mit WEB.de
 
 ```
 $ sudo nano /etc/msmtprc
 ```
 
 Das nachfolgende Listing von "/etc/msmtprc" zeigt die Einstellungen für den Versand über einen
-existierenden EMail Account bei WEB.de
+existierenden eMail Account bei WEB.de.
 
-Für den eigenen Einsatz müssen die Zeilen, die auf "# Anpassen" folgen mit den eigenen Werten geändert werden.
+Für den eigenen Einsatz müssen die Zeilen, die auf "# Anpassen" folgen, mit den eigenen Werten geändert werden.
 
 Im Abschnitt "# Authentifizierungs-Methoden." sind verschiedene Formate für die Passwort Angabe möglich.
-Die einfachste Art (wie im Beispiel) ist der direkte Eintrag des PW des Mail Account ... ABER
+Die einfachste Art (wie im Beispiel) ist der direkte Eintrag des PW des Mail Accounts ... ABER
 das ist nicht die sicherste Methode!
 Siehe auch: # https://marlam.de/msmtp/msmtp.html#Authentication
 
@@ -194,7 +194,7 @@ account default: raspi
 ```
 
 
-### Rechte / Zugriff Anpassen
+### Rechte / Zugriff anpassen
 
 Die nächsten Schritte passen die Rechte der Datei an.
 
@@ -202,7 +202,7 @@ Die nächsten Schritte passen die Rechte der Datei an.
 $ sudo chmod 600 /etc/msmtprc
 ```
 
-Festlegen des E-Mail Programms mit "set sendmail":
+Festlegen des eMail Programms mit "set sendmail":
 
 ```
 $ sudo nano /etc/mail.rc
@@ -233,12 +233,12 @@ An: yyyyyy@web.de
 E-Mail Test
 ```
 
-## *raspiBackup* Konfiguration für EMail Versand mit mSMTP
+## *raspiBackup* Konfiguration für eMail Versand mit mSMTP
 
 ### Anpassung
 
 Die Konfigurationsdatei "raspiBackup.conf" wird an die vorstehende mSMTP Einrichtung
-angepasst für *raspiBackup* EMail Benachrichtigungen mit:
+angepasst für *raspiBackup* eMail Benachrichtigungen mit:
 
 ```
 $ sudo nano /usr/local/etc/raspiBackup.conf
@@ -254,7 +254,7 @@ DEFAULT_EMAIL_PARMS=""
 DEFAULT_MAIL_PROGRAM="mail"
 ```
 
-### Test EMail-Benachrichtung von *raspiBackup* mit mSMTP für WEB.de
+### Test eMail Benachrichtigung von *raspiBackup* mit mSMTP für WEB.de
 
 ```
 $ sudo *raspiBackup* -m detailed -F
