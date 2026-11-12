@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./images/Icon_rot_blau_final_128.png" />
+  <img src="https://github.com/framps/raspiBackup/blob/master/images/Icon_rot_blau_final_128.png" />
 </p>
 
 > [!NOTE]
