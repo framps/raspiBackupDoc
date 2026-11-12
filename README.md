@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./images/Icon_rot_blau_final_128.png" />
+</p>
+
 > [!NOTE]
 > This repository was initially created by [rpi-simonz](https://github.com/rpi-simonz) with all its logic
 > and all German pages were taken from [framp's website](https://www.linux-tips-and-tricks.de/de/raspibackup) to bring the outdated documentation up to date. Ultimately, this repository was transferred from him to framp
