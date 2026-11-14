@@ -3,7 +3,7 @@
  *raspiBackup* checks at every startup, but at most once a day, whether there is a new release or a beta available
  and then informs you with a message so that an upgrade can be
  planned and carried out. During this check
- information is also transmitted, which makes it possible to collect general
+ information is also transmitted to https://www.linux-tips-and-tricks.de, which makes it possible to collect general
  usage data of *raspiBackup* and to get an overview of the respective usage.
 
 The information that is transmitted is
