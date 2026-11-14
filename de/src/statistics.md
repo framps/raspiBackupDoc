@@ -3,7 +3,7 @@
  *raspiBackup* prüft bei jedem Start, maximal aber einmal pro Tag, ob es ein neues
  Release oder eine Beta gibt und weist dann mit einer Meldung darauf hin, so
  dass ein Upgrade geplant und durchgeführt werden kann. Bei dieser Prüfung
- werden auch ein paar Informationen übermittelt, die es ermöglichen, allgemeine
+ werden auch ein paar Informationen an https://www.linux-tips-and-tricks.de übermittelt, die es ermöglichen, allgemeine
  Nutzungsdaten von *raspiBackup* zu ermitteln und sich einen Überblick über die
  jeweilige Nutzung zu verschaffen.
 
